@@ -1,0 +1,220 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+body {
+     font-family: $opensans-Regular;
+     line-height: 1.4;
+}
+
+body#body-default {
+     margin: 0;
+     position: relative;
+}
+
+main {
+     .row.main-content {
+          margin: 0 auto;
+          // .columns.grid {
+          //      padding: 0;
+          // }
+     }
+}
+
+h1, h2, p {
+     display: inline-block;
+     width: 100%;
+     float: left;
+     &.small {
+          font-size: 0.875rem;
+          color: rgba($black,0.5);
+     }
+}
+
+h1 {
+     font-size: 2.4rem;
+}
+
+h1, h2 {
+     font-family: $opensans-Bold;
+     line-height: 1.6;
+     color: $main-colour;
+     span {
+          color: $text-main-colour;
+     }
+     a, strong {
+          color: $blue;
+     }
+}
+
+p, ul, ul li {
+     font-family: $opensans-Regular;
+     color: $text-main-colour;
+}
+
+a {
+     font-family: $opensans-Bold;
+     line-height: 1.4;
+     color: $blue;
+     // border-bottom: 1px dashed;
+     &:hover {
+          text-decoration: underline;
+          color: darken($blue, 5%);
+     }
+}
+
+hr {
+     margin: 3em 0;
+}
+
+.hide {
+     display: none !important;
+}
+
+.content-wrapper {
+     @include flexbox;
+     @include justify-content(center);
+     @include flex-wrap(wrap);
+     // padding: 0;
+     a.place-holder, a.job-family {
+          @include flexbox;
+     }
+}
+
+.main-cta {
+     background: $blue;
+     border-radius: $global-border-radius;
+     padding: 1em;
+     font-family: $opensans-Bold;
+     width: 100%;
+     color: $white;
+     display: inline-block;
+     border: none;
+     float: left;
+     position: relative;
+     &:hover {
+          color: $white;
+          background: darken($blue,5%);
+     }
+     &.create-client {
+
+     }
+     &.de-activate {
+          background: $main-colour;
+          opacity: 0.2;
+     }
+}
+
+.filter {
+     background: rgba($main-colour,0.1);
+     padding: 1em 0;
+     display: inline-block;
+     margin: 1.5em 0 3em 0;
+     float: left;
+     clear: left;
+     width: 100%;
+}
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+     .row {
+          max-width: 80rem;
+     }
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 34em;
+     }
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 34em;
+     }
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+     main {
+          .row.main-content {
+               margin-bottom: 8em;
+          }
+     }
+
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 25em;
+     }
+
+     main {
+          .row.main-content {
+               max-width: 100%;
+               margin-bottom: 1.5em;
+          }
+     }
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 15em;
+     }
+
+     main {
+          .row.main-content {
+               max-width: 100%;
+               margin-bottom: 6em;
+          }
+     }
+
+     input[type="text"], input[type="password"], input[type="date"], input[type="datetime"],
+     input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"],
+     input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+          height: auto;
+          margin-bottom: 0;
+     }
+
+
+}

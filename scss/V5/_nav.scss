@@ -1,0 +1,128 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+.top-nav {
+     display: inline-block;
+     width: 100%;
+     background: $white;
+     border-bottom: 2px solid $white-off;
+     padding: 0.75em 0;
+     ul {
+          margin: 0 1em 0 0;
+          float: right;
+          li {
+               list-style: none;
+               float: right;
+               margin-left: 1em;
+               line-height: 0;
+               width: 2em;
+               height: 2em;
+               &.menu, &.alerts, &.settings {
+                    a {
+                         opacity: 0.4;
+                    }
+               }
+               &.menu {
+                    a {
+                         background: url(#{$image-path}/icons/menu.svg) no-repeat 50% 50%;
+                         background-size: 1.5em;
+                    }
+               }
+               &.alerts {
+                    position: relative;
+                    a {
+                         background: url(#{$image-path}/icons/alert.svg) no-repeat 50% 50%;
+                         background-size: 1.5em;
+                    }
+                    span {
+                         @include flexbox;
+                         @include align-items(center);
+                         @include justify-content(center);
+                         background: $red;
+                         font-family: $opensans-Bold;
+                         font-size: 0.75rem;
+                         font-weight: bold;
+                         color: $white;
+                         position: absolute;
+                         border-radius: 50%;
+                         top: -0.5em;
+                         right: -0.65em;
+                         width: 1.75em;
+                         height: 1.75em;
+                         text-align: center;
+                    }
+               }
+               &.settings {
+                    a {
+                         background: url(#{$image-path}/icons/settings.svg) no-repeat 50% 50%;
+                         background-size: 1.5em;
+                    }
+               }
+               &.border {
+                    width: 2px;
+                    height: 2em;
+                    background: rgba($black,0.1);
+                    display: inline-block;
+               }
+               a {
+                    text-indent: -1000em;
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+               }
+          }
+     }
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+
+}
