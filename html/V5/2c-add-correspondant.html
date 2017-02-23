@@ -1,0 +1,78 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../js/V5/jquery.min.js"></script>
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- MAIN NAV - START -->
+<header class="main">
+
+     <nav>
+          <a href="1-dashboard.html" class="logo"><img src="../../production/img/V5/sirius-logo.svg" alt="Sirius"></a>
+          <ul>
+               <li class="user-cta">
+                    <a href="#">
+                         <span class="icon"></span>
+                         Susan Smith
+                    </a>
+               </li>
+               <li class="constant-cta">
+                    <a href="#" class="main-cta create-client">
+                         Create client
+                    </a>
+               </li>
+               <li class="actions create-letter">
+                    <a href="2a-create-letter.html">
+                         <span class="icon"></span>
+                         Create letter
+                    </a>
+               </li>
+          </ul>
+
+          <a href="index.html" class="main-cta sign-out">
+               Sign out
+          </a>
+
+     </nav>
+
+</header>
+<!-- MAIN NAV - END -->
+<!-- PRIMARY CONTENT - START --><main class="default"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<ul>
+		<li class="menu"><a href="#">Menu</a></li>
+		<li class="border"></li>
+		<li class="alerts">
+			<a href="#">Alerts</a>
+			<span>20</span>
+		</li>
+		<li class="settings"><a href="#">Settings</a></li>
+		<li class="border"></li>
+	</ul>
+
+	<form action="action_page.php">
+		<input type="search" name="googlesearch" placeholder="Search sirius...">
+		<input type="submit">
+	</form>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-12 large-uncentered columns"> <h1> <img src="../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> <span>Add a correspondant to the:</span><br> CT-bb: Blank complaints team letter </h1> <!-- // DOCUMENT - 1 - START // --> <!-- // DOCUMENT - 1 - END // --> </div> </div> <div class="row"> <div class="large-7 large-uncentered columns"> <div class="section-title">Case documents...</div> <div id="document-viewer"> <div class="document"> <div class="control-panel"> <h2>Document title</h2> <a href="#">Back</a> </div> <img src="../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> </div> </div> </div> <div class="large-5 large-uncentered columns"> <form action="1-dashboard.html" class="add-correspondent-form"> <div class="section-title">Add a correspondant...</div> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="title">Title</label> <select id="title"> <option>-- Select --</option> <option>Mr.</option> <option>Mrs.</option> <option>Ms.</option> <option>Miss</option> <option>Dr.</option> <option>Prof.</option> <option>Rev.</option> <option>Other</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="first-name">First name</label> <input id="first-name" name="first-name" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="middle-name">Middle names</label> <input id="middle-name" name="middle-name" type="text"> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group"> <label for="last-name">Last name</label> <input id="last-name" name="last-name" type="text"> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group"> <label for="company-name">Company names (if relevant)</label> <input id="company-name" name="company-name" type="text"> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group"> <label for="relationship">Relationship to the client</label> <select id="relationship"> <option>-- Select --</option> <option>Relationship 1</option> <option>Relationship 2</option> <option>Relationship 3</option> <option>Relationship 4</option> <option>Relationship 5</option> <option>Relationship 6</option> <option>Relationship 7</option> <option>Relationship 8</option> </select> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group"> <label for="country">Country</label> <select id="country" class="full-width"> <option>-- Select --</option> <option>Relationship 1</option> <option>Relationship 2</option> <option>Relationship 3</option> <option>Relationship 4</option> <option>Relationship 5</option> <option>Relationship 6</option> <option>Relationship 7</option> <option>Relationship 8</option> </select> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8 - START // --> <div class="form-group"> <label for="postcode">Postcode</label> <input id="postcode" name="postcode" type="text" class="one-third"> <input type="submit" class="main-cta secondary" id="find-postcode" value="Find address"> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group"> <legend>Is airmail required?</legend> <label for="airmail-yes" class="radio"> <input id="airmail-yes" type="radio" name="radio-inline-group" value="Yes"> Yes </label> <label for="airmail-no"  class="radio"> <input id="airmail-no" type="radio" name="radio-inline-group" value="No"> No </label> </div> <!-- // FORM ITEM - 9 - END // --> <!-- // FORM ITEM - 10 - START // --> <div class="form-group"> <label for="phone-number">Daytime telephone number</label> <input id="phone-number" name="phone-number" type="text" class="half"> </div> <!-- // FORM ITEM - 10 - END // --> <!-- // FORM ITEM - 11 - START // --> <div class="form-group"> <label for="mob-number">Mobile telephone number</label> <input id="mob-number" name="mob-number" type="text" class="half"> </div> <!-- // FORM ITEM - 11 - END // --> <!-- // FORM ITEM - 12 - START // --> <div class="form-group"> <label for="email">Email address</label> <input id="email" name="email" type="text"> </div> <!-- // FORM ITEM - 12 - END // --> <!-- // FORM ITEM - 13 - START // --> <div class="form-group"> <legend>Correspondence By</legend> <label class="normal" for="correspondence-post"> <input id="correspondence-post" name="correspondence-post" type="checkbox" value="correspondence-post"> Post </label> <label class="normal" for="correspondence-phone"> <input id="correspondence-phone" name="correspondence-phone" type="checkbox" value="correspondence-phone"> Phone </label> <label class="normal" for="correspondence-email"> <input id="correspondence-email" name="correspondence-email" type="checkbox" value="correspondence-email"> Email </label> <label class="normal" for="correspondence-welsh"> <input id="correspondence-welsh" name="correspondence-welsh" type="checkbox" value="correspondence-welsh"> Welsh </label> </div> <!-- // FORM ITEM - 13 - END // --> <hr> <hr>  <div class="cta-row"> <input type="submit" class="main-cta" id="create-letter" value="Add correspondant"> <a href="#" onclick="history.back();">Cancel</a> </div> </form> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../production/js/V5/scripts.js"></script>
+	<script src="../../production/js/V5/hideShowPassword.js"></script>
+	<script src="../../production/js/V5/my-jquery.js"></script>
+	<!-- <script src="../../production/js/prototype/swing.js"></script>
+	<script src="../../production/js/prototype/class-list.js"></script>
+	<script src="../../production/js/prototype/card-stack.js"></script> -->
+<!-- // JS BODY END - END // -->
+</body></html>

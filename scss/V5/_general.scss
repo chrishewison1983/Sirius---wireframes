@@ -40,7 +40,7 @@ h1 {
 
 h1, h2 {
      font-family: $opensans-Bold;
-     line-height: 1.6;
+     line-height: 1.4;
      color: $main-colour;
      span {
           color: $text-main-colour;
@@ -48,6 +48,23 @@ h1, h2 {
      a, strong {
           color: $blue;
      }
+     img.document-item {
+          display: inline-block;
+          border: 3px solid $border-colour;
+          padding: 0.5em;
+          float: left;
+          width: 3.5em;
+          margin: 0 0.5em 0 0;
+          border-radius: $global-border-radius;
+     }
+}
+
+.section-title {
+     font-size: 1.6rem;
+     display: inline-block;
+     width: 100%;
+     font-family: $opensans-Bold;
+     margin: 1.5em 0 0.75em 0;
 }
 
 p, ul, ul li {
@@ -59,15 +76,21 @@ a {
      font-family: $opensans-Bold;
      line-height: 1.4;
      color: $blue;
-     // border-bottom: 1px dashed;
+     border-bottom: 1px dashed;
      &:hover {
-          text-decoration: underline;
+          text-decoration: none;
+          border-bottom: 1px solid;
           color: darken($blue, 5%);
      }
 }
 
 hr {
      margin: 3em 0;
+     width: 100%;
+     display: inline-block;
+     border: 0;
+     border-bottom: 3px solid $border-colour;
+     background: none;
 }
 
 .hide {
@@ -100,6 +123,7 @@ hr {
           color: $white;
           background: darken($blue,5%);
           transform: scale(1.1);
+          cursor: pointer;
      }
      &.create-client {
 
@@ -107,6 +131,11 @@ hr {
      &.de-activate {
           background: $main-colour;
           opacity: 0.2;
+     }
+     &.secondary {
+          border: 3px solid $blue;
+          color: $blue;
+          background: $white;
      }
 }
 

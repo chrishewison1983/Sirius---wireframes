@@ -53,6 +53,12 @@ header {
           height: 100vh;
           background: $main-colour;
           padding: 1.5em;
+          .logo {
+               border-bottom: none;
+               &:hover {
+                    border-bottom: none;
+               }
+          }
           nav {
                img {
                     width: 100%;
@@ -100,6 +106,7 @@ header {
                               color: $white;
                               display: inline-block;
                               width: 100%;
+                              border-bottom: none;
                               span.icon {
                                    display: inline-block;
                                    float: left;
