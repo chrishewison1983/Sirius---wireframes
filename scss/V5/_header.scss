@@ -113,6 +113,19 @@ header {
                     }
                }
           }
+          .main-cta.sign-out {
+               position: absolute;
+               bottom: 1.5em;
+               left: 1.5em;
+               right: 1.5em;
+               width: auto;
+               background: none;
+               border: 2px solid $white;
+               &:hover {
+                    color: $main-colour;
+                    background: $white;
+               }
+          }
      }
 }
 

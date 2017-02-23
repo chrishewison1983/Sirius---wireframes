@@ -46,91 +46,172 @@ ul.tabs {
      }
 }
 
-.tab-content{
-     margin-top: 2em;
+.tab-content {
+     // margin-top: 2em;
 	display: none;
 	// padding: 15px;
-     &.current{
-     	display: inherit;
-          @include flexbox;
-          @include flex-wrap(wrap);
+     &.current {
+          display: inherit;
      }
      &.dashboard {
-          .dashboard-item {
-               border: 2px solid $border-colour;
-               border-radius: $global-border-radius;
-               flex: 1;
-               width: 32%;
-               margin: 0 2% 1.5em 0;
-               position: relative;
-               // padding: 1.5em;
-               // @include align-items(center);
-               // @include justify-content(center);
-               &:nth-of-type(3n) {
-                    margin-right: 0;
-               }
-               .tasks {
-                    display: inline-block;
-                    position: absolute;
-                    right: -1em;
-                    top: -1em;
-                    background: $red;
-                    color: $white;
-                    @include flexbox;
-                    @include align-items(center);
-                    @include justify-content(center);
-                    border-radius: 50%;
-                    width: 4em;
-                    height: 4em;
-                    span {
-                         font-size: 0.8rem;
-                         font-family: $opensans-Regular;
+          .dashboard-item-title {
+               font-size: 1.6rem;
+               display: inline-block;
+               width: 100%;
+               font-family: $opensans-Bold;
+               margin: 1.5em 0 0.75em 0;
+          }
+          .dashboard-item-container {
+               @include flexbox;
+               @include flex-wrap(wrap);
+               .dashboard-item {
+                    border: 2px solid $border-colour;
+                    border-radius: $global-border-radius;
+                    flex: 1;
+                    width: 32%;
+                    padding: 0;
+                    margin: 0 2% 1.5em 0;
+                    position: relative;
+                    line-height: 0;
+                    background: $white;
+                    text-align: left;
+                    @include standard-transition;
+                    z-index: 1;
+                    &:hover {
+                         background: ligthen($border-colour,0.5%);
+                         transform: scale(1.05);
+                         cursor: pointer;
+                         z-index: 10;
+                    }
+                    &:nth-of-type(3n) {
+                         margin-right: 0;
+                    }
+                    .tasks {
                          display: inline-block;
-                         width: 100%;
-                         text-align: center;
-                         &.number {
-                              font-size: 1.6rem;
-                              font-family: $opensans-ExtraBold;
+                         position: absolute;
+                         right: -1.5em;
+                         top: -1.5em;
+                         background: $red;
+                         color: $white;
+                         @include flexbox;
+                         @include align-items(center);
+                         @include justify-content(center);
+                         border-radius: 50%;
+                         width: 4em;
+                         height: 4em;
+                         span {
+                              font-size: 0.8rem;
+                              font-family: $opensans-Regular;
+                              display: inline-block;
+                              width: 100%;
+                              text-align: center;
+                              line-height: 1;
+                              // margin-bottom: -1em;
+                              &.number {
+                                   font-size: 1.6rem;
+                                   font-family: $opensans-ExtraBold;
+                                   // margin-bottom: -1em;
+                              }
                          }
                     }
-               }
-               .title {
-                    @include flexbox;
-                    @include align-items(flex-start);
-                    @include justify-content(center);
-                    border-bottom: 3px dashed $border-colour;
-                    padding: 1.5em;
-                    .left {
+                    .title {
+                         @include flexbox;
+                         @include align-items(center);
+                         @include justify-content(flex-start);
+                         border-bottom: 3px dashed $border-colour;
+                         padding: 1.5em;
+                         .left {
+                              span {
+                                   display: inline-block;
+                                   width: 3.5em;
+                                   height: 3.5em;
+                                   margin: 0 0.75em 0 0;
+                              }
+                         }
+                         .right {
+                              h2, h3 {
+                                   margin: 0;
+                                   display: inline-block;
+                                   line-height: 1.4;
+                              }
+                              h2 {
+                                   font-size: 1.6rem;
+                                   font-family: $opensans-Bold;
+                                   color: $main-colour;
+                              }
+                              h3 {
+                                   font-size: 1rem;
+                                   font-family: $opensans-Regular;
+                                   color: lighten($main-colour,45%);
+                              }
+                         }
                     }
-                    .right {
-                         h2, h3 {
+                    .content {
+                         padding: 1em 1.5em 0 1.5em;
+                         p {
+                              margin: 0;
+                         }
+                         h4 {
+                              font-size: 1.4rem;
+                              font-family: $opensans-Bold;
                               margin: 0;
                               display: inline-block;
                               line-height: 1;
+                              a {
+                                   line-height: 1;
+                              }
                          }
-                         h2 {
-                              font-size: 1.8rem;
-                              font-family: $opensans-Bold;
-                              color: $main-colour;
+                         &.date , &.assigned, &.status {
+                              h4 span {
+                                   display: inline-block;
+                                   width: 1em;
+                                   height: 1em;
+                                   margin: 0 0.35em -0.1em 0;
+                              }
                          }
-                         h3 {
-                              font-size: 1rem;
-                              font-family: $opensans-Regular;
-                              color: lighten($main-colour,45%);
+                         &.date {
+                              h4 span {
+                                   background: url(#{$image-path}/icons/date.svg) no-repeat 50% 50%;
+                                   background-size: cover;
+                              }
+                         }
+                         &.assigned {
+                              h4 span {
+                                   background: url(#{$image-path}/icons/user-dark.svg) no-repeat 50% 50%;
+                                   background-size: cover;
+                              }
+                         }
+                         &.status {
+                              padding-bottom: 1em;
+                              h4 span {
+                                   background: url(#{$image-path}/icons/timer.svg) no-repeat 50% 50%;
+                                   background-size: cover;
+                              }
                          }
                     }
-               }
-               .content {
-                    padding: 1em 1.5em 0 1.5em;
-                    p {
-                         margin: 0;
-                    }
-                    h4 {
-                         font-size: 1.4rem;
-                         font-family: $opensans-Bold;
-                         margin: 0;
+                    .footer {
+                         padding: 1.5em;
+                         margin: 1em -2px -2px -2px;
                          display: inline-block;
-                         line-height: 1;
+                         width: 101%;
+                         border-radius: 0 0 5px 5px;
+                         background: $text-main-colour;
+                    }
+                    &.welfare {
+                         .left {
+                              span {
+                                   background: url(#{$image-path}/icons/HandW.svg) no-repeat 50% 50%;
+                                   background-size: cover;
+                              }
+                         }
+                    }
+                    &.propert {
+                         .left {
+                              span {
+                                   background: url(#{$image-path}/icons/PandA.svg) no-repeat 50% 50%;
+                                   background-size: cover;
+                              }
+                         }
                     }
                }
           }

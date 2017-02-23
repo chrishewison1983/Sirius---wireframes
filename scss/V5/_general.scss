@@ -85,6 +85,7 @@ hr {
 }
 
 .main-cta {
+     @include standard-transition;
      background: $blue;
      border-radius: $global-border-radius;
      padding: 1em;
@@ -98,6 +99,7 @@ hr {
      &:hover {
           color: $white;
           background: darken($blue,5%);
+          transform: scale(1.1);
      }
      &.create-client {
 

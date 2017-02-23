@@ -1,3 +1,8 @@
 
 /////// APPLICATION MIXINS ///////
 
+@mixin standard-transition($value: 200ms) {
+	-webkit-transition: all $value ease-out;
+	-moz-transition: all $value ease-out;
+	transition: all $value ease-out;
+} 
