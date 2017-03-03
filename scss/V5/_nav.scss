@@ -4,64 +4,6 @@
 */
 
 //  FOR ALL
-
-#section-header {
-     display: inline-block;
-     position: relative;
-     width: 100%;
-     background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
-     background-size: cover;
-     line-height: 0;
-     padding: 0;
-     .row {
-          z-index: 2;
-          position: relative;
-     }
-     h1 {
-          color: $white;
-          margin: 0;
-          padding: 0.5em 0 1em 0;
-          span {
-               color: rgba($white,0.6);
-          }
-          &.confirmation-message {
-               padding: 0.5em 0.75em 1em 2.75em;
-               background: url(#{$image-path}/icons/tick.svg) no-repeat 0 50%;
-               background-size: 2em;
-          }
-     }
-     .extra-content {
-          display: inline-block;
-          padding: 0 0 3em 0;
-          p {
-               color: $white;
-               margin: 0;
-               font-size: 1.2rem;
-          }
-          .left, .right {
-               float: left;
-               width: auto;
-               p {
-                    width: auto;
-                    float: left;
-                    clear: both;
-               }
-          }
-          .left {
-               margin: 0 1em 0 0;
-               p {
-                    font-family: $Opensans-Regular;
-                    opacity: 0.6;
-               }
-          }
-          .right {
-               p {
-                    font-family: $Opensans-Bold;
-               }
-          }
-     }
-}
-
 .top-nav {
      display: inline-block;
      width: 100%;

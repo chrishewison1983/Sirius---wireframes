@@ -30,11 +30,10 @@ $('.extra-content').hide();
 
 $(document).ready(function(){
      $('#show-more').click(function(){
-     	$('.extra-content').toggle();
+     	$('.extra-content').toggle('slow');
+          $(this).toggleClass('close');
      })
 });
-
-
 
 // Tabs code
 $(document).ready(function(){
