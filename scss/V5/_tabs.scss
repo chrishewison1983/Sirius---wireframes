@@ -57,6 +57,7 @@ ul.tabs {
           .dashboard-item-container {
                @include flexbox;
                @include flex-wrap(wrap);
+               float: left;
                .dashboard-item {
                     border: 2px solid $border-colour;
                     border-radius: $global-border-radius;
