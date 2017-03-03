@@ -16,29 +16,38 @@
 <header class="main">
 
      <nav>
-          <a href="1-dashboard.html" class="logo"><img src="../../production/img/V5/sirius-logo.svg" alt="Sirius"></a>
-          <ul>
-               <li class="user-cta">
-                    <a href="#">
-                         <span class="icon"></span>
-                         Susan Smith
-                    </a>
-               </li>
-               <li class="constant-cta">
-                    <a href="#" class="main-cta create-client">
-                         Create client
+          <div class="padding-wrapper">
+               <a href="../dashboard.html" class="logo"><img src="../../../production/img/V5/sirius-logo.svg" alt="Sirius"></a>
+          </div>
+
+          <a href="#" class="user-cta">
+               <span class="nav-icon"></span>
+               Susan Smith
+          </a>
+
+          <div class="create-client">
+               <a href="#" class="main-cta">
+                    <span class="nav-icon"></span> Create client
+               </a>
+          </div>
+
+          <ul class="padding-wrapper">
+               <li class="actions create-letter">
+                    <a href="2-create-letter/2a-create-letter.html">
+                         <span class="nav-icon"></span>
+                         Create letter
                     </a>
                </li>
                <li class="actions create-letter">
-                    <a href="2a-create-letter.html">
-                         <span class="icon"></span>
-                         Create letter
+                    <a href="#">
+                         <span class="nav-icon"></span>
+                         Add deputy
                     </a>
                </li>
           </ul>
 
           <a href="index.html" class="main-cta sign-out">
-               Sign out
+               <span class="nav-icon"></span> Sign out
           </a>
 
      </nav>
@@ -68,9 +77,11 @@
 <!-- // MAIN MAV - END // -->
  <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-12 large-uncentered columns"> <h1><span>Welcome:</span> Susan Smith</h1> <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p> </div> </div> <!-- =========== FILTER - START =========== --> <form class="filter"> <div class="row"> <div class="large-3 large-uncentered columns"> <label for="caseType">Case type:</label> <select name="caseType" id="caseType"> <option>-- Select --</option> <option>Option 1</option> <option>Option 2</option> <option>Option 3</option> <option>Option 4</option> </select> </div> <div class="large-3 large-uncentered columns"> <label for="filterBy">Filter by:</label> <select name="filterBy" id="filterBy"> <option>-- Select --</option> <option>Option 1</option> <option>Option 2</option> <option>Option 3</option> <option>Option 4</option> </select> </div> <div class="large-3 large-uncentered columns"> <label for="description">Description:</label> <select name="description" id="description"> <option>-- Select --</option> <option>Option 1</option> <option>Option 2</option> <option>Option 3</option> <option>Option 4</option> </select> </div> <div class="large-3 large-uncentered columns"> <label for="status">Status:</label> <select name="status" id="status"> <option>-- Select --</option> <option>Option 1</option> <option>Option 2</option> <option>Option 3</option> <option>Option 4</option> </select> </div> </div> </form> <!-- =========== FILTER - END =========== --> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span>360</span> My cases </li> <li class="tab-link" data-tab="tab-2"> <span>5</span> Task assigned to me </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard current"> <div class="section-title">Reports due in the next 30 days...</div> <div class="dashboard-item-container"> <!-- // ITEM - 1 - START // --> <button onclick="window.location.href='#'" class="dashboard-item welfare"> <div class="tasks"> <div class="wrapper"> <span class="number">3</span> <span>tasks</span> </div> </div> <div class="title"> <div class="left"> <span></span> </div> <div class="right"> <h2>LPA | 7000-0000-0310</h2> <h3>Mr Gerald Brackens</h3> </div> </div> <div class="content date"> <p>Reg due date:</p> <h4><span></span>22/04/2017</h4> </div> <div class="content assigned"> <p>Assigned to:</p> <h4><span></span><a href="#">Susan Smith</a></h4> </div> <div class="content status"> <p>Status:</p> <h4><span></span>Pending</h4> </div> <div class="footer"> </div> </button> <!-- // ITEM - 1 - END // --> <!-- // ITEM - 2 - START // --> <button class="dashboard-item"> <div class="title"> testwoiejfwejfjewfjefeg egernglenrg erglkemrgkmergre </div> <div class="content"> </div> <div class="footer"> </div> </button> <!-- // ITEM - 2 - END // --> <!-- // ITEM - 3 - START // --> <button class="dashboard-item"> <div class="title"> erjkgkjerglerngenrgner ergergergoerjgerg erger g erg erg erg erger ger g </div> <div class="content"> </div> <div class="footer"> </div> </button> <!-- // ITEM - 3 - END // --> </div> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content dashboard">  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div> <!-- =========== TAB CONTENT - 2 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
-	<script src="../../production/js/V5/scripts.js"></script>
 	<script src="../../production/js/V5/hideShowPassword.js"></script>
 	<script src="../../production/js/V5/my-jquery.js"></script>
+	<script src="../../production/js/V5/jquery.cookie.js"></script>
+	<script src="../../production/js/V5/jquery.modal.js"></script>
+	<script src="../../production/js/V5/jquery-datepicker.js"></script>
 	<!-- <script src="../../production/js/prototype/swing.js"></script>
 	<script src="../../production/js/prototype/class-list.js"></script>
 	<script src="../../production/js/prototype/card-stack.js"></script> -->

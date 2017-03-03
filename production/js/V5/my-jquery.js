@@ -17,6 +17,25 @@ $('input#password').click(function(){
      $("#login-button").removeClass("de-activate");
 });
 
+$('input#username').click(function(){
+     $(this).siblings().addClass("hide");
+});
+
+$('input#password').click(function(){
+     $(this).siblings().addClass("hide");
+});
+
+// Section header
+$('.extra-content').hide();
+
+$(document).ready(function(){
+     $('#show-more').click(function(){
+     	$('.extra-content').toggle();
+     })
+});
+
+
+
 // Tabs code
 $(document).ready(function(){
      $('ul.tabs li').click(function(){
@@ -31,16 +50,64 @@ $(document).ready(function(){
 });
 
 // Correspondant
+$(document).ready(function() {
+
+     $('#suggested ul li a').click(function() {
+          createLi($('#selected-list'), $(this).text(), 'sel');
+          $(this.parentNode).remove();
+          event.preventDefault();
+     });
+
+     $('#selected-list li a').click(function() {
+          event.preventDefault();
+          // $(this).removeClass('checked');
+          // alert('working');
+     });
+
+     var createLi = function(el, txt, type) {
+          $(el).append($('<li></li>')
+                    .append($('<a class="correspondent"></a>')
+                         .text(txt)
+                         // .attr('href', '#')
+                         .click(function() {
+                              switch (type) {
+                                   case 'sug':
+                                   createLi($('#selected-list'), txt, 'sel');
+                                   break;
+                                   case 'sel':
+                                   createLi($('#suggested ul'), txt, 'sug');
+                                   break;
+                              }
+                              $(this.parentNode).remove();
+                         }
+                    )
+               )
+          );
+     };
+
+});
+
+function removeItem(el) {
+     $('#suggested ul').append('<li><a class="correspondent"">' + $(el).html() + '</a></li>');
+     $(el.parentNode).remove();
+}
+
+// Address look-up
 $(document).ready(function(){
-     $('.correspondent').click(function(){
-          $(this).appendTo("#selected").slideDown('slow');
+     $('.address-list').hide();
+
+     $('#find-postcode').click(function(){
+     	$('.address-list').slideDown('slow');
      })
 });
+
+
+// ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //
 
 // Sticky item
 // Cache selectors outside callback for performance.
 var $window = $(window),
-     $stickyEl = $('#document-viewer'),
+     $stickyEl = $('#document-viewer, #document-summary'),
      elTop = $stickyEl.offset().top;
 
 $window.scroll(function() {

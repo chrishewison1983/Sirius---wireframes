@@ -1,0 +1,78 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-create-letter.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1 class="confirmation-message">
+                         <span>PFA | 7000-000-0310</span><br>
+                         Your letter has been sent to print
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <!-- // EDIT DOCUMENT - START // -->
+               <div class="large-6 large-uncentered columns">
+
+                    <form>
+                         <div class="form-group">
+
+                              <label class="section-title" for="letter-actions">Add actions to the letter...</label>
+                              <textarea id="letter-actions"></textarea>
+
+                              <label class="section-title" for="datepicker">Set a reminder for the letter...</label>
+                              <div class="date-wrapper">
+                                   <input type="text" id="datepicker">
+                                   <i class="date"></i>
+                              </div>
+
+                         </div>
+
+                    </form>
+
+                    <div class="cta-row">
+                         <a class="main-cta" href="../dashbaord.html">Add actions</a>
+                         <a href="../dashboard.html">Cancel</a>
+                    </div>
+
+               </div>
+               <!-- // EDIT DOCUMENT - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+     $(function(){
+		$( ".date-input-css" ).datepicker();
+	})
+</script>
+<!-- SCRIPT CONTENT - END -->

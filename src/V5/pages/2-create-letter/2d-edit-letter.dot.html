@@ -1,0 +1,106 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-create-letter.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1>
+                         <span>PFA | 7000-000-0310</span><br>
+                         Edit the letter
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <!-- // EDIT DOCUMENT - START // -->
+               <div class="large-6 large-uncentered columns">
+
+                    <h2 class="section-title">Edit document...</h2>
+
+                    <div id="document-editor">
+                         <div class="document">
+                              <div class="control-panel">
+                                   <h2>Control panel</h2>
+                                   <a href="#">Back</a>
+                              </div>
+                              <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
+                         </div>
+
+                    </div>
+
+               </div>
+               <!-- // EDIT DOCUMENT - END // -->
+
+               <!-- // DOCUMENT SUMMARY - START // -->
+               <div id="side-bar-holder" class="large-5 large-uncentered columns">
+
+                    <div id="document-summary">
+
+                         <h2 class="section-title">Letter template chosen...</h2>
+
+                         <div class="document">
+                              <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
+                              <h3 class="title">CT-bb: Blank complaints team template</h3>
+                         </div>
+
+                         <h2 class="section-title">Recipients chosen...</h2>
+
+                         <div class="recipients">
+                              <ol>
+                                   <li>Ms Lara Stevens (Correspondent)</li>
+                              </ol>
+                         </div>
+
+                         <div class="cta-row">
+                              <a class="main-cta" id="create-letter" href="#ex1" rel="modal:open">Preview your letter</a>
+                              <a class="main-cta secondary" id="save-and-exit" href="../dashboard.html">Save &amp; Exit</a>
+                              <a href="#" onclick="history.back();">Cancel letter</a>
+                         </div>
+                    </div>
+
+               </div>
+               <!-- // DOCUMENT SUMMARY - END // -->
+
+               <!-- // MODAL - START // -->
+               <div id="ex1" style="display:none;">
+                    <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
+                    <hr>
+                    <div class="cta-row">
+                         <a class="main-cta" href="2e-confirmation-page.html">Print document</a>
+                         <a href="#" rel="modal:close">Cancel</a>
+                    </div>
+               </div>
+               <!-- // MODAL - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

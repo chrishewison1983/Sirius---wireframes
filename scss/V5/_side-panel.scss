@@ -1,0 +1,24 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+// =====================================  Autocomplete drop down - START ===================================== //
+#side-bar-holder {
+     position: relative;
+     float: right !important;
+}
+
+#document-summary {
+     width: auto;
+     position: relative;
+     // right: 0;
+     &.sticky {
+          margin-top: 0;
+          position: fixed;
+          top: 0;
+          width: 32em;
+          // right: 0;
+     }
+}
+// =====================================  Autocomplete drop down - END ===================================== //

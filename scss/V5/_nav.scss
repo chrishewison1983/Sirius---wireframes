@@ -5,12 +5,70 @@
 
 //  FOR ALL
 
+#section-header {
+     display: inline-block;
+     position: relative;
+     width: 100%;
+     background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
+     background-size: cover;
+     line-height: 0;
+     padding: 0;
+     .row {
+          z-index: 2;
+          position: relative;
+     }
+     h1 {
+          color: $white;
+          margin: 0;
+          padding: 0.5em 0 1em 0;
+          span {
+               color: rgba($white,0.6);
+          }
+          &.confirmation-message {
+               padding: 0.5em 0.75em 1em 2.75em;
+               background: url(#{$image-path}/icons/tick.svg) no-repeat 0 50%;
+               background-size: 2em;
+          }
+     }
+     .extra-content {
+          display: inline-block;
+          padding: 0 0 3em 0;
+          p {
+               color: $white;
+               margin: 0;
+               font-size: 1.2rem;
+          }
+          .left, .right {
+               float: left;
+               width: auto;
+               p {
+                    width: auto;
+                    float: left;
+                    clear: both;
+               }
+          }
+          .left {
+               margin: 0 1em 0 0;
+               p {
+                    font-family: $Opensans-Regular;
+                    opacity: 0.6;
+               }
+          }
+          .right {
+               p {
+                    font-family: $Opensans-Bold;
+               }
+          }
+     }
+}
+
 .top-nav {
      display: inline-block;
      width: 100%;
-     background: $white;
-     border-bottom: 2px solid $white-off;
+     border-bottom: 1px solid rgba($white,0.2);
      padding: 0.75em 0;
+     z-index: 2;
+     position: relative;
      ul {
           margin: 0 1em 0 0;
           float: right;
@@ -22,20 +80,25 @@
                width: 2em;
                height: 2em;
                &.menu, &.alerts, &.settings {
+                    @include standard-transition;
+                    &:hover {
+                         transform: scale(1.3);
+                    }
                     a {
                          opacity: 0.4;
+                         border-bottom: none;
                     }
                }
                &.menu {
                     a {
-                         background: url(#{$image-path}/icons/menu.svg) no-repeat 50% 50%;
+                         background: url(#{$image-path}/icons/menu-white.svg) no-repeat 50% 50%;
                          background-size: 1.5em;
                     }
                }
                &.alerts {
                     position: relative;
                     a {
-                         background: url(#{$image-path}/icons/alert.svg) no-repeat 50% 50%;
+                         background: url(#{$image-path}/icons/alert-white.svg) no-repeat 50% 50%;
                          background-size: 1.5em;
                     }
                     span {
@@ -43,7 +106,7 @@
                          @include align-items(center);
                          @include justify-content(center);
                          background: $red;
-                         font-family: $opensans-Bold;
+                         font-family: $Montserrat-Bold;
                          font-size: 0.75rem;
                          font-weight: bold;
                          color: $white;
@@ -58,14 +121,14 @@
                }
                &.settings {
                     a {
-                         background: url(#{$image-path}/icons/settings.svg) no-repeat 50% 50%;
+                         background: url(#{$image-path}/icons/settings-white.svg) no-repeat 50% 50%;
                          background-size: 1.5em;
                     }
                }
                &.border {
-                    width: 2px;
+                    width: 1px;
                     height: 2em;
-                    background: rgba($black,0.1);
+                    background: rgba($white,0.2);
                     display: inline-block;
                }
                a {

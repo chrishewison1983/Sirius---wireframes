@@ -7,13 +7,19 @@
 
      <div class="row">
           <div class="large-5 large-centered columns">
-               <form action="1-dashboard.html" class="login-form">
-                    <img src="../../production/img/V5/sirius-logo-dark.svg" alt="Sirius">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password" id="password">
+               <form class="login-form">
+                    <img src="../../production/img/V5/sirius-logo.svg" alt="Sirius">
+                    <div class="input-holder">
+                         <label for="username">Username...</label>
+                         <input type="text" name="username" id="username">
+                    </div>
+                    <div class="input-holder">
+                         <label for="password">Password...</label>
+                         <input type="password" name="password" id="password">
+                    </div>
                     <div class="row">
                          <div class="large-12 large-uncentered columns">
-                    		<input type="submit" class="main-cta de-activate" id="login-button" value="Log in">
+                    		<a class="main-cta de-activate" id="login-button" href="dashboard.html">Log in</a>
                               <label class="show-password" for="show-password">
                                    <input id="show-password" name="show-password" type="checkbox" value="show-password">
                                    Show password
@@ -24,15 +30,15 @@
           </div>
      </div>
 
+     <div class="colour-wrapper"></div>
+
 </main>
 <!-- PRIMARY CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
 <script>
-
      $('#show-password').change(function(){
           $('#password').hideShowPassword($(this).prop('checked'));
      });
-
 </script>
 <!-- SCRIPT CONTENT - END -->

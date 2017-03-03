@@ -4,8 +4,13 @@
 */
 
 //  FOR ALL
-#document-viewer {
+#document-viewer, #document-editor {
      line-height: 0;
+     &.sticky {
+          margin-top: 1em;
+          position: fixed;
+          top: 0;
+     }
      .document {
           // padding: 1.5em;
           background: $border-colour;
@@ -16,13 +21,13 @@
                margin: 1em 0 0 0;
                background: $border-colour;
                font-size: 1rem;
-               font-family: $opensans-Regular;
+               font-family: $Montserrat-Regular;
                h2, a {
                     display: inline-block;
                }
                h2 {
                     width: auto;
-                    font-family: $opensans-Regular;
+                    font-family: $Montserrat-Regular;
                     font-size: 1rem;
                     margin: 0 0 0 1em;
                }
@@ -38,10 +43,6 @@
                // display: inline-block;
                // float: left;
           }
-     }
-     &.sticky {
-          position: fixed;
-          top: 0;
      }
 }
 

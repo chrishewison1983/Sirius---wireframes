@@ -4,10 +4,10 @@
 */
 
 //  FOR ALL
-
 .document-item-container {
      @include flexbox;
      @include flex-wrap(wrap);
+     float: left;
      .document-item {
           border: 2px solid $border-colour;
           border-radius: $global-border-radius;
@@ -37,8 +37,8 @@
                display: inline-block;
                padding: 1.5em 1.5em 0 1.5em;
                h2 {
-                    font-size: 1.1rem;
-                    font-family: $opensans-Bold;
+                    font-size: 1rem;
+                    font-family: $Montserrat-Bold;
                     color: $main-colour;
                     margin: 0;
                     display: inline-block;
@@ -50,11 +50,143 @@
      }
 }
 
-.add-correspondent {
-     .main-cta {
-          width: auto;
+#document-summary {
+     float: right !important;
+     .recipients, .document {
+          display: inline-block;
+          float: left;
+          width: 100%;
+          margin: 0 0 1em 0;
+     }
+     .document {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+               height: 6em;
+               padding: 0.5em;
+               border: 3px solid $border-colour;
+               border-radius: $global-border-radius;
+               float: left;
+               margin: 0 1em 0 0;
+          }
+          .title {
+               float: left;
+               text-transform: uppercase;
+               font-size: 1.4rem;
+               width: 80%;
+               color: rgba($main-colour,0.4);
+          }
+     }
+     .recipients {
+          margin: 0 0 2em 0;
+          ol {
+               margin: 0 0 1em 0;
+               li {
+                    color: rgba($main-colour,0.4);
+                    counter-increment: step-counter;
+                    list-style: none;
+                    margin: 0 0 1em 0;
+                    &::before {
+                         content: counter(step-counter);
+                         font-weight: $Montserrat-Bold;
+                         background: $blue;
+                         display: inline-block;
+                         border-radius: 50%;
+                         color: $white;
+                         width: 1.5em;
+                         height: 1.5em;
+                         margin: 0 0.5em 0 0;
+                         text-align: center;
+                    }
+               }
+          }
      }
 }
+
+.add-correspondent {
+}
+
+.create-letter {
+     ul {
+          margin: 0;
+          li {
+               list-style: none;
+          }
+          &#selected-list {
+               li {
+                    a {
+                         background: rgba($border-colour,0.5);
+                         &:after {
+                              opacity: 1;
+                         }
+                    }
+               }
+          }
+     }
+     hr {
+          margin: 1.5em 0 0 0;
+          border-bottom: 3px dashed $border-colour;
+     }
+     a.correspondent {
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          margin-bottom: 1em;
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          padding: 1em 1em 1em 3.75em;
+          font-family: $Montserrat-Bold;
+          font-size: 1.3rem;
+          line-height: 1;
+          @include standard-transition;
+          // z-index: 1;
+          &:hover {
+               background: rgba($border-colour,0.5);
+               cursor: pointer;
+               z-index: 10;
+          }
+          &:before {
+               left: 1em;
+               top: inherit;
+               width: 40px;
+               height: 40px;
+               border: 4px solid;
+               border-radius: $global-border-radius;
+               background: transparent;
+               position: absolute;
+               content: "";
+               color: $main-colour;
+          }
+          &:after {
+               color: $main-colour;
+               left: 1.4em;
+               right: inherit;
+               top: 1.475em;
+               width: 24px;
+               height: 14px;
+               content: "";
+               border: solid;
+               border-width: 0 0 5px 5px;
+               background: transparent;
+               position: absolute;
+               -moz-transform: rotate(-45deg);
+               -o-transform: rotate(-45deg);
+               -webkit-transform: rotate(-45deg);
+               -ms-transform: rotate(-45deg);
+               transform: rotate(-45deg);
+               zoom: 1;
+               filter: alpha(opacity=0);
+               opacity: 0;
+          }
+          span {
+               font-family: $Opensans-Regular;
+               color: lighten($main-colour,40%);
+               font-size: 1rem;
+          }
+     }
+}
+
 
 
 

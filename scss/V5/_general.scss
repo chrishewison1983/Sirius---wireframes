@@ -6,8 +6,8 @@
 //  FOR ALL
 
 body {
-     font-family: $opensans-Regular;
-     line-height: 1.4;
+     font-family: $Montserrat-Regular;
+     line-height: 0;
 }
 
 body#body-default {
@@ -22,8 +22,28 @@ main {
           //      padding: 0;
           // }
      }
+     &.login {
+          background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
+          background-size: cover;
+          position: relative;
+     }
 }
 
+.colour-wrapper {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: rgba($black,0.1);
+     z-index: 1;
+}
+
+.row {
+     z-index: 2;
+}
+
+// =================== TEXT - START =================== //
 h1, h2, p {
      display: inline-block;
      width: 100%;
@@ -35,15 +55,22 @@ h1, h2, p {
 }
 
 h1 {
-     font-size: 2.4rem;
+     font-size: 2.8rem;
 }
 
-h1, h2 {
-     font-family: $opensans-Bold;
-     line-height: 1.4;
+h1, h2, h3, h4 {
+     font-family: $Montserrat-Bold;
+     line-height: 1.2;
      color: $main-colour;
+     text-transform: uppercase;
+     margin: 0 0 0.5em 0;
      span {
-          color: $text-main-colour;
+          font-size: 1.4rem;
+          font-family: $Opensans-Regular;
+          color: lighten($main-colour,50%);
+          text-transform: initial;
+          width: 100%;
+          display: inline-block;;
      }
      a, strong {
           color: $blue;
@@ -57,23 +84,29 @@ h1, h2 {
           margin: 0 0.5em 0 0;
           border-radius: $global-border-radius;
      }
+     &.section-title {
+          text-transform: initial;
+     }
+}
+
+p, ul, ul li {
+     font-family: $Opensans-Regular;
+     color: $text-main-colour;
+     line-height: 1.4;
 }
 
 .section-title {
      font-size: 1.6rem;
      display: inline-block;
      width: 100%;
-     font-family: $opensans-Bold;
+     font-family: $Montserrat-Bold;
      margin: 1.5em 0 0.75em 0;
 }
+// =================== TEXT - END =================== //
 
-p, ul, ul li {
-     font-family: $opensans-Regular;
-     color: $text-main-colour;
-}
-
+// =================== LINKS - START =================== //
 a {
-     font-family: $opensans-Bold;
+     font-family: $Opensans-Bold;
      line-height: 1.4;
      color: $blue;
      border-bottom: 1px dashed;
@@ -83,6 +116,56 @@ a {
           color: darken($blue, 5%);
      }
 }
+
+a.main-cta {
+     @include standard-transition;
+     background: $blue;
+     border: 3px solid $blue;
+     border-radius: $global-border-radius;
+     padding: 1em;
+     font-family: $Montserrat-Bold;
+     width: 100%;
+     color: $white;
+     display: inline-block;
+     // border: none;
+     float: left;
+     position: relative;
+     &:hover {
+          color: $white;
+          background: darken($blue,5%);
+          transform: scale(1.1);
+          cursor: pointer;
+     }
+     &.create-client {
+
+     }
+     &.de-activate {
+          background: $main-colour;
+          opacity: 0.2;
+     }
+     &.secondary {
+          border: 3px solid $blue;
+          color: $blue;
+          background: $white;
+     }
+}
+
+.cta-row {
+     a.main-cta {
+          width: auto;
+          float: left;
+          margin: 0 1em 0 0;
+          &.secondary {
+               margin: 0;
+          }
+     }
+     a {
+          margin: 0.8em 0 0 0;
+          display: inline-block;
+          float: right;
+     }
+}
+// =================== LINKS - END =================== //
 
 hr {
      margin: 3em 0;
@@ -107,37 +190,7 @@ hr {
      }
 }
 
-.main-cta {
-     @include standard-transition;
-     background: $blue;
-     border-radius: $global-border-radius;
-     padding: 1em;
-     font-family: $opensans-Bold;
-     width: 100%;
-     color: $white;
-     display: inline-block;
-     border: none;
-     float: left;
-     position: relative;
-     &:hover {
-          color: $white;
-          background: darken($blue,5%);
-          transform: scale(1.1);
-          cursor: pointer;
-     }
-     &.create-client {
 
-     }
-     &.de-activate {
-          background: $main-colour;
-          opacity: 0.2;
-     }
-     &.secondary {
-          border: 3px solid $blue;
-          color: $blue;
-          background: $white;
-     }
-}
 
 .filter {
      background: rgba($main-colour,0.1);

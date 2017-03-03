@@ -1,34 +1,39 @@
 {
-  "template": "default"
+     "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-actions.html') }}
+{{= it.include('main-nav-create-letter.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
 
-     {{= it.include('top-nav.html') }}
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1>
+                         <span>PFA | 7000-000-0310</span><br>
+                         Create new recipients for the letter
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
 
      <!-- CONTENT WRAPPER - START -->
      <div class="content-wrapper">
 
           <div class="row">
-               <div class="large-12 large-uncentered columns">
-                    <h1>
-                         <img src="../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
-                         <span>Add a correspondant to the:</span><br>
-                         CT-bb: Blank complaints team letter
-                    </h1>
-                    <!-- // DOCUMENT - 1 - START // -->
-                    <!-- // DOCUMENT - 1 - END // -->
-               </div>
-          </div>
 
-          <div class="row">
-
+               <!-- // DOCUMENT VIEWER - START // -->
                <div class="large-7 large-uncentered columns">
 
-                    <div class="section-title">Case documents...</div>
+                    <h2 class="section-title">Case documents...</h2>
 
                     <div id="document-viewer">
                          <div class="document">
@@ -36,17 +41,19 @@
                                    <h2>Document title</h2>
                                    <a href="#">Back</a>
                               </div>
-                              <img src="../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
+                              <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
                          </div>
                     </div>
 
                </div>
+               <!-- // DOCUMENT VIEWER - END // -->
 
+               <!-- // CREATE RECIPIENT - START // -->
                <div class="large-5 large-uncentered columns">
 
-                    <form action="1-dashboard.html" class="add-correspondent-form">
+                    <form class="add-correspondent-form">
 
-                         <div class="section-title">Add a correspondant...</div>
+                         <h2 class="section-title">Add a correspondant...</h2>
 
                          <!-- // FORM ITEM - 1 - START // -->
                          <div class="form-group">
@@ -127,13 +134,68 @@
                          </div>
                          <!-- // FORM ITEM - 7 - END // -->
 
-                         <!-- // FORM ITEM - 8 - START // -->
+                         <!-- // FORM ITEM - 8a - START // -->
                          <div class="form-group">
                               <label for="postcode">Postcode</label>
                               <input id="postcode" name="postcode" type="text" class="one-third">
-                              <input type="submit" class="main-cta secondary" id="find-postcode" value="Find address">
+                              <a class="main-cta secondary" id="find-postcode">Find address</a>
                          </div>
-                         <!-- // FORM ITEM - 8 - END // -->
+                         <!-- // FORM ITEM - 8a - END // -->
+
+                         <!-- // FORM ITEM - 8b - START // -->
+                         <div class="form-group address-list">
+                              <label for="client-address-1" class="radio address">
+                                   <input id="client-address-1" type="radio" name="radio-inline-group" value="client-address-1">
+                                   1 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-2" class="radio address">
+                                   <input id="client-address-2" type="radio" name="radio-inline-group" value="client-address-2">
+                                   2 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-3" class="radio address">
+                                   <input id="client-address-3" type="radio" name="radio-inline-group" value="client-address-3">
+                                   3 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-4" class="radio address">
+                                   <input id="client-address-4" type="radio" name="radio-inline-group" value="client-address-4">
+                                   4 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-5" class="radio address">
+                                   <input id="client-address-5" type="radio" name="radio-inline-group" value="client-address-5">
+                                   5 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-6" class="radio address">
+                                   <input id="client-address-6" type="radio" name="radio-inline-group" value="client-address-6">
+                                   6 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-7" class="radio address">
+                                   <input id="client-address-7" type="radio" name="radio-inline-group" value="client-address-7">
+                                   7 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-8" class="radio address">
+                                   <input id="client-address-8" type="radio" name="radio-inline-group" value="client-address-8">
+                                   8 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-9" class="radio address">
+                                   <input id="client-address-9" type="radio" name="radio-inline-group" value="client-address-9">
+                                   9 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-10" class="radio address">
+                                   <input id="client-address-10" type="radio" name="radio-inline-group" value="client-address-10">
+                                   10 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-11" class="radio address">
+                                   <input id="client-address-11" type="radio" name="radio-inline-group" value="client-address-11">
+                                   11 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-12" class="radio address">
+                                   <input id="client-address-12" type="radio" name="radio-inline-group" value="client-address-12">
+                                   12 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+
+                         </div>
+                         <!-- // FORM ITEM - 8b - END // -->
+
 
                          <!-- // FORM ITEM - 9 - START // -->
                          <div class="form-group">
@@ -196,15 +258,17 @@
                          <hr>
 
                          <hr>
-                         
+
                          <div class="cta-row">
-                              <input type="submit" class="main-cta" id="create-letter" value="Add correspondant">
+                              <a class="main-cta" id="create-letter" href="2b-add-correspondance.html">Add correspondant</a>
                               <a href="#" onclick="history.back();">Cancel</a>
                          </div>
 
                     </form>
 
                </div>
+               <!-- // CREATE RECIPIENT - END // -->
+
           </div>
 
 

@@ -5,6 +5,17 @@
 
 //  FOR ALL
 
+.nav-icon {
+     display: inline-block;
+     float: left;
+     background-color: $white;
+     border-radius: 50%;
+     width: 2em;
+     height: 2em;
+     margin: -0.35em 0.75em 0 0;
+     opacity: 0.4;
+}
+
 header {
      &.index {
           background: $main-colour;
@@ -52,11 +63,50 @@ header {
           bottom: 0;
           height: 100vh;
           background: $main-colour;
-          padding: 1.5em;
+          border-right: 1px solid $white;
+          z-index: 100;
+          box-shadow: 10px 0px 20px 0px rgba($black,0.2);
+          .padding-wrapper {
+               padding: 1.5em;
+          }
           .logo {
                border-bottom: none;
+               img {
+                    margin: 0;
+                    padding: 0;
+               }
                &:hover {
                     border-bottom: none;
+               }
+          }
+          .user-cta {
+               display: inline-block;
+               padding: 1.5em;
+               margin: 0;
+               color: $white;
+               width: 100%;
+               border-top: 1px solid rgba($white,0.3);
+               border-bottom: 1px solid rgba($white,0.3);
+               background: url(#{$image-path}/icons/arrow-down.svg) no-repeat 90% 50% rgba($white,0.1);
+               background-size: 1em;
+               .nav-icon {
+                    background: url(#{$image-path}/icons/user.svg) no-repeat 50% 50% rgba($white,0.1);
+                    background-size: cover;
+               }
+          }
+          .create-client {
+               display: inline-block;
+               padding: 1.5em;
+               margin: 0;
+               width: 100%;
+               .main-cta {
+                    border: none;
+                    .nav-icon {
+                         margin: 0 0.5em -0.85em 0;
+                         opacity: 1;
+                         position: relative;
+                         top: -0.45em;
+                    }
                }
           }
           nav {
@@ -64,12 +114,13 @@ header {
                     width: 100%;
                     padding-bottom: 1.5em;
                     margin-bottom: 1.5em;
-                    border-bottom: 2px solid rgba($white,0.3);
+                    // border-bottom: 2px solid rgba($white,0.3);
                }
                ul {
                     margin: 0;
                     display: inline-block;
                     width: 100%;
+                    border-top: 1px dashed rgba($white, 0.3);
                     li {
                          list-style: none;
                          margin: 0;
@@ -77,26 +128,16 @@ header {
                          display: inline-block;
                          padding-bottom: 1.5em;
                          &.constant-cta {
-                              padding: 1.5em 0;
-                              border-top: 2px dashed rgba($white, 0.3);
-                              border-bottom: 2px dashed rgba($white, 0.3);
-                         }
-                         &.user-cta {
-                              a {
-                                   span.icon {
-                                        background: url(#{$image-path}/icons/user.svg) no-repeat 50% 50%;
-                                        background-size: cover;
-                                   }
-                                   background: url(#{$image-path}/icons/arrow-down.svg) no-repeat 100% 50%;
-                                   background-size: 1em;
-                              }
+                              padding: 0;
+                              // border-top: 2px dashed rgba($white, 0.3);
+                              // border-bottom: 2px dashed rgba($white, 0.3);
                          }
                          &.actions {
-                              padding: 1.5em 0;
+                              padding: 0 0 1.5em 0;
                          }
                          &.create-letter {
                               a {
-                                   span.icon {
+                                   .nav-icon {
                                         background: url(#{$image-path}/icons/create-letter.svg) no-repeat 50% 50%;
                                         background-size: cover;
                                    }
@@ -107,30 +148,25 @@ header {
                               display: inline-block;
                               width: 100%;
                               border-bottom: none;
-                              span.icon {
-                                   display: inline-block;
-                                   float: left;
-                                   background-color: $white;
-                                   border-radius: 50%;
-                                   width: 2em;
-                                   height: 2em;
-                                   margin: -0.35em 0.75em 0 0;
-                              }
+                              font-family: $Opensans-Regular;
                          }
                     }
                }
           }
           .main-cta.sign-out {
                position: absolute;
-               bottom: 1.5em;
-               left: 1.5em;
-               right: 1.5em;
+               bottom: 0;
+               padding: 1.5em;
+               left: 0;
+               right: 0;
                width: auto;
                background: none;
-               border: 2px solid $white;
+               border: none;
+               border-radius: 0;
+               border-top: 1px solid rgba($white,0.4);
                &:hover {
-                    color: $main-colour;
-                    background: $white;
+                    color: $white;
+                    background: rgba($white,0.1);
                }
           }
      }
