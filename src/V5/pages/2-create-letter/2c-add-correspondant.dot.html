@@ -30,26 +30,83 @@
 
           <div class="row">
 
-               <!-- // DOCUMENT VIEWER - START // -->
-               <div class="large-7 large-uncentered columns">
+               <div id="document-summary" class="large-6 large-uncentered columns">
 
-                    <h2 class="section-title">Case documents...</h2>
+                    <!-- =========== TABS - START =========== -->
+                    <ul id="side-panel-tabs" class="tabs">
+                         <li class="tab-link" data-tab="tab-1">
+                              <span class="info"></span>
+                              <p>Document info</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-2">
+                              <span class="client-details"></span>
+                              <p>Client details</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-3">
+                              <span class="deputy-details"></span>
+                              <p>Deputy details</p>
+                         </li>
+                         <li class="tab-link current" data-tab="tab-4">
+                              <span class="documents"></span>
+                              <p>Documents</p>
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
 
-                    <div id="document-viewer">
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content side-panel">
+
+                         <!-- // DOCUMENT SUMMARY - START // -->
+                         <h2 class="section-title">Document information...</h2>
+
+                         <h3 class="sub-section-title">Letter template chosen...</h3>
+
                          <div class="document">
-                              <div class="control-panel">
-                                   <h2>Document title</h2>
-                                   <a href="#">Back</a>
-                              </div>
                               <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
+                              <h3 class="title">CT-bb: Blank complaints team template</h3>
                          </div>
+
+                         <h3 class="sub-section-title">Recipients chosen...</h3>
+
+                         <ol id="recipients">
+                              <li>Ms Lara Stevens (Correspondent)</li>
+                         </ol>
+                         <!-- // DOCUMENT SUMMARY - END // -->
+
                     </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content side-panel">
+
+                         <h2 class="section-title">Clients details...</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content side-panel">
+
+                         <h2 class="section-title">Deputy details...</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content side-panel current">
+
+                         <h2 class="section-title">Case documents...</h2>
+
+                         {{= it.include('document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
 
                </div>
-               <!-- // DOCUMENT VIEWER - END // -->
+
 
                <!-- // CREATE RECIPIENT - START // -->
-               <div class="large-5 large-uncentered columns">
+               <div id="action-panel" class="large-6 large-uncentered columns">
 
                     <form class="add-correspondent-form">
 
@@ -259,11 +316,6 @@
 
                          <hr>
 
-                         <div class="cta-row">
-                              <a class="main-cta" id="create-letter" href="2b-add-correspondance.html">Add correspondant</a>
-                              <a href="#" onclick="history.back();">Cancel</a>
-                         </div>
-
                     </form>
 
                </div>
@@ -274,6 +326,14 @@
 
      </div>
      <!-- CONTENT WRAPPER - END -->
+
+     <!-- CTA-FOOTER - START -->
+     <div id="cta-footer" class="cta-row">
+          <a class="main-cta" id="create-letter" href="2b-add-correspondance.html">Add correspondant</a>
+          <a href="#" onclick="history.back();">Cancel</a>
+     </div>
+     <!-- CTA-FOOTER - END -->
+
 
 </main>
 <!-- PRIMARY CONTENT - END -->

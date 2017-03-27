@@ -36,6 +36,7 @@
           .title {
                display: inline-block;
                padding: 1.5em 1.5em 0 1.5em;
+               width: 100%;
                h2 {
                     font-size: 1rem;
                     font-family: $Montserrat-Bold;
@@ -51,17 +52,17 @@
 }
 
 #document-summary {
-     float: right !important;
-     .recipients, .document {
+     // float: right !important;
+     #recipients, .document {
           display: inline-block;
           float: left;
           width: 100%;
-          margin: 0 0 1em 0;
+          margin: 0;
      }
      .document {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           img {
                height: 6em;
                padding: 0.5em;
@@ -78,27 +79,27 @@
                color: rgba($main-colour,0.4);
           }
      }
-     .recipients {
-          margin: 0 0 2em 0;
-          ol {
+     ol#recipients {
+          margin: 0;
+          li {
+               color: rgba($main-colour,0.4);
+               counter-increment: step-counter;
+               list-style: none;
                margin: 0 0 1em 0;
-               li {
-                    color: rgba($main-colour,0.4);
-                    counter-increment: step-counter;
-                    list-style: none;
-                    margin: 0 0 1em 0;
-                    &::before {
-                         content: counter(step-counter);
-                         font-weight: $Montserrat-Bold;
-                         background: $blue;
-                         display: inline-block;
-                         border-radius: 50%;
-                         color: $white;
-                         width: 1.5em;
-                         height: 1.5em;
-                         margin: 0 0.5em 0 0;
-                         text-align: center;
-                    }
+               &:last-of-type {
+                    margin-bottom: 0;
+               }
+               &::before {
+                    content: counter(step-counter);
+                    font-weight: $Montserrat-Bold;
+                    background: $blue;
+                    display: inline-block;
+                    border-radius: 50%;
+                    color: $white;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0 0.5em 0 0;
+                    text-align: center;
                }
           }
      }
@@ -179,7 +180,7 @@
                filter: alpha(opacity=0);
                opacity: 0;
           }
-          span {
+          span.sub-text {
                font-family: $Opensans-Regular;
                color: lighten($main-colour,40%);
                font-size: 1rem;

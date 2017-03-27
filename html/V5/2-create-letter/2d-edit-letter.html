@@ -22,7 +22,7 @@
 
           <a href="#" class="user-cta">
                <span class="nav-icon"></span>
-               Susan Smith
+               <div class="sirius-user-id">Susan Smith</div>
           </a>
 
           <div class="create-client">
@@ -31,7 +31,7 @@
                </a>
           </div>
 
-          <ul class="padding-wrapper">
+          <!-- <ul class="padding-wrapper">
                <li class="actions create-letter">
                     <a href="2a-create-letter.html">
                          <span class="nav-icon"></span>
@@ -44,7 +44,7 @@
                          Add deputy
                     </a>
                </li>
-          </ul>
+          </ul> -->
 
           <a href="index.html" class="main-cta sign-out">
                <span class="nav-icon"></span> Sign out
@@ -75,7 +75,18 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <h1> <span>PFA | 7000-000-0310</span><br> Edit the letter </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <!-- // EDIT DOCUMENT - START // --> <div class="large-6 large-uncentered columns"> <h2 class="section-title">Edit document...</h2> <div id="document-editor"> <div class="document"> <div class="control-panel"> <h2>Control panel</h2> <a href="#">Back</a> </div> <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> </div> </div> </div> <!-- // EDIT DOCUMENT - END // --> <!-- // DOCUMENT SUMMARY - START // --> <div id="side-bar-holder" class="large-5 large-uncentered columns"> <div id="document-summary"> <h2 class="section-title">Letter template chosen...</h2> <div class="document"> <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> <h3 class="title">CT-bb: Blank complaints team template</h3> </div> <h2 class="section-title">Recipients chosen...</h2> <div class="recipients"> <ol> <li>Ms Lara Stevens (Correspondent)</li> </ol> </div> <div class="cta-row"> <a class="main-cta" id="create-letter" href="#ex1" rel="modal:open">Preview your letter</a> <a class="main-cta secondary" id="save-and-exit" href="../dashboard.html">Save &amp; Exit</a> <a href="#" onclick="history.back();">Cancel letter</a> </div> </div> </div> <!-- // DOCUMENT SUMMARY - END // --> <!-- // MODAL - START // --> <div id="ex1" style="display:none;"> <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> <hr> <div class="cta-row"> <a class="main-cta" href="2e-confirmation-page.html">Print document</a> <a href="#" rel="modal:close">Cancel</a> </div> </div> <!-- // MODAL - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <h1> <span>PFA | 7000-000-0310</span><br> Edit the letter </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Document info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">Document information...</h2> <h3 class="sub-section-title">Letter template chosen...</h3> <div class="document"> <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> <h3 class="title">CT-bb: Blank complaints team template</h3> </div> <h3 class="sub-section-title">Recipients chosen...</h3> <ol id="recipients"> <li>Ms Lara Stevens (Correspondent)</li> </ol> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details...</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details...</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel"> <h2 class="section-title">Case documents...</h2> <!-- // DOCUMENT VIEWER - START // -->
+<div id="document-viewer">
+	<div class="document">
+		<div class="control-panel">
+			<h2>Document title</h2>
+			<a href="#">Back</a>
+		</div>
+		<img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item">
+	</div>
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <!-- // EDIT DOCUMENT - START // --> <div id="action-panel" class="large-6 large-uncentered columns"> <h2 class="section-title">Edit document...</h2> <img src="../../../production/img/V5/document-editor.png" alt="Document" class="document-item"> </div> <!-- // EDIT DOCUMENT - END // --> <!-- // MODAL - START // --> <div id="ex1" style="display:none;"> <img src="../../../production/img/V5/document-thumbnail.png" alt="Document" class="document-item"> <hr> <div class="cta-row"> <a class="main-cta" href="2e-confirmation-page.html">Print document</a> <a href="#" rel="modal:close">Cancel</a> </div> </div> <!-- // MODAL - END // --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="create-letter" href="#ex1" rel="modal:open">Preview your letter</a> <a class="main-cta secondary" id="save-and-exit" href="../dashboard.html">Save &amp; Exit</a> <a href="#" onclick="history.back();">Cancel letter</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V5/hideShowPassword.js"></script>
 	<script src="../../../production/js/V5/my-jquery.js"></script>
@@ -85,6 +96,7 @@
 	<script>
 	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
 	</script>
+	<script src="../../../production/js/V5/my-cookies.js"></script>
 	<!-- <script src="../../production/js/prototype/swing.js"></script>
 	<script src="../../production/js/prototype/class-list.js"></script>
 	<script src="../../production/js/prototype/card-stack.js"></script> -->

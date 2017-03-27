@@ -9,10 +9,14 @@ main.default {
      display: inline-block;
      width: 85%;
      float: left;
-     margin-left: 15%;
+     margin: 0 0 5em 15%;
+     position: relative;
      // padding: 3em;
      .content-wrapper {
           padding: 3em 0;
+          &.dashboard {
+               padding-top: 0;
+          }
      }
 }
 

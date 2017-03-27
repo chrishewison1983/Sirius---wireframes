@@ -2,10 +2,10 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-client.html') }}
+{{= it.include('main-nav-client-page.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default">
+<main class="default new-client">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header">
@@ -15,8 +15,8 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <h1>
-                         <span>CaseRec ID: 29273638201</span><br>
-                         Mr Joe Bloggs
+                         <span>Court reference: 29273638201</span><br>
+                         <div class="client-title">Mr</div> <div class="client-first-name">Joe</div> <div class="client-last-name">Bloggs</div>
                          <a id="show-more">Show more</a>
                     </h1>
                     <div class="extra-content">
@@ -28,10 +28,22 @@
                               <p>Record:</p>
                          </div>
                          <div class="right">
-                              <p>25/06/1943</p>
-                              <p>3 Grimwald Place, Buckley, Buckinghamshire, BK89 7TH</p>
-                              <p>joe.bloggs@work.com</p>
-                              <p>Alzheimer's</p>
+                              <p>
+                                   <span class="client-dob-day">25</span>
+                                   /
+                                   <span class="client-dob-month">06</span>
+                                   /
+                                   <span class="client-dob-year">1943</span>
+                              </p>
+                              <p>
+                                   <span class="client-address">3 Grimwald Place, Buckley, Buckinghamshire, BK89 7TH</span>
+                              </p>
+                              <p>
+                                   <span class="client-email">joe.bloggs@work.com</span>
+                              </p>
+                              <p>
+                                   <span class="client-medical-condition">Alzheimer's</span>
+                              </p>
                               <p>7000-0000-2803</p>
                          </div>
                          <a href="../3-create-client/3a-create-client.html">Edit client</a>
@@ -52,7 +64,7 @@
           <!-- =========== TABS - START =========== -->
           <div class="row">
                <div class="large-12 large-uncentered columns">
-                    <ul class="tabs">
+                    <ul class="client-details tabs">
                          <li class="tab-link current" data-tab="tab-1">
                               Summary &amp; timeline
                          </li>
@@ -76,7 +88,7 @@
           <!-- =========== TABS - END =========== -->
 
           <!-- =========== TAB CONTENT - 1 - START =========== -->
-          <div id="tab-1" class="tab-content current">
+          <div id="tab-1" class="client-details tab-content current">
                <div class="row">
 
                     <!-- // CREATE CLIENT - START // -->
@@ -90,56 +102,64 @@
           <!-- =========== TAB CONTENT - 1 - END =========== -->
 
           <!-- =========== TAB CONTENT - 2 - START =========== -->
-          <div id="tab-2" class="tab-content">
+          <div id="tab-2" class="client-details tab-content">
                <div class="row">
 
-                    <!-- // CREATE CLIENT - START // -->
-                    <div class="large-5 large-uncentered columns">
+                    <!-- // CLIENT TASKS - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-tab-tasks.html') }}
 
                     </div>
-                    <!-- // CREATE CLIENT - END // -->
+                    <!-- // CLIENT TASKS - END // -->
 
                </div>
           </div>
           <!-- =========== TAB CONTENT - 2 - END =========== -->
 
           <!-- =========== TAB CONTENT - 3 - START =========== -->
-          <div id="tab-3" class="tab-content">
+          <div id="tab-3" class="client-details tab-content">
                <div class="row">
 
-                    <!-- // CREATE CLIENT - START // -->
-                    <div class="large-5 large-uncentered columns">
+                    <!-- // CLIENT INFORMATION - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-tab-information.html') }}
 
                     </div>
-                    <!-- // CREATE CLIENT - END // -->
+                    <!-- // CLIENT INFORMATION - END // -->
 
                </div>
           </div>
           <!-- =========== TAB CONTENT - 3 - END =========== -->
 
           <!-- =========== TAB CONTENT - 4 - START =========== -->
-          <div id="tab-4" class="tab-content">
+          <div id="tab-4" class="client-details tab-content">
                <div class="row">
 
-                    <!-- // CREATE CLIENT - START // -->
-                    <div class="large-5 large-uncentered columns">
+                    <!-- // CLIENT DOCUMENTS - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-tab-documents.html') }}
 
                     </div>
-                    <!-- // CREATE CLIENT - END // -->
+                    <!-- // CLIENT DOCUMENTS - END // -->
 
                </div>
           </div>
           <!-- =========== TAB CONTENT - 4 - END =========== -->
 
           <!-- =========== TAB CONTENT - 5 - START =========== -->
-          <div id="tab-5" class="tab-content">
+          <div id="tab-5" class="client-details tab-content">
                <div class="row">
 
-                    <!-- // CREATE CLIENT - START // -->
-                    <div class="large-5 large-uncentered columns">
+                    <!-- // CLIENT DEPUTIES - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-tab-deputies.html') }}
 
                     </div>
-                    <!-- // CREATE CLIENT - END // -->
+                    <!-- // CLIENT DEPUTIES - END // -->
 
                </div>
           </div>

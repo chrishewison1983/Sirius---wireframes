@@ -44,11 +44,120 @@ ul.tabs {
                margin: -0.5em 0.5em 0 0;
           }
      }
+     &#side-panel-tabs {
+          border-bottom: none;
+          float: left;
+          width: 3em;
+          margin: 2.35em 0 0 0;
+          li.tab-link {
+               float: none;
+               padding: 0;
+               margin: 0 0 0.5em 0;
+               display: inline-block;
+               position: relative;
+               @include standard-transition;
+               &:hover {
+                    transform: scale(1.5);
+                    z-index: 10;
+                    p {
+                         display: inline-block;
+                         position: absolute;
+                         width: 11em;
+                         left: -2.85em;
+                         bottom: -2.5em;
+                         text-align: center;
+                         font-size: 0.575rem;
+                         border-radius: 3px;
+                         background: rgba($black,0.7);
+                         color: $white;
+                         padding: 0.5em;
+                         &:before {
+                              content: " ";
+                              position: absolute;
+                              bottom: 100%;  /* At the top of the tooltip */
+                              left: 50%;
+                              margin-left: -5px;
+                              border-width: 5px;
+                              border-style: solid;
+                              border-color: transparent transparent rgba($black,0.7) transparent;
+                         }
+                    }
+               }
+               &.current {
+                    text-indent: 0;
+                    width: auto;
+                    overflow: hidden;
+                    border-right: 6px solid darken($blue,10%);
+                    border-bottom: none;
+                    border-radius: 5px 0 0 5px;
+                    span {
+                         background: $blue;
+                         &.info {
+                              background: url(#{$image-path}/icons/info-white.svg) no-repeat 50% 50%;
+                              background-size: 2em;
+                         }
+                         &.client-details {
+                              background: url(#{$image-path}/icons/client-white.svg) no-repeat 50% 50%;
+                              background-size: 2em;
+                         }
+                         &.deputy-details {
+                              background: url(#{$image-path}/icons/deputies-white.svg) no-repeat 50% 50%;
+                              background-size: 2em;
+                         }
+                         &.documents {
+                              background: url(#{$image-path}/icons/documents-white.svg) no-repeat 50% 50%;
+                              background-size: 2em;
+                         }
+                    }
+                    &:hover {
+                         transform: scale(1);
+                         p {
+                              &:before {
+                                   display: none;
+                              }
+                         }
+                    }
+               }
+               span {
+                    margin: 0;
+                    width: 3em;
+                    height: 3em;
+                    background: none;
+                    border-radius: 0;
+                    &.info {
+                         background: url(#{$image-path}/icons/info-black.svg) no-repeat 50% 50%;
+                         background-size: 2em;
+                    }
+                    &.client-details {
+                         background: url(#{$image-path}/icons/client-black.svg) no-repeat 50% 50%;
+                         background-size: 2em;
+                    }
+                    &.deputy-details {
+                         background: url(#{$image-path}/icons/deputies-black.svg) no-repeat 50% 50%;
+                         background-size: 2em;
+                    }
+                    &.documents {
+                         background: url(#{$image-path}/icons/documents-black.svg) no-repeat 50% 50%;
+                         background-size: 2em;
+                    }
+               }
+               p {
+                    width: auto;
+                    margin: 0;
+                    color: black;
+                    font-family: $Montserrat-Bold;
+                    display: none;
+                    // width: 0;
+               }
+          }
+     }
 }
+
 
 .tab-content {
      // margin-top: 2em;
 	display: none;
+     width: 100%;
 	// padding: 15px;
      &.current {
           display: inherit;
@@ -61,7 +170,7 @@ ul.tabs {
                .dashboard-item {
                     border: 2px solid $border-colour;
                     border-radius: $global-border-radius;
-                    flex: 1;
+                    // flex: 1;
                     width: 32%;
                     padding: 0;
                     margin: 0 2% 1.5em 0;
@@ -129,7 +238,7 @@ ul.tabs {
                                    line-height: 1.4;
                               }
                               h2 {
-                                   font-size: 1.6rem;
+                                   font-size: 1.4rem;
                                    font-family: $Montserrat-Bold;
                                    color: $main-colour;
                               }
@@ -190,6 +299,15 @@ ul.tabs {
                          width: 101%;
                          border-radius: 0 0 5px 5px;
                          background: $text-main-colour;
+                         a {
+                              color: $white;
+                              border-bottom: none;
+                              font-family: $Opensans-Regular;
+                              padding-left: 1.25em;
+                              background: url(#{$image-path}/icons/delete-white.svg) no-repeat 0% 50%;
+                              background-size: contain;
+
+                         }
                     }
                     &.welfare {
                          .left {
@@ -199,7 +317,7 @@ ul.tabs {
                               }
                          }
                     }
-                    &.propert {
+                    &.property {
                          .left {
                               span {
                                    background: url(#{$image-path}/icons/PandA.svg) no-repeat 50% 50%;
@@ -208,6 +326,16 @@ ul.tabs {
                          }
                     }
                }
+          }
+     }
+     &.side-panel {
+          border-left: 6px solid rgba($main-colour,0.1);
+          padding: 0 0 0 3em;
+          margin-top: 2.35em;
+          width: 90%;
+          float: left;
+          .section-title {
+               margin-top: 0;
           }
      }
 }

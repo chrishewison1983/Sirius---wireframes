@@ -6,16 +6,20 @@
 //  FOR ALL
 #document-viewer, #document-editor {
      line-height: 0;
+     display: inline-block;
      &.sticky {
           margin-top: 1em;
           position: fixed;
           top: 0;
+          display: inherit;
      }
      .document {
           // padding: 1.5em;
           background: $border-colour;
-          border: 3px solid $border-colour;
-          border-radius: $global-border-radius;
+          border: none;
+          // border: 3px solid $border-colour;
+          border-radius: 0;
+          // border-radius: $global-border-radius;
           display: inline-block;
           .control-panel {
                margin: 1em 0 0 0;
@@ -42,6 +46,13 @@
                background: $white;
                // display: inline-block;
                // float: left;
+               &.document-item {
+                    width: 40em;
+                    height: auto;
+                    margin-right: 0;
+                    border: none;
+                    border-radius: 0;
+               }
           }
      }
 }

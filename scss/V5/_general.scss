@@ -70,7 +70,7 @@ h1, h2, h3, h4 {
           color: lighten($main-colour,50%);
           text-transform: initial;
           width: 100%;
-          display: inline-block;;
+          display: inline-block;
      }
      a, strong {
           color: $blue;
@@ -84,8 +84,11 @@ h1, h2, h3, h4 {
           margin: 0 0.5em 0 0;
           border-radius: $global-border-radius;
      }
-     &.section-title {
+     &.section-title, &.sub-section-title {
           text-transform: initial;
+     }
+     div {
+          display: inline-block;
      }
 }
 
@@ -95,12 +98,16 @@ p, ul, ul li {
      line-height: 1.4;
 }
 
-.section-title {
+.section-title, .sub-section-title {
      font-size: 1.6rem;
      display: inline-block;
      width: 100%;
      font-family: $Montserrat-Bold;
      margin: 1.5em 0 0.75em 0;
+}
+
+.sub-section-title {
+     font-size: 1.2rem;
 }
 // =================== TEXT - END =================== //
 
@@ -122,7 +129,7 @@ a.main-cta {
      background: $blue;
      border: 3px solid $blue;
      border-radius: $global-border-radius;
-     padding: 1em;
+     padding: 1em 1.5em;
      font-family: $Montserrat-Bold;
      width: 100%;
      color: $white;
@@ -141,7 +148,11 @@ a.main-cta {
      }
      &.de-activate {
           background: $main-colour;
+          border: 3px solid $main-colour;
           opacity: 0.2;
+          &:hover {
+               transform: scale(1);
+          }
      }
      &.secondary {
           border: 3px solid $blue;
@@ -160,9 +171,9 @@ a.main-cta {
           }
      }
      a {
-          margin: 0.8em 0 0 0;
+          margin: 1em 0 0 1em;
           display: inline-block;
-          float: right;
+          // float: right;
      }
 }
 // =================== LINKS - END =================== //
@@ -188,18 +199,6 @@ hr {
      a.place-holder, a.job-family {
           @include flexbox;
      }
-}
-
-
-
-.filter {
-     background: rgba($main-colour,0.1);
-     padding: 1em 0;
-     display: inline-block;
-     margin: 1.5em 0 3em 0;
-     float: left;
-     clear: left;
-     width: 100%;
 }
 
 // ONLY FOR LARGE DESKTOP (1281 up)

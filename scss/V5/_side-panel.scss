@@ -6,19 +6,30 @@
 // =====================================  Autocomplete drop down - START ===================================== //
 #side-bar-holder {
      position: relative;
+     // float: right !important;
+}
+
+#action-panel {
+     position: relative;
      float: right !important;
 }
 
-#document-summary {
-     width: auto;
-     position: relative;
+#document-summary, #action-panel {
+     // width: auto;
+     // position: relative;
      // right: 0;
      &.sticky {
           margin-top: 0;
           position: fixed;
           top: 0;
-          width: 32em;
+          width: 40em;
           // right: 0;
      }
 }
+
+// #document-summary {
+//      &.sticky {
+//           margin-top: 1em;
+//      }
+// }
 // =====================================  Autocomplete drop down - END ===================================== //
