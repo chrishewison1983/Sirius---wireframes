@@ -26,15 +26,18 @@
 @import "_general";
 
 @import "_header";
-@import "_main";
+@import "_progress-bar";
 @import "_nav";
 @import "_footer";
 @import "_autocomplete";
 @import "_form-items";
 @import "_tabs";
-@import "_create-letter";
-@import "_document-viewer";
 @import "_modal";
 @import "_date-picker";
 @import "_side-panel";
+
+// Journey Specific CSS Styles
+@import "_create-letter";
+@import "_document-viewer";
 @import "_add-edit-deputy";
+@import "_commission-visit";

@@ -1,0 +1,152 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+nav.progress-bar {
+     display: inline-block;
+     width: 100%;
+     padding: 3em 0 1em 0;
+     &.commission-visit {
+
+     }
+     ul {
+          margin: 0;
+          position: relative;
+          &.steps-three {
+               li {
+                    width: 33.333%;
+                    &:nth-of-type(2n) {
+                         text-align: center;
+                         span {
+                              float: none;
+                         }
+                    }
+                    &:last-of-type {
+                         text-align: right;
+                         span {
+                              float: right;
+                         }
+                    }
+               }
+               span.border {
+                    width: 81%;
+                    height: 0.3em;
+                    background: $border-colour;
+                    position: absolute;
+                    top: 1.5em;
+                    left: 8.5%;
+                    border-radius: 0;
+                    border: none;
+                    z-index: 1;
+                    &.percent-fifty {
+                         background-color: $border-colour; // Old browsers
+                         @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                         @include background-image(linear-gradient(left, $blue 50%,$border-colour 50%,$border-colour 50%));
+                    }
+                    &.percent-one-hundred {
+                         background-color: $blue; // Old browsers
+                    }
+               }
+          }
+          li {
+               width: auto;
+               float: left;
+               list-style: none;
+               .wrapper {
+                    text-align: center;
+                    display: inline-block;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+               }
+               .number {
+                    display: inline-block;
+                    // float: left;
+                    // clear: both;
+               }
+               &.current {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+               span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2em;
+                    height: 2em;
+                    margin: 0;
+                    background: $white;
+                    font-size: 1.6rem;
+                    border-radius: 50%;
+                    font-family: $Montserrat-Bold;
+                    border: 4px solid $border-colour;
+                    color: $blue;
+                    z-index: 10;
+                    position: relative;
+               }
+               p {
+                    margin: 0.5em 0 0 0;
+                    text-transform: uppercase;
+                    font-family: $Montserrat-Bold;
+                    letter-spacing: 0.15em;
+                    // width: auto;
+                    // float: left;
+                    // clear: both;
+               }
+          }
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+
+}

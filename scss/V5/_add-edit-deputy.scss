@@ -119,7 +119,7 @@
 
 #deputy-confirmation {
      display: inline-block;
-     margin: 2em 0;
+     margin: 2em 0 0 0;
      width: 100%;
 }
 
@@ -277,6 +277,7 @@
           border: 2px solid $border-colour;
           border-radius: $global-border-radius;
           padding: 1em;
+          margin: 2em 0 0 0;
      }
 }
 

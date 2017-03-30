@@ -27,6 +27,27 @@ main {
           background-size: cover;
           position: relative;
      }
+     &.default {
+          display: inline-block;
+          width: 85%;
+          float: left;
+          margin: 0 0 5em 15%;
+          position: relative;
+          // padding: 3em;
+          .content-wrapper {
+               padding: 3em 0;
+               &.dashboard, &.commission-visit {
+                    padding-top: 0;
+               }
+          }
+     }
+}
+
+.login {
+     height: 100vh;
+     @include flexbox;
+     @include align-items(center);
+     @include justify-content(center);
 }
 
 .colour-wrapper {

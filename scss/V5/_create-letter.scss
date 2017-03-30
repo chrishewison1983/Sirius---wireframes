@@ -180,6 +180,17 @@
                filter: alpha(opacity=0);
                opacity: 0;
           }
+          span.fee-payer {
+               position: absolute;
+               top: -0.75em;
+               right: -0.75em;
+               display: inline-block;
+               width: 2.5em;
+               height: 2.5em;
+               border-radius: 50%;
+               background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
+               background-size: 2.25em;
+          }
           span.sub-text {
                font-family: $Opensans-Regular;
                color: lighten($main-colour,40%);

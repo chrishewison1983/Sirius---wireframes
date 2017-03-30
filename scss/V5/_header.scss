@@ -353,12 +353,16 @@ header {
                               background: url(#{$image-path}/icons/add-deputies-white.svg) no-repeat 50% 50% $pink;
                               background-size: 2.75em;
                          }
+                         &.commission-visit {
+                              background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $pink;
+                              background-size: 2.75em;
+                         }
                          span {
                               position: absolute;
                               bottom: -3em;
                               left: 50%;
-                              width: 11em;
-                              margin-left: -5.5em;
+                              width: 13em;
+                              margin-left: -6.5em;
                               background: rgba($black,0.4);
                               display: none;
                               border: none;

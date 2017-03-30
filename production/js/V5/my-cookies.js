@@ -24,23 +24,20 @@ if ($.cookie("user-journey") == 4) {
      $('#list-of-documents .no-items').hide();
 }
 
-// Add/Edit Deputy
-$("#add-deputy").on("click", function (e) {
-     $.cookie("user-journey", 5, {path:'/'});
+$(".document-item").on("click", function (e) {
+     $.cookie("document-title", $(this).text(), {path:'/'});
 });
 
-if ($.cookie("user-journey") == 5) {
-     $("#tab-5.client-details").addClass('current');
-     $("#tab-1.client-details, #tab-2.client-details, #tab-3.client-details, #tab-4.client-details").removeClass('current');
-     $('.client-details .tab-link[data-tab="tab-5"]').addClass('current');
-     $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-2"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-4"]').removeClass('current');
-     $('#list-of-deputies .no-items').hide();
-     $('.deputies').show();
+if ($.cookie("document-title")) {
+     $(".document h3").text($.cookie("document-title"));
+}
 
-     // This hides the confirmation box after 5 seconds
-     setTimeout(function() {
-          $("#list-of-deputies #deputy-confirmation").hide(500)
-     }, 5000);
+$("#create-letter").on("click", function (e) {
+     $.cookie("recipients", $(this).val(), {path:'/'});
+});
+
+if ($.cookie("recipients")) {
+     $("#recipients").val($.cookie("recipients"));
 }
 
 // Username populate
@@ -121,20 +118,32 @@ if ($.cookie("deputy-last-name")) {
 //      $.cookie("remove-case-number", $("h2").text(), {path:'/'});
 // });
 
-
-// Create letter
-$(".document-item").on("click", function (e) {
-     $.cookie("document-title", $(this).text(), {path:'/'});
+// Add/edit deputies
+$("#add-deputy").on("click", function (e) {
+     $.cookie("user-journey", 5, {path:'/'});
 });
 
-if ($.cookie("document-title")) {
-     $(".document h3").text($.cookie("document-title"));
+if ($.cookie("user-journey") == 5) {
+     $("#tab-5.client-details").addClass('current');
+     $("#tab-1.client-details, #tab-2.client-details, #tab-3.client-details, #tab-4.client-details").removeClass('current');
+     $('.client-details .tab-link[data-tab="tab-5"]').addClass('current');
+     $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-2"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-4"]').removeClass('current');
+     $('#list-of-deputies .no-items').hide();
+     $('.deputies').show();
+
+     // This hides the confirmation box after 5 seconds
+     setTimeout(function() {
+          $("#list-of-deputies #deputy-confirmation").hide(500)
+     }, 5000);
 }
 
-$("#create-letter").on("click", function (e) {
-     $.cookie("recipients", $(this).val(), {path:'/'});
+// Commission visit
+$("#add-visitors").on("click", function (e) {
+     $.cookie("commission-visit-step", 2, {path:'/'});
 });
 
-if ($.cookie("recipients")) {
-     $("#recipients").val($.cookie("recipients"));
+if ($.cookie("commission-visit-step") == 2) {
+     $(".progress-bar.commission-visit").find('.step-2').addClass('current');
+     $(".progress-bar.commission-visit").find('.border').addClass('percent-fifty');
+
 }

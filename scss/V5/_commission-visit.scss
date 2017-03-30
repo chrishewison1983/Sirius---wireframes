@@ -1,0 +1,252 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+// #action-panel {
+//      .commission-visit {
+//           .sub-section-title {
+//                padding: 0 0 0.5em 0;
+//                border-bottom: 1px dashed $border-colour;
+//           }
+//      }
+// }
+
+.place-holder-text {
+     display: inline-block;
+     text-align: center;
+     width: 100%;
+     border-radius: $global-border-radius;
+     padding: 0.75em;
+     background: $border-colour;
+}
+
+.commission-visit {
+     .sub-section-title {
+          // border-bottom: 1px dashed $border-colour;
+     }
+     ul {
+          margin: 0;
+          li {
+               list-style: none;
+               display: inline-block;
+               width: 100%;
+               position: relative;
+               margin-bottom: 1em;
+               .wrapper {
+                    position: relative;
+               }
+               a {
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
+                    margin: 0;
+                    border: 2px solid $border-colour;
+                    border-radius: $global-border-radius;
+                    padding: 1em 1em 1em 3.75em;
+                    font-family: $Montserrat-Bold;
+                    font-size: 1.3rem;
+                    line-height: 1;
+                    @include standard-transition;
+                    z-index: 1;
+                    &:hover {
+                         background: rgba($border-colour,0.5);
+                         cursor: pointer;
+                         z-index: 10;
+                    }
+                    &.selected {
+                         background: rgba($border-colour,0.5);
+                         &:after {
+                              opacity: 1;
+                         }
+                    }
+                    &.open {
+                         border-radius: 5px 5px 0 0;
+                         border-bottom: none;
+                    }
+                    &:before {
+                         left: 1em;
+                         top: inherit;
+                         width: 40px;
+                         height: 40px;
+                         border: 4px solid;
+                         border-radius: $global-border-radius;
+                         background: transparent;
+                         position: absolute;
+                         content: "";
+                         color: $main-colour;
+                    }
+                    &:after {
+                         color: $main-colour;
+                         left: 1.4em;
+                         right: inherit;
+                         top: 1.475em;
+                         width: 24px;
+                         height: 14px;
+                         content: "";
+                         border: solid;
+                         border-width: 0 0 5px 5px;
+                         background: transparent;
+                         position: absolute;
+                         -moz-transform: rotate(-45deg);
+                         -o-transform: rotate(-45deg);
+                         -webkit-transform: rotate(-45deg);
+                         -ms-transform: rotate(-45deg);
+                         transform: rotate(-45deg);
+                         zoom: 1;
+                         filter: alpha(opacity=0);
+                         opacity: 0;
+                    }
+                    span.sub-text {
+                         font-family: $Opensans-Regular;
+                         color: lighten($main-colour,40%);
+                         font-size: 1rem;
+                    }
+               }
+               button.view-more {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 1px;
+                    z-index: 10;
+                    // background: $blue;
+                    text-indent: -1000em;
+                    width: 3em;
+                    border-radius: 0 5px 5px 0;
+                    margin: 0;
+                    border: 3px solid rgba($black,0.05);
+                    // border-left: none;
+                    padding: 0;
+                    background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 50% 50% rgba($border-colour,0.8);
+                    background-size: 1.25em;
+                    &:before, &:after {
+                         opacity: 0;
+                    }
+                    &.close {
+                         border-radius: 5px 5px 0 0;
+                         border-bottom: none;
+                         background: url(#{$image-path}/icons/close-white.svg) no-repeat 50% 50% $blue;
+                         background-size: 2.75em;
+                    }
+               }
+               span.fee-payer {
+                    position: absolute;
+                    top: -1.25em;
+                    right: -1.25em;
+                    z-index: 11;
+                    display: inline-block;
+                    width: 3em;
+                    height: 3em;
+                    border-radius: 50%;
+                    background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
+                    background-size: 2.5em;
+               }
+               .extra-info {
+                    display: inline-block;
+                    width: 100%;
+                    border: 2px solid $border-colour;
+                    border-top: none;
+                    border-radius: 0 0 5px 5px;
+                    margin: -1px 0 0 0;
+                    padding: 1.75em 1.5em 1.5em 1.5em;
+                    font-family: $Montserrat-Bold;
+                    font-size: 1rem;
+                    line-height: 1;
+                    background: rgba($border-colour,0.8);
+                    position: relative;
+                    .border-top {
+                         display: block;
+                         // width: 100%;
+                         height: 5px;
+                         left: -2px;
+                         right: -2px;
+                         background: $blue;
+                         position: absolute;
+                         top: 0;
+                    }
+                    .item-detail {
+                         display: inline-block;
+                         width: 100%;
+                         margin: 0 0 1em 0;
+                         &:last-of-type {
+                              margin-bottom: 0;
+                         }
+                         p {
+                              margin: 0;
+                              &.item {
+                                   width: 30%;
+                                   margin-right: 5%;
+                              }
+                              &.answer {
+                                   width: 65%;
+                                   color: $black;
+                                   font-family: $Montserrat-Bold;
+                              }
+                         }
+                    }
+                    // @include standard-transition;
+               }
+          }
+          &#commission-visit-client {
+               li {
+
+               }
+          }
+          &#commission-visit-deputies {
+               li {
+
+               }
+          }
+
+     }
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}
