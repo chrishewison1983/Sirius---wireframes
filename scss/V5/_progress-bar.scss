@@ -4,32 +4,28 @@
 */
 
 //  FOR ALL
-
 nav.progress-bar {
      display: inline-block;
      width: 100%;
      padding: 3em 0 1em 0;
-     &.commission-visit {
-
-     }
      ul {
           margin: 0;
           position: relative;
-          &.steps-three {
+          &.steps-six {
                li {
-                    width: 33.333%;
-                    &:nth-of-type(2n) {
-                         text-align: center;
-                         span {
-                              float: none;
-                         }
-                    }
-                    &:last-of-type {
-                         text-align: right;
-                         span {
-                              float: right;
-                         }
-                    }
+                    width: 16.666%;
+                    // &:nth-of-type(2n) {
+                    //      text-align: center;
+                    //      span {
+                    //           float: none;
+                    //      }
+                    // }
+                    // &:last-of-type {
+                    //      text-align: right;
+                    //      span {
+                    //           float: right;
+                    //      }
+                    // }
                }
                span.border {
                     width: 81%;
@@ -37,18 +33,10 @@ nav.progress-bar {
                     background: $border-colour;
                     position: absolute;
                     top: 1.5em;
-                    left: 8.5%;
+                    left: 9.5%;
                     border-radius: 0;
                     border: none;
                     z-index: 1;
-                    &.percent-fifty {
-                         background-color: $border-colour; // Old browsers
-                         @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-                         @include background-image(linear-gradient(left, $blue 50%,$border-colour 50%,$border-colour 50%));
-                    }
-                    &.percent-one-hundred {
-                         background-color: $blue; // Old browsers
-                    }
                }
           }
           li {
@@ -58,21 +46,10 @@ nav.progress-bar {
                .wrapper {
                     text-align: center;
                     display: inline-block;
-                    // display: flex;
-                    // align-items: center;
-                    // justify-content: center;
+                    width: 100%;
                }
                .number {
                     display: inline-block;
-                    // float: left;
-                    // clear: both;
-               }
-               &.current {
-                    span {
-                         background: $blue;
-                         color: $white;
-                         border: 4px solid $blue;
-                    }
                }
                span {
                     display: flex;
@@ -91,17 +68,99 @@ nav.progress-bar {
                     position: relative;
                }
                p {
-                    margin: 0.5em 0 0 0;
+                    margin: 0.75em 0 0 0;
                     text-transform: uppercase;
                     font-family: $Montserrat-Bold;
                     letter-spacing: 0.15em;
-                    // width: auto;
-                    // float: left;
-                    // clear: both;
+                    font-size: 0.775rem;
                }
           }
      }
 }
+
+main.default.visit-commission {
+     &.step-1 nav.progress-bar ul.steps-six {
+          .border {
+               background-color: $border-colour;
+          }
+          li {
+               &.step-1 {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+          }
+     }
+     &.step-2 nav.progress-bar ul.steps-six {
+          .border {
+               background-color: $border-colour; // Old browsers
+               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+               @include background-image(linear-gradient(left, $blue 16.666%,$border-colour 16.666%,$border-colour 16.666%));
+          }
+          li {
+               &.step-1, &.step-2 {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+          }
+     }
+     &.step-3 nav.progress-bar ul.steps-six {
+          .border {
+               background-color: $border-colour; // Old browsers
+               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+               @include background-image(linear-gradient(left, $blue 38%,$border-colour 38%,$border-colour 38%));
+          }
+          li {
+               &.step-1, &.step-2, &.step-3 {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+          }
+     }
+
+     &.step-4 nav.progress-bar ul.steps-six {
+          .border {
+               background-color: $border-colour; // Old browsers
+               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+               @include background-image(linear-gradient(left, $blue 60%,$border-colour 60%,$border-colour 60%));
+          }
+          li {
+               &.step-1, &.step-2, &.step-3, &.step-4 {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+          }
+     }
+
+
+     &.step-6 nav.progress-bar ul.steps-six {
+          .border {
+               background-color: $blue;
+          }
+          li {
+               &.step-1, &.step-2, &.step-3, &.step-4, &.step-5, &.step-6 {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+          }
+     }
+
+}
+
 
 
 // ONLY FOR LARGE DESKTOP (1281 up)

@@ -138,12 +138,12 @@ if ($.cookie("user-journey") == 5) {
 }
 
 // Commission visit
-$("#add-visitors").on("click", function (e) {
-     $.cookie("commission-visit-step", 2, {path:'/'});
-});
-
-if ($.cookie("commission-visit-step") == 2) {
-     $(".progress-bar.commission-visit").find('.step-2').addClass('current');
-     $(".progress-bar.commission-visit").find('.border').addClass('percent-fifty');
-
-}
+// $("#add-visitors").on("click", function (e) {
+//      $.cookie("commission-visit-step", 2, {path:'/'});
+// });
+//
+// if ($.cookie("commission-visit-step") == 2) {
+//      $(".progress-bar.commission-visit").find('.step-2').addClass('current');
+//      $(".progress-bar.commission-visit").find('.border').addClass('percent-fifty');
+//
+// }

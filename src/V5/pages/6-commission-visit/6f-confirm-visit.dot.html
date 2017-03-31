@@ -5,7 +5,7 @@
 {{= it.include('main-nav-create-letter.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default visit-commission step-2">
+<main class="default visit-commission step-6">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header">
@@ -24,7 +24,7 @@
                               <div class="separator"> > </div>
                               Commission a visit
                          </span>
-                         Visitor information
+                         Confirm visit
                     </h1>
                </div>
           </div>
@@ -117,64 +117,46 @@
 
                     <div class="commission-visit">
 
-                         <h2 class="section-title">Where will the visit take place...</h2>
+                         <h2 class="section-title">Guidance involved in the reporting process...</h2>
 
-                         <!-- =========== VISIT INFORMATION SECTION - 1 - START =========== -->
-                         <div class="visitor-container">
+                         <p>
+                              <span class="letter">A</span>
+                              The Public Guardian may be required to disclose the visitor’s report to someone interviewed
+                              in the course of preparing the report or to submit it as evidence in any application to the
+                              Court of Protection and the visit should be commissioned and report prepared on that basis.
+                         </p>
+                         <p>
+                              <span class="letter">B</span>
+                              Any information you provide to the Public Guardian will be processed in accordance with
+                              the Data Protection Act 1998. All or part of the information you provide may be included in
+                              any application the Public Guardian may make to the Court of Protection. The information may
+                              then be disclosed to other parties to the court proceedings.
+                         </p>
+                         <p>
+                              <span class="letter">C</span>
+                              Visitors are asked to notify this office if they have interviewed or had dealings with the
+                              client, deputy or any other parties connected with the case in other contexts or there is
+                              any conflict of interest.
+                         </p>
+                         <p>
+                              <span class="letter">D</span>
+                              For guidance about conducting the visit, visitors should refer to the service standards
+                              for Court of Protection visitors, which can be found in the General Visitor Handbook.
+                         </p>
 
-                              <ol id="visitor-list">
+                         <form>
 
-                              </ol>
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <label class="normal" for="confirm-read">
+                                        <input id="confirm-read" name="confirm-read" type="checkbox" value="post">
+                                        Confirm I have read the guidance information
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
 
-                         </div>
-                         <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== -->
+                         </form>
 
-                         <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== -->
-                         <div class="visitor-container">
-
-                              <h2 class="section-title">Report information...</h2>
-
-                              <form>
-
-                                   <!-- // FORM ITEM - 1 - START // -->
-                                   <div class="form-group report">
-                                        <label for="datepicker">Report due back by</label>
-                                        <div class="date-wrapper">
-                                             <input type="text" id="datepicker">
-                                             <i class="date"></i>
-                                        </div>
-                                   </div>
-                                   <!-- // FORM ITEM - 1 - END // -->
-
-                                   <!-- // FORM ITEM - 2 - START // -->
-                                   <div class="form-group read-only">
-                                        <label for="visit-case-number">Case Number</label>
-                                        <input id="visit-case-number" name="visit-case-number" type="text" class="half" value="7000-0000-0047" readonly>
-                                   </div>
-                                   <!-- // FORM ITEM - 2 - END // -->
-
-                                   <!-- // FORM ITEM - 3 - START // -->
-                                   <div class="form-group read-only">
-                                        <legend for="doo">Date of order</legend>
-                                        <div class="one-third">
-                                             <label for="visit-doo-day" class="sub-label">Day</label>
-                                             <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly>
-                                        </div>
-                                        <div class="one-third">
-                                             <label for="visit-doo-month" class="sub-label">Month</label>
-                                             <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly>
-                                        </div>
-                                        <div class="one-third">
-                                             <label for="visit-doo-year" class="sub-label">Year</label>
-                                             <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly>
-                                        </div>
-                                   </div>
-                                   <!-- // FORM ITEM - 3 - END // -->
-
-                              </form>
-
-                         </div>
-                         <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== -->
 
                     </div>
 
@@ -188,7 +170,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta" id="add-visitors" href="6c-report-information.html">Continue</a>
+          <a class="main-cta" id="add-visitors" href="6b-type-of-visit.html">Commission visit</a>
           <a href="#" onclick="history.back();">Cancel</a>
      </div>
      <!-- CTA-FOOTER - END -->
@@ -205,7 +187,6 @@
      $(document).ready(function(){
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
-               $('#visitor-list').append('<li>' + recipient + '</li>');
           });
      });
 

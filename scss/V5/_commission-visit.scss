@@ -202,6 +202,83 @@
      }
 }
 
+ol#asset-list {
+     margin: 0 0 1.5em 0;
+     padding-bottom: 1.5em;
+     border-bottom: 3px dashed $border-colour;
+     li {
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          margin: 0 0 1em 0;
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          padding: 1em 1em 1em 4.75em;
+          line-height: 1;
+          @include standard-transition;
+          list-style: decimal;
+          z-index: 1;
+          &:before {
+               content: counter(step-counter);
+               font-weight: $Montserrat-Bold;
+               background: $blue;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 50%;
+               color: $white;
+               width: 1.5em;
+               height: 1.5em;
+               // margin: 0 0.5em 0 0;
+               text-align: center;
+               position: absolute;
+               left: 0.5em;
+               top: 0.4em;
+               font-size: 2rem;
+          }
+          span {
+               font-family: $Opensans-Regular;
+               color: lighten($main-colour,40%);
+               font-size: 1rem;
+               z-index: 1;
+               position: relative;
+               strong {
+                    color: lighten($main-colour,20%);
+                    font-family: $Opensans-Bold;
+               }
+               &.remove {
+                    display: inline-block;
+                    z-index: 10;
+                    position: absolute;
+                    right: 0.5em;
+                    top: 1.35em;
+                    width: 2em;
+                    height: 2em;
+                    background: url(#{$image-path}/icons/delete-blue.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                    @include standard-transition;
+                    &:hover {
+                         cursor: pointer;
+                         transform: scale(1.1);
+                    }
+               }
+          }
+          .title {
+               width: 100%;
+               display: inline-block;
+               font-family: $Montserrat-Bold;
+               font-size: 1.3rem;
+               color: $black;
+               margin: 0 0 0.25em 0;
+          }
+     }
+}
+
+ol#visitor-list {
+     margin: 0 0 0 0;
+     
+}
+
 
 
 // ONLY FOR LARGE DESKTOP (1281 up)

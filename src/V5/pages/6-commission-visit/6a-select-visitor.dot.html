@@ -5,7 +5,7 @@
 {{= it.include('main-nav-create-letter.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default visit-commission">
+<main class="default visit-commission step-1">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header">
@@ -22,10 +22,10 @@
                                    <div class="client-last-name">Bloggs</div>
                               </a>
                               <div class="separator"> > </div>
-                              Select visit
+                              Commission a visit
                          </span>
                          <br>
-                         Commission visit
+                         Commission a visit
                     </h1>
                </div>
           </div>
@@ -76,7 +76,7 @@
                          <!-- // DOCUMENT SUMMARY - START // -->
                          <h2 class="section-title">Commission visit info...</h2>
 
-                         <h3 class="sub-section-title">Recipients chosen...</h3>
+                         <h3 class="sub-section-title">Who is the visit for...</h3>
 
                          <p class="place-holder-text">Non chosen yet</p>
 
@@ -529,7 +529,7 @@
 <script>
 
      $(document).ready(function(){
-          sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
+          sessionStorage.setItem('selected-visitors', JSON.stringify($('#recipients li').map(function() {
                return $(this).text().trim();
           }).toArray()));
      });

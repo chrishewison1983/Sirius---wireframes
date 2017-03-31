@@ -182,6 +182,12 @@ $("#left, #right").hover(function() {
 });
 
 // Commission visit
+function persistSelectedVisitor() {
+     sessionStorage.setItem('selected-visitors', JSON.stringify($('#recipients li').map(function() {
+          return $(this).text().trim();
+     }).toArray()));
+}
+
 $('.visit-commission #cta-footer').hide();
 $('.extra-info').hide();
 
@@ -196,7 +202,7 @@ $(document).ready(function() {
                     ${ $(this).find('[data-value="name"]').text() }
                </li>`
           );
-          persistSelectedRecipients();
+          persistSelectedVisitor();
 
           $('#cta-footer').slideDown('slow');
      });
@@ -282,7 +288,7 @@ $('#confirm-add-third-party').click(function(e){
                </div>
           </li>`
      );
-     persistSelectedRecipients();
+     persistSelectedVisitor();
 
 });
 
@@ -302,6 +308,64 @@ $('.view-more').click(function(e){
      // $(this).parent().parent().parent().find('.visitor-container').show('slow');
 });
 
+// Commission visit - step - 2
+$(".report #datepicker").click( function(){
+     $('#cta-footer').slideDown('slow');
+});
+
+$('.answer-1b, .answer-2b, .answer-3b, .answer-4b').hide();
+
+$("#visit-special-requirements-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-1b').slideDown('slow'); }
+});
+
+$("#visit-safeguarding-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-2b').slideDown('slow'); }
+});
+
+$("#visit-deputyship-order-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-3b').slideDown('slow'); }
+});
+
+$("#visit-first-no").click( function(){
+     if($(this).is(':checked')) { $('.answer-4b').slideDown('slow'); }
+});
+
+$("#third-medical-background").keypress( function(){
+     $('#cta-footer').slideDown('slow');
+});
+
+
+// Commission visit - step - 3
+$("input[name='radio-inline-group-5']").click( function(){
+     if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
+});
+
+$("#asset-list").hide();
+
+var counter = 0;
+
+$('#add-asset').click(function(e){
+     e.preventDefault();
+     $("#asset-list").slideDown('slow');
+     $("#asset-list").append(`
+          <li data-asset-id="${(++counter)}">
+               <span class="title">${ $("#assets").find('#visit-asset').val() }</span>
+               <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
+               <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
+               <span class="remove"></span>
+          </li>`
+     );
+});
+
+$("#asset-list").on("click", " .remove", function(){
+     // $('li').parent().remove('slow');
+});
+
+// Commission visit - step - 6
+$("#confirm-read").click( function(){
+     if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
+});
 
 
 // ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //

@@ -119,6 +119,11 @@ p, ul, ul li {
      line-height: 1.4;
 }
 
+ul, ol {
+     display: inline-block;
+     width: 100%;
+}
+
 .section-title, .sub-section-title {
      font-size: 1.6rem;
      display: inline-block;
