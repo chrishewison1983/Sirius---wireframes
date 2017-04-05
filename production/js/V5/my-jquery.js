@@ -313,7 +313,7 @@ $(".report #datepicker").click( function(){
      $('#cta-footer').slideDown('slow');
 });
 
-$('.answer-1b, .answer-2b, .answer-3b, .answer-4b').hide();
+$('.answer-1b, .answer-2b, .answer-3b, .answer-4b, .answer-5b, .answer-6b').hide();
 
 $("#visit-special-requirements-yes").click( function(){
      if($(this).is(':checked')) { $('.answer-1b').slideDown('slow'); }
@@ -334,7 +334,6 @@ $("#visit-first-no").click( function(){
 $("#third-medical-background").keypress( function(){
      $('#cta-footer').slideDown('slow');
 });
-
 
 // Commission visit - step - 3
 $("input[name='radio-inline-group-5']").click( function(){
@@ -360,6 +359,23 @@ $('#add-asset').click(function(e){
 
 $("#asset-list").on("click", " .remove", function(){
      // $('li').parent().remove('slow');
+});
+
+// Commission visit - step - 5
+$(".report #datepicker").click( function(){
+     $('#cta-footer').slideDown('slow');
+});
+
+$("#visit-submitted-late-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-1b').slideDown('slow'); }
+});
+
+$("#visit-dangers-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-5b').slideDown('slow'); }
+});
+
+$("#visit-assist-visitor-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-6b').slideDown('slow'); }
 });
 
 // Commission visit - step - 6

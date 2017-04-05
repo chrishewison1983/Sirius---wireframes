@@ -151,8 +151,8 @@ form {
                font-family: $Montserrat-Regular;
                float: left;
                width: auto;
-               margin: 0.5em 1.5em 0 0;
-               padding: 0.25em 0 0 2.25em;
+               padding: 0.45em 0 0 2.75em;
+               margin: 0.5em 2em 0.5em 0;
                &:before {
                     top: 0;
                     right: inherit;
@@ -428,7 +428,7 @@ form.filter {
 }
 
 
-.add-correspondent-form, .edit-deputy-form, .add-client-form, .add-deputy-form, #add-third-party-form, .basic-information {
+.add-correspondent-form, .edit-deputy-form, .add-client-form, .add-deputy-form, #add-third-party-form, .basic-information, .why-visit {
      // padding: 3em 0 0 0;
      width: 80%;
      float: right;
@@ -446,7 +446,7 @@ form.filter {
      }
 }
 
-#add-third-party-form, .basic-information {
+#add-third-party-form, .basic-information, .why-visit {
      float: left;
      hr {
           margin-top: 1.5em

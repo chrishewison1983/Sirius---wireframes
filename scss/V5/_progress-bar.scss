@@ -78,7 +78,7 @@ nav.progress-bar {
      }
 }
 
-main.default.visit-commission {
+main.default {
      &.step-1 nav.progress-bar ul.steps-six {
           .border {
                background-color: $border-colour;
@@ -125,7 +125,6 @@ main.default.visit-commission {
                }
           }
      }
-
      &.step-4 nav.progress-bar ul.steps-six {
           .border {
                background-color: $border-colour; // Old browsers
@@ -142,8 +141,22 @@ main.default.visit-commission {
                }
           }
      }
-
-
+     &.step-5 nav.progress-bar ul.steps-six {
+          .border {
+               background-color: $border-colour; // Old browsers
+               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+               @include background-image(linear-gradient(left, $blue 80%,$border-colour 80%,$border-colour 80%));
+          }
+          li {
+               &.step-1, &.step-2, &.step-3, &.step-4, &.step-5 {
+                    span {
+                         background: $blue;
+                         color: $white;
+                         border: 4px solid $blue;
+                    }
+               }
+          }
+     }
      &.step-6 nav.progress-bar ul.steps-six {
           .border {
                background-color: $blue;

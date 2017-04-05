@@ -5,7 +5,7 @@
 {{= it.include('main-nav-create-letter.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default visit-commission step-4">
+<main class="default visit-commission step-5">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header">
@@ -24,7 +24,7 @@
                               <div class="separator"> > </div>
                               Commission a visit
                          </span>
-                         Summary of the case
+                         Report information
                     </h1>
                </div>
           </div>
@@ -117,121 +117,162 @@
 
                     <div class="commission-visit">
 
-                         <h2 class="section-title">Summary of the case...</h2>
+                         <h2 class="section-title">Report information...</h2>
 
-                         <!-- =========== BASIC INFO SECTION - START =========== -->
-                         <div class="visitor-container">
+                         <!-- =========== WHY VISIT SECTION - START =========== -->
+                         <h3 class="sub-section-title">Issues to be addressed in the report</h3>
 
-                              <form class="basic-information">
+                         <form class="why-visit">
 
-                                   <!-- // FORM ITEM - 1a - START // -->
-                                   <div class="form-group">
-                                        <legend>Are there any special requirements of the deputy made under the deputyship order?</legend>
-                                        <label for="visit-special-requirements-yes" class="radio">
-                                             <input id="visit-special-requirements-yes" type="radio" name="radio-inline-group-1" value="Yes">
-                                             Yes
-                                        </label>
-                                        <label for="visit-special-requirements-no" class="radio">
-                                             <input id="visit-special-requirements-no" type="radio" name="radio-inline-group-1" value="No">
-                                             No
-                                        </label>
-                                   </div>
-                                   <!-- // FORM ITEM - 1a - END // -->
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <label for="third-visit-commisioned">
+                                        Why is this visit being commissioned?
+                                   </label>
+                                   <textarea id="third-visit-commisioned"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
 
-                                   <!-- // FORM ITEM - 1b - START // -->
-                                   <div class="form-group answer-1b">
-                                        <label for="third-special-requirements-answer">
-                                             Please provide details:
-                                        </label>
-                                        <textarea id="third-special-requirements-answer"></textarea>
-                                   </div>
-                                   <!-- // FORM ITEM - 1b - END // -->
+                              <!-- // FORM ITEM - 2a - START // -->
+                              <div class="form-group">
+                                   <legend>Have the reports been submitted late?</legend>
+                                   <label for="visit-submitted-late-yes" class="radio">
+                                        <input id="visit-submitted-late-yes" type="radio" name="radio-inline-group-1" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-submitted-late-no" class="radio">
+                                        <input id="visit-submitted-late-no" type="radio" name="radio-inline-group-1" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 2a - END // -->
 
-                                   <!-- // FORM ITEM - 2a - START // -->
-                                   <div class="form-group">
-                                        <legend>Are there any on-going Safeguarding of Vulnerable Adults or OPG Compliance &amp; Regulation Unit investigations?</legend>
-                                        <label for="visit-safeguarding-yes" class="radio">
-                                             <input id="visit-safeguarding-yes" type="radio" name="radio-inline-group-2" value="Yes">
-                                             Yes
-                                        </label>
-                                        <label for="visit-safeguarding-no" class="radio">
-                                             <input id="visit-safeguarding-no" type="radio" name="radio-inline-group-2" value="No">
-                                             No
-                                        </label>
-                                   </div>
-                                   <!-- // FORM ITEM - 2a - END // -->
+                              <!-- // FORM ITEM - 2b - START // -->
+                              <div class="form-group answer-1b">
+                                   <label for="third-submitted-late-answer">
+                                        Please provide the visitor with as many details as possible
+                                   </label>
+                                   <textarea id="third-submitted-late-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 2b - END // -->
 
-                                   <!-- // FORM ITEM - 2b - START // -->
-                                   <div class="form-group answer-2b">
-                                        <label for="third-safeguarding-answer">
-                                             Please provide details:
-                                        </label>
-                                        <textarea id="third-safeguarding-answer"></textarea>
-                                   </div>
-                                   <!-- // FORM ITEM - 2b - END // -->
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group">
+                                   <label for="third-specific-questions">
+                                        Case specific questions for the visitor to address in this case
+                                   </label>
+                                   <textarea id="third-specific-questions"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
 
-                                   <!-- // FORM ITEM - 3a - START // -->
-                                   <div class="form-group">
-                                        <legend>Is there any other deputyship order relating to this client? (i.e. a Health &amp; Welfare order)</legend>
-                                        <label for="visit-deputyship-order-yes" class="radio">
-                                             <input id="visit-deputyship-order-yes" type="radio" name="radio-inline-group-3" value="Yes">
-                                             Yes
-                                        </label>
-                                        <label for="visit-deputyship-order-no" class="radio">
-                                             <input id="visit-deputyship-order-no" type="radio" name="radio-inline-group-3" value="No">
-                                             No
-                                        </label>
-                                   </div>
-                                   <!-- // FORM ITEM - 3a - END // -->
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <label for="third-documents">
+                                        Documents to be inspected and reported upon (refer to guidance for clarification if necessary):
+                                   </label>
+                                   <textarea id="third-documents"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
 
-                                   <!-- // FORM ITEM - 3b - START // -->
-                                   <div class="form-group answer-3b">
-                                        <label for="third-deputyship-order-answer">
-                                             Please provide details:
-                                        </label>
-                                        <textarea id="third-deputyship-order-answer"></textarea>
-                                   </div>
-                                   <!-- // FORM ITEM - 3b - END // -->
+                         </form>
+                         <!-- =========== WHY VISIT SECTION - END =========== -->
 
-                                   <!-- // FORM ITEM - 4a - START // -->
-                                   <div class="form-group">
-                                        <legend>Is this the first visit?</legend>
-                                        <label for="visit-first-yes" class="radio">
-                                             <input id="visit-first-yes" type="radio" name="radio-inline-group-4" value="Yes">
-                                             Yes
-                                        </label>
-                                        <label for="visit-first-no" class="radio">
-                                             <input id="visit-first-no" type="radio" name="radio-inline-group-4" value="No">
-                                             No
-                                        </label>
-                                   </div>
-                                   <!-- // FORM ITEM - 4a - END // -->
+                         <!-- =========== OTHER INFO - START =========== -->
+                         <h3 class="sub-section-title">Other Information / Comments</h3>
 
-                                   <!-- // FORM ITEM - 4b - START // -->
-                                   <div class="form-group answer-4b">
-                                        <label for="datepicker">Provide the date of the last visit:</label>
-                                        <div class="date-wrapper">
-                                             <input type="text" id="datepicker">
-                                             <i class="date"></i>
-                                        </div>
-                                   </div>
-                                   <!-- // FORM ITEM - 4b - END // -->
+                         <p>
+                              Please note any risks to the visitor from deputy or client, based on any relevant information
+                              from other parties. Please also note other information about family relationships, relationships
+                              between caring organisations and family/client/deputy, etc.
+                         </p>
 
-                                   <!-- // FORM ITEM - 5 - START // -->
-                                   <div class="form-group">
-                                        <label for="third-medical-background">
-                                             Case/family/medical background (please include here full details of all family
-                                             members known to the Office of the Public Guardian even if they are not to be
-                                             contacted for this visit):
-                                        </label>
-                                        <textarea id="third-medical-background"></textarea>
-                                   </div>
-                                   <!-- // FORM ITEM - 5 - END // -->
+                         <form class="why-visit">
 
-                              </form>
+                              <!-- // FORM ITEM - 5a - START // -->
+                              <div class="form-group">
+                                   <legend>Any dangers/risks which the Visitor or others may face?</legend>
+                                   <label for="visit-dangers-yes" class="radio">
+                                        <input id="visit-dangers-yes" type="radio" name="radio-inline-group-2" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-dangers-no" class="radio">
+                                        <input id="visit-dangers-no" type="radio" name="radio-inline-group-2" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 5a - END // -->
 
-                         </div>
-                         <!-- =========== BASIC INFO SECTION - START =========== -->
+                              <!-- // FORM ITEM - 5b - START // -->
+                              <div class="form-group answer-5b">
+                                   <label for="third-dangers-answer">
+                                        Please provide details:
+                                   </label>
+                                   <textarea id="third-dangers-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5b - END // -->
+
+                              <!-- // FORM ITEM - 6a - START // -->
+                              <div class="form-group">
+                                   <legend>Any other important information which will assist the visitor?</legend>
+                                   <label for="visit-assist-visitor-yes" class="radio">
+                                        <input id="visit-assist-visitor-yes" type="radio" name="radio-inline-group-3" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-assist-visitor-no" class="radio">
+                                        <input id="visit-assist-visitor-no" type="radio" name="radio-inline-group-3" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 6a - END // -->
+
+                              <!-- // FORM ITEM - 6b - START // -->
+                              <div class="form-group answer-6b">
+                                   <label for="third-assist-visitor-answer">
+                                        Please provide details:
+                                   </label>
+                                   <textarea id="third-assist-visitor-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6b - END // -->
+
+                         </form>
+                         <!-- =========== OTHER INFO - END =========== -->
+
+                         <!-- =========== COMMISSION INFO - START =========== -->
+                         <h3 class="sub-section-title">Commissioning Information</h3>
+
+                         <form class="why-visit">
+
+                              <!-- // FORM ITEM - 7 - START // -->
+                              <div class="form-group read-only">
+                                   <label for="visit-commissioned-by">Visit commissioned by:</label>
+                                   <input id="visit-commissioned-by" name="visit-commissioned-by" type="text" class="half" value="manager@opgtest.com" readonly>
+                              </div>
+                              <!-- // FORM ITEM - 7 - END // -->
+
+                              <p>
+                                   Please add what is relevent:
+                              </p>
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group">
+                                   <label class="normal" for="confirm-read">
+                                        <input id="visit-tick-compliance" name="confirm-read" type="checkbox" value="post">
+                                        Supervision Compliance &amp; Regulation Unit
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
+
+
+
+
+
+
+
+
+ Lay Deputy Supervision Local Authority Supervision Professional Deputy Supervision Non-Compliant Reporting Team HMCS-COP
+                         </form>
+                         <!-- =========== COMMISSION INFO - END =========== -->
+
 
                     </div>
 

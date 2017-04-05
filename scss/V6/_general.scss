@@ -1,0 +1,392 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+body {
+     font-family: $Montserrat-Regular;
+     line-height: 0;
+}
+
+body#body-default {
+     margin: 0;
+     position: relative;
+}
+
+main {
+     .row.main-content {
+          margin: 0 auto;
+          // .columns.grid {
+          //      padding: 0;
+          // }
+     }
+     &.login {
+          background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
+          background-size: cover;
+          position: relative;
+     }
+     &.default {
+          display: inline-block;
+          width: 85%;
+          float: left;
+          margin: 0 0 5em 15%;
+          position: relative;
+          // padding: 3em;
+          .content-wrapper {
+               padding: 3em 0;
+               &.dashboard, &.commission-visit {
+                    padding-top: 0;
+               }
+          }
+     }
+}
+
+.login {
+     height: 100vh;
+     @include flexbox;
+     @include align-items(center);
+     @include justify-content(center);
+}
+
+.colour-wrapper {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: rgba($black,0.1);
+     z-index: 1;
+}
+
+.row {
+     z-index: 2;
+}
+
+// =================== TEXT - START =================== //
+h1, h2, p {
+     display: inline-block;
+     width: 100%;
+     float: left;
+     &.small {
+          font-size: 0.875rem;
+          color: rgba($black,0.5);
+     }
+}
+
+h1 {
+     font-size: 2.8rem;
+}
+
+h1, h2, h3, h4 {
+     font-family: $Montserrat-Bold;
+     line-height: 1.2;
+     color: $main-colour;
+     text-transform: uppercase;
+     margin: 0 0 0.5em 0;
+     span {
+          font-size: 1.4rem;
+          font-family: $Opensans-Regular;
+          color: lighten($main-colour,50%);
+          text-transform: initial;
+          width: 100%;
+          display: inline-block;
+     }
+     a, strong {
+          color: $blue;
+     }
+     img.document-item {
+          display: inline-block;
+          border: 3px solid $border-colour;
+          padding: 0.5em;
+          float: left;
+          width: 3.5em;
+          margin: 0 0.5em 0 0;
+          border-radius: $global-border-radius;
+     }
+     &.section-title, &.sub-section-title {
+          text-transform: initial;
+     }
+     div {
+          display: inline-block;
+     }
+}
+
+p, ul, ul li {
+     font-family: $Opensans-Regular;
+     color: $text-main-colour;
+     line-height: 1.4;
+}
+
+p {
+     .letter {
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
+          float: left;
+          width: 1.565em;
+          font-size: 0.875rem;
+          height: 1.565em;
+          margin: 0 0.75em 0 0;
+          font-family: $Montserrat-Bold;
+          background: $border-colour;
+          border-radius: 50%;
+     }
+}
+
+ul, ol {
+     display: inline-block;
+     width: 100%;
+     &.table-of-contents {
+          li {
+               list-style: none;
+               margin: 0 0 2em 0;
+               color: darken($border-colour,20%);
+               a {
+                    font-size: 1.6rem;
+                    display: inline-block;
+                    margin: 0 0 0.25em 0;
+               }
+          }
+     }
+}
+
+.section-title, .sub-section-title {
+     font-size: 1.6rem;
+     display: inline-block;
+     width: 100%;
+     font-family: $Montserrat-Bold;
+     margin: 1.5em 0 0.75em 0;
+}
+
+.sub-section-title {
+     font-size: 1.2rem;
+}
+// =================== TEXT - END =================== //
+
+// =================== LINKS - START =================== //
+a {
+     font-family: $Opensans-Bold;
+     line-height: 1.4;
+     color: $blue;
+     border-bottom: 1px dashed;
+     &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid;
+          color: darken($blue, 5%);
+     }
+}
+
+a.main-cta {
+     @include standard-transition;
+     background: $blue;
+     border: 3px solid $blue;
+     border-radius: $global-border-radius;
+     padding: 1em 1.5em;
+     font-family: $Montserrat-Bold;
+     width: 100%;
+     color: $white;
+     display: inline-block;
+     // border: none;
+     float: left;
+     position: relative;
+     &:hover {
+          color: $white;
+          background: darken($blue,5%);
+          transform: scale(1.1);
+          cursor: pointer;
+     }
+     &.create-client {
+
+     }
+     &.de-activate {
+          background: $main-colour;
+          border: 3px solid $main-colour;
+          opacity: 0.2;
+          &:hover {
+               transform: scale(1);
+          }
+     }
+     &.secondary {
+          border: 3px solid $blue;
+          color: $blue;
+          background: $white;
+     }
+}
+
+.cta-row {
+     a.main-cta {
+          width: auto;
+          float: left;
+          margin: 0 1em 0 0;
+          &.secondary {
+               margin: 0;
+          }
+     }
+     a {
+          margin: 1em 0 0 1em;
+          display: inline-block;
+          // float: right;
+     }
+}
+// =================== LINKS - END =================== //
+
+.confirmation-panel {
+     display: none;
+     background: $green;
+     border-radius: $global-border-radius;
+     padding: 1em 1.5em 1.5em 1.5em;
+     .content {
+          display: inline-block;
+          h2 {
+               margin: 0 0 0.25em 0;
+               color: rgba($white,0.7);
+               text-transform: inherit;
+               font-family: $Montserrat-Regular;
+               div {
+                    color: $white;
+                    font-family: $Montserrat-Bold;
+               }
+               span {
+                    display: inline-block;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0 0.25em 0 0;
+                    background: url(#{$image-path}/icons/tick.svg) no-repeat 0 50%;
+                    background-size: cover;
+                    position: relative;
+                    top: 0.35em;
+               }
+          }
+     }
+     &#deputy-confirmation, &#visit-confirmation {
+          display: inline-block;
+          margin: 2em 0 0 0;
+          width: 100%;
+     }
+}
+
+hr {
+     margin: 3em 0;
+     width: 100%;
+     display: inline-block;
+     border: 0;
+     border-bottom: 3px solid $border-colour;
+     background: none;
+}
+
+.hide {
+     display: none !important;
+}
+
+.content-wrapper {
+     @include flexbox;
+     @include justify-content(center);
+     @include flex-wrap(wrap);
+     // padding: 0;
+     a.place-holder, a.job-family {
+          @include flexbox;
+     }
+}
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+     .row {
+          max-width: 80rem;
+     }
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 34em;
+     }
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 34em;
+     }
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+     main {
+          .row.main-content {
+               margin-bottom: 8em;
+          }
+     }
+
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 25em;
+     }
+
+     main {
+          .row.main-content {
+               max-width: 100%;
+               margin-bottom: 1.5em;
+          }
+     }
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+     iframe {
+          width: 100%;
+          margin: 0 0 3em 0;
+          height: 15em;
+     }
+
+     main {
+          .row.main-content {
+               max-width: 100%;
+               margin-bottom: 6em;
+          }
+     }
+
+     input[type="text"], input[type="password"], input[type="date"], input[type="datetime"],
+     input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"],
+     input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+          height: auto;
+          margin-bottom: 0;
+     }
+
+
+}

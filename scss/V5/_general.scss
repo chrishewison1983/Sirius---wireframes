@@ -119,6 +119,22 @@ p, ul, ul li {
      line-height: 1.4;
 }
 
+p {
+     .letter {
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
+          float: left;
+          width: 1.565em;
+          font-size: 0.875rem;
+          height: 1.565em;
+          margin: 0 0.75em 0 0;
+          font-family: $Montserrat-Bold;
+          background: $border-colour;
+          border-radius: 50%;
+     }
+}
+
 ul, ol {
      display: inline-block;
      width: 100%;

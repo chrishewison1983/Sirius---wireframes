@@ -1,0 +1,344 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-create-letter.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1>
+                         <span>PFA | 7000-000-0310</span><br>
+                         Create new recipients for the letter
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div id="document-summary" class="large-6 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul id="side-panel-tabs" class="tabs">
+                         <li class="tab-link" data-tab="tab-1">
+                              <span class="info"></span>
+                              <p>Document info</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-2">
+                              <span class="client-details"></span>
+                              <p>Client details</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-3">
+                              <span class="deputy-details"></span>
+                              <p>Deputy details</p>
+                         </li>
+                         <li class="tab-link current" data-tab="tab-4">
+                              <span class="documents"></span>
+                              <p>Documents</p>
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content side-panel">
+
+                         <!-- // DOCUMENT SUMMARY - START // -->
+                         <h2 class="section-title">Document information...</h2>
+
+                         <h3 class="sub-section-title">Letter template chosen...</h3>
+
+                         <div class="document">
+                              <img src="../../../production/img/V6/document-thumbnail.png" alt="Document" class="document-item">
+                              <h3 class="title">CT-bb: Blank complaints team template</h3>
+                         </div>
+
+                         <h3 class="sub-section-title">Recipients chosen...</h3>
+
+                         <ol id="recipients">
+                              <li>Ms Lara Stevens (Correspondent)</li>
+                         </ol>
+                         <!-- // DOCUMENT SUMMARY - END // -->
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content side-panel">
+
+                         <h2 class="section-title">Clients details...</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content side-panel">
+
+                         <h2 class="section-title">Deputy details...</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content side-panel current">
+
+                         <h2 class="section-title">Case documents...</h2>
+
+                         {{= it.include('document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+               </div>
+
+
+               <!-- // CREATE RECIPIENT - START // -->
+               <div id="action-panel" class="large-6 large-uncentered columns">
+
+                    <form class="add-correspondent-form">
+
+                         <h2 class="section-title">Add a correspondant...</h2>
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label for="title">Title</label>
+                              <select id="title">
+                                   <option>-- Select --</option>
+                                   <option>Mr.</option>
+                                   <option>Mrs.</option>
+                                   <option>Ms.</option>
+                                   <option>Miss</option>
+                                   <option>Dr.</option>
+                                   <option>Prof.</option>
+                                   <option>Rev.</option>
+                                   <option>Other</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group">
+                              <label for="first-name">First name</label>
+                              <input id="first-name" name="first-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group">
+                              <label for="middle-name">Middle names</label>
+                              <input id="middle-name" name="middle-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                         <!-- // FORM ITEM - 4 - START // -->
+                         <div class="form-group">
+                              <label for="last-name">Last name</label>
+                              <input id="last-name" name="last-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 4 - END // -->
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group">
+                              <label for="company-name">Company names (if relevant)</label>
+                              <input id="company-name" name="company-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group">
+                              <label for="relationship">Relationship to the client</label>
+                              <select id="relationship">
+                                   <option>-- Select --</option>
+                                   <option>Relationship 1</option>
+                                   <option>Relationship 2</option>
+                                   <option>Relationship 3</option>
+                                   <option>Relationship 4</option>
+                                   <option>Relationship 5</option>
+                                   <option>Relationship 6</option>
+                                   <option>Relationship 7</option>
+                                   <option>Relationship 8</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group">
+                              <label for="country">Country</label>
+                              <select id="country" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option>Relationship 1</option>
+                                   <option>Relationship 2</option>
+                                   <option>Relationship 3</option>
+                                   <option>Relationship 4</option>
+                                   <option>Relationship 5</option>
+                                   <option>Relationship 6</option>
+                                   <option>Relationship 7</option>
+                                   <option>Relationship 8</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <!-- // FORM ITEM - 8a - START // -->
+                         <div class="form-group">
+                              <label for="postcode">Postcode</label>
+                              <input id="postcode" name="postcode" type="text" class="one-third">
+                              <a class="main-cta secondary" id="find-postcode">Find address</a>
+                         </div>
+                         <!-- // FORM ITEM - 8a - END // -->
+
+                         <!-- // FORM ITEM - 8b - START // -->
+                         <div class="form-group address-list">
+                              <label for="client-address-1" class="radio address">
+                                   <input id="client-address-1" type="radio" name="radio-inline-group" value="client-address-1">
+                                   1 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-2" class="radio address">
+                                   <input id="client-address-2" type="radio" name="radio-inline-group" value="client-address-2">
+                                   2 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-3" class="radio address">
+                                   <input id="client-address-3" type="radio" name="radio-inline-group" value="client-address-3">
+                                   3 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-4" class="radio address">
+                                   <input id="client-address-4" type="radio" name="radio-inline-group" value="client-address-4">
+                                   4 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-5" class="radio address">
+                                   <input id="client-address-5" type="radio" name="radio-inline-group" value="client-address-5">
+                                   5 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-6" class="radio address">
+                                   <input id="client-address-6" type="radio" name="radio-inline-group" value="client-address-6">
+                                   6 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-7" class="radio address">
+                                   <input id="client-address-7" type="radio" name="radio-inline-group" value="client-address-7">
+                                   7 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-8" class="radio address">
+                                   <input id="client-address-8" type="radio" name="radio-inline-group" value="client-address-8">
+                                   8 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-9" class="radio address">
+                                   <input id="client-address-9" type="radio" name="radio-inline-group" value="client-address-9">
+                                   9 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-10" class="radio address">
+                                   <input id="client-address-10" type="radio" name="radio-inline-group" value="client-address-10">
+                                   10 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-11" class="radio address">
+                                   <input id="client-address-11" type="radio" name="radio-inline-group" value="client-address-11">
+                                   11 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+                              <label for="client-address-12" class="radio address">
+                                   <input id="client-address-12" type="radio" name="radio-inline-group" value="client-address-12">
+                                   12 Grimwald Place, Buckley, Buckinghamshire,
+                              </label>
+
+                         </div>
+                         <!-- // FORM ITEM - 8b - END // -->
+
+                         <!-- // FORM ITEM - 9 - START // -->
+                         <div class="form-group">
+                              <legend>Is airmail required?</legend>
+                              <label for="airmail-yes" class="radio">
+                                   <input id="airmail-yes" type="radio" name="radio-inline-group" value="Yes">
+                                   Yes
+                              </label>
+                              <label for="airmail-no"  class="radio">
+                                   <input id="airmail-no" type="radio" name="radio-inline-group" value="No">
+                                   No
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 9 - END // -->
+
+                         <!-- // FORM ITEM - 10 - START // -->
+                         <div class="form-group">
+                              <label for="phone-number">Daytime telephone number</label>
+                              <input id="phone-number" name="phone-number" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 10 - END // -->
+
+                         <!-- // FORM ITEM - 11 - START // -->
+                         <div class="form-group">
+                              <label for="mob-number">Mobile telephone number</label>
+                              <input id="mob-number" name="mob-number" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 11 - END // -->
+
+                         <!-- // FORM ITEM - 12 - START // -->
+                         <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input id="email" name="email" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 12 - END // -->
+
+                         <!-- // FORM ITEM - 13 - START // -->
+                         <div class="form-group">
+                              <legend>Correspondence By</legend>
+                              <label class="normal" for="correspondence-post">
+                                   <input id="correspondence-post" name="correspondence-post" type="checkbox" value="correspondence-post">
+                                   Post
+                              </label>
+                              <label class="normal" for="correspondence-phone">
+                                   <input id="correspondence-phone" name="correspondence-phone" type="checkbox" value="correspondence-phone">
+                                   Phone
+                              </label>
+                              <label class="normal" for="correspondence-email">
+                                   <input id="correspondence-email" name="correspondence-email" type="checkbox" value="correspondence-email">
+                                   Email
+                              </label>
+
+                              <label class="normal" for="correspondence-welsh">
+                                   <input id="correspondence-welsh" name="correspondence-welsh" type="checkbox" value="correspondence-welsh">
+                                   Welsh
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 13 - END // -->
+
+                         <hr>
+
+                         <hr>
+
+                    </form>
+
+               </div>
+               <!-- // CREATE RECIPIENT - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- CTA-FOOTER - START -->
+     <div id="cta-footer" class="cta-row">
+          <a class="main-cta" id="create-letter" href="2b-add-correspondance.html">Add correspondant</a>
+          <a href="#" onclick="history.back();">Cancel</a>
+     </div>
+     <!-- CTA-FOOTER - END -->
+
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->
