@@ -138,8 +138,6 @@ $('#confirm-remove-4').click(function(){
      $('.case-item[data-case-id="4"]').hide('slow', function(){ $(this).remove(); });
 });
 
-
-
 // $('#edit-deputy').click(function(){
 //      $("#edit-title, .edit-deputy-form").show('slow');
 //      $("#check-details-title").hide('slow');
@@ -219,18 +217,32 @@ $("#visit-assist-visitor-no").click( function(){
 });
 
 $('#third-why').bind('change', function (e) {
-     if ($('#third-why').val() == 'non-compliance') {
+     if ($('#third-why').val() == 'Non-compliance') {
           $('.why-answer-hidden').slideDown('slow');
-     } else if ($('#third-why').val() == 'urgent') {
+     } else if ($('#third-why').val() == 'Urgent') {
           $('.why-answer-hidden').slideDown('slow');
-     } else if ($('#third-why').val() == 'sample') {
+     } else if ($('#third-why').val() == 'Sample visit') {
           $('.why-answer-hidden').slideUp('slow');
-     } else if ($('#third-why').val() == 'requested') {
+     } else if ($('#third-why').val() == 'Requested by deputy') {
           $('.why-answer-hidden').slideUp('slow');
      } else {
           $('.why-answer-hidden').hide();
      }
 }).trigger('change');
+
+$(document).ready(function() {
+
+     $('#third-why').change(function(e) {
+          e.preventDefault();
+          $('.place-holder-text').hide();
+          $("#why-commission-visit").append(`
+               <p class="type-of-visit">
+                    ${ $("#third-why option:selected").text() }
+               </p>`
+          );
+     });
+
+});
 
 // Commission visit - step - 2 (WHO?)
 function persistSelectedVisitor() {
@@ -244,18 +256,25 @@ $('.extra-info').hide();
 
 $(document).ready(function() {
 
-     $('ul#commission-visit-client li a, ul#commission-visit-deputies li a').click(function(e) {
+     $('ul#commission-visit-client li a, ul#commission-visit-deputies li a').on('click', function(e) {
           e.preventDefault();
           $(this).toggleClass('selected');
-          $('.place-holder-text').hide();
-          $("#recipients").append(`
-               <li data-visit-id='${$(this).data('visit-id')}'>
-                    ${ $(this).find('[data-value="name"]').text() }
-               </li>`
-          );
-          persistSelectedVisitor();
+          if ($(this).hasClass('selected')) {
+               $('.place-holder-text').hide();
+               $("#recipients").append(`
+                    <li data-visit-id='${$(this).data('visit-id')}'>
+                         ${ $(this).find('[data-value="name"]').text() }
+                    </li>`
+               );
+               persistSelectedVisitor();
 
-          $('#cta-footer').slideDown('slow');
+               $('#cta-footer').slideDown('slow');
+          }
+          else {
+               e.preventDefault();
+               var id = $(this).data('visit-id');
+               $(`#recipients [data-visit-id="${id}"]`).remove();
+          }
      });
 
 });
@@ -386,8 +405,8 @@ $('#add-asset').click(function(e){
      );
 });
 
-$("#asset-list").on("click", " .remove", function(){
-     // $('li').parent().remove('slow');
+$("#asset-list").on("click", ".remove", function(){
+     $(this).parent().remove();
 });
 
 // Commission visit - step - 5 (CASE DETAILS)
@@ -429,11 +448,6 @@ $("#third-medical-background").keypress( function(){
 $("#confirm-read").click( function(){
      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
 });
-
-
-
-// radio-inline-group-3
-
 
 
 // ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //

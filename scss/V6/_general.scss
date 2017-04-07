@@ -264,6 +264,21 @@ a.main-cta {
           display: inline-block;
           margin: 2em 0 0 0;
           width: 100%;
+          h2 {
+               margin: 0;
+          }
+          #visits {
+               display: inline-block;
+               margin: 0;
+               li {
+                    margin: 0 0.25em 0 0;
+                    float: left;
+                    color: $white;
+                    list-style: none;
+                    font-family: $Montserrat-Bold;
+                    font-size: 1.5rem;
+               }
+          }
      }
 }
 

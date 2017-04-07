@@ -176,4 +176,15 @@
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
+<script>
+
+     $(document).ready(function(){
+          JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
+               $('#visits').append(`
+                    <li> ${ recipient }, </li>
+               `);
+          });
+     });
+
+</script>
 <!-- SCRIPT CONTENT - END -->

@@ -198,7 +198,6 @@
 
                }
           }
-
      }
 }
 
@@ -216,7 +215,7 @@ ol#asset-list {
           padding: 1em 1em 1em 4.75em;
           line-height: 1;
           @include standard-transition;
-          list-style: decimal;
+          counter-increment: step-counter;
           z-index: 1;
           &:before {
                content: counter(step-counter);
@@ -274,9 +273,63 @@ ol#asset-list {
      }
 }
 
+#why-commission-visit {
+     p {
+          text-transform: capitalize;
+     }
+}
+
+.visitor-container {
+     display: inline-block;
+}
+
 ol#visitor-list {
      margin: 0 0 0 0;
-     
+     li {
+          display: inline-block;
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          padding: 1em 1.5em;
+          width: 100%;
+          margin: 0 0 2em 0;
+          counter-increment: step-counter;
+          &:before {
+               content: counter(step-counter);
+               // position: absolute;
+               display: inline-block;
+               font-size: 1.2rem;
+               background: $blue;
+               color: $white;
+               margin: 0 0.5em 0 0;
+               font-family: $Montserrat-Bold;
+               width: 1.5em;
+               height: 1.5em;
+               text-align: center;
+               border-radius: 50%;
+          }
+          form {
+               hr {
+                    margin: 1em 0;
+                    border-bottom: 3px dashed $border-colour;
+               }
+               .form-group {
+                    &:last-of-type {
+                         margin-bottom: 0.5em;
+                    }
+                    p {
+                         margin: 0;
+                    }
+               }
+               label {
+                    a {
+                         float: right;
+                    }
+               }
+          }
+          .title {
+               font-size: 1.4rem;
+          }
+     }
 }
 
 

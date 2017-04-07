@@ -155,3 +155,11 @@ if ($.cookie("user-journey") == 2) {
      }, 5000);
 
 }
+
+$("#add-visitors-why").on("click", function (e) {
+     $.cookie("type-of-visit", $("#third-why").val(), {path:'/'});
+});
+
+if ($.cookie("type-of-visit")) {
+     $(".type-of-visit").text($.cookie("type-of-visit"));
+}

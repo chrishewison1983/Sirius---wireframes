@@ -75,13 +75,13 @@
                          <!-- // DOCUMENT SUMMARY - START // -->
                          <h2 class="section-title">Commission visit info...</h2>
 
-                         <h3 class="sub-section-title">Who is the visit for...</h3>
+                         <h3 class="sub-section-title">Why is the visit commissioned...</h3>
 
                          <p class="place-holder-text">Non chosen yet</p>
 
-                         <ol id="recipients">
+                         <div id="why-commission-visit">
                               <!-- <li>Ms Lara Stevens (Correspondent)</li> -->
-                         </ol>
+                         </div>
                          <!-- // DOCUMENT SUMMARY - END // -->
 
                     </div>
@@ -131,10 +131,10 @@
                                    <label for="third-why">Why is this visit being commissioned?</label>
                                    <select id="third-why">
                                         <option>-- Select --</option>
-                                        <option value="sample">Sample</option>
-                                        <option value="requested">Requested by deputy</option>
-                                        <option value="non-compliance">Non-compliance</option>
-                                        <option value="urgent">Urgent</option>
+                                        <option value="Sample visit">Sample visit</option>
+                                        <option value="Requested by deputy">Requested by deputy</option>
+                                        <option value="Non-compliance">Non-compliance</option>
+                                        <option value="Urgent">Urgent</option>
                                    </select>
                               </div>
                               <!-- // FORM ITEM - 1a - END // -->
@@ -339,7 +339,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta" id="add-visitors" href="6b-who.html">Continue</a>
+          <a class="main-cta" id="add-visitors-why" href="6b-who.html">Continue</a>
           <a href="#" onclick="history.back();">Cancel</a>
      </div>
      <!-- CTA-FOOTER - END -->
@@ -353,11 +353,11 @@
 <!-- SCRIPT CONTENT - START -->
 <script>
 
-     $(document).ready(function(){
-          JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
-               $('#recipients').append('<li>' + recipient + '</li>');
-          });
-     });
+     // $(document).ready(function(){
+     //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) {
+     //           $('#why-commission-visit').append('<p>' + visit + '</p>');
+     //      });
+     // });
 
 </script>
 <!-- SCRIPT CONTENT - END -->
