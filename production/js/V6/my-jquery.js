@@ -57,6 +57,20 @@ $(document).ready(function(){
      	$(this).addClass('current');
      	$("#"+tab_id).addClass('current');
      });
+
+     $('.details').hide();
+
+     $('#visit-commission .more-info').click(function(){
+          $(this).siblings('.details').toggle('slow');
+          $(this).toggleClass('open');
+          e.preventDefault();
+     });
+
+     $('label').click( function(){
+          $(this).parent().parent().parent().addClass('complete').removeClass('outstanding');
+          $('.status').text('Done');
+     });
+
 });
 
 // Correspondant
@@ -404,7 +418,7 @@ if ($('.visit-commission').hasClass('step-4')) {
      $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span').text('').addClass('complete');
 }
 
-$("#visit-jointly-yes, #visit-jointly-no").click( function(){
+$("#visit-enclosure-yes, #visit-enclosure-no").click( function(){
      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
 });
 
