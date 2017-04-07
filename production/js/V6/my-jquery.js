@@ -117,8 +117,14 @@ $(document).ready(function(){
 
      $('#find-postcode').click(function(){
      	$('.address-list').slideDown('slow');
+          $('.postcode-value').text($('#third-party-postcode, #client-postcode, #postcode').val());
      });
+
 });
+
+// Clear -Forms
+// var form = document.getElementById("add-third-party-form");
+// form.reset();
 
 // Add edit deputies
 // $('.remove-deputy').click(function(){
@@ -245,6 +251,10 @@ $(document).ready(function() {
 });
 
 // Commission visit - step - 2 (WHO?)
+if ($('.visit-commission').hasClass('step-2')) {
+     $('ul li.step-1 .number span').text('').addClass('complete');
+}
+
 function persistSelectedVisitor() {
      sessionStorage.setItem('selected-visitors', JSON.stringify($('#recipients li').map(function() {
           return $(this).text().trim();
@@ -295,6 +305,8 @@ $('#confirm-add-third-party').click(function(e){
      $('#add-third-party-form').hide('slow');
      $(this).parent().parent().parent().find('.visitor-container').show('slow');
      $('#add-third-party').show('slow');
+
+     // $('input[type="text"]').val('');
 
      $('#cta-footer').slideDown('slow');
 
@@ -379,16 +391,24 @@ $('.view-more').click(function(e){
 });
 
 // Commission visit - step - 3 (WHERE?)
+if ($('.visit-commission').hasClass('step-3')) {
+     $('ul li.step-1 .number span, ul li.step-2 .number span').text('').addClass('complete');
+}
+
 $(".report #datepicker").click( function(){
      $('#cta-footer').slideDown('slow');
 });
 
 // Commission visit - step - 4 (CASE SUMMARY)
+if ($('.visit-commission').hasClass('step-4')) {
+     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span').text('').addClass('complete');
+}
+
 $("#visit-jointly-yes, #visit-jointly-no").click( function(){
      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
 });
 
-$("#asset-list").hide();
+// $("#asset-list").hide();
 
 var counter = 0;
 
@@ -410,6 +430,10 @@ $("#asset-list").on("click", ".remove", function(){
 });
 
 // Commission visit - step - 5 (CASE DETAILS)
+if ($('.visit-commission').hasClass('step-5')) {
+     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span').text('').addClass('complete');
+}
+
 $('.answer-1b, .answer-2b, .answer-3b, .answer-4b, .answer-5b, .answer-6b').hide();
 
 $("#visit-special-requirements-yes").click( function(){
@@ -445,6 +469,10 @@ $("#third-medical-background").keypress( function(){
 });
 
 // Commission visit - step - 6 (CONFIRM VIST)
+if ($('.visit-commission').hasClass('step-6')) {
+     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span, ul li.step-5 .number span').text('').addClass('complete');
+}
+
 $("#confirm-read").click( function(){
      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
 });

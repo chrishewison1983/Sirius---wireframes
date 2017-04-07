@@ -66,6 +66,10 @@ nav.progress-bar {
                     color: rgba($main-colour,0.4);
                     z-index: 10;
                     position: relative;
+                    &.complete {
+                         background: url(#{$image-path}/icons/tick-no-circle.svg) no-repeat 50% 50% $blue !important;
+                         background-size: 2em !important;
+                    }
                }
                p {
                     margin: 0.75em 0 0 0;

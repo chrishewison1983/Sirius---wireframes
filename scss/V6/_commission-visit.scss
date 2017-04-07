@@ -281,6 +281,7 @@ ol#asset-list {
 
 .visitor-container {
      display: inline-block;
+     width: 100%;
 }
 
 ol#visitor-list {
@@ -328,6 +329,33 @@ ol#visitor-list {
           }
           .title {
                font-size: 1.4rem;
+          }
+     }
+}
+
+#visit-commission {
+     margin: 2em 0 0 0;
+     li {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          padding: 0 0 0 2em;
+          &.outstanding {
+               border-left: 10px solid $pink;
+               .status {
+                    background: $pink;
+                    color: $white;
+               }
+          }
+          .status {
+               display: inline-block;
+               position: absolute;
+               right: 0;
+               top: 1em;
+               border-radius: $global-border-radius;
+               padding: 0.5em 1em;
+               text-transform: uppercase;
+               font-size: 0.875rem;
           }
      }
 }

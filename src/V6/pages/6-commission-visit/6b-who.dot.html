@@ -74,15 +74,15 @@
                     <div id="tab-1" class="tab-content side-panel current">
 
                          <!-- // DOCUMENT SUMMARY - START // -->
-                         <h2 class="section-title">Commission visit info...</h2>
+                         <h2 class="section-title">Commission visit info</h2>
 
-                         <h3 class="sub-section-title">Why is the visit commissioned...</h3>
+                         <h3 class="sub-section-title">Why is the visit commissioned</h3>
 
                          <div id="why-commission-visit">
                               <p class="type-of-visit"></p>
                          </div>
 
-                         <h3 class="sub-section-title">Who is the visit for...</h3>
+                         <h3 class="sub-section-title">Who is the visit for</h3>
 
                          <p class="place-holder-text">Non chosen yet</p>
 
@@ -97,7 +97,7 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">Clients details...</h2>
+                         <h2 class="section-title">Clients details</h2>
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
@@ -105,7 +105,7 @@
                     <!-- =========== TAB CONTENT - 3 - START =========== -->
                     <div id="tab-3" class="tab-content side-panel">
 
-                         <h2 class="section-title">Deputy details...</h2>
+                         <h2 class="section-title">Deputy details</h2>
 
                     </div>
                     <!-- =========== TAB CONTENT - 3 - END =========== -->
@@ -113,7 +113,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel">
 
-                         <h2 class="section-title">Case documents...</h2>
+                         <h2 class="section-title">Case documents</h2>
 
                          {{= it.include('document-viewer.html') }}
 
@@ -126,12 +126,12 @@
 
                     <div class="commission-visit">
 
-                         <h2 class="section-title">Select who visit is too...</h2>
+                         <h2 class="section-title">Select who visit is too</h2>
 
                          <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== -->
                          <div class="visitor-container">
 
-                              <h3 class="sub-section-title">Client...</h3>
+                              <h3 class="sub-section-title">Client</h3>
 
                               <ul id="commission-visit-client">
 
@@ -139,7 +139,7 @@
                                    <li>
                                         <div class="wrapper">
                                              <a class="visitor" data-visit-id='1'>
-                                                  <span data-value='name'>Mr Gerald Brackens (Client)</span><br>
+                                                  <span data-value='name'>Mr Gerald Brackens <span class="hide">(Client)</span></span><br>
                                                   <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
                                              </a>
                                              <button class="view-more">More info</button>
@@ -192,7 +192,7 @@
 
                          <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== -->
                          <div class="visitor-container">
-                              <h3 class="sub-section-title">Deputies...</h3>
+                              <h3 class="sub-section-title">Deputies</h3>
 
                               <ul id="commission-visit-deputies">
 
@@ -201,7 +201,7 @@
                                         <div class="wrapper">
                                              <span class="fee-payer"></span>
                                              <a class="visitor" data-visit-id='2'>
-                                                  <span data-value='name'>Ms Lara Stevens (Correspondent)</span>
+                                                  <span data-value='name'>Ms Lara Stevens <span class="hide">(Deputy)</span></span>
                                                   <br>
                                                   <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
                                              </a>
@@ -253,7 +253,7 @@
                                    <li>
                                         <div class="wrapper">
                                              <a class="visitor" data-visit-id='3'>
-                                                  <span data-value='name'>Mrs Carla Frith (Attorney)</span>
+                                                  <span data-value='name'>Mrs Carla Frith <span class="hide">(Deputy)</span></span>
                                                   <br>
                                                   <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
                                              </a>
@@ -305,7 +305,7 @@
                                    <li>
                                         <div class="wrapper">
                                              <a class="visitor" data-visit-id='4'>
-                                                  <span data-value='name'>Mrs Melanie Rand (Attorney)</span>
+                                                  <span data-value='name'>Mrs Melanie Rand <span class="hide">(Deputy)</span></span>
                                                   <br>
                                                   <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
                                              </a>
@@ -358,12 +358,12 @@
                          <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== -->
 
                          <!-- =========== COMMISSION VISIT SECTION - 3 - START =========== -->
-                         <h3 class="sub-section-title">Add third party contact...</h3>
+                         <h3 class="sub-section-title">Add third party contact</h3>
 
                          <ul id="commission-visit-third-parties">
                          </ul>
 
-                         <form id="add-third-party-form" data-visit-id='5'>
+                         <form id="add-third-party-form" data-visit-id='5' method="post">
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group">
@@ -408,51 +408,51 @@
                               <div class="form-group address-list">
                                    <label for="third-party-address-1" class="radio address">
                                         <input id="third-party-address-1" type="radio" name="radio-inline-group" value="third-party-address-1">
-                                        1 Grimwald Place, Buckley, Buckinghamshire,
+                                        1 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-2" class="radio address">
                                         <input id="third-party-address-2" type="radio" name="radio-inline-group" value="third-party-address-2">
-                                        2 Grimwald Place, Buckley, Buckinghamshire,
+                                        2 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-3" class="radio address">
                                         <input id="third-party-address-3" type="radio" name="radio-inline-group" value="third-party-address-3">
-                                        3 Grimwald Place, Buckley, Buckinghamshire,
+                                        3 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-4" class="radio address">
                                         <input id="third-party-address-4" type="radio" name="radio-inline-group" value="third-party-address-4">
-                                        4 Grimwald Place, Buckley, Buckinghamshire,
+                                        4 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-5" class="radio address">
                                         <input id="third-party-address-5" type="radio" name="radio-inline-group" value="third-party-address-5">
-                                        5 Grimwald Place, Buckley, Buckinghamshire,
+                                        5 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-6" class="radio address">
                                         <input id="third-party-address-6" type="radio" name="radio-inline-group" value="third-party-address-6">
-                                        6 Grimwald Place, Buckley, Buckinghamshire,
+                                        6 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-7" class="radio address">
                                         <input id="third-party-address-7" type="radio" name="radio-inline-group" value="third-party-address-7">
-                                        7 Grimwald Place, Buckley, Buckinghamshire,
+                                        7 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-8" class="radio address">
                                         <input id="third-party-address-8" type="radio" name="radio-inline-group" value="third-party-address-8">
-                                        8 Grimwald Place, Buckley, Buckinghamshire,
+                                        8 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-9" class="radio address">
                                         <input id="third-party-address-9" type="radio" name="radio-inline-group" value="third-party-address-9">
-                                        9 Grimwald Place, Buckley, Buckinghamshire,
+                                        9 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-10" class="radio address">
                                         <input id="third-party-address-10" type="radio" name="radio-inline-group" value="third-party-address-10">
-                                        10 Grimwald Place, Buckley, Buckinghamshire,
+                                        10 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-11" class="radio address">
                                         <input id="third-party-address-11" type="radio" name="radio-inline-group" value="third-party-address-11">
-                                        11 Grimwald Place, Buckley, Buckinghamshire,
+                                        11 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
                                    <label for="third-party-address-12" class="radio address">
                                         <input id="third-party-address-12" type="radio" name="radio-inline-group" value="third-party-address-12">
-                                        12 Grimwald Place, Buckley, Buckinghamshire,
+                                        12 Grimwald Place, Buckley, Buckinghamshire, <span class="postcode-value">CV32 7TH</span>
                                    </label>
 
                               </div>
@@ -488,7 +488,7 @@
 
                               <!-- // FORM ITEM - 9 - START // -->
                               <div class="form-group">
-                                   <label for="third-party-questions">Questions</label>
+                                   <label for="third-party-questions">Questions for the visitor</label>
                                    <textarea id="third-party-questions"></textarea>
                               </div>
                               <!-- // FORM ITEM - 9 - END // -->

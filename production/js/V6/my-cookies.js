@@ -142,12 +142,16 @@ $("#confirm-visit").on("click", function (e) {
      $.cookie("user-journey", 2, {path:'/'});
 });
 
+$("#list-of-tasks #visit-commission").hide();
+
 if ($.cookie("user-journey") == 2) {
      $("#tab-2.client-details").addClass('current');
      $("#tab-1.client-details, #tab-3.client-details, #tab-4.client-details, #tab-5.client-details").removeClass('current');
      $('.client-details .tab-link[data-tab="tab-2"]').addClass('current');
      $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-4"], .client-details .tab-link[data-tab="tab-5"]').removeClass('current');
      $('#list-of-tasks .no-items').hide();
+
+     $("#list-of-tasks #visit-commission").show();
 
      // This hides the confirmation box after 5 seconds
      setTimeout(function() {
@@ -163,3 +167,5 @@ $("#add-visitors-why").on("click", function (e) {
 if ($.cookie("type-of-visit")) {
      $(".type-of-visit").text($.cookie("type-of-visit"));
 }
+
+// Commission visit - client page

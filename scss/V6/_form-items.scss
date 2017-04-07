@@ -344,6 +344,7 @@ form.login-form {
           color: $white;
           font-family: $Montserrat-Bold;
           font-size: 1.2rem;
+          box-shadow: none;
           &:active, &:focus {
                background: none;
                box-shadow: inset 0px 0px 0px 2px rgba($white,0.7);
@@ -370,7 +371,7 @@ form.login-form {
           width: 100%;
           label {
                position: absolute;
-               top: 0.9em;
+               top: 1.25em;
                left: 1em;
                color: $white;
                display: inline-block;
