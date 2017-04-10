@@ -194,7 +194,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta" id="add-visitors" href="6d-case-details.html">Continue</a>
+          <a class="main-cta" id="add-visitors-step-3" href="6d-case-details.html">Continue</a>
           <a href="#" onclick="history.back();">Cancel</a>
      </div>
      <!-- CTA-FOOTER - END -->
@@ -211,6 +211,7 @@
      $(document).ready(function(){
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
+               var inputCounter = 0;
                $('#visitor-list').append(`
                     <li>
                          <span class="title">${ recipient }</span>
@@ -234,7 +235,7 @@
                               <!-- // FORM ITEM - 2 - START // -->
                               <div class="form-group">
                                    <label for="visit-accomodation">Accommodation type</label>
-                                   <select id="visit-accomodation">
+                                   <select id="visit-accomodation" data-visit-accomodation="${(++counter)}">
                                         <option>-- Select --</option>
                                         <option>Supervised sheltered accommodation</option>
                                         <option>Housing associations</option>

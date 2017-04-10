@@ -110,7 +110,7 @@
 
                     <form class="add-correspondent-form">
 
-                         <h2 class="section-title">Add a correspondant</h2>
+                         <h2 class="section-title">Add a correspondent</h2>
 
                          <!-- // FORM ITEM - 1 - START // -->
                          <div class="form-group">
@@ -162,14 +162,16 @@
                               <label for="relationship">Relationship to the client</label>
                               <select id="relationship">
                                    <option>-- Select --</option>
-                                   <option>Relationship 1</option>
-                                   <option>Relationship 2</option>
-                                   <option>Relationship 3</option>
-                                   <option>Relationship 4</option>
-                                   <option>Relationship 5</option>
-                                   <option>Relationship 6</option>
-                                   <option>Relationship 7</option>
-                                   <option>Relationship 8</option>
+                                   <option>Father</option>
+                                   <option>Mother</option>
+                                   <option>Sister</option>
+                                   <option>Brother</option>
+                                   <option>Spouse</option>
+                                   <option>Civil partner</option>
+                                   <option>Cousin</option>
+                                   <option>Friend</option>
+                                   <option>Auntie</option>
+                                   <option>Uncle</option>
                               </select>
                          </div>
                          <!-- // FORM ITEM - 6 - END // -->
@@ -179,14 +181,11 @@
                               <label for="country">Country</label>
                               <select id="country" class="full-width">
                                    <option>-- Select --</option>
-                                   <option>Relationship 1</option>
-                                   <option>Relationship 2</option>
-                                   <option>Relationship 3</option>
-                                   <option>Relationship 4</option>
-                                   <option>Relationship 5</option>
-                                   <option>Relationship 6</option>
-                                   <option>Relationship 7</option>
-                                   <option>Relationship 8</option>
+                                   <option selected="selected">England</option>
+                                   <option>Ireland</option>
+                                   <option>Scotland</option>
+                                   <option>Wales</option>
+                                   <option>Northern Ireland</option>
                               </select>
                          </div>
                          <!-- // FORM ITEM - 7 - END // -->
@@ -311,9 +310,15 @@
                          </div>
                          <!-- // FORM ITEM - 13 - END // -->
 
-                         <hr>
-
-                         <hr>
+                         <!-- // FORM ITEM - 14 - START // -->
+                         <div class="form-group violent-risk">
+                              <span></span>
+                              <label class="normal" for="client-violent-risk">
+                                   <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="post">
+                                   Is the client a violent risk?
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 14 - END // -->
 
                     </form>
 
@@ -328,7 +333,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta" id="create-letter" href="2b-add-correspondance.html">Add correspondant</a>
+          <a class="main-cta" id="create-letter" href="2b-add-correspondance.html">Add correspondent</a>
           <a href="#" onclick="history.back();">Cancel</a>
      </div>
      <!-- CTA-FOOTER - END -->

@@ -392,6 +392,9 @@ ol#visitor-list {
                     width: 50%;
                     float: left;
                     margin: 0 0 1.5em 0;
+                    &:nth-of-type(5n), &:nth-of-type(6n) {
+                         margin-bottom: 0;
+                    }
                     .item, .answer {
                          display: inline-block;
                          float: left;

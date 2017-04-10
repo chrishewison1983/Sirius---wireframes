@@ -94,6 +94,7 @@ if ($.cookie("client-address")) {
 }
 if ($.cookie("client-violent-risk") == 'true') {
      $(".new-client #section-header").find("h1").addClass("violent-risk-message");
+     $(".new-client #section-header").find(".colour-wrapper").addClass("violent-risk-message");
 }
 if ($.cookie("client-correspondence-welsh") == 'true') {
      $(".new-client #section-header").find("h1").addClass("welsh-message");
@@ -138,7 +139,7 @@ if ($.cookie("user-journey") == 5) {
 }
 
 // Commission visit
-$("#confirm-visit").on("click", function (e) {
+$("#add-visitors-step-6").on("click", function (e) {
      $.cookie("user-journey", 2, {path:'/'});
 });
 
@@ -160,12 +161,20 @@ if ($.cookie("user-journey") == 2) {
 
 }
 
-$("#add-visitors-why").on("click", function (e) {
+$("#add-visitors-step-1").on("click", function (e) {
      $.cookie("type-of-visit", $("#third-why").val(), {path:'/'});
+});
+
+$("#add-visitors-step-3").on("click", function (e) {
+     $.cookie("visit-due-back-date", $("#datepicker").val(), {path:'/'});
 });
 
 if ($.cookie("type-of-visit")) {
      $(".type-of-visit").text($.cookie("type-of-visit"));
+}
+
+if ($.cookie("visit-due-back-date")) {
+     $(".visit-due-back-date").text($.cookie("visit-due-back-date"));
 }
 
 // Commission visit - client page

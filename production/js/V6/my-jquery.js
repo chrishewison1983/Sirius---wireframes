@@ -66,10 +66,21 @@ $(document).ready(function(){
           e.preventDefault();
      });
 
-     $('label').click( function(){
-          $(this).parent().parent().parent().addClass('complete').removeClass('outstanding');
-          $('.status').text('Done');
+     $('#visit-commission label').click( function(){
+          var checked = $('input', this).is(':checked');
+          $('.status').text(checked ? 'done' : 'outstanding');
+          // $(this).parent().parent().parent().addClass(checked ? 'complete' : 'outstanding');
+          // $('.status').text($(this).text() == 'done' ? 'outstanding' : 'done');
      });
+
+     $('#visit-commission input:checkbox').change(function(){
+          if($(this).is(":checked")) {
+               $(this).parent().parent().parent().parent().addClass("complete");
+          } else {
+               $(this).parent().parent().parent().parent().removeClass("complete");
+          }
+     });
+
 
 });
 
@@ -210,7 +221,7 @@ $("#left, #right").hover(function() {
      });
 });
 
-// Commission visit - step - 1 (WHY?)
+// Commission visit - step - 1 (6A-WHY?)
 $("#visit-assist-visitor-yes, #visit-assist-visitor-no").click( function(){
      $('#cta-footer').slideDown('slow');
 });
@@ -264,7 +275,7 @@ $(document).ready(function() {
 
 });
 
-// Commission visit - step - 2 (WHO?)
+// Commission visit - step - 2 (6B-WHO?)
 if ($('.visit-commission').hasClass('step-2')) {
      $('ul li.step-1 .number span').text('').addClass('complete');
 }
@@ -404,7 +415,7 @@ $('.view-more').click(function(e){
      // $(this).parent().parent().parent().find('.visitor-container').show('slow');
 });
 
-// Commission visit - step - 3 (WHERE?)
+// Commission visit - step - 3 (6C-WHERE?)
 if ($('.visit-commission').hasClass('step-3')) {
      $('ul li.step-1 .number span, ul li.step-2 .number span').text('').addClass('complete');
 }
@@ -413,7 +424,18 @@ $(".report #datepicker").click( function(){
      $('#cta-footer').slideDown('slow');
 });
 
-// Commission visit - step - 4 (CASE SUMMARY)
+$(document).ready(function() {
+
+     $('#visit-accomodation').click( function(){
+          var accomodationID = $(this).data('visit-accomodation');
+          console.log($('#visit-accomodation option:selected').val());
+          // $(this).val());
+     });
+
+});
+
+
+// Commission visit - step - 4 (6D-CASE SUMMARY)
 if ($('.visit-commission').hasClass('step-4')) {
      $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span').text('').addClass('complete');
 }
@@ -443,7 +465,7 @@ $("#asset-list").on("click", ".remove", function(){
      $(this).parent().remove();
 });
 
-// Commission visit - step - 5 (CASE DETAILS)
+// Commission visit - step - 5 (6E-CASE DETAILS)
 if ($('.visit-commission').hasClass('step-5')) {
      $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span').text('').addClass('complete');
 }

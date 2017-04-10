@@ -69,7 +69,8 @@
                          <h3 class="sub-section-title">Recipients chosen</h3>
 
                          <ol id="recipients">
-                              <li>Mr Gerald Brackens (Client)</li>
+                              <li data-correspondant-id='1'>Ms Lara Stevens (Correspondent)</li>
+                              <li data-correspondant-id='2'>Mrs Carla Frith (Deputies)</li>
                          </ol>
                          <!-- // DOCUMENT SUMMARY - END // -->
 
@@ -115,22 +116,20 @@
 
                               <ul id="selected-list">
                                    <!-- // CORRESPONDANCE - 1 - START // -->
-                                   <li>
-                                        <a class="correspondent" data-correspondant-id='1'>
+                                   <li data-correspondant-id='1'>
+                                        <a class="correspondent">
                                              <span class="fee-payer"></span>
-                                             <span data-value='name'>Ms Lara Stevens (Correspondent)</span>
-                                             <br>
-                                             <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
+                                             <span>Ms Lara Stevens (Correspondent)</span><br>
+                                             <span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 1 - END // -->
 
                                    <!-- // CORRESPONDANCE - 2 - START // -->
-                                   <li>
-                                        <a class="correspondent" data-correspondant-id='2'>
-                                             <span data-value='name'>Mrs Carla Frith (Deputies)</span>
-                                             <br>
-                                             <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                   <li data-correspondant-id='2'>
+                                        <a class="correspondent">
+                                             <span>Mrs Carla Frith (Deputies)</span><br>
+                                             <span class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 2 - END // -->
@@ -148,11 +147,31 @@
 
                               <ul>
 
+                                   <!-- // CORRESPONDANCE - 1 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondant-id='1' style="display:none;">
+                                             <span class="fee-payer"></span>
+                                             <span data-value='name'>Ms Lara Stevens (Correspondent)</span><br>
+                                             <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 1 - END // -->
+
+                                   <!-- // CORRESPONDANCE - 2 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondant-id='2' style="display:none;">
+                                             <span data-value='name'>Mrs Carla Frith (Deputies)</span><br>
+                                             <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 2 - END // -->
+
                                    <!-- // CORRESPONDANCE - 3 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='3'>
-                                             Mr Gerald Brackens (Client)<br>
-                                             <span class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
+                                             <span data-value='name'>Mr Gerald Brackens (Client)</span>
+                                             <br>
+                                             <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 3 - END // -->
@@ -197,7 +216,7 @@
 
                     <!-- // ADD NEW CORRESPONDANT - START // -->
                     <div class="cta-row">
-                         <a class="main-cta secondary" href="2c-add-correspondant.html">Add correspondant</a>
+                         <a class="main-cta secondary" href="2c-add-correspondant.html">Add correspondent</a>
                     </div>
                     <!-- // ADD NEW CORRESPONDANT - END // -->
 

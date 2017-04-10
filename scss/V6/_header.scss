@@ -202,6 +202,12 @@ header {
           z-index: 2;
           position: relative;
      }
+     .colour-wrapper {
+          &.violent-risk-message {
+               background: rgba($red,0.8);
+               mix-blend-mode: hard-light;
+          }
+     }
      h1 {
           color: $white;
           margin: 0;
