@@ -51,6 +51,7 @@ if ($.cookie("username")) {
 
 // Create client populate
 $("#create-client").on("click", function (e) {
+     $.cookie("client-title", $("#client-title").val(), {path:'/'});
      $.cookie("client-first-name", $("#client-first-name").val(), {path:'/'});
      $.cookie("client-last-name", $("#client-last-name").val(), {path:'/'});
      $.cookie("client-title", $("#client-title").val(), {path:'/'});
@@ -59,13 +60,15 @@ $("#create-client").on("click", function (e) {
      $.cookie("client-dob-year", $("#client-dob-year").val(), {path:'/'});
      $.cookie("client-email", $("#client-email").val(), {path:'/'});
      $.cookie("client-medical-condition", $("#client-medical-condition").val(), {path:'/'});
-     $.cookie("client-address", $(".client-address").val(), {path:'/'});
+     $.cookie("client-address", $("input[name=radio-inline-group-1]:checked").parent().text(), {path:'/'});
      $.cookie("client-violent-risk", $("#client-violent-risk").is(':checked'), {path:'/'});
      $.cookie("client-correspondence-welsh", $("#client-correspondence-welsh").is(':checked'), {path:'/'});
 });
 
+if ($.cookie("client-title")) {
+     $(".client-title").text($.cookie("client-title"));
+}
 if ($.cookie("client-first-name")) {
-     $(".client-first-name").text($.cookie("client-first-name"));
      $(".client-first-name").text($.cookie("client-first-name"));
 }
 if ($.cookie("client-last-name")) {

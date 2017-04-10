@@ -53,7 +53,7 @@
 
 #document-summary {
      // float: right !important;
-     #recipients, .document {
+     #recipients, .document, #asset-summary {
           display: inline-block;
           float: left;
           width: 100%;
@@ -79,7 +79,7 @@
                color: rgba($main-colour,0.4);
           }
      }
-     ol#recipients {
+     ol#recipients, ol#asset-summary {
           margin: 0;
           li {
                color: rgba($main-colour,0.4);

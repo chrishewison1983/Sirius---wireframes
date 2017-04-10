@@ -429,7 +429,6 @@ $(document).ready(function() {
      $('#visit-accomodation').click( function(){
           var accomodationID = $(this).data('visit-accomodation');
           console.log($('#visit-accomodation option:selected').val());
-          // $(this).val());
      });
 
 });
@@ -444,16 +443,24 @@ $("#visit-enclosure-yes, #visit-enclosure-no").click( function(){
      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
 });
 
-// $("#asset-list").hide();
-
-var counter = 0;
+var assetCounter = 2;
+var assetList = 2;
 
 $('#add-asset').click(function(e){
      e.preventDefault();
      $("#asset-list").slideDown('slow');
      $("#asset-list").append(`
-          <li data-asset-id="${(++counter)}">
+          <li data-asset-id="${(++assetCounter)}">
                <span class="title">${ $("#assets").find('#visit-asset').val() }</span>
+               <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
+               <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
+               <span class="remove"></span>
+          </li>`
+     );
+     $("#asset-summary").append(`
+          <li data-asset-id="${(++assetList)}">
+               <span class="title">${ $("#assets").find('#visit-asset').val() }</span>
+               <br>
                <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
                <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
                <span class="remove"></span>
@@ -463,7 +470,22 @@ $('#add-asset').click(function(e){
 
 $("#asset-list").on("click", ".remove", function(){
      $(this).parent().remove();
+     var match = $(this).parent().data('asset-id');
+     $(`#asset-summary [data-asset-id="${match}"]`).remove();
 });
+
+
+$('#add-visitors-step-4').click(function(e){
+     persistSelectedAssets();
+});
+
+
+function persistSelectedAssets() {
+     sessionStorage.setItem('selected-assets', JSON.stringify($('#asset-summary li').map(function() {
+          return $(this).text().trim();
+     }).toArray()));
+}
+
 
 // Commission visit - step - 5 (6E-CASE DETAILS)
 if ($('.visit-commission').hasClass('step-5')) {

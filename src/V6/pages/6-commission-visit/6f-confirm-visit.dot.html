@@ -86,6 +86,13 @@
                          <ol id="recipients">
                               <!-- <li>Ms Lara Stevens (Correspondent)</li> -->
                          </ol>
+                         
+                         <h3 class="sub-section-title">Assets</h3>
+
+                         <ol id="asset-summary">
+                              <!-- <li>Ms Lara Stevens (Correspondent)</li> -->
+                         </ol>
+
                          <!-- // DOCUMENT SUMMARY - END // -->
 
                     </div>
@@ -193,6 +200,9 @@
      $(document).ready(function(){
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
+               $('#asset-summary').append('<li>' + asset + '</li>');
           });
      });
 
