@@ -22,6 +22,7 @@ if ($.cookie("user-journey") == 4) {
      $('.client-details .tab-link[data-tab="tab-4"]').addClass('current');
      $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-2"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-5"]').removeClass('current');
      $('#list-of-documents .no-items').hide();
+     $('#document-confirmation').slideDown('slow');
 }
 
 $(".document-item").on("click", function (e) {
@@ -30,6 +31,7 @@ $(".document-item").on("click", function (e) {
 
 if ($.cookie("document-title")) {
      $(".document h3").text($.cookie("document-title"));
+     $(".document-title").text($.cookie("document-title"));
 }
 
 $("#create-letter").on("click", function (e) {
@@ -54,10 +56,11 @@ $("#create-client").on("click", function (e) {
      $.cookie("client-title", $("#client-title").val(), {path:'/'});
      $.cookie("client-first-name", $("#client-first-name").val(), {path:'/'});
      $.cookie("client-last-name", $("#client-last-name").val(), {path:'/'});
-     $.cookie("client-title", $("#client-title").val(), {path:'/'});
+     $.cookie("client-title", $("#client-phone-number").val(), {path:'/'});
      $.cookie("client-dob-day", $("#client-dob-day").val(), {path:'/'});
      $.cookie("client-dob-month", $("#client-dob-month").val(), {path:'/'});
      $.cookie("client-dob-year", $("#client-dob-year").val(), {path:'/'});
+     $.cookie("client-telephone", $("#client-title").val(), {path:'/'});
      $.cookie("client-email", $("#client-email").val(), {path:'/'});
      $.cookie("client-medical-condition", $("#client-medical-condition").val(), {path:'/'});
      $.cookie("client-address", $("input[name=radio-inline-group-1]:checked").parent().text(), {path:'/'});
@@ -88,6 +91,9 @@ if ($.cookie("client-dob-year")) {
 }
 if ($.cookie("client-email")) {
      $(".client-email").text($.cookie("client-email"));
+}
+if ($.cookie("client-telephone")) {
+     $(".client-telephone").text($.cookie("client-telephone"));
 }
 if ($.cookie("client-medical-condition")) {
      $(".client-medical-condition").text($.cookie("client-medical-condition"));

@@ -185,9 +185,14 @@
                $('#visits').append(`
                     <li> ${ recipient }, </li>
                `);
+          });
+          JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#visiting').append(`
                     <li> ${ recipient }, </li>
                `);
+          });
+          JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+               $('#document-recipients').append('<li>' + recipient + '</li>');
           });
      });
 

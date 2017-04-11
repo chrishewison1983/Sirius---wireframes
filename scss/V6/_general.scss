@@ -260,14 +260,14 @@ a.main-cta {
                }
           }
      }
-     &#deputy-confirmation, &#visit-confirmation, &#deputy-added {
-          display: inline-block;
+     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation {
+          display: none;
           margin: 2em 0 0 0;
           width: 100%;
           h2 {
                margin: 0;
           }
-          #visits {
+          #visits, #document-recipients {
                display: inline-block;
                margin: 0.5em 0 0 4em;
                li {

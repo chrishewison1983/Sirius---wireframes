@@ -245,6 +245,25 @@
 		<a href="../2-create-letter/2a-create-letter.html" class="main-cta">Create letter</a>
 	</div>
 
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+			<div id="document-confirmation" class="confirmation-panel">
+				<div class="content">
+					<h2>
+						<span></span>
+						Your document
+						<div class="document-title"></div>
+						has been created and sent for print for:
+						<ul id="document-recipients">
+						</ul>
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
 </div>
 <!-- // LIST OF DEPUTIES - END // -->
  </div> <!-- // CLIENT DOCUMENTS - END // --> </div> </div> <!-- =========== TAB CONTENT - 4 - END =========== --> <!-- =========== TAB CONTENT - 5 - START =========== --> <div id="tab-5" class="client-details tab-content"> <div class="row"> <!-- // CLIENT DEPUTIES - START // --> <div class="large-12 large-uncentered columns"> <!-- // LIST OF DEPUTIES - START // -->
@@ -275,14 +294,13 @@
 	</div>
 	<!-- // CONFIRMATION MESSAGE - END // -->
 
-
 	<div class="deputies">
 
 	</div>
 
 </div>
 <!-- // LIST OF DEPUTIES - END // -->
- </div> <!-- // CLIENT DEPUTIES - END // --> </div> </div> <!-- =========== TAB CONTENT - 5 - END =========== --> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#visits').append(` <li> ${ recipient }, </li> `); $('#visiting').append(` <li> ${ recipient }, </li> `); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- // CLIENT DEPUTIES - END // --> </div> </div> <!-- =========== TAB CONTENT - 5 - END =========== --> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#visits').append(` <li> ${ recipient }, </li> `); }); JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#visiting').append(` <li> ${ recipient }, </li> `); }); JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) { $('#document-recipients').append('<li>' + recipient + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V6/hideShowPassword.js"></script>
 	<script src="../../../production/js/V6/my-jquery.js"></script>
