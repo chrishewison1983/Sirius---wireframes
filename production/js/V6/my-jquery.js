@@ -26,14 +26,16 @@ $('#sirius-search').focus(function() {
 // Log in code
 $('input#password').click(function(){
      $("#login-button").removeClass("de-activate");
+     $(this).siblings().addClass("hide");
 });
 
 $('input#username').click(function(){
      $(this).siblings().addClass("hide");
 });
 
-$('input#password').click(function(){
+$('input#password').keyup(function(){
      $(this).siblings().addClass("hide");
+     $("#login-button").removeClass("de-activate");
 });
 
 // Section header
@@ -60,10 +62,10 @@ $(document).ready(function(){
 
      $('.details').hide();
 
-     $('#visit-commission .more-info').click(function(){
+     $('#visit-commission .more-info').click(function(e){
+          e.preventDefault();
           $(this).siblings('.details').toggle('slow');
           $(this).toggleClass('open');
-          e.preventDefault();
      });
 
      $('#visit-commission label').click( function(){
@@ -81,6 +83,17 @@ $(document).ready(function(){
           }
      });
 
+     JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
+          $('#visiting').append(`
+               <li> ${ recipient }, </li>
+          `);
+          $('#visits').append(`
+               <li> ${ recipient }, </li>
+          `);
+     });
+     JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+          $('#document-recipients').append('<li>' + recipient + '</li>');
+     });
 
 });
 
@@ -142,7 +155,7 @@ $(document).ready(function(){
 
      $('#find-postcode').click(function(){
      	$('.address-list').slideDown('slow');
-          $('.postcode-value').text($('#third-party-postcode, #client-postcode, #postcode').val());
+          $('.postcode-value').text($('#third-party-postcode, #client-postcode, #postcode, #deputy-postcode').val());
      });
 
 });

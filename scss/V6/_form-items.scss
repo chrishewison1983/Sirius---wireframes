@@ -84,6 +84,11 @@ form {
                font-size: 0.875rem;
                margin: 1em 0 0.5em 0;
           }
+          &.password {
+               &.selected {
+                    display: none !important;
+               }
+          }
           &.normal, &.show-password, &.correspondent {
                &:before {
                     content: "";

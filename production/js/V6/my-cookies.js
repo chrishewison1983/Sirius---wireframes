@@ -141,6 +141,8 @@ if ($.cookie("user-journey") == 5) {
      $('#list-of-deputies .no-items').hide();
      $('.deputies').show();
 
+     $("#list-of-deputies #deputy-confirmation").show();
+
      // This hides the confirmation box after 5 seconds
      setTimeout(function() {
           $("#list-of-deputies #deputy-confirmation").hide(500)
@@ -162,6 +164,7 @@ if ($.cookie("user-journey") == 2) {
      $('#list-of-tasks .no-items').hide();
 
      $("#list-of-tasks #visit-commission").show();
+     $("#list-of-tasks #visit-confirmation").show();
 
      // This hides the confirmation box after 5 seconds
      setTimeout(function() {
