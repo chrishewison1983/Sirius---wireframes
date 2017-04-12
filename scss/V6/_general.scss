@@ -6,7 +6,7 @@
 //  FOR ALL
 
 body {
-     font-family: $Montserrat-Regular;
+     font-family: $Montserrat;
      line-height: 0;
 }
 
@@ -80,7 +80,8 @@ h1 {
 }
 
 h1, h2, h3, h4 {
-     font-family: $Montserrat-Bold;
+     font-family: $Montserrat;
+     font-weight: bold;
      line-height: 1.2;
      color: $main-colour;
      text-transform: uppercase;
@@ -129,7 +130,8 @@ p {
           font-size: 0.875rem;
           height: 1.565em;
           margin: 0 0.75em 0 0;
-          font-family: $Montserrat-Bold;
+          font-family: $Montserrat;
+          font-weight: bold;
           background: $border-colour;
           border-radius: 50%;
      }
@@ -156,7 +158,8 @@ ul, ol {
      font-size: 1.6rem;
      display: inline-block;
      width: 100%;
-     font-family: $Montserrat-Bold;
+     font-family: $Montserrat;
+     font-weight: bold;
      margin: 1.5em 0 0.75em 0;
 }
 
@@ -184,7 +187,8 @@ a.main-cta {
      border: 3px solid $blue;
      border-radius: $global-border-radius;
      padding: 1em 1.5em;
-     font-family: $Montserrat-Bold;
+     font-family: $Montserrat;
+     font-weight: bold;
      width: 100%;
      color: $white;
      display: inline-block;
@@ -243,10 +247,11 @@ a.main-cta {
                margin: 0 0 0.25em 0;
                color: rgba($white,0.7);
                text-transform: inherit;
-               font-family: $Montserrat-Regular;
+               font-family: $Montserrat;
                div {
                     color: $white;
-                    font-family: $Montserrat-Bold;
+                    font-family: $Montserrat;
+                    font-weight: bold;
                }
                span {
                     display: inline-block;
@@ -276,7 +281,8 @@ a.main-cta {
                     width: 100%;
                     color: $white;
                     list-style: disc;
-                    font-family: $Montserrat-Bold;
+                    font-family: $Opensans-Regular;
+                    font-weight: bold;
                     font-size: 1.2rem;
                     &:last-of-type {
                          margin: 0;

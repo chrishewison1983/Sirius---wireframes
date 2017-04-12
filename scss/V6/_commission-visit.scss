@@ -45,7 +45,8 @@
                     border: 2px solid $border-colour;
                     border-radius: $global-border-radius;
                     padding: 1em 1em 1em 3.75em;
-                    font-family: $Montserrat-Bold;
+                    font-family: $Montserrat;
+                    font-weight: bold;
                     font-size: 1.3rem;
                     line-height: 1;
                     @include standard-transition;
@@ -150,7 +151,8 @@
                     border-radius: 0 0 5px 5px;
                     margin: -1px 0 0 0;
                     padding: 1.75em 1.5em 1.5em 1.5em;
-                    font-family: $Montserrat-Bold;
+                    font-family: $Montserrat;
+                    font-weight: bold;
                     font-size: 1rem;
                     line-height: 1;
                     background: rgba($border-colour,0.8);
@@ -181,7 +183,8 @@
                               &.answer {
                                    width: 65%;
                                    color: $black;
-                                   font-family: $Montserrat-Bold;
+                                   font-family: $Montserrat;
+                                   font-weight: bold;
                               }
                          }
                     }
@@ -219,7 +222,8 @@ ol#asset-list {
           z-index: 1;
           &:before {
                content: counter(step-counter);
-               font-weight: $Montserrat-Bold;
+               font-family: $Montserrat;
+               font-weight: bold;
                background: $blue;
                display: flex;
                align-items: center;
@@ -265,7 +269,8 @@ ol#asset-list {
           .title {
                width: 100%;
                display: inline-block;
-               font-family: $Montserrat-Bold;
+               font-family: $Montserrat;
+               font-weight: bold;
                font-size: 1.3rem;
                color: $black;
                margin: 0 0 0.25em 0;
@@ -302,7 +307,8 @@ ol#visitor-list {
                background: $blue;
                color: $white;
                margin: 0 0.5em 0 0;
-               font-family: $Montserrat-Bold;
+               font-family: $Montserrat;
+               font-weight: bold;
                width: 1.5em;
                height: 1.5em;
                text-align: center;
@@ -407,7 +413,8 @@ ol#visitor-list {
                     .answer, ul#visiting li {
                          width: 70%;
                          color: $black;
-                         font-family: $Montserrat-Bold;
+                         font-family: $Montserrat;
+                         font-weight: bold;
                     }
                     #visiting {
                          margin: 0;
@@ -425,7 +432,8 @@ ol#visitor-list {
                          width: 100%;
                          padding-left: 2.5em;
                          font-size: 2rem;
-                         font-family: $Montserrat-Bold;
+                         font-family: $Montserrat;
+                         font-weight: bold;
                          .icon {
                               display: inline-block;
                               position: absolute;

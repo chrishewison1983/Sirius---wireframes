@@ -49,9 +49,9 @@
                          @include align-items(center);
                          @include justify-content(center);
                          background: $red;
-                         font-family: $Montserrat-Bold;
-                         font-size: 0.75rem;
+                         font-family: $Montserrat;
                          font-weight: bold;
+                         font-size: 0.75rem;
                          color: $white;
                          position: absolute;
                          border-radius: 50%;

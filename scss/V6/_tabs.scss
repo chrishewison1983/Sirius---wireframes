@@ -15,7 +15,8 @@ ul.tabs {
           float: left;
           padding: 1.5em 2em 1em 2em;
           margin: 0 0 -6px 0;
-          font-family: $Montserrat-Bold;
+          font-family: $Montserrat;
+          font-weight: bold;
           border-radius: 5px 5px 0 0;
           &:hover {
                cursor: pointer;
@@ -38,7 +39,8 @@ ul.tabs {
                @include justify-content(center);
                background: $red;
                float: left;
-               font-family: $Montserrat-Bold;
+               font-family: $Montserrat;
+               font-weight: bold;
                width: 2.5em;
                height: 2.5em;
                margin: -0.5em 0.5em 0 0;
@@ -145,7 +147,8 @@ ul.tabs {
                     width: auto;
                     margin: 0;
                     color: black;
-                    font-family: $Montserrat-Bold;
+                    font-family: $Montserrat;
+                    font-weight: bold;
                     display: none;
                     // width: 0;
                }
@@ -203,8 +206,8 @@ ul.tabs {
                          width: 4em;
                          height: 4em;
                          span {
-                              font-size: 0.8rem;
-                              font-family: $Montserrat-Regular;
+                              font-size: 0.8rem; 
+                              font-family: $Montserrat;
                               display: inline-block;
                               width: 100%;
                               text-align: center;
@@ -212,7 +215,7 @@ ul.tabs {
                               // margin-bottom: -1em;
                               &.number {
                                    font-size: 1.6rem;
-                                   font-family: $Montserrat-Regular;
+                                   font-family: $Montserrat;
                                    // margin-bottom: -1em;
                               }
                          }
@@ -239,12 +242,13 @@ ul.tabs {
                               }
                               h2 {
                                    font-size: 1.4rem;
-                                   font-family: $Montserrat-Bold;
+                                   font-family: $Montserrat;
+                                   font-weight: bold;
                                    color: $main-colour;
                               }
                               h3 {
                                    font-size: 1rem;
-                                   font-family: $Montserrat-Regular;
+                                   font-family: $Montserrat;
                                    color: lighten($main-colour,45%);
                               }
                          }
@@ -256,7 +260,8 @@ ul.tabs {
                          }
                          h4 {
                               font-size: 1.4rem;
-                              font-family: $Montserrat-Bold;
+                              font-family: $Montserrat;
+                              font-weight: bold;
                               margin: 0;
                               display: inline-block;
                               line-height: 1;

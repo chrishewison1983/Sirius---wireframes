@@ -83,18 +83,6 @@ $(document).ready(function(){
           }
      });
 
-     JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
-          $('#visiting').append(`
-               <li> ${ recipient }, </li>
-          `);
-          $('#visits').append(`
-               <li> ${ recipient }, </li>
-          `);
-     });
-     JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
-          $('#document-recipients').append('<li>' + recipient + '</li>');
-     });
-
 });
 
 // Correspondant
@@ -550,6 +538,22 @@ $("#confirm-read").click( function(){
 
 
 // ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //
+
+// Populates the client page with list of 4a - recipients and document people
+JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
+     $('#visiting').append(`
+          <li> ${ recipient }, </li>
+     `);
+     $('#visits').append(`
+          <li> ${ recipient }, </li>
+     `);
+});
+
+JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+     $('#document-recipients').append('<li>' + recipient + '</li>');
+});
+
+
 
 // Sticky item
 // Cache selectors outside callback for performance.

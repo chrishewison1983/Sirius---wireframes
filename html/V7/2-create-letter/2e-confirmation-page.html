@@ -1,0 +1,94 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V7/jquery.min.js"></script>
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- MAIN NAV - START -->
+<header class="main">
+
+     <nav>
+          <div class="padding-wrapper">
+               <a href="../dashboard.html" class="logo"><img src="../../../production/img/V6/sirius-logo.svg" alt="Sirius"></a>
+          </div>
+
+          <a href="#" class="user-cta">
+               <span class="nav-icon"></span>
+               <div class="sirius-user-id">Susan Smith</div>
+          </a>
+
+          <div class="create-client">
+               <a href="../3-create-client/3a-create-client.html" class="main-cta">
+                    <span class="nav-icon"></span> Create client
+               </a>
+          </div>
+
+          <!-- <ul class="padding-wrapper">
+               <li class="actions create-letter">
+                    <a href="2a-create-letter.html">
+                         <span class="nav-icon"></span>
+                         Create letter
+                    </a>
+               </li>
+               <li class="actions create-letter">
+                    <a href="#">
+                         <span class="nav-icon"></span>
+                         Add deputy
+                    </a>
+               </li>
+          </ul> -->
+
+          <a href="../index.html" class="main-cta sign-out">
+               <span class="nav-icon"></span> Sign out
+          </a>
+
+     </nav>
+
+</header>
+<!-- MAIN NAV - END -->
+<!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<ul>
+		<li class="menu"><a href="#">Menu</a></li>
+		<li class="border"></li>
+		<li class="alerts">
+			<a href="#">Alerts</a>
+			<span>20</span>
+		</li>
+		<li class="settings"><a href="#">Settings</a></li>
+		<li class="border"></li>
+	</ul>
+
+	<form action="search.html">
+		<input type="search" name="search" id="sirius-search" placeholder="Search SIRIUS ID or Surname...">
+		<input type="submit">
+	</form>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <h1 class="confirmation-message"> <span>PFA | 7000-000-0310</span><br> Your letter has been sent to print </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <!-- // EDIT DOCUMENT - START // --> <div class="large-6 large-uncentered columns"> <form> <div class="form-group"> <label class="section-title" for="letter-actions">Add task to the letter</label> <textarea id="letter-actions"></textarea> <label class="section-title" for="datepicker">Set a reminder for the letter</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> </div> </form> </div> <!-- // EDIT DOCUMENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a id="add-letter" class="main-cta" href="../4-client-page/4a-new-client.html">Add actions</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(function(){$( ".date-input-css" ).datepicker();})</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V7/hideShowPassword.js"></script>
+	<script src="../../../production/js/V7/my-jquery.js"></script>
+	<script src="../../../production/js/V7/jquery.cookie.js"></script>
+	<script src="../../../production/js/V7/jquery.modal.js"></script>
+	<script src="../../../production/js/V7/jquery-datepicker.js"></script>
+	<script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script>
+	<script src="../../../production/js/V7/my-cookies.js"></script>
+	<script src="../../../production/js/V7/sticky-item.js"></script>
+	<!-- <script src="../../production/js/prototype/swing.js"></script>
+	<script src="../../production/js/prototype/class-list.js"></script>
+	<script src="../../production/js/prototype/card-stack.js"></script> -->
+<!-- // JS BODY END - END // -->
+</body></html>
