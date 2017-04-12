@@ -455,6 +455,11 @@ form.filter {
      }
 }
 
+.add-deputy-form, .exisiting-deputies, .edit-deputy-form, .create-letter, .add-correspondent-form {
+     width: 80%;
+     float: right;
+}
+
 .add-client-form {
      width: 100%;
      float: left;
