@@ -1,0 +1,190 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-client-page.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default new-client">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1>
+                         <span>Court reference: 29273638201</span><br>
+                         <div class="client-title">Mr</div> <div class="client-first-name">Joe</div> <div class="client-last-name">Bloggs</div>
+                         <a id="show-more">Show more</a>
+                    </h1>
+                    <div class="extra-content">
+                         <div class="left">
+                              <p>Born:</p>
+                              <p>Address:</p>
+                              <p>Email:</p>
+                              <p>Medical Condition:</p>
+                              <p>Record:</p>
+                         </div>
+                         <div class="right">
+                              <p>
+                                   <span class="client-dob-day">25</span>
+                                   /
+                                   <span class="client-dob-month">06</span>
+                                   /
+                                   <span class="client-dob-year">1943</span>
+                              </p>
+                              <p>
+                                   <span class="client-address">3 Grimwald Place, Buckley, Flintshire, BK89 7TH</span>
+                              </p>
+                              <p>
+                                   <span class="client-email">joe.bloggs@work.com</span>
+                              </p>
+                              <p>
+                                   <span class="client-medical-condition">Alzheimer's</span>
+                              </p>
+                              <p>7000-0000-2803</p>
+                         </div>
+                         <a href="../3-create-client/3a-create-client.html">Edit client</a>
+                    </div>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+
+          {{= it.include('actions.html') }}
+
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <!-- =========== TABS - START =========== -->
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <ul class="client-details tabs">
+                         <li class="tab-link current" data-tab="tab-1">
+                              Summary &amp; timeline
+                         </li>
+                         <li class="tab-link" data-tab="tab-2">
+                              Tasks
+                         </li>
+                         <li class="tab-link" data-tab="tab-3">
+                              Information
+                         </li>
+                         <li class="tab-link" data-tab="tab-4">
+                              Documents
+                         </li>
+                         <li class="tab-link" data-tab="tab-5">
+                              Deputies
+                         </li>
+
+
+                    </ul>
+               </div>
+          </div>
+          <!-- =========== TABS - END =========== -->
+
+          <!-- =========== TAB CONTENT - 1 - START =========== -->
+          <div id="tab-1" class="client-details tab-content current">
+               <div class="row">
+
+                    <!-- // CREATE CLIENT - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-summary.html') }}
+
+                    </div>
+                    <!-- // CREATE CLIENT - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+          <!-- =========== TAB CONTENT - 2 - START =========== -->
+          <div id="tab-2" class="client-details tab-content">
+               <div class="row">
+
+                    <!-- // CLIENT TASKS - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-tasks.html') }}
+
+                    </div>
+                    <!-- // CLIENT TASKS - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+          <!-- =========== TAB CONTENT - 3 - START =========== -->
+          <div id="tab-3" class="client-details tab-content">
+               <div class="row">
+
+                    <!-- // CLIENT INFORMATION - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-information.html') }}
+
+                    </div>
+                    <!-- // CLIENT INFORMATION - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+          <!-- =========== TAB CONTENT - 4 - START =========== -->
+          <div id="tab-4" class="client-details tab-content">
+               <div class="row">
+
+                    <!-- // CLIENT DOCUMENTS - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-documents.html') }}
+
+                    </div>
+                    <!-- // CLIENT DOCUMENTS - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+          <!-- =========== TAB CONTENT - 5 - START =========== -->
+          <div id="tab-5" class="client-details tab-content">
+               <div class="row">
+
+                    <!-- // CLIENT DEPUTIES - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-deputies.html') }}
+
+                    </div>
+                    <!-- // CLIENT DEPUTIES - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function() {
+     //      // JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+     //      //      $('#document-recipients').append('<li>' + recipient + '</li>');
+     //      // });
+     // });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

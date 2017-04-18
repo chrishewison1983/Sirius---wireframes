@@ -1,0 +1,205 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-add-edit-deputy.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1>
+                         <span>
+                              <a href="../4-client-page/4a-new-client.html">
+                                   <div class="client-title">Mr</div>
+                                   <div class="client-first-name">Joe</div>
+                                   <div class="client-last-name">Bloggs</div>
+                              </a>
+                              <div class="separator"> > </div>
+                              <!-- <a href="#">7000-000-0310</a>
+                              <div class="separator"> > </div> -->
+                              Create new deputy
+                         </span>
+                         <br>
+                         Create new deputy
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div id="document-summary" class="large-6 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul id="side-panel-tabs" class="tabs">
+                         <li class="tab-link" data-tab="tab-1">
+                              <span class="info"></span>
+                              <p>Document info</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-2">
+                              <span class="client-details"></span>
+                              <p>Client details</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-3">
+                              <span class="deputy-details"></span>
+                              <p>Deputy details</p>
+                         </li>
+                         <li class="tab-link current" data-tab="tab-4">
+                              <span class="documents"></span>
+                              <p>Documents</p>
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content side-panel">
+
+                         <!-- // DOCUMENT SUMMARY - START // -->
+                         <h2 class="section-title">General information</h2>
+
+                         <!-- // DOCUMENT SUMMARY - END // -->
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content side-panel">
+
+                         <h2 class="section-title">Clients details</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content side-panel">
+
+                         <h2 class="section-title">Deputy details</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content side-panel current">
+
+                         <h2 class="section-title">Case documents</h2>
+
+                         {{= it.include('document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+               </div>
+
+               <!-- // CREATE DEPUTY - START // -->
+               <div id="action-panel" class="large-6 large-uncentered columns">
+
+                    <form class="add-deputy-form">
+
+                         <h2 class="section-title">Add a deputy</h2>
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label for="deputy-first-name">First name</label>
+                              <input id="deputy-first-name" name="deputy-first-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group">
+                              <label for="deputy-last-name">Last name</label>
+                              <input id="deputy-last-name" name="deputy-last-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                    </form>
+
+                    <!-- // EXISTING DEPUTIES - START // -->
+                    <div id="exisiting-deputies">
+
+                         <hr>
+                         <h2 class="section-title"><span>3</span> Deputy matches found</h2>
+                         <p>
+                              To avoid duplicate deputies, please check the list below that your deputy isn’t
+                              already in our system.
+                         </p>
+
+                         <!-- // DEPUTY - 1 - START // -->
+                         <button class="deputy" onclick="location.href='5c-check-deputy.html'">
+                              <div class="title">
+                                   <h3>Mr <div class="deputy-first-name">Joe</div> <div class="deputy-last-name">Bloggs</div></h3>
+                                   <a href="5c-check-deputy.html" class="check-edit">Check &amp; edit</a>
+                              </div>
+                              <div class="content">
+                                   <p>EPA / PFA 7000-0000-1003</p>
+                                   <p>116 Sandy Lane, Nottingham, N12 Q78</p>
+                              </div>
+                         </button>
+                         <!-- // DEPUTY - 1 - END // -->
+
+                         <!-- // DEPUTY - 2 - START // -->
+                         <button class="deputy" onclick="location.href='5c-check-deputy.html'">
+                              <div class="title">
+                                   <h3>Mr <div class="deputy-first-name">Joe</div> <div class="deputy-last-name">Bloggs</div></h3>
+                                   <a href="5c-check-deputy.html" class="check-edit">Check &amp; edit</a>
+                              </div>
+                              <div class="content">
+                                   <p>EPA / PFA 7000-0000-8018</p>
+                                   <p>6 Veronica Road, Line 2, London, London, SW178QL</p>
+                              </div>
+                         </button>
+                         <!-- // DEPUTY - 2 - START // -->
+
+                         <!-- // DEPUTY - 3 - START // -->
+                         <button class="deputy" onclick="location.href='5c-check-deputy.html'">
+                              <div class="title">
+                                   <h3>Mr <div class="deputy-first-name">Joe</div> <div class="deputy-last-name">Bloggs</div></h3>
+                                   <a href="5c-check-deputy.html" class="check-edit">Check &amp; edit</a>
+                              </div>
+                              <div class="content">
+                                   <p>EPA / PFA 7000-0000-9102</p>
+                                   <p>Flat 22a, The Grove, Golf Lane, Warwick, Warwickshire, CV67 9LY</p>
+                              </div>
+                         </button>
+                         <!-- // DEPUTY - 3 - START // -->
+
+                    </div>
+                    <!-- // EXISTING DEPUTIES - END // -->
+
+
+               </div>
+               <!-- // CREATE DEPUTY - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- CTA-FOOTER - START -->
+     <div id="cta-footer" class="cta-row">
+          <a class="main-cta de-activate" id="add-new-deputy" href="5b-add-deputy.html">Add a new deputy</a>
+          <a href="#" onclick="history.back();">Cancel</a>
+     </div>
+     <!-- CTA-FOOTER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

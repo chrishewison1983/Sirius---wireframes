@@ -1,0 +1,198 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.document-item-container {
+     @include flexbox;
+     @include flex-wrap(wrap);
+     float: left;
+     .document-item {
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          flex: 1;
+          width: 23.5%;
+          padding: 1.5em 0;
+          margin: 0 2% 1.5em 0;
+          position: relative;
+          line-height: 0;
+          background: $white;
+          text-align: center;
+          @include standard-transition;
+          z-index: 1;
+          img {
+               height: 12.5em;
+          }
+          &:hover {
+               background: lighten($border-colour,2.5%);
+               transform: scale(1.05);
+               cursor: pointer;
+               z-index: 10;
+          }
+          &:nth-of-type(4n) {
+               margin-right: 0;
+          }
+          .title {
+               display: inline-block;
+               padding: 1.5em 1.5em 0 1.5em;
+               width: 100%;
+               h2 {
+                    font-size: 1rem;
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    color: $main-colour;
+                    margin: 0;
+                    display: inline-block;
+                    line-height: 1.4;
+                    width: 100%;
+                    text-align: center;
+               }
+          }
+     }
+}
+
+.add-correspondent {
+}
+
+.create-letter {
+     ul {
+          margin: 0;
+          li {
+               list-style: none;
+          }
+          &#selected-list {
+               li {
+                    a {
+                         background: rgba($border-colour,0.5);
+                         &:after {
+                              opacity: 1;
+                         }
+                    }
+               }
+          }
+     }
+     hr {
+          margin: 1.5em 0 0 0;
+          border-bottom: 3px dashed $border-colour;
+     }
+     a.correspondent {
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          margin-bottom: 1em;
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          padding: 1em 1em 1em 3.75em;
+          font-family: $Montserrat;
+          font-weight: bold;
+          font-size: 1.3rem;
+          line-height: 1;
+          @include standard-transition;
+          // z-index: 1;
+          &:hover {
+               background: rgba($border-colour,0.5);
+               cursor: pointer;
+               z-index: 10;
+          }
+          &:before {
+               left: 1em;
+               top: inherit;
+               width: 40px;
+               height: 40px;
+               border: 4px solid;
+               border-radius: $global-border-radius;
+               background: transparent;
+               position: absolute;
+               content: "";
+               color: $main-colour;
+          }
+          &:after {
+               color: $main-colour;
+               left: 1.4em;
+               right: inherit;
+               top: 1.475em;
+               width: 24px;
+               height: 14px;
+               content: "";
+               border: solid;
+               border-width: 0 0 5px 5px;
+               background: transparent;
+               position: absolute;
+               -moz-transform: rotate(-45deg);
+               -o-transform: rotate(-45deg);
+               -webkit-transform: rotate(-45deg);
+               -ms-transform: rotate(-45deg);
+               transform: rotate(-45deg);
+               zoom: 1;
+               filter: alpha(opacity=0);
+               opacity: 0;
+          }
+          span.fee-payer {
+               position: absolute;
+               top: -0.75em;
+               right: -0.75em;
+               display: inline-block;
+               width: 2.5em;
+               height: 2.5em;
+               border-radius: 50%;
+               background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
+               background-size: 2.25em;
+          }
+          span.sub-text {
+               font-family: $Opensans-Regular;
+               color: lighten($main-colour,40%);
+               font-size: 1rem;
+          }
+     }
+}
+
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

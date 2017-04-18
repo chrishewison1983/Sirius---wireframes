@@ -1,0 +1,325 @@
+{
+  "template": "default"
+}
+
+{{= it.include('main-nav-actions.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <h1><span>Welcome:</span> <div class="sirius-user-id">Susan Smith</div></h1>
+                    <span class="horizontal-border"></span>
+                    <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper dashboard">
+
+          <!-- =========== FILTER - START =========== -->
+          <form class="filter" action="search.html">
+               <div class="row">
+
+                    <div class="large-6 large-uncentered columns">
+
+                         <div class="wrapper">
+                              <label for="visit-commissioned-by">Filter:</label>
+                         	<input data-default="178.4" name="search" id="sirius-search" placeholder="Filter by SIRIUS ID or Surname..." type="search">
+                         	<input class="submit" type="submit" value="Filter">
+                         </div>
+
+                    </div>
+
+               </div>
+          </form>
+          <!-- =========== FILTER - END =========== -->
+
+          <!-- =========== TABS - START =========== -->
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <ul class="tabs">
+               		<li class="tab-link current" data-tab="tab-1">
+                              <span>4</span> My cases
+                         </li>
+               		<li class="tab-link" data-tab="tab-2">
+                              <span>9</span> Task assigned to me
+                         </li>
+                    </ul>
+               </div>
+          </div>
+          <!-- =========== TABS - END =========== -->
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+
+                    <div id="tab-1" class="tab-content dashboard current">
+
+                         <h2 class="section-title">Reports due in the next 30 days</h2>
+
+                         <div class="dashboard-item-container">
+
+                              <!-- // ITEM - 1 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item welfare">
+                                   <div class="tasks">
+                                        <div class="wrapper">
+                                             <span class="number">3</span>
+                                             <span>tasks</span>
+                                        </div>
+                                   </div>
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <!-- <div class="content date">
+                                        <p>Reg due date:</p>
+                                        <h4><span></span>22/04/2017</h4>
+                                   </div> -->
+                                   <div class="content assigned">
+                                        <p>Assigned to:</p>
+                                        <h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+                                   </div>
+                                   <div class="content status">
+                                        <!-- <p>Status:</p>
+                                        <h4><span></span>Pending</h4> -->
+                                   </div>
+                                   <div class="footer">
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 1 - END // -->
+
+                              <!-- // ITEM - 2 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item welfare">
+                                   <div class="tasks">
+                                        <div class="wrapper">
+                                             <span class="number">1</span>
+                                             <span>tasks</span>
+                                        </div>
+                                   </div>
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <!-- <div class="content date">
+                                        <p>Reg due date:</p>
+                                        <h4><span></span>22/04/2017</h4>
+                                   </div> -->
+                                   <div class="content assigned">
+                                        <p>Assigned to:</p>
+                                        <h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+                                   </div>
+                                   <div class="content status">
+                                        <!-- <p>Status:</p>
+                                        <h4><span></span>Pending</h4> -->
+                                   </div>
+                                   <div class="footer">
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 2 - END // -->
+
+                              <!-- // ITEM - 3 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item property">
+                                   <div class="tasks">
+                                        <div class="wrapper">
+                                             <span class="number">3</span>
+                                             <span>tasks</span>
+                                        </div>
+                                   </div>
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <!-- <div class="content date">
+                                        <p>Reg due date:</p>
+                                        <h4><span></span>22/04/2017</h4>
+                                   </div> -->
+                                   <div class="content assigned">
+                                        <p>Assigned to:</p>
+                                        <h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+                                   </div>
+                                   <div class="content status">
+                                        <!-- <p>Status:</p>
+                                        <h4><span></span>Pending</h4> -->
+                                   </div>
+                                   <div class="footer">
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 3 - END // -->
+
+                              <!-- // ITEM - 4 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item property">
+                                   <div class="tasks">
+                                        <div class="wrapper">
+                                             <span class="number">2</span>
+                                             <span>tasks</span>
+                                        </div>
+                                   </div>
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <!-- <div class="content date">
+                                        <p>Reg due date:</p>
+                                        <h4><span></span>22/04/2017</h4>
+                                   </div> -->
+                                   <div class="content assigned">
+                                        <p>Assigned to:</p>
+                                        <h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+                                   </div>
+                                   <div class="content status">
+                                        <!-- <p>Status:</p>
+                                        <h4><span></span>Pending</h4> -->
+                                   </div>
+                                   <div class="footer">
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 4 - END // -->
+
+                         </div>
+
+               	</div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+               	<div id="tab-2" class="tab-content dashboard">
+
+                         <h2 class="section-title">Your assigned tasks</h2>
+
+                         <div class="dashboard-item-container">
+
+                              <!-- // ITEM - 1 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item welfare">
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <div class="content assigned">
+                                        <p>Tasks:</p>
+                                        <ol>
+                                             <li>Review annual report</li>
+                                             <li>Commission visit</li>
+                                             <li>Review OPG 120A</li>
+                                        </ol>
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 1 - END // -->
+
+                              <!-- // ITEM - 2 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item welfare">
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <div class="content assigned">
+                                        <p>Tasks:</p>
+                                        <ol>
+                                             <li>Commission visit</li>
+                                        </ol>
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 2 - END // -->
+
+                              <!-- // ITEM - 3 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item property">
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <div class="content assigned">
+                                        <p>Tasks:</p>
+                                        <ol>
+                                             <li>Review annual report</li>
+                                             <li>Commission visit</li>
+                                             <li>Review OPG 120A</li>
+                                        </ol>
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 3 - END // -->
+
+                              <!-- // ITEM - 4 - START // -->
+                              <button onclick="window.location.href='4-client-page/4a-new-client.html'" class="dashboard-item property">
+                                   <div class="title">
+                                        <div class="left">
+                                             <span></span>
+                                        </div>
+                                        <div class="right">
+                                             <h2>7000-0000-0310</h2>
+                                             <h3>Mr Gerald Brackens</h3>
+                                        </div>
+                                   </div>
+                                   <div class="content assigned">
+                                        <p>Tasks:</p>
+                                        <ol>
+                                             <li>Review annual report</li>
+                                             <li>Commission visit</li>
+                                        </ol>
+                                   </div>
+                              </button>
+                              <!-- // ITEM - 4 - END // -->
+
+                         </div>
+               	</div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+               </div>
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->
