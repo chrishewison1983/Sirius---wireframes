@@ -130,43 +130,84 @@
 
                     <div class="commission-visit right">
 
-                         <h2 class="section-title">Guidance involved in the reporting process</h2>
+                         <h2 class="section-title">Visit summary</h2>
 
                          <p>
-                              <span class="letter">A</span>
-                              The Public Guardian may be required to disclose the visitor’s report to someone interviewed
-                              in the course of preparing the report or to submit it as evidence in any application to the
-                              Court of Protection and the visit should be commissioned and report prepared on that basis.
-                         </p>
-                         <p>
-                              <span class="letter">B</span>
-                              Any information you provide to the Public Guardian will be processed in accordance with
-                              the Data Protection Act 1998. All or part of the information you provide may be included in
-                              any application the Public Guardian may make to the Court of Protection. The information may
-                              then be disclosed to other parties to the court proceedings.
-                         </p>
-                         <p>
-                              <span class="letter">C</span>
-                              Visitors are asked to notify this office if they have interviewed or had dealings with the
-                              client, deputy or any other parties connected with the case in other contexts or there is
-                              any conflict of interest.
-                         </p>
-                         <p>
-                              <span class="letter">D</span>
-                              For guidance about conducting the visit, visitors should refer to the service standards
-                              for Court of Protection visitors, which can be found in the General Visitor Handbook.
+                              Please note any risks to the visitor from deputy or client, based on any relevant information
+                              from other parties. Please also note other information about family relationships, relationships
+                              between caring organisations and family/client/deputy, etc.
                          </p>
 
-                         <form>
+                         <form class="why-visit">
 
-                              <!-- // FORM ITEM - 1 - START // -->
+                              <!-- // FORM ITEM - 5a - START // -->
                               <div class="form-group">
-                                   <label class="normal" for="confirm-read">
-                                        <input id="confirm-read" name="confirm-read" type="checkbox" value="post">
-                                        Confirm I have read the guidance information
+                                   <legend>Any dangers/risks which the Visitor or others may face?</legend>
+                                   <label for="visit-dangers-yes" class="radio">
+                                        <input id="visit-dangers-yes" type="radio" name="radio-inline-group-2" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-dangers-no" class="radio">
+                                        <input id="visit-dangers-no" type="radio" name="radio-inline-group-2" value="No">
+                                        No
                                    </label>
                               </div>
-                              <!-- // FORM ITEM - 1 - END // -->
+                              <!-- // FORM ITEM - 5a - END // -->
+
+                              <!-- // FORM ITEM - 5b - START // -->
+                              <div class="form-group answer-5b">
+                                   <label for="third-dangers-answer">
+                                        Please provide details:
+                                   </label>
+                                   <textarea id="third-dangers-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5b - END // -->
+
+                              <!-- // FORM ITEM - 6a - START // -->
+                              <div class="form-group">
+                                   <legend>Any other important information which will assist the visitor?</legend>
+                                   <label for="visit-assist-visitor-yes" class="radio">
+                                        <input id="visit-assist-visitor-yes" type="radio" name="radio-inline-group-3" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-assist-visitor-no" class="radio">
+                                        <input id="visit-assist-visitor-no" type="radio" name="radio-inline-group-3" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 6a - END // -->
+
+                              <!-- // FORM ITEM - 6b - START // -->
+                              <div class="form-group answer-6b">
+                                   <label for="third-assist-visitor-answer">
+                                        Please provide details:
+                                   </label>
+                                   <textarea id="third-assist-visitor-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6b - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group">
+                                   <label for="third-medical-background">
+                                        Case &amp; medical background:
+                                   </label>
+                                   <textarea id="third-medical-background"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group">
+                                   <label for="third-family-background">
+                                        Family background:
+                                   </label>
+                                   <p>
+                                        Please include here full details of all family
+                                        members known to the Office of the Public Guardian even if they are not to be
+                                        contacted for this visit:
+                                   </p>
+                                   <textarea id="third-family-background"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
 
                          </form>
 

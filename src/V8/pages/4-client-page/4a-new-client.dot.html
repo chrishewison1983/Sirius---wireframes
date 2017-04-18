@@ -15,19 +15,17 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <h1>
-                         <span>Court reference: 29273638201</span><br>
-                         <div class="client-title">Mr</div> <div class="client-first-name">Joe</div> <div class="client-last-name">Bloggs</div>
-                         <a id="show-more">Show more</a>
+                         <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div>
                     </h1>
                     <div class="extra-content">
                          <div class="left">
+                              <p>Order no.:</p>
                               <p>Born:</p>
-                              <p>Address:</p>
-                              <p>Email:</p>
                               <p>Medical Condition:</p>
                               <p>Record:</p>
                          </div>
                          <div class="right">
+                              <p>29273638201</p>
                               <p>
                                    <span class="client-dob-day">25</span>
                                    /
@@ -36,18 +34,13 @@
                                    <span class="client-dob-year">1943</span>
                               </p>
                               <p>
-                                   <span class="client-address">3 Grimwald Place, Buckley, Flintshire, BK89 7TH</span>
-                              </p>
-                              <p>
-                                   <span class="client-email">joe.bloggs@work.com</span>
-                              </p>
-                              <p>
                                    <span class="client-medical-condition">Alzheimer's</span>
                               </p>
                               <p>7000-0000-2803</p>
                          </div>
-                         <a href="../3-create-client/3a-create-client.html">Edit client</a>
+                         <!-- <a href="../3-create-client/3a-create-client.html">Edit client</a> -->
                     </div>
+                    <a id="show-more">Show more info</a>
                </div>
           </div>
 
@@ -66,21 +59,23 @@
                <div class="large-12 large-uncentered columns">
                     <ul class="client-details tabs">
                          <li class="tab-link current" data-tab="tab-1">
-                              Summary &amp; timeline
+                              Summary
                          </li>
                          <li class="tab-link" data-tab="tab-2">
-                              Tasks
+                              Deputy information
                          </li>
                          <li class="tab-link" data-tab="tab-3">
-                              Information
+                              Client details
                          </li>
                          <li class="tab-link" data-tab="tab-4">
-                              Documents
+                              Timeline
                          </li>
                          <li class="tab-link" data-tab="tab-5">
-                              Deputies
+                              Tasks
                          </li>
-
+                         <li class="tab-link" data-tab="tab-6">
+                              Documents
+                         </li>
 
                     </ul>
                </div>
@@ -107,13 +102,13 @@
           <div id="tab-2" class="client-details tab-content">
                <div class="row">
 
-                    <!-- // CLIENT TASKS - START // -->
+                    <!-- // CLIENT DEPUTIES - START // -->
                     <div class="large-12 large-uncentered columns">
 
-                         {{= it.include('client-page/client-tab-tasks.html') }}
+                         {{= it.include('client-page/client-tab-deputies.html') }}
 
                     </div>
-                    <!-- // CLIENT TASKS - END // -->
+                    <!-- // CLIENT DEPUTIES - END // -->
 
                </div>
           </div>
@@ -139,6 +134,38 @@
           <div id="tab-4" class="client-details tab-content">
                <div class="row">
 
+                    <!-- // CLIENT TASKS - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-timeline.html') }}
+
+                    </div>
+                    <!-- // CLIENT TASKS - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+          <!-- =========== TAB CONTENT - 5 - START =========== -->
+          <div id="tab-5" class="client-details tab-content">
+               <div class="row">
+
+                    <!-- // CLIENT TASKS - START // -->
+                    <div class="large-12 large-uncentered columns">
+
+                         {{= it.include('client-page/client-tab-tasks.html') }}
+
+                    </div>
+                    <!-- // CLIENT TASKS - END // -->
+
+               </div>
+          </div>
+          <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+          <!-- =========== TAB CONTENT - 6 - START =========== -->
+          <div id="tab-6" class="client-details tab-content">
+               <div class="row">
+
                     <!-- // CLIENT DOCUMENTS - START // -->
                     <div class="large-12 large-uncentered columns">
 
@@ -149,23 +176,7 @@
 
                </div>
           </div>
-          <!-- =========== TAB CONTENT - 4 - END =========== -->
-
-          <!-- =========== TAB CONTENT - 5 - START =========== -->
-          <div id="tab-5" class="client-details tab-content">
-               <div class="row">
-
-                    <!-- // CLIENT DEPUTIES - START // -->
-                    <div class="large-12 large-uncentered columns">
-
-                         {{= it.include('client-page/client-tab-deputies.html') }}
-
-                    </div>
-                    <!-- // CLIENT DEPUTIES - END // -->
-
-               </div>
-          </div>
-          <!-- =========== TAB CONTENT - 5 - END =========== -->
+          <!-- =========== TAB CONTENT - 6 - END =========== -->
 
 
      </div>

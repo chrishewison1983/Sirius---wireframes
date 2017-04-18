@@ -6,28 +6,17 @@
 		<a href="#" class="main-cta">Create task</a>
 	</div>
 
-	<!-- // CONFIRMATION MESSAGE - START // -->
-	<div class="row">
-		<div class="large-12 large-uncentered columns">
-			<div id="visit-confirmation" class="confirmation-panel">
-				<div class="content">
-					<h2>
-						<span></span>
-						A visit has now been commission to:
-						<ul id="visits">
-						</ul>
-					</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // CONFIRMATION MESSAGE - END // -->
-
 	<!-- // COMMISSION VISIT MESSAGE - START // -->
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
-			<ol id="visit-commission">
-				<li class="outstanding">
+			<ol id="task-list">
+
+				<h2 class="description-title">Your outstanding tasks</h2>
+
+				<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
+				<li class="outstanding pdf-review">
+
+					<span class="dot"></span>
 
 					<form>
 
@@ -36,7 +25,7 @@
                                    <label class="normal" for="confirm-read">
                                         <input id="confirm-read" name="confirm-read" type="checkbox" value="post">
 								<span class="icon"></span>
-                                        Commissioned visit
+                                        Visit report received
 
 								<!-- // STATUS - START // -->
 								<div class="status">
@@ -50,64 +39,15 @@
 
 					</form>
 
-
-					<a class="more-info">More info</a>
-
-					<div class="details">
-
-						<!-- // DEPUTY ITEM - 1 - START // -->
-	                         <div class="visit-detail-item">
-	                              <span class="item">Case no.:</span>
-	                              <span class="answer case-no">29273638201</span>
-	                         </div>
-	                         <!-- // DEPUTY ITEM - 1 - END // -->
-
-						<!-- // DEPUTY ITEM - 2 - START // -->
-	                         <div class="visit-detail-item">
-	                              <span class="item">Visiting:</span>
-							<span class="answer">
-								<ul id="visiting">
-								</ul>
-							</span>
-	                         </div>
-	                         <!-- // DEPUTY ITEM - 2 - END // -->
-
-						<!-- // DEPUTY ITEM - 3 - START // -->
-	                         <div class="visit-detail-item">
-	                              <span class="item">Team:</span>
-	                              <span class="answer visit-team">Health &amp; welfare teams</span>
-	                         </div>
-	                         <!-- // DEPUTY ITEM - 3 - END // -->
-
-						<!-- // DEPUTY ITEM - 4 - START // -->
-	                         <div class="visit-detail-item">
-	                              <span class="item">Type of visit:</span>
-	                              <span class="answer type-of-visit"></span>
-	                         </div>
-	                         <!-- // DEPUTY ITEM - 4 - END // -->
-
-						<!-- // DEPUTY ITEM - 5 - START // -->
-	                         <div class="visit-detail-item">
-	                              <span class="item">Due back date:</span>
-	                              <span class="answer visit-due-back-date">Fri Apr 28 2017</span>
-	                         </div>
-	                         <!-- // DEPUTY ITEM - 5 - END // -->
-
-						<!-- // DEPUTY ITEM - 6 - START // -->
-	                         <div class="visit-detail-item">
-	                              <span class="item">Commission date:</span>
-	                              <span class="answer visit-commission-date">Fri Apr 28 2017</span>
-	                         </div>
-	                         <!-- // DEPUTY ITEM - 6 - END // -->
-
-					</div>
+					 <a href="#ex1" rel="modal:open" class="indent">Review report</a>
 
 				</li>
+				<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
+
 			</ol>
 		</div>
 	</div>
 	<!-- // COMMISSION VISIT MESSAGE - END // -->
-
 
 </div>
 <!-- // LIST OF DEPUTIES - END // -->

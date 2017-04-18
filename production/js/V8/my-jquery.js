@@ -26,7 +26,7 @@ $('#sirius-search').focus(function() {
 // Log in code
 $('input#password').click(function(){
      $("#login-button").removeClass("de-activate");
-     $(this).siblings().addClass("hide");
+     $(this).siblings('.password').addClass("hide");
 });
 
 $('input#username').click(function(){
@@ -34,7 +34,7 @@ $('input#username').click(function(){
 });
 
 $('input#password').keyup(function(){
-     $(this).siblings().addClass("hide");
+     $(this).siblings('.password').addClass("hide");
      $("#login-button").removeClass("de-activate");
 });
 
@@ -45,6 +45,9 @@ $(document).ready(function(){
      $('#show-more').click(function(){
      	$('.extra-content').toggle('slow');
           $(this).toggleClass('close');
+          $(this).text(function(i, text){
+               return text === "Show more info" ? "Hide more info" : "Show more info";
+          })
      });
 });
 
@@ -62,26 +65,34 @@ $(document).ready(function(){
 
      $('.details').hide();
 
-     $('#visit-commission .more-info').click(function(e){
+     $('#task-list .more-info').click(function(e){
           e.preventDefault();
           $(this).siblings('.details').toggle('slow');
           $(this).toggleClass('open');
      });
 
-     $('#visit-commission label').click( function(){
+     $('#task-list label').click( function(){
           var checked = $('input', this).is(':checked');
           $('.status').text(checked ? 'done' : 'outstanding');
           // $(this).parent().parent().parent().addClass(checked ? 'complete' : 'outstanding');
           // $('.status').text($(this).text() == 'done' ? 'outstanding' : 'done');
      });
 
-     $('#visit-commission input:checkbox').change(function(){
+     $('#task-list input:checkbox').change(function(){
           if($(this).is(":checked")) {
                $(this).parent().parent().parent().parent().addClass("complete");
           } else {
                $(this).parent().parent().parent().parent().removeClass("complete");
           }
      });
+
+     $("#task-list .pdf-review").hide();
+
+     // This hides the confirmation box after 10 seconds
+     setTimeout(function() {
+          $("#task-list .pdf-review").show(500)
+     }, 10000);
+
 
 });
 
@@ -223,29 +234,15 @@ $("#left, #right").hover(function() {
 });
 
 // Commission visit - step - 1 (6A-WHY?)
-$("#visit-assist-visitor-yes, #visit-assist-visitor-no").click( function(){
-     $('#cta-footer').slideDown('slow');
-});
+// $("#visit-assist-visitor-yes, #visit-assist-visitor-no").click( function(){
+//      $('#cta-footer').slideDown('slow');
+// });
 
 $("#visit-submitted-late-yes").click( function(){
      if($(this).is(':checked')) { $('.answer-1b').slideDown('slow'); }
 });
 $("#visit-submitted-late-no").click( function(){
      if($(this).is(':checked')) { $('.answer-1b').slideUp('slow'); }
-});
-
-$("#visit-dangers-yes").click( function(){
-     if($(this).is(':checked')) { $('.answer-5b').slideDown('slow'); }
-});
-$("#visit-dangers-no").click( function(){
-     if($(this).is(':checked')) { $('.answer-5b').slideUp('slow'); }
-});
-
-$("#visit-assist-visitor-yes").click( function(){
-     if($(this).is(':checked')) { $('.answer-6b').slideDown('slow'); }
-});
-$("#visit-assist-visitor-no").click( function(){
-     if($(this).is(':checked')) { $('.answer-6b').slideUp('slow'); }
 });
 
 $('#third-why').bind('change', function (e) {
@@ -531,14 +528,49 @@ $("#visit-first-yes, #visit-first-no").click( function(){
 // });
 
 // Commission visit - step - 6 (CONFIRM VIST)
-// if ($('.visit-commission').hasClass('step-6')) {
-//      $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span, ul li.step-5 .number span').text('').addClass('complete');
-// }
-//
-// $("#confirm-read").click( function(){
-//      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
-// });
+if ($('.visit-commission').hasClass('step-6')) {
+     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span, ul li.step-5 .number span').text('').addClass('complete');
+}
 
+$("#visit-assist-visitor-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-6b').slideDown('slow'); }
+});
+$("#visit-assist-visitor-no").click( function(){
+     if($(this).is(':checked')) { $('.answer-6b').slideUp('slow'); }
+});
+
+$("#visit-dangers-yes").click( function(){
+     if($(this).is(':checked')) { $('.answer-5b').slideDown('slow'); }
+});
+$("#visit-dangers-no").click( function(){
+     if($(this).is(':checked')) { $('.answer-5b').slideUp('slow'); }
+});
+
+
+$("#third-family-background").click( function(){
+     $('#cta-footer').slideDown('slow');
+});
+
+
+// Accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "inline-block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "inline-block";
+        }
+    }
+}
 
 // ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //
 

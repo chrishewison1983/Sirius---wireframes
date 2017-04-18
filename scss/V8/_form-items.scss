@@ -335,15 +335,6 @@ form.login-form {
      img {
           margin: 0 0 1em 0;
      }
-     .show-password {
-          margin: 1.25em 0 0 0;
-          padding: 0 3em 0 0;
-          float: right;
-          font-size: 1rem;
-          position: relative;
-          display: inline-block;
-          color: $white;
-     }
      input {
           background: rgba($white,0.2);
           margin-bottom: 1em;
@@ -358,6 +349,32 @@ form.login-form {
                // color: $white;
                // font-family: $Montserrat-Bold;
                // border: 3px solid $white;
+          }
+     }
+     .login-password {
+          position: relative;
+          display: inline-block;
+          .show-password {
+               margin: 0;
+               padding: 0;
+               font-size: 1rem;
+               position: absolute;
+               top: 0.75em;
+               right: 1em;
+               left: inherit;
+               height: 2.25em;
+               width: 2.25em;
+               display: inline-block;
+               text-indent: -1000em;
+               background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 50% 50%;
+               background-size: contain;
+               &:before, &:after {
+                    display: none;
+               }
+               &.checked {
+                    background: url(#{$image-path}/icons/eye-closed-white.svg) no-repeat 50% 50%;
+                    background-size: contain;
+               }
           }
      }
      #login-button {

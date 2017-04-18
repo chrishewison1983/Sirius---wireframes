@@ -76,7 +76,7 @@
 </nav>
 <!-- // MAIN MAV - END // -->
  <div class="row"> <div class="large-12 large-uncentered columns"> <h1> <span> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Joe</div> <div class="client-last-name">Bloggs</div> </a> <div class="separator"> > </div> Commission a visit </span> Visitor information </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar commission-visit">
-	<ul class="steps-five">
+	<ul class="steps-six">
 		<span class="border"></span>
 		<li class="step-1">
 			<a href="6a-why.html" class="wrapper">
@@ -108,17 +108,69 @@
 				<p>Case details</p>
 			</a>
 		</li>
-		<!-- <li class="step-6">
+		<li class="step-6">
 			<a href="6f-confirm-visit.html" class="wrapper">
 				<div class="number"><span>6</span></div>
-				<p>Commission visit</p>
+				<p>Visit summary</p>
 			</a>
-		</li> -->
+		</li>
 
 	</ul>
 </nav>
  </div> </div> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper commission-visit"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Commission visit info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">Commission visit info</h2> <h3 class="sub-section-title">Why is the visit commissioned <a href="6a-why.html" class="edit">Edit</a></h3> <div id="why-commission-visit"> <p class="type-of-visit"></p> </div> <h3 class="sub-section-title">Who is the visit for <a href="6b-who.html" class="edit">Edit</a></h3> <ol id="recipients"> <!-- <li>Ms Lara Stevens (Correspondent)</li> --> </ol> <h3 class="sub-section-title">Where will the visit take place</h3> <p class="place-holder-text">None chosen yet</p> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
+
+	<div id="page-1">
+		<button class="accordion">
+			Visits
+			<span></span>
+		</button>
+		<div class="panel">
+			<ul>
+				<li>
+					<a href="#">Lorem ipsum...</a>
+					<label class="normal" for="add-to-visit-1">
+						<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post">
+						Add to visit
+					</label>
+				</li>
+			</ul>
+		</div>
+
+		<button class="accordion">
+			Reports
+			<span></span>
+		</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">
+			Correspondance
+			<span></span>
+		</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">
+			Court documents
+			<span></span>
+		</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+
+		<button class="accordion">
+			Other
+			<span></span>
+		</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+	</div>
+
+
 	<div class="document">
 		<div class="control-panel">
 			<h2>Current annual report</h2>
@@ -128,9 +180,11 @@
 			<img src="../../../production/img/V8/document-report.png" alt="Document" class="document-item">
 		</div>
 	</div>
+
+
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Where will the visit take place</h2> <!-- =========== VISIT INFORMATION SECTION - 1 - START =========== --> <div class="visitor-container"> <ol id="visitor-list"> </ol> </div> <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== --> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> <div class="visitor-container"> <h2 class="section-title">Report information</h2> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group report"> <label for="datepicker">Report due back by</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group read-only"> <label for="visit-case-number">Case Number</label> <input id="visit-case-number" name="visit-case-number" type="text" class="half" value="7000-0000-0047" readonly> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group read-only"> <legend for="doo">Date of order</legend> <div class="one-third"> <label for="visit-doo-day" class="sub-label">Day</label> <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly> </div> <div class="one-third"> <label for="visit-doo-month" class="sub-label">Month</label> <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly> </div> <div class="one-third"> <label for="visit-doo-year" class="sub-label">Year</label> <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly> </div> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="add-visitors-step-3" href="6d-case-details.html">Continue</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); var inputCounter = 0; $('#visitor-list').append(` <li> <span class="title">${ recipient }</span> <form class="location-form"> <hr> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="visit-accomodation">Address <a href="#">Change address</a></label> <p class="answer client-address"> 1 Grimwald Place, Buckley, Flintshire, CV32 788. </p> </div> <!-- // FORM ITEM - 1 - END // --> </form> </li> `); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Where will the visit take place?</h2> <!-- =========== VISIT INFORMATION SECTION - 1 - START =========== --> <div class="visitor-container"> <ol id="visitor-list"> </ol> </div> <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== --> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> <div class="visitor-container"> <h2 class="section-title">Report information</h2> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group report"> <label for="datepicker">Report due back by</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group read-only"> <label for="visit-case-number">Case Number</label> <input id="visit-case-number" name="visit-case-number" type="text" class="half" value="7000-0000-0047" readonly> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group read-only"> <legend for="doo">Date of order</legend> <div class="one-third"> <label for="visit-doo-day" class="sub-label">Day</label> <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly> </div> <div class="one-third"> <label for="visit-doo-month" class="sub-label">Month</label> <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly> </div> <div class="one-third"> <label for="visit-doo-year" class="sub-label">Year</label> <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group read-only"> <legend for="report-due">Report due from visitor</legend> <div class="one-third"> <label for="visit-report-due-day" class="sub-label">Day</label> <input id="visit-report-due-day" name="visit-report-due-day" type="text" value="05" readonly> </div> <div class="one-third"> <label for="visit-report-due-month" class="sub-label">Month</label> <input id="visit-report-due-month" name="visit-report-due-month" type="text" value="04" readonly> </div> <div class="one-third"> <label for="visit-report-due-year" class="sub-label">Year</label> <input id="visit-report-due-year" name="visit-report-due-year" type="text" value="2016" readonly> </div> </div> <!-- // FORM ITEM - 4 - END // --> </form> </div> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="add-visitors-step-3" href="6d-case-details.html">Continue</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); var inputCounter = 0; $('#visitor-list').append(` <li> <span class="title">${ recipient }</span> <form class="location-form"> <hr> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="visit-accomodation">Address <a href="#">Change address</a></label> <p class="answer client-address"> 1 Grimwald Place, Buckley, Flintshire, CV32 788. </p> </div> <!-- // FORM ITEM - 1 - END // --> </form> </li> `); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V8/hideShowPassword.js"></script>
 	<script src="../../../production/js/V8/my-jquery.js"></script>
