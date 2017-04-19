@@ -234,9 +234,9 @@ $("#left, #right").hover(function() {
 });
 
 // Commission visit - step - 1 (6A-WHY?)
-// $("#visit-assist-visitor-yes, #visit-assist-visitor-no").click( function(){
-//      $('#cta-footer').slideDown('slow');
-// });
+$("#third-documents").keypress( function(){
+     $('#cta-footer').slideDown('slow');
+});
 
 $("#visit-submitted-late-yes").click( function(){
      if($(this).is(':checked')) { $('.answer-1b').slideDown('slow'); }
@@ -547,7 +547,7 @@ $("#visit-dangers-no").click( function(){
 });
 
 
-$("#third-family-background").click( function(){
+$("#third-family-background").keypress( function(){
      $('#cta-footer').slideDown('slow');
 });
 
