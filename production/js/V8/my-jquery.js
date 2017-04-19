@@ -546,7 +546,6 @@ $("#visit-dangers-no").click( function(){
      if($(this).is(':checked')) { $('.answer-5b').slideUp('slow'); }
 });
 
-
 $("#third-family-background").keypress( function(){
      $('#cta-footer').slideDown('slow');
 });

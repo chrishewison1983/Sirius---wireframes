@@ -219,25 +219,6 @@
      }
 }
 
-.no-items {
-     display: inline-block;
-     border: 10px dotted $border-colour;
-     padding: 3em;
-     margin: 4em 0 2em 0;
-     width: 100%;
-     text-align: center;
-     p {
-          // margin: 0;
-          text-align: center;
-     }
-     a.main-cta {
-          width: auto;
-          float: none;
-
-     }
-}
-
-
 #list-of-deputies {
      .deputies {
           display: inline-block;
