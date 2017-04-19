@@ -9,7 +9,19 @@ $(document).ready(function() {
 });
 
 // ==================== User journey's to populate the client tabs ==================== //
-$('.deputies').hide();
+// Allocations or Supervision
+$("#login-button").on("click", function (e) {
+     $.cookie("user-type", $("#username").val(), {path:'/'});
+     $.cookie("username", $("#username").val(), {path:'/'});
+});
+
+if ($.cookie("user-type") == "allocations-team") {
+     $(".supervision").hide();
+}
+
+if ($.cookie("user-type") == "supervision-team") {
+     $(".allocations").hide();
+}
 
 // Create letter
 $("#add-letter, #save-and-exit").on("click", function (e) {
@@ -43,9 +55,8 @@ if ($.cookie("recipients")) {
 }
 
 // Username populate
-$("#login-button").on("click", function (e) {
-     $.cookie("username", $("#username").val(), {path:'/'});
-});
+// $("#login-button").on("click", function (e) {
+// });
 
 if ($.cookie("username")) {
      $(".sirius-user-id").text($.cookie("username"));
@@ -130,6 +141,8 @@ if ($.cookie("deputy-last-name")) {
 // });
 
 // Add/edit deputies
+$('.deputies-list').hide();
+
 $("#add-deputy").on("click", function (e) {
      $.cookie("user-journey", 2, {path:'/'});
 });
@@ -140,7 +153,7 @@ if ($.cookie("user-journey") == 2) {
      $('.client-details .tab-link[data-tab="tab-2"]').addClass('current');
      $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-4"], .client-details .tab-link[data-tab="tab-5"], .client-details .tab-link[data-tab="tab-6"]').removeClass('current');
      $('#list-of-deputies .no-items').hide();
-     $('.deputies').show();
+     $('.deputies-list').show();
 
      $("#list-of-deputies #deputy-confirmation").show();
 

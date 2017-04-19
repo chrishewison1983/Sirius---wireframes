@@ -406,47 +406,6 @@ form.login-form {
      }
 }
 
-form.filter {
-     background: $white;
-     padding: 3em 0;
-     display: inline-block;
-     margin: 0;
-     float: left;
-     clear: left;
-     width: 100%;
-     .wrapper {
-          position: relative;
-     }
-     label {
-          display: none;
-          float: left;
-          color: $main-colour;
-          // display: inline-block;
-          font-size: 1rem;
-          font-family: $Montserrat;
-          font-weight: bold;
-          margin: 1em 1em 0 0;
-          &:before, &:after {
-               display: none;
-          }
-     }
-     .submit {
-          position: absolute;
-          right: 2px;
-          top: 2px;
-          bottom: 2px;
-          background: $blue;
-          padding: 1em;
-          color: $white;
-          border-radius: 0 3px 3px 0;
-          border: none;
-          &:hover {
-               background: darken($blue,5%);
-          }
-     }
-}
-
-
 .add-correspondent-form, .edit-deputy-form, .add-client-form, .add-deputy-form, #add-third-party-form, .basic-information, .why-visit {
      // padding: 3em 0 0 0;
      width: 100%;
