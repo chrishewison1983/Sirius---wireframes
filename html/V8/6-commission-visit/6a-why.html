@@ -117,74 +117,323 @@
 
 	</ul>
 </nav>
- </div> </div> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper commission-visit"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Commission visit info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">Commission visit info</h2> <h3 class="sub-section-title">Why is the visit commissioned</h3> <p class="place-holder-text">None chosen yet</p> <div id="why-commission-visit"> <!-- <li>Ms Lara Stevens (Correspondent)</li> --> </div> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+ </div> </div> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper commission-visit"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Commission visit info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // VISIT SUMMARY - START // --> <h2 class="section-title">Commission visit info</h2> <p>As you progress throught the commission visit form the information will populate here for you to review.</p> <!-- // COMMISSION VISIT VIEWER - START // -->
+<div id="commission-visit" class="accordion">
+
+	<!-- //////////////////////////// STEP 1 INFO - START //////////////////////////// -->
+	<div class="accordion-section" id="step-1">
+
+		<button class="accordion-section-title with-edit" href="#accordion-1">
+			Why?
+			<span></span>
+			<a href="6a-why.html" class="edit">Edit</a>
+		</button>
+
+		<div id="accordion-1" class="accordion-section-content">
+
+			<!-- ITEM - 1 - START -->
+			<div class="info-section">
+				<p>Why is this visit being commissioned?:</p>
+				<div class="mulitple-answers">
+					<p class="answer visit-why">N/A</p>
+					<p class="answer visit-why-answer">N/A</p>
+				</div>
+			</div>
+			<!-- ITEM - 1 - END -->
+
+			<!-- ITEM - 2 - START -->
+			<div class="info-section">
+				<p>Is this visit urgent?:</p>
+				<p class="answer visit-violent-risk">No</p>
+			</div>
+			<!-- ITEM - 2 - END -->
+
+			<!-- ITEM - 3 - START -->
+			<div class="info-section">
+				<p>Visit commissioned by:</p>
+				<p class="answer visit-commissioned-by">N/A</p>
+			</div>
+			<!-- ITEM - 3 - END -->
+
+			<!-- ITEM - 4 - START -->
+			<div class="info-section">
+				<p>Please add what is relevent:</p>
+				<div class="mulitple-answers">
+					<p class="answer visit-tick-health">N/A</p>
+					<p class="answer visit-tick-compliance">N/A</p>
+					<p class="answer visit-tick-deputy-supervision">N/A</p>
+					<p class="answer visit-tick-lay-supervision">N/A</p>
+					<p class="answer visit-tick-professional-supervision">N/A</p>
+					<p class="answer visit-tick-non-compliant">N/A</p>
+					<p class="answer visit-tick-hmcs">N/A</p>
+				</div>
+			</div>
+			<!-- ITEM - 4 - END -->
+
+			<!-- ITEM - 5 - START -->
+			<div class="info-section">
+				<p>Have the reports been submitted late?</p>
+				<div class="mulitple-answers">
+					<p class="answer visit-submitted-late">N/A</p>
+					<p class="answer visit-submitted-late-answer">N/A</p>
+				</div>
+			</div>
+			<!-- ITEM - 5 - END -->
+
+			<!-- ITEM - 6 - START -->
+			<div class="info-section">
+				<p>Case specific questions for the visitor to address in this case:</p>
+				<p class="answer visit-specific-questions">N/A</p>
+			</div>
+			<!-- ITEM - 6 - END -->
+
+			<!-- ITEM - 7 - START -->
+			<div class="info-section">
+				<p>Documents to be inspected and reported upon:</p>
+				<p class="answer visit-documents">N/A</p>
+			</div>
+			<!-- ITEM - 7 - END -->
+
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 1 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 2 INFO - START //////////////////////////// -->
+	<div class="accordion-section" id="step-2">
+		<button class="accordion-section-title with-edit" href="#accordion-2">
+			Who?
+			<span></span>
+			<a href="6b-who.html" class="edit">Edit</a>
+		</button>
+
+		<div id="accordion-2" class="accordion-section-content">
+			<h3 class="sub-section-title">Who is the visit for</h3>
+
+			<p class="place-holder-text">None chosen yet</p>
+
+			<ol id="recipients">
+			</ol>
+		</div>
+
+	</div>
+	<!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
+	<div class="accordion-section" id="step-3">
+		<button class="accordion-section-title with-edit" href="#accordion-3">
+			Where?
+			<span></span>
+			<a href="6c-where.html" class="edit">Edit</a>
+		</button>
+
+		<div id="accordion-3" class="accordion-section-content">
+			<h3 class="sub-section-title">Where will the visit take place</h3>
+
+			<p class="place-holder-text">None chosen yet</p>
+		</div>
+
+	</div>
+	<!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 4 INFO - START //////////////////////////// -->
+	<div class="accordion-section" id="step-4">
+		<button class="accordion-section-title with-edit" href="#accordion-4">
+			Case summary &amp; assets
+			<span></span>
+			<a href="6d-case-details.html" class="edit">Edit</a>
+		</button>
+
+		<div id="accordion-4" class="accordion-section-content">
+			<h3 class="sub-section-title">Assets</h3>
+
+			<ol id="asset-summary">
+				<li data-asset-id="1">
+					<span class="title">New Mazda car</span>
+					<br>
+					<span>Value: <strong>£27,000.00</strong>,</span>
+					<span>Date: <strong>Thu Mar 02 2017</strong></span>
+					<span class="remove"></span>
+				</li>
+				<li data-asset-id="2">
+					<span class="title">Painting by Craig Davison</span>
+					<br>
+					<span>Value: <strong>£1,000.00</strong>,</span>
+					<span>Date: <strong>Fri Nov 25 2016</strong></span>
+					<span class="remove"></span>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 4 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 5 INFO - START //////////////////////////// -->
+	<div class="accordion-section" id="step-5">
+
+		<button class="accordion-section-title with-edit" href="#accordion-5">
+		</button>
+
+		<div id="accordion-5" class="accordion-section-content">
+
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 5 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 6 INFO - START //////////////////////////// -->
+	<div class="accordion-section" id="step-6">
+		<button class="accordion-section-title with-edit" href="#accordion-6">
+			Visit summary
+			<span></span>
+			<a href="6f-confirm-visit.html" class="edit">Edit</a>
+		</button>
+
+		<div id="accordion-6" class="accordion-section-content">
+
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 6 INFO - END //////////////////////////// -->
+
+</div>
+<!-- // COMMISSION VISIT VIEWER - END // -->
+ <!-- // VISIT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
-	<div id="page-1">
-		<button class="accordion">
-			Visits
-			<span></span>
-		</button>
-		<div class="panel">
-			<ul>
-				<li>
-					<a href="#">Lorem ipsum...</a>
-					<label class="normal" for="add-to-visit-1">
-						<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post">
-						Add to visit
-					</label>
-				</li>
-			</ul>
-		</div>
+	<div id="page-1" class="accordion">
 
-		<button class="accordion">
-			Reports
-			<span></span>
-		</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
+		<!-- //////// ACCORDION SECTION 1 - START - //////// -->
+		<div class="accordion-section">
 
-		<button class="accordion">
-			Correspondance
-			<span></span>
-		</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
+			<button class="accordion-section-title with-edit" href="#accordion-1">
+				Visits
+				<span></span>
+			</button>
 
-		<button class="accordion">
-			Court documents
-			<span></span>
-		</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
+			<div id="accordion-1" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<form>
+							<label class="normal" for="add-to-visit-1">
+								<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
 		</div>
+		<!-- //////// ACCORDION SECTION 1 - END - //////// -->
 
-		<button class="accordion">
-			Other
-			<span></span>
-		</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
+		<!-- //////// ACCORDION SECTION 2 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title with-edit" href="#accordion-2">
+				Reports
+				<span></span>
+			</button>
+
+			<div id="accordion-2" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<form>
+							<label class="normal" for="add-to-visit-2">
+								<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
 		</div>
+		<!-- //////// ACCORDION SECTION 2 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 3 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title with-edit" href="#accordion-3">
+				Correspondance
+				<span></span>
+			</button>
+
+			<div id="accordion-3" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<form>
+							<label class="normal" for="add-to-visit-3">
+								<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 3 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 4 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title with-edit" href="#accordion-4">
+				Court documents
+				<span></span>
+			</button>
+
+			<div id="accordion-4" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<form>
+							<label class="normal" for="add-to-visit-4">
+								<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 4 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 5 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title with-edit" href="#accordion-5">
+				Other
+				<span></span>
+			</button>
+
+			<div id="accordion-5" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<form>
+							<label class="normal" for="add-to-visit-5">
+								<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 5 - END - //////// -->
 	</div>
 
 
-	<div class="document">
+	<div id="page-2" class="document">
 		<div class="control-panel">
 			<h2>Current annual report</h2>
-			<a href="#">Back</a>
+			<a href="#" class="back" id="back">Back</a>
 		</div>
 		<div class="wrapper">
 			<img src="../../../production/img/V8/document-report.png" alt="Document" class="document-item">
 		</div>
 	</div>
 
-
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Why has the visit been commission?</h2> <!-- =========== WHY VISIT SECTION - START =========== --> <!-- <h3 class="sub-section-title">Issues to be addressed in the report</h3> --> <form class="why-visit"> <!-- // FORM ITEM - 1a - START // --> <div class="form-group"> <label for="third-why">Why is this visit being commissioned?</label> <select id="third-why"> <option>-- Select --</option> <option value="Routine visit">Routine visit</option> <option value="Requested by deputy">Requested by deputy</option> <option value="Requested by case manager">Requested by case manager</option> <option value="Concerns over deputy">Concerns over deputy</option> <option value="Non-compliance">Non-compliance</option> <option value="Lack of first contact">Lack of first contact</option> <option value="Recommended by last visitor">Recommended by last visitor</option> </select> </div> <!-- // FORM ITEM - 1a - END // --> <!-- // FORM ITEM - 1b - START // --> <div class="form-group why-answer-hidden"> <label for="third-why-answer"> Please specify </label> <textarea id="third-why-answer"></textarea> </div> <!-- // FORM ITEM - 1b - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group violent-risk"> <span></span> <label class="normal" for="client-violent-risk"> <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="post"> Is this visit urgent? </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="visit-commissioned-by">Visit commissioned by:</label> <input id="visit-commissioned-by" name="visit-commissioned-by" type="text" class="half" value="manager@opgtest.com"> </div> <!-- // FORM ITEM - 3 - END // --> <p> Please add what is relevent: </p> <!-- // FORM ITEM - 4 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-health"> <input id="visit-tick-health" name="visit-tick-health" type="checkbox" value="post"> Health &amp; welfare </label> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-compliance"> <input id="visit-tick-compliance" name="visit-tick-compliance" type="checkbox" value="post"> Supervision Compliance &amp; Regulation Unit </label> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-deputy-supervision"> <input id="visit-tick-deputy-supervision" name="visit-tick-deputy-supervision" type="checkbox" value="post"> Lay Deputy Supervision </label> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-lay-supervision"> <input id="visit-tick-lay-supervision" name="visit-tick-lay-supervision" type="checkbox" value="post"> Local Authority Supervision </label> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-professional-supervision"> <input id="visit-tick-professional-supervision" name="visit-tick-professional-supervision" type="checkbox" value="post"> Professional Deputy Supervision </label> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-non-compliant"> <input id="visit-tick-non-compliant" name="visit-tick-non-compliant" type="checkbox" value="post"> Non-Compliant Reporting Team </label> </div> <!-- // FORM ITEM - 9 - END // --> <!-- // FORM ITEM - 10 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-hmcs"> <input id="visit-tick-hmcs" name="visit-tick-hmcs" type="checkbox" value="post"> HMCS-COP </label> </div> <!-- // FORM ITEM - 10 - END // --> <p></p> <!-- // FORM ITEM - 11a - START // --> <div class="form-group"> <legend>Have the reports been submitted late?</legend> <label for="visit-submitted-late-yes" class="radio"> <input id="visit-submitted-late-yes" type="radio" name="radio-inline-group-1" value="Yes"> Yes </label> <label for="visit-submitted-late-no" class="radio"> <input id="visit-submitted-late-no" type="radio" name="radio-inline-group-1" value="No"> No </label> </div> <!-- // FORM ITEM - 11a - END // --> <!-- // FORM ITEM - 11b - START // --> <div class="form-group answer-1b"> <label for="third-submitted-late-answer"> Please provide the visitor with as many details as possible </label> <textarea id="third-submitted-late-answer"></textarea> </div> <!-- // FORM ITEM - 11b - END // --> <!-- // FORM ITEM - 12 - START // --> <div class="form-group"> <label for="third-specific-questions"> Case specific questions for the visitor to address in this case </label> <textarea id="third-specific-questions"></textarea> </div> <!-- // FORM ITEM - 12 - END // --> <!-- // FORM ITEM - 13 - START // --> <div class="form-group"> <label for="third-documents"> Documents to be inspected and reported upon (refer to guidance for clarification if necessary): </label> <textarea id="third-documents"></textarea> </div> <!-- // FORM ITEM - 13 - END // --> </form> <!-- =========== WHY VISIT SECTION - END =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="add-visitors-step-1" href="6b-who.html">Continue</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function(){ //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) { //           $('#why-commission-visit').append('<p>' + visit + '</p>'); //      }); // });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Why has the visit been commission?</h2> <!-- =========== WHY VISIT SECTION - START =========== --> <!-- <h3 class="sub-section-title">Issues to be addressed in the report</h3> --> <form class="why-visit"> <!-- // FORM ITEM - 1a - START // --> <div class="form-group"> <label for="visit-why">Why is this visit being commissioned?</label> <select id="visit-why"> <option>-- Select --</option> <option value="Routine visit">Routine visit</option> <option value="Requested by deputy">Requested by deputy</option> <option value="Requested by case manager">Requested by case manager</option> <option value="Concerns over deputy">Concerns over deputy</option> <option value="Non-compliance">Non-compliance</option> <option value="Lack of first contact">Lack of first contact</option> <option value="Recommended by last visitor">Recommended by last visitor</option> </select> </div> <!-- // FORM ITEM - 1a - END // --> <!-- // FORM ITEM - 1b - START // --> <div class="form-group why-answer-hidden"> <label for="visit-why-answer"> Please specify </label> <textarea id="visit-why-answer"></textarea> </div> <!-- // FORM ITEM - 1b - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group urgent"> <span></span> <label class="normal" for="visit-urgent"> <input id="visit-urgent" name="visit-urgent" type="checkbox" value="Yes"> Is this visit urgent? </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="visit-commissioned-by">Visit commissioned by:</label> <input id="visit-commissioned-by" name="visit-commissioned-by" type="text" class="half" value="manager@opgtest.com"> </div> <!-- // FORM ITEM - 3 - END // --> <p> Please add what is relevent: </p> <!-- // FORM ITEM - 4 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-health"> <input id="visit-tick-health" name="visit-tick-health" type="checkbox" value="post"> Health &amp; welfare </label> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-compliance"> <input id="visit-tick-compliance" name="visit-tick-compliance" type="checkbox" value="post"> Supervision Compliance &amp; Regulation Unit </label> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-deputy-supervision"> <input id="visit-tick-deputy-supervision" name="visit-tick-deputy-supervision" type="checkbox" value="post"> Lay Deputy Supervision </label> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-lay-supervision"> <input id="visit-tick-lay-supervision" name="visit-tick-lay-supervision" type="checkbox" value="post"> Local Authority Supervision </label> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-professional-supervision"> <input id="visit-tick-professional-supervision" name="visit-tick-professional-supervision" type="checkbox" value="post"> Professional Deputy Supervision </label> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-non-compliant"> <input id="visit-tick-non-compliant" name="visit-tick-non-compliant" type="checkbox" value="post"> Non-Compliant Reporting Team </label> </div> <!-- // FORM ITEM - 9 - END // --> <!-- // FORM ITEM - 10 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-tick-hmcs"> <input id="visit-tick-hmcs" name="visit-tick-hmcs" type="checkbox" value="post"> HMCS-COP </label> </div> <!-- // FORM ITEM - 10 - END // --> <p></p> <!-- // FORM ITEM - 11a - START // --> <div class="form-group"> <legend>Have the reports been submitted late?</legend> <label for="visit-submitted-late-yes" class="radio"> <input id="visit-submitted-late-yes" type="radio" name="radio-inline-group-1" value="Yes"> Yes </label> <label for="visit-submitted-late-no" class="radio"> <input id="visit-submitted-late-no" type="radio" name="radio-inline-group-1" value="No"> No </label> </div> <!-- // FORM ITEM - 11a - END // --> <!-- // FORM ITEM - 11b - START // --> <div class="form-group answer-1b"> <label for="visit-submitted-late-answer"> Please provide the visitor with as many details as possible </label> <textarea id="visit-submitted-late-answer"></textarea> </div> <!-- // FORM ITEM - 11b - END // --> <!-- // FORM ITEM - 12 - START // --> <div class="form-group"> <label for="visit-specific-questions"> Case specific questions for the visitor to address in this case </label> <textarea id="visit-specific-questions"></textarea> </div> <!-- // FORM ITEM - 12 - END // --> <!-- // FORM ITEM - 13 - START // --> <div class="form-group"> <label for="visit-documents"> Documents to be inspected and reported upon (refer to guidance for clarification if necessary): </label> <textarea id="visit-documents"></textarea> </div> <!-- // FORM ITEM - 13 - END // --> </form> <!-- =========== WHY VISIT SECTION - END =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="add-visitors-step-1" href="6b-who.html">Continue</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function(){ //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) { //           $('#why-commission-visit').append('<p>' + visit + '</p>'); //      }); // });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V8/hideShowPassword.js"></script>
 	<script src="../../../production/js/V8/my-jquery.js"></script>
@@ -196,8 +445,8 @@
 	</script>
 	<script src="../../../production/js/V8/my-cookies.js"></script>
 	<script src="../../../production/js/V8/sticky-item.js"></script>
-	<!-- <script src="../../production/js/prototype/swing.js"></script>
-	<script src="../../production/js/prototype/class-list.js"></script>
-	<script src="../../production/js/prototype/card-stack.js"></script> -->
+
+	<script src="../../../production/js/V8/my-cookies-commission-visit.js"></script>
+	<script src="../../../production/js/V8/my-jquery-commission-visit.js"></script>
 <!-- // JS BODY END - END // -->
 </body></html>

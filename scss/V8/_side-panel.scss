@@ -97,14 +97,247 @@
      }
 }
 
-// .document {
-//      display: none;
-// }
+#document-viewer, #commission-visit {
+     line-height: 0;
+     display: inline-block;
+     width: 100%;
+     &.sticky {
+          margin-top: 1em;
+          position: fixed;
+          top: 0;
+          display: inherit;
+     }
+     .document {
+          // background: $border-colour;
+          border: none;
+          border-radius: 0;
+          display: none;
+          position: relative;
+          .control-panel {
+               margin: 0;
+               padding:  1em 0;
+               position: absolute;
+               // border-radius: $global-border-radius;
+               box-shadow: 0px 10px 10px -5px rgba($black, 0.2);
+               top: 0;
+               left: 0;
+               right: 0;
+               background: $border-colour;
+               font-size: 1rem;
+               font-family: $Montserrat;
+               display: inline-block;
+               width: 100%;
+               h2, a {
+                    display: inline-block;
+               }
+               h2 {
+                    width: auto;
+                    font-family: $Montserrat;
+                    font-size: 1rem;
+                    margin: 0 0 0 1em;
+               }
+               a {
+                    float: right;
+                    margin: 0 1em 0 0;
+                    &#back {
+                         padding-left: 1em;
+                         background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
+                         background-size: 0.5em;
+                    }
+               }
+          }
+          .wrapper {
+               height: 46em;
+               overflow-y: scroll;
+               padding: 0 0 0 0;
+               img {
+                    margin-top: 3.5em;
+                    padding: 1.5em 0;
+                    background: $white;
+                    // display: inline-block;
+                    // float: left;
+                    &.document-item {
+                         width: 35em;
+                         height: auto;
+                         margin-right: 0;
+                         border: none;
+                         border-radius: 0;
+                    }
+               }
+          }
+     }
+}
 
+#commission-visit {
+     max-height: 46em;
+     overflow-y: scroll;
+     width: 100%;
+}
 
-// #document-summary {
-//      &.sticky {
-//           margin-top: 1em;
-//      }
-// }
+button.accordion-section-title {
+     background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 97.5% 50% $white;
+     background-size: 1.5em;
+     color: $black;
+     font-family: $Montserrat;
+     font-weight: bold;
+     cursor: pointer;
+     padding: 1em 3.25em 1em 1em;
+     width: 100%;
+     text-align: left;
+     border-radius: $global-border-radius;
+     border: 3px solid $border-colour;
+     outline: none;
+     transition: 0.4s;
+     margin: 0 0 0.25em 0;
+     &:hover {
+          background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 97.5% 50% $border-colour;
+          background-size: 1.5em;
+     }
+     &.active {
+          margin: 0;
+          background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 97.5% 50% $blue;
+          background-size: 1.5em;
+          border: 3px solid $blue;
+          color: $white;
+          border-radius: 5px 5px 0 0;
+          span {
+               background: url(#{$image-path}/icons/minus-white.svg) no-repeat 0% 0%;
+               background-size: contain;
+          }
+     }
+     &.with-edit {
+          background: $white;
+          padding: 1em;
+          // width: 85%;
+          &:hover {
+               background: $border-colour;
+          }
+          &.active {
+               background: $blue;
+               a.edit {
+                    color: $white;
+                    background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 0%;
+                    background-size: 0.95em;
+               }
+          }
+          a.edit {
+               float: right;
+               padding-left: 1.25em;
+               background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
+               background-size: 0.95em;
+          }
+     }
+     span {
+          display: inline-block;
+          position: relative;
+          float: left;
+          background: url(#{$image-path}/icons/plus-blue.svg) no-repeat 0% 0%;
+          background-size: contain;
+          width: 1.15em;
+          height: 1.15em;
+          margin: 0 0.5em 0 0;
+     }
+}
+
+/* Style the accordion panel. Note: hidden by default */
+#document-viewer, #commission-visit {
+     .accordion-section-content {
+          padding: 1em;
+          background-color: white;
+          width: 100%;
+          // transition: 0.4s;
+          display: none;
+          margin: 0 0 0.25em 0;
+          border-radius: 0 0 5px 5px;
+          border-right: 3px solid $blue;
+          border-bottom: 3px solid $blue;
+          border-left: 3px solid $blue;
+          ul, p {
+               margin: 0;
+          }
+          ul {
+               li {
+                    &:last-of-type {
+                         margin-bottom: 0;
+                    }
+                    a {
+                         float: left;
+                         width: auto;
+                         padding: 0;
+                         border: none;
+                         font-size: 1rem;
+                         border-bottom: 1px dashed $blue;
+                         border-radius: 0;
+                         padding: 0.5em 0 0.5em 1.5em;
+                         background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                         background-size: 1.15em;
+                         &:hover {
+                              background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                              background-size: 1.15em;
+                              border-bottom: 1px solid $blue;
+                         }
+                         &:before, &:after {
+                              display: none;
+                         }
+                    }
+                    label {
+                         float: right;
+                         width: auto;
+                         margin: 0.35em 0 0 0;
+                         padding: 0 0 0 2em;
+                         input {
+                              display: none;
+                         }
+                         &:before {
+                              width: 1.5em;
+                              height: 1.5em;
+                              top: -0.125em;
+                         }
+                         &:after {
+                              border-width: 0 0 4px 4px;
+                              top: 0.25em;
+                              left: 0.295em;
+                              width: 0.875em;
+                              height: 0.5em;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.info-section {
+     display: inline-block;
+     width: 100%;
+     margin: 0 0 0.75em 0;
+     &:last-of-type {
+          margin: 0;
+     }
+     p {
+          display: inline-block;
+          width: 100%;
+          padding: 0 0 0.25em 0;
+          &.answer, .mulitple-answers {
+               width: 100%;
+               font-family: $Montserrat;
+               font-weight: bold;
+               color: $main-colour;
+          }
+     }
+}
+
+.accordion, .accordion * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.accordion {
+    overflow: hidden;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+    transition: all linear 0.15s;
+}
 // =====================================  Autocomplete drop down - END ===================================== //

@@ -50,7 +50,7 @@
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
-                         <li class="tab-link current" data-tab="tab-1">
+                         <li class="tab-link" data-tab="tab-1">
                               <span class="info"></span>
                               <p>Commission visit info</p>
                          </li>
@@ -62,7 +62,7 @@
                               <span class="deputy-details"></span>
                               <p>Deputy details</p>
                          </li>
-                         <li class="tab-link" data-tab="tab-4">
+                         <li class="tab-link current" data-tab="tab-4">
                               <span class="documents"></span>
                               <p>Documents</p>
                          </li>
@@ -70,27 +70,13 @@
                     <!-- =========== TABS - END =========== -->
 
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="tab-content side-panel current">
+                    <div id="tab-1" class="tab-content side-panel">
 
-                         <!-- // DOCUMENT SUMMARY - START // -->
+                         <!-- // VISIT SUMMARY - START // -->
                          <h2 class="section-title">Commission visit info</h2>
 
-                         <h3 class="sub-section-title">Why is the visit commissioned <a href="6a-why.html" class="edit">Edit</a></h3>
-
-                         <div id="why-commission-visit">
-                              <p class="type-of-visit"></p>
-                         </div>
-
-                         <h3 class="sub-section-title">Who is the visit for <a href="6b-who.html" class="edit">Edit</a></h3>
-
-                         <ol id="recipients">
-                              <!-- <li>Ms Lara Stevens (Correspondent)</li> -->
-                         </ol>
-
-                         <h3 class="sub-section-title">Where will the visit take place</h3>
-
-                         <p class="place-holder-text">None chosen yet</p>
-                         <!-- // DOCUMENT SUMMARY - END // -->
+                         {{= it.include('side-panel/commission-visit.html') }}
+                         <!-- // VISIT SUMMARY - END // -->
 
                     </div>
                     <!-- =========== TAB CONTENT - 1 - END =========== -->
@@ -112,11 +98,11 @@
                     <!-- =========== TAB CONTENT - 3 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="tab-content side-panel">
+                    <div id="tab-4" class="tab-content side-panel current">
 
                          <h2 class="section-title">Case documents</h2>
 
-                         {{= it.include('document-viewer.html') }}
+                         {{= it.include('side-panel/document-viewer.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 4 - END =========== -->
