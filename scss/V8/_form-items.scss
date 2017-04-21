@@ -330,6 +330,14 @@ form {
      }
 }
 
+.adjust-padding-top {
+     label {
+          &.normal {
+               padding-top: 0;
+          }
+     }
+}
+
 form.login-form {
      text-align: center;
      img {

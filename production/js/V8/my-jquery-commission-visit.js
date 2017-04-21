@@ -73,6 +73,7 @@ $(document).ready(function() {
      $('ul#commission-visit-client li a, ul#commission-visit-deputies li a').on('click', function(e) {
           e.preventDefault();
           $(this).toggleClass('selected');
+          $(this).siblings('button').toggleClass('selected');
           if ($(this).hasClass('selected')) {
                $('.place-holder-text').hide();
                $("#recipients").append(`
@@ -136,7 +137,7 @@ $('#confirm-add-third-party').click(function(e){
                               ${ $("#add-third-party-form").find('input:checked').parent().text() }
                          </span>
                     </a>
-                    <button class="view-more close">More info</button>
+                    <button class="view-more close"><span>More info</span></button>
                </div>
                <div class="extra-info">
                     <span class="border-top"></span>
