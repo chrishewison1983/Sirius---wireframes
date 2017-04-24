@@ -46,6 +46,19 @@ $('#visit-why').bind('change', function (e) {
 
 $('#commission-visit').hide();
 
+$('.health-welfare').hide();
+$('.non-health-welfare').show();
+
+$('#visit-tick-health').change(function(){
+     if(this.checked) {
+          $('.health-welfare').slideDown('slow');
+          $('.non-health-welfare').hide();
+     } else {
+          $('.health-welfare').slideUp('slow');
+          $('.non-health-welfare').show();
+     }
+});
+
 /////////////////// Step - 2 (6B-WHO?) ///////////////////
 if ($('.visit-commission').hasClass('step-2')) {
      $('ul li.step-1 .number span').text('').addClass('complete');
@@ -257,15 +270,19 @@ $('#confirm-add-asset').click(function(e){
      $("#asset-list").slideDown('slow');
      $("#asset-list").append(`
           <li data-asset-id="${(++assetCounter)}">
-               <span class="title">${ $("#assets").find('#visit-asset').val() }</span>
+               <span class="title">
+                    <div class="type">${ $("#assets").find('#visit-asset-type').val() }</div>:
+                    <div class="description">${ $("#assets").find('#visit-asset').val() }</div>
+               </span>
                <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
                <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
+               <span class="edit"></span>
                <span class="remove"></span>
           </li>`
      );
      $("#asset-summary").append(`
           <li data-asset-id="${(++assetList)}">
-               <span class="title">${ $("#assets").find('#visit-asset').val() }</span>
+               <span class="title">${ $("#assets").find('#visit-asset-type').val() + ': ' + $("#assets").find('#visit-asset').val() }</span>
                <br>
                <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
                <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
@@ -280,6 +297,40 @@ $("#asset-list").on("click", ".remove", function(){
      $(`#asset-summary [data-asset-id="${match}"]`).remove();
 });
 
+$("#asset-list").on("click", ".edit", function(){
+     $(this).parent().parent().siblings('h3').text('Edit asset');
+     $(this).parent().parent().siblings('.cta-row').hide();
+     $(this).parent().remove();
+     $('#assets').slideDown('slow');
+     $('#assets #confirm-add-asset').attr('id','confirm-edit-asset').text('Edit');
+
+     var itemToChange = $(this).parent().attr('data-asset-id');
+
+     // 1 - Populates the "Asset type"
+     var inputType = $(this).siblings('.title').find('.type').text();
+     var input1 = $('#visit-asset-type');
+     input1.val(inputType);
+
+     // 2 - Populates the "Asset description"
+     var inputDesc = $(this).siblings('.title').find('.description').text();
+     var input2 = $('#visit-asset');
+     input2.val(inputDesc);
+
+     // 3 - Populates the "Asset value"
+     var inputValue = $(this).siblings().find('[data-asset-info="value"]').text();
+     var input3 = $('#visit-asset-value');
+     input3.val(inputValue);
+
+     // 4 - Populates the "Asset date"
+     var inputDate = $(this).siblings().find('[data-asset-info="date"]').text();
+     var input4 = $('#datepicker');
+     input4.val(inputDate);
+
+});
+
+// $("#confirm-edit-asset").on("click", function(){
+//      $(this).addClass('test');
+// });
 
 $('#add-visitors-step-4').click(function(e){
      persistSelectedAssets();

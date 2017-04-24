@@ -214,16 +214,24 @@
                               <ol id="asset-list" start="1">
 
                                    <li data-asset-id="1">
-                                        <span class="title">New Mazda car</span>
+                                        <span class="title">
+                                             <div class="type">Car</div>:
+                                             <div class="description">New Mazda car</div>
+                                        </span>
                                         <span>Value: <strong data-asset-info="value">&pound;27,000.00</strong>,</span>
                                         <span>Date: <strong data-asset-info="date">Thu Mar 02 2017</strong></span>
+                                        <span class="edit"></span>
                                         <span class="remove"></span>
                                    </li>
 
                                    <li data-asset-id="2">
-                                        <span class="title">Painting by Craig Davison</span>
-                                        <span>Value: <strong>&pound;1,000.00</strong>,</span>
-                                        <span>Date: <strong>Fri Nov 25 2016</strong></span>
+                                        <span class="title">
+                                             <div class="type">Artwork</div>:
+                                             <div class="description">Craig Davison</div>
+                                        </span>
+                                        <span>Value: <strong data-asset-info="value">&pound;1,000.00</strong>,</span>
+                                        <span>Date: <strong data-asset-info="date">Fri Nov 25 2016</strong></span>
+                                        <span class="edit"></span>
                                         <span class="remove"></span>
                                    </li>
 
@@ -236,12 +244,25 @@
 
                                    <!-- // FORM ITEM - 1 - START // -->
                                    <div class="form-group">
-                                        <label for="visit-asset">Asset</label>
-                                        <input id="visit-asset" name="visit-asset" type="text">
+                                        <label for="visit-asset-type">Type of asset</label>
+                                        <select id="visit-asset-type">
+                                             <option>-- Select --</option>
+                                             <option value="Car">Car</option>
+                                             <option value="House">House</option>
+                                             <option value="Artwork">Artwork</option>
+                                             <option value="Other">Other</option>
+                                        </select>
                                    </div>
                                    <!-- // FORM ITEM - 1 - END // -->
 
                                    <!-- // FORM ITEM - 2 - START // -->
+                                   <div class="form-group">
+                                        <label for="visit-asset">Asset description</label>
+                                        <input id="visit-asset" name="visit-asset" type="text">
+                                   </div>
+                                   <!-- // FORM ITEM - 2 - END // -->
+
+                                   <!-- // FORM ITEM - 3 - START // -->
                                    <div class="form-group currency">
                                         <label for="visit-asset-value">Value</label>
                                         <div class="date-wrapper">
@@ -249,17 +270,17 @@
                                              <input type="text" id="visit-asset-value">
                                         </div>
                                    </div>
-                                   <!-- // FORM ITEM - 2 - END // -->
+                                   <!-- // FORM ITEM - 3 - END // -->
 
-                                   <!-- // FORM ITEM - 3 - START // -->
+                                   <!-- // FORM ITEM - 4 - START // -->
                                    <div class="form-group">
-                                        <label for="datepicker">Date</label>
+                                        <label for="datepicker">Date reported</label>
                                         <div class="date-wrapper">
                                              <input type="text" id="datepicker">
                                              <i class="date"></i>
                                         </div>
                                    </div>
-                                   <!-- // FORM ITEM - 3 - END // -->
+                                   <!-- // FORM ITEM - 4 - END // -->
 
                                    <div class="cta-row">
                                         <a class="main-cta secondary" href="#" id="confirm-add-asset">Add</a>

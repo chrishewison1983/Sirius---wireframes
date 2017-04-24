@@ -314,7 +314,7 @@ ol#asset-list {
           margin: 0 0 1em 0;
           border: 2px solid $border-colour;
           border-radius: $global-border-radius;
-          padding: 1em 1em 1em 4.75em;
+          padding: 1em 5em 1em 4.75em;
           line-height: 1;
           @include standard-transition;
           counter-increment: step-counter;
@@ -348,7 +348,7 @@ ol#asset-list {
                     color: lighten($main-colour,20%);
                     font-family: $Opensans-Bold;
                }
-               &.remove {
+               &.remove, &.edit {
                     display: inline-block;
                     z-index: 10;
                     position: absolute;
@@ -361,8 +361,13 @@ ol#asset-list {
                     @include standard-transition;
                     &:hover {
                          cursor: pointer;
-                         transform: scale(1.1);
+                         transform: scale(1.2);
                     }
+               }
+               &.edit {
+                    right: 2.5em;
+                    background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 50% 50%;
+                    background-size: contain;
                }
           }
           .title {
@@ -373,6 +378,10 @@ ol#asset-list {
                font-size: 1.3rem;
                color: $black;
                margin: 0 0 0.25em 0;
+               div {
+                    display: inline-block;
+                    width: auto;
+               }
           }
      }
 }
