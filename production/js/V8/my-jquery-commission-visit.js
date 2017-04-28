@@ -1,10 +1,5 @@
 // =================================== Commission visit - JAVASCRIPT =================================== //
-/////////////////// Step - 1 (6A-WHY?) ///////////////////
-if ($('.visit-commission').hasClass('step-1')) {
-     // Removes the HREF's from the progress bar
-     $('ul li.step-2 a, ul li.step-3 a, ul li.step-4 a, ul li.step-5 a, ul li.step-6 a').removeAttr("href");
-}
-
+////////////////////////////////////// Step - 1 (6A-WHY?) //////////////////////////////////////
 $("#visit-documents").keypress( function(){
      $('#cta-footer').slideDown('slow');
 });
@@ -44,8 +39,6 @@ $('#visit-why').bind('change', function (e) {
 //
 // });
 
-$('#commission-visit').hide();
-
 $('.health-welfare').hide();
 $('.non-health-welfare').show();
 
@@ -59,27 +52,20 @@ $('#visit-tick-health').change(function(){
      }
 });
 
-/////////////////// Step - 2 (6B-WHO?) ///////////////////
-if ($('.visit-commission').hasClass('step-2')) {
-     $('ul li.step-1 .number span').text('').addClass('complete');
+// Side panel content
+$('.accordion').find('#step-1, #step-2, #step-3, #step-4, #step-5, #step-6').addClass('inactive');
+$('.accordion').find('.place-holder-text').show();
+$('.accordion').find('.commission-visit-info').hide();
 
-     // Removes the HREF's from the progress bar
-     $('ul li.step-3 a, ul li.step-4 a, ul li.step-5 a, ul li.step-6 a').removeAttr("href");
-
-     $('#commission-visit').show();
-     // Show/hide #commission-visit contents
-     // $('#step-1').show();
-     // $('#step-2, #step-3, #step-4, #step-5, #step-6').hide();
-}
+////////////////////////////////////// Step - 2 (6B-WHO?) //////////////////////////////////////
+$('.visit-commission #cta-footer').hide();
+$('.extra-info').hide();
 
 function persistSelectedVisitor() {
      sessionStorage.setItem('selected-visitors', JSON.stringify($('#recipients li').map(function() {
           return $(this).text().trim();
      }).toArray()));
 }
-
-$('.visit-commission #cta-footer').hide();
-$('.extra-info').hide();
 
 $(document).ready(function() {
 
@@ -90,8 +76,9 @@ $(document).ready(function() {
           if ($(this).hasClass('selected')) {
                $('.place-holder-text').hide();
                $("#recipients").append(`
-                    <li data-visit-id='${$(this).data('visit-id')}'>
-                         ${ $(this).find('[data-value="name"]').text() }
+                    <li data-visit-id='${$(this).data('visit-id')}' class="answer">
+                         <span>${ $(this).find('[data-value="name"]').text() }</span><br>
+                         <span class="address">${ $(this).find('[data-value="address"]').text() }</span>
                     </li>`
                );
                persistSelectedVisitor();
@@ -208,19 +195,23 @@ $('.view-more').click(function(e){
      // $(this).parent().parent().parent().find('.visitor-container').show('slow');
 });
 
-/////////////////// Step - 3 (6C-WHERE?) ///////////////////
-if ($('.visit-commission').hasClass('step-3')) {
-     $('ul li.step-1 .number span, ul li.step-2 .number span').text('').addClass('complete');
+$('#add-documents-link').click(function(e){
+     e.preventDefault();
+     $(this).closest("#action-panel").parent().find("[data-tab='tab-4']").addClass('current');
+     $(this).closest("#action-panel").parent().find("[data-tab='tab-1'], [data-tab='tab-2'], [data-tab='tab-3']").removeClass('current');
+     $(this).closest("#action-panel").parent().find("#tab-4").addClass('current');
+     $(this).closest("#action-panel").parent().find("#tab-4 .section-title").text('Add case documents to visit:');
+     $(this).closest("#action-panel").parent().find("#tab-1, #tab-2, #tab-3").removeClass('current');
+});
 
-     // Removes the HREF's from the progress bar
-     $('ul li.step-4 a, ul li.step-5 a, ul li.step-6 a').removeAttr("href");
-
-     $('#commission-visit').show();
-     // Show/hide #commission-visit contents
-     // $('#step-1, #step-2').show();
-     // $('#step-3, #step-4, #step-5, #step-6').hide();
+// Side panel content
+if ($.cookie("completed-step-1") == 'true') {
+     $('.accordion').find('#step-1').removeClass('inactive');
+     $('.accordion #step-1').find('.place-holder-text').hide();
+     $('.accordion #step-1').find('.commission-visit-info').show();
 }
 
+////////////////////////////////////// Step - 3 (6C-WHERE?) //////////////////////////////////////
 $(".report #datepicker").click( function(){
      $('#cta-footer').slideDown('slow');
 });
@@ -232,22 +223,30 @@ $(document).ready(function() {
           console.log($('#visit-accomodation option:selected').val());
      });
 
+     $('#visitor-list .visitor').click( function(){
+          $(this).addClass('selected');
+          $(this).siblings().addClass('selected');
+          $(this).parent().siblings().find('.visitor').removeClass('selected');
+          $(this).parent().siblings().find('.location-form').removeClass('selected');
+     });
+
+     $('label.radio').on('click', function() {
+          $(this).toggleClass('checked');
+          if ($(this).hasClass('checked')) {
+               $(this).siblings('.radio').removeClass('checked');
+          }
+     });
+
 });
 
-
-///////////////////// Step - 4 (6D-CASE-SUMMARY-& ASSETS) ///////////////////
-if ($('.visit-commission').hasClass('step-4')) {
-     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span').text('').addClass('complete');
-
-     // Removes the HREF's from the progress bar
-     $('ul li.step-5 a, ul li.step-6 a').removeAttr("href");
-
-     $('#commission-visit').show();
-     // Show/hide #commission-visit contents
-     // $('#step-1, #step-2, #step-3').show();
-     // $('#step-4, #step-5, #step-6').hide();
+// Side panel content
+if ($.cookie("completed-step-1") && $.cookie("completed-step-2") == 'true') {
+     $('.accordion').find('#step-1, #step-2').removeClass('inactive');
+     $('.accordion #step-1, .accordion #step-2').find('.place-holder-text').hide();
+     $('.accordion #step-1, .accordion #step-2').find('.commission-visit-info').show();
 }
 
+////////////////////////////////////// Step - 4 (6D-CASE-SUMMARY-& ASSETS) //////////////////////////////////////
 $('#assets').hide();
 
 $('#add-asset').click(function(e){
@@ -342,25 +341,20 @@ function persistSelectedAssets() {
      }).toArray()));
 }
 
-///////////////////// Step - 5 (6E-CASE-DETAILS) ///////////////////
-if ($('.visit-commission').hasClass('step-5')) {
-     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span').text('').addClass('complete');
-
-     // Removes the HREF's from the progress bar
-     $('ul li.step-6 a').removeAttr("href");
-
-     $('#commission-visit').show();
-     // Show/hide #commission-visit contents
-     // $('#step-1, #step-2, #step-3, #step-4').show();
-     // $('#step-5, #step-6').hide();
+// Side panel content
+if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("completed-step-3") == 'true') {
+     $('.accordion').find('#step-1, #step-2, #step-3').removeClass('inactive');
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3').find('.place-holder-text').hide();
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3').find('.commission-visit-info').show();
 }
 
+////////////////////////////////////// Step - 5 (6E-CASE-DETAILS) //////////////////////////////////////
 $('.answer-1b, .answer-2b, .answer-3b, .answer-4b, .answer-5b, .answer-6b').hide();
 
-$("#visit-special-requirements-yes").click( function(){
+$("#visit-deputy-order-yes").click( function(){
      if($(this).is(':checked')) { $('.answer-1b').slideDown('slow'); }
 });
-$("#visit-special-requirements-no").click( function(){
+$("#visit-deputy-order-no").click( function(){
      if($(this).is(':checked')) { $('.answer-1b').slideUp('slow'); }
 });
 
@@ -394,15 +388,13 @@ $("#visit-first-yes, #visit-first-no").click( function(){
 //      $('#cta-footer').slideDown('slow');
 // });
 
-///////////////////// Step - 6 (6E-VISIT SUMMARY) ///////////////////
-if ($('.visit-commission').hasClass('step-6')) {
-     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span, ul li.step-4 .number span, ul li.step-5 .number span').text('').addClass('complete');
-     $('#commission-visit').show();
-     // Show/hide #commission-visit contents
-     // $('#step-1, #step-2, #step-3, #step-4, #step-5').show();
-     // $('#step-6').hide();
+// Side panel content
+if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("completed-step-3") && $.cookie("completed-step-4") == 'true') {
+     $('.accordion').find('#step-1, #step-2, #step-3, #step-4').removeClass('inactive');
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4').find('.place-holder-text').hide();
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4').find('.commission-visit-info').show();
 }
-
+////////////////////////////////////// Step - 6 (6E-VISIT SUMMARY) //////////////////////////////////////
 $("#visit-assist-visitor-yes").click( function(){
      if($(this).is(':checked')) { $('.answer-6b').slideDown('slow'); }
 });
@@ -437,6 +429,22 @@ $(document).ready(function() {
      });
 
 });
+
+// Side panel content
+if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("completed-step-3") && $.cookie("completed-step-4") && $.cookie("completed-step-5") == 'true') {
+     $('.accordion').find('#step-1, #step-2, #step-3, #step-4, #step-5').removeClass('inactive');
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4, .accordion #step-5').find('.place-holder-text').hide();
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4, .accordion #step-5').find('.commission-visit-info').show();
+}
+
+////////////////////////////////////// VISIT COMMISSION FORM COMPLETE //////////////////////////////////////
+// Side panel content
+if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("completed-step-3") && $.cookie("completed-step-4") && $.cookie("completed-step-5") && $.cookie("completed-step-6") == 'true') {
+     $('.accordion').find('#step-1, #step-2, #step-3, #step-4, #step-5, #step-6').removeClass('inactive');
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4, .accordion #step-5, .accordion #step-6').find('.place-holder-text').hide();
+     $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4, .accordion #step-5, .accordion #step-6').find('.commission-visit-info').show();
+}
+
 
 // $('.hide-page-1').click(function() {
 //      // $("#page-1").toggle("slide");

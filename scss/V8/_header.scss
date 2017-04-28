@@ -66,11 +66,24 @@ header {
           border-right: 1px solid $white;
           z-index: 100;
           box-shadow: 10px 0px 20px 0px rgba($black,0.2);
+          @include standard-transition;
+          &.shrink {
+               width: 5%;
+               .logo {
+                    display: inline-block;
+                    width: 3em;
+                    height: 3em;
+                    margin: 0 0 0 -0.35em;
+                    background: url(#{$image-path}/sirius-logo-small.svg) no-repeat 50% 50%;
+                    background-size: cover;
+               }
+          }
           .padding-wrapper {
                padding: 1.5em;
           }
           .logo {
                border-bottom: none;
+               @include standard-transition;
                img {
                     margin: 0;
                     padding: 0;
@@ -185,6 +198,31 @@ header {
                     margin-right: 0.5em;
                     background: url(#{$image-path}/icons/sign-out.svg) no-repeat 50% 50%;
                     background-size: 1.95em;
+               }
+          }
+          .minimise {
+               position: absolute;
+               bottom: 0;
+               right: -3em;
+               height: 4.3em;
+               width: 3em;
+               text-indent: -1000em;
+               border-radius: 0 5px 5px 0;
+               @include standard-transition;
+               border-left: 1px solid $white;
+               box-shadow: inset 10px 0px 20px 0px rgba($black,0.2);
+               background: url(#{$image-path}/icons/arrows-left-white.svg) $blue no-repeat 50% 50%;
+               background-size: 1.25em;
+               &:hover {
+                    background: darken($blue,5%);
+                    width: 4em;
+                    right: -4em;
+                    background: url(#{$image-path}/icons/arrows-left-white.svg) $blue no-repeat 50% 50%;
+                    background-size: 1.25em;
+               }
+               &.open {
+                    background: url(#{$image-path}/icons/arrows-right-white.svg) $blue no-repeat 50% 50%;
+                    background-size: 1.25em;
                }
           }
      }

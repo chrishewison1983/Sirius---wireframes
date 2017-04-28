@@ -20,6 +20,23 @@
      border-radius: $global-border-radius;
      padding: 0.75em;
      background: $border-colour;
+     &.file-name {
+          padding: 0.75em 0.75em 0.75em 2.45em;
+          text-align: left;
+          margin-top: 1em;
+          background: url(#{$image-path}/icons/pdf-blue.svg) $border-colour no-repeat 3.5% 50%;
+          background-size: 0.85em;
+     }
+}
+
+#add-documents-link {
+     display: inline-block;
+     float: left;
+     clear: both;
+     margin-top: 1em;
+     padding-left: 1.75em;
+     background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+     background-size: 1.25em;
 }
 
 .commission-visit {
@@ -443,7 +460,50 @@ ol#visitor-list {
           }
           .title {
                font-size: 1.4rem;
+               font-family: $Montserrat;
+               font-weight: bold;
           }
+     }
+}
+
+.weeks-6, .weeks-12 {
+     display: inline-block;
+     float: left;
+     font-size: 1.4rem;
+     margin: 0 0 0 1em;
+     .wrapper {
+          float: left;
+          display: inline-block;
+     }
+     span {
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
+          width: 2.25em;
+          height: 2.25em;
+          background: $blue;
+          border-radius: 50%;
+          margin: 0 0.35em 0 0;
+          color: $white;
+          font-weight: bold;
+     }
+     p {
+          float: left;
+          width: auto;
+          font-size: 1.4rem;
+          font-family: $Montserrat;
+          font-weight: bold;
+          color: $black;
+          margin: 0.35em 0 0 0;
+     }
+}
+
+.weeks-6 {
+     span {
+          background: $red;
+     }
+     p {
+          color: $red;
      }
 }
 

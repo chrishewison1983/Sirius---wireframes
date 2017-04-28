@@ -56,11 +56,8 @@
           }
      }
      ol#recipients, ol#asset-summary {
-          margin: 0 0 1.5em 0;
+          margin: 0;
           li {
-               // color: rgba($main-colour,0.4);
-               color: $text-main-colour;
-               font-family: $Opensans-Regular;
                counter-increment: step-counter;
                list-style: none;
                margin: 0 0 1em 0;
@@ -79,6 +76,10 @@
                     height: 1.5em;
                     margin: 0 0.5em 0 0;
                     text-align: center;
+               }
+               span.address {
+                    color: $text-main-colour;
+                    font-family: $Opensans-Regular;
                }
           }
      }
@@ -174,6 +175,24 @@
      width: 100%;
 }
 
+.accordion-section {
+     &.inactive {
+          .accordion-section-title {
+               color: rgba($black,0.4);
+               background: $border-colour;
+               // &:hover {
+               //      background: none;
+               // }
+               .edit {
+                    display: none;
+               }
+               span {
+                    display: none;
+               }
+          }
+     }
+}
+
 button.accordion-section-title {
      background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 97.5% 50% $white;
      background-size: 1.5em;
@@ -252,6 +271,10 @@ button.accordion-section-title {
           border-right: 3px solid $blue;
           border-bottom: 3px solid $blue;
           border-left: 3px solid $blue;
+          .place-holder-text {
+               text-align: left;
+               display: inline-block;
+          }
           ul, p {
                margin: 0;
           }

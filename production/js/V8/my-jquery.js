@@ -253,7 +253,7 @@ $(document).ready(function() {
                // Add active class to section title
                $(this).addClass('active');
                // Open up the hidden content panel
-               $('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+               $('.accordion ' + currentAttrValue).css('display', 'inline-block').addClass('open');
           }
 
           e.preventDefault();
@@ -279,3 +279,25 @@ $(document).ready(function() {
 //           // $(this).nextElementSibling().hide();
 //      }
 // }
+
+// Side panel
+$('.minimise').on('click', function(e) {
+     if ($(this).hasClass('open')) {
+          // $.cookie("main-nav-open", true, {path:'/'});
+          $(this).removeClass('open');
+          $(this).parent().parent().removeClass('shrink');
+          $(this).parent().parent().parent().find('main').removeClass('full-width');
+          $('nav').find('.create-client, .user-cta').show();
+          // $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
+          $('nav').find('.logo').html('<img src="../../../production/img/V8/sirius-logo.svg" alt="Sirius">');
+     } else {
+          // $.cookie("main-nav-open", false, {path:'/'});
+          $(this).addClass('open');
+          $(this).parent().parent().addClass('shrink');
+          $(this).parent().parent().parent().find('main').addClass('full-width');
+          $('nav').find('.create-client, .user-cta').hide();
+          $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
+          $('nav').find('.logo').html('');
+     }
+     return false;
+})

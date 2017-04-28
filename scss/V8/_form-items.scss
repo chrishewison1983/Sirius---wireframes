@@ -309,6 +309,7 @@ form {
      .date-wrapper {
           position: relative;
           display: inline-block;
+          float: left;
           input[type="text"] {
                z-index: 10;
                position: relative;
@@ -411,6 +412,22 @@ form.login-form {
                margin: 0;
                width: auto;
           }
+     }
+}
+
+form.location-form {
+     padding: 0 1.5em 1em 1.5em;
+     border: 2px solid $border-colour;
+     border-top: none;
+     border-radius: 0 0 5px 5px;
+     &.selected {
+          background: lighten($border-colour,2.5%);
+     }
+     hr {
+          margin: 1em 0;
+     }
+     .form-group {
+          margin: 0;
      }
 }
 

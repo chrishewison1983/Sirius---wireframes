@@ -75,8 +75,6 @@
                          <!-- // VISIT SUMMARY - START // -->
                          <h2 class="section-title">Commission visit info</h2>
 
-                         <p>As you progress throught the commission visit form the information will populate here for you to review.</p>
-
                          {{= it.include('side-panel/commission-visit.html') }}
 
                          <!-- // VISIT SUMMARY - END // -->
@@ -149,7 +147,7 @@
                               <!-- // FORM ITEM - 1b - END // -->
 
                               <!-- // FORM ITEM - 2 - START // -->
-                              <div class="form-group urgent">
+                              <div class="form-group violent-risk">
                                    <span></span>
                                    <label class="normal" for="visit-urgent">
                                         <input id="visit-urgent" name="visit-urgent" type="checkbox" value="Yes">
@@ -320,8 +318,8 @@
 
                                    <!-- // 12 - ITEM 7 - START // -->
                                    <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-6">
-                                             <input id="visit-special-requirements-6" name="visit-special-requirements-6" type="checkbox" value="post">
+                                        <label class="normal" for="visit-special-requirements-7">
+                                             <input id="visit-special-requirements-7" name="visit-special-requirements-7" type="checkbox" value="post">
                                              Please confirm if the client is participating in any weekly activities.
                                         </label>
                                    </div>
@@ -381,7 +379,7 @@
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
           <a class="main-cta" id="add-visitors-step-1" href="6b-who.html">Continue</a>
-          <a href="#" onclick="history.back();">Cancel</a>
+          <a href="#" onclick="history.back();">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 

@@ -11,19 +11,6 @@ nav.progress-bar {
      ul {
           margin: 0;
           position: relative;
-          &.steps-five, &.steps-six {
-               span.border {
-                    width: 81%;
-                    height: 0.3em;
-                    background: $border-colour;
-                    position: absolute;
-                    top: 1.5em;
-                    left: 9.5%;
-                    border-radius: 0;
-                    border: none;
-                    z-index: 1;
-               }
-          }
           &.steps-five {
                li {
                     width: 20%;
@@ -43,6 +30,7 @@ nav.progress-bar {
                &:hover {
                     cursor: initial;
                     background: none;
+                    transform: scale(1.2);
                }
                a.wrapper {
                     text-align: center;
@@ -50,12 +38,64 @@ nav.progress-bar {
                     width: 100%;
                     padding: 0;
                     border: none;
+                    cursor: pointer;
                     &:before, &:after {
                          display: none;
                     }
                     &:hover {
                          background: none;
                          cursor: default;
+                    }
+               }
+               &.current {
+                    span {
+                         background: $green;
+                         color: $white;
+                         border: 4px solid $green;
+                    }
+               }
+               &.complete {
+                    a:hover {
+                         cursor: pointer;
+                    }
+                    span {
+                         border: 4px solid $blue;
+                         background: url(#{$image-path}/icons/tick-no-circle.svg) no-repeat 50% 50% $blue;
+                         background-size: 2em;
+                    }
+                    &.current {
+                         span {
+                              background-color: $green;
+                              border: 4px solid $green;
+                         }
+                    }
+               }
+               &.inactive {
+                    span {
+                         border: 4px solid $border-colour;
+                         color: rgba($main-colour,0.4);
+                         background: $white;
+                    }
+                    &:hover {
+                         transform: scale(1);
+                    }
+                    &.current {
+                         a:hover {
+                              cursor: pointer;
+                              transform: scale(1.2);
+                         }
+                         span {
+                              background: $green;
+                              color: $white;
+                              border: 4px solid $green;
+                         }
+                    }
+               }
+               &.current-incomplete {
+                    span {
+                         border: 4px solid $blue;
+                         color: $blue;
+                         background: $white;
                     }
                }
                .number {
@@ -68,20 +108,12 @@ nav.progress-bar {
                     width: 2em;
                     height: 2em;
                     margin: 0;
-                    background: $white;
                     font-size: 1.6rem;
                     border-radius: 50%;
                     font-family: $Montserrat;
                     font-weight: bold;
-                    border: 4px solid $border-colour;
-                    color: rgba($main-colour,0.4);
                     z-index: 10;
                     position: relative;
-                    &.complete {
-                         border: 4px solid $blue !important;
-                         background: url(#{$image-path}/icons/tick-no-circle.svg) no-repeat 50% 50% $blue !important;
-                         background-size: 2em !important;
-                    }
                }
                p {
                     margin: 0.75em 0 0 0;
@@ -92,262 +124,72 @@ nav.progress-bar {
                     font-size: 0.775rem;
                }
           }
-     }
-}
+          .border {
+               width: 81%;
+               height: 0.3em;
+               position: absolute;
+               top: 1.5em;
+               left: 9.5%;
+               border-radius: 0;
+               border: none;
+               z-index: 1;
 
-// ================================ 5 STEPS - START ================================ //
-main.default {
-     &.step-1 nav.progress-bar ul.steps-five {
-          .border {
+               // 6 STEPS, 5 STEPS - STEP 1
                background-color: $border-colour;
-          }
-          li {
-               &.step-1 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
-               }
-          }
-     }
-     &.step-2 nav.progress-bar ul.steps-five {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 25%,$border-colour 25%,$border-colour 25%));
-          }
-          li {
-               &.step-1, &.step-2 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
-               }
-          }
-     }
-     &.step-3 nav.progress-bar ul.steps-five {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 50%,$border-colour 50%,$border-colour 50%));
-          }
-          li {
-               &.step-1, &.step-2, &.step-3 {
-                    &:hover {
-                         transform: scale(1.2);
-                         span {
-                              background: $green;
-                              border: 4px solid $green;
-                         }
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
-               }
-          }
-     }
-     &.step-4 nav.progress-bar ul.steps-five {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 75%,$border-colour 75%,$border-colour 75%));
-          }
-          li {
-               &.step-1, &.step-2, &.step-3, &.step-4 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
-               }
-          }
-     }
-     &.step-5 nav.progress-bar ul.steps-five {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 100%,$border-colour 100%,$border-colour 100%));
-          }
-          li {
-               &.step-1, &.step-2, &.step-3, &.step-4, &.step-5 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
-               }
-          }
-     }
-}
-// ================================ 5 STEPS - END ================================ //
 
-// ================================ 6 STEPS - START ================================ //
-main.default {
-     &.step-1 nav.progress-bar ul.steps-six {
-          .border {
-               background-color: $border-colour;
-          }
-          li {
-               &.step-1 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
+               // 6 STEPS - STEP 2
+               &.sixteen-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 16.666%,$border-colour 16.666%,$border-colour 16.666%));
                }
-          }
-     }
-     &.step-2 nav.progress-bar ul.steps-six {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 16.666%,$border-colour 16.666%,$border-colour 16.666%));
-          }
-          li {
-               &.step-1, &.step-2 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
+               // 6 STEPS - STEP 3
+               &.thirty-eight-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 38%,$border-colour 38%,$border-colour 38%));
                }
-          }
-     }
-     &.step-3 nav.progress-bar ul.steps-six {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 38%,$border-colour 38%,$border-colour 38%));
-          }
-          li {
-               &.step-1, &.step-2, &.step-3 {
-                    &:hover {
-                         transform: scale(1.2);
-                         span {
-                              background: $green;
-                              border: 4px solid $green;
-                         }
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
+               // 6 STEPS - STEP 4
+               &.sixty-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 60%,$border-colour 60%,$border-colour 60%));
                }
-          }
-     }
-     &.step-4 nav.progress-bar ul.steps-six {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 60%,$border-colour 60%,$border-colour 60%));
-          }
-          li {
-               &.step-1, &.step-2, &.step-3, &.step-4 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
+               // 6 STEPS - STEP 5
+               &.eighty-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 80%,$border-colour 80%,$border-colour 80%));
                }
-          }
-     }
-     &.step-5 nav.progress-bar ul.steps-six {
-          .border {
-               background-color: $border-colour; // Old browsers
-               @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
-               @include background-image(linear-gradient(left, $blue 80%,$border-colour 80%,$border-colour 80%));
-          }
-          li {
-               &.step-1, &.step-2, &.step-3, &.step-4, &.step-5 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
+
+               // 5 STEPS - STEP 2
+               &.twenty-five-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 25%,$border-colour 25%,$border-colour 25%));
                }
-          }
-     }
-     &.step-6 nav.progress-bar ul.steps-six {
-          .border {
-               background-color: $blue;
-          }
-          li {
-               &.step-1, &.step-2, &.step-3, &.step-4, &.step-5, &.step-6 {
-                    &:hover {
-                         transform: scale(1.2);
-                    }
-                    a {
-                         cursor: pointer;
-                    }
-                    span {
-                         background: $green;
-                         color: $white;
-                         border: 4px solid $green;
-                    }
+               // 5 STEPS - STEP 3
+               &.fifty-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 50%,$border-colour 50%,$border-colour 50%));
+               }
+               // 5 STEPS - STEP 4
+               &.seventy-five-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 75%,$border-colour 75%,$border-colour 75%));
+               }
+               
+               // 6 STEPS, 5 STEPS - STEP 5 & 6
+               &.one-hundred-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($blue, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $blue 100%,$border-colour 100%,$border-colour 100%));
                }
           }
      }
 }
-// ================================ 6 STEPS - END ================================ //
 
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {

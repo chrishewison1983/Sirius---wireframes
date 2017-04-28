@@ -118,9 +118,9 @@
                          <!-- =========== VISIT INFORMATION SECTION - 1 - START =========== -->
                          <div class="visitor-container">
 
-                              <ol id="visitor-list">
+                              <ul id="visitor-list">
 
-                              </ol>
+                              </ul>
 
                          </div>
                          <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== -->
@@ -134,11 +134,13 @@
 
                                    <!-- // FORM ITEM - 1 - START // -->
                                    <div class="form-group report">
-                                        <label for="datepicker">Report due back by</label>
+                                        <label for="datepicker">Report is scheduled for:</label>
                                         <div class="date-wrapper">
                                              <input type="text" id="datepicker">
                                              <i class="date"></i>
                                         </div>
+                                        <div class="weeks-6"><div class="wrapper"><span>6</span></div> <p>weeks</p></div>
+                                        <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks</p></div>
                                    </div>
                                    <!-- // FORM ITEM - 1 - END // -->
 
@@ -203,7 +205,7 @@
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
           <a class="main-cta" id="add-visitors-step-3" href="6d-case-details.html">Continue</a>
-          <a href="#" onclick="history.back();">Cancel</a>
+          <a href="#" onclick="history.back();">Back to step 2</a>
      </div>
      <!-- CTA-FOOTER - END -->
 
@@ -218,11 +220,16 @@
 
      $(document).ready(function(){
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
-               $('#recipients').append('<li>' + recipient + '</li>');
+               $('#recipients').append('<li class="answer">' + recipient + '</li>');
                var inputCounter = 0;
                $('#visitor-list').append(`
                     <li>
-                         <span class="title">${ recipient }</span>
+
+                         <a class="visitor" data-visit-id='${ (inputCounter + 1) }'>
+                              <span data-value='name'>${ recipient }</span>
+                              <br>
+                              /* <span data-value='address' class="sub-text">${ address }</span>*/
+                         </a>
 
                          <form class="location-form">
 
@@ -230,10 +237,15 @@
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group">
-                                   <label for="visit-accomodation">Address <a href="#">Change address</a></label>
-                                   <p class="answer client-address">
-                                        1 Grimwald Place, Buckley, Flintshire, CV32 788.
-                                   </p>
+                                   <legend>Would you like this deputy present at visit or simply informed about the visit?</legend>
+                                   <label for="visit-present-${ (inputCounter + 1) }" class="radio">
+                                        <input id="visit-present" type="radio" name="radio-inline-group-1" value="Present at visit">
+                                        Present at visit
+                                   </label>
+                                   <label for="visit-contacted-${ (inputCounter + 1) }" class="radio">
+                                        <input id="visit-contacted" type="radio" name="radio-inline-group-1" value="Contacted about visit">
+                                        Contacted about visit
+                                   </label>
                               </div>
                               <!-- // FORM ITEM - 1 - END // -->
 

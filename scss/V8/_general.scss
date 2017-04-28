@@ -34,11 +34,16 @@ main {
           margin: 0 0 5em 15%;
           position: relative;
           // padding: 3em;
+          @include standard-transition;
           .content-wrapper {
                padding: 3em 0;
                &.dashboard, &.commission-visit {
                     padding-top: 0;
                }
+          }
+          &.full-width {
+               width: 95%;
+               margin: 0 0 5em 5%;
           }
      }
 }
@@ -156,6 +161,13 @@ ul, ol {
 
 ol {
      margin: 0 0 1em 0;
+     &.questions {
+          li {
+               font-family: $Montserrat;
+               font-weight: bold;
+               color: $black;
+          }
+     }
      li {
           display: inline-block;
           // border: 2px solid $border-colour;
