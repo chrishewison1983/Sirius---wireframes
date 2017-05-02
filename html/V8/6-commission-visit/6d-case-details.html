@@ -61,7 +61,7 @@
 <!-- PRIMARY CONTENT - START --><main class="default visit-commission step-4"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
-	<ul>
+	<!-- <ul>
 		<li class="menu"><a href="#">Menu</a></li>
 		<li class="border"></li>
 		<li class="alerts">
@@ -70,7 +70,7 @@
 		</li>
 		<li class="settings"><a href="#">Settings</a></li>
 		<li class="border"></li>
-	</ul>
+	</ul> -->
 
 	<form action="search.html">
 		<input type="search" name="search" id="sirius-search" placeholder="Search SIRIUS ID or Surname...">
@@ -276,11 +276,20 @@
 				<div class="info-section">
 					<p>Where will the visit take place:</p>
 					<div class="mulitple-answers">
-						<ol id="recipients" class="questions">
-						</ol>
+						<ul id="visit-location" class="questions">
+						</ul>
 					</div>
 				</div>
 				<!-- ITEM - 1 - END -->
+
+				<!-- ITEM - 2 - START -->
+				<div class="info-section">
+					<p>Report is scheduled for:</p>
+					<p class="answer visit-due-back-date">N/A</p>
+				</div>
+				<!-- ITEM - 2 - END -->
+
+
 
 			</div>
 		</div>
@@ -307,6 +316,20 @@
 					<p>Assets:</p>
 					<div class="mulitple-answers">
 						<ol id="asset-summary" class="questions">
+							<li data-asset-id="1">
+	                                   <span class="title">New Mazda car</span>
+	                                   <br>
+	                                   <span>Value: <strong>£27,000.00</strong>,</span>
+	                                   <span>Date: <strong>Thu Mar 02 2017</strong></span>
+	                                   <span class="remove"></span>
+	                              </li>
+	                              <li data-asset-id="2">
+	                                   <span class="title">Painting by Craig Davison</span>
+	                                   <br>
+	                                   <span>Value: <strong>£1,000.00</strong>,</span>
+	                                   <span>Date: <strong>Fri Nov 25 2016</strong></span>
+	                                   <span class="remove"></span>
+	                              </li>
 						</ol>
 					</div>
 				</div>
@@ -466,10 +489,19 @@
 			<div id="accordion-1" class="accordion-section-content">
 				<ul>
 					<li>
-						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
 						<form>
 							<label class="normal" for="add-to-visit-1">
 								<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+					<li>
+						<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-2">
+								<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post">
 								Add to visit
 							</label>
 						</form>
@@ -490,10 +522,10 @@
 			<div id="accordion-2" class="accordion-section-content">
 				<ul>
 					<li>
-						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
 						<form>
-							<label class="normal" for="add-to-visit-2">
-								<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post">
+							<label class="normal" for="add-to-visit-3">
+								<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post">
 								Add to visit
 							</label>
 						</form>
@@ -514,10 +546,19 @@
 			<div id="accordion-3" class="accordion-section-content">
 				<ul>
 					<li>
-						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
 						<form>
-							<label class="normal" for="add-to-visit-3">
-								<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post">
+							<label class="normal" for="add-to-visit-4">
+								<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post">
+								Add to visit
+							</label>
+						</form>
+					</li>
+					<li>
+						<a href="#" class="hide-page-1">Correspondance_document_2.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-5">
+								<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post">
 								Add to visit
 							</label>
 						</form>
@@ -538,10 +579,10 @@
 			<div id="accordion-4" class="accordion-section-content">
 				<ul>
 					<li>
-						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<a href="#" class="hide-page-1">Courts_documents_1.pdf</a>
 						<form>
-							<label class="normal" for="add-to-visit-4">
-								<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post">
+							<label class="normal" for="add-to-visit-6">
+								<input id="add-to-visit-6" name="add-to-visit-6" type="checkbox" value="post">
 								Add to visit
 							</label>
 						</form>
@@ -562,10 +603,10 @@
 			<div id="accordion-5" class="accordion-section-content">
 				<ul>
 					<li>
-						<a href="#" class="hide-page-1">Lorem ipsum...</a>
+						<a href="#" class="hide-page-1">Other_document.pdf</a>
 						<form>
-							<label class="normal" for="add-to-visit-5">
-								<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post">
+							<label class="normal" for="add-to-visit-7">
+								<input id="add-to-visit-7" name="add-to-visit-7" type="checkbox" value="post">
 								Add to visit
 							</label>
 						</form>
@@ -589,7 +630,7 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Case summary</h2> <!-- =========== BASIC INFO SECTION - START =========== --> <div class="visitor-container"> <form class="basic-information"> <p> Unless an extension is requested, the report must be submitted on or before the due date </p> <!-- // FORM ITEM - 1 - START // --> <div class="form-group set-2"> <legend>Part of Assurance Visit?</legend> <label for="visit-assurance-yes" class="radio"> <input id="visit-assurance-yes" type="radio" name="radio-inline-group-1" value="Yes"> Yes </label> <label for="visit-assurance-no" class="radio"> <input id="visit-assurance-no" type="radio" name="radio-inline-group-1" value="No"> No </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <legend>Is a copy of order provided?</legend> <label for="visit-order-yes" class="radio checked"> <input id="visit-order-yes" type="radio" name="radio-inline-group-2" value="Yes" checked> Yes </label> <label for="visit-order-no" class="radio"> <input id="visit-order-no" type="radio" name="radio-inline-group-2" value="No"> No </label> <p class="place-holder-text file-name">file-name.pdf</p> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <legend>Enclosures?</legend> <label for="visit-enclosure-yes" class="radio"> <input id="visit-enclosure-yes" type="radio" name="radio-inline-group-3" value="Yes"> Yes </label> <label for="visit-enclosure-no" class="radio"> <input id="visit-enclosure-no" type="radio" name="radio-inline-group-3" value="No"> No </label> <a href="#" id="add-documents-link">Would you like to add documents to the visit?</a> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <!-- <div class="form-group"> <legend>There are deputies appointed jointly and severally?</legend> <label for="visit-attorneys-yes" class="radio"> <input id="visit-attorneys-yes" type="radio" name="radio-inline-group-4" value="Yes"> Yes </label> <label for="visit-attorneys-no" class="radio"> <input id="visit-attorneys-no" type="radio" name="radio-inline-group-4" value="No"> No </label> </div> --> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <!-- <div class="form-group"> <legend>There are attorneys appointed jointly?</legend> <label for="visit-jointly-yes" class="radio"> <input id="visit-jointly-yes" type="radio" name="radio-inline-group-5" value="Yes"> Yes </label> <label for="visit-jointly-no" class="radio"> <input id="visit-jointly-no" type="radio" name="radio-inline-group-5" value="No"> No </label> </div> --> <!-- // FORM ITEM - 5 - END // --> <hr> </form> </div> <!-- =========== BASIC INFO SECTION - START =========== --> <!-- =========== CLIENT ASSETS SECTION - START =========== --> <div class="visitor-container"> <h2 class="section-title">Client assets (optional)</h2> <p> Client’s total assets (provide full details of the known money, property &amp; investments belonging to the client – include the date and source of information obtained) </p> <ol id="asset-list" start="1"> <li data-asset-id="1"> <span class="title"> <div class="type">Car</div>: <div class="description">New Mazda car</div> </span> <span>Value: <strong data-asset-info="value">&pound;27,000.00</strong>,</span> <span>Date: <strong data-asset-info="date">Thu Mar 02 2017</strong></span> <span class="edit"></span> <span class="remove"></span> </li> <li data-asset-id="2"> <span class="title"> <div class="type">Artwork</div>: <div class="description">Craig Davison</div> </span> <span>Value: <strong data-asset-info="value">&pound;1,000.00</strong>,</span> <span>Date: <strong data-asset-info="date">Fri Nov 25 2016</strong></span> <span class="edit"></span> <span class="remove"></span> </li> </ol> <h3 class="sub-section-title">Add another asset</h3> <form id="assets"> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="visit-asset-type">Type of asset</label> <select id="visit-asset-type"> <option>-- Select --</option> <option value="Car">Car</option> <option value="House">House</option> <option value="Artwork">Artwork</option> <option value="Other">Other</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="visit-asset">Asset description</label> <input id="visit-asset" name="visit-asset" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group currency"> <label for="visit-asset-value">Value</label> <div class="date-wrapper"> <span></span> <input type="text" id="visit-asset-value"> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group"> <label for="datepicker">Date reported</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> </div> <!-- // FORM ITEM - 4 - END // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="confirm-add-asset">Add</a> <a href="#" id="cancel-asset">Cancel</a> </div> </form> <!-- // ADD NEW ASSET - START // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="add-asset">Add asset</a> </div> <!-- // ADD NEW ASSET - END // --> </div> <!-- =========== CLIENT ASSETS SECTION - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="add-visitors-step-4" href="6e-summary-of-case.html">Continue</a> <a href="#" onclick="history.back();">Back to step 3</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Case summary</h2> <!-- =========== BASIC INFO SECTION - START =========== --> <div class="visitor-container"> <form class="basic-information"> <p> Unless an extension is requested, the report must be submitted on or before the due date </p> <!-- // FORM ITEM - 1 - START // --> <div class="form-group set-2"> <legend>Part of Assurance Visit?</legend> <label for="visit-assurance-yes" class="radio"> <input id="visit-assurance-yes" type="radio" name="radio-inline-group-1" value="Yes"> Yes </label> <label for="visit-assurance-no" class="radio"> <input id="visit-assurance-no" type="radio" name="radio-inline-group-1" value="No"> No </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <legend>Is a copy of order provided?</legend> <label for="visit-order-yes" class="radio checked"> <input id="visit-order-yes" type="radio" name="radio-inline-group-2" value="Yes" checked> Yes </label> <label for="visit-order-no" class="radio"> <input id="visit-order-no" type="radio" name="radio-inline-group-2" value="No"> No </label> <p class="place-holder-text file-name">file-name.pdf</p> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <legend>Enclosures?</legend> <label for="visit-enclosure-yes" class="radio"> <input id="visit-enclosure-yes" type="radio" name="radio-inline-group-3" value="Yes"> Yes </label> <label for="visit-enclosure-no" class="radio"> <input id="visit-enclosure-no" type="radio" name="radio-inline-group-3" value="No"> No </label> <a href="#" id="add-documents-link">Would you like to add documents to the visit?</a> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <!-- <div class="form-group"> <legend>There are deputies appointed jointly and severally?</legend> <label for="visit-attorneys-yes" class="radio"> <input id="visit-attorneys-yes" type="radio" name="radio-inline-group-4" value="Yes"> Yes </label> <label for="visit-attorneys-no" class="radio"> <input id="visit-attorneys-no" type="radio" name="radio-inline-group-4" value="No"> No </label> </div> --> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <!-- <div class="form-group"> <legend>There are attorneys appointed jointly?</legend> <label for="visit-jointly-yes" class="radio"> <input id="visit-jointly-yes" type="radio" name="radio-inline-group-5" value="Yes"> Yes </label> <label for="visit-jointly-no" class="radio"> <input id="visit-jointly-no" type="radio" name="radio-inline-group-5" value="No"> No </label> </div> --> <!-- // FORM ITEM - 5 - END // --> <hr> </form> </div> <!-- =========== BASIC INFO SECTION - START =========== --> <!-- =========== CLIENT ASSETS SECTION - START =========== --> <div class="visitor-container"> <h2 class="section-title">Client assets (optional)</h2> <p> Client’s total assets (provide full details of the known money, property &amp; investments belonging to the client – include the date and source of information obtained) </p> <ol id="asset-list" start="1"> <li data-asset-id="1"> <span class="title"> <div class="type">Car</div>: <div class="description">New Mazda car</div> </span> <span>Value: <strong data-asset-info="value">&pound;27,000.00</strong>,</span> <span>Date: <strong data-asset-info="date">Thu Mar 02 2017</strong></span> <span class="edit"></span> <span class="remove"></span> </li> <li data-asset-id="2"> <span class="title"> <div class="type">Artwork</div>: <div class="description">Craig Davison</div> </span> <span>Value: <strong data-asset-info="value">&pound;1,000.00</strong>,</span> <span>Date: <strong data-asset-info="date">Fri Nov 25 2016</strong></span> <span class="edit"></span> <span class="remove"></span> </li> </ol> <h3 class="sub-section-title">Add another asset</h3> <form id="assets"> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="visit-asset-type">Type of asset</label> <select id="visit-asset-type"> <option>-- Select --</option> <option value="Car">Car</option> <option value="House">House</option> <option value="Artwork">Artwork</option> <option value="Other">Other</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="visit-asset">Asset description</label> <input id="visit-asset" name="visit-asset" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group currency"> <label for="visit-asset-value">Value</label> <div class="date-wrapper"> <span></span> <input type="text" id="visit-asset-value"> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group"> <label for="datepicker">Date reported</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> </div> <!-- // FORM ITEM - 4 - END // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="confirm-add-asset">Add</a> <a href="#" id="cancel-asset">Cancel</a> </div> </form> <!-- // ADD NEW ASSET - START // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="add-asset">Add asset</a> </div> <!-- // ADD NEW ASSET - END // --> </div> <!-- =========== CLIENT ASSETS SECTION - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta" id="add-visitors-step-4" href="6e-summary-of-case.html">Continue</a> <a href="#" onclick="history.back();">Back to step 3</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) { $('#asset-summary').append('<li>' + asset + '</li>'); }); JSON.parse(sessionStorage.getItem('selected-location')).forEach(function(location) { $('#visit-location').append('<li>' + location + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V8/hideShowPassword.js"></script>
 	<script src="../../../production/js/V8/my-jquery.js"></script>
@@ -605,5 +646,6 @@
 	<script src="../../../production/js/V8/my-cookies-commission-visit.js"></script>
 	<script src="../../../production/js/V8/my-jquery-commission-visit.js"></script>
 	<script src="../../../production/js/V8/my-jquery-progress-bar.js"></script>
+	<script src="../../../production/js/V8/jquery.tablesorter.js"></script>
 <!-- // JS BODY END - END // -->
 </body></html>

@@ -152,6 +152,8 @@ $("#add-visitors-step-3").on("click", function (e) {
      $.cookie("completed-step-3", true, {path:'/'});
 });
 
+if ($.cookie("visit-due-back-date")) {  $(".visit-due-back-date").text($.cookie("visit-due-back-date"));  }
+
 /////////////////// ======================== !!!!!!!!!! CHANGE BASED ON DATE OF TEST - START !!!!!!!!!! ======================== ///////////////////
 $('.weeks-6, .weeks-12').css('display', 'none');
 

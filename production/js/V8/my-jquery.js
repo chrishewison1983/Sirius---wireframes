@@ -13,15 +13,15 @@ $('input:radio').click(function() {
 });
 
 // Top nav search
-$('#sirius-search').focus(function() {
-    /* to make this flexible, I'm storing the current width in an attribute*/
-    $(this).attr('data-default', $(this).width());
-    $(this).animate({ width: 350 }, 'slow');
-}).blur(function() {
-    /* lookup the original width */
-    // var w = $(this).attr('data-default');
-    $(this).animate({ width: 275 }, 'slow');
-});
+// $('#sirius-search').focus(function() {
+//     /* to make this flexible, I'm storing the current width in an attribute*/
+//     $(this).attr('data-default', $(this).width());
+//     $(this).animate({ width: 600 }, 'slow');
+// }).blur(function() {
+//     /* lookup the original width */
+//     // var w = $(this).attr('data-default');
+//     $(this).animate({ width: 400 }, 'slow');
+// });
 
 // Log in code
 $('input#password').click(function(){
@@ -283,21 +283,28 @@ $(document).ready(function() {
 // Side panel
 $('.minimise').on('click', function(e) {
      if ($(this).hasClass('open')) {
-          // $.cookie("main-nav-open", true, {path:'/'});
           $(this).removeClass('open');
           $(this).parent().parent().removeClass('shrink');
           $(this).parent().parent().parent().find('main').removeClass('full-width');
           $('nav').find('.create-client, .user-cta').show();
-          // $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
           $('nav').find('.logo').html('<img src="../../../production/img/V8/sirius-logo.svg" alt="Sirius">');
+          $('nav').find('.sign-out').html('<span class="nav-icon"></span> Sign out');
+          $(this).parent().parent().parent().find('.row').removeClass('full-width-row');
      } else {
-          // $.cookie("main-nav-open", false, {path:'/'});
           $(this).addClass('open');
           $(this).parent().parent().addClass('shrink');
           $(this).parent().parent().parent().find('main').addClass('full-width');
           $('nav').find('.create-client, .user-cta').hide();
           $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
           $('nav').find('.logo').html('');
+          $(this).parent().parent().parent().find('.row').addClass('full-width-row');
      }
      return false;
 })
+
+// Dashboard
+// $(document).ready(function() {
+//      if ($('div').hasClass('urgent')) {
+//           $(this).parent().addClass('test');
+//      }
+// });

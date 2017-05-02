@@ -48,6 +48,12 @@ main {
      }
 }
 
+.row {
+     &.full-width-row {
+          max-width: 90rem;
+     }
+}
+
 .login {
      height: 100vh;
      @include flexbox;

@@ -162,3 +162,35 @@ if ($.cookie("user-journey") == 2) {
           $("#list-of-deputies #deputy-confirmation").hide(500)
      }, 5000);
 }
+
+// Full width
+// $('.minimise').on('click', function() {
+//     $(this).toggle();
+// });
+$('.minimise').on('click', function(e) {
+     $.cookie("full-width", true, {path:'/'});
+})
+
+$('.minimise').on('click', function(e) {
+     $.cookie("full-width-close", true, {path:'/'});
+})
+
+
+if ($.cookie("full-width") === 'true') {
+     // alert('working');
+     $('.minimise').addClass('open');
+     $('.minimise').parent().parent().addClass('shrink');
+     $('.minimise').parent().parent().parent().find('main').addClass('full-width');
+     $('nav').find('.create-client, .user-cta').hide();
+     $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
+     $('nav').find('.logo').html('');
+     $('.minimise').parent().parent().parent().find('.row').addClass('full-width-row');
+}
+// if ($.cookie("full-width-close") === 'true') {
+//      $('.minimise').removeClass('open');
+//      $('.minimise').parent().parent().removeClass('shrink');
+//      $('.minimise').parent().parent().parent().find('main').removeClass('full-width');
+//      $('nav').find('.create-client, .user-cta').show();
+//      $('nav').find('.logo').html('<img src="../../../production/img/V8/sirius-logo.svg" alt="Sirius">');
+//      $('.minimise').parent().parent().parent().find('.row').removeClass('full-width-row');
+// }

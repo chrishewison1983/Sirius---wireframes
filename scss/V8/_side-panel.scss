@@ -280,6 +280,9 @@ button.accordion-section-title {
           }
           ul {
                li {
+                    &:hover {
+                         background: none;
+                    }
                     &:last-of-type {
                          margin-bottom: 0;
                     }

@@ -228,17 +228,36 @@ $(document).ready(function() {
           $(this).siblings().addClass('selected');
           $(this).parent().siblings().find('.visitor').removeClass('selected');
           $(this).parent().siblings().find('.location-form').removeClass('selected');
+          persistSelectedVisitor();
      });
 
-     $('label.radio').on('click', function() {
+     $('#visitor-list label.radio').on('click', function() {
           $(this).toggleClass('checked');
           if ($(this).hasClass('checked')) {
                $(this).siblings('.radio').removeClass('checked');
           }
      });
 
+     $('#visitor-list a').click(function(e){
+          e.preventDefault();
+          $("#visit-location").append(`
+               <li>
+                    ${ $(this).find('[data-value="name"]').text() }
+               </li>`
+          );
+     });
+
 });
 
+$('#add-visitors-step-3').click(function(e){
+     persistSelectedLocation();
+});
+
+function persistSelectedLocation() {
+     sessionStorage.setItem('selected-location', JSON.stringify($('#visit-location li').map(function() {
+          return $(this).text().trim();
+     }).toArray()));
+}
 // Side panel content
 if ($.cookie("completed-step-1") && $.cookie("completed-step-2") == 'true') {
      $('.accordion').find('#step-1, #step-2').removeClass('inactive');
@@ -409,7 +428,7 @@ $("#visit-dangers-no").click( function(){
      if($(this).is(':checked')) { $('.answer-5b').slideUp('slow'); }
 });
 
-$("#third-family-background").keypress( function(){
+$("#visit-family-background").keypress( function(){
      $('#cta-footer').slideDown('slow');
 });
 

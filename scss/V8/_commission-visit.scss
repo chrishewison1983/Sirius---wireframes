@@ -414,6 +414,17 @@ ol#asset-list {
      width: 100%;
 }
 
+ul#visit-location {
+     li {
+          color: $black;
+          font-family: $Montserrat;
+          font-weight: bold;
+          &:last-of-type {
+               margin-bottom: 0;
+          }
+     }
+}
+
 ol#visitor-list {
      margin: 0 0 0 0;
      li {

@@ -331,6 +331,13 @@
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
           });
+          JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
+               $('#asset-summary').append('<li>' + asset + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-location')).forEach(function(location) {
+               $('#visit-location').append('<li>' + location + '</li>');
+          });
+
      });
 
 </script>
