@@ -244,6 +244,7 @@
      border: 3px solid $border-colour;
      color: $main-colour;
      padding: 0.25em 1em;
+     margin: 0 0 0 1em;
      text-transform: uppercase;
      font-size: 0.575rem;
      @include flexbox;
@@ -251,7 +252,7 @@
      @include justify-content(center);
      border-radius: $global-border-radius;
      width: 7em;
-     float: right;
+     float: left;
      position: relative;
      top: -0.4em;
      &.alert {
@@ -511,6 +512,12 @@ table {
                     background-color: $red !important;
                }
           }
+          p {
+               display: inline-block;
+               float: left;
+               margin: 0;
+               width: auto;
+          }
           span {
                display: inline-block;
                position: relative;
@@ -532,35 +539,35 @@ table {
                     float: left;
                     margin: 0 1em 0 0;
                     &.commission-visit {
-                         background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2.25em;
                     }
                     &.review-correspondence {
-                         background: url(#{$image-path}/icons/tasks/review-correspondence-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/tasks/review-correspondence-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2.25em;
                     }
                     &.review-report {
-                         background: url(#{$image-path}/icons/tasks/review-report-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/tasks/review-report-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 1.75em;
                     }
                     &.print-notice {
-                         background: url(#{$image-path}/icons/tasks/print-notice-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/tasks/print-notice-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2em;
                     }
                     &.annual-report {
-                         background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2.25em;
                     }
                     &.assign-validity {
-                         background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2.25em;
                     }
                     &.death-notification {
-                         background: url(#{$image-path}/icons/tasks/death-notification-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/tasks/death-notification-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2.25em;
                     }
                     &.disclaimer {
-                         background: url(#{$image-path}/icons/tasks/disclaimer-white.svg) no-repeat 50% 50% $pink;
+                         background: url(#{$image-path}/icons/tasks/disclaimer-white.svg) no-repeat 50% 50% $main-colour;
                          background-size: 2.25em;
                     }
                }
