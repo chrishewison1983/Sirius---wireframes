@@ -13,7 +13,7 @@
 //      }
 // }
 
-.place-holder-text {
+.place-holder-text, #documents-list {
      display: inline-block;
      text-align: center;
      width: 100%;
@@ -27,6 +27,10 @@
           background: url(#{$image-path}/icons/pdf-blue.svg) $border-colour no-repeat 3.5% 50%;
           background-size: 0.85em;
      }
+}
+
+#documents-list {
+     text-align: left;
 }
 
 #add-documents-link {

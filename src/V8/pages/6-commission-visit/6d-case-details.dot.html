@@ -128,11 +128,11 @@
                                    <div class="form-group set-2">
                                         <legend>Part of Assurance Visit?</legend>
                                         <label for="visit-assurance-yes" class="radio">
-                                             <input id="visit-assurance-yes" type="radio" name="radio-inline-group-1" value="Yes">
+                                             <input id="visit-assurance-yes" type="radio" name="assurance-visit" value="Yes">
                                              Yes
                                         </label>
                                         <label for="visit-assurance-no" class="radio">
-                                             <input id="visit-assurance-no" type="radio" name="radio-inline-group-1" value="No">
+                                             <input id="visit-assurance-no" type="radio" name="assurance-visit" value="No">
                                              No
                                         </label>
                                    </div>
@@ -142,14 +142,14 @@
                                    <div class="form-group">
                                         <legend>Is a copy of order provided?</legend>
                                         <label for="visit-order-yes" class="radio checked">
-                                             <input id="visit-order-yes" type="radio" name="radio-inline-group-2" value="Yes" checked>
+                                             <input id="visit-order-yes" type="radio" name="order-provided" value="Yes" checked>
                                              Yes
                                         </label>
                                         <label for="visit-order-no" class="radio">
-                                             <input id="visit-order-no" type="radio" name="radio-inline-group-2" value="No">
+                                             <input id="visit-order-no" type="radio" name="order-provided" value="No">
                                              No
                                         </label>
-                                        <p class="place-holder-text file-name">file-name.pdf</p>
+                                        <p class="place-holder-text file-name">court-order-document.pdf</p>
                                    </div>
                                    <!-- // FORM ITEM - 2 - END // -->
 
@@ -157,15 +157,22 @@
                                    <div class="form-group">
                                         <legend>Enclosures?</legend>
                                         <label for="visit-enclosure-yes" class="radio">
-                                             <input id="visit-enclosure-yes" type="radio" name="radio-inline-group-3" value="Yes">
+                                             <input id="visit-enclosure-yes" type="radio" name="visit-enclosure" value="Yes">
                                              Yes
                                         </label>
                                         <label for="visit-enclosure-no" class="radio">
-                                             <input id="visit-enclosure-no" type="radio" name="radio-inline-group-3" value="No">
+                                             <input id="visit-enclosure-no" type="radio" name="visit-enclosure" value="No">
                                              No
                                         </label>
                                         <a href="#" id="add-documents-link">Would you like to add documents to the visit?</a>
                                    </div>
+                                   <!-- // FORM ITEM - 3 - END // -->
+
+                                   <!-- // FORM ITEM - 4 - START // -->
+                                   <p id="documents-list-intro">Documents included in visit:</p>
+                                   <ol id="documents-list">
+
+                                   </ol>
                                    <!-- // FORM ITEM - 3 - END // -->
 
                                    <!-- // FORM ITEM - 4 - START // -->

@@ -178,7 +178,25 @@ if ($.cookie("visit-due-back-date")) {
 //////////////////////////////////////// Step - 4 (6D-CASE-SUMMARY-& ASSETS) //////////////////////////////////////
 $("#add-visitors-step-4").on("click", function (e) {
      $.cookie("completed-step-4", true, {path:'/'});
+
+     $.cookie("visit-assurance", $("input[name=visit-assurance]:checked").parent().text(), {path:'/'});
+     $.cookie("visit-order", $("input[name=order-provided]:checked").parent().text(), {path:'/'});
+     $.cookie("visit-file-name", $(".file-name").text(), {path:'/'});
+     $.cookie("visit-enclosure", $("input[name=visit-enclosure]:checked").parent().text(), {path:'/'});
+
 });
+
+if ($.cookie("visit-assurance")) {  $(".visit-assurance").text($.cookie("visit-assurance")); }
+
+if ($.cookie("visit-order")) {  $(".visit-order").text($.cookie("visit-order")); }
+if ($.cookie("visit-file-name")) {  $(".visit-file-name").text($.cookie("visit-file-name")); }
+
+if ($.cookie("visit-enclosure")) {  $(".visit-enclosure").text($.cookie("visit-enclosure")); }
+// if ($.cookie("visit-submitted-late-answer")) {
+//      $(".visit-submitted-late-answer").text($.cookie("visit-submitted-late-answer"));
+// } else {
+//      $(".visit-submitted-late-answer").hide();
+// }
 
 if ($.cookie("user-journey") == 4) {
      $("#tab-4.client-details").addClass('current');

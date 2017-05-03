@@ -309,6 +309,45 @@ $('#confirm-add-asset').click(function(e){
      );
 });
 
+$('#documents-list').hide();
+$('#documents-list-intro').hide();
+
+$('#add-to-visit-1, #add-to-visit-2, #add-to-visit-3, #add-to-visit-4, #add-to-visit-5, #add-to-visit-6, #add-to-visit-7').click(function(e){
+     // alert($(this).parent().parent().parent().find('a').text());
+     $('#documents-list-intro').show();
+     $('#documents-list').show().append(`
+               <li>${ $(this).parent().parent().parent().find('a').text() }</li>
+          `
+     );
+});
+
+// $(".add-to-visit").change(function() {
+//      // If checked
+//      var value = $(this).val(),
+//           $list = $("#documents-list");
+//      if (this.checked) {
+//           //add to the right
+//           $list.show().append("<li data-value='" + value + "'>" + value + "</li>");
+//           $('#documents-list-intro').show();
+//      }
+//      else {
+//           //hide to the right
+//           $list.find('li[data-value="' + value + '"]').slideUp("fast", function() {
+//                $(this).remove();
+//           });
+//           $('#documents-list-intro').hide();
+//      }
+// });
+
+$('#add-to-visit-1, #add-to-visit-2, #add-to-visit-3, #add-to-visit-4, #add-to-visit-5, #add-to-visit-6, #add-to-visit-7').parent().click(function(e){
+     // alert($(this).parent().parent().parent().find('a').text());
+     $('#documents-list-intro').show();
+     $('#documents-list').show().remove(`
+               <li>${ $(this).parent().parent().parent().find('a').text() }</li>
+          `
+     );
+});
+
 $("#asset-list").on("click", ".remove", function(){
      $(this).parent().remove();
      var match = $(this).parent().data('asset-id');
