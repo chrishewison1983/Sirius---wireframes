@@ -453,18 +453,18 @@ table {
                }
                span {
                     background: url(#{$image-path}/icons/filter-down-blue.svg) no-repeat 50% 50%;
-                    background-size: 1.5em;
+                    background-size: contain;
                }
                &.headerSortDown {
                     span {
                          background: url(#{$image-path}/icons/filter-up-blue.svg) no-repeat 50% 50%;
-                         background-size: 1.5em;
+                         background-size: contain;
                     }
                }
                &.headerSortUp {
                     span {
                          background: url(#{$image-path}/icons/filter-up-blue.svg) no-repeat 50% 50%;
-                         background-size: 1.5em;
+                         background-size: contain;
                     }
                }
           }
@@ -510,6 +510,12 @@ table {
                // border-left: 10px solid $red;
                .task-type {
                     background-color: $red !important;
+               }
+          }
+          tr.complete {
+               box-shadow: inset 10px 0px 0px 0px rgba($green,1);
+               .task-type {
+                    background-color: $green !important;
                }
           }
           p {

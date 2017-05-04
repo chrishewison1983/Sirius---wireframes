@@ -234,7 +234,6 @@ $("#left, #right").hover(function() {
 });
 
 // Accordion
-
 $(document).ready(function() {
      function close_accordion_section() {
           $('.accordion .accordion-section-title').removeClass('active');
@@ -303,8 +302,15 @@ $('.minimise').on('click', function(e) {
 })
 
 // Dashboard
-// $(document).ready(function() {
-//      if ($('div').hasClass('urgent')) {
-//           $(this).parent().addClass('test');
-//      }
-// });
+$(document).ready(function() {
+     // if ($('div').hasClass('urgent')) {
+     //      $(this).parent().addClass('test');
+     // }
+     $('#myTable input:checkbox').change(function(){
+          if($(this).is(":checked")) {
+               $(this).parent().parent().parent().parent().parent().addClass("complete");
+          } else {
+               $(this).parent().parent().parent().parent().parent().removeClass("complete");
+          }
+     });
+});
