@@ -1,4 +1,34 @@
 // =================================== Commission visit - COOKIES =================================== //
+////////////////////////////////////// DEFINE USER JOURNEY //////////////////////////////////////
+
+$(".task").on("click", function (e) {
+     $.cookie("journey-task-led", true, {path:'/'});
+});
+
+if ($.cookie("journey-task-led") == 'true') {
+     $("#add-visitors-step-6").attr('href','../dashboard.html');
+     $('#confirmation-dashboard-visit').show();
+
+     $('#myTable').find("tr.link-for-commission-visit").addClass("complete");
+     $('#myTable').find("tr.link-for-commission-visit").hide('slow').delay(1500);
+     $('#myTable').closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
+
+     // This hides the confirmation box after 5 seconds
+     setTimeout(function() {
+          $("#confirmation-dashboard-visit").hide(500)
+     }, 5000);
+
+} else {
+     $("#add-visitors-step-6").attr('href','../4-client-page/4a-new-client.html');
+
+     // $('main.new-client').find('.tab-link').removeClass('current');
+     // $('main.new-client').find('.tab-link[data-tab="tab-6"]').addClass('current');
+     //
+     // $('main.new-client').find('.tab-content').removeClass('current');
+     // $('main.new-client').find('#tab-6').addClass('current');
+
+}
+
 ////////////////////////////////////// Step - 1 (6A-WHY?) //////////////////////////////////////
 $("#add-visitors-step-1").on("click", function (e) {
      // $.cookie("type-of-visit", $("#third-why").val(), {path:'/'});
@@ -198,25 +228,6 @@ if ($.cookie("visit-enclosure")) {  $(".visit-enclosure").text($.cookie("visit-e
 //      $(".visit-submitted-late-answer").hide();
 // }
 
-if ($.cookie("user-journey") == 4) {
-     $("#tab-4.client-details").addClass('current');
-     $("#tab-1.client-details, #tab-2.client-details, #tab-3.client-details, #tab-5.client-details, #tab-6.client-details").removeClass('current');
-     $('.client-details .tab-link[data-tab="tab-4"]').addClass('current');
-     $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-2"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-5, .client-details .tab-link[data-tab="tab-6"]').removeClass('current');
-     $('#list-of-timeline .no-items').hide();
-     $('#list-of-tasks .no-items').hide();
-
-     $("#list-of-timeline #task-list").show();
-     $("#list-of-timeline #visit-confirmation").show();
-     $('#list-of-tasks #task-list').show();
-
-     // This hides the confirmation box after 5 seconds
-     setTimeout(function() {
-          $("#list-of-timeline #visit-confirmation").hide(500)
-     }, 5000);
-
-}
-
 //////////////////////////////////////// Step - 5 (6E-CASE-DETAILS) //////////////////////////////////////
 $("#add-visitors-step-5").on("click", function (e) {
      $.cookie("completed-step-5", true, {path:'/'});
@@ -286,7 +297,7 @@ if ($.cookie("visit-first-date")) {
 
 //////////////////////////////////////// Step - 6 (6E-VISIT SUMMARY) //////////////////////////////////////
 $("#add-visitors-step-6").on("click", function (e) {
-     $.cookie("user-journey", 4, {path:'/'});
+     $.cookie("user-journey", 6, {path:'/'});
      $.cookie("completed-step-6", true, {path:'/'});
 
      // Cookies for side bar
@@ -324,17 +335,25 @@ if ($.cookie("visit-family-background")) { $(".visit-family-background").text($.
 
 $("#list-of-timeline #task-list").hide();
 
-if ($.cookie("user-journey") == 4) {
-     $("#tab-4.client-details").addClass('current');
-     $("#tab-1.client-details, #tab-2.client-details, #tab-3.client-details, #tab-5.client-details, #tab-6.client-details").removeClass('current');
-     $('.client-details .tab-link[data-tab="tab-4"]').addClass('current');
-     $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-2"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-5, .client-details .tab-link[data-tab="tab-6"]').removeClass('current');
+if ($.cookie("user-journey") == 6) {
+     $("#tab-6.client-details").addClass('current');
+     $("#tab-1.client-details, #tab-2.client-details, #tab-3.client-details, #tab-4.client-details, #tab-5.client-details, #tab-7.client-details").removeClass('current');
+     $('.client-details .tab-link[data-tab="tab-6"]').addClass('current');
+     $('.client-details .tab-link[data-tab="tab-1"], .client-details .tab-link[data-tab="tab-2"], .client-details .tab-link[data-tab="tab-3"], .client-details .tab-link[data-tab="tab-4, .client-details .tab-link[data-tab="tab-5"], .client-details .tab-link[data-tab="tab-7"]').removeClass('current');
      $('#list-of-timeline .no-items').hide();
      $('#list-of-tasks .no-items').hide();
 
      $("#list-of-timeline #task-list").show();
      $("#list-of-timeline #visit-confirmation").show();
      $('#list-of-tasks #task-list').show();
+
+     $("#confirmation-dashboard-visit").show();
+
+     // This hides the confirmation box after 5 seconds
+     setTimeout(function() {
+          $("#confirmation-dashboard-visit").hide(500)
+     }, 5000);
+
 
      // This hides the confirmation box after 5 seconds
      setTimeout(function() {

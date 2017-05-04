@@ -91,7 +91,7 @@ $(document).ready(function(){
      // This hides the confirmation box after 10 seconds
      setTimeout(function() {
           $("#task-list .pdf-review").show(500)
-     }, 10000);
+     }, 0);
 
 
 });
@@ -303,14 +303,13 @@ $('.minimise').on('click', function(e) {
 
 // Dashboard
 $(document).ready(function() {
-     // if ($('div').hasClass('urgent')) {
-     //      $(this).parent().addClass('test');
-     // }
      $('#myTable input:checkbox').change(function(){
           if($(this).is(":checked")) {
-               $(this).parent().parent().parent().parent().parent().addClass("complete");
+               $(this).closest("tr").addClass("complete");
+               $(this).closest("tr").hide('slow').delay(1500);
+               $(this).closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
           } else {
-               $(this).parent().parent().parent().parent().parent().removeClass("complete");
+               $(this).closest("tr").removeClass("complete");
           }
      });
 });

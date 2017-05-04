@@ -409,9 +409,9 @@ form.filter {
      }
 }
 
-#task-list {
-     display: none;
-}
+// #task-list {
+//      display: none;
+// }
 
 table {
      line-height: 1.4;
@@ -605,6 +605,7 @@ table {
                font-size: 1.2rem;
                border-bottom: none;
                color: $black;
+               text-decoration: underline;
           }
           .details {
                display: inline-block !important;

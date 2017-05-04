@@ -163,6 +163,9 @@ ul, ol {
                }
           }
      }
+     // &#task-list {
+     //      margin: 0;
+     // }
 }
 
 ol {
@@ -313,7 +316,7 @@ a.main-cta {
                }
           }
      }
-     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation {
+     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit {
           display: none;
           margin: 2em 0 0 0;
           width: 100%;
@@ -352,6 +355,9 @@ a.main-cta {
                     }
                }
           }
+     }
+     &#confirmation-dashboard-visit {
+          margin: 0 0 1em 0;
      }
 }
 
