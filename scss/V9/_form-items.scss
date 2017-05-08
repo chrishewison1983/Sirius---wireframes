@@ -1,0 +1,524 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+form {
+     .one-third {
+          width: 30%;
+          margin-right: 1em;
+          float: left;
+          input, select {
+               width: 100%;
+          }
+     }
+     .half {
+          width: 50%;
+     }
+     input[type="text"], input[type="password"], input[type="date"], input[type="datetime"],
+     input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"],
+     input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea, select {
+          border-radius: $global-border-radius;
+          border: none;
+          box-shadow: inset 0px 0px 0px 2px $main-colour;
+          width: 100%;
+          padding: 1em;
+          font-size: 1rem;
+          margin: 0;
+          height: inherit;
+          background: $white;
+          // background: $white-off;
+          font-family: $Montserrat;
+          &:focus {
+               border: none;
+               background: $white;
+               box-shadow: inset 0px 0px 0px 2px $blue;
+          }
+          &.one-third {
+               width: 30%;
+          }
+          &.half {
+               width: 50%;
+          }
+     }
+     textarea {
+          resize: none;
+          min-height: 10em;
+     }
+     select {
+          padding-right: 3.5em;
+          color: $main-colour;
+          width: auto;
+          float: left;
+          margin: 0;
+          -moz-appearance: none;
+          background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 92.5% 50% $white;
+          background-size: 1.5em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 92.5% 50% $white;
+               background-size: 1.5em;
+          }
+          &.full-width {
+               width: 100%;
+               background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 97% 50% $white;
+               background-size: 1.5em;
+               &:hover, &:active, &:focus {
+                    background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 97% 50% $white;
+                    background-size: 1.5em;
+               }
+          }
+     }
+     input[type="checkbox"], input[type="radio"] {
+          display: none;
+     }
+     label, legend {
+          color: $main-colour;
+          font-size: 1rem;
+          line-height: 1.4;
+          position: relative;
+          &.selected {
+               color: $blue;
+          }
+          &.sub-label {
+               color: lighten($main-colour,40%);
+               font-size: 0.875rem;
+               margin: 1em 0 0.5em 0;
+          }
+          &.password {
+               &.selected {
+                    display: none !important;
+               }
+          }
+          &.normal, &.show-password, &.correspondent {
+               &:before {
+                    content: "";
+                    border: 2px solid;
+                    border-radius: $global-border-radius;
+                    background: transparent;
+                    width: 34px;
+                    height: 34px;
+                    position: absolute;
+                    top: -0.5em;
+                    right: 0;
+                    content: "";
+               }
+               &:after {
+                    content: "";
+                    border: solid;
+                    border-width: 0 0 5px 5px;
+                    background: transparent;
+                    width: 17px;
+                    height: 10px;
+                    position: absolute;
+                    top: 3px;
+                    right: 8px;
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    zoom: 1;
+                    filter: alpha(opacity=0);
+                    opacity: 0;
+               }
+          }
+          &.normal {
+               font-family: $Montserrat;
+               float: left;
+               width: auto;
+               padding: 0.45em 0 0 2.75em;
+               margin: 0.5em 2em 0.5em 0;
+               &:before {
+                    top: 0;
+                    right: inherit;
+                    left: 0;
+               }
+               &:after {
+                    top: 10px;
+                    right: inherit;
+                    left: 9px;
+               }
+               // &.checked {
+               //      color: $blue;
+               // }
+          }
+          &.checked {
+               &:after {
+                    opacity: 1;
+               }
+          }
+          &.radio {
+               position: relative;
+               padding: 0.45em 0 0 2.75em;
+               margin: 0.5em 2em 0.5em 0;
+               float: left;
+               font-family: $Montserrat;
+               &:before {
+                    content: "";
+                    border: 2px solid;
+                    background: transparent;
+                    width: 34px;
+                    height: 34px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+               }
+               &:after {
+                    content: "";
+                    border: 10px solid;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    zoom: 1;
+                    filter: alpha(opacity=0);
+                    opacity: 0;
+               }
+               &.checked {
+                    &:after {
+                         opacity: 1;
+                    }
+               }
+               &.address {
+                    margin-right: 0;
+                    width: 100%;
+                    font-size: 1.1rem;
+                    padding: 0.35em 0 0 2.5em;
+                    &.checked {
+                         background: $blue;
+                         color: $white;
+                         border-radius: $global-border-radius;
+                         padding: 0.5em 0.5em 0.5em 2.75em;
+                         &:before {
+                              top: 3px;
+                              left: 4px;
+                         }
+                         &:after {
+                              top: 10px;
+                              left: 11px;
+                         }
+                    }
+               }
+          }
+     }
+     .form-group {
+          display: inline-block;
+          width: 100%;
+          margin: 0 0 1.5em 0;
+          &:last-of-type {
+               margin-bottom: 3em;
+          }
+          &.address-list {
+               overflow-y: scroll;
+               height: 20em;
+               padding: 1em;
+               border-radius: $global-border-radius;
+               box-shadow: inset 0px 0px 10px 0px rgba($black,0.15);
+          }
+          &.violent-risk, &.fee-payer {
+               padding: 1.5em;
+               margin: 1em 0 3em 0;
+               border: 3px dashed rgba($red,0.1);
+               border-radius: $global-border-radius;
+               position: relative;
+               label {
+                    margin: 0;
+                    padding: 0 0 0 7.25em;
+                    &:before {
+                         left: 4.5em;
+                         top: -0.35em;
+                    }
+                    &:after {
+                         left: 5.05em;
+                         top: 4px;
+                    }
+               }
+               span {
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    bottom: -3px;
+                    display: inline-block;
+                    width: 5em;
+                    border-radius: 5px 0 0 5px;
+                    background: url(#{$image-path}/icons/violent-warning.svg) no-repeat 50% 50% rgba($red,0.2);
+                    background-size: 3em;
+               }
+          }
+          &.fee-payer {
+               border: 3px dashed $border-colour;
+               margin: 1em 0 2em 0;
+               span {
+                    background: url(#{$image-path}/icons/fee-payer-blue.svg) no-repeat 50% 50% rgba($blue,0.2);
+                    background-size: 3em;
+               }
+          }
+          &.read-only {
+               input {
+                    color: rgba($black,0.3);
+                    background: rgba($white-off,0.3);
+                    box-shadow: none;
+                    &:focus {
+                         border: none;
+                         box-shadow: none;
+                         background: rgba($white-off,0.3);
+                    }
+               }
+          }
+          &.currency {
+               input {
+                    padding-left: 2.5em;
+               }
+               span {
+                    position: absolute;
+                    width: 1.5em;
+                    height: 2.5em;
+                    top: 0.35em;
+                    left: 0.75em;
+                    background: url(#{$image-path}/icons/fee-payer-dark.svg) no-repeat 50% 50%;
+                    background-size: 1.75em;
+               }
+          }
+          &.checkbox {
+               margin: 0 0 0.5em 0;
+          }
+     }
+     .cta-row {
+          .main-cta {
+               width: auto;
+               padding: 1em 2em;
+          }
+          a {
+               // float: right;
+               display: inline-block;
+               margin: 0.75em 0 0 1em;
+          }
+     }
+     hr {
+          margin-bottom: 0;
+          border-bottom: 3px dashed $border-colour;
+     }
+     .date-wrapper {
+          position: relative;
+          display: inline-block;
+          float: left;
+          input[type="text"] {
+               z-index: 10;
+               position: relative;
+               background: none;
+          }
+          i.date {
+               position: absolute;
+               right: 0.5em;
+               top: 0.45em;
+               width: 2.25em;
+               height: 2.25em;
+               margin: 0;
+               z-index: 1;
+          }
+     }
+     .cta-row {
+          display: inline-block;
+          padding: 1.5em 0 0 0;
+     }
+}
+
+.adjust-padding-top {
+     label {
+          &.normal {
+               padding-top: 0;
+          }
+     }
+}
+
+form.login-form {
+     text-align: center;
+     img {
+          margin: 0 0 1em 0;
+     }
+     input {
+          background: rgba($white,0.2);
+          margin-bottom: 1em;
+          color: $white;
+          font-family: $Montserrat;
+          font-weight: bold;
+          font-size: 1.2rem;
+          box-shadow: none;
+          &:active, &:focus {
+               background: none;
+               box-shadow: inset 0px 0px 0px 2px rgba($white,0.7);
+               // color: $white;
+               // font-family: $Montserrat-Bold;
+               // border: 3px solid $white;
+          }
+     }
+     .login-password {
+          position: relative;
+          display: inline-block;
+          .show-password {
+               margin: 0;
+               padding: 0;
+               font-size: 1rem;
+               position: absolute;
+               top: 0.75em;
+               right: 1em;
+               left: inherit;
+               height: 2.25em;
+               width: 2.25em;
+               display: inline-block;
+               text-indent: -1000em;
+               background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 50% 50%;
+               background-size: contain;
+               &:before, &:after {
+                    display: none;
+               }
+               &.checked {
+                    background: url(#{$image-path}/icons/eye-closed-white.svg) no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+     }
+     #login-button {
+          width: auto;
+          padding: 1em 2.5em;
+          background: $white;
+          border: 3px solid $white;
+          color: $blue;
+          &.de-activate {
+               background: none;
+               color: $white;
+               border: 3px solid rgba($white,0.7);
+          }
+     }
+     .input-holder {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          label {
+               position: absolute;
+               top: 1.25em;
+               left: 1em;
+               color: $white;
+               display: inline-block;
+               text-align: left;
+               margin: 0;
+               width: auto;
+          }
+     }
+}
+
+form.location-form {
+     padding: 0 1.5em 1em 1.5em;
+     border: 2px solid $border-colour;
+     border-top: none;
+     border-radius: 0 0 5px 5px;
+     &.selected {
+          background: lighten($border-colour,2.5%);
+     }
+     hr {
+          margin: 1em 0;
+     }
+     .form-group {
+          margin: 0;
+     }
+}
+
+.add-correspondent-form, .edit-deputy-form, .add-client-form, .add-deputy-form, #add-third-party-form, .basic-information, .why-visit {
+     // padding: 3em 0 0 0;
+     width: 100%;
+     float: right;
+     hr {
+          margin: 1.5em 0 2em 0;
+     }
+     .one-third {
+          float: left;
+     }
+     #find-postcode {
+          width: auto;
+          margin: 0 0 0 1em;
+          float: left;
+          padding: 0.725em 1em;
+     }
+}
+
+#add-third-party-form, .basic-information, .why-visit {
+     float: left;
+     hr {
+          margin-top: 1.5em
+     }
+}
+
+.add-deputy-form, .exisiting-deputies, .edit-deputy-form, .create-letter, .add-correspondent-form {
+     width: 80%;
+     float: right;
+}
+
+.add-client-form {
+     width: 100%;
+     float: left;
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+     input[type="text"], input[type="password"], input[type="date"], input[type="datetime"],
+     input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"],
+     input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+          height: auto;
+          margin-bottom: 0;
+     }
+
+
+}

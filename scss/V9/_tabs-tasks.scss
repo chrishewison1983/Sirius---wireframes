@@ -1,0 +1,271 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+#list-of-timeline {
+     ul, ol {
+          li {
+               position: relative;
+               padding: 0 0 4em 2em;
+               span.dot {
+                    display: inline-block;
+                    position: absolute;
+                    top: -0.1em;
+                    left: -1.295em;
+                    width: 2em;
+                    height: 2em;
+                    background: $white;
+                    border: 5px solid $black;
+                    border-radius: 50%;
+               }
+               &:last-of-type {
+                    border-left: 10px solid $white;
+               }
+          }
+     }
+}
+
+
+#task-list {
+     padding-left: 1em;
+     display: none;
+     margin: 3em 0 3em 0;
+     h1, h2, h3, h4 {
+          &.description-title {
+               padding: 0 0 1em 0;
+               margin: 0 0 1em 0;
+               border-bottom: 3px dashed $border-colour;
+          }
+     }
+     li {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          margin: 0;
+          padding: 1.5em 0 1.5em 0;
+          // border-left: 10px solid $pink;
+          // span.dot {
+          //      display: inline-block;
+          //      position: absolute;
+          //      top: -0.1em;
+          //      left: -1.295em;
+          //      width: 2em;
+          //      height: 2em;
+          //      background: $white;
+          //      border: 5px solid $black;
+          //      border-radius: 50%;
+          // }
+          .status {
+               background: $pink;
+               color: $white;
+          }
+          .icon {
+               background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $pink;
+               background-size: 1em;
+          }
+          &:before {
+               display: none;
+          }
+          &.case {
+               .icon {
+                    background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50% $pink;
+                    background-size: 0.9em;
+               }
+          }
+          &.pdf-review {
+               .icon {
+                    background: url(#{$image-path}/icons/pdf-white.svg) no-repeat 50% 50% $pink;
+                    background-size: 0.7em;
+               }
+          }
+          &.complete {
+               border-left: 10px solid $green;
+               .status {
+                    background: $green;
+                    color: $white;
+               }
+               .icon {
+                    background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $green;
+                    background-size: 1em;
+               }
+               &.pdf-review {
+                    .icon {
+                         background: url(#{$image-path}/icons/pdf-white.svg) no-repeat 50% 50% $green;
+                         background-size: 0.7em;
+                    }
+               }
+               &.case {
+                    .icon {
+                         background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50% $green;
+                         background-size: 0.9em;
+                    }
+               }
+          }
+          .status {
+               display: inline-block;
+               position: absolute;
+               width: 10em;
+               text-align: center;
+               right: 0;
+               top: 0;
+               border-radius: $global-border-radius;
+               padding: 0.5em 1em;
+               text-transform: uppercase;
+               font-size: 0.875rem;
+          }
+          a.more-info {
+               padding: 0 0 0 1em;
+               background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
+               background-size: 0.75em;
+               &.open {
+                    background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+                    background-size: 0.75em;
+               }
+          }
+          a, p {
+               &.indent {
+                    margin-left: 3.75em;
+               }
+          }
+          .details {
+               border-top: 3px dashed $border-colour;
+               margin: 2em 0 0 0;;
+               padding: 2em 0 0 0;
+               .visit-detail-item {
+                    display: inline-block;
+                    width: 50%;
+                    float: left;
+                    margin: 0 0 1.5em 0;
+                    &:nth-of-type(5n), &:nth-of-type(6n) {
+                         margin-bottom: 0;
+                    }
+                    .item, .answer {
+                         display: inline-block;
+                         float: left;
+                    }
+                    .item {
+                         width: 30%;
+                         color: $text-main-colour;
+                         font-family: $Opensans-Regular;
+                    }
+                    .answer, ul#visiting li {
+                         width: 70%;
+                         color: $black;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                    }
+                    #visiting {
+                         margin: 0;
+                         li {
+                              padding: 0;
+                              border-left: none;
+                         }
+                    }
+               }
+          }
+          .title {
+               display: inline-block;
+               margin: 0;
+               width: 100%;
+               h2 {
+                    text-transform: inherit;
+                    font-size: 1.6rem;
+                    width: 100%;
+                    position: relative;
+                    padding: 0 0 0 2.25em;
+                    margin: 0;
+                    .icon {
+                         display: inline-block;
+                         position: absolute;
+                         top: -0.25em;
+                         left: 0;
+                         border-radius: 50%;
+                         width: 1.75em;
+                         height: 1.75em;
+                         font-size: 1.6rem;
+                    }
+               }
+          }
+          form {
+               .form-group {
+                    margin-bottom: 0;
+                    label {
+                         margin: 0;
+                         width: 100%;
+                         padding: 0 0 0 2.25em;
+                         font-size: 1.6rem;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         .icon {
+                              display: inline-block;
+                              position: absolute;
+                              top: -0.175em;
+                              left: 0;
+                              border-radius: 50%;
+                              width: 1.75em;
+                              height: 1.75em;
+                         }
+                         &:after {
+                              top: 0.375em;
+                              right: 6.325em;
+                              left: inherit;
+                         }
+                         &:before {
+                              top: 0em;
+                              right: 6em;
+                              left: inherit;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

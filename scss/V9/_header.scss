@@ -1,0 +1,429 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+.nav-icon {
+     display: inline-block;
+     float: left;
+     background-color: $white;
+     border-radius: 50%;
+     width: 2em;
+     height: 2em;
+     margin: -0.35em 0.75em 0 0;
+     opacity: 0.4;
+}
+
+header {
+     &.index {
+          background: $main-colour;
+          padding: 0 0 5em 0;
+          position: relative;
+          margin: 0 0 2em 0;
+          h1, h2, h3, h4, p {
+               color: $white;
+               margin: 0;
+          }
+          h1 {
+               font-size: 3rem;
+          }
+          nav {
+               display: inline-block;
+               width: 100%;
+               // height: 3em;
+               padding: 0.5em;
+               border-bottom: 1px solid rgba($white,0.2);
+               margin: 0 0 3em 0;
+          }
+          .border {
+               width: 10em;
+               height: 3px;
+               background: $white;
+               opacity: 0.4;
+               display: inline-block;
+          }
+          .row-divider {
+               display: inline-block;
+               width: 100%;
+               background: url(#{$image-path}/divider.svg) no-repeat 50% 50% !important;
+               background-size: cover;
+               margin: 0;
+               height: 1.688rem;
+               position: absolute;
+               bottom: -1px;
+               left: 0;
+          }
+     }
+     &.main {
+          width: 15%;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          height: 100vh;
+          background: $main-colour;
+          border-right: 1px solid $white;
+          z-index: 100;
+          box-shadow: 10px 0px 20px 0px rgba($black,0.2);
+          @include standard-transition;
+          &.shrink {
+               width: 5%;
+               .logo {
+                    display: inline-block;
+                    width: 3em;
+                    height: 3em;
+                    margin: 0 0 0 -0.35em;
+                    background: url(#{$image-path}/sirius-logo-small.svg) no-repeat 50% 50%;
+                    background-size: cover;
+               }
+          }
+          .padding-wrapper {
+               padding: 1.5em;
+          }
+          .logo {
+               border-bottom: none;
+               @include standard-transition;
+               img {
+                    margin: 0;
+                    padding: 0;
+               }
+               &:hover {
+                    border-bottom: none;
+               }
+          }
+          .user-cta {
+               display: inline-block;
+               padding: 1.5em;
+               margin: 0;
+               color: $white;
+               width: 100%;
+               border-top: 1px solid rgba($white,0.3);
+               border-bottom: 1px solid rgba($white,0.3);
+               background: url(#{$image-path}/icons/arrow-down.svg) no-repeat 90% 50% rgba($white,0.1);
+               background-size: 1em;
+               .nav-icon {
+                    display: none;
+                    background: url(#{$image-path}/icons/user.svg) no-repeat 50% 50% rgba($white,0.1);
+                    background-size: cover;
+               }
+               .sirius-user-id {
+                    word-break: break-all;
+                    display: inline-block;
+                    float: left;
+                    width: 90%;
+                    font-size: 0.875rem;
+                    font-family: $Opensans-Regular;
+               }
+          }
+          .create-client {
+               display: inline-block;
+               padding: 1.5em;
+               margin: 0;
+               width: 100%;
+               .main-cta {
+                    border: none;
+                    .nav-icon {
+                         margin: 0 0.5em -0.85em 0;
+                         opacity: 1;
+                         border-radius: 0;
+                         position: relative;
+                         width: 1.5em;
+                         top: -0.45em;
+                         background: url(#{$image-path}/icons/add-client-white.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+               }
+          }
+          nav {
+               img {
+                    width: 100%;
+                    padding-bottom: 1.5em;
+                    margin-bottom: 1.5em;
+                    // border-bottom: 2px solid rgba($white,0.3);
+               }
+               ul {
+                    margin: 0;
+                    display: inline-block;
+                    width: 100%;
+                    border-top: 1px dashed rgba($white, 0.3);
+                    li {
+                         list-style: none;
+                         margin: 0;
+                         width: 100%;
+                         display: inline-block;
+                         padding-bottom: 1.5em;
+                         &.constant-cta {
+                              padding: 0;
+                              // border-top: 2px dashed rgba($white, 0.3);
+                              // border-bottom: 2px dashed rgba($white, 0.3);
+                         }
+                         &.actions {
+                              padding: 0 0 1.5em 0;
+                         }
+                         &.create-letter {
+                              a {
+                                   .nav-icon {
+                                        background: url(#{$image-path}/icons/create-letter.svg) no-repeat 50% 50%;
+                                        background-size: cover;
+                                   }
+                              }
+                         }
+                         a {
+                              color: $white;
+                              display: inline-block;
+                              width: 100%;
+                              border-bottom: none;
+                              font-family: $Opensans-Regular;
+                         }
+                    }
+               }
+          }
+          .main-cta.sign-out {
+               position: absolute;
+               bottom: 0;
+               padding: 1.5em 1.5em 1.15em 1.5em;
+               left: 0;
+               right: 0;
+               width: auto;
+               background: none;
+               border: none;
+               border-radius: 0;
+               border-top: 1px solid rgba($white,0.4);
+               &:hover {
+                    color: $white;
+                    background: rgba($white,0.1);
+               }
+               .nav-icon {
+                    margin-right: 0.5em;
+                    background: url(#{$image-path}/icons/sign-out.svg) no-repeat 50% 50%;
+                    background-size: 1.95em;
+               }
+          }
+          .minimise {
+               position: absolute;
+               bottom: 0;
+               right: -3em;
+               height: 4.3em;
+               width: 3em;
+               text-indent: -1000em;
+               border-radius: 0 5px 5px 0;
+               @include standard-transition;
+               border-left: 1px solid $white;
+               box-shadow: inset 10px 0px 20px 0px rgba($black,0.2);
+               background: url(#{$image-path}/icons/arrows-left-white.svg) $blue no-repeat 50% 50%;
+               background-size: 1.25em;
+               &:hover {
+                    background: darken($blue,5%);
+                    width: 4em;
+                    right: -4em;
+                    background: url(#{$image-path}/icons/arrows-left-white.svg) $blue no-repeat 50% 50%;
+                    background-size: 1.25em;
+               }
+               &.open {
+                    background: url(#{$image-path}/icons/arrows-right-white.svg) $blue no-repeat 50% 50%;
+                    background-size: 1.25em;
+               }
+          }
+     }
+}
+
+#section-header {
+     display: inline-block;
+     position: relative;
+     width: 100%;
+     background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
+     background-size: cover;
+     line-height: 0;
+     padding: 0 0 2em 0;
+     .row {
+          z-index: 2;
+          position: relative;
+     }
+     .colour-wrapper {
+          &.violent-risk-message {
+               background: rgba($red,0.8);
+               mix-blend-mode: hard-light;
+          }
+     }
+     h1 {
+          color: $white;
+          margin: 0;
+          padding: 0.5em 0 0.25em 0;
+          span {
+               color: rgba($white,0.7);
+               font-size: 1rem;
+               .separator {
+                    display: inline-block;
+                    margin: 0 1em;
+               }
+               a {
+                    color: rgba($white,0.7);
+                    font-family: $Opensans-Regular;
+                    &:hover {
+                         color: $white;
+                    }
+               }
+          }
+          &.confirmation-message {
+               padding: 0.5em 0 1em 2.5em;
+               background: url(#{$image-path}/icons/tick.svg) no-repeat 0 50%;
+               background-size: 2em;
+          }
+          &.violent-risk-message {
+               padding: 0.5em 0 1em 2.5em;
+               background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 0 50%;
+               background-size: 2em;
+          }
+          &.welsh-message {
+               padding: 0.5em 0 1em 2.5em;
+               background: url(#{$image-path}/icons/welsh-warning-white.svg) no-repeat 0 50%;
+               background-size: 2em;
+          }
+     }
+     .horizontal-border {
+          display: inline-block;
+          width: 8em;
+          height: 3px;
+          background: rgba($white,0.4);
+          margin: -0.5em 0 1.25em 0;
+          float: left;
+          clear: both;
+     }
+     p {
+          color: $white;
+          font-size: 1.4rem;
+     }
+     #show-more {
+          display: inline-block;
+          color: $white;
+          font-family: $Opensans-Regular;
+          padding: 0 0 0 1.5em;
+          // text-indent: -1000em;
+          // width: 0.75em;
+          // height: 1.35em;
+          background: url(#{$image-path}/icons/down-white.svg) no-repeat -0.25em 50%;
+          background-size: 1.5em;
+          border-bottom: 1px dashed $white;
+          // opacity: 0.7;
+          &.close {
+               background: url(#{$image-path}/icons/close-white.svg) no-repeat -0.5em 50%;
+               background-size: 2em;
+          }
+          &:hover {
+               border-bottom: 1px solid $white;
+          }
+     }
+     .extra-content {
+          display: inline-block;
+          width: 100%;
+          padding: 0 0 2em 0;
+          p {
+               color: $white;
+               margin: 0;
+               font-size: 1.2rem;
+               div {
+                    color: $white;
+                    margin: 0;
+                    font-size: 1.2rem;
+                    line-height: inherit;
+               }
+          }
+          .left, .right {
+               float: left;
+               width: auto;
+               p {
+                    width: auto;
+                    float: left;
+                    clear: both;
+               }
+          }
+          .left {
+               margin: 0 1em 0 0;
+               p {
+                    font-family: $Opensans-Regular;
+                    opacity: 0.6;
+               }
+          }
+          .right {
+               float: left !important;
+               p {
+                    font-family: $Opensans-Bold;
+               }
+          }
+          a {
+               width: auto;
+               margin: 1.5em 0 0 0;
+               padding: 0 0 0 1.5em;
+               float: left;
+               clear: both;
+               color: $white;
+               background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
+               background-size: contain;
+          }
+     }
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+     header {
+          .border {
+               margin: 0.5em 0 1em 0;
+          }
+     }
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+     header {
+          .row-divider {
+               display: none;
+          }
+     }
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+     header {
+          .row-divider {
+               display: none;
+          }
+     }
+
+
+}
