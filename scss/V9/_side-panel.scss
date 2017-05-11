@@ -28,6 +28,12 @@
 }
 
 #document-summary {
+     &.sticky {
+          margin-top: 1em;
+     }
+}
+
+#document-summary {
      // float: right !important;
      #recipients, .document, #asset-summary {
           display: inline-block;
@@ -176,6 +182,7 @@
 }
 
 .accordion-section {
+     position: relative;
      &.inactive {
           .accordion-section-title {
                color: rgba($black,0.4);
@@ -183,13 +190,29 @@
                // &:hover {
                //      background: none;
                // }
-               .edit {
-                    display: none;
-               }
                span {
                     display: none;
                }
           }
+          .edit {
+               display: none;
+          }
+     }
+     &.active {
+          .edit {
+               color: $white;
+               background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 0%;
+               background-size: 0.95em;
+          }
+     }
+     .edit {
+          position: absolute;
+          top: 1em;
+          right: 1em;
+          z-index: 10;
+          padding-left: 1.25em;
+          background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
+          background-size: 0.95em;
      }
 }
 
@@ -203,6 +226,8 @@ button.accordion-section-title {
      padding: 1em 3.25em 1em 1em;
      width: 100%;
      text-align: left;
+     z-index: 1;
+     position: relative;
      border-radius: $global-border-radius;
      border: 3px solid $border-colour;
      outline: none;
@@ -239,12 +264,9 @@ button.accordion-section-title {
                     background-size: 0.95em;
                }
           }
-          a.edit {
-               float: right;
-               padding-left: 1.25em;
-               background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
-               background-size: 0.95em;
-          }
+          // a.edit {
+          //      float: right;
+          // }
      }
      span {
           display: inline-block;

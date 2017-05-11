@@ -44,6 +44,9 @@ main {
           &.full-width {
                width: 95%;
                margin: 0 0 5em 5%;
+               #document-summary.sticky, #action-panel.sticky {
+                    width: 45em;
+               }
           }
      }
 }

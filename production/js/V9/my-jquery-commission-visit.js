@@ -226,12 +226,12 @@ $(document).ready(function() {
      $('#visitor-list .location').click( function(){
           $(this).addClass('selected');
           $(this).siblings().addClass('selected');
-          $(this).parent().siblings().find('.visitor').removeClass('selected');
+          $(this).parent().siblings().find('.location').removeClass('selected');
           $(this).parent().siblings().find('.location-form').removeClass('selected');
           persistSelectedVisitor();
      });
 
-     $('#visitor-list input:checkbox').change(function(){
+     $('#visitor-list input:radio').change(function(){
           if($(this).is(":checked")) {
                $(this).parent().addClass("checked");
           } else {
@@ -250,7 +250,7 @@ $(document).ready(function() {
 
 });
 
-if ($('.visit-name') == 'Mr Gerald Brackens (Client)') {
+if ($('.visit-name').html() == 'Mr Gerald Brackens (Client)') {
      $(this).siblings('.address').html('sdfweffwefwefwefwefwef');
 }
 

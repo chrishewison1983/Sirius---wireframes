@@ -104,6 +104,8 @@ footer {
      text-align: center;
      a.main-cta {
           float: none;
+          background-color: $green;
+          border: 3px solid $green;
      }
 }
 
