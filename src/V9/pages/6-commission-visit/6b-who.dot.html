@@ -114,7 +114,7 @@
 
                     <div class="commission-visit right">
 
-                         <h2 class="section-title">Who is involved in the visit?</h2>
+                         <h2 class="section-title">Who is invited to the visit?</h2>
 
                          <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== -->
                          <div class="visitor-container">
@@ -126,16 +126,51 @@
                                    <!-- // VISITOR - 1 - START // -->
                                    <li>
                                         <div class="wrapper">
+                                             <span class="icon chosen-location"><p>chosen location</p></span>
                                              <a class="visitor" data-visit-id='1'>
-                                                  <span data-value='name'>
+                                                  <span data-value='name' class="name">
                                                        <span class="client-title">Mr</span>
                                                        <span class="client-first-name">Gerald</span>
                                                        <span class="client-last-name">Brackens</span>
                                                        <span class="hide">(Client)</span>
                                                   </span>
-                                                  <br>
-                                                  <span data-value='address' class="sub-text client-address">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
                                              </a>
+                                             <div class="hidden-content">
+
+                                                  <form>
+
+                                                       <!-- // FORM ITEM - 1 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like the visit to take place at their address:</legend>
+                                                            <label for="visit-location-1" class="radio">
+                                                                 <input id="visit-location-1" type="radio" name="visit-location">
+                                                                 <span data-value='address'>11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 1 - END // -->
+
+                                                       <!-- // FORM ITEM - 2 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like this deputy present at visit or simply informed about the visit?</legend>
+                                                            <label class="normal" for="visit-present-1">
+                                                                 <input id="visit-present-1" name="visit-present-1" type="checkbox" value="post">
+                                                                 Present at visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 2 - END // -->
+
+                                                       <!-- // FORM ITEM - 3 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <label class="normal" for="visit-contacted-2">
+                                                                 <input id="visit-contacted-2" name="visit-contacted-2" type="checkbox" value="post">
+                                                                 Contacted about visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 3 - END // -->
+
+                                                  </form>
+
+                                             </div>
                                              <button class="view-more"><span>More info</span></button>
                                         </div>
                                         <div class="extra-info">
@@ -143,12 +178,21 @@
 
                                              <!-- // CLIENT ITEM - 1 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Middle names:</p>
-                                                  <p class="answer">Middle</p>
+                                                  <p class="item">Address:</p>
+                                                  <p class="answer">
+                                                       <span data-value='address'>11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
+                                                  </p>
                                              </div>
                                              <!-- // CLIENT ITEM - 1 - END // -->
 
                                              <!-- // CLIENT ITEM - 2 - START // -->
+                                             <div class="item-detail">
+                                                  <p class="item">Middle names:</p>
+                                                  <p class="answer">Middle</p>
+                                             </div>
+                                             <!-- // CLIENT ITEM - 2 - END // -->
+
+                                             <!-- // CLIENT ITEM - 3 - START // -->
                                              <div class="item-detail">
                                                   <p class="item">Date of Birth:</p>
                                                   <p class="answer">
@@ -159,28 +203,28 @@
                                                        <span class="client-dob-year">1980</span>
                                                   </p>
                                              </div>
-                                             <!-- // CLIENT ITEM - 2 - END // -->
-
-                                             <!-- // CLIENT ITEM - 3 - START // -->
-                                             <div class="item-detail">
-                                                  <p class="item">Country:</p>
-                                                  <p class="answer">United Kingdom</p>
-                                             </div>
                                              <!-- // CLIENT ITEM - 3 - END // -->
 
                                              <!-- // CLIENT ITEM - 4 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Daytime telephone:</p>
-                                                  <p class="answer client-telephone">01234567890</p>
+                                                  <p class="item">Country:</p>
+                                                  <p class="answer">United Kingdom</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 4 - END // -->
 
-                                             <!-- // CLIENT ITEM - 4 - START // -->
+                                             <!-- // CLIENT ITEM - 5 - START // -->
+                                             <div class="item-detail">
+                                                  <p class="item">Daytime telephone:</p>
+                                                  <p class="answer client-telephone">01234567890</p>
+                                             </div>
+                                             <!-- // CLIENT ITEM - 5 - END // -->
+
+                                             <!-- // CLIENT ITEM - 6 - START // -->
                                              <div class="item-detail">
                                                   <p class="item">Email address:</p>
                                                   <p class="answer client-email">email@email.com</p>
                                              </div>
-                                             <!-- // CLIENT ITEM - 4 - END // -->
+                                             <!-- // CLIENT ITEM - 6 - END // -->
 
                                         </div>
                                    </li>
@@ -199,23 +243,58 @@
                                    <!-- // VISITOR - 2 - START // -->
                                    <li>
                                         <div class="wrapper">
-                                             <span class="main-contact">
+                                             <span class="icon chosen-location"><p>chosen location</p></span>
+                                             <span class="icon main-contact">
                                                   <p>Main deputy</p>
                                              </span>
-                                             <span class="fee-payer">
+                                             <span class="icon fee-payer">
                                                   <p>Fee payer</p>
                                              </span>
-                                             <span class="welfare">
+                                             <span class="icon welfare">
                                                   <p>Health &amp; welfare</p>
                                              </span>
                                              <a class="visitor" data-visit-id='2'>
-                                                  <span data-value='name'>
+                                                  <span data-value='name' class="name">
                                                        Ms Lara Stevens
                                                        <span class="hide">(Deputy)</span>
                                                   </span>
-                                                  <br>
-                                                  <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
                                              </a>
+                                             <div class="hidden-content">
+
+                                                  <form>
+
+                                                       <!-- // FORM ITEM - 1 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like the visit to take place at their address:</legend>
+                                                            <label for="visit-location-2" class="radio">
+                                                                 <input id="visit-location-2" type="radio" name="visit-location">
+                                                                 <span data-value='address'>92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 1 - END // -->
+
+                                                       <!-- // FORM ITEM - 2 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like this deputy present at visit or simply informed about the visit?</legend>
+                                                            <label class="normal" for="visit-present-3">
+                                                                 <input id="visit-present-3" name="visit-present-3" type="checkbox" value="post">
+                                                                 Present at visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 2 - END // -->
+
+                                                       <!-- // FORM ITEM - 3 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <label class="normal" for="visit-contacted-4">
+                                                                 <input id="visit-contacted-4" name="visit-contacted-4" type="checkbox" value="post">
+                                                                 Contacted about visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 3 - END // -->
+
+                                                  </form>
+
+                                             </div>
                                              <button class="view-more"><span>More info</span></button>
                                         </div>
                                         <div class="extra-info">
@@ -223,38 +302,47 @@
 
                                              <!-- // CLIENT ITEM - 1 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Middle names:</p>
-                                                  <p class="answer">Middle</p>
+                                                  <p class="item">Address:</p>
+                                                  <p class="answer">
+                                                       <span data-value='address'>92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
+                                                  </p>
                                              </div>
                                              <!-- // CLIENT ITEM - 1 - END // -->
 
                                              <!-- // CLIENT ITEM - 2 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Date of Birth:</p>
-                                                  <p class="answer">01/01/1980</p>
+                                                  <p class="item">Middle names:</p>
+                                                  <p class="answer">Middle</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 2 - END // -->
 
                                              <!-- // CLIENT ITEM - 3 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Country:</p>
-                                                  <p class="answer">United Kingdom</p>
+                                                  <p class="item">Date of Birth:</p>
+                                                  <p class="answer">01/01/1980</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 3 - END // -->
 
                                              <!-- // CLIENT ITEM - 4 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Daytime telephone:</p>
-                                                  <p class="answer">01234567890</p>
+                                                  <p class="item">Country:</p>
+                                                  <p class="answer">United Kingdom</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 4 - END // -->
 
-                                             <!-- // CLIENT ITEM - 4 - START // -->
+                                             <!-- // CLIENT ITEM - 5 - START // -->
+                                             <div class="item-detail">
+                                                  <p class="item">Daytime telephone:</p>
+                                                  <p class="answer">01234567890</p>
+                                             </div>
+                                             <!-- // CLIENT ITEM - 5 - END // -->
+
+                                             <!-- // CLIENT ITEM - 6 - START // -->
                                              <div class="item-detail">
                                                   <p class="item">Email address:</p>
                                                   <p class="answer">email@email.com</p>
                                              </div>
-                                             <!-- // CLIENT ITEM - 4 - END // -->
+                                             <!-- // CLIENT ITEM - 6 - END // -->
 
                                         </div>
                                    </li>
@@ -263,17 +351,52 @@
                                    <!-- // VISITOR - 3 - START // -->
                                    <li>
                                         <div class="wrapper">
-                                             <span class="welfare-property">
+                                             <span class="icon chosen-location"><p>chosen location</p></span>
+                                             <span class="icon welfare-property">
                                                   <p>Health &amp; welfare and<br> property &amp; finance</p>
                                              </span>
                                              <a class="visitor" data-visit-id='3'>
-                                                  <span data-value='name'>
+                                                  <span data-value='name' class="name">
                                                        Mrs Carla Frith
                                                        <span class="hide">(Deputy)</span>
                                                   </span>
-                                                  <br>
-                                                  <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
                                              </a>
+                                             <div class="hidden-content">
+
+                                                  <form>
+
+                                                       <!-- // FORM ITEM - 1 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like the visit to take place at their address:</legend>
+                                                            <label for="visit-location-3" class="radio">
+                                                                 <input id="visit-location-3" type="radio" name="visit-location">
+                                                                 <span data-value='address'>40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 1 - END // -->
+
+                                                       <!-- // FORM ITEM - 2 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like this deputy present at visit or simply informed about the visit?</legend>
+                                                            <label class="normal" for="visit-present-5">
+                                                                 <input id="visit-present-5" name="visit-present-5" type="checkbox" value="post">
+                                                                 Present at visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 2 - END // -->
+
+                                                       <!-- // FORM ITEM - 3 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <label class="normal" for="visit-contacted-6">
+                                                                 <input id="visit-contacted-6" name="visit-contacted-6" type="checkbox" value="post">
+                                                                 Contacted about visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 3 - END // -->
+
+                                                  </form>
+
+                                             </div>
                                              <button class="view-more"><span>More info</span></button>
                                         </div>
                                         <div class="extra-info">
@@ -281,38 +404,47 @@
 
                                              <!-- // CLIENT ITEM - 1 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Middle names:</p>
-                                                  <p class="answer">Middle</p>
+                                                  <p class="item">Address:</p>
+                                                  <p class="answer">
+                                                       <span data-value='address'>40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                                  </p>
                                              </div>
                                              <!-- // CLIENT ITEM - 1 - END // -->
 
                                              <!-- // CLIENT ITEM - 2 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Date of Birth:</p>
-                                                  <p class="answer">01/01/1980</p>
+                                                  <p class="item">Middle names:</p>
+                                                  <p class="answer">Middle</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 2 - END // -->
 
                                              <!-- // CLIENT ITEM - 3 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Country:</p>
-                                                  <p class="answer">United Kingdom</p>
+                                                  <p class="item">Date of Birth:</p>
+                                                  <p class="answer">01/01/1980</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 3 - END // -->
 
                                              <!-- // CLIENT ITEM - 4 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Daytime telephone:</p>
-                                                  <p class="answer">01234567890</p>
+                                                  <p class="item">Country:</p>
+                                                  <p class="answer">United Kingdom</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 4 - END // -->
 
-                                             <!-- // CLIENT ITEM - 4 - START // -->
+                                             <!-- // CLIENT ITEM - 5 - START // -->
+                                             <div class="item-detail">
+                                                  <p class="item">Daytime telephone:</p>
+                                                  <p class="answer">01234567890</p>
+                                             </div>
+                                             <!-- // CLIENT ITEM - 5 - END // -->
+
+                                             <!-- // CLIENT ITEM - 6 - START // -->
                                              <div class="item-detail">
                                                   <p class="item">Email address:</p>
                                                   <p class="answer">email@email.com</p>
                                              </div>
-                                             <!-- // CLIENT ITEM - 4 - END // -->
+                                             <!-- // CLIENT ITEM - 6 - END // -->
 
                                         </div>
                                    </li>
@@ -321,17 +453,52 @@
                                    <!-- // VISITOR - 4 - START // -->
                                    <li>
                                         <div class="wrapper">
-                                             <span class="welfare">
+                                             <span class="icon chosen-location"><p>chosen location</p></span>
+                                             <span class="icon welfare">
                                                   <p>Health &amp; welfare</p>
                                              </span>
                                              <a class="visitor" data-visit-id='4'>
-                                                  <span data-value='name'>
+                                                  <span data-value='name' class="name">
                                                        Mrs Melanie Rand
                                                        <span class="hide">(Deputy)</span>
                                                   </span>
-                                                  <br>
-                                                  <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
                                              </a>
+                                             <div class="hidden-content">
+
+                                                  <form>
+
+                                                       <!-- // FORM ITEM - 1 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like the visit to take place at their address:</legend>
+                                                            <label for="visit-location-4" class="radio">
+                                                                 <input id="visit-location-4" type="radio" name="visit-location">
+                                                                 <span data-value='address'>70 Moulton Road, Gunby Green, N6334RF.</span>
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 1 - END // -->
+
+                                                       <!-- // FORM ITEM - 2 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <legend>Would you like this deputy present at visit or simply informed about the visit?</legend>
+                                                            <label class="normal" for="visit-present-7">
+                                                                 <input id="visit-present-7" name="visit-present-7" type="checkbox" value="post">
+                                                                 Present at visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 2 - END // -->
+
+                                                       <!-- // FORM ITEM - 3 - START // -->
+                                                       <div class="form-group checkbox">
+                                                            <label class="normal" for="visit-contacted-8">
+                                                                 <input id="visit-contacted-8" name="visit-contacted-8" type="checkbox" value="post">
+                                                                 Contacted about visit
+                                                            </label>
+                                                       </div>
+                                                       <!-- // FORM ITEM - 3 - END // -->
+
+                                                  </form>
+
+                                             </div>
                                              <button class="view-more"><span>More info</span></button>
                                         </div>
                                         <div class="extra-info">
@@ -339,38 +506,47 @@
 
                                              <!-- // CLIENT ITEM - 1 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Middle names:</p>
-                                                  <p class="answer">Middle</p>
+                                                  <p class="item">Address:</p>
+                                                  <p class="answer">
+                                                       <span data-value='address'>70 Moulton Road, Gunby Green, N6334RF.</span>
+                                                  </p>
                                              </div>
                                              <!-- // CLIENT ITEM - 1 - END // -->
 
                                              <!-- // CLIENT ITEM - 2 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Date of Birth:</p>
-                                                  <p class="answer">01/01/1980</p>
+                                                  <p class="item">Middle names:</p>
+                                                  <p class="answer">Middle</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 2 - END // -->
 
                                              <!-- // CLIENT ITEM - 3 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Country:</p>
-                                                  <p class="answer">United Kingdom</p>
+                                                  <p class="item">Date of Birth:</p>
+                                                  <p class="answer">01/01/1980</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 3 - END // -->
 
                                              <!-- // CLIENT ITEM - 4 - START // -->
                                              <div class="item-detail">
-                                                  <p class="item">Daytime telephone:</p>
-                                                  <p class="answer">01234567890</p>
+                                                  <p class="item">Country:</p>
+                                                  <p class="answer">United Kingdom</p>
                                              </div>
                                              <!-- // CLIENT ITEM - 4 - END // -->
 
-                                             <!-- // CLIENT ITEM - 4 - START // -->
+                                             <!-- // CLIENT ITEM - 5 - START // -->
+                                             <div class="item-detail">
+                                                  <p class="item">Daytime telephone:</p>
+                                                  <p class="answer">01234567890</p>
+                                             </div>
+                                             <!-- // CLIENT ITEM - 5 - END // -->
+
+                                             <!-- // CLIENT ITEM - 6 - START // -->
                                              <div class="item-detail">
                                                   <p class="item">Email address:</p>
                                                   <p class="answer">email@email.com</p>
                                              </div>
-                                             <!-- // CLIENT ITEM - 4 - END // -->
+                                             <!-- // CLIENT ITEM - 6 - END // -->
 
                                         </div>
                                    </li>
@@ -379,157 +555,6 @@
                               </ul>
                          </div>
                          <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== -->
-
-                         <!-- =========== COMMISSION VISIT SECTION - 3 - START =========== -->
-                         <h3 class="sub-section-title">Add third party contact</h3>
-
-                         <ul id="commission-visit-third-parties">
-                         </ul>
-
-                         <form id="add-third-party-form" data-visit-id='5' method="post">
-
-                              <!-- // FORM ITEM - 1 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-title">Title</label>
-                                   <select id="third-party-title">
-                                        <option>-- Select --</option>
-                                        <option>Mr.</option>
-                                        <option>Mrs.</option>
-                                        <option>Ms.</option>
-                                        <option>Miss</option>
-                                        <option>Dr.</option>
-                                        <option>Prof.</option>
-                                        <option>Rev.</option>
-                                        <option>Other</option>
-                                   </select>
-                              </div>
-                              <!-- // FORM ITEM - 1 - END // -->
-
-                              <!-- // FORM ITEM - 2 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-first-name">First name</label>
-                                   <input id="third-party-first-name" name="first-name" type="text">
-                              </div>
-                              <!-- // FORM ITEM - 2 - END // -->
-
-                              <!-- // FORM ITEM - 3 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-last-name">Last name</label>
-                                   <input id="third-party-last-name" name="last-name" type="text">
-                              </div>
-                              <!-- // FORM ITEM - 3 - END // -->
-
-                              <!-- // FORM ITEM - 4a - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-postcode">Postcode</label>
-                                   <input id="third-party-postcode" name="postcode" type="text" class="one-third">
-                                   <a class="main-cta secondary" id="find-postcode">Find address</a>
-                              </div>
-                              <!-- // FORM ITEM - 4a - END // -->
-
-                              <!-- // FORM ITEM - 4b - START // -->
-                              <div class="form-group address-list">
-                                   <label for="third-party-address-1" class="radio address">
-                                        <input id="third-party-address-1" type="radio" name="radio-inline-group" value="third-party-address-1">
-                                        1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-2" class="radio address">
-                                        <input id="third-party-address-2" type="radio" name="radio-inline-group" value="third-party-address-2">
-                                        2 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-3" class="radio address">
-                                        <input id="third-party-address-3" type="radio" name="radio-inline-group" value="third-party-address-3">
-                                        3 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-4" class="radio address">
-                                        <input id="third-party-address-4" type="radio" name="radio-inline-group" value="third-party-address-4">
-                                        4 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-5" class="radio address">
-                                        <input id="third-party-address-5" type="radio" name="radio-inline-group" value="third-party-address-5">
-                                        5 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-6" class="radio address">
-                                        <input id="third-party-address-6" type="radio" name="radio-inline-group" value="third-party-address-6">
-                                        6 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-7" class="radio address">
-                                        <input id="third-party-address-7" type="radio" name="radio-inline-group" value="third-party-address-7">
-                                        7 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-8" class="radio address">
-                                        <input id="third-party-address-8" type="radio" name="radio-inline-group" value="third-party-address-8">
-                                        8 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-9" class="radio address">
-                                        <input id="third-party-address-9" type="radio" name="radio-inline-group" value="third-party-address-9">
-                                        9 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-10" class="radio address">
-                                        <input id="third-party-address-10" type="radio" name="radio-inline-group" value="third-party-address-10">
-                                        10 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-11" class="radio address">
-                                        <input id="third-party-address-11" type="radio" name="radio-inline-group" value="third-party-address-11">
-                                        11 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-                                   <label for="third-party-address-12" class="radio address">
-                                        <input id="third-party-address-12" type="radio" name="radio-inline-group" value="third-party-address-12">
-                                        12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
-                                   </label>
-
-                              </div>
-                              <!-- // FORM ITEM - 4b - END // -->
-
-                              <!-- // FORM ITEM - 5 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-phone-number">Daytime telephone number</label>
-                                   <input id="third-party-phone-number" name="third-party-phone-number" type="text" class="half">
-                              </div>
-                              <!-- // FORM ITEM - 5 - END // -->
-
-                              <!-- // FORM ITEM - 6 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-mob-number">Mobile telephone number</label>
-                                   <input id="third-party-mob-number" name="third-party-mob-number" type="text" class="half">
-                              </div>
-                              <!-- // FORM ITEM - 6 - END // -->
-
-                              <!-- // FORM ITEM - 7 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-email">Email address</label>
-                                   <input id="third-party-email" name="third-party-email" type="text">
-                              </div>
-                              <!-- // FORM ITEM - 7 - END // -->
-
-                              <!-- // FORM ITEM - 8 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-needed">Why is contact needed?</label>
-                                   <textarea id="third-party-needed"></textarea>
-                              </div>
-                              <!-- // FORM ITEM - 8 - END // -->
-
-                              <!-- // FORM ITEM - 9 - START // -->
-                              <div class="form-group">
-                                   <label for="third-party-questions">Questions for the visitor</label>
-                                   <textarea id="third-party-questions"></textarea>
-                              </div>
-                              <!-- // FORM ITEM - 9 - END // -->
-
-                              <div class="cta-row">
-                                   <a class="main-cta secondary" href="#" id="confirm-add-third-party">Add</a>
-                                   <a href="#" id="cancel-third-party">Cancel</a>
-                              </div>
-                         </form>
-
-                         <!-- // ADD NEW CORRESPONDANT - START // -->
-                         <div class="cta-row">
-                              <a class="main-cta secondary" href="#" id="add-third-party">Add third party</a>
-                         </div>
-                         <!-- // ADD NEW CORRESPONDANT - END // -->
-
-
-                         <!-- =========== COMMISSION VISIT SECTION - 3 - START =========== -->
 
                     </div>
 

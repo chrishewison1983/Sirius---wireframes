@@ -14,8 +14,6 @@ $("#visit-submitted-late-no").click( function(){
 $('#visit-why').bind('change', function (e) {
      if ($('#visit-why').val() == 'Non-compliance') {
           $('.why-answer-hidden').slideDown('slow');
-     } else if ($('#visit-why').val() == 'Urgent') {
-          $('.why-answer-hidden').slideDown('slow');
      } else if ($('#visit-why').val() == 'Sample visit') {
           $('.why-answer-hidden').slideUp('slow');
      } else if ($('#visit-why').val() == 'Requested by deputy') {
@@ -25,32 +23,18 @@ $('#visit-why').bind('change', function (e) {
      }
 }).trigger('change');
 
-// $(document).ready(function() {
+// $('.health-welfare').hide();
+// $('.non-health-welfare').show();
 //
-//      $('#third-why').change(function(e) {
-//           e.preventDefault();
-//           $('.place-holder-text').hide();
-//           $("#why-commission-visit").append(`
-//                <p class="type-of-visit">
-//                     ${ $("#third-why option:selected").text() }
-//                </p>`
-//           );
-//      });
-//
+// $('#visit-tick-health').change(function(){
+//      if(this.checked) {
+//           $('.health-welfare').slideDown('slow');
+//           $('.non-health-welfare').hide();
+//      } else {
+//           $('.health-welfare').slideUp('slow');
+//           $('.non-health-welfare').show();
+//      }
 // });
-
-$('.health-welfare').hide();
-$('.non-health-welfare').show();
-
-$('#visit-tick-health').change(function(){
-     if(this.checked) {
-          $('.health-welfare').slideDown('slow');
-          $('.non-health-welfare').hide();
-     } else {
-          $('.health-welfare').slideUp('slow');
-          $('.non-health-welfare').show();
-     }
-});
 
 // Side panel content
 $('.accordion').find('#step-1, #step-2, #step-3, #step-4, #step-5, #step-6').addClass('inactive');
@@ -73,6 +57,7 @@ $(document).ready(function() {
           e.preventDefault();
           $(this).toggleClass('selected');
           $(this).siblings('button').toggleClass('selected');
+          $(this).siblings('.hidden-content').toggle();
           if ($(this).hasClass('selected')) {
                $('.place-holder-text').hide();
                $("#recipients").append(`
@@ -92,6 +77,18 @@ $(document).ready(function() {
           }
      });
 
+});
+
+$('.hidden-content input:radio').change(function(){
+     if($(this).is(":checked")) {
+          $(this).parent().toggleClass("chosen-location");
+          $(this).closest('li').find('.icon.chosen-location').show();
+          $(this).closest('li').find('.visitor').toggleClass('chosen-location');
+          $(this).closest('li').find('.hidden-content').toggleClass('chosen-location');
+          $(this).closest('li').find('.view-more').toggleClass('chosen-location');
+     } else {
+          $(this).parent().removeClass("chosen-location");
+     }
 });
 
 $('#add-third-party-form').hide();
@@ -513,20 +510,3 @@ if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("co
 //      // $("#page-1").toggle("slide");
 //      $("#page-1").show("slide", { direction: "left" }, 1000);
 // });
-
-
-// ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //
-
-// Populates the client page with list of 4a - recipients and document people
-JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
-     $('#visiting').append(`
-          <li> ${ recipient }, </li>
-     `);
-     $('#visits').append(`
-          <li> ${ recipient }, </li>
-     `);
-});
-
-JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
-     $('#document-recipients').append('<li>' + recipient + '</li>');
-});

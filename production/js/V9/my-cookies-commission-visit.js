@@ -33,7 +33,7 @@ $("#add-visitors-step-1").on("click", function (e) {
      // Cookies for side bar
      $.cookie("visit-why", $("#visit-why").val(), {path:'/'});
      $.cookie("visit-why-answer", $("#visit-why-answer").val(), {path:'/'});
-     $.cookie("visit-urgent", $("#visit-urgent:checked").val(), {path:'/'});
+     $.cookie("visit-urgent", $("input[name=visit-urgent]:checked").parent().text(), {path:'/'});
      $.cookie("visit-commissioned-by", $("#visit-commissioned-by").val(), {path:'/'});
      $.cookie("visit-tick-health", $("#visit-tick-health:checked").parent().text(), {path:'/'});
      $.cookie("visit-tick-compliance", $("#visit-tick-compliance:checked").parent().text(), {path:'/'});
@@ -359,7 +359,7 @@ if ($.cookie("user-journey") == 6) {
      // m = n.getMonth() + 1;
      // d = n.getDate();
      // document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-     
+
      // DASHBOARD - Task List
      $('#tasks-table').find("tr.link-for-commission-visit").addClass("complete");
      $('#tasks-table').find("tr.link-for-commission-visit").hide('slow').delay(1500);

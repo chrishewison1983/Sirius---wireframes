@@ -126,6 +126,7 @@
                                    <label for="visit-why">Why is this visit being commissioned?</label>
                                    <select id="visit-why">
                                         <option>-- Select --</option>
+                                        <option value="First visit">First visit</option>
                                         <option value="Routine visit">Routine visit</option>
                                         <option value="Requested by deputy">Requested by deputy</option>
                                         <option value="Requested by case manager">Requested by case manager</option>
@@ -138,7 +139,7 @@
                               <!-- // FORM ITEM - 1a - END // -->
 
                               <!-- // FORM ITEM - 1b - START // -->
-                              <div class="form-group why-answer-hidden">
+                              <div class="form-group why-answer-hidden hidden">
                                    <label for="visit-why-answer">
                                         Please specify
                                    </label>
@@ -149,11 +150,17 @@
                               <!-- // FORM ITEM - 2 - START // -->
                               <div class="form-group violent-risk">
                                    <span></span>
-                                   <label class="normal" for="visit-urgent">
-                                        <input id="visit-urgent" name="visit-urgent" type="checkbox" value="Yes">
-                                        Is this visit urgent?
+                                   <legend>Is this visit urgent?</legend>
+                                   <label for="visit-urgent-yes" class="radio">
+                                        <input id="visit-urgent-yes" type="radio" name="visit-urgent" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-urgent-no" class="radio">
+                                        <input id="visit-urgent-no" type="radio" name="visit-urgent" value="No">
+                                        No
                                    </label>
                               </div>
+
                               <!-- // FORM ITEM - 2 - END // -->
 
                               <!-- // FORM ITEM - 3 - START // -->
@@ -163,9 +170,7 @@
                               </div>
                               <!-- // FORM ITEM - 3 - END // -->
 
-                              <p>
-                                   Please add what is relevent:
-                              </p>
+                              <p class="faux-label">What type of visit is it?</p>
 
                               <!-- // FORM ITEM - 4 - START // -->
                               <div class="form-group checkbox">
@@ -234,7 +239,7 @@
 
                               <!-- // FORM ITEM - 11a - START // -->
                               <div class="form-group">
-                                   <legend>Have the reports been submitted late?</legend>
+                                   <legend>Have the annual reports been submitted late?</legend>
                                    <label for="visit-submitted-late-yes" class="radio">
                                         <input id="visit-submitted-late-yes" type="radio" name="radio-inline-group-1" value="Yes">
                                         Yes
@@ -247,7 +252,7 @@
                               <!-- // FORM ITEM - 11a - END // -->
 
                               <!-- // FORM ITEM - 11b - START // -->
-                              <div class="form-group answer-1b">
+                              <div class="form-group answer-1b hidden">
                                    <label for="visit-submitted-late-answer">
                                         Please provide the visitor with as many details as possible:
                                    </label>
@@ -255,102 +260,12 @@
                               </div>
                               <!-- // FORM ITEM - 11b - END // -->
 
-                              <!-- // FORM ITEM - 12a - START // -->
-                              <div class="health-welfare adjust-padding-top">
-
-                                   <label for="visit-specific-questions">
-                                        Case specific questions for the visitor to address in this case:
+                              <!-- // FORM ITEM - 12 - START // -->
+                              <div class="form-group">
+                                   <label for="visit-non-health-questions">
+                                        Case sepecific questions for the visitor to address in this case:
                                    </label>
-
-                                   <!-- // 13 - ITEM 1 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-1">
-                                             <input id="visit-special-requirements-1" name="visit-special-requirements-1" type="checkbox" value="post">
-                                             Would the visitor ensure the deputy is aware of the requirement to complete an annual health and welfare report? (first year only?)
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 1 - END // -->
-
-                                   <!-- // 12 - ITEM 2 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-2">
-                                             <input id="visit-special-requirements-2" name="visit-special-requirements-2" type="checkbox" value="post">
-                                             Would the deputy explain to the visitor why they required the H and W order and if they have needed to use it? (first year only?)
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 2 - END // -->
-
-                                   <!-- // 12 - ITEM 3 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-3">
-                                             <input id="visit-special-requirements-3" name="visit-special-requirements-3" type="checkbox" value="post">
-                                             Would the deputy confirm / provide proof that the client’s assets remain below £21,000.00?
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 3 - END // -->
-
-                                   <!-- // 12 - ITEM 4 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-4">
-                                             <input id="visit-special-requirements-4" name="visit-special-requirements-4" type="checkbox" value="post">
-                                             Please confirm that the client’s current care needs are being met.
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 4 - END // -->
-
-                                   <!-- // 12 - ITEM 5 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-5">
-                                             <input id="visit-special-requirements-5" name="visit-special-requirements-5" type="checkbox" value="post">
-                                             Please confirm if there have been any significant changes in the client’s health or financial circumstances.
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 5 - END // -->
-
-                                   <!-- // 12 - ITEM 6 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-6">
-                                             <input id="visit-special-requirements-6" name="visit-special-requirements-6" type="checkbox" value="post">
-                                             Please confirm if there are there any open safeguardings.
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 6 - END // -->
-
-                                   <!-- // 12 - ITEM 7 - START // -->
-                                   <div class="form-group checkbox">
-                                        <label class="normal" for="visit-special-requirements-7">
-                                             <input id="visit-special-requirements-7" name="visit-special-requirements-7" type="checkbox" value="post">
-                                             Please confirm if the client is participating in any weekly activities.
-                                        </label>
-                                   </div>
-                                   <!-- // 12 - ITEM 7 - END // -->
-
-                                   <p></p>
-
-                                   <!-- // 12 - ITEM 8 - START // -->
-                                   <div class="form-group">
-                                        <label for="visit-health-questions">
-                                             Other please provide details:
-                                        </label>
-                                        <textarea id="visit-health-questions"></textarea>
-                                   </div>
-                                   <!-- // 12 - ITEM 8 - END // -->
-
-                              </div>
-                              <!-- // FORM ITEM - 12a - END // -->
-
-                              <!-- // FORM ITEM - 12b - START // -->
-                              <div class="non-health-welfare adjust-padding-top">
-
-                                   <!-- // 12 - ITEM 8 - START // -->
-                                   <div class="form-group">
-                                        <label for="visit-non-health-questions">
-                                             Case sepecific questions for the visitor to address in this case:
-                                        </label>
-                                        <textarea id="visit-non-health-questions"></textarea>
-                                   </div>
-                                   <!-- // 12 - ITEM 8 - END // -->
-
+                                   <textarea id="visit-non-health-questions"></textarea>
                               </div>
                               <!-- // FORM ITEM - 12 - END // -->
 

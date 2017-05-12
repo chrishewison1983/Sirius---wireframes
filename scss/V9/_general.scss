@@ -150,6 +150,12 @@ p {
           background: $border-colour;
           border-radius: 50%;
      }
+     &.faux-label {
+          // font-weight: bold;
+          font-family: $Montserrat;
+          margin: 0 0 0.5em 0;
+          color: $main-colour;
+     }
 }
 
 ul, ol {

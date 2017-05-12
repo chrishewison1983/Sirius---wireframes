@@ -39,10 +39,10 @@
                }
                &.full-width {
                     width: 100%;
-                    border: 3px solid $border-colour;
+                    border: none;
                     border-radius: $global-border-radius;
-                    padding: 1.5em;
-                    background: lighten($border-colour,3%);
+                    padding: 0;
+                    background: $white;
                     margin: 0 0 2em 0;
                     .item {
                          border: none;
@@ -122,7 +122,7 @@
                     display: inline-block;
                     position: relative;
                     flex-direction: column;
-                    border: 3px solid $border-colour;
+                    border: 3px solid lighten($border-colour,3%);
                     border-radius: $global-border-radius;
                     padding: 1.5em;
                     background: lighten($border-colour,3%);
@@ -451,7 +451,8 @@
                               .date {
                                    background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
                                    background-size: cover;
-                                   border: 3px solid $border-colour;
+                                   border: none;
+                                   position: relative;
                                    width: 48.75%;
                                    margin: 0 5% 0 0;
                                    height: 100%;
@@ -465,6 +466,9 @@
                                    h1, h2, h3, p {
                                         text-align: center;
                                    }
+                                   .wrapper {
+                                        z-index: 10;
+                                   }
                                    .main-text {
                                         color: $white;
                                         font-size: 1.6rem;
@@ -473,8 +477,8 @@
                                              display: inline-block;
                                              width: 1.25em;
                                              height: 1.25em;
-                                             margin: 0 0.25em -0.2em 0;
-                                             background: url(#{$image-path}/icons/date-dark.svg) no-repeat 50% 50%;
+                                             margin: 0 0.5em -0.2em 0;
+                                             background: url(#{$image-path}/icons/date-white.svg) no-repeat 50% 50%;
                                              background-size: contain;
                                              border: none;
                                              border-radius: 0;
@@ -493,6 +497,7 @@
                          &.background {
                               background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
                               background-size: cover;
+                              border: none;
                               .main-text {
                                    color: $white;
                                    font-size: 2rem;

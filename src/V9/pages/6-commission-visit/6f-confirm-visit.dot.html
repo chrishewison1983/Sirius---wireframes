@@ -138,7 +138,7 @@
                               <!-- // FORM ITEM - 5a - END // -->
 
                               <!-- // FORM ITEM - 5b - START // -->
-                              <div class="form-group answer-5b">
+                              <div class="form-group answer-5b hidden">
                                    <label for="visit-dangers-answer">
                                         Please provide details:
                                    </label>
@@ -161,7 +161,7 @@
                               <!-- // FORM ITEM - 6a - END // -->
 
                               <!-- // FORM ITEM - 6b - START // -->
-                              <div class="form-group answer-6b">
+                              <div class="form-group answer-6b hidden">
                                    <label for="visit-assist-visitor-answer">
                                         Please provide details:
                                    </label>
@@ -207,13 +207,25 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta" id="add-visitors-step-6" href="../4-client-page/4a-new-client.html">Commission visit</a>
+          <a class="main-cta" id="add-visitors-step-6" href="#ex1" rel="modal:open">Preview visit form</a>
           <a href="#" onclick="history.back();">Back to step 5</a>
      </div>
      <!-- CTA-FOOTER - END -->
 
 </main>
 <!-- PRIMARY CONTENT - END -->
+
+<!-- // MODAL - START // -->
+<div id="ex1" style="display:none;">
+     <img src="../../../production/img/V9/document-thumbnail.png" alt="Document" class="document-item">
+     <hr>
+     <div class="cta-row">
+          <a class="main-cta" href="6g-confirmation-page.html">Commission visit</a>
+          <a href="#" rel="modal:close">Cancel</a>
+     </div>
+</div>
+<!-- // MODAL - END // -->
+
 
 <!-- FOOTER CONTENT - START -->
 <!-- FOOTER CONTENT - END -->

@@ -109,6 +109,14 @@ footer {
      }
 }
 
+.modal {
+     a.main-cta {
+          float: none;
+          background-color: $green;
+          border: 3px solid $green;
+     }
+}
+
 
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {

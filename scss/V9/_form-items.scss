@@ -102,6 +102,7 @@ form {
                     top: -0.5em;
                     right: 0;
                     content: "";
+                    // color: $main-colour;
                }
                &:after {
                     content: "";
@@ -121,6 +122,7 @@ form {
                     zoom: 1;
                     filter: alpha(opacity=0);
                     opacity: 0;
+                    // color: $main-colour;
                }
           }
           &.normal {
@@ -212,9 +214,12 @@ form {
      .form-group {
           display: inline-block;
           width: 100%;
-          margin: 0 0 1.5em 0;
+          margin: 0 0 2.5em 0;
           &:last-of-type {
                margin-bottom: 3em;
+          }
+          &.hidden {
+               margin-top: -1.5em;
           }
           &.address-list {
                overflow-y: scroll;
@@ -224,11 +229,14 @@ form {
                box-shadow: inset 0px 0px 10px 0px rgba($black,0.15);
           }
           &.violent-risk, &.fee-payer {
-               padding: 1.5em;
-               margin: 1em 0 3em 0;
+               padding: 1em 1.5em 1.5em 1.5em;
+               margin: 0 0 2.5em 0;
                border: 3px dashed rgba($red,0.1);
                border-radius: $global-border-radius;
                position: relative;
+               legend {
+                    padding: 0 0 1em 4.75em;
+               }
                label {
                     margin: 0;
                     padding: 0 0 0 7.25em;
@@ -237,8 +245,8 @@ form {
                          top: -0.35em;
                     }
                     &:after {
-                         left: 5.05em;
-                         top: 4px;
+                         left: 4.95em;
+                         top: 1px;
                     }
                }
                span {
@@ -289,6 +297,9 @@ form {
           }
           &.checkbox {
                margin: 0 0 0.5em 0;
+               // label {
+               //      color: $text-main-colour;
+               // }
           }
      }
      .cta-row {

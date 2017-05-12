@@ -5,7 +5,7 @@
 
 //  FOR ALL
 .icon {
-     &.fee-payer, &.main-contact, &.welfare, &.welfare-property, &.property {
+     &.fee-payer, &.main-contact, &.welfare, &.welfare-property, &.property, &.chosen-location {
           position: relative;
           z-index: 11;
           display: inline-block;
@@ -99,6 +99,12 @@
      &.record {
           background: url(#{$image-path}/icons/client/record-white.svg) no-repeat 50% 50% $blue;
           background-size: 1.5em;
+     }
+     &.chosen-location {
+          background: url(#{$image-path}/icons/location-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+          display: none;
+          border: none !important;
      }
 }
 
