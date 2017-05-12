@@ -10,6 +10,12 @@
           @include flex-wrap(wrap);
           float: left;
           width: 100%;
+          .no-items {
+               margin-top: 1em;
+               p {
+                    margin: 0;
+               }
+          }
           .dashboard-item {
                border: 2px solid $border-colour;
                border-radius: $global-border-radius;
@@ -425,6 +431,31 @@ table {
                &:hover {
                     background: none;
                }
+               &.three-column {
+                    th:nth-of-type(1n) {
+                         width: 50%;
+                    }
+                    th:nth-of-type(2n) {
+                         width: 25%;
+                    }
+                    th:nth-of-type(3n) {
+                         width: 25%;
+                    }
+               }
+               &.four-column {
+                    th:nth-of-type(1n) {
+                         width: 40%;
+                    }
+                    th:nth-of-type(2n) {
+                         width: 20%;
+                    }
+                    th:nth-of-type(3n) {
+                         width: 20%;
+                    }
+                    th:nth-of-type(4n) {
+                         width: 20%;
+                    }
+               }
           }
           tr th {
                text-align: left;
@@ -435,21 +466,6 @@ table {
                @include standard-transition;
                &:hover {
                     cursor: pointer;
-               }
-               &:nth-of-type(1n) {
-                    width: 40%;
-               }
-               &:nth-of-type(2n) {
-                    width: 20%;
-               }
-               &:nth-of-type(3n) {
-                    width: 17.5%;
-               }
-               &:nth-of-type(4n) {
-                    width: 12.5%;
-               }
-               &:nth-of-type(5n) {
-                    width: 5%;
                }
                span {
                     background: url(#{$image-path}/icons/filter-down-blue.svg) no-repeat 50% 50%;
@@ -476,6 +492,9 @@ table {
           &:hover {
                background: $border-colour;
                cursor: pointer;
+               // .description {
+               //      border-top: 3px dashed $blue;
+               // }
           }
           th, td {
                padding: 1.5em 1em 1.5em 0;
@@ -494,7 +513,7 @@ table {
      tr th, tr td {
 
      }
-     &#myTable {
+     &#tasks-table, &#completed-tasks-table {
           color: $text-main-colour;
           font-family: $Opensans-Regular;
           border-collapse: collapse;
@@ -606,6 +625,28 @@ table {
                border-bottom: none;
                color: $black;
                text-decoration: underline;
+               display: block;
+               // width: 85%;
+          }
+          a.open {
+               padding: 0 0 0 1em;
+               background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
+               background-size: 0.75em;
+               float: left;
+               &.close {
+                    background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+                    background-size: 0.65em;
+               }
+          }
+          .description {
+               padding: 1em 0 0 0;
+               margin: 1.5em 0 0 0;
+               border-top: 3px dashed darken($border-colour,20%);
+               width: 100%;
+               display: none;
+               p {
+                    margin: 0;
+               }
           }
           .details {
                display: inline-block !important;
@@ -640,7 +681,17 @@ table {
                     margin: 0 1em 0 0;
                }
           }
+     }
+     &#completed-tasks-table {
+          display: none;
+          p {
+               &.date-text {
+                    margin: 0 0.75em 0 0;
+               }
+               &.time-text {
 
+               }
+          }
      }
 }
 

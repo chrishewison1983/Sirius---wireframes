@@ -6,18 +6,8 @@ $(".task").on("click", function (e) {
 });
 
 if ($.cookie("journey-task-led") == 'true') {
-     $("#add-visitors-step-6").attr('href','../dashboard.html');
-     $('#confirmation-dashboard-visit').show();
-
-     $('#myTable').find("tr.link-for-commission-visit").addClass("complete");
-     $('#myTable').find("tr.link-for-commission-visit").hide('slow').delay(1500);
-     $('#myTable').closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
-
-     // This hides the confirmation box after 5 seconds
-     setTimeout(function() {
-          $("#confirmation-dashboard-visit").hide(500)
-     }, 5000);
-
+     // $("#add-visitors-step-6").attr('href','../dashboard.html');
+     // $('#confirmation-dashboard-visit').show();
 } else {
      $("#add-visitors-step-6").attr('href','../4-client-page/4a-new-client.html');
 
@@ -345,13 +335,35 @@ if ($.cookie("user-journey") == 6) {
      $("#list-of-timeline #visit-confirmation").show();
      $('#list-of-tasks #task-list').show();
 
+     // DASHBOARD - This hides the confirmation box after 5 seconds
      $("#confirmation-dashboard-visit").show();
 
-     // This hides the confirmation box after 5 seconds
      setTimeout(function() {
           $("#confirmation-dashboard-visit").hide(500)
      }, 5000);
 
+     $('.dashboard-item-container .no-items').hide();
+
+     // DASHBOARD - Completed task List
+     $('#completed-tasks-table').show();
+     $('#completed-tasks-table').find("thead tr").show();
+     $('#completed-tasks-table').find("tbody tr").hide();
+     $('#completed-tasks-table').find("tbody tr.link-for-commission-visit").show().addClass("complete");
+     $('#completed-tasks-table').closest("main").find('.tab-link.completed span').html(function(i, val) { return +val+1 });
+
+     // var today = new Date();
+     // document.getElementById('time').innerHTML=today;
+
+     // n =  new Date();
+     // y = n.getFullYear();
+     // m = n.getMonth() + 1;
+     // d = n.getDate();
+     // document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+     
+     // DASHBOARD - Task List
+     $('#tasks-table').find("tr.link-for-commission-visit").addClass("complete");
+     $('#tasks-table').find("tr.link-for-commission-visit").hide('slow').delay(1500);
+     $('#tasks-table').closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
 
      // This hides the confirmation box after 5 seconds
      setTimeout(function() {

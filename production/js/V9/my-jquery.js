@@ -309,13 +309,22 @@ $('.minimise').on('click', function(e) {
 
 // Dashboard
 $(document).ready(function() {
-     $('#myTable input:checkbox').change(function(){
-          if($(this).is(":checked")) {
-               $(this).closest("tr").addClass("complete");
-               $(this).closest("tr").hide('slow').delay(1500);
-               $(this).closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
-          } else {
-               $(this).closest("tr").removeClass("complete");
-          }
-     });
+
+     $('.open').on('click', function(e) {
+          e.preventDefault();
+          $(this).closest('td').find('.description').toggle();
+          $(this).toggleClass('close');
+     })
+
+     // $('#completed-tasks-table').hide();
+
+     // $('#myTable input:checkbox').change(function(){
+     //      if($(this).is(":checked")) {
+     //           $(this).closest("tr").addClass("complete");
+     //           $(this).closest("tr").hide('slow').delay(1500);
+     //           $(this).closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
+     //      } else {
+     //           $(this).closest("tr").removeClass("complete");
+     //      }
+     // });
 });

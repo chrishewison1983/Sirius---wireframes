@@ -29,6 +29,11 @@ ul.tabs {
                     background: $white;
                     color: $blue;
                }
+               &.completed {
+                    span {
+                         background-color: $white;
+                    }
+               }
           }
           &.completed {
                span {

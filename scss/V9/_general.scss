@@ -70,7 +70,8 @@ main {
      right: 0;
      bottom: 0;
      left: 0;
-     background: rgba($black,0.1);
+     background: rgba($blue,0.7);
+     mix-blend-mode: multiply;
      z-index: 1;
 }
 

@@ -205,86 +205,19 @@
                .fee-payer, .main-contact, .welfare, .welfare-property, .property {
                     position: absolute;
                     z-index: 11;
-                    display: inline-block;
                     width: 3em;
                     height: 3em;
-                    border-radius: 50%;
                     top: -1.25em;
                     right: -1.25em;
-                    @include standard-transition;
-                    &:hover {
-                         cursor: default;
-                         transform: scale(1.1);
-                         p {
-                              display: inline-block;
-                         }
-                    }
                     p {
-                         position: absolute;
-                         bottom: -4.75em;
-                         left: 50%;
-                         width: 10em;
-                         margin-left: -5em;
-                         background: rgba($black,0.6);
-                         display: none;
-                         font-family: $Montserrat;
-                         font-weight: bold;
-                         border: none;
-                         text-align: center;
-                         border-radius: $global-border-radius;
-                         padding: 0.5em;
                          font-size: 0.775rem;
-                         color: $white;
-                         z-index: 10;
-                         &:before {
-                              content: " ";
-                              position: absolute;
-                              bottom: 100%;  /* At the top of the tooltip */
-                              left: 50%;
-                              margin-left: -5px;
-                              border-width: 5px;
-                              border-style: solid;
-                              border-color: transparent transparent rgba($black,0.6) transparent;
-                         }
                     }
-               }
-               .welfare {
-                    background: url(#{$image-path}/icons/HandW.svg) no-repeat 50% 50%;
-                    background-size: cover;
-               }
-               .welfare-property {
-                    background: url(#{$image-path}/icons/HandW-PandA.svg) no-repeat 50% 50%;
-                    background-size: cover;
-                    border-radius: 0;
-                    p {
-                         bottom: -6.25em;
-                         width: 13em;
-                         margin-left: -6.5em;
-                    }
-               }
-               .property {
-                    background: url(#{$image-path}/icons/PandA.svg) no-repeat 50% 50%;
-                    background-size: cover;
                }
                .fee-payer {
-                    z-index: 12;
                     right: 1.35em;
-                    box-shadow: 0px 0px 0px 3px $white;
-                    background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
-                    background-size: 2.5em;
-                    &:hover {
-                         z-index: 14;
-                    }
                }
                .main-contact {
-                    z-index: 13;
                     right: 3.95em;
-                    box-shadow: 0px 0px 0px 3px $white;
-                    background: url(#{$image-path}/icons/main-contact.svg) no-repeat 50% 50%;
-                    background-size: cover;
-                    &:hover {
-                         // transform: scale(1.1);
-                    }
                }
                .extra-info {
                     display: inline-block;

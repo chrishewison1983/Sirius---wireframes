@@ -235,7 +235,7 @@ header {
      background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
      background-size: cover;
      line-height: 0;
-     padding: 0 0 2em 0;
+     padding: 0 0 1.5em 0;
      .row {
           z-index: 2;
           position: relative;
@@ -249,10 +249,13 @@ header {
      h1 {
           color: $white;
           margin: 0;
-          padding: 0.5em 0 0.25em 0;
+          padding: 0.5em 0 0 0;
           span {
                color: rgba($white,0.7);
                font-size: 1rem;
+               &.violent {
+                    display: none;
+               }
                .separator {
                     display: inline-block;
                     margin: 0 1em;
@@ -271,9 +274,16 @@ header {
                background-size: 2em;
           }
           &.violent-risk-message {
-               padding: 0.5em 0 1em 2.5em;
+               padding: 0.15em 0 0.15em 2.25em;
                background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 0 50%;
-               background-size: 2em;
+               background-size: contain;
+               line-height: 0.75;
+               margin: 0.75em 0 0.25em 0;
+               span {
+                    display: inline-block;
+                    width: 100%;
+                    text-transform: uppercase;
+               }
           }
           &.welsh-message {
                padding: 0.5em 0 1em 2.5em;

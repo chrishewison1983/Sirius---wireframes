@@ -73,13 +73,13 @@
 	</ul> -->
 
 	<form action="search.html">
-		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Surname...">
+		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
 		<input type="submit">
 	</form>
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <h1> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </h1> <div class="extra-content"> <div class="left"> <p>Order no.:</p> <p>Born:</p> <p>Medical Condition:</p> <p>Record:</p> </div> <div class="right"> <p>29273638201</p> <p> <span class="client-dob-day">25</span> / <span class="client-dob-month">06</span> / <span class="client-dob-year">1943</span> </p> <p> <span class="client-medical-condition">Alzheimer's</span> </p> <p>7000-0000-2803</p> </div> <!-- <a href="../3-create-client/3a-create-client.html">Edit client</a> --> </div> <a id="show-more">Show more info</a> </div> </div> <div class="colour-wrapper"></div> <!-- // ACTIONS NAV - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <h1 class="violent-risk-message"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="violent">Client is violent</span> </h1> </div> </div> <div class="colour-wrapper"></div> <!-- // ACTIONS NAV - START // -->
 <nav class="actions-nav">
 
 	<ul>
@@ -111,42 +111,149 @@
 			<div id="client-summary">
 
 				<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
-				<div class="dashboard-row two-items">
+				<div class="dashboard-row full-width content-items-4">
 
 					<!-- // ITEM 1 - START // -->
-					<div class="item with-title">
-						<div class="title"><span class="important"></span><p>Important remarks</p></div>
-						<ol>
-							<li>Quisque accumsan eu nisi consectetur maximus.</li>
-							<li>Nulla molestie nibh vitae lorem rutrum finibus.</li>
-							<li>Integer id porta metus.</li>
-							<li>Donec tincidunt consequat aliquet. </li>
-						</ol>
+					<div class="item client-info">
+						<div class="left">
+							<span class="icon order"></span>
+						</div>
+						<div class="right">
+							<p>Order no.:</p>
+							<h1>29273638201</h1>
+						</div>
 					</div>
 					<!-- // ITEM 1 - END // -->
 
 					<!-- // ITEM 2 - START // -->
-					<div class="item full-colour-block alert-colour">
-						<section class="alert three-text-items">
-							<h1 class="sub-text">non-compliant for:</h1>
-							<h1 class="main-text">30</h1>
-							<h2 class="sub-text">days</h2>
-						</section>
+					<div class="item client-info">
+						<div class="left">
+							<span class="icon dob"></span>
+						</div>
+						<div class="right">
+							<p>Born:</p>
+							<h1>
+								<span class="client-dob-day">25</span>
+								/
+								<span class="client-dob-month">06</span>
+								/
+								<span class="client-dob-year">1943</span>
+							</h1>
+						</div>
 					</div>
 					<!-- // ITEM 2 - END // -->
+
+					<!-- // ITEM 3 - START // -->
+					<div class="item client-info">
+						<div class="left">
+							<span class="icon medical"></span>
+						</div>
+						<div class="right">
+							<p>Medical Condition:</p>
+							<h1><span class="client-medical-condition">Alzheimer's</span></h1>
+						</div>
+					</div>
+					<!-- // ITEM 3 - END // -->
+
+					<!-- // ITEM 4 - START // -->
+					<div class="item client-info">
+						<div class="left">
+							<span class="icon record"></span>
+						</div>
+						<div class="right">
+							<p>Record:</p>
+							<h1>7000-0000-2803</h1>
+						</div>
+					</div>
+					<!-- // ITEM 4 - END // -->
 
 				</div>
 				<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
 
 				<!-- ///////////////////// ROW - 2 - START ///////////////////// -->
+				<div class="dashboard-row two-items">
+
+					<!-- // ITEM 1 - START // -->
+					<div class="item with-title">
+						<div class="title"><span class="important"></span><p>Important remarks</p></div>
+						<ol class="summary-list">
+							<li>
+								<p>Risks to the clients:</p>
+								<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+							</li>
+							<li>
+								<p>Outstanding issues:</p>
+								<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+							</li>
+							<li>
+								<p>Safegaurding issues:</p>
+								<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+							</li>
+							<li>
+								<p>Client is violent:</p>
+								<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+							</li>
+						</ol>
+					</div>
+					<!-- // ITEM 1 - END // -->
+
+					<!-- // ITEM 2 - START // -->
+					<div class="item no-colour highlight">
+						<section class="full-colour-block alert-colour right-focus">
+							<div class="left">
+								<h1 class="sub-text">non-compliant</h1>
+							</div>
+							<div class="right font-size-6rem">
+								<h1 class="main-text">
+									30
+									<span>days</span>
+								</h1>
+							</div>
+						</section>
+						<section class="full-colour-block main-colour left-focus">
+							<div class="left font-size-3rem">
+								<h1 class="main-text">&pound;200</h1>
+							</div>
+							<div class="right">
+								<h2 class="sub-text">Outstanding payment</h2>
+							</div>
+						</section>
+						<section class="full-colour-block report-dates">
+							<div class="date">
+								<div class="wrapper">
+									<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
+									<h2 class="sub-text">7000-0000-2803</h2>
+									<h2 class="sub-text">Report due</h2>
+								</div>
+							</div>
+							<div class="date">
+								<div class="wrapper">
+									<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
+									<h2 class="sub-text">7000-0000-5251</h2>
+									<h2 class="sub-text">Report due</h2>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!-- // ITEM 2 - END // -->
+
+				</div>
+				<!-- ///////////////////// ROW - 2 - END ///////////////////// -->
+
+				<!-- ///////////////////// ROW - 3 - START ///////////////////// -->
 				<div class="dashboard-row three-items">
 
 					<!-- // ITEM 1 - START // -->
 					<div class="item deputies with-title">
-						<div class="title"><p>Deputy</p></div>
+						<div class="title"><span class="deputy"></span><p>Deputy</p></div>
 						<span class="number">1</span>
-						<i class="deputy"></i>
-						<h1>Lara Stevens<span class="fee-payer"></span></h1>
+						<h1>
+							Lara Stevens
+							<span class="icon fee-payer"><p>Fee payer</p></span>
+							<span class="icon main-contact"><p>Main deputy</p></span>
+							<span class="icon welfare"><p>Health &amp; welfare</p></span>
+							<span class="type">Joint</span>
+						</h1>
 						<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 			               <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div>
 			               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
@@ -155,10 +262,13 @@
 
 					<!-- // ITEM 2 - START // -->
 					<div class="item deputies with-title">
-						<div class="title"><p>Deputy</p></div>
+						<div class="title"><span class="deputy"></span><p>Deputy</p></div>
 						<span class="number">2</span>
-						<i class="deputy"></i>
-						<h1>Carla Frith</h1>
+						<h1>
+							Carla Frith
+							<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
+							<span class="type">Joint &amp; seperate</span>
+						</h1>
 						<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 			               <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div>
 			               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
@@ -167,10 +277,13 @@
 
 					<!-- // ITEM 3 - START // -->
 					<div class="item deputies with-title">
-						<div class="title"><p>Deputy</p></div>
+						<div class="title"><span class="deputy"></span><p>Deputy</p></div>
 						<span class="number">3</span>
-						<i class="deputy"></i>
-						<h1>Melanie Rand</h1>
+						<h1>
+							Melanie Rand
+							<span class="icon property"><p>Property &amp; finance</p></span>
+							<span class="type">Joint &amp; seperate</span>
+						</h1>
 						<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 			               <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div>
 			               <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div>
@@ -178,16 +291,32 @@
 					<!-- // ITEM 3 - END // -->
 
 				</div>
-				<!-- ///////////////////// ROW - 2 - END ///////////////////// -->
+				<!-- ///////////////////// ROW - 3 - END ///////////////////// -->
 
-				<!-- ///////////////////// ROW - 3 - START ///////////////////// -->
+				<!-- ///////////////////// ROW - 4 - START ///////////////////// -->
 				<div class="dashboard-row two-items">
 
 					<!-- // ITEM 1 - START // -->
-					<div class="item full-colour-block main-colour alert">
-						<section class="two-text-items">
-							<h1 class="main-text">&pound;200</h1>
-							<h2 class="sub-text">Outstanding payment</h2>
+					<div class="item no-colour highlight">
+						<section class="full-colour-block background right-focus">
+							<div class="left">
+								<h1 class="sub-text">Case 1:</h1>
+								<h2 class="main-text">7000-0000-2738</h2>
+							</div>
+							<div class="right">
+								<i class="icon property white"></i>
+							</div>
+							<div class="colour-wrapper"></div>
+						</section>
+						<section class="full-colour-block background left-focus">
+							<div class="left">
+								<i class="icon welfare white"></i>
+							</div>
+							<div class="right">
+								<h1 class="sub-text">Case 2:</h1>
+								<h2 class="main-text">7000-0000-1029</h2>
+							</div>
+							<div class="colour-wrapper"></div>
 						</section>
 					</div>
 					<!-- // ITEM 1 - END // -->
@@ -195,17 +324,29 @@
 					<!-- // ITEM 2 - START // -->
 					<div class="item with-title">
 						<div class="title"><span class="history"></span><p>Case history</p></div>
-						<ol>
-							<li>Quisque accumsan eu nisi consectetur maximus.</li>
-							<li>Nulla molestie nibh vitae lorem rutrum finibus.</li>
-							<li>Integer id porta metus.</li>
-							<li>Donec tincidunt consequat aliquet. </li>
+						<ol class="summary-list">
+							<li>
+								<p>When a visit was carried out?:</p>
+								<p class="answer">25/06/2016</p>
+							</li>
+							<li>
+								<p>Have they been non-compliant before?:</p>
+								<p class="answer">Yes</p>
+							</li>
+							<li>
+								<p>Is there is a problem with the case?:</p>
+								<p class="answer">No</p>
+							</li>
+							<li>
+								<p>Do the deputies get on?</p>
+								<p class="answer">No, they can never agree on the right course of action</p>
+							</li>
 						</ol>
 					</div>
 					<!-- // ITEM 2 - END // -->
 
 				</div>
-				<!-- ///////////////////// ROW - 3 - END ///////////////////// -->
+				<!-- ///////////////////// ROW - 4 - END ///////////////////// -->
 
 			</div>
 		</div>
@@ -538,7 +679,7 @@
  </div> <!-- // CLIENT DOCUMENTS - END // --> </div> </div> <!-- =========== TAB CONTENT - 7 - END =========== --> </div> <div class="large-3 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
 <nav class="actions-nav client-panel">
 
-	<h1>Actions:</h1>
+	<h1>Perform a task:</h1>
 
 	<ul>
 		<li class="supervision">
