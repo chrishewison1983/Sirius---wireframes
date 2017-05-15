@@ -51,9 +51,8 @@
                          padding: 0;
                          margin: 0;
                     }
-                    &.content-items-4 {
+                    &.content-items-3, &.content-items-4 {
                          .item {
-                              width: 25%;
                               @include flexbox;
                               @include align-items(center);
                               @include justify-content(flex-start);
@@ -69,9 +68,6 @@
                                         width: 3em;
                                         height: 3em;
                                         margin: 0 0.5em 0 0;
-                                        // position: relative;
-                                        // top: 1em;
-                                        // background: $blue;
                                         border-radius: 50%;
                                    }
                                    h1, p {
@@ -96,6 +92,16 @@
                                         margin: 0;
                                    }
                               }
+                         }
+                    }
+                    &.content-items-3 {
+                         .item {
+                              width: 33.333%;
+                         }
+                    }
+                    &.content-items-4 {
+                         .item {
+                              width: 25%;
                          }
                     }
                }

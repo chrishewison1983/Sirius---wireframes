@@ -60,6 +60,9 @@
           margin: 0;
           li {
                list-style: none;
+               &:hover {
+                    background: none;
+               }
           }
           &#selected-list {
                li {
