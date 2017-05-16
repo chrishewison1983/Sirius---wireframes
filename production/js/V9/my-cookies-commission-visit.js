@@ -5,19 +5,12 @@ $(".task").on("click", function (e) {
      $.cookie("journey-task-led", true, {path:'/'});
 });
 
-if ($.cookie("journey-task-led") == 'true') {
-     // $("#add-visitors-step-6").attr('href','../dashboard.html');
-     // $('#confirmation-dashboard-visit').show();
-} else {
-     $("#add-visitors-step-6").attr('href','../4-client-page/4a-new-client.html');
-
-     // $('main.new-client').find('.tab-link').removeClass('current');
-     // $('main.new-client').find('.tab-link[data-tab="tab-6"]').addClass('current');
-     //
-     // $('main.new-client').find('.tab-content').removeClass('current');
-     // $('main.new-client').find('#tab-6').addClass('current');
-
-}
+// if ($.cookie("journey-task-led") == 'true') {
+//      // $("#add-visitors-step-6").attr('href','../dashboard.html');
+//      // $('#confirmation-dashboard-visit').show();
+// } else {
+//      $("#add-visitors-step-6").attr('href','../4-client-page/4a-new-client.html');
+// }
 
 ////////////////////////////////////// Step - 1 (6A-WHY?) //////////////////////////////////////
 $("#add-visitors-step-1").on("click", function (e) {
@@ -33,7 +26,7 @@ $("#add-visitors-step-1").on("click", function (e) {
      // Cookies for side bar
      $.cookie("visit-why", $("#visit-why").val(), {path:'/'});
      $.cookie("visit-why-answer", $("#visit-why-answer").val(), {path:'/'});
-     $.cookie("visit-urgent", $("input[name=visit-urgent]:checked").parent().text(), {path:'/'});
+     $.cookie("visit-urgent", $("input[name=visit-urgent]:checked").val(), {path:'/'});
      $.cookie("visit-commissioned-by", $("#visit-commissioned-by").val(), {path:'/'});
      $.cookie("visit-tick-health", $("#visit-tick-health:checked").parent().text(), {path:'/'});
      $.cookie("visit-tick-compliance", $("#visit-tick-compliance:checked").parent().text(), {path:'/'});
@@ -44,15 +37,6 @@ $("#add-visitors-step-1").on("click", function (e) {
      $.cookie("visit-tick-hmcs", $("#visit-tick-hmcs:checked").parent().text(), {path:'/'});
      $.cookie("visit-submitted-late", $("input[name=radio-inline-group-1]:checked").parent().text(), {path:'/'});
      $.cookie("visit-submitted-late-answer", $("#visit-submitted-late-answer").val(), {path:'/'});
-
-     $.cookie("visit-special-requirements-1", $("#visit-special-requirements-1:checked").parent().text(), {path:'/'});
-     $.cookie("visit-special-requirements-2", $("#visit-special-requirements-2:checked").parent().text(), {path:'/'});
-     $.cookie("visit-special-requirements-3", $("#visit-special-requirements-3:checked").parent().text(), {path:'/'});
-     $.cookie("visit-special-requirements-4", $("#visit-special-requirements-4:checked").parent().text(), {path:'/'});
-     $.cookie("visit-special-requirements-5", $("#visit-special-requirements-5:checked").parent().text(), {path:'/'});
-     $.cookie("visit-special-requirements-6", $("#visit-special-requirements-6:checked").parent().text(), {path:'/'});
-     $.cookie("visit-special-requirements-7", $("#visit-special-requirements-7:checked").parent().text(), {path:'/'});
-     $.cookie("visit-health-questions", $("#visit-health-questions").val(), {path:'/'});
 
      $.cookie("visit-non-health-questions", $("#visit-non-health-questions").val(), {path:'/'});
      $.cookie("visit-documents", $("#visit-documents").val(), {path:'/'});
@@ -113,30 +97,6 @@ if ($.cookie("visit-submitted-late-answer")) {
      $(".visit-submitted-late-answer").hide();
 }
 
-if ($.cookie("visit-special-requirements-1")) { $(".visit-special-requirements-1").text($.cookie("visit-special-requirements-1")); }
-else { $(".visit-special-requirements-1").hide(); }
-
-if ($.cookie("visit-special-requirements-2")) { $(".visit-special-requirements-2").text($.cookie("visit-special-requirements-2")); }
-else { $(".visit-special-requirements-2").hide(); }
-
-if ($.cookie("visit-special-requirements-3")) { $(".visit-special-requirements-3").text($.cookie("visit-special-requirements-3")); }
-else { $(".visit-special-requirements-3").hide(); }
-
-if ($.cookie("visit-special-requirements-4")) { $(".visit-special-requirements-4").text($.cookie("visit-special-requirements-4")); }
-else { $(".visit-special-requirements-4").hide(); }
-
-if ($.cookie("visit-special-requirements-5")) { $(".visit-special-requirements-5").text($.cookie("visit-special-requirements-5")); }
-else { $(".visit-special-requirements-5").hide(); }
-
-if ($.cookie("visit-special-requirements-6")) { $(".visit-special-requirements-6").text($.cookie("visit-special-requirements-6")); }
-else { $(".visit-special-requirements-6").hide(); }
-
-if ($.cookie("visit-special-requirements-7")) { $(".visit-special-requirements-7").text($.cookie("visit-special-requirements-7")); }
-else { $(".visit-special-requirements-7").hide(); }
-
-if ($.cookie("visit-health-questions")) { $(".visit-health-questions").text($.cookie("visit-health-questions")); }
-else { $(".visit-health-questions").hide(); }
-
 if ($.cookie("visit-non-health-questions")) {  $(".visit-non-health-questions").text($.cookie("visit-non-health-questions"));  }
 if ($.cookie("visit-documents")) {  $(".visit-documents").text($.cookie("visit-documents")); }
 
@@ -164,7 +124,11 @@ if ($.cookie("type-of-info-set-3") == 'true') {
 ////////////////////////////////////// Step - 2 (6B-WHO?) //////////////////////////////////////
 $("#add-visitors-step-2").on("click", function (e) {
      $.cookie("completed-step-2", true, {path:'/'});
+     $.cookie("visit-location", $("input[name=visit-location]:checked").parent().text(), {path:'/'});
+
 });
+
+if ($.cookie("visit-location")) {  $(".visit-location").text($.cookie("visit-location"));  }
 
 ////////////////////////////////////// Step - 3 (6C-WHERE?) //////////////////////////////////////
 $("#add-visitors-step-3").on("click", function (e) {
@@ -206,7 +170,11 @@ $("#add-visitors-step-4").on("click", function (e) {
 
 });
 
-if ($.cookie("visit-assurance")) {  $(".visit-assurance").text($.cookie("visit-assurance")); }
+if ($.cookie("visit-assurance")) {
+     $(".visit-assurance").text($.cookie("visit-assurance"));
+} else {
+     $(".visit-assurance").hide();
+}
 
 if ($.cookie("visit-order")) {  $(".visit-order").text($.cookie("visit-order")); }
 if ($.cookie("visit-file-name")) {  $(".visit-file-name").text($.cookie("visit-file-name")); }
@@ -233,6 +201,7 @@ $("#add-visitors-step-5").on("click", function (e) {
      $.cookie("visit-deputy-order-7", $("#visit-deputy-order-7:checked").parent().text(), {path:'/'});
      $.cookie("visit-deputy-order-8", $("#visit-deputy-order-8:checked").parent().text(), {path:'/'});
      $.cookie("visit-deputy-order-9", $("#visit-deputy-order-9:checked").parent().text(), {path:'/'});
+     $.cookie("visit-deputy-order-10", $("#visit-deputy-order-10").val(), {path:'/'});
 
      $.cookie("visit-safeguarding", $("input[name=visit-safeguarding]:checked").parent().text(), {path:'/'});
      $.cookie("visit-safeguarding-answer", $("#visit-safeguarding-answer").val(), {path:'/'});
@@ -263,6 +232,9 @@ if ($.cookie("visit-deputy-order-8")) { $(".visit-deputy-order-8").text($.cookie
 else { $(".visit-deputy-order-8").hide(); }
 if ($.cookie("visit-deputy-order-9")) { $(".visit-deputy-order-9").text($.cookie("visit-deputy-order-9")); }
 else { $(".visit-deputy-order-9").hide(); }
+if ($.cookie("visit-deputy-order-10")) { $(".visit-deputy-order-10").text($.cookie("visit-deputy-order-10")); }
+else { $(".visit-deputy-order-10").hide(); }
+
 
 if ($.cookie("visit-safeguarding")) {  $(".visit-safeguarding").text($.cookie("visit-safeguarding")); }
 if ($.cookie("visit-safeguarding-answer")) {

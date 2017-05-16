@@ -240,6 +240,9 @@
           JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
                $('#asset-summary').append('<li>' + asset + '</li>');
           });
+          JSON.parse(sessionStorage.getItem('selected-documents')).forEach(function(documents) {
+               $('#documents').append('<li>' + documents + '</li>');
+          });
      });
 
 </script>

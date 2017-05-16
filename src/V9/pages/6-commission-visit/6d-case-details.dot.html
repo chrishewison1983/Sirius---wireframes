@@ -113,10 +113,10 @@
 
                     <div class="commission-visit right">
 
-                         <h2 class="section-title">Case summary</h2>
+                         <h2 class="section-title section-1">Case summary</h2>
 
                          <!-- =========== BASIC INFO SECTION - START =========== -->
-                         <div class="visitor-container">
+                         <div class="visitor-container section-1">
 
                               <form class="basic-information">
 
@@ -164,15 +164,14 @@
                                              <input id="visit-enclosure-no" type="radio" name="visit-enclosure" value="No">
                                              No
                                         </label>
-                                        <!-- <a href="#" id="add-documents-link">Would you like to add documents to the visit?</a> -->
+                                        <p></p>
+                                        <p id="documents-list-intro">Documents included in visit:</p>
+                                        <ol id="documents-list">
+
+                                        </ol>
+
+                                        <a href="#" id="add-documents-link">Would you like to add documents to the visit?</a>
                                    </div>
-                                   <!-- // FORM ITEM - 3 - END // -->
-
-                                   <!-- // FORM ITEM - 4 - START // -->
-                                   <p id="documents-list-intro">Documents included in visit:</p>
-                                   <ol id="documents-list">
-
-                                   </ol>
                                    <!-- // FORM ITEM - 3 - END // -->
 
                                    <!-- // FORM ITEM - 4 - START // -->
@@ -228,6 +227,9 @@
                                              <div class="description">New Mazda car</div>
                                         </span>
                                         <span>Value: <strong data-asset-info="value">&pound;27,000.00</strong>,</span>
+                                        <br>
+                                        <span>Where: <strong data-asset-info="where">2016-2017-annual-report.pdf</strong></span>
+                                        <br>
                                         <span>Date: <strong data-asset-info="date">Thu Mar 02 2017</strong></span>
                                         <span class="edit"></span>
                                         <span class="remove"></span>
@@ -239,6 +241,9 @@
                                              <div class="description">Craig Davison</div>
                                         </span>
                                         <span>Value: <strong data-asset-info="value">&pound;1,000.00</strong>,</span>
+                                        <br>
+                                        <span>Where: <strong data-asset-info="where">2016-2017-annual-report.pdf</strong></span>
+                                        <br>
                                         <span>Date: <strong data-asset-info="date">Fri Nov 25 2016</strong></span>
                                         <span class="edit"></span>
                                         <span class="remove"></span>
@@ -259,6 +264,7 @@
                                              <option value="Car">Car</option>
                                              <option value="House">House</option>
                                              <option value="Artwork">Artwork</option>
+                                             <option value="Bank account">Bank account</option>
                                              <option value="Other">Other</option>
                                         </select>
                                    </div>
@@ -266,7 +272,7 @@
 
                                    <!-- // FORM ITEM - 2 - START // -->
                                    <div class="form-group">
-                                        <label for="visit-asset">Asset description</label>
+                                        <label for="visit-asset">Asset description (optional)</label>
                                         <input id="visit-asset" name="visit-asset" type="text">
                                    </div>
                                    <!-- // FORM ITEM - 2 - END // -->
@@ -283,13 +289,20 @@
 
                                    <!-- // FORM ITEM - 4 - START // -->
                                    <div class="form-group">
+                                        <label for="visit-where">Where did you get the information from about the asset?</label>
+                                        <input id="visit-where" name="visit-where" type="text">
+                                   </div>
+                                   <!-- // FORM ITEM - 4 - END // -->
+
+                                   <!-- // FORM ITEM - 5 - START // -->
+                                   <div class="form-group">
                                         <label for="datepicker">Date reported</label>
                                         <div class="date-wrapper">
                                              <input type="text" id="datepicker">
                                              <i class="date"></i>
                                         </div>
                                    </div>
-                                   <!-- // FORM ITEM - 4 - END // -->
+                                   <!-- // FORM ITEM - 5 - END // -->
 
                                    <div class="cta-row">
                                         <a class="main-cta secondary" href="#" id="confirm-add-asset">Add</a>
@@ -338,13 +351,9 @@
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
           });
-          // JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
-          //      $('#asset-summary').append('<li>' + asset + '</li>');
-          // });
-          // JSON.parse(sessionStorage.getItem('selected-location')).forEach(function(location) {
-          //      $('#visit-location').append('<li>' + location + '</li>');
-          // });
-
+          JSON.parse(sessionStorage.getItem('selected-third-parties')).forEach(function(thirdParties) {
+               $('#visit-third-parties').append('<li>' + thirdParties + '</li>');
+          });
      });
 
 </script>

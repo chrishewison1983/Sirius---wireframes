@@ -63,6 +63,70 @@
                &:hover {
                     background: none;
                }
+               a.correspondent {
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 1em;
+                    border: 2px solid $border-colour;
+                    border-radius: $global-border-radius;
+                    padding: 1em 1em 1em 3.75em;
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    line-height: 1;
+                    @include standard-transition;
+                    // z-index: 1;
+                    &:hover {
+                         background: rgba($border-colour,0.5);
+                         cursor: pointer;
+                         z-index: 10;
+                    }
+                    &:before {
+                         left: 1em;
+                         top: inherit;
+                         width: 40px;
+                         height: 40px;
+                         border: 4px solid;
+                         border-radius: $global-border-radius;
+                         background: transparent;
+                         position: absolute;
+                         content: "";
+                         color: $main-colour;
+                    }
+                    &:after {
+                         color: $main-colour;
+                         left: 1.4em;
+                         right: inherit;
+                         top: 1.475em;
+                         width: 24px;
+                         height: 14px;
+                         content: "";
+                         border: solid;
+                         border-width: 0 0 5px 5px;
+                         background: transparent;
+                         position: absolute;
+                         -moz-transform: rotate(-45deg);
+                         -o-transform: rotate(-45deg);
+                         -webkit-transform: rotate(-45deg);
+                         -ms-transform: rotate(-45deg);
+                         transform: rotate(-45deg);
+                         zoom: 1;
+                         filter: alpha(opacity=0);
+                         opacity: 0;
+                    }
+                    span.fee-payer {
+                         top: -0.75em;
+                         right: -0.75em;
+                         width: 2.5em;
+                         height: 2.5em;
+                    }
+                    span.sub-text {
+                         font-family: $Opensans-Regular;
+                         color: lighten($main-colour,40%);
+                         font-size: 1rem;
+                    }
+               }
           }
           &#selected-list {
                li {
@@ -78,75 +142,6 @@
      hr {
           margin: 1.5em 0 0 0;
           border-bottom: 3px dashed $border-colour;
-     }
-     a.correspondent {
-          display: inline-block;
-          position: relative;
-          width: 100%;
-          margin-bottom: 1em;
-          border: 2px solid $border-colour;
-          border-radius: $global-border-radius;
-          padding: 1em 1em 1em 3.75em;
-          font-family: $Montserrat;
-          font-weight: bold;
-          font-size: 1.3rem;
-          line-height: 1;
-          @include standard-transition;
-          // z-index: 1;
-          &:hover {
-               background: rgba($border-colour,0.5);
-               cursor: pointer;
-               z-index: 10;
-          }
-          &:before {
-               left: 1em;
-               top: inherit;
-               width: 40px;
-               height: 40px;
-               border: 4px solid;
-               border-radius: $global-border-radius;
-               background: transparent;
-               position: absolute;
-               content: "";
-               color: $main-colour;
-          }
-          &:after {
-               color: $main-colour;
-               left: 1.4em;
-               right: inherit;
-               top: 1.475em;
-               width: 24px;
-               height: 14px;
-               content: "";
-               border: solid;
-               border-width: 0 0 5px 5px;
-               background: transparent;
-               position: absolute;
-               -moz-transform: rotate(-45deg);
-               -o-transform: rotate(-45deg);
-               -webkit-transform: rotate(-45deg);
-               -ms-transform: rotate(-45deg);
-               transform: rotate(-45deg);
-               zoom: 1;
-               filter: alpha(opacity=0);
-               opacity: 0;
-          }
-          span.fee-payer {
-               position: absolute;
-               top: -0.75em;
-               right: -0.75em;
-               display: inline-block;
-               width: 2.5em;
-               height: 2.5em;
-               border-radius: 50%;
-               background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
-               background-size: 2.25em;
-          }
-          span.sub-text {
-               font-family: $Opensans-Regular;
-               color: lighten($main-colour,40%);
-               font-size: 1rem;
-          }
      }
 }
 

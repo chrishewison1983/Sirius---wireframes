@@ -35,7 +35,7 @@
 
 #document-summary {
      // float: right !important;
-     #recipients, .document, #asset-summary {
+     #recipients, .document, #asset-summary, #documents {
           display: inline-block;
           float: left;
           width: 100%;
@@ -61,7 +61,7 @@
                color: rgba($main-colour,0.4);
           }
      }
-     ol#recipients, ol#asset-summary {
+     ol#recipients, ol#asset-summary, ol#documents {
           margin: 0;
           li {
                counter-increment: step-counter;

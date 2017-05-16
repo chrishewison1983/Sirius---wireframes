@@ -27,9 +27,28 @@
      }
 }
 
+#list-of-timeline {
+     #task-list {
+          li {
+               border-left: 10px solid $green;
+               &:last-of-type {
+                    border-left: 10px solid $white;
+               }
+               &.outstanding {
+                    border-left: 10px solid $pink;
+                    .icon {
+                         background-color: $pink;
+                    }
+               }
+               .icon {
+                    background-color: $green;
+               }
+          }
+     }
+}
 
 #task-list {
-     padding-left: 1em;
+     // padding-left: 1em;
      display: none;
      margin: 3em 0 3em 0;
      h1, h2, h3, h4 {

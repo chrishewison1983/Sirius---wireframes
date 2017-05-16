@@ -583,9 +583,11 @@
 <script>
 
      $(document).ready(function(){
-          sessionStorage.setItem('selected-visitors', JSON.stringify($('#recipients li').map(function() {
-               return $(this).text().trim();
-          }).toArray()));
+
+          JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
+               $('#recipients').append('<li>' + recipient + '</li>');
+          });
+
      });
 
 </script>

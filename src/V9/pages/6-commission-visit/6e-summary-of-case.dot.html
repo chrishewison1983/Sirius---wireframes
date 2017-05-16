@@ -218,6 +218,16 @@
                                         </div>
                                         <!-- // 1b - ITEM 9 - END // -->
 
+                                        <!-- // 1b - ITEM 10 - START // -->
+                                        <div class="form-group">
+                                             <label for="visit-deputy-order-10">
+                                                  Other provide details:
+                                             </label>
+                                             <textarea id="visit-deputy-order-10"></textarea>
+                                        </div>
+                                        <!-- // 1b - ITEM 10 - END // -->
+
+
                                         <p></p>
 
                                    </div>
@@ -330,6 +340,9 @@
           });
           JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
                $('#asset-summary').append('<li>' + asset + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-documents')).forEach(function(documents) {
+               $('#documents').append('<li>' + documents + '</li>');
           });
      });
 

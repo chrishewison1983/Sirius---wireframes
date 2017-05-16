@@ -62,7 +62,7 @@ $(document).ready(function() {
                $('.place-holder-text').hide();
                $("#recipients").append(`
                     <li data-visit-id='${$(this).data('visit-id')}' class="answer">
-                         <span>${ $(this).find('[data-value="name"]').text() }</span><br>
+                         <span>${ $(this).find('[data-value="name"]').text() }</span>
                     </li>`
                     // <span class="address">${ $(this).find('[data-value="address"]').text() }</span>
                );
@@ -79,15 +79,75 @@ $(document).ready(function() {
 
 });
 
-$('.hidden-content input:radio').change(function(){
+$('#visit-location-1').click(function(){
      if($(this).is(":checked")) {
-          $(this).parent().toggleClass("chosen-location");
+          // This add the classes
+          $(this).parent().addClass("chosen-location");
           $(this).closest('li').find('.icon.chosen-location').show();
-          $(this).closest('li').find('.visitor').toggleClass('chosen-location');
-          $(this).closest('li').find('.hidden-content').toggleClass('chosen-location');
-          $(this).closest('li').find('.view-more').toggleClass('chosen-location');
-     } else {
-          $(this).parent().removeClass("chosen-location");
+          $(this).closest('li').find('.visitor').addClass('chosen-location');
+          $(this).closest('li').find('.hidden-content').addClass('chosen-location');
+          $(this).closest('li').find('.view-more').addClass('chosen-location');
+
+          // // This removes the other classes
+          $(this).closest('main').find('#visit-location-2, #visit-location-3, #visit-location-4').parent().removeClass("chosen-location");
+          $(this).closest('main').find('#visit-location-2, #visit-location-3, #visit-location-4').closest('li').find('.icon.chosen-location').hide();
+          $(this).closest('main').find('#visit-location-2, #visit-location-3, #visit-location-4').closest('li').find('.visitor').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-2, #visit-location-3, #visit-location-4').closest('li').find('.hidden-content').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-2, #visit-location-3, #visit-location-4').closest('li').find('.view-more').removeClass('chosen-location');
+     }
+});
+
+$('#visit-location-2').click(function(){
+     if($(this).is(":checked")) {
+          // This add the classes
+          $(this).parent().addClass("chosen-location");
+          $(this).closest('li').find('.icon.chosen-location').show();
+          $(this).closest('li').find('.visitor').addClass('chosen-location');
+          $(this).closest('li').find('.hidden-content').addClass('chosen-location');
+          $(this).closest('li').find('.view-more').addClass('chosen-location');
+
+          // // This removes the other classes
+          $(this).closest('main').find('#visit-location-1, #visit-location-3, #visit-location-4').parent().removeClass("chosen-location");
+          $(this).closest('main').find('#visit-location-1, #visit-location-3, #visit-location-4').closest('li').find('.icon.chosen-location').hide();
+          $(this).closest('main').find('#visit-location-1, #visit-location-3, #visit-location-4').closest('li').find('.visitor').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-1, #visit-location-3, #visit-location-4').closest('li').find('.hidden-content').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-1, #visit-location-3, #visit-location-4').closest('li').find('.view-more').removeClass('chosen-location');
+     }
+});
+
+$('#visit-location-3').click(function(){
+     if($(this).is(":checked")) {
+          // This add the classes
+          $(this).parent().addClass("chosen-location");
+          $(this).closest('li').find('.icon.chosen-location').show();
+          $(this).closest('li').find('.visitor').addClass('chosen-location');
+          $(this).closest('li').find('.hidden-content').addClass('chosen-location');
+          $(this).closest('li').find('.view-more').addClass('chosen-location');
+
+          // // This removes the other classes
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-4').parent().removeClass("chosen-location");
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-4').closest('li').find('.icon.chosen-location').hide();
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-4').closest('li').find('.visitor').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-4').closest('li').find('.hidden-content').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-4').closest('li').find('.view-more').removeClass('chosen-location');
+     }
+});
+
+$('#visit-location-4').click(function(){
+     if($(this).is(":checked")) {
+          // This add the classes
+          $(this).parent().addClass("chosen-location");
+          $(this).closest('li').find('.icon.chosen-location').show();
+          $(this).closest('li').find('.visitor').addClass('chosen-location');
+          $(this).closest('li').find('.hidden-content').addClass('chosen-location');
+          $(this).closest('li').find('.view-more').addClass('chosen-location');
+
+          // // This removes the other classes
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-3').parent().removeClass("chosen-location");
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-3').closest('li').find('.icon.chosen-location').hide();
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-3').closest('li').find('.visitor').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-3').closest('li').find('.hidden-content').removeClass('chosen-location');
+          $(this).closest('main').find('#visit-location-1, #visit-location-2, #visit-location-3').closest('li').find('.view-more').removeClass('chosen-location');
      }
 });
 
@@ -100,80 +160,6 @@ $('#add-third-party').click(function(e){
      $('#add-third-party-form').show('slow');
      $(this).parent().parent().find('.visitor-container').hide('slow');
      // $(this).find('.visitor-container').slideDown('slow');
-});
-
-$('#confirm-add-third-party').click(function(e){
-     e.preventDefault();
-     $('#add-third-party-form').hide('slow');
-     $(this).parent().parent().parent().find('.visitor-container').show('slow');
-     $('#add-third-party').show('slow');
-
-     // $('input[type="text"]').val('');
-
-     $('#cta-footer').slideDown('slow');
-
-     $('.extra-info').hide();
-     $('#commission-visit-third-parties').show('slow');
-
-     $('.place-holder-text').hide();
-     $("#recipients").append(`
-          <li data-visit-id='${$("#add-third-party-form").data('visit-id')}'>
-               ${ $("#add-third-party-form").find('#third-party-title').val() + ' ' + $("#add-third-party-form").find('#third-party-first-name').val() + ' ' + $("#add-third-party-form").find('#third-party-last-name').val() + ' ' }
-               (Third party contact)
-          </li>`
-     );
-     $("#commission-visit-third-parties").append(`
-          <li>
-               <div class="wrapper">
-                    <a class="visitor selected" data-visit-id='${$("#add-third-party-form").data('visit-id')}'>
-                         <span>
-                              ${ $("#add-third-party-form").find('#third-party-title').val() + ' ' + $("#add-third-party-form").find('#third-party-first-name').val() + ' ' + $("#add-third-party-form").find('#third-party-last-name').val() }
-                         </span>
-                         <br>
-                         <span class="sub-text">
-                              ${ $("#add-third-party-form").find('input:checked').parent().text() }
-                         </span>
-                    </a>
-                    <button class="view-more close"><span>More info</span></button>
-               </div>
-               <div class="extra-info">
-                    <span class="border-top"></span>
-
-                    <div class="item-detail">
-                         <p class="item">Country:</p>
-                         <p class="answer">United Kingdom</p>
-                    </div>
-
-                    <div class="item-detail">
-                         <p class="item">Daytime telephone:</p>
-                         <p class="answer">${ $("#add-third-party-form").find('#third-party-phone-number').val() }</p>
-                    </div>
-
-                    <div class="item-detail">
-                         <p class="item">Mobile telephone:</p>
-                         <p class="answer">${ $("#add-third-party-form").find('#third-party-mob-number').val() }</p>
-                    </div>
-
-                    <div class="item-detail">
-                         <p class="item">Email address:</p>
-                         <p class="answer">${ $("#add-third-party-form").find('#third-party-email').val() }</p>
-                    </div>
-
-                    <div class="item-detail">
-                         <p class="item">Why is contact needed?:</p>
-                         <p class="answer">${ $("#add-third-party-form").find('#third-party-needed').val() }</p>
-                    </div>
-
-                    <div class="item-detail">
-                         <p class="item">Questions:</p>
-                         <p class="answer">${ $("#add-third-party-form").find('#third-party-questions').val() }</p>
-                    </div>
-
-               </div>
-          </li>`
-     );
-     persistSelectedVisitor();
-
 });
 
 $('#cancel-third-party').click(function(e){
@@ -209,54 +195,97 @@ if ($.cookie("completed-step-1") == 'true') {
 }
 
 ////////////////////////////////////// Step - 3 (6C-WHERE?) //////////////////////////////////////
-$(".report #datepicker").click( function(){
-     $('#cta-footer').slideDown('slow');
-});
+// $(".report #datepicker").click( function(){
+//      $('#cta-footer').slideDown('slow');
+// });
+
+$('.step-3 #cta-footer').show();
 
 $(document).ready(function() {
 
-     $('#visit-accomodation').click( function(){
-          var accomodationID = $(this).data('visit-accomodation');
-          console.log($('#visit-accomodation option:selected').val());
-     });
-
-     $('#visitor-list .location').click( function(){
-          $(this).addClass('selected');
-          $(this).siblings().addClass('selected');
-          $(this).parent().siblings().find('.location').removeClass('selected');
-          $(this).parent().siblings().find('.location-form').removeClass('selected');
-          persistSelectedVisitor();
-     });
-
-     $('#visitor-list input:radio').change(function(){
-          if($(this).is(":checked")) {
-               $(this).parent().addClass("checked");
-          } else {
-               $(this).parent().removeClass("checked");
-          }
-     });
-
-     $('#visitor-list a').click(function(e){
+     $('#confirm-add-third-party').click(function(e){
           e.preventDefault();
-          $("#visit-location").append(`
-               <li>
-                    ${ $(this).find('[data-value="name"]').text() }
+          $('#add-third-party-form').hide('slow');
+          $(this).parent().parent().parent().find('.visitor-container').show('slow');
+          $('#add-third-party').show('slow');
+
+          // $('input[type="text"]').val('');
+
+          $('#cta-footer').slideDown('slow');
+
+          $('.extra-info').hide();
+          $('#commission-visit-third-parties').show('slow');
+
+          $('.place-holder-text').hide();
+          $("#visit-third-parties").append(`
+               <li data-visit-id='${$("#add-third-party-form").data('visit-id')}'>
+                    ${ $("#add-third-party-form").find('#third-party-title').val() + ' ' + $("#add-third-party-form").find('#third-party-first-name').val() + ' ' + $("#add-third-party-form").find('#third-party-last-name').val() + ' ' }
+                    (Third party contact)
                </li>`
           );
+          $("#commission-visit-third-parties").append(`
+               <li>
+                    <div class="wrapper">
+                         <a class="visitor selected" data-visit-id='${$("#add-third-party-form").data('visit-id')}'>
+                              <span>
+                                   ${ $("#add-third-party-form").find('#third-party-title').val() + ' ' + $("#add-third-party-form").find('#third-party-first-name').val() + ' ' + $("#add-third-party-form").find('#third-party-last-name').val() }
+                              </span>
+                              <br>
+                              <span class="sub-text">
+                                   ${ $("#add-third-party-form").find('input:checked').parent().text() }
+                              </span>
+                         </a>
+                         <button class="view-more close"><span>More info</span></button>
+                    </div>
+                    <div class="extra-info">
+                         <span class="border-top"></span>
+
+                         <div class="item-detail">
+                              <p class="item">Country:</p>
+                              <p class="answer">United Kingdom</p>
+                         </div>
+
+                         <div class="item-detail">
+                              <p class="item">Daytime telephone:</p>
+                              <p class="answer">${ $("#add-third-party-form").find('#third-party-phone-number').val() }</p>
+                         </div>
+
+                         <div class="item-detail">
+                              <p class="item">Mobile telephone:</p>
+                              <p class="answer">${ $("#add-third-party-form").find('#third-party-mob-number').val() }</p>
+                         </div>
+
+                         <div class="item-detail">
+                              <p class="item">Email address:</p>
+                              <p class="answer">${ $("#add-third-party-form").find('#third-party-email').val() }</p>
+                         </div>
+
+                         <div class="item-detail">
+                              <p class="item">Why is contact needed?:</p>
+                              <p class="answer">${ $("#add-third-party-form").find('#third-party-needed').val() }</p>
+                         </div>
+
+                         <div class="item-detail">
+                              <p class="item">Questions:</p>
+                              <p class="answer">${ $("#add-third-party-form").find('#third-party-questions').val() }</p>
+                         </div>
+
+                    </div>
+               </li>`
+          );
+          persistThirdParty();
+
      });
-
 });
 
-if ($('.visit-name').html() == 'Mr Gerald Brackens (Client)') {
-     $(this).siblings('.address').html('sdfweffwefwefwefwefwef');
-}
-
-$('#add-visitors-step-3').click(function(e){
-     persistSelectedLocation();
+$(document).ready(function() {
+     $('#add-visitors-step-3').click(function(e){
+          persistThirdParty();
+     });
 });
 
-function persistSelectedLocation() {
-     sessionStorage.setItem('selected-location', JSON.stringify($('#visit-location li').map(function() {
+function persistThirdParty() {
+     sessionStorage.setItem('selected-third-parties', JSON.stringify($('#visit-third-parties li').map(function() {
           return $(this).text().trim();
      }).toArray()));
 }
@@ -285,39 +314,68 @@ $("#visit-enclosure-yes, #visit-enclosure-no").click( function(){
 var assetCounter = 2;
 var assetList = 2;
 
-$('#confirm-add-asset').click(function(e){
-     e.preventDefault();
-     $("#asset-list").slideDown('slow');
-     $("#asset-list").append(`
-          <li data-asset-id="${(++assetCounter)}">
-               <span class="title">
-                    <div class="type">${ $("#assets").find('#visit-asset-type').val() }</div>:
-                    <div class="description">${ $("#assets").find('#visit-asset').val() }</div>
-               </span>
-               <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
-               <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
-               <span class="edit"></span>
-               <span class="remove"></span>
-          </li>`
-     );
-     $("#asset-summary").append(`
-          <li data-asset-id="${(++assetList)}">
-               <span class="title">${ $("#assets").find('#visit-asset-type').val() + ': ' + $("#assets").find('#visit-asset').val() }</span>
-               <br>
-               <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
-               <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
-               <span class="remove"></span>
-          </li>`
-     );
+$(document).ready(function() {
+
+     $('#confirm-add-asset').click(function(e){
+          e.preventDefault();
+          $("#asset-list").slideDown('slow');
+          $(this).parent().parent().hide('slow');
+          $(this).closest('#action-panel').find('.section-1').show('slow');
+          $(this).closest('#action-panel').find('#add-asset').show();
+          $("#asset-list").append(`
+               <li data-asset-id="${(++assetCounter)}">
+                    <span class="title">
+                         <div class="type">${ $("#assets").find('#visit-asset-type').val() }</div>:
+                         <div class="description">${ $("#assets").find('#visit-asset').val() }</div>
+                    </span>
+                    <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
+                    <br>
+                    <span>Where: <strong>${ $("#assets").find('#visit-where').val() }</strong></span>
+                    <br>
+                    <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
+                    <span class="edit"></span>
+                    <span class="remove"></span>
+               </li>`
+          );
+          $("#asset-summary").append(`
+               <li data-asset-id="${(++assetList)}">
+                    <span class="title">${ $("#assets").find('#visit-asset-type').val() + ': ' + $("#assets").find('#visit-asset').val() }</span>
+                    <br>
+                    <span>Value: <strong>&pound;${ $("#assets").find('#visit-asset-value').val() }</strong>,</span>
+                    <br>
+                    <span>Where: <strong>${ $("#assets").find('#visit-where').val() }</strong></span>
+                    <br>
+                    <span>Date: <strong>${ $("#assets").find('#datepicker').val() }</strong></span>
+                    <span class="remove"></span>
+               </li>`
+          );
+          persistSelectedAssets();
+     });
 });
 
 $('#documents-list').hide();
 $('#documents-list-intro').hide();
 
+$('#visit-enclosure-yes').click(function(e){
+     $('#add-documents-link').hide();
+     $('#documents-list').show();
+     $('#documents-list-intro').show();
+});
+
+$('#visit-enclosure-no').click(function(e){
+     $('#add-documents-link').show();
+     $('#documents-list').hide();
+     $('#documents-list-intro').hide();
+});
+
 $('#add-to-visit-1, #add-to-visit-2, #add-to-visit-3, #add-to-visit-4, #add-to-visit-5, #add-to-visit-6, #add-to-visit-7').click(function(e){
      // alert($(this).parent().parent().parent().find('a').text());
      $('#documents-list-intro').show();
      $('#documents-list').show().append(`
+               <li>${ $(this).parent().parent().parent().find('a').text() }</li>
+          `
+     );
+     $('#documents').append(`
                <li>${ $(this).parent().parent().parent().find('a').text() }</li>
           `
      );
@@ -350,6 +408,12 @@ $('#add-to-visit-1, #add-to-visit-2, #add-to-visit-3, #add-to-visit-4, #add-to-v
 //      );
 // });
 
+$(document).ready(function() {
+     $("#add-asset").click( function(){
+          $(this).closest('#action-panel').find('.section-1').hide('slow');
+     });
+});
+
 $("#asset-list").on("click", ".remove", function(){
      $(this).parent().remove();
      var match = $(this).parent().data('asset-id');
@@ -359,7 +423,7 @@ $("#asset-list").on("click", ".remove", function(){
 $("#asset-list").on("click", ".edit", function(){
      $(this).parent().parent().siblings('h3').text('Edit asset');
      $(this).parent().parent().siblings('.cta-row').hide();
-     $(this).parent().remove();
+     $(this).closest('#action-panel').find('.section-1').hide('slow');
      $('#assets').slideDown('slow');
      $('#assets #confirm-add-asset').attr('id','confirm-edit-asset').text('Edit');
 
@@ -391,15 +455,25 @@ $("#asset-list").on("click", ".edit", function(){
 //      $(this).addClass('test');
 // });
 
-$('#add-visitors-step-3').click(function(e){
-     persistSelectedAssets();
+$(document).ready(function() {
+     $('#add-visitors-step-4').click(function(e){
+          persistSelectedAssets();
+          persistDocuments();
+     });
 });
+
+function persistDocuments() {
+     sessionStorage.setItem('selected-documents', JSON.stringify($('#documents li').map(function() {
+          return $(this).text().trim();
+     }).toArray()));
+}
 
 function persistSelectedAssets() {
      sessionStorage.setItem('selected-assets', JSON.stringify($('#asset-summary li').map(function() {
           return $(this).text().trim();
      }).toArray()));
 }
+
 
 // Side panel content
 if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("completed-step-3") == 'true') {

@@ -23,7 +23,7 @@
      &.file-name {
           padding: 0.75em 0.75em 0.75em 2.45em;
           text-align: left;
-          margin-top: 1em;
+          margin: 1em 0 0 0;
           background: url(#{$image-path}/icons/pdf-blue.svg) $border-colour no-repeat 3.5% 50%;
           background-size: 0.85em;
      }
@@ -31,6 +31,7 @@
 
 #documents-list {
      text-align: left;
+     margin: 0;
 }
 
 #add-documents-link {
@@ -336,6 +337,20 @@
      }
 }
 
+.create-letter-journey {
+     ul {
+          li {
+               &:hover {
+                    background: none;
+                    a {
+                         background: lighten($border-colour,2.5%);
+                    }
+               }
+
+          }
+     }
+}
+
 // CHOSEN LOCATION - START
 label {
      &.chosen-location {
@@ -345,6 +360,25 @@ label {
 .visitor, .hidden-content, .view-more {
      &.chosen-location {
           border: 2px solid $blue !important;
+     }
+}
+
+.visitor {
+     &.chosen-location {
+          border-bottom: none !important;
+     }
+}
+
+.hidden-content {
+     &.chosen-location {
+          border-top: none !important;
+          border-bottom: none !important;
+     }
+}
+
+.view-more {
+     &.chosen-location {
+          border-top: 2px dashed $border-colour !important;
      }
 }
 // CHOSEN LOCATION - END
@@ -388,6 +422,7 @@ ol#asset-list {
                font-family: $Opensans-Regular;
                color: lighten($main-colour,40%);
                font-size: 1rem;
+               line-height: 1.4;
                z-index: 1;
                position: relative;
                strong {
