@@ -16,6 +16,8 @@
                <div class="large-12 large-uncentered columns">
                     <h1>
                          <span>
+                              <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                              <div class="separator"> > </div>
                               <a href="../4-client-page/4a-new-client.html">
                                    <div class="client-title">Mr</div>
                                    <div class="client-first-name">Gerald</div>
@@ -52,7 +54,7 @@
                     <ul id="side-panel-tabs" class="tabs">
                          <li class="tab-link" data-tab="tab-1">
                               <span class="info"></span>
-                              <p>Commission visit info</p>
+                              <p>Visit details</p>
                          </li>
                          <li class="tab-link" data-tab="tab-2">
                               <span class="client-details"></span>
@@ -167,7 +169,7 @@
                                         <p></p>
                                         <p id="documents-list-intro">Documents included in visit:</p>
                                         <ol id="documents-list">
-
+                                             <p id="docs-placeholder">Add documents to the visit using the documents viewer to the left</p>
                                         </ol>
 
                                         <a href="#" id="add-documents-link">Would you like to add documents to the visit?</a>
@@ -212,7 +214,7 @@
                          <!-- =========== CLIENT ASSETS SECTION - START =========== -->
                          <div class="visitor-container">
 
-                              <h2 class="section-title">Client assets (optional)</h2>
+                              <h2 class="section-title">Client assets <div class="optional">(optional)</div></h2>
 
                               <p>
                                    Client’s total assets (provide full details of the known money, property &amp; investments
@@ -272,7 +274,7 @@
 
                                    <!-- // FORM ITEM - 2 - START // -->
                                    <div class="form-group">
-                                        <label for="visit-asset">Asset description (optional)</label>
+                                        <label for="visit-asset">Asset description <div class="optional">(optional)</div></label>
                                         <input id="visit-asset" name="visit-asset" type="text">
                                    </div>
                                    <!-- // FORM ITEM - 2 - END // -->
@@ -296,10 +298,20 @@
 
                                    <!-- // FORM ITEM - 5 - START // -->
                                    <div class="form-group">
-                                        <label for="datepicker">Date reported</label>
-                                        <div class="date-wrapper">
-                                             <input type="text" id="datepicker">
-                                             <i class="date"></i>
+                                        <legend for="visit-date-reported-day">
+                                             Date reported:
+                                        </legend>
+                                        <div class="one-third">
+                                             <label for="visit-date-reported-day" class="sub-label">Day</label>
+                                             <input id="visit-date-reported-day" name="visit-date-reported-day" type="text" value="05">
+                                        </div>
+                                        <div class="one-third">
+                                             <label for="visit-date-reported-month" class="sub-label">Month</label>
+                                             <input id="visit-date-reported-month" name="visit-date-reported-month" type="text" value="04">
+                                        </div>
+                                        <div class="one-third">
+                                             <label for="visit-date-reported-year" class="sub-label">Year</label>
+                                             <input id="visit-date-reported-year" name="visit-date-reported-year" type="text" value="2017">
                                         </div>
                                    </div>
                                    <!-- // FORM ITEM - 5 - END // -->
@@ -334,7 +346,10 @@
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
           <a class="main-cta" id="add-visitors-step-4" href="6e-summary-of-case.html">Continue</a>
-          <a href="#" onclick="history.back();">Back to step 3</a>
+          <span class="separator"></span>
+          <a href="#" onclick="history.back();" class="back">Back to step 3</a>
+          <span class="separator"></span>
+          <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 

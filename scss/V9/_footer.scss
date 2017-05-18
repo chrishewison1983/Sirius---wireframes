@@ -106,6 +106,28 @@ footer {
           float: none;
           background-color: $green;
           border: 3px solid $green;
+          margin-right: 1.5em;
+     }
+     .separator {
+          width: 1px;
+          height: 1em;
+          margin: 0;
+          display: inline-block;
+          border-left: 1px solid darken($border-colour,15%);
+     }
+     .cancel, .back {
+          padding: 0 0 0 1em;
+          margin-left: 1.5em;
+     }
+     .cancel {
+          background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+          background-size: 0.65em;
+     }
+     .back {
+          margin-right: 1.5em;
+          padding: 0;
+          // background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
+          // background-size: 0.45em;
      }
 }
 

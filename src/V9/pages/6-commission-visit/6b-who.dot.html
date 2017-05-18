@@ -16,6 +16,8 @@
                <div class="large-12 large-uncentered columns">
                     <h1>
                          <span>
+                              <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                              <div class="separator"> > </div>
                               <a href="../4-client-page/4a-new-client.html">
                                    <div class="client-title">Mr</div>
                                    <div class="client-first-name">Gerald</div>
@@ -53,7 +55,7 @@
                     <ul id="side-panel-tabs" class="tabs">
                          <li class="tab-link" data-tab="tab-1">
                               <span class="info"></span>
-                              <p>Commission visit info</p>
+                              <p>Visit details</p>
                          </li>
                          <li class="tab-link" data-tab="tab-2">
                               <span class="client-details"></span>
@@ -144,7 +146,10 @@
                                                             <legend>Would you like the visit to take place at their address:</legend>
                                                             <label for="visit-location-1" class="radio">
                                                                  <input id="visit-location-1" type="radio" name="visit-location">
-                                                                 <span data-value='address'>11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
+                                                                 <span data-value='address'>
+                                                                      11 Chapel Lane, EAST CANNOCK, W5152TA.
+                                                                      <i class="icon location"></i>
+                                                                 </span>
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 1 - END // -->
@@ -163,7 +168,7 @@
                                                        <div class="form-group checkbox">
                                                             <label class="normal" for="visit-contacted-2">
                                                                  <input id="visit-contacted-2" name="visit-contacted-2" type="checkbox" value="post">
-                                                                 Contacted about visit
+                                                                 Inform about the visit
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 3 - END // -->
@@ -268,7 +273,10 @@
                                                             <legend>Would you like the visit to take place at their address:</legend>
                                                             <label for="visit-location-2" class="radio">
                                                                  <input id="visit-location-2" type="radio" name="visit-location">
-                                                                 <span data-value='address'>92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
+                                                                 <span data-value='address'>
+                                                                      92 Greyfriars Road, CANNOCK WOOD, W5154AA.
+                                                                      <i class="icon location"></i>
+                                                                 </span>
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 1 - END // -->
@@ -287,7 +295,7 @@
                                                        <div class="form-group checkbox">
                                                             <label class="normal" for="visit-contacted-4">
                                                                  <input id="visit-contacted-4" name="visit-contacted-4" type="checkbox" value="post">
-                                                                 Contacted about visit
+                                                                 Inform about the visit
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 3 - END // -->
@@ -370,7 +378,10 @@
                                                             <legend>Would you like the visit to take place at their address:</legend>
                                                             <label for="visit-location-3" class="radio">
                                                                  <input id="visit-location-3" type="radio" name="visit-location">
-                                                                 <span data-value='address'>40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                                                 <span data-value='address'>
+                                                                      40 Haslemere Road, CANNOCK WOOD, W5174LD.
+                                                                      <i class="icon location"></i>
+                                                                 </span>
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 1 - END // -->
@@ -389,7 +400,7 @@
                                                        <div class="form-group checkbox">
                                                             <label class="normal" for="visit-contacted-6">
                                                                  <input id="visit-contacted-6" name="visit-contacted-6" type="checkbox" value="post">
-                                                                 Contacted about visit
+                                                                 Inform about the visit
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 3 - END // -->
@@ -472,7 +483,10 @@
                                                             <legend>Would you like the visit to take place at their address:</legend>
                                                             <label for="visit-location-4" class="radio">
                                                                  <input id="visit-location-4" type="radio" name="visit-location">
-                                                                 <span data-value='address'>70 Moulton Road, Gunby Green, N6334RF.</span>
+                                                                 <span data-value='address'>
+                                                                      70 Moulton Road, Gunby Green, N6334RF.
+                                                                      <i class="icon location"></i>
+                                                                 </span>
                                                             </label>
                                                        </div>
                                                        <!-- // FORM ITEM - 1 - END // -->
@@ -569,7 +583,10 @@
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
           <a class="main-cta" id="add-visitors-step-2" href="6c-where.html">Continue</a>
-          <a href="#" onclick="history.back();">Back to step 1</a>
+          <span class="separator"></span>
+          <a href="#" onclick="history.back();" class="back">Back to step 1</a>
+          <span class="separator"></span>
+          <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 
@@ -582,13 +599,6 @@
 <!-- SCRIPT CONTENT - START -->
 <script>
 
-     $(document).ready(function(){
-
-          JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
-               $('#recipients').append('<li>' + recipient + '</li>');
-          });
-
-     });
 
 </script>
 <!-- SCRIPT CONTENT - END -->

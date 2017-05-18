@@ -328,3 +328,12 @@ $(document).ready(function() {
      //      }
      // });
 });
+
+// Client summary
+$(document).ready(function () {
+     if (window.location.href.indexOf("complete") != -1) {
+          // $("#header-report-submit").show();
+          // $('.notice').hide();
+          // $("#ready-to-submit").show();
+     }
+});

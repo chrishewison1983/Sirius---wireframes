@@ -32,6 +32,9 @@
 #documents-list {
      text-align: left;
      margin: 0;
+     p {
+          margin: 0;
+     }
 }
 
 #add-documents-link {
@@ -199,6 +202,7 @@
                          padding-bottom: 0;
                          border-bottom: none;
                          border-radius: 0;
+                         background: lighten($border-colour,2.5%);
                          span {
                               border-radius: 5px 5px 0 0;
                               border-bottom: none;
@@ -326,12 +330,16 @@
           }
           &#commission-visit-client {
                li {
-
+                    form label.radio, form legend.radio {
+                         margin-right: 0;
+                    }
                }
           }
           &#commission-visit-deputies {
                li {
-
+                    form label.radio, form legend.radio {
+                         margin-right: 0;
+                    }
                }
           }
      }
@@ -543,9 +551,12 @@ ol#visitor-list {
 
 .weeks-6, .weeks-12 {
      display: inline-block;
-     float: left;
-     font-size: 1.4rem;
-     margin: 0 0 0 1em;
+     float: right;
+     font-size: 1rem;
+     margin: 1em 0 0.5em 0;
+     width: 100%;
+     border-radius: $global-border-radius;
+     background: rgba($blue,0.1);
      .wrapper {
           float: left;
           display: inline-block;
@@ -554,26 +565,28 @@ ol#visitor-list {
           @include flexbox;
           @include align-items(center);
           @include justify-content(center);
-          width: 2.25em;
-          height: 2.25em;
+          width: 2em;
+          height: 2em;
           background: $blue;
-          border-radius: 50%;
+          border-radius: $global-border-radius;
           margin: 0 0.35em 0 0;
           color: $white;
           font-weight: bold;
+          font-size: 1.4rem;
      }
      p {
           float: left;
           width: auto;
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           font-family: $Montserrat;
           font-weight: bold;
           color: $black;
-          margin: 0.35em 0 0 0;
+          margin: 0.45em 0 0 0.25em;
      }
 }
 
 .weeks-6 {
+     background: rgba($red,0.1);
      span {
           background: $red;
      }

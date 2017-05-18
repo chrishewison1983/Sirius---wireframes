@@ -7,10 +7,13 @@
 form {
      .one-third {
           width: 30%;
-          margin-right: 1em;
+          margin-right: 5%;
           float: left;
           input, select {
                width: 100%;
+          }
+          &:last-of-type {
+               margin-right: 0;
           }
      }
      .half {
@@ -77,6 +80,7 @@ form {
           font-size: 1rem;
           line-height: 1.4;
           position: relative;
+          // width: 100%;
           &.selected {
                color: $blue;
           }
@@ -475,6 +479,14 @@ form.location-form {
 .add-client-form {
      width: 100%;
      float: left;
+}
+
+.optional {
+     color: $amber;
+     // color: lighten($main-colour,50%);
+     font-style: italic;
+     display: inline-block;
+     font-weight: normal;
 }
 
 

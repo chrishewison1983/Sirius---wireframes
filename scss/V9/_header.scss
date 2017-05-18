@@ -253,6 +253,20 @@ header {
           span {
                color: rgba($white,0.7);
                font-size: 1rem;
+               .dashboard {
+                    display: inline-block;
+                    width: 1.5em;
+                    height: 1.5em;
+                    text-indent: -1000em;
+                    background: $white;
+                    border-bottom: none;
+                    background: url(#{$image-path}/sirius-logo-small.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                    @include standard-transition;
+                    &:hover {
+                         transform: scale(1.4);
+                    }
+               }
                &.violent {
                     display: none;
                }
@@ -296,7 +310,7 @@ header {
           width: 8em;
           height: 3px;
           background: rgba($white,0.4);
-          margin: -0.5em 0 1.25em 0;
+          margin: 0.75em 0;
           float: left;
           clear: both;
      }

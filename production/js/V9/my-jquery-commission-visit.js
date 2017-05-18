@@ -68,13 +68,17 @@ $(document).ready(function() {
                );
                persistSelectedVisitor();
 
-               $('#cta-footer').slideDown('slow');
+               // $('#cta-footer').slideDown('slow');
           }
           else {
                e.preventDefault();
                var id = $(this).data('visit-id');
                $(`#recipients [data-visit-id="${id}"]`).remove();
           }
+     });
+
+     $('#visit-present-1, #visit-contacted-2, #visit-present-3, #visit-contacted-4, #visit-present-5, #visit-contacted-6, #visit-present-7, #visit-contacted-8').on('click', function(e) {
+          $('#cta-footer').slideDown('slow');
      });
 
 });
@@ -371,6 +375,7 @@ $('#visit-enclosure-no').click(function(e){
 $('#add-to-visit-1, #add-to-visit-2, #add-to-visit-3, #add-to-visit-4, #add-to-visit-5, #add-to-visit-6, #add-to-visit-7').click(function(e){
      // alert($(this).parent().parent().parent().find('a').text());
      $('#documents-list-intro').show();
+     $('#docs-placeholder').hide();
      $('#documents-list').show().append(`
                <li>${ $(this).parent().parent().parent().find('a').text() }</li>
           `

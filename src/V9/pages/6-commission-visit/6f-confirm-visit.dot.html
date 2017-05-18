@@ -16,6 +16,8 @@
                <div class="large-12 large-uncentered columns">
                     <h1>
                          <span>
+                              <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                              <div class="separator"> > </div>
                               <a href="../4-client-page/4a-new-client.html">
                                    <div class="client-title">Mr</div>
                                    <div class="client-first-name">Gerald</div>
@@ -52,7 +54,7 @@
                     <ul id="side-panel-tabs" class="tabs">
                          <li class="tab-link current" data-tab="tab-1">
                               <span class="info"></span>
-                              <p>Commission visit info</p>
+                              <p>Visit details</p>
                          </li>
                          <li class="tab-link" data-tab="tab-2">
                               <span class="client-details"></span>
@@ -208,7 +210,10 @@
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
           <a class="main-cta" id="add-visitors-step-6" href="#ex1" rel="modal:open">Preview visit form</a>
-          <a href="#" onclick="history.back();">Back to step 5</a>
+          <span class="separator"></span>
+          <a href="#" onclick="history.back();" class="back">Back to step 5</a>
+          <span class="separator"></span>
+          <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 
@@ -236,6 +241,9 @@
      $(document).ready(function(){
           JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-third-parties')).forEach(function(thirdParties) {
+               $('#visit-third-parties').append('<li>' + thirdParties + '</li>');
           });
           JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
                $('#asset-summary').append('<li>' + asset + '</li>');

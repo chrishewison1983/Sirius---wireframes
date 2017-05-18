@@ -15,7 +15,12 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <h1>
-                         <span>Create client</span><br>
+                         <span>
+                              <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                              <div class="separator"> > </div>
+                              <div class="separator"> > </div>
+                              Create client
+                         </span>
                          Enter a new Client
                     </h1>
                </div>
@@ -318,10 +323,20 @@
 
                               <!-- // FORM ITEM - 19 - START // -->
                               <div class="form-group">
-                                   <label for="datepicker">Status date</label>
-                                   <div class="date-wrapper">
-                                        <input type="text" id="datepicker">
-                                        <i class="date"></i>
+                                   <legend for="visit-status-day">
+                                        Status date:
+                                   </legend>
+                                   <div class="one-third">
+                                        <label for="visit-status-day" class="sub-label">Day</label>
+                                        <input id="visit-status-day" name="visit-status-day" type="text" value="05">
+                                   </div>
+                                   <div class="one-third">
+                                        <label for="visit-status-month" class="sub-label">Month</label>
+                                        <input id="visit-status-month" name="visit-status-month" type="text" value="04">
+                                   </div>
+                                   <div class="one-third">
+                                        <label for="visit-status-year" class="sub-label">Year</label>
+                                        <input id="visit-status-year" name="visit-status-year" type="text" value="2017">
                                    </div>
                               </div>
                               <!-- // FORM ITEM - 19 - END // -->
