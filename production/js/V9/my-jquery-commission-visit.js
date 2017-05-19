@@ -311,8 +311,14 @@ $('#add-asset').click(function(e){
      // $(this).find('.visitor-container').slideDown('slow');
 });
 
-$("#visit-enclosure-yes, #visit-enclosure-no").click( function(){
+$("#visit-assets-yes").click( function(){
      if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
+     $('#client-assets-info').show('slow');
+});
+
+$("#visit-assets-no").click( function(){
+     if( $(this).is(':checked') ) $('#cta-footer').slideDown('slow');
+     $('#client-assets-info').hide('slow');
 });
 
 var assetCounter = 2;

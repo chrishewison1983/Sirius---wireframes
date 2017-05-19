@@ -246,40 +246,64 @@ header {
                mix-blend-mode: hard-light;
           }
      }
+     nav.breadcrumb {
+          color: rgba($white,0.7);
+          font-size: 1rem;
+          margin: 0 0 0.5em 0;
+          display: inline-block;
+          width: 100%;
+          .dashboard {
+               display: inline-block;
+               width: 1.5em;
+               height: 1.5em;
+               text-indent: -1000em;
+               background: $white;
+               border-bottom: none;
+               background: url(#{$image-path}/sirius-logo-small.svg) no-repeat 50% 50%;
+               background-size: contain;
+               @include standard-transition;
+               &:hover {
+                    transform: scale(1.4);
+               }
+          }
+          a, .separator, span {
+               display: inline-block;
+               float: left;
+               width: auto;
+               line-height: 1.4;
+          }
+          .separator {
+               margin: 0 1em;
+               padding: 0.15em 0 0 0;
+          }
+          span {
+               font-family: $Opensans-Regular;
+          }
+          a {
+               color: rgba($white,0.7);
+               font-family: $Opensans-Regular;
+               &:hover {
+                    color: $white;
+               }
+               div {
+                    display: inline-block;
+                    float: left;
+                    margin-right: 0.35em;
+                    &:last-of-type {
+                         margin: 0;
+                    }
+               }
+          }
+     }
      h1 {
           color: $white;
           margin: 0;
-          padding: 0.5em 0 0 0;
+          padding: 0;
           span {
                color: rgba($white,0.7);
                font-size: 1rem;
-               .dashboard {
-                    display: inline-block;
-                    width: 1.5em;
-                    height: 1.5em;
-                    text-indent: -1000em;
-                    background: $white;
-                    border-bottom: none;
-                    background: url(#{$image-path}/sirius-logo-small.svg) no-repeat 50% 50%;
-                    background-size: contain;
-                    @include standard-transition;
-                    &:hover {
-                         transform: scale(1.4);
-                    }
-               }
                &.violent {
                     display: none;
-               }
-               .separator {
-                    display: inline-block;
-                    margin: 0 1em;
-               }
-               a {
-                    color: rgba($white,0.7);
-                    font-family: $Opensans-Regular;
-                    &:hover {
-                         color: $white;
-                    }
                }
           }
           &.confirmation-message {
@@ -317,6 +341,7 @@ header {
      p {
           color: $white;
           font-size: 1.4rem;
+          margin: 0;
      }
      #show-more {
           display: inline-block;

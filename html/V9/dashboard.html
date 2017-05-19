@@ -79,7 +79,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <h1><span>Welcome:</span> <div class="sirius-user-id">Susan Smith</div></h1> <span class="horizontal-border"></span> <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper dashboard"> <!-- =========== FILTER - START =========== --> <form class="filter" action="search.html"> <div class="row"> <div class="large-6 large-uncentered columns"> <div class="wrapper dashboard-search"> <label for="visit-commissioned-by">Search:</label> <input data-default="178.4" name="search" id="sirius-search" placeholder="Search by SIRIUS ID or Client name..." type="search"> <input class="submit" type="submit"> </div> </div> </div> </form> <!-- =========== FILTER - END =========== --> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span>9</span> My tasks </li> <li class="tab-link" data-tab="tab-2"> <span>4</span> My cases </li> <li class="tab-link completed" data-tab="tab-3"> <span>0</span> My completed tasks </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard current"> <h2 class="section-title">Your assigned tasks</h2>
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <span>Welcome:</span> </nav> <h1><div class="sirius-user-id">Susan Smith</div></h1> <span class="horizontal-border"></span> <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper dashboard"> <!-- =========== FILTER - START =========== --> <form class="filter" action="search.html"> <div class="row"> <div class="large-6 large-uncentered columns"> <div class="wrapper dashboard-search"> <label for="visit-commissioned-by">Search:</label> <input data-default="178.4" name="search" id="sirius-search" placeholder="Search by SIRIUS ID or Client name..." type="search"> <input class="submit" type="submit"> </div> </div> </div> </form> <!-- =========== FILTER - END =========== --> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span>9</span> My tasks </li> <li class="tab-link" data-tab="tab-2"> <span>4</span> My cases </li> <li class="tab-link completed" data-tab="tab-3"> <span>0</span> My completed tasks </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard current"> <h2 class="section-title">Your assigned tasks</h2>
 
 <!-- // CONFIRMATION MESSAGE - START // -->
 <div class="row">
@@ -953,5 +953,19 @@
 
 	<script src="../../production/js/V9/jquery.autocomplete.min.js"></script>
 	<script src="../../production/js/V9/autocomplete.js"></script>
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../production/js/V9/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+	</script>
 <!-- // JS BODY END - END // -->
 </body></html>

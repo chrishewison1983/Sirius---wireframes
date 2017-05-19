@@ -29,6 +29,12 @@
      }
 }
 
+#client-assets-info {
+     display: none;
+     border-top: 3px dashed $border-colour;
+     padding-top: 1.5em;
+}
+
 #documents-list {
      text-align: left;
      margin: 0;

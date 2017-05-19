@@ -79,7 +79,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <h1> <span> <a href="../dashboard.html" class="dashboard">My dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <!-- <a href="#">7000-000-0310</a> <div class="separator"> > </div> --> Create new deputy </span> <br> Create new deputy </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Document info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">General information</h2> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html" class="dashboard">My dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <!-- <a href="#">7000-000-0310</a> <div class="separator"> > </div> --> <span>Create new deputy</span> </nav> <h1> Create new deputy </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Document info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">General information</h2> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
 	<div id="page-1" class="accordion">
@@ -256,5 +256,19 @@
 
 	<script src="../../../production/js/V9/jquery.autocomplete.min.js"></script>
 	<script src="../../../production/js/V9/autocomplete.js"></script>
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V9/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+	</script>
 <!-- // JS BODY END - END // -->
 </body></html>
