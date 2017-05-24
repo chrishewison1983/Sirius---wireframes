@@ -1,0 +1,165 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.icon {
+     &.fee-payer, &.main-contact, &.welfare, &.welfare-property, &.property, &.chosen-location, &.location {
+          position: relative;
+          z-index: 11;
+          display: inline-block;
+          width: 1.5em;
+          height: 1.5em;
+          float: left;
+          border-radius: 50%;
+          @include standard-transition;
+          &:hover {
+               cursor: default;
+               transform: scale(1.1);
+               p {
+                    display: inline-block;
+               }
+          }
+          p {
+               position: absolute;
+               bottom: -4.75em;
+               left: 50%;
+               width: 12em;
+               margin-left: -6em;
+               background: rgba($black,0.6);
+               display: none;
+               font-family: $Montserrat;
+               font-weight: bold;
+               border: none;
+               text-align: center;
+               border-radius: $global-border-radius;
+               padding: 0.5em;
+               font-size: 0.775rem;
+               color: $white;
+               z-index: 10;
+               &:before {
+                    content: " ";
+                    position: absolute;
+                    bottom: 100%;  /* At the top of the tooltip */
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent rgba($black,0.6) transparent;
+               }
+          }
+     }
+     &.fee-payer {
+          background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
+          background-size: 0.5em;
+     }
+     &.main-contact {
+          background: url(#{$image-path}/icons/main-contact.svg) no-repeat 50% 50%;
+          background-size: cover;
+     }
+     &.welfare {
+          background: url(#{$image-path}/icons/HandW.svg) no-repeat 50% 50%;
+          background-size: cover;
+          &.white {
+               background: url(#{$image-path}/icons/HandW-white.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.welfare-property {
+          background: url(#{$image-path}/icons/HandW-PandA.svg) no-repeat 50% 50%;
+          background-size: cover;
+          border-radius: 0;
+          p {
+               bottom: -6.25em;
+               width: 13em;
+               margin-left: -6.5em;
+          }
+     }
+     &.property {
+          background: url(#{$image-path}/icons/PandA.svg) no-repeat 50% 50%;
+          background-size: cover;
+          &.white {
+               background: url(#{$image-path}/icons/PandA-white.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.order {
+          background: url(#{$image-path}/icons/client/order-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+     }
+     &.dob {
+          background: url(#{$image-path}/icons/client/dob-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+     }
+     &.medical {
+          background: url(#{$image-path}/icons/client/medical-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.75em;
+     }
+     &.record {
+          background: url(#{$image-path}/icons/client/record-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.5em;
+     }
+     &.chosen-location {
+          background: url(#{$image-path}/icons/location-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+          display: none;
+          border: none !important;
+     }
+     &.location {
+          background: url(#{$image-path}/icons/location-blue.svg) no-repeat 50% 50%;
+          background-size: 1.25em;
+          border: none !important;
+          float: right;
+          margin-left: 0.5em;
+     }
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+
+}

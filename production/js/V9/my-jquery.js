@@ -135,12 +135,14 @@ $(document).ready(function() {
 });
 
 // Forms
-$('input, select').on('focus', function(e) {
-     $(this).siblings().addClass('selected');
-});
+$(document).ready(function(){
+     $('input, select').on('focus', function(e) {
+          $(this).siblings().addClass('selected');
+     });
 
-$('input, select').on('focusout', function(e) {
-     $(this).siblings().removeClass('selected');
+     $('input, select').on('focusout', function(e) {
+          $(this).siblings().removeClass('selected');
+     });
 });
 
 // Add deputy

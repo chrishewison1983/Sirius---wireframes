@@ -1,4 +1,4 @@
-/*! Explore prototype 2017-05-19 */
+/*! Explore prototype 2017-05-24 */
 window.Modernizr = function(a, b, c) {
     function d(a) {
         t.cssText = a;
