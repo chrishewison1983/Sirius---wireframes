@@ -324,27 +324,27 @@ $(document).ready(function() {
           );
           persistThirdParty();
 
-          $.cookie("visit-question-1", $("#visit-question-1").val(), {path:'/'});
-          $.cookie("visit-question-2", $("#visit-question-2").val(), {path:'/'});
-          $.cookie("visit-question-3", $("#visit-question-3").val(), {path:'/'});
-          $.cookie("visit-question-4", $("#visit-question-4").val(), {path:'/'});
-          $.cookie("visit-question-5", $("#visit-question-5").val(), {path:'/'});
-          $.cookie("visit-question-6", $("#visit-question-6").val(), {path:'/'});
-          $.cookie("visit-question-7", $("#visit-question-7").val(), {path:'/'});
-          $.cookie("visit-question-8", $("#visit-question-8").val(), {path:'/'});
-          $.cookie("visit-question-9", $("#visit-question-9").val(), {path:'/'});
-          $.cookie("visit-question-10", $("#visit-question-10").val(), {path:'/'});
+          $.cookie("visit-third-question-1", $("#visit-third-question-1").val(), {path:'/'});
+          $.cookie("visit-third-question-2", $("#visit-third-question-2").val(), {path:'/'});
+          $.cookie("visit-third-question-3", $("#visit-third-question-3").val(), {path:'/'});
+          $.cookie("visit-third-question-4", $("#visit-third-question-4").val(), {path:'/'});
+          $.cookie("visit-third-question-5", $("#visit-third-question-5").val(), {path:'/'});
+          $.cookie("visit-third-question-6", $("#visit-third-question-6").val(), {path:'/'});
+          $.cookie("visit-third-question-7", $("#visit-third-question-7").val(), {path:'/'});
+          $.cookie("visit-third-question-8", $("#visit-third-question-8").val(), {path:'/'});
+          $.cookie("visit-third-question-9", $("#visit-third-question-9").val(), {path:'/'});
+          $.cookie("visit-third-question-10", $("#visitthird--question-10").val(), {path:'/'});
 
-          if ($.cookie("visit-question-1") == "" || $.cookie("visit-question-1") == "undefined") { $('ol.answer li.visit-third-question-1').remove();}
-          if ($.cookie("visit-question-2") == "" || $.cookie("visit-question-2") == "undefined") { $('ol.answer li.visit-third-question-2').remove();}
-          if ($.cookie("visit-question-3") == "" || $.cookie("visit-question-3") == "undefined") { $('ol.answer li.visit-third-question-3').remove();}
-          if ($.cookie("visit-question-4") == "" || $.cookie("visit-question-4") == "undefined") { $('ol.answer li.visit-third-question-4').remove();}
-          if ($.cookie("visit-question-5") == "" || $.cookie("visit-question-5") == "undefined") { $('ol.answer li.visit-third-question-5').remove();}
-          if ($.cookie("visit-question-6") == "" || $.cookie("visit-question-6") == "undefined") { $('ol.answer li.visit-third-question-6').remove();}
-          if ($.cookie("visit-question-7") == "" || $.cookie("visit-question-7") == "undefined") { $('ol.answer li.visit-third-question-7').remove();}
-          if ($.cookie("visit-question-8") == "" || $.cookie("visit-question-8") == "undefined") { $('ol.answer li.visit-third-question-8').remove();}
-          if ($.cookie("visit-question-9") == "" || $.cookie("visit-question-9") == "undefined") { $('ol.answer li.visit-third-question-9').remove();}
-          if ($.cookie("visit-question-10") == "" || $.cookie("visit-question-10") == "undefined") { $('ol.answer li.visit-third-question-10').remove();}
+          if ($.cookie("visit-third-question-1") == "" || $.cookie("visit-third-question-1") == "undefined") { $('ol.answer li.visit-third-question-1').remove();}
+          if ($.cookie("visit-third-question-2") == "" || $.cookie("visit-third-question-2") == "undefined") { $('ol.answer li.visit-third-question-2').remove();}
+          if ($.cookie("visit-third-question-3") == "" || $.cookie("visit-third-question-3") == "undefined") { $('ol.answer li.visit-third-question-3').remove();}
+          if ($.cookie("visit-third-question-4") == "" || $.cookie("visit-third-question-4") == "undefined") { $('ol.answer li.visit-third-question-4').remove();}
+          if ($.cookie("visit-third-question-5") == "" || $.cookie("visit-third-question-5") == "undefined") { $('ol.answer li.visit-third-question-5').remove();}
+          if ($.cookie("visit-third-question-6") == "" || $.cookie("visit-third-question-6") == "undefined") { $('ol.answer li.visit-third-question-6').remove();}
+          if ($.cookie("visit-third-question-7") == "" || $.cookie("visit-third-question-7") == "undefined") { $('ol.answer li.visit-third-question-7').remove();}
+          if ($.cookie("visit-third-question-8") == "" || $.cookie("visit-third-question-8") == "undefined") { $('ol.answer li.visit-third-question-8').remove();}
+          if ($.cookie("visit-third-question-9") == "" || $.cookie("visit-third-question-9") == "undefined") { $('ol.answer li.visit-third-question-9').remove();}
+          if ($.cookie("visit-third-question-10") == "" || $.cookie("visit-third-question-10") == "undefined") { $('ol.answer li.visit-third-question-10').remove();}
      });
 
 });
@@ -451,6 +451,7 @@ $('#add-to-visit-1, #add-to-visit-2, #add-to-visit-3, #add-to-visit-4, #add-to-v
      // alert($(this).parent().parent().parent().find('a').text());
      $('#documents-list-intro').show();
      $('#docs-placeholder').hide();
+     $('#no-documents').hide();
      $('#documents-list').show().append(`
                <li>${ $(this).parent().parent().parent().find('a').text() }</li>
           `
@@ -608,7 +609,7 @@ if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("co
      $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4').find('.place-holder-text').hide();
      $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4').find('.commission-visit-info').show();
 }
-////////////////////////////////////// Step - 6 (6E-VISIT SUMMARY) //////////////////////////////////////
+////////////////////////////////////// Step - 6 (6F-VISIT SUMMARY) //////////////////////////////////////
 $("#visit-assist-visitor-yes").click( function(){
      if($(this).is(':checked')) { $('.answer-6b').slideDown('slow'); }
 });
@@ -623,7 +624,7 @@ $("#visit-dangers-no").click( function(){
      if($(this).is(':checked')) { $('.answer-5b').slideUp('slow'); }
 });
 
-$("#visit-family-background").keypress( function(){
+$(".visit-family-background").click( function(){
      $('#cta-footer').slideDown('slow');
 });
 

@@ -107,8 +107,8 @@
                          // background: none;
                          span.icon {
                               display: inline-block;
-                              width: 2.75em;
-                              height: 2.75em;
+                              width: 3em;
+                              height: 3em;
                          }
                          &.action {
                               // background-color: $blue;
@@ -166,35 +166,35 @@
                          &.edit-client {
                               background: none;
                               span.icon {
-                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background: url(#{$image-path}/icons/actions/edit-client-white.svg) no-repeat 50% 50% $blue;
                                    background-size: 1.25em;
                               }
                          }
                          &.create-task {
                               background: none;
                               span.icon {
-                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background: url(#{$image-path}/icons/actions/create-task-white.svg) no-repeat 50% 50% $blue;
                                    background-size: 1.25em;
                               }
                          }
                          &.new-event {
                               background: none;
                               span.icon {
-                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background: url(#{$image-path}/icons/actions/new-alert-white.svg) no-repeat 50% 50% $blue;
                                    background-size: 1.25em;
                               }
                          }
                          &.report {
                               background: none;
                               span.icon {
-                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background: url(#{$image-path}/icons/actions/date-white.svg) no-repeat 50% 50% $blue;
                                    background-size: 1.25em;
                               }
                          }
                          &.supervision-level {
                               background: none;
                               span.icon {
-                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background: url(#{$image-path}/icons/actions/supervision-level-white.svg) no-repeat 50% 50% $blue;
                                    background-size: 1.25em;
                               }
                          }

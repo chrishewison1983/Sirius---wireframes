@@ -218,9 +218,11 @@ $("#add-visitors-step-3").on("click", function (e) {
      $.cookie("visit-due-back-month", $("#visit-report-month").val(), {path:'/'});
      $.cookie("visit-due-back-year", $("#visit-report-year").val(), {path:'/'});
      $.cookie("completed-step-3", true, {path:'/'});
+
+     /* textarea */ $.cookie("third-party-needed", $(".third-party-needed .jqte_editor").html(), {path:'/'});
 });
 
-if ($.cookie("visit-due-back-day")) {  $(".visit-due-back-date").text($.cookie("visit-due-back-day") + '/' + $.cookie("visit-due-back-month") + '/' + $.cookie("visit-due-back-year"));  }
+if ($.cookie("visit-due-back-day")) { $(".visit-due-back-date").text($.cookie("visit-due-back-day") + '/' + $.cookie("visit-due-back-month") + '/' + $.cookie("visit-due-back-year"));  }
 
 /////////////////// ======================== !!!!!!!!!! CHANGE BASED ON DATE OF TEST - START !!!!!!!!!! ======================== ///////////////////
 $('.weeks-6, .weeks-12').css('display', 'none');
@@ -328,9 +330,9 @@ else { $(".visit-deputy-order-10").hide(); }
 
 if ($.cookie("visit-safeguarding")) {  $(".visit-safeguarding").text($.cookie("visit-safeguarding")); }
 if ($.cookie("visit-safeguarding-answer")) {
-     $(".visit-safeguarding-answer").text($.cookie("visit-safeguarding-answer"));
+     $(".visit-safeguarding-answer-text").text($.cookie("visit-safeguarding-answer"));
 } else {
-     $(".visit-safeguarding-answer").hide();
+     $(".visit-safeguarding-answer-text").hide();
 }
 
 if ($.cookie("visit-deputyship-order")) {  $(".visit-deputyship-order").text($.cookie("visit-deputyship-order")); }
@@ -354,14 +356,13 @@ $("#add-visitors-step-6").on("click", function (e) {
 
      // Cookies for side bar
      $.cookie("visit-dangers", $("input[name=visit-dangers]:checked").parent().text(), {path:'/'});
-     $.cookie("visit-dangers-answer", $("#visit-dangers-answer").val(), {path:'/'});
+     /* textarea */ $.cookie("visit-dangers-answer", $(".visit-dangers-answer .jqte_editor").html(), {path:'/'});
 
      $.cookie("visit-assist-visitor", $("input[name=visit-assist-visitor]:checked").parent().text(), {path:'/'});
-     $.cookie("visit-assist-visitor-answer", $("#visit-assist-visitor-answer").val(), {path:'/'});
+     /* textarea */ $.cookie("visit-assist-visitor-answer", $(".visit-assist-visitor-answer .jqte_editor").html(), {path:'/'});
 
-     $.cookie("visit-medical-background", $("#visit-medical-background").val(), {path:'/'});
-
-     $.cookie("visit-family-background", $("#visit-family-background").val(), {path:'/'});
+     /* textarea */ $.cookie("visit-medical-background", $(".visit-medical-background .jqte_editor").html(), {path:'/'});
+     /* textarea */ $.cookie("visit-family-background", $(".visit-family-background .jqte_editor").html(), {path:'/'});
 
 });
 

@@ -43,9 +43,9 @@ main {
           }
           &.full-width {
                width: 95%;
-               margin: 0 0 5em 5%;
+               margin: 0 0 5em 5.195em;
                #document-summary.sticky, #action-panel.sticky {
-                    width: 45em;
+                    width: 39.5em;
                }
                &.new-client {
                     width: 95%;
@@ -70,7 +70,7 @@ main {
 
 .row {
      &.full-width-row {
-          max-width: 90rem;
+          max-width: 79rem;
      }
 }
 
