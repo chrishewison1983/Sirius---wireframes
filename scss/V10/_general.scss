@@ -47,6 +47,23 @@ main {
                #document-summary.sticky, #action-panel.sticky {
                     width: 45em;
                }
+               &.new-client {
+                    width: 95%;
+                    padding: 0 0 0 18em;
+                    margin-bottom: 0;
+                    // margin: 0 0 5em 20%;
+               }
+          }
+     }
+     &.new-client {
+          width: 70.5%;
+          position: relative;
+          margin: 0 0 5em 29.15%;
+          .row {
+               max-width: 65rem;
+               &.full-width-row {
+                    max-width: 72rem;
+               }
           }
      }
 }

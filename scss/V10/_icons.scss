@@ -65,6 +65,10 @@
                background: url(#{$image-path}/icons/HandW-white.svg) no-repeat 50% 50%;
                background-size: cover;
           }
+          &.blue {
+               background: url(#{$image-path}/icons/HandW-blue.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
      }
      &.welfare-property {
           background: url(#{$image-path}/icons/HandW-PandA.svg) no-repeat 50% 50%;
@@ -81,6 +85,10 @@
           background-size: cover;
           &.white {
                background: url(#{$image-path}/icons/PandA-white.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+          &.blue {
+               background: url(#{$image-path}/icons/PandA-blue.svg) no-repeat 50% 50%;
                background-size: cover;
           }
      }

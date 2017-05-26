@@ -96,7 +96,7 @@
           ul {
                li {
                     width: 100%;
-                    margin: 0 0 1em 0;
+                    margin: 0 0 0.5em 0;
                     a {
                          margin: 0;
                          box-shadow: none;
@@ -107,8 +107,8 @@
                          // background: none;
                          span.icon {
                               display: inline-block;
-                              width: 3.5em;
-                              height: 3.5em;
+                              width: 2.75em;
+                              height: 2.75em;
                          }
                          &.action {
                               // background-color: $blue;
@@ -128,38 +128,74 @@
                          &.create-letter {
                               float: left;
                          }
-                         &.create-case, &.create-letter, &.create-deputy, &.commission-visit {
+                         &.create-case, &.create-letter, &.create-deputy, &.commission-visit, &.edit-client, &.create-task, &.new-event, &.report,
+                         &.supervision-level {
                               span.icon {
                                    border-radius: 50%;
-                                   margin: 0 0.5em 0 0;
+                                   margin: 0 0.25em 0 0;
                               }
                          }
                          &.create-case {
                               background: none;
                               span.icon {
                                    background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50% $blue;
-                                   background-size: 1.75em;
+                                   background-size: 1.25em;
                               }
                          }
                          &.create-letter {
                               background: none;
                               span.icon {
                                    background: url(#{$image-path}/icons/create-letter-white.svg) no-repeat 50% 50% $blue;
-                                   background-size: 1.75em;
+                                   background-size: 1.25em;
                               }
                          }
                          &.create-deputy {
                               background: none;
                               span.icon {
                                    background: url(#{$image-path}/icons/add-deputies-white.svg) no-repeat 50% 50% $blue;
-                                   background-size: 1.75em;
+                                   background-size: 1.25em;
                               }
                          }
                          &.commission-visit {
                               background: none;
                               span.icon {
                                    background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
-                                   background-size: 1.75em;
+                                   background-size: 1.25em;
+                              }
+                         }
+                         &.edit-client {
+                              background: none;
+                              span.icon {
+                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background-size: 1.25em;
+                              }
+                         }
+                         &.create-task {
+                              background: none;
+                              span.icon {
+                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background-size: 1.25em;
+                              }
+                         }
+                         &.new-event {
+                              background: none;
+                              span.icon {
+                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background-size: 1.25em;
+                              }
+                         }
+                         &.report {
+                              background: none;
+                              span.icon {
+                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background-size: 1.25em;
+                              }
+                         }
+                         &.supervision-level {
+                              background: none;
+                              span.icon {
+                                   background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $blue;
+                                   background-size: 1.25em;
                               }
                          }
                          span {
@@ -171,7 +207,7 @@
                               height: auto;
                               margin: 0;
                               text-align: left;
-                              font-size: 1rem;
+                              font-size: 0.9rem;
                               font-family: $Montserrat;
                               font-weight: bold;
                               &:before {

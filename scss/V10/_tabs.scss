@@ -17,7 +17,7 @@ ul.tabs {
      li {
           list-style: none;
           float: left;
-          padding: 1.25em 1.25em 1em 1.25em;
+          padding: 1.25em 0.95em 1em 0.95em;
           margin: 0 0 -6px 0;
           font-family: $Montserrat;
           font-weight: bold;
@@ -25,7 +25,7 @@ ul.tabs {
           &:hover {
                cursor: pointer;
           }
-          &.current {
+          &.current, &.active {
                color: $white;
                background: $blue;
                border-bottom: 6px solid darken($blue,10%);

@@ -1,0 +1,274 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V10/jquery.min.js"></script>
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- MAIN NAV - START -->
+<header class="main">
+
+     <nav>
+          <div class="padding-wrapper">
+               <a href="../dashboard.html" class="logo"><img src="../../../production/img/V10/sirius-logo.svg" alt="Sirius"></a>
+          </div>
+
+          <a href="#" class="user-cta">
+               <span class="nav-icon"></span>
+               <div class="sirius-user-id">Susan Smith</div>
+          </a>
+
+          <div class="create-client allocations">
+               <a href="../3-create-client/3a-create-client.html" class="main-cta">
+                    <span class="nav-icon"></span> Create client
+               </a>
+          </div>
+
+          <!-- <ul class="padding-wrapper">
+               <li class="actions create-letter">
+                    <a href="2a-create-letter.html">
+                         <span class="nav-icon"></span>
+                         Create letter
+                    </a>
+               </li>
+               <li class="actions create-letter">
+                    <a href="#">
+                         <span class="nav-icon"></span>
+                         Add deputy
+                    </a>
+               </li>
+          </ul> -->
+
+          <a href="../index.html" class="main-cta sign-out">
+               <span class="nav-icon"></span> Sign out
+          </a>
+
+          <a href="#" class="minimise">
+               Minimise
+          </a>
+
+     </nav>
+
+</header>
+<!-- MAIN NAV - END -->
+<!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<!-- <ul>
+		<li class="menu"><a href="#">Menu</a></li>
+		<li class="border"></li>
+		<li class="alerts">
+			<a href="#">Alerts</a>
+			<span>20</span>
+		</li>
+		<li class="settings"><a href="#">Settings</a></li>
+		<li class="border"></li>
+	</ul> -->
+
+	<form action="search.html">
+		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+		<input type="submit">
+	</form>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html" class="dashboard"></a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Select the recipients for the letter </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">Document information</h2> <h3 class="sub-section-title">Letter template chosen</h3> <div class="document"> <img src="../../../production/img/V9/document-thumbnail.png" alt="Document" class="document-item"> <h3 class="title">CT-bb: Blank complaints team template</h3> </div> <h3 class="sub-section-title">Recipients chosen</h3> <ol id="recipients"> <li data-correspondant-id='1'>Ms Lara Stevens (Correspondent)</li> </ol> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+<div id="document-viewer">
+
+	<div id="page-1" class="accordion">
+
+		<!-- //////// ACCORDION SECTION 1 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title" href="#accordion-1">
+				Visits
+				<span></span>
+			</button>
+
+			<div id="accordion-1" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-1">
+								<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post" value="1">
+								Add to visit
+							</label>
+						</form>
+					</li>
+					<li>
+						<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-2">
+								<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post" value="2">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 1 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 2 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title" href="#accordion-2">
+				Reports
+				<span></span>
+			</button>
+
+			<div id="accordion-2" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-3">
+								<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post" value="3">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 2 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 3 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title" href="#accordion-3">
+				Correspondance
+				<span></span>
+			</button>
+
+			<div id="accordion-3" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-4">
+								<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post" value="4">
+								Add to visit
+							</label>
+						</form>
+					</li>
+					<li>
+						<a href="#" class="hide-page-1">Correspondance_document_2.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-5">
+								<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post" value="5">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 3 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 4 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title" href="#accordion-4">
+				Court documents
+				<span></span>
+			</button>
+
+			<div id="accordion-4" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
+						<form>
+							<label class="normal checked" for="add-to-visit-6">
+								<input id="add-to-visit-6" name="add-to-visit-6" type="checkbox" value="post" value="6">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 4 - END - //////// -->
+
+		<!-- //////// ACCORDION SECTION 5 - START - //////// -->
+		<div class="accordion-section">
+
+			<button class="accordion-section-title" href="#accordion-5">
+				Other
+				<span></span>
+			</button>
+
+			<div id="accordion-5" class="accordion-section-content">
+				<ul>
+					<li>
+						<a href="#" class="hide-page-1">Other_document.pdf</a>
+						<form>
+							<label class="normal" for="add-to-visit-7">
+								<input id="add-to-visit-7" name="add-to-visit-7" type="checkbox" value="post" value="7">
+								Add to visit
+							</label>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //////// ACCORDION SECTION 5 - END - //////// -->
+	</div>
+
+
+	<div id="page-2" class="document">
+		<div class="control-panel">
+			<h2>Current annual report</h2>
+			<a href="#" class="back" id="back">Back</a>
+		</div>
+		<div class="wrapper">
+			<img src="../../../production/img/V10/document-report.png" alt="Document" class="document-item">
+		</div>
+	</div>
+
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="create-letter"> <!-- =========== CORRESPONDANCE SECTION - 1 - START =========== --> <h2 class="section-title">Select recipient</h2> <div id="selected"> <ul id="selected-list"> <!-- // CORRESPONDANCE - 1 - START // --> <li data-correspondant-id='1'> <a class="correspondent"> <span class="icon fee-payer"></span> <span>Ms Lara Stevens (Correspondent)</span><br> <span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span> </a> </li> <!-- // CORRESPONDANCE - 1 - END // --> </ul> </div> <!-- =========== CORRESPONDANCE SECTION - 1 - END =========== --> <hr> <!-- =========== CORRESPONDANCE SECTION - 2 - START =========== --> <h2 class="section-title">Add additional recipients related to client</h2> <div id="suggested"> <ul> <!-- // CORRESPONDANCE - 1 - START // --> <li> <a class="correspondent" data-correspondant-id='1' style="display:none;"> <span class="fee-payer"></span> <span data-value='name'>Ms Lara Stevens (Correspondent)</span><br> <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span> </a> </li> <!-- // CORRESPONDANCE - 1 - END // --> <!-- // CORRESPONDANCE - 2 - START // --> <li> <a class="correspondent" data-correspondant-id='2'> <span data-value='name'>Mr Gerald Brackens (Client)</span> <br> <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span> </a> </li> <!-- // CORRESPONDANCE - 2 - END // --> <!-- // CORRESPONDANCE - 3 - START // --> <li> <a class="correspondent" data-correspondant-id='3'> <span data-value='name'>Mrs Carla Frith (Deputy)</span><br> <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span> </a> </li> <!-- // CORRESPONDANCE - 3 - END // --> <!-- // CORRESPONDANCE - 4 - START // --> <li> <a class="correspondent" data-correspondant-id='4'> <span data-value='name'>Mrs Melanie Rand (Deputy)</span> <br> <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span> </a> </li> <!-- // CORRESPONDANCE - 4 - END // --> <!-- // CORRESPONDANCE - 5 - START // --> <li> <a class="correspondent" data-correspondant-id='5'> <span data-value='name'>Toby Daniels (Notified Person)</span> <br> <span data-value='address' class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span> </a> </li> <!-- // CORRESPONDANCE - 5 - END // --> <!-- // CORRESPONDANCE - 6 - START // --> <li> <a class="correspondent" data-correspondant-id='6'> <span data-value='name'>TrustMe Limited (Trust Corporation)</span> <br> <span data-value='address' class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span> </a> </li> <!-- // CORRESPONDANCE - 6 - END // --> </ul> </div> <!-- =========== CORRESPONDANCE SECTION - 2 - START =========== --> <!-- // ADD NEW CORRESPONDANT - START // --> <div class="cta-row"> <a class="main-cta secondary" href="2c-add-correspondant.html">Add correspondent</a> </div> <!-- // ADD NEW CORRESPONDANT - END // --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html">Create letter</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() { return $(this).text().trim(); }).toArray())); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V10/hideShowPassword.js"></script>
+	<script src="../../../production/js/V10/my-jquery.js"></script>
+	<script src="../../../production/js/V10/jquery.cookie.js"></script>
+	<script src="../../../production/js/V10/jquery.modal.js"></script>
+	<script src="../../../production/js/V10/jquery-datepicker.js"></script>
+	<script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script>
+	<script src="../../../production/js/V10/my-cookies.js"></script>
+	<script src="../../../production/js/V10/sticky-item.js"></script>
+
+	<script src="../../../production/js/V10/my-cookies-commission-visit.js"></script>
+	<script src="../../../production/js/V10/my-jquery-commission-visit.js"></script>
+	<script src="../../../production/js/V10/my-jquery-progress-bar.js"></script>
+	<script src="../../../production/js/V10/jquery.tablesorter.js"></script>
+
+	<script src="../../../production/js/V10/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V10/autocomplete.js"></script>
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V10/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+	</script>
+<!-- // JS BODY END - END // -->
+</body></html>

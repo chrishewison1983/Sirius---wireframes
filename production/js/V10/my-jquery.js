@@ -97,8 +97,29 @@ $(document).ready(function(){
           $("#task-list .pdf-review").show(500)
      }, 0);
 
-
 });
+
+function openTab(evt, tabName) {
+     // Declare all variables
+     var i, tabcontent, tablinks;
+
+     // Get all elements with class="tabcontent" and hide them
+     tabcontent = document.getElementsByClassName("tabcontent");
+     for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+     }
+
+     // Get all elements with class="tablinks" and remove the class "active"
+     tablinks = document.getElementsByClassName("tablinks");
+     for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+     }
+
+     // Show the current tab, and add an "active" class to the button that opened the tab
+     document.getElementById(tabName).style.display = "block";
+     evt.currentTarget.className += " active";
+}
+
 
 // Correspondant
 $(document).ready(function() {
@@ -297,6 +318,7 @@ $('.minimise').on('click', function(e) {
           $('nav').find('.logo').html('<img src="../../../production/img/V10/sirius-logo.svg" alt="Sirius">');
           $('nav').find('.sign-out').html('<span class="nav-icon"></span> Sign out');
           $(this).parent().parent().parent().find('.row').removeClass('full-width-row');
+          $(this).closest('body').find('nav.client-nav').removeClass('full-width');
      } else {
           $(this).addClass('open');
           $(this).parent().parent().addClass('shrink');
@@ -305,6 +327,7 @@ $('.minimise').on('click', function(e) {
           $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
           $('nav').find('.logo').html('');
           $(this).parent().parent().parent().find('.row').addClass('full-width-row');
+          $(this).closest('body').find('nav.client-nav').addClass('full-width');
      }
      return false;
 })
@@ -333,9 +356,15 @@ $(document).ready(function() {
 
 // Client summary
 $(document).ready(function () {
-     if (window.location.href.indexOf("complete") != -1) {
-          // $("#header-report-submit").show();
-          // $('.notice').hide();
-          // $("#ready-to-submit").show();
+     if (window.location.href.indexOf("normal") != -1) {
+          // Change the compliant status
+          $(".compliant").removeClass('alert-colour').addClass('normal-colour');
+          $(".compliant").find('.sub-text').text('Compliant');
+          $(".compliant").find('.right').html('<span class="tick"></span>');
+
+          // Change the payment status
+          $(".payment").removeClass('main-colour').addClass('blue-colour');
+          $(".payment").find('.sub-text').text('No outstanding payment');
+          $(".payment").find('.left').html('<span class="tick"></span>');
      }
 });

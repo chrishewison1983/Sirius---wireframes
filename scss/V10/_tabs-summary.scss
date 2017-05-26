@@ -220,7 +220,7 @@
                                    }
                                    &.font-size-6rem {
                                         h1, h2, h3, p {
-                                             font-size: 6rem;
+                                             font-size: 5rem;
                                              line-height: 1;
                                              position: relative;
                                              margin: -0.15em 0 0 0;
@@ -267,6 +267,16 @@
                                         background: darken($red,15%);
                                    }
                               }
+                              &.normal-colour {
+                                   .right {
+                                        background: darken($green,15%);
+                                   }
+                              }
+                              &.blue-colour {
+                                   .right {
+                                        background: darken($blue,15%);
+                                   }
+                              }
                               &.main-colour {
                                    .right {
                                         background: lighten($main-colour,15%);
@@ -304,6 +314,16 @@
                               &.alert-colour {
                                    .left {
                                         background: darken($red,15%);
+                                   }
+                              }
+                              &.normal-colour {
+                                   .right {
+                                        background: darken($green,15%);
+                                   }
+                              }
+                              &.blue-colour {
+                                   .left {
+                                        background: darken($blue,5%);
                                    }
                               }
                               &.main-colour {
@@ -460,6 +480,40 @@
                                    color: rgba($white,0.7);
                               }
                          }
+                         &.normal-colour {
+                              background-color: $green;
+                              // border: 3px solid $red;
+                              .main-text {
+                                   color: $white;
+                              }
+                              .sub-text {
+                                   color: rgba($white,0.7);
+                              }
+                              .tick {
+                                   display: inline-block;
+                                   width: 4.25em;
+                                   height: 4.25em;
+                                   background: url(#{$image-path}/icons/tick.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.blue-colour {
+                              background-color: $blue;
+                              // border: 3px solid $red;
+                              .main-text {
+                                   color: $white;
+                              }
+                              .sub-text {
+                                   color: rgba($white,0.7);
+                              }
+                              .tick {
+                                   display: inline-block;
+                                   width: 4.25em;
+                                   height: 4.25em;
+                                   background: url(#{$image-path}/icons/tick.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
                          &.report-dates {
                               background: none;
                               border: none;
@@ -475,6 +529,7 @@
                                    @include flexbox;
                                    @include align-items(center);
                                    @include justify-content(center);
+                                   overflow: hidden;
                                    &:last-of-type {
                                         margin: 0;
                                    }
@@ -486,12 +541,12 @@
                                    }
                                    .main-text {
                                         color: $white;
-                                        font-size: 1.6rem;
-                                        margin: 0 0 0.25em 0;
+                                        font-size: 1.4rem;
+                                        margin: 0 0 0.5em 0;
                                         .icon.date {
                                              display: inline-block;
-                                             width: 1.25em;
-                                             height: 1.25em;
+                                             width: 1em;
+                                             height: 1em;
                                              margin: 0 0.5em -0.2em 0;
                                              background: url(#{$image-path}/icons/date-white.svg) no-repeat 50% 50%;
                                              background-size: contain;
@@ -532,6 +587,53 @@
      }
 }
 
+#list-of-summary {
+     #client-summary {
+          &.health, &.property {
+               .dashboard-row {
+                    .item {
+                         &.highlight {
+                              .left-focus, .right-focus {
+                                   .left, .right {
+                                        &.font-size-3rem {
+                                             h1 {
+                                                  font-size: 2rem;
+                                             }
+                                        }
+                                   }
+                              }
+                              .left-focus {
+                                   padding: 0 1.5em 0 9.5em;
+                                   .left {
+                                        width: 8em;
+                                   }
+                              }
+                              .right-focus {
+                                   padding: 0 9.5em 0 1.5em;
+                                   .right {
+                                        width: 8em;
+                                   }
+                              }
+                         }
+                         section {
+                              h1, h2 {
+                                   &.sub-text {
+                                        font-size: 1.4rem;
+                                   }
+                              }
+                         }
+                         .full-colour-block {
+                              &.report-dates {
+                                   .date {
+                                        width: 100%;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
 
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {

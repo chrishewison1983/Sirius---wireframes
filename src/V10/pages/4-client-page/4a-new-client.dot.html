@@ -7,6 +7,8 @@
 <!-- PRIMARY CONTENT - START -->
 <main class="default new-client">
 
+     {{= it.include('client-nav.html') }}
+
      <!-- SECTION HEADER - START -->
      <div id="section-header">
 
@@ -35,161 +37,47 @@
      </div>
      <!-- SECTION HEADER - END -->
 
-     <!-- CONTENT WRAPPER - START -->
-     <div class="content-wrapper">
-
+     <!-- TAB CONTENT - START -->
+     <div id="client-overview" class="tabcontent current">
           <div class="row">
-               <div class="large-9 large-uncentered columns">
+               <div class="large-12 large-uncentered columns">
 
-                    <!-- =========== TABS - START =========== -->
-                    <ul class="client-details tabs">
-                         <li class="tab-link current" data-tab="tab-1">
-                              Summary
-                         </li>
-                         <li class="tab-link" data-tab="tab-2">
-                              Deputies
-                         </li>
-                         <li class="tab-link" data-tab="tab-3">
-                              Warnings
-                         </li>
-                         <li class="tab-link" data-tab="tab-4">
-                              Client
-                         </li>
-                         <li class="tab-link" data-tab="tab-5">
-                              Timeline
-                         </li>
-                         <li class="tab-link" data-tab="tab-6">
-                              Tasks
-                         </li>
-                         <li class="tab-link" data-tab="tab-7">
-                              Documents
-                         </li>
-                    </ul>
-                    <!-- =========== TABS - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="client-details tab-content current">
-                         <div class="row">
-
-                              <!-- // CREATE CLIENT - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-summary.html') }}
-
-                              </div>
-                              <!-- // CREATE CLIENT - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 1 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 2 - START =========== -->
-                    <div id="tab-2" class="client-details tab-content">
-                         <div class="row">
-
-                              <!-- // CLIENT DEPUTIES - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-deputies.html') }}
-
-                              </div>
-                              <!-- // CLIENT DEPUTIES - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 2 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 3 - START =========== -->
-                    <div id="tab-3" class="client-details tab-content">
-                         <div class="row">
-
-                              <!-- // WARNINGS - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-warnings.html') }}
-
-                              </div>
-                              <!-- // WARNINGS - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 3 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="client-details tab-content">
-                         <div class="row">
-
-                              <!-- // CLIENT INFORMATION - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-information.html') }}
-
-                              </div>
-                              <!-- // CLIENT INFORMATION - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 4 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 5 - START =========== -->
-                    <div id="tab-5" class="client-details tab-content">
-                         <div class="row">
-
-                              <!-- // CLIENT TASKS - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-timeline.html') }}
-
-                              </div>
-                              <!-- // CLIENT TASKS - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 5 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 6 - START =========== -->
-                    <div id="tab-6" class="client-details tab-content">
-                         <div class="row">
-
-                              <!-- // CLIENT TASKS - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-tasks.html') }}
-
-                              </div>
-                              <!-- // CLIENT TASKS - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 6 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 7 - START =========== -->
-                    <div id="tab-7" class="client-details tab-content">
-                         <div class="row">
-
-                              <!-- // CLIENT DOCUMENTS - START // -->
-                              <div class="large-12 large-uncentered columns">
-
-                                   {{= it.include('client-page/client-tab-documents.html') }}
-
-                              </div>
-                              <!-- // CLIENT DOCUMENTS - END // -->
-
-                         </div>
-                    </div>
-                    <!-- =========== TAB CONTENT - 7 - END =========== -->
+                    {{= it.include('client-page/tab-summary.html') }}
 
                </div>
-
-               <div class="large-3 large-uncentered columns">
-                    {{= it.include('actions-panel.html') }}
-               </div>
-
           </div>
-          <!-- =========== TAB CONTENT - END =========== -->
-
      </div>
-     <!-- CONTENT WRAPPER - END -->
+
+     <div id="client-health" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-health.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-property" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-property.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-unassigned" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-unassigned.html') }}
+
+               </div>
+          </div>
+     </div>
+     <!-- TAB CONTENT - END -->
 
 </main>
 <!-- PRIMARY CONTENT - END -->
@@ -222,6 +110,8 @@
           $('#document-recipients').append('<li>' + recipient + '</li>');
      });
 
+     // Get the element with id="defaultOpen" and click on it
+     document.getElementById("defaultOpen").click();
 
 </script>
 <!-- SCRIPT CONTENT - END -->

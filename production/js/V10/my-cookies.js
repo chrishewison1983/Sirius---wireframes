@@ -185,6 +185,7 @@ if ($.cookie("full-width") === 'true') {
      $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
      $('nav').find('.logo').html('');
      $('.minimise').parent().parent().parent().find('.row').addClass('full-width-row');
+     $('nav.client-nav').addClass('full-width');
 }
 // if ($.cookie("full-width-close") === 'true') {
 //      $('.minimise').removeClass('open');
