@@ -17,7 +17,7 @@
 
      <nav>
           <div class="padding-wrapper">
-               <a href="../dashboard.html" class="logo"><img src="../../../production/img/V10/sirius-logo.svg" alt="Sirius"></a>
+               <a href="dashboard.html" class="logo"><img src="../../production/img/V10/sirius-logo.svg" alt="Sirius"></a>
           </div>
 
           <a href="#" class="user-cta">
@@ -30,21 +30,6 @@
                     <span class="nav-icon"></span> Create client
                </a>
           </div>
-
-          <!-- <ul class="padding-wrapper">
-               <li class="actions create-letter">
-                    <a href="2-create-letter/2a-create-letter.html">
-                         <span class="nav-icon"></span>
-                         Create letter
-                    </a>
-               </li>
-               <li class="actions create-letter">
-                    <a href="#">
-                         <span class="nav-icon"></span>
-                         Add deputy
-                    </a>
-               </li>
-          </ul> -->
 
           <a href="index.html" class="main-cta sign-out">
                <span class="nav-icon"></span> Sign out
@@ -61,21 +46,29 @@
 <!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
-	<!-- <ul>
-		<li class="menu"><a href="#">Menu</a></li>
+	<form action="search.html">
+		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+		<input type="submit">
+	</form>
+
+	<label class="switch">
+		<span>Supervision</span>
+		<input type="checkbox">
+		<div class="slider round"></div>
+	</label>
+
+	<ul>
+		<!-- <li><a href="#">LPA cases</a></li>
+		<li><a href="#">Supervision cases</a></li> -->
+		<!-- <li class="menu"><a href="#">Menu</a></li>
 		<li class="border"></li>
 		<li class="alerts">
 			<a href="#">Alerts</a>
 			<span>20</span>
 		</li>
 		<li class="settings"><a href="#">Settings</a></li>
-		<li class="border"></li>
-	</ul> -->
-
-	<form action="search.html">
-		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
-		<input type="submit">
-	</form>
+		<li class="border"></li> -->
+	</ul>
 
 </nav>
 <!-- // MAIN MAV - END // -->
@@ -137,7 +130,7 @@
 				</td>
 				<td>
 					<div class="rag-rating">
-						<span class="traffic-light red">Red</span>
+						<span class="traffic-light red">A</span>
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
 						<div class="border"></div>
@@ -168,7 +161,7 @@
 				</td>
 				<td>
 					<div class="rag-rating">
-						<span class="traffic-light red">Red</span>
+						<span class="traffic-light red">A</span>
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
 						<div class="border"></div>
@@ -201,7 +194,7 @@
 					<div class="rag-rating">
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
-						<span class="traffic-light green">Green</span>
+						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
 				</td>
@@ -232,7 +225,7 @@
 					<div class="rag-rating">
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
-						<span class="traffic-light green">Green</span>
+						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
 				</td>
@@ -262,7 +255,7 @@
 				<td>
 					<div class="rag-rating">
 						<span class="traffic-light"></span>
-						<span class="traffic-light amber">Amber</span>
+						<span class="traffic-light amber">B</span>
 						<span class="traffic-light"></span>
 						<div class="border"></div>
 					</div>
@@ -294,7 +287,7 @@
 					<div class="rag-rating">
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
-						<span class="traffic-light green">Green</span>
+						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
 				</td>
@@ -323,7 +316,7 @@
 				</td>
 				<td>
 					<div class="rag-rating">
-						<span class="traffic-light red">Red</span>
+						<span class="traffic-light red">A</span>
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
 						<div class="border"></div>
@@ -355,7 +348,7 @@
 				<td>
 					<div class="rag-rating">
 						<span class="traffic-light"></span>
-						<span class="traffic-light amber">Amber</span>
+						<span class="traffic-light amber">B</span>
 						<span class="traffic-light"></span>
 						<div class="border"></div>
 					</div>
@@ -387,7 +380,7 @@
 					<div class="rag-rating">
 						<span class="traffic-light"></span>
 						<span class="traffic-light"></span>
-						<span class="traffic-light green">Green</span>
+						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
 				</td>
@@ -603,11 +596,12 @@
 
 	<table id="completed-tasks-table" class="tablesorter completed">
 		<thead>
-			<tr class="four-column">
+			<tr class="five-column">
 				<th><span></span>Type</th>
 				<th><span></span>Task due date</th>
 				<th><span></span>Order status</th>
 				<th><span></span>Completed</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -703,7 +697,9 @@
 						}
 						document.write('<p class="time-text">' + Hours + ":" + Mins + Time + '</p>');
 					</script>
-
+				</td>
+				<td>
+					<a href="#visit-commission" rel="modal:open" class="main-cta secondary">View</a>
 				</td>
 			</tr>
 			<!-- TASK 2 - START -->
@@ -936,7 +932,7 @@
 	</table>
 
 </div>
- </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- // MODAL - START // --><div id="deputies-1" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Lara Stevens <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Carla Frith</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Melanie Rand</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> </ol></div><div id="deputies-2" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Kate Robson <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>94 Seaford Road, CULDUIE, IV54 5TD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Finley Buckley</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>80 Red Lane, EVENLEY, NN13 0LU</strong></div> <div class="info"><span>Relationship:</span> <strong>Brother</strong></div> </li> <li> <div class="name">Ewan Baker</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Red Lane, ERROL, PH2 0QW</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> <li> <div class="name">Brooke Spencer</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>98 Stone Cellar Road, KINGSTON RUSSELL, DT2 7XD</strong></div> <div class="info"><span>Relationship:</span> <strong>Cousin</strong></div> </li> </ol></div><div id="deputies-3" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Elizabeth Matthews <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>19 Dunmow Road, GRINSHILL, SY4 1UT</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> <li> <div class="name">Corey Bibi</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>9 Wenlock Terrace, PENYCAE, LL14 5RE</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> <li> <div class="name">Jake Greenwood</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>31 Rowland Rd, OSTERLEY PARK, TW7 8SJ</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> </ol></div><div id="deputies-4" style="display:none;" class="modal"> <ol> <li> <div class="name">Charles Duncan <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>26 Moulton Road, GUITING POWER, GL54 3UP</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> </ol></div><!-- // MODAL - END // --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function() { $("#tasks-table, #completed-tasks-table").tablesorter(); }); $(document).ready(function() { $("#myTable, #completed-tasks-table").tablesorter( {sortList: [[0,0], [1,0]]} ); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- // MODAL - START // --><div id="deputies-1" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Lara Stevens <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Carla Frith</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Melanie Rand</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> </ol></div><div id="deputies-2" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Kate Robson <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>94 Seaford Road, CULDUIE, IV54 5TD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Finley Buckley</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>80 Red Lane, EVENLEY, NN13 0LU</strong></div> <div class="info"><span>Relationship:</span> <strong>Brother</strong></div> </li> <li> <div class="name">Ewan Baker</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Red Lane, ERROL, PH2 0QW</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> <li> <div class="name">Brooke Spencer</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>98 Stone Cellar Road, KINGSTON RUSSELL, DT2 7XD</strong></div> <div class="info"><span>Relationship:</span> <strong>Cousin</strong></div> </li> </ol></div><div id="deputies-3" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Elizabeth Matthews <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>19 Dunmow Road, GRINSHILL, SY4 1UT</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> <li> <div class="name">Corey Bibi</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>9 Wenlock Terrace, PENYCAE, LL14 5RE</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> <li> <div class="name">Jake Greenwood</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>31 Rowland Rd, OSTERLEY PARK, TW7 8SJ</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> </ol></div><div id="deputies-4" style="display:none;" class="modal"> <ol> <li> <div class="name">Charles Duncan <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>26 Moulton Road, GUITING POWER, GL54 3UP</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> </ol></div><div id="visit-commission" style="display:none;" class="modal"> <img src="../../../production/img/V10/document-thumbnail.png" alt="Document" class="document-item"> <hr> <div class="cta-row"> <a href="#" rel="modal:close">Close</a> </div></div><!-- // MODAL - END // --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function() { $("#tasks-table, #completed-tasks-table").tablesorter(); }); $(document).ready(function() { $("#myTable, #completed-tasks-table").tablesorter( {sortList: [[0,0], [1,0]]} ); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../production/js/V10/hideShowPassword.js"></script>
 	<script src="../../production/js/V10/my-jquery.js"></script>

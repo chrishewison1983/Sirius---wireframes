@@ -1,4 +1,4 @@
-// Checkbox code
+// Forms code
 $('input:checkbox').change(function(){
      if($(this).is(":checked")) {
           $(this).parent().addClass("checked");
@@ -12,7 +12,34 @@ $('input:radio').click(function() {
           $(this).parent().addClass('checked');
 });
 
+$('#address-manual').click(function(e){
+     e.preventDefault();
+     $('.address-list').hide();
+     $('#manual-address-entry').toggle();
+     $(this).text(function(i, text){
+          return text === "Enter address manually" ? "Hide address manually" : "Enter address manually";
+     })
+});
+
+// Address look-up
+$(document).ready(function(){
+     $('.address-list').hide();
+
+     $('#find-postcode').click(function(){
+     	$('.address-list').slideDown('slow');
+          $('#manual-address-entry').hide();
+          $('.postcode-value').text($('#third-party-postcode, #client-postcode, #postcode, #deputy-postcode').val());
+     });
+});
+
+
 // Top nav search
+$("label.switch span").click(function () {
+     $(this).text(function(i, v){
+          return v === 'Supervision' ? 'LPA' : 'Supervision'
+     })
+});
+
 // $('#autocomplete').keypress(function() {
 //      $(this).addClass('focus');
 // });
@@ -173,17 +200,6 @@ $(document).ready(function(){
      $('#add-another-deputy').click(function(){
      	$('#deputy-added').slideDown('slow');
      });
-});
-
-// Address look-up
-$(document).ready(function(){
-     $('.address-list').hide();
-
-     $('#find-postcode').click(function(){
-     	$('.address-list').slideDown('slow');
-          $('.postcode-value').text($('#third-party-postcode, #client-postcode, #postcode, #deputy-postcode').val());
-     });
-
 });
 
 // Clear -Forms
@@ -366,5 +382,20 @@ $(document).ready(function () {
           $(".payment").removeClass('main-colour').addClass('blue-colour');
           $(".payment").find('.sub-text').text('No outstanding payment');
           $(".payment").find('.left').html('<span class="tick"></span>');
+     }
+     if (window.location.href.indexOf("violent") != -1) {
+          // Change the client status
+          $("#section-header").removeClass('welsh-message, deceased-message').addClass('violent-risk-message');
+          $("#section-header .normal").hide();
+     }
+     if (window.location.href.indexOf("welsh") != -1) {
+          // Change the client status
+          $("#section-header").removeClass('violent-risk-message, deceased-message').addClass('welsh-message');
+          $("#section-header .normal").hide();
+     }
+     if (window.location.href.indexOf("deceased") != -1) {
+          // Change the client status
+          $("#section-header").removeClass('violent-risk-message, welsh-message').addClass('deceased-message');
+          $("#section-header .normal").hide();
      }
 });

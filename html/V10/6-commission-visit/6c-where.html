@@ -61,25 +61,33 @@
 <!-- PRIMARY CONTENT - START --><main class="default visit-commission step-3"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
-	<!-- <ul>
-		<li class="menu"><a href="#">Menu</a></li>
+	<form action="search.html">
+		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+		<input type="submit">
+	</form>
+
+	<label class="switch">
+		<span>Supervision</span>
+		<input type="checkbox">
+		<div class="slider round"></div>
+	</label>
+
+	<ul>
+		<!-- <li><a href="#">LPA cases</a></li>
+		<li><a href="#">Supervision cases</a></li> -->
+		<!-- <li class="menu"><a href="#">Menu</a></li>
 		<li class="border"></li>
 		<li class="alerts">
 			<a href="#">Alerts</a>
 			<span>20</span>
 		</li>
 		<li class="settings"><a href="#">Settings</a></li>
-		<li class="border"></li>
-	</ul> -->
-
-	<form action="search.html">
-		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
-		<input type="submit">
-	</form>
+		<li class="border"></li> -->
+	</ul>
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html" class="dashboard">My dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Commission a visit</span> </nav> <h1> Visitor information </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar commission-visit">
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Commission a visit</span> </nav> <h1> Visitor information </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar commission-visit">
 	<ul class="steps-six">
 		<span class="border"></span>
 		<li class="step-1">
@@ -512,7 +520,180 @@
 
 </div>
 <!-- // COMMISSION VISIT VIEWER - END // -->
- <!-- // VISIT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+ <!-- // VISIT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title"> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> details <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a> </h2> <!-- // CLIENT DETAILS - START // -->
+<div class="check-details" id="client-details">
+
+	<!-- // CLIENT ITEM - 1 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Client status:</p>
+		<p class="answer client-status">Active</p>
+	</div>
+	<!-- // CLIENT ITEM - 1 - END // -->
+
+	<!-- // CLIENT ITEM - 2 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Status date:</p>
+		<p class="answer">
+			<span class="client-status-day">05</span>
+			/
+			<span class="client-status-month">04</span>
+			/
+			<span class="client-status-year">2017</span>
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 2 - END // -->
+
+	<!-- // CLIENT ITEM - 3 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Title:</p>
+		<p class="answer client-title">Mr.</p>
+	</div>
+	<!-- // CLIENT ITEM - 3 - END // -->
+
+	<!-- // CLIENT ITEM - 4 - START // -->
+	<div class="person-detail-item">
+		<p class="item">First name:</p>
+		<p class="answer client-first-name">Gerald</p>
+	</div>
+	<!-- // CLIENT ITEM - 4 - END // -->
+
+	<!-- // CLIENT ITEM - 5 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Middle names:</p>
+		<p class="answer client-middle-name">Brackens</p>
+	</div>
+	<!-- // CLIENT ITEM - 5 - END // -->
+
+	<!-- // CLIENT ITEM - 6 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Last name:</p>
+		<p class="answer client-last-name">Stephen</p>
+	</div>
+	<!-- // CLIENT ITEM - 6 - END // -->
+
+	<!-- // CLIENT ITEM - 7 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Date of birth:</p>
+		<p class="answer">
+			<span class="client-dob-day">09</span>
+			/
+			<span class="client-dob-month">08</span>
+			/
+			<span class="client-dob-year">1956</span>
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 7 - END // -->
+
+	<!-- // CLIENT ITEM - 8 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Previously Known As:</p>
+		<p class="answer client-previously-known-as">N/A</p>
+	</div>
+	<!-- // CLIENT ITEM - 8 - END // -->
+
+
+	<!-- // CLIENT ITEM - 9 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Country:</p>
+		<p class="answer client-country">England</p>
+	</div>
+	<!-- // CLIENT ITEM - 9 - END // -->
+
+	<!-- // CLIENT ITEM - 10 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Address:</p>
+		<p class="answer">
+			<span class="client-address-line-1">1 Grimwald Place</span>,<br>
+			<span class="client-address-line-2">Buckley</span>,<br>
+			<span class="client-address-town">Flintshire</span>,<br>
+			<span class="client-manual-postcode">CV32 788</span>.
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 10 - END // -->
+
+	<!-- // CLIENT ITEM - 11 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is airmail required?:</p>
+		<p class="answer client-airmail">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 11 - END // -->
+
+	<!-- // CLIENT ITEM - 12 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Daytime telephone number:</p>
+		<p class="answer client-phone-number">0123456789</p>
+	</div>
+	<!-- // CLIENT ITEM - 12 - END // -->
+
+	<!-- // CLIENT ITEM - 13 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Mobile telephone number:</p>
+		<p class="answer client-mob-number">07768948823</p>
+	</div>
+	<!-- // CLIENT ITEM - 13 - END // -->
+
+	<!-- // CLIENT ITEM - 14 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Email address:</p>
+		<p class="answer client-email">gerald.brackens@hotmail.com</p>
+	</div>
+	<!-- // CLIENT ITEM - 14 - END // -->
+
+	<!-- // CLIENT ITEM - 15 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Financial reference:</p>
+		<p class="answer client-financial">192848291</p>
+	</div>
+	<!-- // CLIENT ITEM - 15 - END // -->
+
+	<!-- // CLIENT ITEM - 16 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Casarec Number:</p>
+		<p class="answer client-casarec">183920478</p>
+	</div>
+	<!-- // CLIENT ITEM - 16 - END // -->
+
+	<!-- // CLIENT ITEM - 17 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Accommodation Type:</p>
+		<p class="answer client-accommodation">LA Nursing home</p>
+	</div>
+	<!-- // CLIENT ITEM - 17 - END // -->
+
+	<!-- // CLIENT ITEM - 18 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Medical Condition:</p>
+		<p class="answer client-medical-condition-answer">Alzheimer's</p>
+	</div>
+	<!-- // CLIENT ITEM - 18 - END // -->
+
+	<!-- // CLIENT ITEM - 19 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Marital Status:</p>
+		<p class="answer client-marital-status">Divorced</p>
+	</div>
+	<!-- // CLIENT ITEM - 19 - END // -->
+
+	<!-- // CLIENT ITEM - 20 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Correspondence By:</p>
+		<ul class="answer">
+			<li class="client-correspondence-post">Post</li>
+			<li class="client-correspondence-email">Email</li>
+		</ul>
+	</div>
+	<!-- // CLIENT ITEM - 20 - END // -->
+
+	<!-- // CLIENT ITEM - 21 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is the client a violent risk?:</p>
+		<p class="answer client-violent-risk">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 21 - END // -->
+
+</div>
+<!-- // CLIENT DETAILS - END // -->
+ </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
 	<div id="page-1" class="accordion">
@@ -526,7 +707,7 @@
 			</button>
 
 			<div id="accordion-1" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
 						<form>
@@ -559,7 +740,7 @@
 			</button>
 
 			<div id="accordion-2" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
 						<form>
@@ -583,7 +764,7 @@
 			</button>
 
 			<div id="accordion-3" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
 						<form>
@@ -616,7 +797,7 @@
 			</button>
 
 			<div id="accordion-4" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
 						<form>
@@ -640,7 +821,7 @@
 			</button>
 
 			<div id="accordion-5" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Other_document.pdf</a>
 						<form>
@@ -669,7 +850,7 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <!-- <h2 class="section-title">Where will the visit take place?</h2> --> <!-- =========== VISIT INFORMATION SECTION - 1 - START =========== --> <!-- <div class="visitor-container"> <ul id="visitor-list"> </ul> </div> --> <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== --> <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== --> <div class="visitor-container"> <h1 class="section-title">Add third parties involved with the visit?</h1> <ul id="commission-visit-third-parties"> </ul> <form id="add-third-party-form" data-visit-id='5' method="post"> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="third-party-title">Title</label> <select id="third-party-title"> <option>-- Select --</option> <option>Mr.</option> <option>Mrs.</option> <option>Ms.</option> <option>Miss</option> <option>Dr.</option> <option>Prof.</option> <option>Rev.</option> <option>Other</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="third-party-first-name">First name</label> <input id="third-party-first-name" name="first-name" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="third-party-last-name">Last name</label> <input id="third-party-last-name" name="last-name" type="text"> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4a - START // --> <div class="form-group"> <label for="third-party-postcode">Postcode</label> <input id="third-party-postcode" name="postcode" type="text" class="one-third"> <a class="main-cta secondary" id="find-postcode">Find address</a> </div> <!-- // FORM ITEM - 4a - END // --> <!-- // FORM ITEM - 4b - START // --> <div class="form-group address-list"> <label for="third-party-address-1" class="radio address"> <input id="third-party-address-1" type="radio" name="radio-inline-group" value="third-party-address-1"> 1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-2" class="radio address"> <input id="third-party-address-2" type="radio" name="radio-inline-group" value="third-party-address-2"> 2 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-3" class="radio address"> <input id="third-party-address-3" type="radio" name="radio-inline-group" value="third-party-address-3"> 3 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-4" class="radio address"> <input id="third-party-address-4" type="radio" name="radio-inline-group" value="third-party-address-4"> 4 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-5" class="radio address"> <input id="third-party-address-5" type="radio" name="radio-inline-group" value="third-party-address-5"> 5 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-6" class="radio address"> <input id="third-party-address-6" type="radio" name="radio-inline-group" value="third-party-address-6"> 6 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-7" class="radio address"> <input id="third-party-address-7" type="radio" name="radio-inline-group" value="third-party-address-7"> 7 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-8" class="radio address"> <input id="third-party-address-8" type="radio" name="radio-inline-group" value="third-party-address-8"> 8 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-9" class="radio address"> <input id="third-party-address-9" type="radio" name="radio-inline-group" value="third-party-address-9"> 9 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-10" class="radio address"> <input id="third-party-address-10" type="radio" name="radio-inline-group" value="third-party-address-10"> 10 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-11" class="radio address"> <input id="third-party-address-11" type="radio" name="radio-inline-group" value="third-party-address-11"> 11 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-12" class="radio address"> <input id="third-party-address-12" type="radio" name="radio-inline-group" value="third-party-address-12"> 12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> </div> <!-- // FORM ITEM - 4b - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group"> <label for="third-party-phone-number">Daytime telephone number</label> <input id="third-party-phone-number" name="third-party-phone-number" type="text" class="half"> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group"> <label for="third-party-mob-number">Mobile telephone number</label> <input id="third-party-mob-number" name="third-party-mob-number" type="text" class="half"> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group"> <label for="third-party-email">Email address</label> <input id="third-party-email" name="third-party-email" type="text"> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8 - START // --> <div class="form-group third-party-needed"> <label for="third-party-needed">Why is contact needed?</label> <textarea name="textarea" class="jqte-test" id="third-party-needed"></textarea> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group"> <label for="visit-third-question-1"> Questions for the visitor: </label> <div id="dynamicInput"> <div> <label for="visit-third-question-1"> <span class="number">1</span> Question </label> <input type="text" name="myInputs[]" id="visit-third-question-1"> </div> </div> <input type="button" value="Add another question" class="add" onClick="addInput2('dynamicInput');"> </div> <!-- // FORM ITEM - 9 - END // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="confirm-add-third-party">Add</a> <a href="#" id="cancel-third-party">Cancel</a> </div> </form> <!-- // ADD NEW CORRESPONDANT - START // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="add-third-party">Add third party</a> </div> <!-- // ADD NEW CORRESPONDANT - END // --> </div> <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== --> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> <div class="visitor-container"> <h1 class="section-title">Report information</h1> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <legend for="doo"> Report is scheduled for: </legend> <div class="weeks-6"><div class="wrapper"><span>6</span></div> <p>weeks time</p></div> <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks time</p></div> <div class="one-third"> <label for="visit-report-day" class="sub-label">Day</label> <input id="visit-report-day" name="visit-report-day" type="text" value="05"> </div> <div class="one-third"> <label for="visit-report-month" class="sub-label">Month</label> <input id="visit-report-month" name="visit-report-month" type="text" value="04"> </div> <div class="one-third"> <label for="visit-report-year" class="sub-label">Year</label> <input id="visit-report-year" name="visit-report-year" type="text" value="2017"> </div> </div> <!-- <div class="form-group report"> <label for="datepicker">Report is scheduled for:</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> <div class="weeks-6"><div class="wrapper"><span>6</span></div> <p>weeks</p></div> <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks</p></div> </div> --> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group read-only"> <label for="visit-case-number">Case Number</label> <input id="visit-case-number" name="visit-case-number" type="text" class="half" value="7000-0000-0047" readonly> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group read-only"> <legend for="doo">Date of order</legend> <div class="one-third"> <label for="visit-doo-day" class="sub-label">Day</label> <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly> </div> <div class="one-third"> <label for="visit-doo-month" class="sub-label">Month</label> <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly> </div> <div class="one-third"> <label for="visit-doo-year" class="sub-label">Year</label> <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group read-only"> <legend for="report-due">Report due from visitor</legend> <div class="one-third"> <label for="visit-report-due-day" class="sub-label">Day</label> <input id="visit-report-due-day" name="visit-report-due-day" type="text" value="05" readonly> </div> <div class="one-third"> <label for="visit-report-due-month" class="sub-label">Month</label> <input id="visit-report-due-month" name="visit-report-due-month" type="text" value="04" readonly> </div> <div class="one-third"> <label for="visit-report-due-year" class="sub-label">Year</label> <input id="visit-report-due-year" name="visit-report-due-year" type="text" value="2016" readonly> </div> </div> <!-- // FORM ITEM - 4 - END // --> </form> </div> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta primary" id="add-visitors-step-3" href="6d-case-details.html">Continue</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="back">Back to step 2</a> <span class="separator"></span> <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <!-- <h2 class="section-title">Where will the visit take place?</h2> --> <!-- =========== VISIT INFORMATION SECTION - 1 - START =========== --> <!-- <div class="visitor-container"> <ul id="visitor-list"> </ul> </div> --> <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== --> <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== --> <div class="visitor-container"> <h1 class="section-title">Add third parties involved with the visit?</h1> <ul id="commission-visit-third-parties"> </ul> <form id="add-third-party-form" data-visit-id='5' method="post"> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="third-party-title">Title</label> <select id="third-party-title"> <option>-- Select --</option> <option>Mr.</option> <option>Mrs.</option> <option>Ms.</option> <option>Miss</option> <option>Dr.</option> <option>Prof.</option> <option>Rev.</option> <option>Other</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="third-party-first-name">First name</label> <input id="third-party-first-name" name="first-name" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="third-party-last-name">Last name</label> <input id="third-party-last-name" name="last-name" type="text"> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4a - START // --> <div class="form-group"> <label for="third-party-postcode">Postcode</label> <input id="third-party-postcode" name="postcode" type="text" class="one-third"> <a class="main-cta secondary" id="find-postcode">Find address</a> </div> <!-- // FORM ITEM - 4a - END // --> <!-- // FORM ITEM - 4b - START // --> <div class="form-group address-list"> <label for="third-party-address-1" class="radio address"> <input id="third-party-address-1" type="radio" name="radio-inline-group" value="third-party-address-1"> 1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-2" class="radio address"> <input id="third-party-address-2" type="radio" name="radio-inline-group" value="third-party-address-2"> 2 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-3" class="radio address"> <input id="third-party-address-3" type="radio" name="radio-inline-group" value="third-party-address-3"> 3 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-4" class="radio address"> <input id="third-party-address-4" type="radio" name="radio-inline-group" value="third-party-address-4"> 4 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-5" class="radio address"> <input id="third-party-address-5" type="radio" name="radio-inline-group" value="third-party-address-5"> 5 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-6" class="radio address"> <input id="third-party-address-6" type="radio" name="radio-inline-group" value="third-party-address-6"> 6 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-7" class="radio address"> <input id="third-party-address-7" type="radio" name="radio-inline-group" value="third-party-address-7"> 7 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-8" class="radio address"> <input id="third-party-address-8" type="radio" name="radio-inline-group" value="third-party-address-8"> 8 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-9" class="radio address"> <input id="third-party-address-9" type="radio" name="radio-inline-group" value="third-party-address-9"> 9 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-10" class="radio address"> <input id="third-party-address-10" type="radio" name="radio-inline-group" value="third-party-address-10"> 10 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-11" class="radio address"> <input id="third-party-address-11" type="radio" name="radio-inline-group" value="third-party-address-11"> 11 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="third-party-address-12" class="radio address"> <input id="third-party-address-12" type="radio" name="radio-inline-group" value="third-party-address-12"> 12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> </div> <!-- // FORM ITEM - 4b - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group"> <label for="third-party-phone-number">Daytime telephone number</label> <input id="third-party-phone-number" name="third-party-phone-number" type="text" class="half"> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group"> <label for="third-party-mob-number">Mobile telephone number</label> <input id="third-party-mob-number" name="third-party-mob-number" type="text" class="half"> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group"> <label for="third-party-email">Email address</label> <input id="third-party-email" name="third-party-email" type="text"> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8 - START // --> <div class="form-group third-party-needed"> <label for="third-party-needed">Why is contact needed?</label> <textarea name="textarea" class="jqte-test" id="third-party-needed"></textarea> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group"> <label for="visit-third-question-1"> Questions for the visitor: </label> <div id="dynamicInput"> <div> <label for="visit-third-question-1"> <span class="number">1</span> Question </label> <input type="text" name="myInputs[]" id="visit-third-question-1"> </div> </div> <input type="button" value="Add another question" class="add" onClick="addInput2('dynamicInput');"> </div> <!-- // FORM ITEM - 9 - END // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="confirm-add-third-party">Add</a> <a href="#" id="cancel-third-party">Cancel</a> </div> </form> <!-- // ADD NEW CORRESPONDANT - START // --> <div class="cta-row"> <a class="main-cta secondary" href="#" id="add-third-party">Add third party</a> </div> <!-- // ADD NEW CORRESPONDANT - END // --> </div> <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== --> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> <div class="visitor-container"> <h1 class="section-title">Report information</h1> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <legend for="doo"> Report is scheduled for: </legend> <div class="weeks-6"><div class="wrapper"><span>6</span></div> <p>weeks time</p></div> <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks time</p></div> <div class="one-third"> <label for="visit-report-day" class="sub-label">Day</label> <input id="visit-report-day" name="visit-report-day" type="text" value="05" maxlength="2"> </div> <div class="one-third"> <label for="visit-report-month" class="sub-label">Month</label> <input id="visit-report-month" name="visit-report-month" type="text" value="04" maxlength="2"> </div> <div class="one-third"> <label for="visit-report-year" class="sub-label">Year</label> <input id="visit-report-year" name="visit-report-year" type="text" value="2017" maxlength="4"> </div> </div> <!-- <div class="form-group report"> <label for="datepicker">Report is scheduled for:</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> <div class="weeks-6"><div class="wrapper"><span>6</span></div> <p>weeks</p></div> <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks</p></div> </div> --> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group read-only"> <label for="visit-case-number">Case Number</label> <input id="visit-case-number" name="visit-case-number" type="text" class="half" value="7000-0000-0047" readonly> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group read-only"> <legend for="doo">Date of order</legend> <div class="one-third"> <label for="visit-doo-day" class="sub-label">Day</label> <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly maxlength="2"> </div> <div class="one-third"> <label for="visit-doo-month" class="sub-label">Month</label> <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly maxlength="2"> </div> <div class="one-third"> <label for="visit-doo-year" class="sub-label">Year</label> <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly maxlength="4"> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group read-only"> <legend for="report-due">Report due from visitor</legend> <div class="one-third"> <label for="visit-report-due-day" class="sub-label">Day</label> <input id="visit-report-due-day" name="visit-report-due-day" type="text" value="05" readonly maxlength="2"> </div> <div class="one-third"> <label for="visit-report-due-month" class="sub-label">Month</label> <input id="visit-report-due-month" name="visit-report-due-month" type="text" value="04" readonly maxlength="2"> </div> <div class="one-third"> <label for="visit-report-due-year" class="sub-label">Year</label> <input id="visit-report-due-year" name="visit-report-due-year" type="text" value="2016" readonly maxlength="4"> </div> </div> <!-- // FORM ITEM - 4 - END // --> </form> </div> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta primary" id="add-visitors-step-3" href="6d-case-details.html">Save &amp; continue</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="back">Back to step 2</a> <span class="separator"></span> <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V10/hideShowPassword.js"></script>
 	<script src="../../../production/js/V10/my-jquery.js"></script>

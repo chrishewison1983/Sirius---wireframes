@@ -30,6 +30,17 @@
                min-height: 15em;
                background: none;
           }
+          &.jqte_focused {
+          	border-color: $main-colour;
+               box-shadow: inset 0px 0px 0px 2px $blue;
+               .jqte_toolbar {
+                    box-shadow: inset 0px 0px 0px 2px $blue;
+                    background: lighten($blue,50%);
+                    .jqte_tool, .jqte_tool_icon, .jqte_tool_label {
+                         border: 1px solid lighten($blue,50%);
+                    }
+               }
+          }
           b {
                font-family: $Opensans-Bold;
           }
@@ -87,10 +98,7 @@
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
 }
-.jqte_focused {
-	border-color:#00AAE7;
-	box-shadow:0 0 10px #00BDFF; -webkit-box-shadow:0 0 10px #00BDFF; -moz-box-shadow:0 0 10px #00BDFF;
-}
+
 /* toolbar */
 .jqte_toolbar {
 	overflow:auto;

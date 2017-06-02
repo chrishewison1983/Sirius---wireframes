@@ -29,6 +29,19 @@
      }
 }
 
+ul.livelink-documents {
+     li {
+          float: left;
+          clear: left;
+          width: 100%;
+          list-style: none;
+          margin: 0 0 1em 0;
+          &:last-of-type {
+               margin: 0;
+          }
+     }
+}
+
 #client-assets-info {
      display: none;
      border-top: 3px dashed $border-colour;
@@ -81,7 +94,8 @@
                     display: inline-block;
                     position: relative;
                     width: 100%;
-                    margin: 0 0 -0.25em 0;
+                    margin: 0 0 0 0;
+                    // margin: 0 0 -0.25em 0;
                     border: 2px solid $border-colour;
                     border-bottom: none;
                     border-radius: 5px 5px 0 0;

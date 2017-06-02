@@ -15,7 +15,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                         <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-page/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -86,7 +86,14 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">Clients details</h2>
+                         <h2 class="section-title">
+                    		<div class="client-first-name">Gerald</div>
+                    		<div class="client-last-name">Brackens</div>
+                    		details
+                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         {{= it.include('side-panel/client-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
@@ -307,15 +314,15 @@
                                         <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks time</p></div>
                                         <div class="one-third">
                                              <label for="visit-report-day" class="sub-label">Day</label>
-                                             <input id="visit-report-day" name="visit-report-day" type="text" value="05">
+                                             <input id="visit-report-day" name="visit-report-day" type="text" value="05" maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-report-month" class="sub-label">Month</label>
-                                             <input id="visit-report-month" name="visit-report-month" type="text" value="04">
+                                             <input id="visit-report-month" name="visit-report-month" type="text" value="04" maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-report-year" class="sub-label">Year</label>
-                                             <input id="visit-report-year" name="visit-report-year" type="text" value="2017">
+                                             <input id="visit-report-year" name="visit-report-year" type="text" value="2017" maxlength="4">
                                         </div>
                                    </div>
                                    <!-- <div class="form-group report">
@@ -341,15 +348,15 @@
                                         <legend for="doo">Date of order</legend>
                                         <div class="one-third">
                                              <label for="visit-doo-day" class="sub-label">Day</label>
-                                             <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly>
+                                             <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-doo-month" class="sub-label">Month</label>
-                                             <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly>
+                                             <input id="visit-doo-month" name="visit-doo-month" type="text" value="04" readonly maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-doo-year" class="sub-label">Year</label>
-                                             <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly>
+                                             <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly maxlength="4">
                                         </div>
                                    </div>
                                    <!-- // FORM ITEM - 3 - END // -->
@@ -359,15 +366,15 @@
                                         <legend for="report-due">Report due from visitor</legend>
                                         <div class="one-third">
                                              <label for="visit-report-due-day" class="sub-label">Day</label>
-                                             <input id="visit-report-due-day" name="visit-report-due-day" type="text" value="05" readonly>
+                                             <input id="visit-report-due-day" name="visit-report-due-day" type="text" value="05" readonly maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-report-due-month" class="sub-label">Month</label>
-                                             <input id="visit-report-due-month" name="visit-report-due-month" type="text" value="04" readonly>
+                                             <input id="visit-report-due-month" name="visit-report-due-month" type="text" value="04" readonly maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-report-due-year" class="sub-label">Year</label>
-                                             <input id="visit-report-due-year" name="visit-report-due-year" type="text" value="2016" readonly>
+                                             <input id="visit-report-due-year" name="visit-report-due-year" type="text" value="2016" readonly maxlength="4">
                                         </div>
                                    </div>
                                    <!-- // FORM ITEM - 4 - END // -->
@@ -389,7 +396,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta primary" id="add-visitors-step-3" href="6d-case-details.html">Continue</a>
+          <a class="main-cta primary" id="add-visitors-step-3" href="6d-case-details.html">Save &amp; continue</a>
           <span class="separator"></span>
           <a href="#" onclick="history.back();" class="back">Back to step 2</a>
           <span class="separator"></span>

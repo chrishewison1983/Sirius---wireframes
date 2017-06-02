@@ -61,25 +61,206 @@
 <!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
-	<!-- <ul>
-		<li class="menu"><a href="#">Menu</a></li>
+	<form action="search.html">
+		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+		<input type="submit">
+	</form>
+
+	<label class="switch">
+		<span>Supervision</span>
+		<input type="checkbox">
+		<div class="slider round"></div>
+	</label>
+
+	<ul>
+		<!-- <li><a href="#">LPA cases</a></li>
+		<li><a href="#">Supervision cases</a></li> -->
+		<!-- <li class="menu"><a href="#">Menu</a></li>
 		<li class="border"></li>
 		<li class="alerts">
 			<a href="#">Alerts</a>
 			<span>20</span>
 		</li>
 		<li class="settings"><a href="#">Settings</a></li>
-		<li class="border"></li>
-	</ul> -->
-
-	<form action="search.html">
-		<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
-		<input type="submit">
-	</form>
+		<li class="border"></li> -->
+	</ul>
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html" class="dashboard"></a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Create new recipients for the letter </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">Document information</h2> <h3 class="sub-section-title">Letter template chosen</h3> <div class="document"> <img src="../../../production/img/V9/document-thumbnail.png" alt="Document" class="document-item"> <h3 class="title">CT-bb: Blank complaints team template</h3> </div> <h3 class="sub-section-title">Recipients chosen</h3> <ol id="recipients"> <li>Ms Lara Stevens (Correspondent)</li> </ol> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Clients details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Create new recipients for the letter </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // --> <h2 class="section-title">Document information</h2> <h3 class="sub-section-title">Letter template chosen</h3> <div class="document"> <img src="../../../production/img/V9/document-thumbnail.png" alt="Document" class="document-item"> <h3 class="title">CT-bb: Blank complaints team template</h3> </div> <h3 class="sub-section-title">Recipients chosen</h3> <ol id="recipients"> <li>Ms Lara Stevens (Correspondent)</li> </ol> <!-- // DOCUMENT SUMMARY - END // --> </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title"> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> details <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a> </h2> <!-- // CLIENT DETAILS - START // -->
+<div class="check-details" id="client-details">
+
+	<!-- // CLIENT ITEM - 1 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Client status:</p>
+		<p class="answer client-status">Active</p>
+	</div>
+	<!-- // CLIENT ITEM - 1 - END // -->
+
+	<!-- // CLIENT ITEM - 2 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Status date:</p>
+		<p class="answer">
+			<span class="client-status-day">05</span>
+			/
+			<span class="client-status-month">04</span>
+			/
+			<span class="client-status-year">2017</span>
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 2 - END // -->
+
+	<!-- // CLIENT ITEM - 3 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Title:</p>
+		<p class="answer client-title">Mr.</p>
+	</div>
+	<!-- // CLIENT ITEM - 3 - END // -->
+
+	<!-- // CLIENT ITEM - 4 - START // -->
+	<div class="person-detail-item">
+		<p class="item">First name:</p>
+		<p class="answer client-first-name">Gerald</p>
+	</div>
+	<!-- // CLIENT ITEM - 4 - END // -->
+
+	<!-- // CLIENT ITEM - 5 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Middle names:</p>
+		<p class="answer client-middle-name">Brackens</p>
+	</div>
+	<!-- // CLIENT ITEM - 5 - END // -->
+
+	<!-- // CLIENT ITEM - 6 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Last name:</p>
+		<p class="answer client-last-name">Stephen</p>
+	</div>
+	<!-- // CLIENT ITEM - 6 - END // -->
+
+	<!-- // CLIENT ITEM - 7 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Date of birth:</p>
+		<p class="answer">
+			<span class="client-dob-day">09</span>
+			/
+			<span class="client-dob-month">08</span>
+			/
+			<span class="client-dob-year">1956</span>
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 7 - END // -->
+
+	<!-- // CLIENT ITEM - 8 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Previously Known As:</p>
+		<p class="answer client-previously-known-as">N/A</p>
+	</div>
+	<!-- // CLIENT ITEM - 8 - END // -->
+
+
+	<!-- // CLIENT ITEM - 9 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Country:</p>
+		<p class="answer client-country">England</p>
+	</div>
+	<!-- // CLIENT ITEM - 9 - END // -->
+
+	<!-- // CLIENT ITEM - 10 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Address:</p>
+		<p class="answer">
+			<span class="client-address-line-1">1 Grimwald Place</span>,<br>
+			<span class="client-address-line-2">Buckley</span>,<br>
+			<span class="client-address-town">Flintshire</span>,<br>
+			<span class="client-manual-postcode">CV32 788</span>.
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 10 - END // -->
+
+	<!-- // CLIENT ITEM - 11 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is airmail required?:</p>
+		<p class="answer client-airmail">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 11 - END // -->
+
+	<!-- // CLIENT ITEM - 12 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Daytime telephone number:</p>
+		<p class="answer client-phone-number">0123456789</p>
+	</div>
+	<!-- // CLIENT ITEM - 12 - END // -->
+
+	<!-- // CLIENT ITEM - 13 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Mobile telephone number:</p>
+		<p class="answer client-mob-number">07768948823</p>
+	</div>
+	<!-- // CLIENT ITEM - 13 - END // -->
+
+	<!-- // CLIENT ITEM - 14 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Email address:</p>
+		<p class="answer client-email">gerald.brackens@hotmail.com</p>
+	</div>
+	<!-- // CLIENT ITEM - 14 - END // -->
+
+	<!-- // CLIENT ITEM - 15 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Financial reference:</p>
+		<p class="answer client-financial">192848291</p>
+	</div>
+	<!-- // CLIENT ITEM - 15 - END // -->
+
+	<!-- // CLIENT ITEM - 16 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Casarec Number:</p>
+		<p class="answer client-casarec">183920478</p>
+	</div>
+	<!-- // CLIENT ITEM - 16 - END // -->
+
+	<!-- // CLIENT ITEM - 17 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Accommodation Type:</p>
+		<p class="answer client-accommodation">LA Nursing home</p>
+	</div>
+	<!-- // CLIENT ITEM - 17 - END // -->
+
+	<!-- // CLIENT ITEM - 18 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Medical Condition:</p>
+		<p class="answer client-medical-condition-answer">Alzheimer's</p>
+	</div>
+	<!-- // CLIENT ITEM - 18 - END // -->
+
+	<!-- // CLIENT ITEM - 19 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Marital Status:</p>
+		<p class="answer client-marital-status">Divorced</p>
+	</div>
+	<!-- // CLIENT ITEM - 19 - END // -->
+
+	<!-- // CLIENT ITEM - 20 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Correspondence By:</p>
+		<ul class="answer">
+			<li class="client-correspondence-post">Post</li>
+			<li class="client-correspondence-email">Email</li>
+		</ul>
+	</div>
+	<!-- // CLIENT ITEM - 20 - END // -->
+
+	<!-- // CLIENT ITEM - 21 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is the client a violent risk?:</p>
+		<p class="answer client-violent-risk">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 21 - END // -->
+
+</div>
+<!-- // CLIENT DETAILS - END // -->
+ </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
 	<div id="page-1" class="accordion">
@@ -93,7 +274,7 @@
 			</button>
 
 			<div id="accordion-1" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
 						<form>
@@ -126,7 +307,7 @@
 			</button>
 
 			<div id="accordion-2" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
 						<form>
@@ -150,7 +331,7 @@
 			</button>
 
 			<div id="accordion-3" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
 						<form>
@@ -183,7 +364,7 @@
 			</button>
 
 			<div id="accordion-4" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
 						<form>
@@ -207,7 +388,7 @@
 			</button>
 
 			<div id="accordion-5" class="accordion-section-content">
-				<ul>
+				<ul class="livelink-documents">
 					<li>
 						<a href="#" class="hide-page-1">Other_document.pdf</a>
 						<form>

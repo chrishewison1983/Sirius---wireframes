@@ -43,22 +43,22 @@ main {
           }
           &.full-width {
                width: 95%;
-               margin: 0 0 5em 5.195em;
+               margin: 0 0 5em 4.95em;
                #document-summary.sticky, #action-panel.sticky {
                     width: 39.5em;
                }
                &.new-client {
                     width: 94.75%;
-                    padding: 0 0 0 18em;
+                    padding: 0 0 0 18.15em;
                     margin-bottom: 0;
                     // margin: 0 0 5em 20%;
                }
           }
      }
      &.new-client {
-          width: 69.755%;
+          width: 69.75%;
           position: relative;
-          margin: 0 0 5em 30.275%;
+          margin: 0 0 5em 30.25%;
           .row {
                max-width: 65rem;
                &.full-width-row {
@@ -140,6 +140,15 @@ h1, h2, h3, h4 {
      }
      &.section-title, &.sub-section-title {
           text-transform: initial;
+          .edit {
+               float: right;
+               display: inline-block;
+               margin: 0.15em 0 0 0;
+               font-size: 1rem;
+               padding: 0 0 0 1.5em;
+               background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 50%;
+               background-size: 1em;
+          }
      }
      div {
           display: inline-block;
@@ -238,7 +247,10 @@ ol {
      width: 100%;
      font-family: $Montserrat;
      font-weight: bold;
-     margin: 1.5em 0 0.75em 0;
+     margin: 0.5em 0 1.5em 0;
+     div {
+          display: inline-block;
+     }
 }
 
 .sub-section-title {
@@ -348,7 +360,7 @@ a.main-cta {
                }
           }
      }
-     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit {
+     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit, &#edit-client {
           display: none;
           margin: 2em 0 0 0;
           width: 100%;
@@ -372,6 +384,10 @@ a.main-cta {
                     }
                }
           }
+     }
+     &#edit-client {
+          display: inline-block;
+          margin: 2em 0 -1em 0;
      }
      &#deputy-added {
           margin: 0;

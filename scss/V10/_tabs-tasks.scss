@@ -242,6 +242,20 @@
      }
 }
 
+#completed-tasks-table {
+     hr {
+          margin: 1em 0;
+          border-bottom: 3px dashed darken($border-colour,10%);
+     }
+     a {
+          &.main-cta {
+               float: left;
+               margin: 0;
+               font-size: 1rem;
+          }
+     }
+}
+
 
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {

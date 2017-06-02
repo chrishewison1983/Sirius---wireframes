@@ -58,6 +58,11 @@ form {
           -moz-appearance: none;
           background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 92.5% 50% $white;
           background-size: 1.5em;
+          option {
+               &.dis {
+                    letter-spacing: -0.5em;
+               }
+          }
           &:hover, &:active, &:focus {
                background: url(#{$image-path}/icons/arrow-down-dark.svg) no-repeat 92.5% 50% $white;
                background-size: 1.5em;
@@ -214,6 +219,15 @@ form {
                     }
                }
           }
+          .hint {
+               display: inline-block;
+               width: 100%;
+               float: left;
+               clear: both;
+               font-family: $Opensans-Regular;
+               color: $text-main-colour;
+               font-size: 0.875rem;
+          }
      }
      .form-group {
           display: inline-block;
@@ -233,7 +247,7 @@ form {
                box-shadow: inset 0px 0px 10px 0px rgba($black,0.15);
           }
           &.violent-risk, &.fee-payer {
-               padding: 1em 1.5em 1.5em 1.5em;
+               padding: 1.5em;
                margin: 0 0 2.5em 0;
                border: 3px dashed rgba($red,0.1);
                border-radius: $global-border-radius;
@@ -250,7 +264,7 @@ form {
                     }
                     &:after {
                          left: 4.95em;
-                         top: 1px;
+                         top: 5px;
                     }
                }
                span {
@@ -305,6 +319,9 @@ form {
                //      color: $text-main-colour;
                // }
           }
+          legend.margin-top {
+               margin-top: 1em;
+          }
      }
      .cta-row {
           .main-cta {
@@ -344,6 +361,18 @@ form {
           display: inline-block;
           padding: 1.5em 0 0 0;
      }
+}
+
+#address-manual {
+     display: inline-block;
+     float: left;
+     clear: both;
+     // width: 100%;
+     margin: 0.5em 0 0 0;
+}
+
+#manual-address-entry {
+     display: none;
 }
 
 #dynamicInput {
@@ -484,7 +513,7 @@ form.location-form {
      }
 }
 
-.add-correspondent-form, .edit-deputy-form, .add-client-form, .add-deputy-form, #add-third-party-form, .basic-information, .why-visit {
+.add-correspondent-form, .edit-deputy-form, .add-client-form, .add-deputy-form, #add-third-party-form, .basic-information, .why-visit, .edit-client-form {
      // padding: 3em 0 0 0;
      width: 100%;
      float: right;
@@ -502,7 +531,7 @@ form.location-form {
      }
 }
 
-#add-third-party-form, .basic-information, .why-visit {
+#add-third-party-form, .basic-information, .why-visit, .edit-client-form {
      float: left;
      hr {
           margin-top: 1.5em

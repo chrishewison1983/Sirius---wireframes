@@ -69,7 +69,7 @@
 .check-details {
      float: right;
      width: 80%;
-     .deputy-detail-item {
+     .person-detail-item {
           display: inline-block;
           width: 100%;
           margin: 0 0 1.5em 0;
@@ -84,6 +84,18 @@
                     color: $black;
                     font-family: $Montserrat;
                     font-weight: bold;
+               }
+          }
+          ul {
+               &.answer {
+                    width: 55%;
+                    margin-bottom: 0;
+                    float: left;
+                    li {
+                         color: $black;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                    }
                }
           }
      }

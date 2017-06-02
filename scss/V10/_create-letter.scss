@@ -60,6 +60,7 @@
           margin: 0;
           li {
                list-style: none;
+               margin-bottom: 1em;
                &:hover {
                     background: none;
                }
@@ -67,7 +68,7 @@
                     display: inline-block;
                     position: relative;
                     width: 100%;
-                    margin-bottom: 1em;
+                    // margin-bottom: 1em;
                     border: 2px solid $border-colour;
                     border-radius: $global-border-radius;
                     padding: 1em 1em 1em 3.75em;
@@ -140,7 +141,7 @@
           }
      }
      hr {
-          margin: 1.5em 0 0 0;
+          margin: 1.5em 0;
           border-bottom: 3px dashed $border-colour;
      }
 }

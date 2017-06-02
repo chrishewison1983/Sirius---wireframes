@@ -30,7 +30,7 @@
           }
      }
      #client-summary {
-          margin: 3em 0 0 0;
+          margin: 2em 0 0 0;
           .dashboard-row {
                @include flexbox;
                @include flex-wrap(wrap);
@@ -79,6 +79,7 @@
                                         font-size: 1.2rem;
                                         margin: 0;
                                         span {
+                                             float: left;
                                              width: auto;
                                              display: inline-block;
                                              color: $main-colour;
@@ -86,6 +87,19 @@
                                              font-weight: bold;
                                              text-transform: uppercase;
                                              font-size: 1.2rem;
+                                             &.age {
+                                                  @include flexbox;
+                                                  @include align-items(center);
+                                                  @include justify-content(center);
+                                                  float: left;
+                                                  border-radius: 50%;
+                                                  background: $main-colour;
+                                                  color: $white;
+                                                  width: 2em;
+                                                  height: 2em;
+                                                  font-size: 1rem;
+                                                  margin: -0.35em 0 0 0.5em;
+                                             }
                                         }
                                    }
                                    p {
@@ -116,7 +130,7 @@
                }
                &.two-items {
                     .item {
-                         width: 48.75%;
+                         width: 46%;
                          margin: 0 2.5% 2em 0;
                          &:last-of-type {
                               margin-right: 0;

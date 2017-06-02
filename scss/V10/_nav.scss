@@ -125,6 +125,88 @@ nav.top-nav {
      }
 }
 
+/* The switch - the box around the slider */
+label.switch {
+     position: relative;
+     display: inline-block;
+     width: 12em;
+     height: 34px;
+     float: right;
+     margin: 0 1.5em 0 0;
+     z-index: 1;
+     &.checked {
+          span {
+               color: $white;
+               // content: "LPA";
+          }
+          input:checked + .slider {
+               background-color: $blue;
+          }
+          .slider {
+               &:before {
+                    background-color: $white;
+               }
+          }
+     }
+     span {
+          display: inline-block;
+          font-size: 0.9rem;
+          font-weight: bold;
+          color: $white;
+          padding: 0.65em 0 0 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          line-height: 1;
+          z-index: 10;
+          width: 12em;
+          height: 34px;
+          text-align: center;
+     }
+     input {
+          display: none;
+     }
+     .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($white,0.4);
+          -webkit-transition: .4s;
+          transition: .4s;
+          &:before {
+               position: absolute;
+               content: "";
+               height: 26px;
+               width: 26px;
+               left: 4px;
+               bottom: 4px;
+               background-color: $white;
+               -webkit-transition: .4s;
+               transition: .4s;
+          }
+          &.round {
+               border-radius: 34px;
+               &:before {
+                    border-radius: 50%;
+               }
+          }
+     }
+     input:checked + .slider {
+          background-color: $blue;
+     }
+     input:focus + .slider {
+          box-shadow: 0 0 1px $blue;
+     }
+     input:checked + .slider:before {
+          -webkit-transform: translateX(9.5em);
+          -ms-transform: translateX(9.5em);
+          transform: translateX(9.5em);
+     }
+}
+
 nav.client-nav {
      background: $main-colour;
      width: 15em;

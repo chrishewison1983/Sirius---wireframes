@@ -8,14 +8,14 @@
 <main class="default">
 
      <!-- SECTION HEADER - START -->
-     <div id="section-header">
+     <div id="section-header" class="confirmation-message">
 
           {{= it.include('top-nav.html') }}
 
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                         <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-page/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -25,7 +25,7 @@
                          <div class="separator"> > </div>
                          <span>Create letter</span>
                     </nav>
-                    <h1 class="confirmation-message">
+                    <h1>
                          Your letter has been sent to print
                     </h1>
                </div>
@@ -59,15 +59,15 @@
                               </legend>
                               <div class="one-third">
                                    <label for="visit-reminder-letter-day" class="sub-label">Day</label>
-                                   <input id="visit-reminder-letter-day" name="visit-reminder-letter-day" type="text" value="05">
+                                   <input id="visit-reminder-letter-day" name="visit-reminder-letter-day" type="text" value="05" maxlength="2">
                               </div>
                               <div class="one-third">
                                    <label for="visit-reminder-letter-month" class="sub-label">Month</label>
-                                   <input id="visit-reminder-letter-month" name="visit-reminder-letter-month" type="text" value="04">
+                                   <input id="visit-reminder-letter-month" name="visit-reminder-letter-month" type="text" value="04" maxlength="2">
                               </div>
                               <div class="one-third">
                                    <label for="visit-reminder-letter-year" class="sub-label">Year</label>
-                                   <input id="visit-reminder-letter-year" name="visit-reminder-letter-year" type="text" value="2017">
+                                   <input id="visit-reminder-letter-year" name="visit-reminder-letter-year" type="text" value="2017" maxlength="4">
                               </div>
                          </div>
                          <!-- // FORM ITEM - 2 - END // -->

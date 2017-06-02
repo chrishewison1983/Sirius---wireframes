@@ -10,29 +10,38 @@
      {{= it.include('client-nav.html') }}
 
      <!-- SECTION HEADER - START -->
-     <div id="section-header">
+     <div id="section-header" class="client-page">
 
           {{= it.include('top-nav.html') }}
 
           <div class="row">
-               <div class="large-12 large-uncentered columns">
+               <div class="large-9 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                         <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <span>Client summary<span>
                     </nav>
-                    <h1 class="violent-risk-message">
+                    <h1>
                          <div class="client-title">Mr</div>
                          <div class="client-first-name">Gerald</div>
                          <div class="client-last-name">Brackens</div>
+
+                         <span class="normal">Client's summary page</span>
                          <span class="violent">Client is violent</span>
+                         <span class="welsh">Client's prefered language is Welsh</span>
+                         <span class="deceased">Client is deceased</span>
+
                     </h1>
                </div>
+
+               <div class="large-3 large-uncentered columns">
+                    {{= it.include('actions-header.html') }}
+               </div>
+
           </div>
 
           <div class="colour-wrapper"></div>
 
-          {{= it.include('actions-header.html') }}
 
      </div>
      <!-- SECTION HEADER - END -->

@@ -15,7 +15,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                         <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-page/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -86,7 +86,14 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">Clients details</h2>
+                         <h2 class="section-title">
+                    		<div class="client-first-name">Gerald</div>
+                    		<div class="client-last-name">Brackens</div>
+                    		details
+                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         {{= it.include('side-panel/client-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
@@ -302,15 +309,15 @@
                                         </legend>
                                         <div class="one-third">
                                              <label for="visit-last-visit-day" class="sub-label">Day</label>
-                                             <input id="visit-last-visit-day" name="visit-last-visit-day" type="text" value="05">
+                                             <input id="visit-last-visit-day" name="visit-last-visit-day" type="text" value="05" maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-last-visit-month" class="sub-label">Month</label>
-                                             <input id="visit-last-visit-month" name="visit-last-visit-month" type="text" value="04">
+                                             <input id="visit-last-visit-month" name="visit-last-visit-month" type="text" value="04" maxlength="2">
                                         </div>
                                         <div class="one-third">
                                              <label for="visit-last-visit-year" class="sub-label">Year</label>
-                                             <input id="visit-last-visit-year" name="visit-last-visit-year" type="text" value="2017">
+                                             <input id="visit-last-visit-year" name="visit-last-visit-year" type="text" value="2017" maxlength="4">
                                         </div>
                                    </div>
                                    <!-- // FORM ITEM - 4b - END // -->
@@ -332,7 +339,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta primary" id="add-visitors-step-5" href="6f-confirm-visit.html">Continue</a>
+          <a class="main-cta primary" id="add-visitors-step-5" href="6f-confirm-visit.html">Save &amp; continue</a>
           <span class="separator"></span>
           <a href="#" onclick="history.back();" class="back">Back to step 4</a>
           <span class="separator"></span>

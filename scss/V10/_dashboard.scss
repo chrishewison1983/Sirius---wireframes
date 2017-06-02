@@ -197,6 +197,7 @@
                     display: inline-block;
                     position: absolute;
                     bottom: 0;
+                    left: 0;
                     width: 101%;
                     border-radius: 0 0 5px 5px;
                     background: $border-colour;
@@ -259,7 +260,7 @@
      background: $white;
      border: 3px solid $border-colour;
      color: $main-colour;
-     padding: 0.25em 1em;
+     padding: 0.25em 0.75em;
      margin: 0 0 0 1em;
      text-transform: uppercase;
      font-size: 0.575rem;
@@ -267,7 +268,7 @@
      @include align-items(center);
      @include justify-content(center);
      border-radius: $global-border-radius;
-     width: 7em;
+     // width: 7em;
      float: left;
      position: relative;
      top: -0.4em;
@@ -405,7 +406,7 @@ form.filter {
                          height: 1.5em;
                          border-radius: 50%;
                          background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
-                         background-size: 1.5em;
+                         background-size: 0.5em;
                     }
                }
                .info {
@@ -443,13 +444,13 @@ table {
                }
                &.three-column {
                     th:nth-of-type(1n) {
-                         width: 50%;
+                         width: 60%;
                     }
                     th:nth-of-type(2n) {
-                         width: 25%;
+                         width: 22.5%;
                     }
                     th:nth-of-type(3n) {
-                         width: 25%;
+                         width: 22.5%;
                     }
                }
                &.four-column {
@@ -464,6 +465,23 @@ table {
                     }
                     th:nth-of-type(4n) {
                          width: 20%;
+                    }
+               }
+               &.five-column {
+                    th:nth-of-type(1n) {
+                         width: 40%;
+                    }
+                    th:nth-of-type(2n) {
+                         width: 18%;
+                    }
+                    th:nth-of-type(3n) {
+                         width: 17%;
+                    }
+                    th:nth-of-type(4n) {
+                         width: 18%;
+                    }
+                    th:nth-of-type(5n) {
+                         width: 7%;
                     }
                }
           }
@@ -561,6 +579,9 @@ table {
                height: 1.25em;
                float: left;
                margin: 0 0.5em 0 0;
+               &.number {
+                    width: auto;
+               }
                &.date {
                     background: url(#{$image-path}/icons/date-grey.svg) no-repeat 50% 50%;
                     background-size: contain;

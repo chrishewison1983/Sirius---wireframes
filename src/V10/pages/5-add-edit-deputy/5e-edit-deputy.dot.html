@@ -96,7 +96,14 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">Clients details</h2>
+                         <h2 class="section-title">
+                    		<div class="client-first-name">Gerald</div>
+                    		<div class="client-last-name">Brackens</div>
+                    		details
+                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         {{= it.include('side-panel/client-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
@@ -178,62 +185,15 @@
                               <legend for="dob">Date of birth</legend>
                               <div class="one-third">
                                    <label for="deputy-dob-day" class="sub-label">Day</label>
-                                   <select id="deputy-dob-day">
-                                        <option>-- Day --</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09" selected="selected">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                   </select>
+                                   <input id="deputy-dob-day" name="deputy-dob-day" type="text" placeholder="-- Day --" maxlength="2">
                               </div>
                               <div class="one-third">
                                    <label for="deputy-dob-month" class="sub-label">Month</label>
-                                   <select id="deputy-dob-month">
-                                        <option>-- Month --</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08" selected="selected">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                   </select>
+                                   <input id="deputy-dob-month" name="deputy-dob-month" type="text" placeholder="-- Month --" maxlength="2">
                               </div>
                               <div class="one-third">
                                    <label for="deputy-dob-year" class="sub-label">Year</label>
-                                   <input id="deputy-dob-year" name="deputy-dob-year" type="text" placeholder="-- Year --" maxlength="4" value="1956">
+                                   <input id="deputy-dob-year" name="deputy-dob-year" type="text" placeholder="-- Year --" maxlength="4">
                               </div>
                          </div>
                          <!-- // FORM ITEM - 6 - END // -->

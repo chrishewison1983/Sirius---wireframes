@@ -78,7 +78,14 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">Clients details</h2>
+                         <h2 class="section-title">
+                    		<div class="client-first-name">Gerald</div>
+                    		<div class="client-last-name">Brackens</div>
+                    		details
+                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         {{= it.include('side-panel/client-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
