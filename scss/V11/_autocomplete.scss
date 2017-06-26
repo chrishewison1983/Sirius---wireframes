@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+// =====================================  Autocomplete drop down - START ===================================== //
+.autocomplete-suggestions {
+     overflow: auto;
+     max-height: 200px !important;
+     // padding: 1em;
+     font-family: $Montserrat;
+     font-size: 1rem;
+     line-height: 1.4;
+     border-top: 3px dashed $white-off;
+     margin: -3px 0 0 0;
+     border-radius: 0 0 5px 5px;
+     background: $white;
+     .autocomplete-suggestion {
+          padding: 1em;
+          &.autocomplete-selected, &:hover {
+               cursor: pointer;
+               background: $white-off;
+          }
+          strong {
+               color: $blue;
+          }
+     }
+}
+// =====================================  Autocomplete drop down - END ===================================== //

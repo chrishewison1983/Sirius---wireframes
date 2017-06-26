@@ -1,0 +1,35 @@
+<!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V10-DEV/hideShowPassword.js"></script>
+	<script src="../../../production/js/V10-DEV/my-jquery.js"></script>
+	<script src="../../../production/js/V10-DEV/jquery.cookie.js"></script>
+	<script src="../../../production/js/V10-DEV/jquery.modal.js"></script>
+	<script src="../../../production/js/V10-DEV/jquery-datepicker.js"></script>
+	<script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script>
+	<script src="../../../production/js/V10-DEV/my-cookies.js"></script>
+	<script src="../../../production/js/V10-DEV/sticky-item.js"></script>
+
+	<script src="../../../production/js/V10-DEV/my-cookies-commission-visit.js"></script>
+	<script src="../../../production/js/V10-DEV/my-jquery-commission-visit.js"></script>
+	<script src="../../../production/js/V10-DEV/my-jquery-progress-bar.js"></script>
+	<script src="../../../production/js/V10-DEV/jquery.tablesorter.js"></script>
+
+	<script src="../../../production/js/V10-DEV/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V10-DEV/autocomplete.js"></script>
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V10-DEV/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+	</script>
+<!-- // JS BODY END - END // -->

@@ -1,0 +1,352 @@
+<h2 class="section-title completed">
+	Today's completed tasks
+	<a href="#" class="main-cta primary">Submit work return</a>
+</h2>
+
+<div class="dashboard-item-container">
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="no-items">
+		<p>You have yet to complete any tasks today.</p>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+
+	<table id="completed-tasks-table" class="tablesorter completed">
+		<thead>
+			<tr class="five-column">
+				<th><span></span>Type</th>
+				<th><span></span>Task due date</th>
+				<th><span></span>Order status</th>
+				<th><span></span>Completed</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- TASK 1 - START -->
+			<tr>
+				<td>
+					<span class="task-type review-correspondence"></span>
+					<a href="#" class="task">Review application correspondence</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>1234567890</p>
+						<span class="client"></span>
+						<p><a href="4-client-page/4a-new-client.html">Gerald Brackens</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>20/05/2017</p>
+					<div class="counter">
+						<span class="number">17</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">Green</span>
+						<div class="border"></div>
+					</div>
+					<!-- No -->
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 1 - END -->
+
+			<!-- TASK 2 - START -->
+			<tr class="urgent-row link-for-commission-visit">
+				<td>
+					<span class="task-type commission-visit"></span>
+					<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>1234567890</p>
+						<span class="client"></span>
+						<p><a href="4-client-page/4a-new-client.html">Gerald Brackens</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>20/04/2017</p>
+					<div class="counter alert">
+						<span class="number">-13</span>
+						day
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">Red</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+					<!-- <div class="urgent"><span></span> Yes</div> -->
+				</td>
+				<td>
+					<span class="date"></span>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<p class="date-text">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '<p>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<p class="time-text">' + Hours + ":" + Mins + Time + '</p>');
+					</script>
+				</td>
+				<td>
+					<a href="#visit-commission" rel="modal:open" class="main-cta secondary">View</a>
+				</td>
+			</tr>
+			<!-- TASK 2 - START -->
+
+			<!-- TASK 3 - START -->
+			<tr>
+				<td>
+					<span class="task-type review-report"></span>
+					<a href="#" class="task">Review annual report</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>6271932819</p>
+						<span class="client"></span>
+						<p><a href="#">Ewan Jones</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">53</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">Green</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 3 - END -->
+
+			<!-- TASK 4 - START -->
+			<tr>
+				<td>
+					<span class="task-type print-notice"></span>
+					<a href="#" class="task">Print and send generated notice(s)</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>1037261920</p>
+						<span class="client"></span>
+						<p><a href="#">Chelsea Burton</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">53</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">Green</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 4 - START -->
+
+			<!-- TASK 5 - START -->
+			<tr class="urgent-row">
+				<td>
+					<span class="task-type review-report"></span>
+					<a href="#" class="task">Review annual report</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>7365163918</p>
+						<span class="client"></span>
+						<p><a href="#">Jennifer Moss</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>01/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-2</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">Red</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 5 - END -->
+
+			<!-- TASK 6 - START -->
+			<tr class="urgent-row">
+				<td>
+					<span class="task-type commission-visit"></span>
+					<a href="#" class="task">Commission visit</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>7193826190</p>
+						<span class="client"></span>
+						<p><a href="#">Morgan Graham</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>29/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-4</span>
+						day
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">Red</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 6 - START -->
+
+			<!-- TASK 7 - START -->
+			<tr>
+				<td>
+					<span class="task-type assign-validity"></span>
+					<a href="#" class="task">Review and assign Objection validity</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>1324372819</p>
+						<span class="client"></span>
+						<p><a href="#">Benjamin Howell</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>03/05/2017</p>
+					<div class="counter">
+						<span class="number">0</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">Amber</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 7 - END -->
+
+			<!-- TASK 8 - START -->
+			<tr>
+				<td>
+					<span class="task-type death-notification"></span>
+					<a href="#" class="task">Review Death Notification Correspondence</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>7381736183</p>
+						<span class="client"></span>
+						<p><a href="#">Georgia Lynch</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>03/05/2017</p>
+					<div class="counter">
+						<span class="number">0</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">Amber</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 8 - START -->
+
+			<!-- TASK 9 - START -->
+			<tr class="urgent-row">
+				<td>
+					<span class="task-type disclaimer"></span>
+					<a href="#" class="task">Review Disclaimer Correspondence</a>
+					<div class="details">
+						<span class="case-number"></span>
+						<p>4351729281</p>
+						<span class="client"></span>
+						<p><a href="#">Laura Dunn</a></p>
+					</div>
+				</td>
+				<td>
+					<span class="date"></span>
+					<p>02/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">Red</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<!-- TASK 9 - END -->
+
+		</tbody>
+	</table>
+
+</div>

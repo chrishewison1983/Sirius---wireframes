@@ -334,6 +334,8 @@ button.accordion-section-title {
                          background-size: 0.95em;
                          &:hover {
                               border-bottom: 1px solid $blue;
+                              background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                              background-size: 0.95em;
                          }
                          &:before, &:after {
                               display: none;

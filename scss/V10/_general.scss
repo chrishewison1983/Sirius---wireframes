@@ -360,7 +360,7 @@ a.main-cta {
                }
           }
      }
-     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit, &#edit-client {
+     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit, &#edit-client-confirm {
           display: none;
           margin: 2em 0 0 0;
           width: 100%;
@@ -385,9 +385,9 @@ a.main-cta {
                }
           }
      }
-     &#edit-client {
+     &#edit-client-confirm {
           display: inline-block;
-          margin: 2em 0 -1em 0;
+          margin: 2em 0 0em 0;
      }
      &#deputy-added {
           margin: 0;

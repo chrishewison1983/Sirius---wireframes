@@ -1,0 +1,291 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+#exisiting-deputies {
+     float: right;
+     clear: both;
+     width: 80%;
+     hr {
+          border: 3px dashed $border-colour;
+          margin: 0;
+     }
+     h2 {
+          span {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               float: left;
+               background: $blue;
+               color: $white;
+               font-family: $Montserrat;
+               font-weight: bold;
+               width: 1.75em;
+               height: 1.75em;
+               border-radius: 50%;
+               font-size: 1.6rem;
+               margin: 0 0.5em 0 0;
+               position: relative;
+               top: -0.3em;
+          }
+     }
+     button.deputy {
+          border-radius: $global-border-radius;
+          border: 3px solid $border-colour;
+          background: $white;
+          text-align: left;
+          padding: 1.5em;
+          width: 100%;
+          &:hover {
+               background: rgba($border-colour,0.4);
+          }
+          .title {
+               display: inline-block;
+               width: 100%;
+               h3 {
+                    width: auto;
+                    display: inline-block;
+                    div {
+                         display: inline-block;
+                    }
+               }
+               a {
+                    float: right;
+               }
+          }
+          .content {
+               p {
+                    margin: 0;
+               }
+          }
+     }
+}
+
+// #edit-title, .edit-deputy-form {
+//      display: none;
+// }
+
+.check-details {
+     float: right;
+     width: 80%;
+     .person-detail-item {
+          display: inline-block;
+          width: 100%;
+          margin: 0 0 1.5em 0;
+          p {
+               margin: 0;
+               &.item {
+                    width: 35%;
+                    margin-right: 5%;
+               }
+               &.answer {
+                    width: 60%;
+                    color: $black;
+                    font-family: $Montserrat;
+                    font-weight: bold;
+               }
+          }
+          ul {
+               &.answer {
+                    width: 55%;
+                    margin-bottom: 0;
+                    float: left;
+                    li {
+                         color: $black;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                    }
+               }
+          }
+     }
+}
+
+#remove-deputy-1, #remove-deputy-2, #remove-deputy-3, #remove-deputy-4 {
+     h1 {
+          text-transform: inherit;
+          font-size: 1.4rem;
+     }
+     h2 {
+          color: $blue;
+          font-size: 2rem;
+     }
+}
+
+.case-item-container {
+     @include flexbox;
+     @include flex-wrap(wrap);
+     float: left;
+     .case-item {
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          // flex: 1;
+          width: 32%;
+          padding: 0 0 5em 0;
+          margin: 0 2% 1.5em 0;
+          position: relative;
+          line-height: 0;
+          background: $white;
+          text-align: left;
+          @include standard-transition;
+          z-index: 1;
+          &:hover {
+               background: ligthen($border-colour,0.5%);
+               transform: scale(1.05);
+               cursor: pointer;
+               z-index: 10;
+          }
+          &:nth-of-type(3n) {
+               margin-right: 0;
+          }
+          &.welfare {
+               .left {
+                    span {
+                         background: url(#{$image-path}/icons/HandW.svg) no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+          }
+          &.property {
+               .left {
+                    span {
+                         background: url(#{$image-path}/icons/PandA.svg) no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+          }
+          .title {
+               @include flexbox;
+               @include align-items(center);
+               @include justify-content(flex-start);
+               border-bottom: 3px dashed $border-colour;
+               padding: 1em 1.5em;
+               .left {
+                    span {
+                         display: inline-block;
+                         width: 3.5em;
+                         height: 3.5em;
+                         margin: 0 0.75em 0 0;
+                    }
+               }
+               .right {
+                    h2, h3 {
+                         margin: 0;
+                         display: inline-block;
+                         line-height: 1.4;
+                    }
+                    h2 {
+                         font-size: 1.4rem;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         color: $main-colour;
+                    }
+                    h3 {
+                         font-size: 1rem;
+                         font-family: $Montserrat;
+                         color: lighten($main-colour,45%);
+                    }
+               }
+          }
+          .content {
+               padding: 1em 1.5em 0 1.5em;
+               p {
+                    margin: 0;
+                    width: auto;
+                    float: left;
+               }
+               h4 {
+                    font-size: 1rem;
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    margin: 0;
+                    display: inline-block;
+                    line-height: 1;
+                    float: left;
+                    a {
+                         line-height: 1;
+                         text-transform: inherit;
+                    }
+               }
+          }
+          .footer {
+               padding: 1em 1.5em;
+               margin: 1em -2px -2px -2px;
+               display: inline-block;
+               // width: 101%;
+               border-radius: 0 0 5px 5px;
+               background: $text-main-colour;
+               position: absolute;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               a {
+                    color: $white;
+                    border-bottom: none;
+                    font-family: $Opensans-Regular;
+                    padding-left: 1.25em;
+                    background: url(#{$image-path}/icons/delete-white.svg) no-repeat 0% 50%;
+                    background-size: contain;
+               }
+          }
+     }
+}
+
+#list-of-deputies {
+     .deputies {
+          display: inline-block;
+          width: 100%;
+          border: 2px solid $border-colour;
+          border-radius: $global-border-radius;
+          padding: 1em;
+          margin: 2em 0 0 0;
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

@@ -1,0 +1,495 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-create-client.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Edit client</span>
+                    </nav>
+                    <h1>
+                         Edit:
+                         <div class="client-title">Mr</div>
+                         <div class="client-first-name">Gerald</div>
+                         <div class="client-last-name">Brackens</div>
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper edit-client">
+
+          <div class="row">
+
+               <div id="document-summary" class="large-6 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul id="side-panel-tabs" class="tabs">
+                         <li class="tab-link" data-tab="tab-1">
+                              <span class="client-details"></span>
+                              <p>Client details</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-2">
+                              <span class="deputy-details"></span>
+                              <p>Deputy details</p>
+                         </li>
+                         <li class="tab-link current" data-tab="tab-3">
+                              <span class="documents"></span>
+                              <p>Documents</p>
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content side-panel">
+
+                         <h2 class="section-title">
+                    		<div class="client-first-name">Gerald</div>
+                    		<div class="client-last-name">Brackens</div>
+                    		details
+                              <a href="#" class="edit">Edit</a>
+                         </h2>
+
+                         {{= it.include('side-panel/client-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content side-panel">
+
+                         <h2 class="section-title">Deputy details</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content side-panel current">
+
+                         <h2 class="section-title">Case documents</h2>
+
+                         {{= it.include('side-panel/document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-6 large-uncentered columns">
+
+                    <div class="commission-visit right">
+
+                         <form class="edit-client-form">
+
+                              <h2 class="section-title">
+                                   Edit
+                                   <div class="client-title">Mr</div>
+                                   <div class="client-first-name">Gerald</div>
+                                   <div class="client-last-name">Brackens</div>
+                                   details
+                              </h2>
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <legend>Client status</legend>
+                                   <label for="client-status-active" class="radio checked">
+                                        <input id="client-status-active" type="radio" name="client-status" value="Active" checked>
+                                        Active
+                                   </label>
+                                   <label for="client-status-deceased"  class="radio">
+                                        <input id="client-status-deceased" type="radio" name="client-status" value="Deceased">
+                                        Deceased
+                                   </label>
+                                   <label for="client-status-202"  class="radio">
+                                        <input id="client-status-202" type="radio" name="client-status" value="Rule 202">
+                                        Rule 202
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group">
+                                   <legend for="visit-status-day">
+                                        Status date:
+                                   </legend>
+                                   <div class="one-third">
+                                        <label for="client-status-day" class="sub-label">Day</label>
+                                        <input id="client-status-day" name="client-status-day" type="text" value="05" maxlength="2">
+                                   </div>
+                                   <div class="one-third">
+                                        <label for="client-status-month" class="sub-label">Month</label>
+                                        <input id="client-status-month" name="client-status-month" type="text" value="04" maxlength="2">
+                                   </div>
+                                   <div class="one-third">
+                                        <label for="client-status-year" class="sub-label">Year</label>
+                                        <input id="client-status-year" name="client-status-year" type="text" value="2017" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group">
+                                   <label for="client-title">Title</label>
+                                   <select id="client-title">
+                                        <option>-- Select --</option>
+                                        <option selected>Mr.</option>
+                                        <option>Mrs.</option>
+                                        <option>Ms.</option>
+                                        <option>Miss</option>
+                                        <option>Dr.</option>
+                                        <option>Prof.</option>
+                                        <option>Rev.</option>
+                                        <option>Other</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
+
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <label for="client-first-name">First name</label>
+                                   <input id="client-first-name" name="client-first-name" type="text" value="Gerald">
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group">
+                                   <label for="client-middle-name">Middle names</label>
+                                   <input id="client-middle-name" name="client-middle-name" type="text" value="Stephen">
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group">
+                                   <label for="client-last-name">Last name</label>
+                                   <input id="client-last-name" name="client-last-name" type="text" value="Brackens">
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                              <!-- // FORM ITEM - 7 - START // -->
+                              <div class="form-group">
+                                   <legend for="dob">Date of birth</legend>
+                                   <div class="one-third">
+                                        <label for="client-dob-day" class="sub-label">Day</label>
+                                        <input id="client-dob-day" name="client-dob-day" type="text" value="09" maxlength="2">
+                                   </div>
+                                   <div class="one-third">
+                                        <label for="client-dob-month" class="sub-label">Month</label>
+                                        <input id="client-dob-month" name="client-dob-month" type="text" value="08" maxlength="2">
+                                   </div>
+                                   <div class="one-third">
+                                        <label for="client-dob-year" class="sub-label">Year</label>
+                                        <input id="client-dob-year" name="client-dob-year" type="text" value="1956" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 7 - END // -->
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group">
+                                   <label for="client-previous-name">Previously Known As</label>
+                                   <input id="client-previous-name" name="company-name" type="text">
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
+
+                              <!-- // FORM ITEM - 9 - START // -->
+                              <div class="form-group">
+                                   <label for="client-country">Country</label>
+                                   <select id="client-country" class="full-width">
+                                        <option>-- Select --</option>
+                                        <option selected>England</option>
+                                        <option>Ireland</option>
+                                        <option>Scotland</option>
+                                        <option>Wales</option>
+                                        <option>Northern Ireland</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 9 - END // -->
+
+                              <!-- // FORM ITEM - 10a - START // -->
+                              <div class="form-group">
+                                   <label for="client-postcode">Postcode</label>
+                                   <input id="client-postcode" name="client-postcode" type="text" class="one-third" value="CV32 788">
+                                   <a class="main-cta secondary" id="find-postcode">Find address</a>
+                                   <a href="#" id="address-manual">Enter address manually</a>
+                              </div>
+                              <!-- // FORM ITEM - 10a - END // -->
+
+                              <!-- // FORM ITEM - 10b - START // -->
+                              <div class="form-group address-list">
+                                   <label for="client-address-1" class="radio address">
+                                        <input id="client-address-1" type="radio" name="client-address">
+                                        1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-2" class="radio address">
+                                        <input id="client-address-2" type="radio" name="client-address">
+                                        2 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-3" class="radio address">
+                                        <input id="client-address-3" type="radio" name="client-address">
+                                        3 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-4" class="radio address">
+                                        <input id="client-address-4" type="radio" name="client-address">
+                                        4 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-5" class="radio address">
+                                        <input id="client-address-5" type="radio" name="client-address">
+                                        <span class="client-address">5 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.</span>
+                                   </label>
+                                   <label for="client-address-6" class="radio address">
+                                        <input id="client-address-6" type="radio" name="client-address">
+                                        6 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-7" class="radio address">
+                                        <input id="client-address-7" type="radio" name="client-address">
+                                        7 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-8" class="radio address">
+                                        <input id="client-address-8" type="radio" name="client-address">
+                                        8 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-9" class="radio address">
+                                        <input id="client-address-9" type="radio" name="client-address">
+                                        9 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-10" class="radio address">
+                                        <input id="client-address-10" type="radio" name="client-address">
+                                        10 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-11" class="radio address">
+                                        <input id="client-address-11" type="radio" name="client-address">
+                                        11 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+                                   <label for="client-address-12" class="radio address">
+                                        <input id="client-address-12" type="radio" name="client-address">
+                                        12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
+                                   </label>
+
+                              </div>
+                              <!-- // FORM ITEM - 10b - END // -->
+
+                              <!-- // FORM ITEM - 10c - START // -->
+                              <div id="manual-address-entry">
+                                   <div class="form-group">
+                                        <label for="client-address-line-1">Address</label>
+                                        <input id="client-address-line-1" name="client-address-line-1" type="text" value="1 Grimwald Place">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="client-address-line-2" class="hide">Address line 2</label>
+                                        <input id="client-address-line-2" name="client-address-line-2" type="text" value="Buckley">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="client-address-line-3" class="hide">Address line 3</label>
+                                        <input id="client-address-line-3" name="client-address-line-3" type="text">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="client-address-town">Town</label>
+                                        <input id="client-address-town" name="client-address-town" type="text" value="Flintshire">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="client-manual-postcode">Postcode</label>
+                                        <input id="client-manual-postcode" name="client-manual-postcode" type="text" class="one-third" value="CV32 788">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 10c - END // -->
+
+
+                              <!-- // FORM ITEM - 11 - START // -->
+                              <div class="form-group">
+                                   <legend class="margin-top">Is airmail required?</legend>
+                                   <label for="client-airmail-yes" class="radio">
+                                        <input id="client-airmail-yes" type="radio" name="client-airmail" value="Yes" checked>
+                                        Yes
+                                   </label>
+                                   <label for="client-airmail-no" class="radio checked">
+                                        <input id="client-airmail-no" type="radio" name="client-airmail" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 11 - END // -->
+
+                              <!-- // FORM ITEM - 12 - START // -->
+                              <div class="form-group">
+                                   <label for="client-phone-number">Daytime telephone number</label>
+                                   <input id="client-phone-number" name="client-phone-number" type="text" class="half" value="0123456789">
+                              </div>
+                              <!-- // FORM ITEM - 12 - END // -->
+
+                              <!-- // FORM ITEM - 13 - START // -->
+                              <div class="form-group">
+                                   <label for="client-mob-number">Mobile telephone number</label>
+                                   <input id="client-mob-number" name="client-mob-number" type="text" class="half" value="07768948823">
+                              </div>
+                              <!-- // FORM ITEM - 13 - END // -->
+
+                              <!-- // FORM ITEM - 14 - START // -->
+                              <div class="form-group">
+                                   <label for="client-email">Email address</label>
+                                   <input id="client-email" name="email" type="text" value="gerald.brackens@hotmail.com">
+                              </div>
+                              <!-- // FORM ITEM - 14 - END // -->
+
+                              <!-- // FORM ITEM - 15 - START // -->
+                              <div class="form-group">
+                                   <label for="client-financial">Financial reference</label>
+                                   <input id="client-financial" name="client-financial" type="text" class="half" value="192848291">
+                              </div>
+                              <!-- // FORM ITEM - 15 - END // -->
+
+                              <!-- // FORM ITEM - 16 - START // -->
+                              <div class="form-group">
+                                   <label for="client-casarec">Casarec Number</label>
+                                   <input id="client-casarec" name="client-casarec" type="text" class="half" value="183920478">
+                              </div>
+                              <!-- // FORM ITEM - 16 - END // -->
+
+                              <!-- // FORM ITEM - 17 - START // -->
+                              <div class="form-group">
+                                   <label for="client-accommodation">Accommodation Type</label>
+                                   <select id="client-accommodation" class="full-width">
+                                        <option>-- Select --</option>
+                                        <option class='dis' disabled="disabled">----------------------------------------------------------------</option>
+                                        <option selected>LA Nursing Home</option>
+                                        <option>Private Nursing Home</option>
+                                        <option class='dis' disabled="disabled">----------------------------------------------------------------</option>
+     							<option>No Accommodation Type</option>
+     							<option>Council Rented</option>
+     							<option>Family Member/Friend's Home</option>
+     							<option>Supervised Sheltered</option>
+     							<option>House Association</option>
+     							<option>Hostel</option>
+     							<option>Hotel</option>
+     							<option>Health Service Patient</option>
+     							<option>NHS Accommodation</option>
+     							<option>No Fixed Address</option>
+     							<option>Own Home</option>
+     							<option>Other</option>
+     							<option>Private Hospital</option>
+     							<option>LA Part 3 Accommodation</option>
+     							<option>Registered Care Home</option>
+     							<option>Private Rented</option>
+     							<option>Private Residential Home</option>
+     							<option>Secure Hospital</option>
+     							<option>Supported Housing</option>
+     							<option>Supported Living</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 17 - END // -->
+
+                              <!-- // FORM ITEM - 18 - START // -->
+                              <div class="form-group client-medical-condition">
+                                   <label for="letter-medical-condition">
+                                        Medical Condition
+                                        <span class="hint">Medical condition(s) up to 250 character</span>
+                                   </label>
+                                   <textarea name="textarea" class="jqte-test" id="client-medical-condition" maxlength="250">Alzheimer's</textarea>
+                              </div>
+                              <!-- // FORM ITEM - 18 - END // -->
+
+                              <!-- // FORM ITEM - 19 - START // -->
+                              <div class="form-group">
+                                   <label for="client-marital-status">Marital Status</label>
+                                   <select id="client-marital-status" class="full-width">
+                                        <option>-- Select --</option>
+     							<option>Civil Partnership</option>
+     							<option selected>Divorced</option>
+     							<option>Co-habiting</option>
+     							<option>Married</option>
+     							<option>Not Stated</option>
+     							<option>Separated</option>
+     							<option>Single</option>
+     							<option>Widowed</option>
+     							<option>Other</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 19 - END // -->
+
+                              <!-- // FORM ITEM - 20 - START // -->
+                              <div class="form-group">
+                                   <legend>Correspondence By</legend>
+                                   <label class="normal checked" for="client-correspondence-post">
+                                        <input id="client-correspondence-post" name="client-correspondence-post" type="checkbox" value="Post" checked>
+                                        Post
+                                   </label>
+                                   <label class="normal" for="client-correspondence-phone">
+                                        <input id="client-correspondence-phone" name="client-correspondence-phone" type="checkbox" value="Phone">
+                                        Phone
+                                   </label>
+                                   <label class="normal checked" for="client-correspondence-email">
+                                        <input id="client-correspondence-email" name="client-correspondence-email" type="checkbox" value="Email" checked>
+                                        Email
+                                   </label>
+                                   <label class="normal" for="client-correspondence-welsh">
+                                        <input id="client-correspondence-welsh" name="client-correspondence-welsh" type="checkbox" value="Welsh">
+                                        Welsh
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 20 - END // -->
+
+                              <!-- // FORM ITEM - 21 - START // -->
+                              <div class="form-group violent-risk">
+                                   <span></span>
+                                   <label class="normal" for="client-violent-risk">
+                                        <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="Yes">
+                                        Is the client a violent risk?
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 21 - END // -->
+
+                         </form>
+
+                    </div>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- CTA-FOOTER - START -->
+     <div id="cta-footer" class="cta-row">
+          <a class="main-cta primary" id="edit-client" href="../4-client-page/4a-new-client.html">Save &amp; exit</a>
+          <a href="#" onclick="history.back();">Cancel</a>
+     </div>
+     <!-- CTA-FOOTER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->
