@@ -1,0 +1,646 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+// =====================================  Autocomplete drop down - START ===================================== //
+#side-bar-holder {
+     position: relative;
+     // float: right !important;
+}
+
+#action-panel {
+     position: relative;
+     float: right !important;
+     .create-case {
+          width: 100%;
+     }
+     .section-title {
+          &:first-of-type {
+               text-transform: uppercase;
+               border-bottom: 6px solid rgba($main-colour,0.1);
+               padding-bottom: 0.65em;
+               margin-bottom: 1.5em;
+          }
+     }
+}
+
+#side-panel, #action-panel {
+     // width: auto;
+     // position: relative;
+     // right: 0;
+     &.sticky {
+          margin-top: 0;
+          position: fixed;
+          top: 0;
+          width: 60.65em;
+          // right: 0;
+     }
+}
+
+#side-panel {
+     &.sticky {
+          margin-top: 1em;
+     }
+     .tab-content.side-panel {
+          #client-details, #document-viewer, #commission-visit, #create-case {
+               height: 37em;
+               overflow-y: scroll;
+               overflow-x: hidden;
+               // box-shadow: inset 0 0 rgba($black.0.2);
+          }
+          #client-details, #commission-visit, #create-case {
+               height: 34em;
+          }
+          .check-details {
+               float: left;
+               width: 100%;
+          }
+     }
+}
+
+#side-panel {
+     .tab-content.side-panel {
+          #document-viewer {
+               overflow-y: inherit;
+               overflow-x: inherit;
+               .page-1 {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    height: 37em;
+               }
+          }
+     }
+}
+
+
+#side-panel {
+     // float: right !important;
+     #recipients, .document, #asset-summary, #documents {
+          display: inline-block;
+          float: left;
+          width: 100%;
+          margin: 0;
+     }
+     .document {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          img {
+               height: 6em;
+               padding: 0.5em;
+               border: 3px solid $border-colour;
+               border-radius: $global-border-radius;
+               float: left;
+               margin: 0 1em 0 0;
+          }
+          .title {
+               float: left;
+               text-transform: uppercase;
+               font-size: 1.4rem;
+               width: 80%;
+               color: rgba($main-colour,0.4);
+          }
+     }
+     ol#recipients, ol#asset-summary, ol#documents {
+          margin: 0;
+          li {
+               counter-increment: step-counter;
+               list-style: none;
+               margin: 0 0 1em 0;
+               &:last-of-type {
+                    margin-bottom: 0;
+               }
+               &::before {
+                    content: counter(step-counter);
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    background: $blue;
+                    display: inline-block;
+                    border-radius: 50%;
+                    color: $white;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0 0.5em 0 0;
+                    text-align: center;
+               }
+               span.address {
+                    color: $text-main-colour;
+                    font-family: $Opensans-Regular;
+               }
+          }
+     }
+}
+
+.side-panel {
+     .sub-section-title {
+          a.edit {
+               float: right;
+               padding-left: 1.25em;
+               font-size: 0.875rem;
+               background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
+               background-size: contain;
+               font-family: $Opensans-Regular;
+          }
+     }
+}
+
+#document-viewer, #commission-visit, #create-case {
+     line-height: 0;
+     display: inline-block;
+     max-height: 37em;
+     overflow-y: scroll;
+     width: 100%;
+     &.sticky {
+          margin-top: 1em;
+          position: fixed;
+          top: 0;
+          display: inherit;
+     }
+     .document-1, .document-2 {
+          position: relative;
+          &.compare {
+               width: 48.75%;
+               float: left;
+               margin-right: 2.5%;
+               .page-2 {
+                    .wrapper {
+                         margin: 3.75em 0 0 0;
+                         height: 36.25em;
+                    }
+                    .control-panel {
+                         h2 {
+                              max-width: 20em;
+                              overflow: hidden;
+                              white-space: nowrap;
+                              text-overflow: ellipsis;
+                              word-break: break-all;
+                              word-wrap: break-word;
+                         }
+                         .compare {
+                              display: none;
+                         }
+                    }
+               }
+          }
+          a {
+               &.close {
+                    position: absolute;
+                    text-indent: -1000em;
+                    display: inline-block;
+                    width: 2em;
+                    border: none;
+                    height: 2em;
+                    border-radius: 50%;
+                    background: url(#{$image-path}/icons/close-white.svg) no-repeat 50% 50% $blue;
+                    background-size: 1.75em;
+                    right: -0.75em;
+                    top: -1em;
+                    z-index: 100;
+               }
+          }
+     }
+     .document-1 {
+          .page-2.document {
+               .control-panel {
+                    a.close {
+                         display: none;
+                    }
+               }
+          }
+          &.float-right {
+               margin: 0;
+               float: right;
+          }
+          a {
+               &.close {
+                    display: none;
+               }
+          }
+     }
+     .document-2 {
+          display: none;
+          position: relative;
+          &.compare {
+               margin-right: 0;
+          }
+          &.float-left {
+               float: left;
+               margin: 0 2.5% 0 0;
+          }
+     }
+     .page-2 {
+          position: relative;
+          &.document {
+               // background: $border-colour;
+               border: none;
+               border-radius: 0;
+               display: none;
+               position: relative;
+               .control-panel {
+                    margin: 0;
+                    padding: 1em 0 0 0;
+                    position: absolute;
+                    border-radius: 5px 5px 0 0;
+                    box-shadow: 0px 10px 10px -5px rgba($black, 0.2);
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background: $main-colour;
+                    font-size: 1rem;
+                    font-family: $Montserrat;
+                    display: inline-block;
+                    width: 100%;
+                    h2, a {
+                         display: inline-block;
+                    }
+                    h2 {
+                         background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50%;
+                         background-size: 0.95em;
+                         width: auto;
+                         font-family: $Montserrat;
+                         text-transform: inherit;
+                         color: $white;
+                         font-size: 1rem;
+                         margin: 0 0 0 1em;
+                         padding: 0 0 0 1.5em;
+                    }
+                    a {
+                         float: right;
+                         margin: 0 1em 0 0;
+                         color: $white;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         font-size: 0.875rem;
+                         // &#back, &
+                         &.back {
+                              padding-left: 1em;
+                              background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
+                              background-size: 0.5em;
+                         }
+                         &.compare {
+                              padding-left: 1.35em;
+                              background: url(#{$image-path}/icons/compare-blue.png) no-repeat 0% 50%;
+                              background-size: 1em;
+                         }
+                         &.close {
+                              position: absolute;
+                              text-indent: -1000em;
+                              display: inline-block;
+                              width: 2em;
+                              border: none;
+                              height: 2em;
+                              border-radius: 50%;
+                              background: url(#{$image-path}/icons/close-white.svg) no-repeat 50% 50% $blue;
+                              background-size: 1.75em;
+                              right: -1.75em;
+                              top: -1em;
+                         }
+                    }
+                    img.control-panel-buttons {
+                         height: auto;
+                         padding: 0;
+                         border: none;
+                         width: 100%;
+                         margin: 0.5em 0 0 0;
+                    }
+               }
+               .wrapper {
+                    border-radius: $global-border-radius;
+                    border: 3px solid $white-off;
+                    margin: 5em 0 0 0;
+                    height: 32em;
+                    width: 100%;
+                    overflow-y: scroll;
+                    padding: 0 0 0 0;
+                    text-align: center;
+                    // margin: 0;
+                    img {
+                         margin-top: 1.5em;
+                         padding: 1.5em 0;
+                         background: $white;
+                         width: 80%;
+                         // display: inline-block;
+                         float: none;
+                         &.document-item {
+                              // width: 35em;
+                              height: auto;
+                              margin-right: 0;
+                              border: none;
+                              border-radius: 0;
+                         }
+                    }
+               }
+          }
+          .compare-icon {
+               display: inline-block;
+               width: 4.5em;
+               height: 4.5em;
+               border-radius: 50%;
+               position: absolute;
+               top: 50%;
+               left: -1.5em;
+               margin: -1.5em 0 0 -1.5em;
+               background: url(#{$image-path}/icons/compare-white.png) no-repeat 50% 50% $blue;
+               background-size: 1.75em;
+               box-shadow: 0 0 10px 0 rgba($black,0.2);
+          }
+     }
+     .documents-details {
+          margin: 0.5em 0 0 0;
+          padding: 0 0 0.75em 0;
+          border-bottom: dashed 2px rgba($black,0.2);
+          width: 95%;
+          span {
+               margin: 0 0.75em 0 0;
+               strong {
+                    color: rgba($black,0.8);
+               }
+          }
+     }
+     ul.livelink-documents, table.livelink-documents {
+          margin: 0;
+          a {
+               font-size: inherit;
+               border: none;
+               padding: 0.25em 0 0.25em 1.5em;
+               width: auto;
+               border-bottom: 1px dashed $blue;
+               background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+               background-size: 0.95em;
+               &:before, &:after {
+                    display: none;
+               }
+               &:hover {
+                    background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                    background-size: 0.95em;
+                    border-bottom: 1px solid $blue;
+               }
+          }
+          form {
+               display: inline-block;
+               float: right;
+               label {
+                    &.normal {
+                         margin: -0.25em 0 0 0;
+                    }
+               }
+          }
+     }
+     ul.livelink-documents {
+          li {
+               margin: 1em 0 0 0;
+               &:hover {
+                    background: none;
+               }
+          }
+     }
+     table.livelink-documents {
+          width: 97%;
+          thead {
+               tr {
+                    th {
+                         padding-top: 0;
+                         color: $black;
+                         // border-bottom: 10px solid $
+                    }
+               }
+          }
+          tbody {
+               tr {
+                    &:hover {
+                         background: none;
+                    }
+                    td {
+                         padding-top: 1em;
+                         padding-bottom: 1em;
+                         font-size: 0.825rem;
+                         a {
+                              font-size: 0.875rem;
+                         }
+                         &:first-of-type {
+                              padding-left: 0;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.accordion-section {
+     position: relative;
+     width: 97%;
+     &.inactive {
+          .accordion-section-title {
+               color: rgba($black,0.4);
+               background: $border-colour;
+               // &:hover {
+               //      background: none;
+               // }
+               span {
+                    display: none;
+               }
+          }
+          .edit {
+               display: none;
+          }
+     }
+     &.active {
+          .edit {
+               color: $white;
+               background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 0%;
+               background-size: 0.95em;
+          }
+     }
+     .edit {
+          position: absolute;
+          top: 1em;
+          right: 1em;
+          z-index: 10;
+          padding-left: 1.25em;
+          background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
+          background-size: 0.95em;
+     }
+}
+
+button.accordion-section-title {
+     background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 97.5% 50% $white;
+     background-size: 1.5em;
+     color: $black;
+     font-family: $Montserrat;
+     font-weight: bold;
+     cursor: pointer;
+     padding: 1em 3.25em 1em 1em;
+     width: 100%;
+     text-align: left;
+     z-index: 1;
+     position: relative;
+     border-radius: $global-border-radius;
+     border: 3px solid $border-colour;
+     outline: none;
+     transition: 0.4s;
+     margin: 0 0 0.25em 0;
+     &:hover {
+          background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 97.5% 50% $border-colour;
+          background-size: 1.5em;
+     }
+     &.active {
+          margin: 0;
+          background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 97.5% 50% $blue;
+          background-size: 1.5em;
+          border: 3px solid $blue;
+          color: $white;
+          border-radius: 5px 5px 0 0;
+          span {
+               background: url(#{$image-path}/icons/minus-white.svg) no-repeat 0% 0%;
+               background-size: contain;
+          }
+     }
+     &.with-edit {
+          background: $white;
+          padding: 1em;
+          // width: 85%;
+          &:hover {
+               background: $border-colour;
+          }
+          &.active {
+               background: $blue;
+               a.edit {
+                    color: $white;
+                    background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 0%;
+                    background-size: 0.95em;
+               }
+          }
+          // a.edit {
+          //      float: right;
+          // }
+     }
+     span {
+          display: inline-block;
+          position: relative;
+          float: left;
+          background: url(#{$image-path}/icons/plus-blue.svg) no-repeat 0% 0%;
+          background-size: contain;
+          width: 1.15em;
+          height: 1.15em;
+          margin: 0 0.5em 0 0;
+     }
+}
+
+/* Style the accordion panel. Note: hidden by default */
+#document-viewer, #commission-visit, #create-case {
+     // position: relative;
+     .accordion-section-content {
+          padding: 1em;
+          background-color: white;
+          width: 100%;
+          // transition: 0.4s;
+          display: none;
+          margin: 0 0 0.25em 0;
+          border-radius: 0 0 5px 5px;
+          border-right: 3px solid $blue;
+          border-bottom: 3px solid $blue;
+          border-left: 3px solid $blue;
+          .place-holder-text {
+               text-align: left;
+               display: inline-block;
+          }
+          ul, p {
+               margin: 0;
+          }
+          ul {
+               li {
+                    &:hover {
+                         background: none;
+                    }
+                    &:last-of-type {
+                         margin-bottom: 0;
+                    }
+                    a {
+                         float: left;
+                         width: auto;
+                         padding: 0;
+                         border: none;
+                         font-size: 1rem;
+                         border-bottom: 1px dashed $blue;
+                         border-radius: 0;
+                         // padding: 0 0 0 1.5em;
+                         padding: 0.25em 0 0.25em 1.5em;
+                         background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                         background-size: 0.95em;
+                         &:hover {
+                              border-bottom: 1px solid $blue;
+                              background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                              background-size: 0.95em;
+                         }
+                         &:before, &:after {
+                              display: none;
+                         }
+                    }
+                    label {
+                         float: right;
+                         width: auto;
+                         margin: 0.35em 0 0 0;
+                         padding: 0 0 0 2em;
+                         input {
+                              display: none;
+                         }
+                         &:before {
+                              width: 1.5em;
+                              height: 1.5em;
+                              top: -0.125em;
+                         }
+                         &:after {
+                              border-width: 0 0 4px 4px;
+                              top: 0.25em;
+                              left: 0.295em;
+                              width: 0.875em;
+                              height: 0.5em;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.info-section {
+     display: inline-block;
+     width: 100%;
+     margin: 0 0 0.75em 0;
+     &:last-of-type {
+          margin: 0;
+     }
+     p, ol li, ul li {
+          display: inline-block;
+          width: 100%;
+          padding: 0 0 0.25em 0;
+          &.answer, .mulitple-answers {
+               // width: 100%;
+               font-family: $Montserrat;
+               font-weight: bold;
+               color: $main-colour;
+          }
+     }
+     p {
+          width: 30%;
+          &.answer, .mulitple-answers {
+               width: 70%;
+          }
+     }
+}
+
+.accordion, .accordion * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.accordion {
+    overflow: hidden;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+    transition: all linear 0.15s;
+}
+// =====================================  Autocomplete drop down - END ===================================== //

@@ -1,0 +1,275 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+.dashboard {
+     ul.tabs {
+          height: 4.65em;
+          li {
+               span {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin: -0.5em 0.5em 0 0;
+               }
+          }
+     }
+}
+
+ul.tabs {
+     display: inline-block;
+     width: 97%;
+     border-bottom: 6px solid rgba($main-colour,0.1);
+     margin: 0 0 0 0;
+     height: 4em;
+     &.client-details {
+          height: 4em;
+     }
+     li {
+          list-style: none;
+          float: left;
+          padding: 1.25em 0.95em 1em 0.95em;
+          margin: 0 0 -6px 0;
+          font-family: $Montserrat;
+          font-weight: bold;
+          border-radius: 5px 5px 0 0;
+          &:hover {
+               cursor: pointer;
+          }
+          &.current, &.active {
+               color: $white;
+               background: $blue;
+               border-bottom: 6px solid darken($blue,10%);
+               span {
+                    background: $white;
+                    color: $blue;
+               }
+               &.completed {
+                    span {
+                         background-color: $white;
+                    }
+               }
+          }
+          &.completed {
+               span {
+                    background-color: $green;
+               }
+          }
+          span {
+               background: $red;
+               border-radius: 50%;
+               color: $white;
+               @include flexbox;
+               @include align-items(center);
+               @include justify-content(center);
+               background: $red;
+               float: left;
+               font-family: $Montserrat;
+               font-weight: bold;
+               width: 1.75em;
+               height: 1.75em;
+               margin: -0.25em 0.5em -0.25em 0;
+          }
+     }
+     &#side-panel-tabs {
+          border-bottom: none;
+          float: left;
+          width: 97%;
+          height: 3.65em;
+          margin: 0 0 0.75em 0;
+          border-bottom: 6px solid lighten($main-colour,70%);
+          li.tab-link {
+               // float: none;
+               width: auto;
+               padding: 1em 0.625em;
+               margin: 0 0.25em 0 0;
+               display: inline-block;
+               position: relative;
+               @include standard-transition;
+               border-bottom: 6px solid lighten($main-colour,70%);
+               p {
+                    display: inline-block;
+                    text-align: left;
+                    font-size: 0.9rem;
+               }
+               &:last-of-type {
+                    margin: 0;
+               }
+               &:hover {
+                    border-bottom: 6px solid $blue;
+               }
+               &.current {
+                    text-indent: 0;
+                    width: auto;
+                    overflow: hidden;
+                    border-bottom: 6px solid darken($blue,10%);
+                    border-radius: 5px 5px 0 0;
+                    span {
+                         background: $blue;
+                         &.info {
+                              background: url(#{$image-path}/icons/info-white.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                         &.client-details {
+                              background: url(#{$image-path}/icons/client-white.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                         &.deputy-details {
+                              background: url(#{$image-path}/icons/deputies-white.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                         &.documents {
+                              background: url(#{$image-path}/icons/documents-white.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    p {
+                         color: $white;
+                    }
+                    &:hover {
+                         transform: scale(1);
+                         background: $blue;
+                         p {
+                              &:before {
+                                   display: none;
+                              }
+                         }
+                    }
+               }
+               span {
+                    margin: 0 0.35em 0 0;
+                    width: 1.25em;
+                    height: 1.25em;
+                    background: none;
+                    border-radius: 0;
+                    &.info {
+                         background: url(#{$image-path}/icons/info-black.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+                    &.client-details {
+                         background: url(#{$image-path}/icons/client-black.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+                    &.deputy-details {
+                         background: url(#{$image-path}/icons/deputies-black.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+                    &.documents {
+                         background: url(#{$image-path}/icons/documents-black.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+               }
+               p {
+                    width: auto;
+                    margin: 0;
+                    color: black;
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    // display: none;
+                    // width: 0;
+               }
+          }
+     }
+}
+
+.tab-content {
+     // margin-top: 2em;
+	display: none;
+     width: 97%;
+	// padding: 15px;
+     &.current {
+          display: inherit;
+     }
+     &.side-panel {
+          // border-left: 6px solid rgba($main-colour,0.1);
+          padding: 0;
+          margin-top: 0.75em;
+          width: 97%;
+          float: left;
+          min-height: 14em;
+          .section-title {
+               margin-top: 0;
+          }
+     }
+     .section-title {
+          margin: 1.5em 0 0.75em 0;
+     }
+     h1, h2, h3, h4 {
+          &.description-title {
+               padding: 0 0 1em 0;
+               margin: 0 0 1em 0;
+               border-bottom: 3px dashed $border-colour;
+               text-transform: inherit;
+          }
+     }
+}
+
+.no-items {
+     display: inline-block;
+     border: 10px dotted $border-colour;
+     padding: 3em;
+     margin: 3em 0 2em 0;
+     width: 100%;
+     text-align: center;
+     p {
+          // margin: 0;
+          text-align: center;
+     }
+     a.main-cta {
+          width: auto;
+          float: none;
+     }
+}
+
+
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

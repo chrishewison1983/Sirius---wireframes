@@ -1,0 +1,440 @@
+<h2 class="section-title completed">
+	Completed tasks
+	<!-- <a href="#" class="main-cta primary">Submit work return</a> -->
+</h2>
+
+<div class="dashboard-item-container">
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="no-items">
+		<p>You have yet to complete any tasks today.</p>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+
+	<table id="completed-tasks-table" class="tablesorter completed">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th><span></span>Case type</th>
+				<th><span></span>Completed</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- TASK 1 - START -->
+			<tr class="urgent-row">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-correspondence"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">A</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<!-- TASK 1 - END -->
+
+			<!-- TASK 2 - START -->
+			<tr class="urgent-row link-for-commission-visit">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
+				</td>
+				<td>
+					<span class="date"></span>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<p class="date-text">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '<p>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<p class="time-text">' + Hours + ":" + Mins + Time + '</p>');
+					</script>
+				</td>
+				<td>
+					<a href="#visit-commission" rel="modal:open" class="main-cta secondary">View</a>
+				</td>
+			</tr>
+			<!-- TASK 2 - START -->
+
+			<!-- TASK 3 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4391</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Ewan Jones</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">C</span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 3 - END -->
+
+			<!-- TASK 4 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type print-notice"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6928</p>
+								<span class="client"></span>
+								<p><a href="#">Miss Chelsea Burton</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">C</span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 4 - START -->
+
+			<!-- TASK 5 - START -->
+			<tr class="">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client"></span>
+								<p><a href="#">Mrs Jennifer Moss</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>01/05/2017</p>
+					<div class="counter">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 5 - END -->
+
+			<!-- TASK 6 - START -->
+			<tr class="">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4019</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Morgan Graham</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>29/05/2017</p>
+					<div class="counter">
+						<span class="number">4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">C</span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 6 - START -->
+
+			<!-- TASK 7 - START -->
+			<tr class="urgent-row">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type assign-validity"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">A</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 7 - END -->
+
+			<!-- TASK 8 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type death-notification"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review Death Notification Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3029</p>
+								<span class="client"></span>
+								<p><a href="#">Ms Georgia Lynch</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/05/2017</p>
+					<div class="counter">
+						<span class="number">1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 8 - START -->
+
+			<!-- TASK 9 - START -->
+			<tr class="">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type disclaimer"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review Disclaimer Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3829</p>
+								<span class="client"></span>
+								<p><a href="#">Mrs Laura Dunn</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>02/05/2017</p>
+					<div class="counter">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">C</span>
+						<div class="border"></div>
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 9 - END -->
+
+		</tbody>
+	</table>
+
+</div>

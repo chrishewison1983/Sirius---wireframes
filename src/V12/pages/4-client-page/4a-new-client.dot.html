@@ -1,0 +1,125 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default new-client">
+
+     {{= it.include('client-nav.html') }}
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="client-page">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-7 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Client summary</span>
+                    </nav>
+                    <h1>
+                         <div class="client-title">Mr</div>
+                         <div class="client-first-name">Gerald</div>
+                         <div class="client-last-name">Brackens</div>
+
+                         <span class="normal">Client's summary page</span>
+                         <span class="violent">Client is violent</span>
+                         <span class="welsh">Client's prefered language is Welsh</span>
+                         <span class="deceased">Client is deceased</span>
+
+                    </h1>
+               </div>
+
+               <div class="large-5 large-uncentered columns">
+                    {{= it.include('actions-header.html') }}
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- TAB CONTENT - START -->
+     <div id="client-overview" class="tabcontent current">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-summary.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-health" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-health.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-property" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-property.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-unassigned" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-unassigned.html') }}
+
+               </div>
+          </div>
+     </div>
+     <!-- TAB CONTENT - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function() {
+     //      // JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+     //      //      $('#document-recipients').append('<li>' + recipient + '</li>');
+     //      // });
+     // });
+
+     // ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== //
+
+     // Populates the client page with list of 4a - recipients and document people
+     JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
+          $('#visiting').append(`
+               <li> ${ recipient }, </li>
+          `);
+          $('#visits').append(`
+               <li> ${ recipient }, </li>
+          `);
+     });
+
+     JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+          $('#document-recipients').append('<li>' + recipient + '</li>');
+     });
+
+     // Get the element with id="defaultOpen" and click on it
+     document.getElementById("defaultOpen").click();
+
+</script>
+<!-- SCRIPT CONTENT - END -->
