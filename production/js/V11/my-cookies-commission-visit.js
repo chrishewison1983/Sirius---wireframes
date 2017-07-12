@@ -214,9 +214,9 @@ if ($.cookie("visit-location")) {  $(".visit-location").text($.cookie("visit-loc
 
 ////////////////////////////////////// Step - 3 (6C-WHERE?) //////////////////////////////////////
 $("#add-visitors-step-3").on("click", function (e) {
-     $.cookie("visit-due-back-day", $("#visit-report-day").val(), {path:'/'});
-     $.cookie("visit-due-back-month", $("#visit-report-month").val(), {path:'/'});
-     $.cookie("visit-due-back-year", $("#visit-report-year").val(), {path:'/'});
+     $.cookie("visit-due-back-date", $("#visit-report-date").val(), {path:'/'});
+     // $.cookie("visit-due-back-month", $("#visit-report-month").val(), {path:'/'});
+     // $.cookie("visit-due-back-year", $("#visit-report-year").val(), {path:'/'});
      $.cookie("completed-step-3", true, {path:'/'});
 
      /* textarea */ $.cookie("third-party-needed", $(".third-party-needed .jqte_editor").html(), {path:'/'});
@@ -229,17 +229,17 @@ $('.weeks-6, .weeks-12').css('display', 'none');
 
 // ADD 6 WEEKS
 if ($.cookie("visit-urgent") === 'Yes') {
-     $("#visit-report-day").val('30');
-     $("#visit-report-month").val('07');
-     $("#visit-report-year").val('2017');
+     $("#visit-report-date").val('30/07/2017');
+     // $("#visit-report-month").val('07');
+     // $("#visit-report-year").val('2017');
      $('.weeks-6').css('display', 'inline-block');
      $('.weeks-12').css('display', 'none');
 }
 // ADD 12 WEEKS
 else if ($.cookie("visit-urgent") == 'undefined') {
-     $("#visit-report-day").val('11');
-     $("#visit-report-month").val('08');
-     $("#visit-report-year").val('2017');
+     $("#visit-report-date").val('11/08/2017');
+     // $("#visit-report-month").val('08');
+     // $("#visit-report-year").val('2017');
      $('.weeks-6').css('display', 'none');
      $('.weeks-12').css('display', 'inline-block');
 }
@@ -300,9 +300,9 @@ $("#add-visitors-step-5").on("click", function (e) {
      /* textarea */ $.cookie("visit-deputyship-order-answer", $(".visit-deputyship-order-answer .jqte_editor").val(), {path:'/'});
 
      $.cookie("visit-first", $("input[name=visit-first]:checked").parent().text(), {path:'/'});
-     $.cookie("visit-last-visit-day", $("#visit-last-visit-day").val(), {path:'/'});
-     $.cookie("visit-last-visit-month", $("#visit-last-visit-month").val(), {path:'/'});
-     $.cookie("visit-last-visit-year", $("#visit-last-visit-day").val(), {path:'/'});
+     $.cookie("visit-last-visit-date", $("#visit-last-visit-date").val(), {path:'/'});
+     // $.cookie("visit-last-visit-month", $("#visit-last-visit-month").val(), {path:'/'});
+     // $.cookie("visit-last-visit-year", $("#visit-last-visit-year").val(), {path:'/'});
 });
 
 if ($.cookie("visit-deputy-order")) {  $(".visit-deputy-order").text($.cookie("visit-deputy-order")); }
@@ -343,8 +343,9 @@ if ($.cookie("visit-deputyship-order-answer")) {
 }
 
 if ($.cookie("visit-first")) {  $(".visit-first").text($.cookie("visit-first")); }
-if ($.cookie("visit-last-visit-day")) {
-     $(".visit-first-date").text($.cookie("visit-last-visit-day") + '/' + $.cookie("visit-last-visit-month") + '/' + $.cookie("visit-last-visit-year"));
+if ($.cookie("visit-last-visit-date")) {
+     $(".visit-first-date").text($.cookie("visit-last-visit-date"));
+     // $(".visit-first-date").text($.cookie("visit-last-visit-date") + '/' + $.cookie("visit-last-visit-month") + '/' + $.cookie("visit-last-visit-year"));
 } else {
      $(".visit-first-date").hide();
 }
@@ -384,7 +385,7 @@ if ($.cookie("visit-medical-background")) { $(".visit-medical-background").text(
 
 if ($.cookie("visit-family-background")) { $(".visit-family-background").text($.cookie("visit-family-background")); }
 
-$("#list-of-timeline #task-list").hide();
+// $("#list-of-timeline #task-list").hide();
 
 if ($.cookie("user-journey") == 6) {
      $("#tab-6.client-details").addClass('current');
@@ -394,7 +395,7 @@ if ($.cookie("user-journey") == 6) {
      $('#list-of-timeline .no-items').hide();
      $('#list-of-tasks .no-items').hide();
 
-     $("#list-of-timeline #task-list").show();
+     // $("#list-of-timeline #task-list").show();
      $("#list-of-timeline #visit-confirmation").show();
      $('#list-of-tasks #task-list').show();
 

@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default visit-commission step-3">
@@ -21,6 +21,10 @@
                               <div class="client-title">Mr</div>
                               <div class="client-first-name">Gerald</div>
                               <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW">
+                              <div>H &amp; W | 19273638</div>
                          </a>
                          <div class="separator"> > </div>
                          <span>Commission a visit</span>
@@ -48,7 +52,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -86,13 +90,6 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
-
                          {{= it.include('side-panel/client-details.html') }}
 
                     </div>
@@ -109,7 +106,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -118,7 +115,7 @@
 
                </div>
 
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <div class="commission-visit right">
 
@@ -176,15 +173,15 @@
                                    <!-- // FORM ITEM - 3 - END // -->
 
                                    <!-- // FORM ITEM - 4a - START // -->
-                                   <div class="form-group">
+                                   <!-- <div class="form-group">
                                         <label for="third-party-postcode">Postcode</label>
                                         <input id="third-party-postcode" name="postcode" type="text" class="one-third">
                                         <a class="main-cta secondary" id="find-postcode">Find address</a>
-                                   </div>
+                                   </div> -->
                                    <!-- // FORM ITEM - 4a - END // -->
 
                                    <!-- // FORM ITEM - 4b - START // -->
-                                   <div class="form-group address-list">
+                                   <!-- <div class="form-group address-list">
                                         <label for="third-party-address-1" class="radio address">
                                              <input id="third-party-address-1" type="radio" name="radio-inline-group" value="third-party-address-1">
                                              1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
@@ -233,7 +230,26 @@
                                              <input id="third-party-address-12" type="radio" name="radio-inline-group" value="third-party-address-12">
                                              12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
                                         </label>
-
+                                   </div> -->
+                                   <div class="form-group">
+                                        <label for="third-party-address-line-1">Address</label>
+                                        <input id="third-party-address-line-1" name="third-party-address-line-1" type="text" value="">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="third-party-address-line-2" class="hide">Address line 2</label>
+                                        <input id="third-party-address-line-2" name="third-party-address-line-2" type="text" value="">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="third-party-address-line-3" class="hide">Address line 3</label>
+                                        <input id="third-party-address-line-3" name="third-party-address-line-3" type="text">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="third-party-address-town">Town</label>
+                                        <input id="third-party-address-town" name="third-party-address-town" type="text" value="">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="third-party-manual-postcode">Postcode</label>
+                                        <input id="third-party-manual-postcode" name="third-party-manual-postcode" type="text" class="one-third" value="">
                                    </div>
                                    <!-- // FORM ITEM - 4b - END // -->
 
@@ -294,6 +310,8 @@
                               </div>
                               <!-- // ADD NEW CORRESPONDANT - END // -->
 
+                              <p></p>
+
                          </div>
 
                          <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== -->
@@ -307,12 +325,16 @@
 
                                    <!-- // FORM ITEM - 1 - START // -->
                                    <div class="form-group">
-                                        <legend for="doo">
+                                        <!-- <legend for="doo">
                                              Report is scheduled for:
-                                        </legend>
+                                        </legend> -->
                                         <div class="weeks-6"><div class="wrapper"><span>6</span></div> <p>weeks time</p></div>
                                         <div class="weeks-12"><div class="wrapper"><span>12</span></div> <p>weeks time</p></div>
-                                        <div class="one-third">
+                                        <div class="half">
+                                             <label for="visit-report-date" class="">Report is scheduled for:</label>
+                                             <input id="visit-report-date" name="visit-report-date" type="text" value="05/06/2017" maxlength="12">
+                                        </div>
+                                        <!-- <div class="one-third">
                                              <label for="visit-report-day" class="sub-label">Day</label>
                                              <input id="visit-report-day" name="visit-report-day" type="text" value="05" maxlength="2">
                                         </div>
@@ -323,7 +345,7 @@
                                         <div class="one-third">
                                              <label for="visit-report-year" class="sub-label">Year</label>
                                              <input id="visit-report-year" name="visit-report-year" type="text" value="2017" maxlength="4">
-                                        </div>
+                                        </div> -->
                                    </div>
                                    <!-- <div class="form-group report">
                                         <label for="datepicker">Report is scheduled for:</label>
@@ -345,8 +367,12 @@
 
                                    <!-- // FORM ITEM - 3 - START // -->
                                    <div class="form-group read-only">
-                                        <legend for="doo">Date of order</legend>
-                                        <div class="one-third">
+                                        <!-- <legend for="doo"></legend> -->
+                                        <div class="half">
+                                             <label for="visit-doo-date">Date of order</label>
+                                             <input id="visit-doo-date" name="visit-doo-date" type="text" value="05/07/2017" readonly maxlength="12">
+                                        </div>
+                                        <!-- <div class="one-third">
                                              <label for="visit-doo-day" class="sub-label">Day</label>
                                              <input id="visit-doo-day" name="visit-doo-day" type="text" value="05" readonly maxlength="2">
                                         </div>
@@ -357,14 +383,18 @@
                                         <div class="one-third">
                                              <label for="visit-doo-year" class="sub-label">Year</label>
                                              <input id="visit-doo-year" name="visit-doo-year" type="text" value="2016" readonly maxlength="4">
-                                        </div>
+                                        </div> -->
                                    </div>
                                    <!-- // FORM ITEM - 3 - END // -->
 
                                    <!-- // FORM ITEM - 4 - START // -->
                                    <div class="form-group read-only">
-                                        <legend for="report-due">Report due from visitor</legend>
-                                        <div class="one-third">
+                                        <legend for="report-due"></legend>
+                                        <div class="half">
+                                             <label for="visit-report-due-date" class="">Report due from visitor</label>
+                                             <input id="visit-report-due-date" name="visit-report-due-date" type="text" value="05/04/2017" readonly maxlength="12">
+                                        </div>
+                                        <!-- <div class="one-third">
                                              <label for="visit-report-due-day" class="sub-label">Day</label>
                                              <input id="visit-report-due-day" name="visit-report-due-day" type="text" value="05" readonly maxlength="2">
                                         </div>
@@ -375,7 +405,7 @@
                                         <div class="one-third">
                                              <label for="visit-report-due-year" class="sub-label">Year</label>
                                              <input id="visit-report-due-year" name="visit-report-due-year" type="text" value="2016" readonly maxlength="4">
-                                        </div>
+                                        </div> -->
                                    </div>
                                    <!-- // FORM ITEM - 4 - END // -->
 
@@ -400,7 +430,7 @@
           <span class="separator"></span>
           <a href="#" onclick="history.back();" class="back">Back to step 2</a>
           <span class="separator"></span>
-          <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a>
+          <a href="#" onclick="../dashboard.html" class="cancel">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 

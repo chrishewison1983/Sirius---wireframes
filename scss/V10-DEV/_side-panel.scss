@@ -14,7 +14,7 @@
      float: right !important;
 }
 
-#document-summary, #action-panel {
+#side-panel, #action-panel {
      // width: auto;
      // position: relative;
      // right: 0;
@@ -22,18 +22,18 @@
           margin-top: 0;
           position: fixed;
           top: 0;
-          width: 40em;
+          width: 60em;
           // right: 0;
      }
 }
 
-#document-summary {
+#side-panel {
      &.sticky {
           margin-top: 1em;
      }
      .tab-content.side-panel {
           #client-details, #document-viewer, #commission-visit {
-               height: 33em;
+               height: 40em;
                overflow-x: scroll;
                overflow-x: hidden;
                // box-shadow: inset 0 0 rgba($black.0.2);
@@ -45,7 +45,22 @@
      }
 }
 
-#document-summary {
+#side-panel {
+     .tab-content.side-panel {
+          #document-viewer {
+               overflow-y: inherit;
+               overflow-x: inherit;
+               .page-1 {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    height: 40em;
+               }
+          }
+     }
+}
+
+
+#side-panel {
      // float: right !important;
      #recipients, .document, #asset-summary, #documents {
           display: inline-block;
@@ -119,6 +134,8 @@
 #document-viewer, #commission-visit {
      line-height: 0;
      display: inline-block;
+     max-height: 39em;
+     overflow-y: scroll;
      width: 100%;
      &.sticky {
           margin-top: 1em;
@@ -126,109 +143,271 @@
           top: 0;
           display: inherit;
      }
-     .document {
-          // background: $border-colour;
-          border: none;
-          border-radius: 0;
-          display: none;
+     .document-1, .document-2 {
           position: relative;
-          .control-panel {
-               margin: 0;
-               padding:  1em 0;
-               position: absolute;
-               // border-radius: $global-border-radius;
-               box-shadow: 0px 10px 10px -5px rgba($black, 0.2);
-               top: 0;
-               left: 0;
-               right: 0;
-               background: $border-colour;
-               font-size: 1rem;
-               font-family: $Montserrat;
-               display: inline-block;
-               width: 100%;
-               h2, a {
-                    display: inline-block;
-               }
-               h2 {
-                    width: auto;
-                    font-family: $Montserrat;
-                    font-size: 1rem;
-                    margin: 0 0 0 1em;
-               }
-               a {
-                    float: right;
-                    margin: 0 1em 0 0;
-                    &#back {
-                         padding-left: 1em;
-                         background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
-                         background-size: 0.5em;
+          &.compare {
+               width: 48.75%;
+               float: left;
+               margin-right: 2.5%;
+               .page-2 {
+                    .wrapper {
+                         margin: 3.75em 0 0 0;
+                         height: 36.25em;
+                    }
+                    .control-panel {
+                         h2 {
+                              max-width: 20em;
+                              overflow: hidden;
+                              white-space: nowrap;
+                              text-overflow: ellipsis;
+                              word-break: break-all;
+                              word-wrap: break-word;
+                         }
+                         .compare {
+                              display: none;
+                         }
                     }
                }
           }
-          .wrapper {
-               height: 46em;
-               overflow-y: scroll;
-               padding: 0 0 0 0;
-               img {
-                    margin-top: 3.5em;
-                    padding: 1.5em 0;
-                    background: $white;
-                    // display: inline-block;
-                    // float: left;
-                    &.document-item {
-                         width: 35em;
+          a {
+               &.close {
+                    position: absolute;
+                    text-indent: -1000em;
+                    display: inline-block;
+                    width: 2em;
+                    border: none;
+                    height: 2em;
+                    border-radius: 50%;
+                    background: url(#{$image-path}/icons/close-white.svg) no-repeat 50% 50% $blue;
+                    background-size: 1.75em;
+                    right: -0.75em;
+                    top: -1em;
+                    z-index: 100;
+               }
+          }
+     }
+     .document-1 {
+          .page-2.document {
+               .control-panel {
+                    a.close {
+                         display: none;
+                    }
+               }
+          }
+          &.float-right {
+               margin: 0;
+               float: right;
+          }
+          a {
+               &.close {
+                    display: none;
+               }
+          }
+     }
+     .document-2 {
+          display: none;
+          position: relative;
+          &.compare {
+               margin-right: 0;
+          }
+          &.float-left {
+               float: left;
+               margin: 0 2.5% 0 0;
+          }
+     }
+     .page-2 {
+          position: relative;
+          &.document {
+               // background: $border-colour;
+               border: none;
+               border-radius: 0;
+               display: none;
+               position: relative;
+               .control-panel {
+                    margin: 0;
+                    padding: 1em 0 0 0;
+                    position: absolute;
+                    border-radius: 5px 5px 0 0;
+                    box-shadow: 0px 10px 10px -5px rgba($black, 0.2);
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background: $main-colour;
+                    font-size: 1rem;
+                    font-family: $Montserrat;
+                    display: inline-block;
+                    width: 100%;
+                    h2, a {
+                         display: inline-block;
+                    }
+                    h2 {
+                         background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50%;
+                         background-size: 0.95em;
+                         width: auto;
+                         font-family: $Montserrat;
+                         text-transform: inherit;
+                         color: $white;
+                         font-size: 1rem;
+                         margin: 0 0 0 1em;
+                         padding: 0 0 0 1.5em;
+                    }
+                    a {
+                         float: right;
+                         margin: 0 1em 0 0;
+                         color: $white;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         font-size: 0.875rem;
+                         // &#back, &
+                         &.back {
+                              padding-left: 1em;
+                              background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
+                              background-size: 0.5em;
+                         }
+                         &.compare {
+                              padding-left: 1.35em;
+                              background: url(#{$image-path}/icons/compare-blue.png) no-repeat 0% 50%;
+                              background-size: 1em;
+                         }
+                         &.close {
+                              position: absolute;
+                              text-indent: -1000em;
+                              display: inline-block;
+                              width: 2em;
+                              border: none;
+                              height: 2em;
+                              border-radius: 50%;
+                              background: url(#{$image-path}/icons/close-white.svg) no-repeat 50% 50% $blue;
+                              background-size: 1.75em;
+                              right: -1.75em;
+                              top: -1em;
+                         }
+                    }
+                    img.control-panel-buttons {
                          height: auto;
-                         margin-right: 0;
+                         padding: 0;
                          border: none;
-                         border-radius: 0;
+                         width: 100%;
+                         margin: 0.5em 0 0 0;
+                    }
+               }
+               .wrapper {
+                    border-radius: $global-border-radius;
+                    border: 3px solid $white-off;
+                    margin: 5em 0 0 0;
+                    height: 35em;
+                    width: 100%;
+                    overflow-y: scroll;
+                    padding: 0 0 0 0;
+                    text-align: center;
+                    // margin: 0;
+                    img {
+                         margin-top: 1.5em;
+                         padding: 1.5em 0;
+                         background: $white;
+                         width: 80%;
+                         // display: inline-block;
+                         float: none;
+                         &.document-item {
+                              // width: 35em;
+                              height: auto;
+                              margin-right: 0;
+                              border: none;
+                              border-radius: 0;
+                         }
+                    }
+               }
+          }
+          .compare-icon {
+               display: inline-block;
+               width: 4.5em;
+               height: 4.5em;
+               border-radius: 50%;
+               position: absolute;
+               top: 50%;
+               left: -1.5em;
+               margin: -1.5em 0 0 -1.5em;
+               background: url(#{$image-path}/icons/compare-white.png) no-repeat 50% 50% $blue;
+               background-size: 1.75em;
+               box-shadow: 0 0 10px 0 rgba($black,0.2);
+          }
+     }
+     .documents-details {
+          margin: 0.5em 0 0 0;
+          padding: 0 0 0.75em 0;
+          border-bottom: dashed 2px rgba($black,0.2);
+          width: 95%;
+          span {
+               margin: 0 0.75em 0 0;
+               strong {
+                    color: rgba($black,0.8);
+               }
+          }
+     }
+     ul.livelink-documents, table.livelink-documents {
+          margin: 0;
+          a {
+               font-size: inherit;
+               border: none;
+               padding: 0.25em 0 0.25em 1.5em;
+               width: auto;
+               border-bottom: 1px dashed $blue;
+               background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+               background-size: 0.95em;
+               &:before, &:after {
+                    display: none;
+               }
+               &:hover {
+                    background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                    background-size: 0.95em;
+                    border-bottom: 1px solid $blue;
+               }
+          }
+          form {
+               display: inline-block;
+               float: right;
+               label {
+                    &.normal {
+                         margin: -0.25em 0 0 0;
                     }
                }
           }
      }
-}
-
-#document-viewer {
      ul.livelink-documents {
-          margin: 0;
           li {
                margin: 1em 0 0 0;
                &:hover {
                     background: none;
                }
-               a {
-                    font-size: inherit;
-                    border: none;
-                    padding: 0.25em 0 0.25em 1.5em;
-                    width: auto;
-                    border-bottom: 1px dashed $blue;
-                    background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
-                    background-size: 0.95em;
-                    &:before, &:after {
-                         display: none;
-                    }
-                    &:hover {
-                         background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
-                         background-size: 0.95em;
-                         border-bottom: 1px solid $blue;
+          }
+     }
+     table.livelink-documents {
+          width: 97%;
+          thead {
+               tr {
+                    th {
+                         padding-top: 0;
+                         color: $black;
+                         // border-bottom: 10px solid $
                     }
                }
-               form {
-                    display: inline-block;
-                    float: right;
-                    label {
-                         &.normal {
-                              margin: -0.25em 0 0 0;
+          }
+          tbody {
+               tr {
+                    &:hover {
+                         background: none;
+                    }
+                    td {
+                         padding-top: 1em;
+                         padding-bottom: 1em;
+                         font-size: 0.875rem;
+                         &:first-of-type {
+                              padding-left: 0;
                          }
                     }
                }
           }
      }
-}
-
-#commission-visit {
-     max-height: 39em;
-     overflow-y: scroll;
-     width: 100%;
 }
 
 .accordion-section {
@@ -332,6 +511,7 @@ button.accordion-section-title {
 
 /* Style the accordion panel. Note: hidden by default */
 #document-viewer, #commission-visit {
+     // position: relative;
      .accordion-section-content {
           padding: 1em;
           background-color: white;

@@ -65,20 +65,20 @@ if ($.cookie("username")) {
 
 // Create & Edit client populate
 $("#create-client, #edit-client").on("click", function (e) {
-     $.cookie("client-status", $("input[name=client-status]:checked").val(), {path:'/'});
-     $.cookie("client-status-day", $("#client-status-day").val(), {path:'/'});
-     $.cookie("client-status-month", $("#client-status-month").val(), {path:'/'});
-     $.cookie("client-status-year", $("#client-status-year").val(), {path:'/'});
+     $.cookie("client-status", $("#client-status").val(), {path:'/'});
+     $.cookie("client-status-date", $("#client-status-date").val(), {path:'/'});
+     // $.cookie("client-status-month", $("#client-status-month").val(), {path:'/'});
+     // $.cookie("client-status-year", $("#client-status-year").val(), {path:'/'});
      $.cookie("client-title", $("#client-title").val(), {path:'/'});
      $.cookie("client-first-name", $("#client-first-name").val(), {path:'/'});
      $.cookie("client-middle-name", $("#client-middle-name").val(), {path:'/'});
      $.cookie("client-last-name", $("#client-last-name").val(), {path:'/'});
-     $.cookie("client-dob-day", $("#client-dob-day").val(), {path:'/'});
-     $.cookie("client-dob-month", $("#client-dob-month").val(), {path:'/'});
-     $.cookie("client-dob-year", $("#client-dob-year").val(), {path:'/'});
+     $.cookie("client-dob", $("#client-dob").val(), {path:'/'});
+     // $.cookie("client-dob-month", $("#client-dob-month").val(), {path:'/'});
+     // $.cookie("client-dob-year", $("#client-dob-year").val(), {path:'/'});
      $.cookie("client-previous-name", $("#client-previous-name").val(), {path:'/'});
      $.cookie("client-country", $("#client-country").val(), {path:'/'});
-     $.cookie("client-postcode", $("#client-postcode").val(), {path:'/'});
+     // $.cookie("client-postcode", $("#client-postcode").val(), {path:'/'});
      $.cookie("client-address", $("input[name=client-address]:checked").val(), {path:'/'});
      $.cookie("client-address-line-1", $("#client-address-line-1").val(), {path:'/'});
      $.cookie("client-address-line-2", $("#client-address-line-2").val(), {path:'/'});
@@ -93,7 +93,8 @@ $("#create-client, #edit-client").on("click", function (e) {
      $.cookie("client-financial", $("#client-financial").val(), {path:'/'});
      $.cookie("client-casarec", $("#client-casarec").val(), {path:'/'});
      $.cookie("client-accommodation", $("#client-accommodation").val(), {path:'/'});
-     /* textarea */ $.cookie("client-medical-condition", $(".client-medical-condition .jqte_editor").html(), {path:'/'});
+     /* textarea */ $.cookie("client-medical-condition", $("#client-medical-condition").val(), {path:'/'});
+     // /* textarea */ $.cookie("client-medical-condition", $(".client-medical-condition .jqte_editor").html(), {path:'/'});
      $.cookie("client-marital-status", $("#client-marital-status").val(), {path:'/'});
      $.cookie("client-correspondence-post", $("#client-correspondence-post:checked").val(), {path:'/'});
      $.cookie("client-correspondence-phone", $("#client-correspondence-phone:checked").val(), {path:'/'});
@@ -114,31 +115,31 @@ if ($.cookie("edit-client")) {
 
 
 if ($.cookie("client-status")) { $(".client-status").text($.cookie("client-status")); }
-if ($.cookie("client-status") == 'Active') {
-     $('#client-status-active').parent().addClass('checked');
-     $('#client-status-deceased, #client-status-202').parent().removeClass('checked');
-}
-if ($.cookie("client-status") == 'Deceased') {
-     $('#client-status-deceased').parent().addClass('checked');
-     $('#client-status-active, #client-status-202').parent().removeClass('checked');
-}
-if ($.cookie("client-status") == 'Rule 202') {
-     $('#client-status-202').parent().addClass('checked');
-     $('#client-status-active, #client-status-deceased').parent().removeClass('checked');
-}
+// if ($.cookie("client-status") == 'Active') {
+//      $('#client-status-active').parent().addClass('checked');
+//      $('#client-status-deceased, #client-status-202').parent().removeClass('checked');
+// }
+// if ($.cookie("client-status") == 'Deceased') {
+//      $('#client-status-deceased').parent().addClass('checked');
+//      $('#client-status-active, #client-status-202').parent().removeClass('checked');
+// }
+// if ($.cookie("client-status") == 'Rule 202') {
+//      $('#client-status-202').parent().addClass('checked');
+//      $('#client-status-active, #client-status-deceased').parent().removeClass('checked');
+// }
 
-if ($.cookie("client-status-day")) {
-     $(".client-status-day").text($.cookie("client-status-day"));
-     $(".edit-client-form #client-status-day").val($.cookie("client-status-day"));
+if ($.cookie("client-status-date")) {
+     $(".client-status-date").text($.cookie("client-status-date"));
+     $(".edit-client-form #client-status-date").val($.cookie("client-status-date"));
 }
-if ($.cookie("client-status-month")) {
-     $(".client-status-month").text($.cookie("client-status-month"));
-     $(".edit-client-form #client-status-month").val($.cookie("client-status-month"));
-}
-if ($.cookie("client-status-year")) {
-     $(".client-status-year").text($.cookie("client-status-year"));
-     $(".edit-client-form #client-status-year").val($.cookie("client-status-year"));
-}
+// if ($.cookie("client-status-month")) {
+//      $(".client-status-month").text($.cookie("client-status-month"));
+//      $(".edit-client-form #client-status-month").val($.cookie("client-status-month"));
+// }
+// if ($.cookie("client-status-year")) {
+//      $(".client-status-year").text($.cookie("client-status-year"));
+//      $(".edit-client-form #client-status-year").val($.cookie("client-status-year"));
+// }
 if ($.cookie("client-title")) {
      $(".client-title").text($.cookie("client-title"));
      $(".edit-client-form #client-title").val($.cookie("client-title"));
@@ -155,18 +156,18 @@ if ($.cookie("client-last-name")) {
      $(".client-last-name").text($.cookie("client-last-name"));
      $(".edit-client-form #client-last-name").val($.cookie("client-last-name"));
 }
-if ($.cookie("client-dob-day")) {
-     $(".client-dob-day").text($.cookie("client-dob-day"));
-     $(".edit-client-form #client-dob-day").val($.cookie("client-dob-day"));
+if ($.cookie("client-dob")) {
+     $(".client-dob").text($.cookie("client-dob"));
+     $(".edit-client-form #client-dob").val($.cookie("client-dob"));
 }
-if ($.cookie("client-dob-month")) {
-     $(".client-dob-month").text($.cookie("client-dob-month"));
-     $(".edit-client-form #client-dob-month").val($.cookie("client-dob-month"));
-}
-if ($.cookie("client-dob-year")) {
-     $(".client-dob-year").text($.cookie("client-dob-year"));
-     $(".edit-client-form #client-dob-year").val($.cookie("client-dob-year"));
-}
+// if ($.cookie("client-dob-month")) {
+//      $(".client-dob-month").text($.cookie("client-dob-month"));
+//      $(".edit-client-form #client-dob-month").val($.cookie("client-dob-month"));
+// }
+// if ($.cookie("client-dob-year")) {
+//      $(".client-dob-year").text($.cookie("client-dob-year"));
+//      $(".edit-client-form #client-dob-year").val($.cookie("client-dob-year"));
+// }
 if ($.cookie("client-previous-name")) {
      $(".client-previously-known-as").text($.cookie("client-previous-name"));
      $(".edit-client-form #client-previous-name").val($.cookie("client-previous-name"));
@@ -175,10 +176,10 @@ if ($.cookie("client-country")) {
      $(".client-country").text($.cookie("client-country"));
      $(".edit-client-form #client-country").val($.cookie("client-country"));
 }
-if ($.cookie("client-postcode")) {
-     $(".client-postcode").text($.cookie("client-postcode"));
-     $(".edit-client-form #client-postcode").val($.cookie("client-postcode"));
-}
+// if ($.cookie("client-postcode")) {
+//      $(".client-postcode").text($.cookie("client-postcode"));
+//      $(".edit-client-form #client-postcode").val($.cookie("client-postcode"));
+// }
 if ($.cookie("client-address-line-1")) {
      $(".client-address-line-1").text($.cookie("client-address-line-1"));
      $(".edit-client-form #client-address-line-1").val($.cookie("client-address-line-1"));

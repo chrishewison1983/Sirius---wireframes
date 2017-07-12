@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-add-edit-deputy.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
@@ -45,7 +45,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="document-summary" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -77,7 +77,7 @@
                          <h3 class="sub-section-title">Letter template chosen</h3>
 
                          <div class="document">
-                              <img src="../../../production/img/V10/document-thumbnail.png" alt="Document" class="document-item">
+                              <img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item">
                               <h3 class="title">CT-bb: Blank complaints team template</h3>
                          </div>
 
@@ -93,13 +93,6 @@
 
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
-
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
 
                          {{= it.include('side-panel/client-details.html') }}
 
@@ -117,7 +110,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -127,7 +120,7 @@
                </div>
 
                <!-- // CREATE DEPUTY - START // -->
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <div class="check-details">
 

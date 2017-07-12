@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
@@ -23,6 +23,10 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW">
+                              <div>H &amp; W | 19273638</div>
+                         </a>
+                         <div class="separator"> > </div>
                          <span>Create letter</span>
                     </nav>
                     <h1>
@@ -40,7 +44,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-7 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -88,13 +92,6 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
-
                          {{= it.include('side-panel/client-details.html') }}
 
                     </div>
@@ -111,7 +108,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -121,11 +118,37 @@
                </div>
 
                <!-- // EDIT DOCUMENT - START // -->
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-5 large-uncentered columns">
 
                     <h2 class="section-title">Edit document</h2>
 
-                    <img src="../../../production/img/V9/document-editor.png" alt="Document" class="document-item">
+                    <div class="form-group">
+                         <textarea name="textarea" class="jqte-test" id="edit-document">
+                              <p>Our ref: <strong>Investigations/7000-0000-2654/[Your initials]</strong></p>
+                              <p>Dear Salutation Deputy Last</p>
+                              <p><strong>Re: Client's First Name Last Name of Client</strong></p>
+                              <p>My name is a manager, and I am now the Investigating officer dealing with this case.</p>
+                              <p>My contact details are:</p>
+                              <ul>
+                                   <li>0121 631 XXXX</li>
+                                   <li>XXXXXXXXXX@publicguardian.gsi.gov.uk</li>
+                              </ul>
+                              <p>You can write to me at the same postal address.</p>
+                              <p>There's a new OPG reference <strong>Investigations/7000-0000-2654/[Your initials],</strong> make sure you quote it when you contact us.</p>
+                              <p>Yours sincerely</p>
+                              <p></p>
+                              <p></p>
+                              <p>a manager</p>
+                              <p>Investigating officer</p>
+                              <p>Compliance Unit</p>
+                              <p></p>
+                              <p></p>
+                              <p><strong>Office of the Public Guardian</strong></p>
+                              <p></p>
+                              <p>Cymraeg: if you'd prefer to hear from us in Welsh, call 0300 456 0300 or email customerservices@publicguardian.gis.gov.uk</p>
+                              <p></p>
+                         </textarea>
+                    </div>
 
                </div>
                <!-- // EDIT DOCUMENT - END // -->

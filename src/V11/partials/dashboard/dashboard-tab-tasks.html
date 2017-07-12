@@ -21,38 +21,49 @@
 
 	<table id="tasks-table" class="tablesorter">
 		<thead>
-			<tr class="three-column">
+			<tr class="four-column">
 				<th><span></span>Type</th>
 				<th><span></span>Task due date</th>
-				<th><span></span>Order status</th>
+				<th><span></span>Case type</th>
+				<th><span></span>Task status</th>
 			</tr>
 		</thead>
 		<tbody>
 			<!-- TASK 1 - START -->
-			<tr>
+			<tr class="urgent-row">
 				<td>
-					<span class="task-type review-correspondence"></span>
-					<a href="#" class="task">Review application correspondence</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>1234567890</p>
-						<span class="client"></span>
-						<p><a href="4-client-page/4a-new-client.html">Gerald Brackens</a></p>
-						<p><a href="#" class="open">Task description</a></a>
-					</div>
-					<div class="description">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
-						</p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-correspondence"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>20/05/2017</p>
-					<div class="counter">
-						<span class="number">17</span>
+					<div class="counter alert">
+						<span class="number">-4</span>
 						days
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -68,22 +79,32 @@
 			<!-- TASK 2 - START -->
 			<tr class="urgent-row link-for-commission-visit">
 				<td>
-					<span class="task-type commission-visit"></span>
-					<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>1234567890</p>
-						<span class="client"></span>
-						<p><a href="4-client-page/4a-new-client.html">Gerald Brackens</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>20/04/2017</p>
 					<div class="counter alert">
-						<span class="number">-13</span>
+						<span class="number">-2</span>
 						day
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -99,22 +120,32 @@
 			<!-- TASK 3 - START -->
 			<tr>
 				<td>
-					<span class="task-type review-report"></span>
-					<a href="#" class="task">Review annual report</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>6271932819</p>
-						<span class="client"></span>
-						<p><a href="#">Ewan Jones</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4391</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Ewan Jones</a></p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>25/06/2017</p>
 					<div class="counter">
-						<span class="number">53</span>
+						<span class="number">5</span>
 						days
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -130,22 +161,38 @@
 			<!-- TASK 4 - START -->
 			<tr>
 				<td>
-					<span class="task-type print-notice"></span>
-					<a href="#" class="task">Print and send generated notice(s)</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>1037261920</p>
-						<span class="client"></span>
-						<p><a href="#">Chelsea Burton</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type print-notice"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6928</p>
+								<span class="client"></span>
+								<p><a href="#">Miss Chelsea Burton</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>25/06/2017</p>
 					<div class="counter">
-						<span class="number">53</span>
+						<span class="number">5</span>
 						days
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -159,24 +206,34 @@
 			<!-- TASK 4 - START -->
 
 			<!-- TASK 5 - START -->
-			<tr class="urgent-row">
+			<tr class="">
 				<td>
-					<span class="task-type review-report"></span>
-					<a href="#" class="task">Review annual report</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>7365163918</p>
-						<span class="client"></span>
-						<p><a href="#">Jennifer Moss</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client"></span>
+								<p><a href="#">Mrs Jennifer Moss</a></p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>01/05/2017</p>
-					<div class="counter alert">
-						<span class="number">-2</span>
+					<div class="counter">
+						<span class="number">3</span>
 						days
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -190,24 +247,40 @@
 			<!-- TASK 5 - END -->
 
 			<!-- TASK 6 - START -->
-			<tr class="urgent-row">
+			<tr class="">
 				<td>
-					<span class="task-type commission-visit"></span>
-					<a href="#" class="task">Commission visit</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>7193826190</p>
-						<span class="client"></span>
-						<p><a href="#">Morgan Graham</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4019</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Morgan Graham</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>29/05/2017</p>
-					<div class="counter alert">
-						<span class="number">-4</span>
-						day
+					<div class="counter">
+						<span class="number">4</span>
+						days
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -221,24 +294,34 @@
 			<!-- TASK 6 - START -->
 
 			<!-- TASK 7 - START -->
-			<tr>
+			<tr class="urgent-row">
 				<td>
-					<span class="task-type assign-validity"></span>
-					<a href="#" class="task">Review and assign Objection validity</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>1324372819</p>
-						<span class="client"></span>
-						<p><a href="#">Benjamin Howell</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type assign-validity"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>03/05/2017</p>
-					<div class="counter">
-						<span class="number">0</span>
-						days
+					<div class="counter alert">
+						<span class="number">-1</span>
+						day
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -254,22 +337,38 @@
 			<!-- TASK 8 - START -->
 			<tr>
 				<td>
-					<span class="task-type death-notification"></span>
-					<a href="#" class="task">Review Death Notification Correspondence</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>7381736183</p>
-						<span class="client"></span>
-						<p><a href="#">Georgia Lynch</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type death-notification"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review Death Notification Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3029</p>
+								<span class="client"></span>
+								<p><a href="#">Ms Georgia Lynch</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>03/05/2017</p>
 					<div class="counter">
-						<span class="number">0</span>
-						days
+						<span class="number">1</span>
+						day
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">
@@ -283,24 +382,40 @@
 			<!-- TASK 8 - START -->
 
 			<!-- TASK 9 - START -->
-			<tr class="urgent-row">
+			<tr class="">
 				<td>
-					<span class="task-type disclaimer"></span>
-					<a href="#" class="task">Review Disclaimer Correspondence</a>
-					<div class="details">
-						<span class="case-number"></span>
-						<p>4351729281</p>
-						<span class="client"></span>
-						<p><a href="#">Laura Dunn</a></p>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type disclaimer"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review Disclaimer Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3829</p>
+								<span class="client"></span>
+								<p><a href="#">Mrs Laura Dunn</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
 					</div>
 				</td>
 				<td>
-					<span class="date"></span>
+					<span class="icon date"></span>
 					<p>02/05/2017</p>
-					<div class="counter alert">
-						<span class="number">-1</span>
-						day
+					<div class="counter">
+						<span class="number">3</span>
+						days
 					</div>
+				</td>
+				<td>
+					<p>ORDER - <strong>PFA</strong><span class="icon property"></span></p>
 				</td>
 				<td>
 					<div class="rag-rating">

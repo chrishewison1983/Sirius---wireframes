@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default visit-commission step-6">
@@ -21,6 +21,10 @@
                               <div class="client-title">Mr</div>
                               <div class="client-first-name">Gerald</div>
                               <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW">
+                              <div>H &amp; W | 19273638</div>
                          </a>
                          <div class="separator"> > </div>
                          <span>Commission a visit</span>
@@ -48,7 +52,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -64,7 +68,7 @@
                               <span class="deputy-details"></span>
                               <p>Deputy details</p>
                          </li>
-                         <li class="tab-link" data-tab="tab-4">
+                         <li class="tab-link current" data-tab="tab-4">
                               <span class="documents"></span>
                               <p>Documents</p>
                          </li>
@@ -72,7 +76,7 @@
                     <!-- =========== TABS - END =========== -->
 
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="tab-content side-panel current">
+                    <div id="tab-1" class="tab-content side-panel">
 
                          <!-- // VISIT SUMMARY - START // -->
                          <h2 class="section-title">Commission visit info</h2>
@@ -85,13 +89,6 @@
 
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
-
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
 
                          {{= it.include('side-panel/client-details.html') }}
 
@@ -107,9 +104,9 @@
                     <!-- =========== TAB CONTENT - 3 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="tab-content side-panel">
+                    <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -118,7 +115,7 @@
 
                </div>
 
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <div class="commission-visit right">
 
@@ -220,7 +217,7 @@
           <span class="separator"></span>
           <a href="#" onclick="history.back();" class="back">Back to step 5</a>
           <span class="separator"></span>
-          <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a>
+          <a href="#" onclick="../dashboard.html" class="cancel">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 
@@ -229,7 +226,7 @@
 
 <!-- // MODAL - START // -->
 <div id="ex1" style="display:none;">
-     <img src="../../../production/img/V10/document-thumbnail.png" alt="Document" class="document-item">
+     <img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item">
      <hr>
      <div class="cta-row">
           <a class="main-cta primary" href="6g-confirmation-page.html">Commission visit</a>

@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
@@ -21,6 +21,10 @@
                               <div class="client-title">Mr</div>
                               <div class="client-first-name">Gerald</div>
                               <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html" class="health-and-welfare">
+                              <div>H &amp; W | 19273638</div>
                          </a>
                          <div class="separator"> > </div>
                          <span>Commission a visit</span>
@@ -54,9 +58,13 @@
                          <!-- // FORM ITEM - 2 - START // -->
                          <div class="form-group">
                               <legend for="visit-date-reported-day">
-                                   Set a reminder for the visit:
+
                               </legend>
-                              <div class="one-third">
+                              <div class="half">
+                                   <label for="visit-reminder-date" class="">Set a reminder for the visit:</label>
+                                   <input id="visit-reminder-date" name="visit-reminder-date" type="text" value="05/06/2017" maxlength="12">
+                              </div>
+                              <!-- <div class="one-third">
                                    <label for="visit-reminder-day" class="sub-label">Day</label>
                                    <input id="visit-reminder-day" name="visit-reminder-day" type="text" value="05" maxlength="2">
                               </div>
@@ -67,7 +75,7 @@
                               <div class="one-third">
                                    <label for="visit-reminder-year" class="sub-label">Year</label>
                                    <input id="visit-reminder-year" name="visit-reminder-year" type="text" value="2017" maxlength="4">
-                              </div>
+                              </div> -->
                          </div>
                          <!-- // FORM ITEM - 2 - END // -->
 
@@ -84,7 +92,7 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a id="add-letter" class="main-cta primary" href="../4-client-page/4a-new-client.html">Add actions</a>
+          <a id="add-letter" class="main-cta primary" href="../4-client-page/4a-new-client.html#HandW">Add actions</a>
           <a href="#" onclick="history.back();">Cancel</a>
      </div>
      <!-- CTA-FOOTER - END -->

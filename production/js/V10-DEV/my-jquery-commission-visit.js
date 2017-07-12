@@ -628,23 +628,6 @@ $(".visit-family-background").click( function(){
      $('#cta-footer').slideDown('slow');
 });
 
-// Document viewer
-$(document).ready(function() {
-     $(".hide-page-1").click(function(){
-          $("#page-1").animate({width: 'toggle'}, "slow");
-          setTimeout(function() {
-               $("#page-2").animate({width: 'toggle'}, "slow");
-          }, 500);
-     });
-     $("#back").click(function(){
-          $("#page-2").animate({width: 'toggle'}, "slow");
-          setTimeout(function() {
-               $("#page-1").animate({width: 'toggle'}, "slow");
-          }, 500);
-     });
-
-});
-
 // Side panel content
 if ($.cookie("completed-step-1") && $.cookie("completed-step-2") && $.cookie("completed-step-3") && $.cookie("completed-step-4") && $.cookie("completed-step-5") == 'true') {
      $('.accordion').find('#step-1, #step-2, #step-3, #step-4, #step-5').removeClass('inactive');

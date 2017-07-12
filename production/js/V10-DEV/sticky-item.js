@@ -1,7 +1,7 @@
 // Sticky item
 // Cache selectors outside callback for performance.
 var $window = $(window),
-     $stickyEl = $('#document-summary'),
+     $stickyEl = $('#side-panel'),
      elTop = $stickyEl.offset().top;
 
 $window.scroll(function() {

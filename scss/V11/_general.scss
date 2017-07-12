@@ -29,48 +29,67 @@ main {
      }
      &.default {
           display: inline-block;
-          width: 85%;
+          width: 96%;
           float: left;
-          margin: 0 0 5em 15%;
+          margin: 0 0 5em 4%;
           position: relative;
           // padding: 3em;
           @include standard-transition;
           .content-wrapper {
                padding: 3em 0;
-               &.commission-visit {
+               &.commission-visit, &.create-case {
                     padding-top: 0;
+               }
+          }
+          #client-overview {
+               #list-of-summary {
+                    padding: 2em 0 3em 0;
+               }
+               #client-details {
+                    margin-top: 2em;
+               }
+          }
+
+          #client-health, #client-property, #client-unassigned {
+               .content-wrapper {
+                    padding: 2em 0 3em 0;
                }
           }
           &.full-width {
                width: 95%;
                margin: 0 0 5em 4.95em;
-               #document-summary.sticky, #action-panel.sticky {
-                    width: 39.5em;
+               #side-panel.sticky, #action-panel.sticky {
+                    width: 60.25%;
                }
                &.new-client {
-                    width: 94.75%;
-                    padding: 0 0 0 18.15em;
+                    width: 95.25%;
+                    padding: 0 0 0 17.35%;
                     margin-bottom: 0;
                     // margin: 0 0 5em 20%;
                }
           }
      }
      &.new-client {
-          width: 69.75%;
+          width: 77%;
           position: relative;
-          margin: 0 0 5em 30.25%;
+          margin: 0 0 5em 23%;
           .row {
-               max-width: 65rem;
+               // max-width: 65rem;
                &.full-width-row {
-                    max-width: 72rem;
+                    max-width: inherit;
+                    width: auto;
                }
+          }
+          ul.tabs, .tab-content {
+               width: 100%;
           }
      }
 }
 
 .row {
      &.full-width-row {
-          max-width: 79rem;
+          max-width: 95%;
+          // max-width: 79rem;
      }
 }
 
@@ -128,6 +147,17 @@ h1, h2, h3, h4 {
      }
      a, strong {
           color: $blue;
+          &.edit {
+               float: right;
+               font-size: 1rem;
+               text-transform: capitalize;
+               font-family: $Montserrat;
+               font-weight: normal;
+               padding: 0 0 0 1.5em;
+               background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 50%;
+               background-size: 1em;
+               margin: 0.25em 0 0 0;
+          }
      }
      img.document-item {
           display: inline-block;
@@ -162,6 +192,9 @@ p, ul, ul li {
 }
 
 p {
+     strong {
+          font-family: $Opensans-Bold;
+     }
      .letter {
           @include flexbox;
           @include align-items(center);
@@ -242,12 +275,12 @@ ol {
 }
 
 .section-title, .sub-section-title {
-     font-size: 1.6rem;
+     font-size: 1.4rem;
      display: inline-block;
      width: 100%;
      font-family: $Montserrat;
      font-weight: bold;
-     margin: 0.5em 0 1.5em 0;
+     margin: 0.5em 0 0.75em 0;
      div {
           display: inline-block;
      }
@@ -268,6 +301,9 @@ a {
           text-decoration: none;
           border-bottom: 1px solid;
           color: darken($blue, 5%);
+     }
+     .hashtag {
+          color: $black;
      }
 }
 
@@ -342,7 +378,7 @@ a.main-cta {
      padding: 1em 1.5em 1.5em 1.5em;
      .content {
           display: inline-block;
-          h2 {
+          h1, h2 {
                margin: 0 0 0.25em 0;
                color: rgba($white,0.7);
                text-transform: inherit;
@@ -351,9 +387,12 @@ a.main-cta {
                     color: $white;
                     font-family: $Montserrat;
                     font-weight: bold;
+                    display: inline-block;
+                    float: left;
                }
                span {
                     display: inline-block;
+                    float: left;
                     width: 1.5em;
                     height: 1.5em;
                     margin: 0 0.25em 0 0;
@@ -364,11 +403,12 @@ a.main-cta {
                }
           }
      }
-     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit, &#edit-client-confirm {
+     &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit,
+     &#edit-client-confirm, &#error-message {
           display: none;
           margin: 2em 0 0 0;
           width: 100%;
-          h2 {
+          h1, h2 {
                margin: 0;
           }
           #visits, #document-recipients {
@@ -390,7 +430,7 @@ a.main-cta {
           }
      }
      &#edit-client-confirm {
-          display: inline-block;
+          // display: inline-block;
           margin: 2em 0 0em 0;
      }
      &#deputy-added {
@@ -410,6 +450,44 @@ a.main-cta {
      }
      &#confirmation-dashboard-visit {
           margin: 0 0 1em 0;
+     }
+     &#error-message {
+          background: $red;
+          // display: inline-block;
+          margin: 0 0 2em 0;
+          .content {
+               h1 {
+                    font-size: 1.4rem;
+                    color: $white;
+                    margin: 0 0 0.5em 0;
+                    span {
+                         width: 2.25em;
+                         height: 2.25em;
+                         margin: 0 0.5em 0 0;
+                         top: 0.1em;
+                         background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+               p {
+                    color: rgba($white,0.7);
+                    margin: 0 0 0.75em 0;
+               }
+               ul {
+                    margin: 0 0 0 5%;
+                    width: 95%;
+                    li {
+                         color: $white;
+                         margin: 0 0 0.5em 0;
+                         &:last-of-type {
+                              margin: 0;
+                         }
+                         a {
+                              color: $white;
+                         }
+                    }
+               }
+          }
      }
 }
 
@@ -440,7 +518,8 @@ hr {
 @media #{$xlarge-up} {
 
      .row {
-          max-width: 80rem;
+          max-width: 95%;
+          // max-width: 80rem;
      }
 
      iframe {
@@ -470,14 +549,16 @@ hr {
 // ONLY FOR DESKTOP (961 up)
 @media #{$large-up} {
 
+     .row {
+          max-width: 95%;
+          // max-width: 80rem;
+     }
 
      main {
           .row.main-content {
                margin-bottom: 8em;
           }
      }
-
-
 
 }
 

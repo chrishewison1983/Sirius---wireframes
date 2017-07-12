@@ -7,21 +7,48 @@
 nav.progress-bar {
      display: inline-block;
      width: 100%;
-     padding: 3em 0 1em 0;
+     padding: 2em 0;
      ul {
           margin: 0;
           position: relative;
+          &.steps-two {
+               li {
+                    width: 50%;
+               }
+               .border {
+                    width: 50%;
+                    left: 25.5%;
+               }
+          }
+          &.steps-four {
+               li {
+                    width: 25%;
+               }
+               .border {
+                    width: 75%;
+                    left: 12.5%;
+               }
+          }
           &.steps-five {
                li {
                     width: 20%;
+               }
+               .border {
+                    width: 81%;
+                    left: 9.5%;
                }
           }
           &.steps-six {
                li {
                     width: 16.666%;
                }
+               .border {
+                    width: 81%;
+                    left: 9.5%;
+               }
           }
           li {
+               position: relative;
                width: auto;
                float: left;
                list-style: none;
@@ -30,7 +57,7 @@ nav.progress-bar {
                &:hover {
                     cursor: initial;
                     background: none;
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                }
                a.wrapper {
                     text-align: center;
@@ -125,17 +152,48 @@ nav.progress-bar {
                }
           }
           .border {
-               width: 81%;
+               // width: 81%;
                height: 0.3em;
                position: absolute;
                top: 1.5em;
-               left: 9.5%;
                border-radius: 0;
                border: none;
                z-index: 1;
 
-               // 6 STEPS, 5 STEPS - STEP 1
+               // 6 STEPS, 5 STEPS, 4 STEPS - STEP 1
                background-color: $border-colour;
+
+               // 4 STEPS - STEP 2
+               &.thirty-two-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $green 32%,$border-colour 32%,$border-colour 32%));
+               }
+               // 4 STEPS - STEP 3
+               &.sixty-seven-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $green 67%,$border-colour 67%,$border-colour 67%));
+               }
+
+               // 5 STEPS - STEP 2
+               &.twenty-five-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $green 25%,$border-colour 25%,$border-colour 25%));
+               }
+               // 5 STEPS - STEP 3
+               &.fifty-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $green 50%,$border-colour 50%,$border-colour 50%));
+               }
+               // 5 STEPS - STEP 4
+               &.seventy-five-percent {
+                    background-color: $border-colour; // Old browsers
+                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
+                    @include background-image(linear-gradient(left, $green 75%,$border-colour 75%,$border-colour 75%));
+               }
 
                // 6 STEPS - STEP 2
                &.nineteen-percent {
@@ -162,26 +220,7 @@ nav.progress-bar {
                     @include background-image(linear-gradient(left, $green 80%,$border-colour 80%,$border-colour 80%));
                }
 
-               // 5 STEPS - STEP 2
-               &.twenty-five-percent {
-                    background-color: $border-colour; // Old browsers
-                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
-                    @include background-image(linear-gradient(left, $green 25%,$border-colour 25%,$border-colour 25%));
-               }
-               // 5 STEPS - STEP 3
-               &.fifty-percent {
-                    background-color: $border-colour; // Old browsers
-                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
-                    @include background-image(linear-gradient(left, $green 50%,$border-colour 50%,$border-colour 50%));
-               }
-               // 5 STEPS - STEP 4
-               &.seventy-five-percent {
-                    background-color: $border-colour; // Old browsers
-                    @include filter-gradient($green, $border-colour, horizontal); // IE6-9
-                    @include background-image(linear-gradient(left, $green 75%,$border-colour 75%,$border-colour 75%));
-               }
-
-               // 6 STEPS, 5 STEPS - STEP 5 & 6
+               // 6 STEPS, 5 STEPS, 4 STEPS - STEP 4, 5 & 6
                &.one-hundred-percent {
                     background-color: $border-colour; // Old browsers
                     @include filter-gradient($green, $border-colour, horizontal); // IE6-9

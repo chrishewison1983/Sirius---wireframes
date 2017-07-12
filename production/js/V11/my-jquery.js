@@ -40,6 +40,31 @@ $("label.switch span").click(function () {
      })
 });
 
+$(function() {
+     $(".user-cta").on("click", function(e) {
+          $(this).addClass("active");
+          e.stopPropagation();
+          $('.user-settings').show();
+     });
+     $(document).on("click", function(e) {
+          if ($(e.target).is(".user-cta") === false) {
+               $(".user-cta").removeClass("active");
+               $('.user-settings').hide();
+          }
+     });
+});
+
+// $(".user-cta").click(function () {
+//      // $(this).toggleClass('active');
+// });
+
+$(".multiple").click(function () {
+     $(this).addClass('current');
+     $(this).siblings().removeClass('current');
+});
+
+
+
 // $('#autocomplete').keypress(function() {
 //      $(this).addClass('focus');
 // });
@@ -94,35 +119,7 @@ $(document).ready(function(){
      	$("#"+tab_id).addClass('current');
      });
 
-     $('.details').hide();
-
-     $('#task-list .more-info').click(function(e){
-          e.preventDefault();
-          $(this).siblings('.details').toggle('slow');
-          $(this).toggleClass('open');
-     });
-
-     $('#task-list label').click( function(){
-          var checked = $('input', this).is(':checked');
-          $('.status').text(checked ? 'done' : 'outstanding');
-          // $(this).parent().parent().parent().addClass(checked ? 'complete' : 'outstanding');
-          // $('.status').text($(this).text() == 'done' ? 'outstanding' : 'done');
-     });
-
-     $('#task-list input:checkbox').change(function(){
-          if($(this).is(":checked")) {
-               $(this).parent().parent().parent().parent().addClass("complete");
-          } else {
-               $(this).parent().parent().parent().parent().removeClass("complete");
-          }
-     });
-
-     $("#task-list .pdf-review").hide();
-
-     // This hides the confirmation box after 10 seconds
-     setTimeout(function() {
-          $("#task-list .pdf-review").show(500)
-     }, 0);
+     // $('.details').hide();
 
 });
 
@@ -199,6 +196,15 @@ $(document).ready(function(){
 
      $('#add-another-deputy').click(function(){
      	$('#deputy-added').slideDown('slow');
+     });
+});
+
+// CREATE LETTER
+$(document).ready(function(){
+     $('.preview').click(function(e){
+          e.preventDefault();
+          var docName = $(this).siblings().find('h2').text();
+          $('#preview-doc').find('h1').text(docName);
      });
 });
 
@@ -325,28 +331,28 @@ $(document).ready(function() {
 // }
 
 // Side panel
-$('.minimise').on('click', function(e) {
-     if ($(this).hasClass('open')) {
-          $(this).removeClass('open');
-          $(this).parent().parent().removeClass('shrink');
-          $(this).parent().parent().parent().find('main').removeClass('full-width');
-          $('nav').find('.create-client, .user-cta').show();
-          $('nav').find('.logo').html('<img src="../../../production/img/V10/sirius-logo.svg" alt="Sirius">');
-          $('nav').find('.sign-out').html('<span class="nav-icon"></span> Sign out');
-          $(this).parent().parent().parent().find('.row').removeClass('full-width-row');
-          $(this).closest('body').find('nav.client-nav').removeClass('full-width');
-     } else {
-          $(this).addClass('open');
-          $(this).parent().parent().addClass('shrink');
-          $(this).parent().parent().parent().find('main').addClass('full-width');
-          $('nav').find('.create-client, .user-cta').hide();
-          $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
-          $('nav').find('.logo').html('');
-          $(this).parent().parent().parent().find('.row').addClass('full-width-row');
-          $(this).closest('body').find('nav.client-nav').addClass('full-width');
-     }
-     return false;
-})
+// $('.minimise').on('click', function(e) {
+//      if ($(this).hasClass('open')) {
+//           $(this).removeClass('open');
+//           $(this).parent().parent().removeClass('shrink');
+//           $(this).parent().parent().parent().find('main').removeClass('full-width');
+//           $('nav').find('.create-client, .user-cta').show();
+//           $('nav').find('.logo').html('<img src="../../../production/img/V11/sirius-logo.svg" alt="Sirius">');
+//           $('nav').find('.sign-out').html('<span class="nav-icon"></span> Sign out');
+//           $(this).parent().parent().parent().find('.row').removeClass('full-width-row');
+//           $(this).closest('body').find('nav.client-nav').removeClass('full-width');
+//      } else {
+//           $(this).addClass('open');
+//           $(this).parent().parent().addClass('shrink');
+//           $(this).parent().parent().parent().find('main').addClass('full-width');
+//           $('nav').find('.create-client, .user-cta').hide();
+//           $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
+//           $('nav').find('.logo').html('');
+//           $(this).parent().parent().parent().find('.row').addClass('full-width-row');
+//           $(this).closest('body').find('nav.client-nav').addClass('full-width');
+//      }
+//      return false;
+// })
 
 // Dashboard
 $(document).ready(function() {
@@ -370,32 +376,71 @@ $(document).ready(function() {
      // });
 });
 
-// Client summary
-$(document).ready(function () {
-     if (window.location.href.indexOf("normal") != -1) {
-          // Change the compliant status
-          $(".compliant").removeClass('alert-colour').addClass('normal-colour');
-          $(".compliant").find('.sub-text').text('Compliant');
-          $(".compliant").find('.right').html('<span class="tick"></span>');
+// Document viewer
+$(document).ready(function() {
+     $(".hide-page-1").click(function(e){
+          e.preventDefault();
+          $(this).closest(".page-1").hide();
+          $(this).closest(".page-1").siblings('.page-2').show();
+          // $(".page-1").hide();
+          // $(".page-2").show();
+          var documentText = $(this).text();
+          $(this).closest(".page-1").siblings('.page-2').find('h2').text(documentText);
+     });
+     $(".back").click(function(e){
+          e.preventDefault();
+          $(this).closest(".page-2").siblings('.page-1').show();
+          $(this).closest(".page-2").hide();
+     });
+     $(".compare").click(function(e){
+          e.preventDefault();
+          // $('.compare-icon').show();
+          $('.close').show();
+          $(".document-1, .document-2").show();
+          $('.document-2, .document-1').addClass('compare');
+          $(this).closest('.doc-container').siblings().find('.page-1').show();
+          $(this).closest('.doc-container').siblings().find('.page-2').hide();
+     });
+     $(".close").click(function(e){
+          e.preventDefault();
+          // $('.compare-icon').hide();
+          $(this).closest(".doc-container").hide();
+          $('.document-2, .document-1').removeClass('compare');
+          $('.document-2, .document-1').removeClass('float-right');
+          $('.document-2, .document-1').removeClass('float-left');
+     });
+     $(".document-1 .close").click(function(e){
+          e.preventDefault();
+          $('.compare-icon').hide();
+          $('.document-2 .close').hide();
+     });
+     $(".document-2 .close").click(function(e){
+          e.preventDefault();
+          $('.compare-icon').hide();
+          $('.document-1 .close').hide();
+     });
+     $(".document-2 .compare").click(function(e){
+          e.preventDefault();
+          $('.document-1').addClass('float-right');
+          $('.document-2').addClass('float-left');
 
-          // Change the payment status
-          $(".payment").removeClass('main-colour').addClass('blue-colour');
-          $(".payment").find('.sub-text').text('No outstanding payment');
-          $(".payment").find('.left').html('<span class="tick"></span>');
+     });
+
+
+});
+
+// Error messaging
+$(document).ready(function () {
+
+     if (window.location.href.indexOf("error-message") != -1) {
+          // Show's the error message
+          $('#error-message').show();
+
+          // Add anchor links to the selected groups
+          $('#client-dob').closest('.form-group').attr('id', 'dob-error').addClass('error-field');
+          $('#client-mob-number').closest('.form-group').attr('id', 'mobile-error').addClass('error-field');
+          $('#client-email').closest('.form-group').attr('id', 'email-error').addClass('error-field');
+
      }
-     if (window.location.href.indexOf("violent") != -1) {
-          // Change the client status
-          $("#section-header").removeClass('welsh-message, deceased-message').addClass('violent-risk-message');
-          $("#section-header .normal").hide();
-     }
-     if (window.location.href.indexOf("welsh") != -1) {
-          // Change the client status
-          $("#section-header").removeClass('violent-risk-message, deceased-message').addClass('welsh-message');
-          $("#section-header .normal").hide();
-     }
-     if (window.location.href.indexOf("deceased") != -1) {
-          // Change the client status
-          $("#section-header").removeClass('violent-risk-message, welsh-message').addClass('deceased-message');
-          $("#section-header .normal").hide();
-     }
+
 });

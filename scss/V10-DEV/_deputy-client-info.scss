@@ -6,10 +6,10 @@
 #exisiting-deputies {
      float: right;
      clear: both;
-     width: 80%;
+     width: 95%;
      hr {
           border: 3px dashed $border-colour;
-          margin: 0;
+          margin: 1em 0;
      }
      h2 {
           span {
@@ -68,7 +68,7 @@
 
 .check-details {
      float: right;
-     width: 80%;
+     width: 95%;
      .person-detail-item {
           display: inline-block;
           width: 100%;

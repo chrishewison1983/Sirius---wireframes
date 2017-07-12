@@ -15,14 +15,14 @@ module.exports = function(grunt) {
 			'../../js/library/modernizr.js',
 			'../../js/library/jquery-1.10.1.min.js'
 		],
-		dest: '../../debug/js/V10/frameworks.js'
+		dest: '../../debug/js/V11/frameworks.js'
 	  },
 	  frameworks: {
 		src: [
 			'../../js/library/modernizr.js',
 			'../../js/library/jquery-1.10.1.min.js'
 		],
-		dest: '../../production/js/V10/frameworks.js'
+		dest: '../../production/js/V11/frameworks.js'
 	  },
 	  applicationdebug: {
 		options: {
@@ -36,10 +36,10 @@ module.exports = function(grunt) {
 			// '../../js/library/responsive-tables.js',
 			// '../../js/library/breadcrumbs.core.js',
 			// '../../js/global/megamenu-native.js',
+               '../../production/js/V11/dropzone.js',
                '../../js/global/foundation-footer-init.js'
-               // '../../production/js/V10/orbit.js'
 		],
-		dest: '../../debug/js/V10/application.js'		// Change to application specific directory
+		dest: '../../debug/js/V11/application.js'		// Change to application specific directory
 	  },
 	  application: {
 		src: [
@@ -50,10 +50,10 @@ module.exports = function(grunt) {
 			// '../../js/library/responsive-tables.js',
 			// '../../js/library/breadcrumbs.core.js',
 			// '../../js/global/megamenu-native.js',
+               '../../production/js/V11/dropzone.js',
 			'../../js/global/foundation-footer-init.js'
-               // '../../production/js/V10/orbit.js'
 		],
-		dest: '../../production/js/V10/application.js'		// Change to application specific directory
+		dest: '../../production/js/V11/application.js'		// Change to application specific directory
 	  }
 	},
 	compass: {
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 			expand: true,
 			cwd: 'pages/',
 			src: '**/*.dot.html',
-			dest: '../../html/V10',				// Change to application specific directory
+			dest: '../../html/V11',				// Change to application specific directory
 			ext: '.html'
 		  }]
 		}

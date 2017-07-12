@@ -51,18 +51,18 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
-                         <li class="tab-link" data-tab="tab-1">
+                         <!-- <li class="tab-link" data-tab="tab-1">
                               <span class="client-details"></span>
                               <p>Client details</p>
                          </li>
                          <li class="tab-link" data-tab="tab-2">
                               <span class="deputy-details"></span>
                               <p>Deputy details</p>
-                         </li>
+                         </li> -->
                          <li class="tab-link current" data-tab="tab-3">
                               <span class="documents"></span>
                               <p>Documents</p>
@@ -96,7 +96,7 @@
                     <!-- =========== TAB CONTENT - 3 - START =========== -->
                     <div id="tab-3" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -106,7 +106,7 @@
                </div>
 
                <!-- =========== CREATE CLIENT - START =========== -->
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <div class="commission-visit right">
 
@@ -216,7 +216,7 @@
                               <!-- // FORM ITEM - 7 - START // -->
                               <div class="form-group">
                                    <div class="half">
-                                        <label for="client-dob" class="sub-label">Date of birth</label>
+                                        <label for="client-dob" class="">Date of birth</label>
                                         <input id="client-dob" name="client-dob" type="text" value="09/08/1956" maxlength="12">
                                    </div>
                                    <!-- <div class="one-third">
@@ -473,13 +473,13 @@
                               <!-- // FORM ITEM - 20 - END // -->
 
                               <!-- // FORM ITEM - 21 - START // -->
-                              <div class="form-group violent-risk">
+                              <!-- <div class="form-group violent-risk">
                                    <span></span>
                                    <label class="normal" for="client-violent-risk">
                                         <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="Yes">
                                         Is the client a violent risk?
                                    </label>
-                              </div>
+                              </div> -->
                               <!-- // FORM ITEM - 21 - END // -->
 
                          </form>

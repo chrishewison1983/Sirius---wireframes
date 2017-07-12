@@ -44,12 +44,12 @@ main {
           &.full-width {
                width: 95%;
                margin: 0 0 5em 4.95em;
-               #document-summary.sticky, #action-panel.sticky {
-                    width: 39.5em;
+               #side-panel.sticky, #action-panel.sticky {
+                    width: 60.25%;
                }
                &.new-client {
-                    width: 94.75%;
-                    padding: 0 0 0 18.15em;
+                    width: 95.25%;
+                    padding: 0 0 0 17.35%;
                     margin-bottom: 0;
                     // margin: 0 0 5em 20%;
                }
@@ -60,9 +60,10 @@ main {
           position: relative;
           margin: 0 0 5em 30.25%;
           .row {
-               max-width: 65rem;
+               // max-width: 65rem;
                &.full-width-row {
-                    max-width: 72rem;
+                    max-width: inherit;
+                    width: auto;
                }
           }
      }
@@ -70,7 +71,8 @@ main {
 
 .row {
      &.full-width-row {
-          max-width: 79rem;
+          max-width: 95%;
+          // max-width: 79rem;
      }
 }
 
@@ -247,7 +249,7 @@ ol {
      width: 100%;
      font-family: $Montserrat;
      font-weight: bold;
-     margin: 0.5em 0 1.5em 0;
+     margin: 0.5em 0 0.75em 0;
      div {
           display: inline-block;
      }
@@ -440,7 +442,8 @@ hr {
 @media #{$xlarge-up} {
 
      .row {
-          max-width: 80rem;
+          max-width: 95%;
+          // max-width: 80rem;
      }
 
      iframe {
@@ -470,14 +473,16 @@ hr {
 // ONLY FOR DESKTOP (961 up)
 @media #{$large-up} {
 
+     .row {
+          max-width: 95%;
+          // max-width: 80rem;
+     }
 
      main {
           .row.main-content {
                margin-bottom: 8em;
           }
      }
-
-
 
 }
 

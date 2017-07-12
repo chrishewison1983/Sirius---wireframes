@@ -129,7 +129,7 @@
 
 	</ul>
 </nav>
- </div> </div> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper commission-visit"> <div class="row"> <div id="document-summary" class="large-6 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Visit details</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // VISIT SUMMARY - START // --> <h2 class="section-title">Commission visit info</h2> <!-- // COMMISSION VISIT VIEWER - START // -->
+ </div> </div> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper commission-visit"> <div class="row"> <div id="side-panel" class="large-8 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <!-- <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Visit details</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="client-details"></span> <p>Client details</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="deputy-details"></span> <p>Deputy details</p> </li> --> <li class="tab-link current" data-tab="tab-4"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // VISIT SUMMARY - START // --> <h2 class="section-title">Commission visit info</h2> <!-- // COMMISSION VISIT VIEWER - START // -->
 <div id="commission-visit" class="accordion">
 
 	<!-- //////////////////////////// STEP 1 INFO - START //////////////////////////// -->
@@ -685,93 +685,331 @@
 
 </div>
 <!-- // CLIENT DETAILS - END // -->
- </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <h2 class="section-title">Case documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+ </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel current"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
-	<div id="page-1">
+	<!-- ============================ DOCUMENT 1 - START ============================ -->
+	<div class="doc-container document-1">
 
-		<ul class="livelink-documents">
-			<li>
-				<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
-				<form>
-					<label class="normal" for="add-to-visit-1">
-						<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post" value="1">
-						Add to visit
-					</label>
-				</form>
-			</li>
-			<li>
-				<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
-				<form>
-					<label class="normal" for="add-to-visit-2">
-						<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post" value="2">
-						Add to visit
-					</label>
-				</form>
-			</li>
-			<li>
-				<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
-				<form>
-					<label class="normal" for="add-to-visit-3">
-						<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post" value="3">
-						Add to visit
-					</label>
-				</form>
-			</li>
-			<li>
-				<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
-				<form>
-					<label class="normal" for="add-to-visit-4">
-						<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post" value="4">
-						Add to visit
-					</label>
-				</form>
-			</li>
-			<li>
-				<a href="#" class="hide-page-1">Correspondance_document_2.pdf</a>
-				<form>
-					<label class="normal" for="add-to-visit-5">
-						<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post" value="5">
-						Add to visit
-					</label>
-				</form>
-			</li>
-			<li>
-				<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
-				<form>
-					<label class="normal checked" for="add-to-visit-6">
-						<input id="add-to-visit-6" name="add-to-visit-6" type="checkbox" value="post" value="6">
-						Add to visit
-					</label>
-				</form>
-			</li>
-			<li>
-				<a href="#" class="hide-page-1">Other_document.pdf</a>
-				<form>
-					<label class="normal" for="add-to-visit-7">
-						<input id="add-to-visit-7" name="add-to-visit-7" type="checkbox" value="post" value="7">
-						Add to visit
-					</label>
-				</form>
-			</li>
-		</ul>
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1">
+
+			<table class="livelink-documents">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>UID</th>
+						<th>Doc type</th>
+						<th>Case type</th>
+						<th>Direction</th>
+						<th>Date created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- <ul class="livelink-documents">
+				<li>
+					<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
+					<section class="documents-details">
+						<span>: <strong>7000-0000-2563</strong></span>
+						<span>: <strong>IT-SS-ORDER</strong></span>
+						<span>: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>: <strong>Outgoing</strong></span>
+						<span>: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-1">
+							<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post" value="1">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-2">
+							<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post" value="2">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-3">
+							<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post" value="3">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-4">
+							<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post" value="4">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Correspondance_document_2.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-5">
+							<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post" value="5">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal checked" for="add-to-visit-6">
+							<input id="add-to-visit-6" name="add-to-visit-6" type="checkbox" value="post" value="6">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Other_document.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-7">
+							<input id="add-to-visit-7" name="add-to-visit-7" type="checkbox" value="post" value="7">
+							Add to visit
+						</label>
+					</form>
+				</li>
+			</ul> -->
+
+		</div>
+
+		<div class="page-2 document">
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+					<!-- <a href="#" class="close">Close</a> -->
+				</div>
+				<img src="../../../production/img/V11/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V11/document-report.png" alt="Document" class="document-item">
+			</div>
+		</div>
+	</div>
+	<!-- ============================ DOCUMENT 1 - END ============================ -->
+
+
+
+	<!-- ============================ DOCUMENT 2 - START ============================ -->
+	<div class="doc-container document-2">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1">
+
+			<table class="livelink-documents">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>UID</th>
+						<th>Doc type</th>
+						<th>Case type</th>
+						<th>Direction</th>
+						<th>Date created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+						<td>7000-0000-2563</td>
+						<td>IT-SS-ORDER</td>
+						<td>DEP - PFA</td>
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="page-2 document">
+			<!-- <span class="compare-icon"></span> -->
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+				</div>
+				<img src="../../../production/img/V11/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V11/document-report.png" alt="Document" class="document-item">
+			</div>
+		</div>
 
 	</div>
-
-
-	<div id="page-2" class="document">
-		<div class="control-panel">
-			<h2>Current annual report</h2>
-			<a href="#" class="back" id="back">Back</a>
-		</div>
-		<div class="wrapper">
-			<img src="../../../production/img/V10-DEV/document-report.png" alt="Document" class="document-item">
-		</div>
-	</div>
+	<!-- ============================ DOCUMENT 2 - END ============================ -->
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-6 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Who is invited to the visit?</h2> <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== --> <div class="visitor-container"> <h3 class="sub-section-title">Client</h3> <ul id="commission-visit-client"> <!-- // VISITOR - 1 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <a class="visitor" data-visit-id='1'> <span data-value='name' class="name"> <span class="client-title">Mr</span> <span class="client-first-name">Gerald</span> <span class="client-last-name">Brackens</span> <span class="hide">(Client)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-1" class="radio"> <input id="visit-location-1" type="radio" name="visit-location"> <span data-value='address'> 11 Chapel Lane, EAST CANNOCK, W5152TA. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-1"> <input id="visit-present-1" name="visit-present-1" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-2"> <input id="visit-contacted-2" name="visit-contacted-2" type="checkbox" value="post"> Inform about the visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>11 Chapel Lane, EAST CANNOCK, W5152TA.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer"> <span class="client-dob-day">01</span> / <span class="client-dob-month">01</span> / <span class="client-dob-year">1980</span> </p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer client-telephone">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer client-email">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 1 - START // --> </ul> </div> <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== --> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> <div class="visitor-container"> <h3 class="sub-section-title">Deputies</h3> <ul id="commission-visit-deputies"> <!-- // VISITOR - 2 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <span class="icon main-contact"> <p>Main deputy</p> </span> <span class="icon fee-payer"> <p>Fee payer</p> </span> <span class="icon welfare"> <p>Health &amp; welfare</p> </span> <a class="visitor" data-visit-id='2'> <span data-value='name' class="name"> Ms Lara Stevens <span class="hide">(Deputy)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-2" class="radio"> <input id="visit-location-2" type="radio" name="visit-location"> <span data-value='address'> 92 Greyfriars Road, CANNOCK WOOD, W5154AA. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-3"> <input id="visit-present-3" name="visit-present-3" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-4"> <input id="visit-contacted-4" name="visit-contacted-4" type="checkbox" value="post"> Inform about the visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer">01/01/1980</p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 2 - END // --> <!-- // VISITOR - 3 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <span class="icon welfare-property"> <p>Health &amp; welfare and<br> property &amp; finance</p> </span> <a class="visitor" data-visit-id='3'> <span data-value='name' class="name"> Mrs Carla Frith <span class="hide">(Deputy)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-3" class="radio"> <input id="visit-location-3" type="radio" name="visit-location"> <span data-value='address'> 40 Haslemere Road, CANNOCK WOOD, W5174LD. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-5"> <input id="visit-present-5" name="visit-present-5" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-6"> <input id="visit-contacted-6" name="visit-contacted-6" type="checkbox" value="post"> Inform about the visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>40 Haslemere Road, CANNOCK WOOD, W5174LD.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer">01/01/1980</p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 3 - END // --> <!-- // VISITOR - 4 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <span class="icon welfare"> <p>Health &amp; welfare</p> </span> <a class="visitor" data-visit-id='4'> <span data-value='name' class="name"> Mrs Melanie Rand <span class="hide">(Deputy)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-4" class="radio"> <input id="visit-location-4" type="radio" name="visit-location"> <span data-value='address'> 70 Moulton Road, Gunby Green, N6334RF. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-7"> <input id="visit-present-7" name="visit-present-7" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-8"> <input id="visit-contacted-8" name="visit-contacted-8" type="checkbox" value="post"> Contacted about visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>70 Moulton Road, Gunby Green, N6334RF.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer">01/01/1980</p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 4 - END // --> </ul> </div> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta primary" id="add-visitors-step-2" href="6c-where.html">Save &amp; continue</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="back">Back to step 1</a> <span class="separator"></span> <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script></script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> <div id="action-panel" class="large-4 large-uncentered columns"> <div class="commission-visit right"> <h2 class="section-title">Who is invited to the visit?</h2> <!-- =========== COMMISSION VISIT SECTION - 1 - START =========== --> <div class="visitor-container"> <h3 class="sub-section-title">Client</h3> <ul id="commission-visit-client"> <!-- // VISITOR - 1 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <a class="visitor" data-visit-id='1'> <span data-value='name' class="name"> <span class="client-title">Mr</span> <span class="client-first-name">Gerald</span> <span class="client-last-name">Brackens</span> <span class="hide">(Client)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-1" class="radio"> <input id="visit-location-1" type="radio" name="visit-location"> <span data-value='address'> 11 Chapel Lane, EAST CANNOCK, W5152TA. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-1"> <input id="visit-present-1" name="visit-present-1" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-2"> <input id="visit-contacted-2" name="visit-contacted-2" type="checkbox" value="post"> Inform about the visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>11 Chapel Lane, EAST CANNOCK, W5152TA.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer"> <span class="client-dob-day">01</span> / <span class="client-dob-month">01</span> / <span class="client-dob-year">1980</span> </p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer client-telephone">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer client-email">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 1 - START // --> </ul> </div> <!-- =========== COMMISSION VISIT SECTION - 1 - END =========== --> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> <div class="visitor-container"> <h3 class="sub-section-title">Deputies</h3> <ul id="commission-visit-deputies"> <!-- // VISITOR - 2 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <span class="icon main-contact"> <p>Main deputy</p> </span> <span class="icon fee-payer"> <p>Fee payer</p> </span> <span class="icon welfare"> <p>Health &amp; welfare</p> </span> <a class="visitor" data-visit-id='2'> <span data-value='name' class="name"> Ms Lara Stevens <span class="hide">(Deputy)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-2" class="radio"> <input id="visit-location-2" type="radio" name="visit-location"> <span data-value='address'> 92 Greyfriars Road, CANNOCK WOOD, W5154AA. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-3"> <input id="visit-present-3" name="visit-present-3" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-4"> <input id="visit-contacted-4" name="visit-contacted-4" type="checkbox" value="post"> Inform about the visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer">01/01/1980</p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 2 - END // --> <!-- // VISITOR - 3 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <span class="icon welfare-property"> <p>Health &amp; welfare and<br> property &amp; finance</p> </span> <a class="visitor" data-visit-id='3'> <span data-value='name' class="name"> Mrs Carla Frith <span class="hide">(Deputy)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-3" class="radio"> <input id="visit-location-3" type="radio" name="visit-location"> <span data-value='address'> 40 Haslemere Road, CANNOCK WOOD, W5174LD. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-5"> <input id="visit-present-5" name="visit-present-5" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-6"> <input id="visit-contacted-6" name="visit-contacted-6" type="checkbox" value="post"> Inform about the visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>40 Haslemere Road, CANNOCK WOOD, W5174LD.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer">01/01/1980</p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 3 - END // --> <!-- // VISITOR - 4 - START // --> <li> <div class="wrapper"> <span class="icon chosen-location"><p>chosen location</p></span> <span class="icon welfare"> <p>Health &amp; welfare</p> </span> <a class="visitor" data-visit-id='4'> <span data-value='name' class="name"> Mrs Melanie Rand <span class="hide">(Deputy)</span> </span> </a> <div class="hidden-content"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group checkbox"> <legend>Would you like the visit to take place at their address:</legend> <label for="visit-location-4" class="radio"> <input id="visit-location-4" type="radio" name="visit-location"> <span data-value='address'> 70 Moulton Road, Gunby Green, N6334RF. <i class="icon location"></i> </span> </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group checkbox"> <legend>Would you like this deputy present at visit or simply informed about the visit?</legend> <label class="normal" for="visit-present-7"> <input id="visit-present-7" name="visit-present-7" type="checkbox" value="post"> Present at visit </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group checkbox"> <label class="normal" for="visit-contacted-8"> <input id="visit-contacted-8" name="visit-contacted-8" type="checkbox" value="post"> Contacted about visit </label> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <button class="view-more"><span>More info</span></button> </div> <div class="extra-info"> <span class="border-top"></span> <!-- // CLIENT ITEM - 1 - START // --> <div class="item-detail"> <p class="item">Address:</p> <p class="answer"> <span data-value='address'>70 Moulton Road, Gunby Green, N6334RF.</span> </p> </div> <!-- // CLIENT ITEM - 1 - END // --> <!-- // CLIENT ITEM - 2 - START // --> <div class="item-detail"> <p class="item">Middle names:</p> <p class="answer">Middle</p> </div> <!-- // CLIENT ITEM - 2 - END // --> <!-- // CLIENT ITEM - 3 - START // --> <div class="item-detail"> <p class="item">Date of Birth:</p> <p class="answer">01/01/1980</p> </div> <!-- // CLIENT ITEM - 3 - END // --> <!-- // CLIENT ITEM - 4 - START // --> <div class="item-detail"> <p class="item">Country:</p> <p class="answer">United Kingdom</p> </div> <!-- // CLIENT ITEM - 4 - END // --> <!-- // CLIENT ITEM - 5 - START // --> <div class="item-detail"> <p class="item">Daytime telephone:</p> <p class="answer">01234567890</p> </div> <!-- // CLIENT ITEM - 5 - END // --> <!-- // CLIENT ITEM - 6 - START // --> <div class="item-detail"> <p class="item">Email address:</p> <p class="answer">email@email.com</p> </div> <!-- // CLIENT ITEM - 6 - END // --> </div> </li> <!-- // VISITOR - 4 - END // --> </ul> </div> <!-- =========== COMMISSION VISIT SECTION - 2 - START =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a class="main-cta primary" id="add-visitors-step-2" href="6c-where.html">Save &amp; continue</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="back">Back to step 1</a> <span class="separator"></span> <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script></script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V10-DEV/hideShowPassword.js"></script>
 	<script src="../../../production/js/V10-DEV/my-jquery.js"></script>

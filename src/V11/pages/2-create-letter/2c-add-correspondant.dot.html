@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
@@ -23,6 +23,10 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW">
+                              <div>H &amp; W | 19273638</div>
+                         </a>
+                         <div class="separator"> > </div>
                          <span>Create letter</span>
                     </nav>
                     <h1>
@@ -40,7 +44,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -89,13 +93,6 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
-
                          {{= it.include('side-panel/client-details.html') }}
 
                     </div>
@@ -112,7 +109,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -123,7 +120,7 @@
 
 
                <!-- // CREATE RECIPIENT - START // -->
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <form class="add-correspondent-form">
 
@@ -197,8 +194,8 @@
                          <div class="form-group">
                               <label for="country">Country</label>
                               <select id="country" class="full-width">
-                                   <option>-- Select --</option>
-                                   <option selected="selected">England</option>
+                                   <option selected="selected">-- Select --</option>
+                                   <option>England</option>
                                    <option>Ireland</option>
                                    <option>Scotland</option>
                                    <option>Wales</option>
@@ -208,15 +205,15 @@
                          <!-- // FORM ITEM - 7 - END // -->
 
                          <!-- // FORM ITEM - 8a - START // -->
-                         <div class="form-group">
+                         <!-- <div class="form-group">
                               <label for="postcode">Postcode</label>
                               <input id="postcode" name="postcode" type="text" class="one-third">
                               <a class="main-cta secondary" id="find-postcode">Find address</a>
-                         </div>
+                         </div> -->
                          <!-- // FORM ITEM - 8a - END // -->
 
                          <!-- // FORM ITEM - 8b - START // -->
-                         <div class="form-group address-list">
+                         <!-- <div class="form-group address-list">
                               <label for="client-address-1" class="radio address">
                                    <input id="client-address-1" type="radio" name="radio-inline-group" value="client-address-1">
                                    1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
@@ -266,7 +263,28 @@
                                    12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>
                               </label>
 
+                         </div> -->
+                         <div class="form-group">
+                              <label for="address-line-1">Address</label>
+                              <input id="address-line-1" name="address-line-1" type="text" value="">
                          </div>
+                         <div class="form-group">
+                              <label for="address-line-2" class="hide">Address line 2</label>
+                              <input id="address-line-2" name="address-line-2" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="address-line-3" class="hide">Address line 3</label>
+                              <input id="address-line-3" name="address-line-3" type="text">
+                         </div>
+                         <div class="form-group">
+                              <label for="address-town">Town</label>
+                              <input id="address-town" name="address-town" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="manual-postcode">Postcode</label>
+                              <input id="manual-postcode" name="manual-postcode" type="text" class="one-third" value="">
+                         </div>
+
                          <!-- // FORM ITEM - 8b - END // -->
 
                          <!-- // FORM ITEM - 9 - START // -->

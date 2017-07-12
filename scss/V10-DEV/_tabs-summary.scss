@@ -130,7 +130,7 @@
                }
                &.two-items {
                     .item {
-                         width: 46%;
+                         width: 48.725%;
                          margin: 0 2.5% 2em 0;
                          &:last-of-type {
                               margin-right: 0;
@@ -614,6 +614,7 @@
                                              background-size: contain;
                                              border: none;
                                              border-radius: 0;
+                                             float: none;
                                         }
                                    }
                                    .sub-text {

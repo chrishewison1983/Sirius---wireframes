@@ -68,7 +68,7 @@ header {
           box-shadow: 10px 0px 20px 0px rgba($black,0.2);
           @include standard-transition;
           &.shrink {
-               width: 5em;
+               width: 4.875%;
                .logo {
                     display: inline-block;
                     width: 3em;

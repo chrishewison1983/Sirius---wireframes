@@ -12,13 +12,13 @@
      // bottom: -2.25em;
      z-index: 10;
      ul {
-          margin: 0;
+          margin: 0.75em 0 0 0;
           width: 100%;
           li {
                list-style: none;
                float: left;
-               width: 100%;
-               margin: 0 0 0.5em 0;
+               width: 50%;
+               margin: 0 0 1em 0;
                a.action {
                     display: inline-block;
                     border-radius: 50%;
@@ -31,7 +31,7 @@
                     @include align-items(center);
                     @include justify-content(flex-start);
                     &:hover {
-                         transform: scale(1.1);
+                         transform: scale(1.05);
                          cursor: pointer;
                          span {
                               display: inline-block;
@@ -59,9 +59,16 @@
           padding: 1em;
           background: rgba($white,0.15);
           margin: -1.5em 0 0 0;
+          min-height: 10em;
           ul {
                li {
                     &:last-of-type {
+                         margin: 0;
+                    }
+                    &.edit-case-link {
+                         display: none;
+                    }
+                    &:nth-of-type(3n), &:nth-of-type(4n) {
                          margin: 0;
                     }
                }
@@ -75,6 +82,12 @@
           .create-case {
                span.icon {
                     background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50% $pink;
+                    background-size: 1.25em;
+               }
+          }
+          .edit-case {
+               span.icon {
+                    background: url(#{$image-path}/icons/actions/edit-case-white.svg) no-repeat 50% 50% $pink;
                     background-size: 1.25em;
                }
           }
@@ -93,11 +106,13 @@
                text-transform: inherit;
                padding: 1.3em 0 1.15em 0;
                border-bottom: 6px solid rgba($main-colour,0.1);
-               margin-bottom: 3em;
+               margin-bottom: 2em;
           }
           ul {
+               margin: 0;
                li {
                     width: 100%;
+                    margin: 0 0 0.5em 0;
                     a.action {
                          span {
                               color: $black;

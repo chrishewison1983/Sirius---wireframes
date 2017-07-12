@@ -8,17 +8,18 @@
      ul, ol {
           li {
                position: relative;
-               padding: 0 0 4em 2em;
+               padding: 0 0 5em 2em;
                span.dot {
                     display: inline-block;
                     position: absolute;
                     top: -0.1em;
-                    left: -1.295em;
+                    left: -1.35em;
                     width: 2em;
                     height: 2em;
                     background: $white;
                     border: 5px solid $black;
                     border-radius: 50%;
+                    z-index: 10;
                }
                &:last-of-type {
                     border-left: 10px solid $white;
@@ -36,8 +37,21 @@
                }
                &.outstanding {
                     border-left: 10px solid $pink;
+                    .border {
+                         background: $pink;
+                    }
                     .icon {
                          background-color: $pink;
+                    }
+                    &.complete {
+                         border-left: 10px solid $green;
+                         .border {
+                              background: $green;
+                         }
+                         .icon {
+                              background: url(#{$image-path}/icons/pdf-white.svg) no-repeat 50% 50% $green;
+                              background-size: 1.15em;
+                         }
                     }
                }
                .icon {
@@ -49,15 +63,8 @@
 
 #task-list {
      // padding-left: 1em;
-     display: none;
+     // display: none;
      margin: 3em 0 3em 0;
-     h1, h2, h3, h4 {
-          &.description-title {
-               padding: 0 0 1em 0;
-               margin: 0 0 1em 0;
-               border-bottom: 3px dashed $border-colour;
-          }
-     }
      li {
           position: relative;
           width: 100%;
@@ -80,9 +87,24 @@
                background: $pink;
                color: $white;
           }
+          .border {
+               display: inline-block;
+               position: absolute;
+               left: 0em;
+               top: 0.65em;
+               height: 0.5em;
+               width: 2.5em;
+               background: $green;
+               z-index: 1;
+          }
           .icon {
                background: url(#{$image-path}/icons/commission-visit-white.svg) no-repeat 50% 50% $pink;
                background-size: 1em;
+          }
+          .wrapper {
+               // border-radius: $global-border-radius;
+               // box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+               padding: 0 0 0 3.75em;
           }
           &:before {
                display: none;
@@ -91,6 +113,50 @@
                .icon {
                     background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50% $pink;
                     background-size: 0.9em;
+               }
+          }
+
+          &.client {
+               .icon {
+                    background: url(#{$image-path}/icons/client-white.svg) no-repeat 50% 50% $pink;
+                    background-size: 0.75em;
+               }
+          }
+          &.date-indicator {
+               margin: -0.5em 0 -0.5em 0;
+               padding: 0 0 4.5em 0;
+               text-align: center;
+               // box-shadow: none;
+               div {
+                    font-family: $Montserrat;
+                    font-weight: normal;
+                    padding: 0 1.5em;
+                    border: 3px solid $white;
+                    border-radius: $global-border-radius;
+                    width: auto;
+                    float: none;
+                    display: inline-block;
+                    margin: 0 0 0 0;
+                    background: $white;
+                    position: relative;
+                    z-index: 2;
+                    top: -0.45em;
+               }
+               .dot {
+                    width: 1.25em;
+                    height: 1.25em;
+                    border: 4px solid $black;
+                    left: -0.975em;
+               }
+               .border {
+                    display: inline-block;
+                    position: absolute;
+                    left: 0em;
+                    top: 0.45em;
+                    height: 0.15em;
+                    width: 100%;
+                    background: $white-off;
+                    z-index: 1;
                }
           }
           &.pdf-review {
@@ -130,7 +196,7 @@
                right: 0;
                top: 0;
                border-radius: $global-border-radius;
-               padding: 0.5em 1em;
+               padding: 0.4em 1em;
                text-transform: uppercase;
                font-size: 0.875rem;
           }
@@ -144,14 +210,22 @@
                }
           }
           a, p {
-               &.indent {
-                    margin-left: 3.75em;
+               // &.indent {
+               //      margin-left: 3.75em;
+               //      margin-bottom: 1em;
+               // }
+               &:last-of-type {
+                    margin-bottom: 0;
+               }
+               strong {
+                    color: $main-colour;
                }
           }
           .details {
-               border-top: 3px dashed $border-colour;
-               margin: 2em 0 0 0;;
-               padding: 2em 0 0 0;
+               // border-top: 3px dashed $border-colour;
+               margin: 1.5em 0 0 0;
+               padding: 0 0 0 0;
+               display: none;
                .visit-detail-item {
                     display: inline-block;
                     width: 50%;
@@ -165,12 +239,13 @@
                          float: left;
                     }
                     .item {
-                         width: 30%;
+                         width: 35%;
                          color: $text-main-colour;
                          font-family: $Opensans-Regular;
+                         margin-right: 5%;
                     }
                     .answer, ul#visiting li {
-                         width: 70%;
+                         width: 60%;
                          color: $black;
                          font-family: $Montserrat;
                          font-weight: bold;
@@ -186,30 +261,85 @@
           }
           .title {
                display: inline-block;
-               margin: 0;
+               margin: 0 0 0.5em 0;
+               padding: 0 0 0.5em 0;
                width: 100%;
+               border-bottom: 3px dashed $white-off;
                h2 {
                     text-transform: inherit;
                     font-size: 1.6rem;
                     width: 100%;
                     position: relative;
-                    padding: 0 0 0 2.25em;
+                    padding: 0 0 0 0;
                     margin: 0;
                     .icon {
                          display: inline-block;
                          position: absolute;
-                         top: -0.25em;
-                         left: 0;
+                         top: -0.35em;
+                         left: -2.25em;
                          border-radius: 50%;
                          width: 1.75em;
                          height: 1.75em;
                          font-size: 1.6rem;
+                    }
+                    .created, .date {
+                         float: right;
+                         font-size: 0.875rem;
+                         clear: both;
+                         color: rgba($black,0.4);
+                         margin: 0.25em 0 0 0;
+                         .icon {
+                              display: inline-block;
+                              width: 1em;
+                              height: 1em;
+                              // background: $black;
+                              position: relative;
+                              float: right;
+                              top: -0.15em;
+                              left: inherit;
+                              margin: 0 0 0 0.35em;
+                              border-radius: 0;
+                         }
+                    }
+                    .created {
+                         // margin: -0.5em 0 0 0;
+                         .icon {
+                              background: url(#{$image-path}/icons/client-grey.svg) no-repeat 50% 50% $white;
+                              background-size: 0.75em;
+                              background-color: $white !important;
+                         }
+                    }
+                    .date {
+                         // margin: -0.5em 0 0 0;
+                         .icon {
+                              background: url(#{$image-path}/icons/date-grey.svg) no-repeat 50% 50% $white;
+                              background-size: 0.75em;
+                              background-color: $white !important;
+                         }
                     }
                }
           }
           form {
                .form-group {
                     margin-bottom: 0;
+                    position: relative;
+                    &.checked {
+                         label {
+                              &:after {
+                                   opacity: 1;
+                              }
+                         }
+                    }
+                    .icon {
+                         display: inline-block;
+                         position: absolute;
+                         top: -0.475em;
+                         left: 0;
+                         border-radius: 50%;
+                         width: 2.775em;
+                         height: 2.775em;
+                         background-size: 1.15em;
+                    }
                     label {
                          margin: 0;
                          width: 100%;
@@ -217,15 +347,6 @@
                          font-size: 1.6rem;
                          font-family: $Montserrat;
                          font-weight: bold;
-                         .icon {
-                              display: inline-block;
-                              position: absolute;
-                              top: -0.175em;
-                              left: 0;
-                              border-radius: 50%;
-                              width: 1.75em;
-                              height: 1.75em;
-                         }
                          &:after {
                               top: 0.375em;
                               right: 6.325em;
@@ -239,6 +360,13 @@
                     }
                }
           }
+     }
+}
+
+#review-report-1 {
+     text-align: center;
+     img {
+          max-height: 42em;
      }
 }
 

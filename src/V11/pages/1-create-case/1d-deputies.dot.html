@@ -1,0 +1,185 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default create-case-journey step-4">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Create case</span>
+                    </nav>
+                    <h1>
+                         Deputy / deputies
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/create-case.html') }}
+          </div>
+     </div>
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-case">
+
+          <div class="row">
+
+               <div id="side-panel" class="large-8 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul id="side-panel-tabs" class="tabs">
+                         <li class="tab-link" data-tab="tab-1">
+                              <span class="info"></span>
+                              <p>Case details</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-2">
+                              <span class="client-details"></span>
+                              <p>Client details</p>
+                         </li>
+                         <li class="tab-link" data-tab="tab-3">
+                              <span class="deputy-details"></span>
+                              <p>Deputy details</p>
+                         </li>
+                         <li class="tab-link current" data-tab="tab-4">
+                              <span class="documents"></span>
+                              <p>Documents</p>
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content side-panel">
+
+                         <!-- // VISIT SUMMARY - START // -->
+                         <h2 class="section-title">Create case info</h2>
+
+                         {{= it.include('side-panel/create-case.html') }}
+                         <!-- // VISIT SUMMARY - END // -->
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content side-panel">
+
+                         {{= it.include('side-panel/client-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content side-panel">
+
+                         <h2 class="section-title">Deputy details</h2>
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content side-panel current">
+
+                         <!-- <h2 class="section-title">Case documents</h2> -->
+
+                         {{= it.include('side-panel/document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="commission-visit right">
+
+                         <h2 class="section-title">How have the deputy / deputies been appointed?</h2>
+
+                         <!-- =========== CASE DETAILS SECTION - START =========== -->
+                         <form class="case-details">
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <legend>There are deputies appointed jointly and severally?</legend>
+                                   <label for="deputies-jointly-severally-yes" class="radio">
+                                        <input id="deputies-jointly-severally-yes" type="radio" name="deputies-jointly-severally" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="deputies-jointly-severally-no" class="radio">
+                                        <input id="deputies-jointly-severally-no" type="radio" name="deputies-jointly-severally" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group deputies-jointly">
+                                   <legend>There are deputies appointed jointly?</legend>
+                                   <label for="deputies-jointly-yes" class="radio">
+                                        <input id="deputies-jointly-yes" type="radio" name="deputies-jointly" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="deputies-jointly-no" class="radio">
+                                        <input id="deputies-jointly-no" type="radio" name="deputies-jointly" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                         </form>
+                         <!-- =========== CASE DETAILS SECTION - END =========== -->
+
+                    </div>
+
+               </div>
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- CTA-FOOTER - START -->
+     <div id="cta-footer" class="cta-row">
+          <a class="main-cta primary" id="create-case-step-4" href="1e-confirmation-page.html">Save &amp; continue</a>
+          <span class="separator"></span>
+          <a href="#" onclick="history.back();" class="back">Back to step 3</a>
+          <span class="separator"></span>
+          <a href="#" onclick="../dashboard.html" class="cancel">Cancel case</a>
+     </div>
+     <!-- CTA-FOOTER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+
+</script>
+<!-- SCRIPT CONTENT - END -->

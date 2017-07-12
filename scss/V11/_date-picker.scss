@@ -149,10 +149,24 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     border: 0;
 }
 
-.pika-table th,
-.pika-table td {
+.pika-table th, .pika-table td {
     width: 14.285714285714286%;
     padding: 0;
+}
+
+table.pika-table {
+	thead, tbody {
+		tr {
+			&:hover {
+				background: none;
+			}
+			th, td {
+				&:first-of-type {
+					padding: 0;
+				}
+			}
+		}
+	}
 }
 
 .pika-table th {

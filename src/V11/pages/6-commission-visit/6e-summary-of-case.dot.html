@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default visit-commission step-5">
@@ -21,6 +21,10 @@
                               <div class="client-title">Mr</div>
                               <div class="client-first-name">Gerald</div>
                               <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW">
+                              <div>H &amp; W | 19273638</div>
                          </a>
                          <div class="separator"> > </div>
                          <span>Commission a visit</span>
@@ -48,7 +52,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -86,13 +90,6 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
-
                          {{= it.include('side-panel/client-details.html') }}
 
                     </div>
@@ -109,7 +106,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -118,7 +115,7 @@
 
                </div>
 
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <div class="commission-visit right">
 
@@ -305,9 +302,13 @@
                                    <!-- // FORM ITEM - 4b - START // -->
                                    <div class="form-group answer-4b hidden">
                                         <legend for="visit-date-reported-day">
-                                             Provide the date of the last visit:
+
                                         </legend>
-                                        <div class="one-third">
+                                        <div class="half">
+                                             <label for="visit-last-visit-date" class="">Provide the date of the last visit:</label>
+                                             <input id="visit-last-visit-date" name="visit-last-visit-date" type="text" value="05/08/2017" maxlength="12">
+                                        </div>
+                                        <!-- <div class="one-third">
                                              <label for="visit-last-visit-day" class="sub-label">Day</label>
                                              <input id="visit-last-visit-day" name="visit-last-visit-day" type="text" value="05" maxlength="2">
                                         </div>
@@ -318,7 +319,7 @@
                                         <div class="one-third">
                                              <label for="visit-last-visit-year" class="sub-label">Year</label>
                                              <input id="visit-last-visit-year" name="visit-last-visit-year" type="text" value="2017" maxlength="4">
-                                        </div>
+                                        </div> -->
                                    </div>
                                    <!-- // FORM ITEM - 4b - END // -->
 
@@ -343,7 +344,7 @@
           <span class="separator"></span>
           <a href="#" onclick="history.back();" class="back">Back to step 4</a>
           <span class="separator"></span>
-          <a href="#" onclick="../dshboard.html" class="cancel">Cancel visit</a>
+          <a href="#" onclick="../dashboard.html" class="cancel">Cancel visit</a>
      </div>
      <!-- CTA-FOOTER - END -->
 

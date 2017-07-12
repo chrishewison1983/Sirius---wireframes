@@ -31,6 +31,7 @@ form {
           margin: 0;
           height: inherit;
           background: $white;
+          display: inline-block;
           // background: $white-off;
           font-family: $Montserrat;
           &:focus {
@@ -43,6 +44,9 @@ form {
           }
           &.half {
                width: 50%;
+          }
+          &#task-user {
+               width: 25em;
           }
      }
      textarea {
@@ -238,9 +242,9 @@ form {
           &:last-of-type {
                margin-bottom: 1em;
           }
-          &.hidden {
-               margin-top: -1.5em;
-          }
+          // &.hidden {
+          //      margin-top: -1.5em;
+          // }
           &.address-list {
                overflow-y: scroll;
                height: 20em;
@@ -266,7 +270,7 @@ form {
                     }
                     &:after {
                          left: 4.95em;
-                         top: 5px;
+                         top: 1px;
                     }
                }
                span {
@@ -279,6 +283,23 @@ form {
                     border-radius: 5px 0 0 5px;
                     background: url(#{$image-path}/icons/violent-warning.svg) no-repeat 50% 50% rgba($red,0.2);
                     background-size: 3em;
+               }
+          }
+          &.order-type {
+               label {
+                    &.radio {
+                         margin-bottom: 0;
+                    }
+               }
+               span {
+                    float: left;
+               }
+               .icon {
+                    width: 2.25em;
+                    height: 2.25em;
+                    margin: 0 0 0 0.5em;
+                    position: relative;
+                    top: -0.5em;
                }
           }
           &.fee-payer {
@@ -321,8 +342,33 @@ form {
                //      color: $text-main-colour;
                // }
           }
+          &.answer-task-user, &.answer-task-team {
+               margin-top: -1em;
+               display: none;
+          }
+          &.error-field {
+               border-left: 10px solid $red;
+               padding: 1em 0 1.5em 1.5em;
+               label {
+                    color: $red;
+               }
+               input {
+                    box-shadow: inset 0 0 0 2px $red;
+               }
+          }
           legend.margin-top {
                margin-top: 1em;
+          }
+          p {
+               &.info {
+                    margin: 0;
+                    strong {
+                         color: $blue;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         font-size: 1.4rem;
+                    }
+               }
           }
      }
      .cta-row {
@@ -541,7 +587,7 @@ form.location-form {
 }
 
 .add-deputy-form, .exisiting-deputies, .edit-deputy-form, .create-letter, .add-correspondent-form {
-     width: 80%;
+     width: 95%;
      float: right;
 }
 

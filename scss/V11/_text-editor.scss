@@ -8,7 +8,7 @@
 /* //////////////////////// OVERRIDING CSS STYLES - START //////////////////////// */
 .form-group {
      .jqte {
-          margin: 0.5em 0 0 0;
+          margin: 0 0 0 0;
           box-shadow: inset 0px 0px 0px 2px $main-colour;
           border: none;
           float: left;
@@ -49,8 +49,12 @@
                line-height: 1.4;
                font-family: $Opensans-Regular;
           }
+          strong {
+               font-family: $Opensans-Bold;
+          }
           ul, ol {
                margin: 0.5em 0 0.5em 1.25em;
+               width: 95%;
                li {
                     list-style-type: circle;
                     list-style: disc;

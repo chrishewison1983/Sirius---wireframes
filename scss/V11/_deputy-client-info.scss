@@ -6,10 +6,10 @@
 #exisiting-deputies {
      float: right;
      clear: both;
-     width: 80%;
+     width: 95%;
      hr {
           border: 3px dashed $border-colour;
-          margin: 0;
+          margin: 1em 0;
      }
      h2 {
           span {
@@ -66,9 +66,24 @@
 //      display: none;
 // }
 
+#client-overview {
+     .check-details {
+          float: left;
+          width: 100%;
+          .person-detail-item {
+               p.item {
+                    width: 25%;
+               }
+               p.answer {
+                    width: 70%;
+               }
+          }
+     }
+}
+
 .check-details {
      float: right;
-     width: 80%;
+     width: 95%;
      .person-detail-item {
           display: inline-block;
           width: 100%;
@@ -95,6 +110,17 @@
                          color: $black;
                          font-family: $Montserrat;
                          font-weight: bold;
+                         list-style-type: disc;
+                         list-style: disc;
+                         display: list-item;
+                         margin: 0 0 1em 1em;
+                         &:hover {
+                              background: none;
+                              cursor: inherit;
+                         }
+                         &:last-of-type {
+                              margin-bottom: 0;
+                         }
                     }
                }
           }

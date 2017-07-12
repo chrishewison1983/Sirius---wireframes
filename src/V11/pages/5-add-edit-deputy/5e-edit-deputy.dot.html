@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-letter.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
@@ -47,7 +47,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -79,7 +79,7 @@
                          <h3 class="sub-section-title">Letter template chosen</h3>
 
                          <div class="document">
-                              <img src="../../../production/img/V10/document-thumbnail.png" alt="Document" class="document-item">
+                              <img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item">
                               <h3 class="title">CT-bb: Blank complaints team template</h3>
                          </div>
 
@@ -95,13 +95,6 @@
 
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
-
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
-                         </h2>
 
                          {{= it.include('side-panel/client-details.html') }}
 
@@ -119,7 +112,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -129,7 +122,7 @@
                </div>
 
                <!-- // CREATE RECIPIENT - START // -->
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <form class="edit-deputy-form">
 
@@ -182,8 +175,12 @@
 
                          <!-- // FORM ITEM - 6 - START // -->
                          <div class="form-group">
-                              <legend for="dob">Date of birth</legend>
-                              <div class="one-third">
+                              <legend for="dob"></legend>
+                              <div class="half">
+                                   <label for="deputy-dob">Date of birth</label>
+                                   <input id="deputy-dob" name="deputy-dob" type="text" maxlength="2" value="17/07/1959">
+                              </div>
+                              <!-- <div class="one-third">
                                    <label for="deputy-dob-day" class="sub-label">Day</label>
                                    <input id="deputy-dob-day" name="deputy-dob-day" type="text" placeholder="-- Day --" maxlength="2">
                               </div>
@@ -194,7 +191,7 @@
                               <div class="one-third">
                                    <label for="deputy-dob-year" class="sub-label">Year</label>
                                    <input id="deputy-dob-year" name="deputy-dob-year" type="text" placeholder="-- Year --" maxlength="4">
-                              </div>
+                              </div> -->
                          </div>
                          <!-- // FORM ITEM - 6 - END // -->
 
@@ -232,15 +229,15 @@
                          <!-- // FORM ITEM - 8 - END // -->
 
                          <!-- // FORM ITEM - 9a - START // -->
-                         <div class="form-group">
+                         <!-- <div class="form-group">
                               <label for="deputy-postcode">Postcode</label>
                               <input id="deputy-postcode" name="deputy-postcode" type="text" class="one-third" value="CT78 9IL">
                               <a class="main-cta secondary" id="find-postcode">Find address</a>
-                         </div>
+                         </div> -->
                          <!-- // FORM ITEM - 9a - END // -->
 
                          <!-- // FORM ITEM - 9b - START // -->
-                         <div class="form-group address-list">
+                         <!-- <div class="form-group address-list">
                               <label for="deputy-address-1" class="radio address">
                                    <input id="deputy-address-1" type="radio" name="radio-inline-group-1" value="deputy-address-1">
                                    1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 788</span>.
@@ -289,7 +286,26 @@
                                    <input id="deputy-address-12" type="radio" name="radio-inline-group-1" value="deputy-address-12">
                                    12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 788</span>.
                               </label>
-
+                         </div> -->
+                         <div class="form-group">
+                              <label for="deputy-address-line-1">Address</label>
+                              <input id="deputy-address-line-1" name="deputy-address-line-1" type="text" value="1 Grimwald Place">
+                         </div>
+                         <div class="form-group">
+                              <label for="deputy-address-line-2" class="hide">Address line 2</label>
+                              <input id="deputy-address-line-2" name="client-address-line-2" type="text" value="Buckley">
+                         </div>
+                         <div class="form-group">
+                              <label for="deputy-address-line-3" class="hide">Address line 3</label>
+                              <input id="deputy-address-line-3" name="deputy-address-line-3" type="text">
+                         </div>
+                         <div class="form-group">
+                              <label for="deputy-address-town">Town</label>
+                              <input id="deputy-address-town" name="deputy-address-town" type="text" value="Flintshire">
+                         </div>
+                         <div class="form-group">
+                              <label for="deputy-manual-postcode">Postcode</label>
+                              <input id="deputy-manual-postcode" name="deputy-manual-postcode" type="text" class="one-third" value="CT78 9IL">
                          </div>
                          <!-- // FORM ITEM - 9b - END // -->
 

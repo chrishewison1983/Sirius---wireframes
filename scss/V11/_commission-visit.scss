@@ -69,8 +69,8 @@ ul.livelink-documents {
 .commission-visit, .create-letter-journey {
      &.right {
           float: right;
-          width: 80%;
-          margin-left: 20%;
+          width: 95%;
+          margin-left: 5%;
      }
      .sub-section-title {
           // border-bottom: 1px dashed $border-colour;
@@ -586,7 +586,7 @@ ol#visitor-list {
      display: inline-block;
      float: right;
      font-size: 1rem;
-     margin: 1em 0 0.5em 0;
+     margin: 0 0 0.5em 0;
      width: 100%;
      border-radius: $global-border-radius;
      background: rgba($blue,0.1);

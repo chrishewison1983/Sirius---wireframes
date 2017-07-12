@@ -2,7 +2,7 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-create-client.html') }}
+{{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
@@ -51,7 +51,7 @@
 
           <div class="row">
 
-               <div id="document-summary" class="large-6 large-uncentered columns">
+               <div id="side-panel" class="large-8 large-uncentered columns">
 
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
@@ -73,13 +73,6 @@
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
                     <div id="tab-1" class="tab-content side-panel">
 
-                         <h2 class="section-title">
-                    		<div class="client-first-name">Gerald</div>
-                    		<div class="client-last-name">Brackens</div>
-                    		details
-                              <a href="#" class="edit">Edit</a>
-                         </h2>
-
                          {{= it.include('side-panel/client-details.html') }}
 
                     </div>
@@ -96,7 +89,7 @@
                     <!-- =========== TAB CONTENT - 3 - START =========== -->
                     <div id="tab-3" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Case documents</h2>
+                         <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
@@ -106,7 +99,7 @@
                </div>
 
                <!-- =========== CREATE CLIENT - START =========== -->
-               <div id="action-panel" class="large-6 large-uncentered columns">
+               <div id="action-panel" class="large-4 large-uncentered columns">
 
                     <div class="commission-visit right">
 
@@ -122,8 +115,19 @@
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group">
-                                   <legend>Client status</legend>
-                                   <label for="client-status-active" class="radio checked">
+                                   <label for="client-status">Client status</label>
+                                   <select id="client-status" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Open">Open</option>
+                                        <option value="Active">Active</option>
+                                        <option value="Inactive">Inactive</option>
+                                        <option value="Deceased">Deceased</option>
+                                        <option value="Rule 202">Rule 202</option>
+                                        <option value="Closed">Closed</option>
+                                        <option value="Duplicate">Duplicate</option>
+                                   </select>
+
+                                   <!-- <label for="client-status-active" class="radio checked">
                                         <input id="client-status-active" type="radio" name="client-status" value="Active" checked>
                                         Active
                                    </label>
@@ -134,12 +138,18 @@
                                    <label for="client-status-202"  class="radio">
                                         <input id="client-status-202" type="radio" name="client-status" value="Rule 202">
                                         Rule 202
-                                   </label>
+                                   </label> -->
                               </div>
                               <!-- // FORM ITEM - 1 - END // -->
 
                               <!-- // FORM ITEM - 2 - START // -->
                               <div class="form-group">
+                                   <div class="half">
+                                        <label for="visit-status-date">Status date:</label>
+                                        <input id="client-status-date" name="client-status-date" type="text" value="05/04/2017" maxlength="12">
+                                   </div>
+                              </div>
+                              <!-- <div class="form-group">
                                    <legend for="visit-status-day">
                                         Status date:
                                    </legend>
@@ -155,7 +165,7 @@
                                         <label for="client-status-year" class="sub-label">Year</label>
                                         <input id="client-status-year" name="client-status-year" type="text" value="2017" maxlength="4">
                                    </div>
-                              </div>
+                              </div> -->
                               <!-- // FORM ITEM - 2 - END // -->
 
                               <!-- // FORM ITEM - 3 - START // -->
@@ -198,8 +208,11 @@
 
                               <!-- // FORM ITEM - 7 - START // -->
                               <div class="form-group">
-                                   <legend for="dob">Date of birth</legend>
-                                   <div class="one-third">
+                                   <div class="half">
+                                        <label for="client-dob" class="">Date of birth</label>
+                                        <input id="client-dob" name="client-dob" type="text" value="09/08/1956" maxlength="12">
+                                   </div>
+                                   <!-- <div class="one-third">
                                         <label for="client-dob-day" class="sub-label">Day</label>
                                         <input id="client-dob-day" name="client-dob-day" type="text" value="09" maxlength="2">
                                    </div>
@@ -210,13 +223,13 @@
                                    <div class="one-third">
                                         <label for="client-dob-year" class="sub-label">Year</label>
                                         <input id="client-dob-year" name="client-dob-year" type="text" value="1956" maxlength="4">
-                                   </div>
+                                   </div> -->
                               </div>
                               <!-- // FORM ITEM - 7 - END // -->
 
                               <!-- // FORM ITEM - 8 - START // -->
                               <div class="form-group">
-                                   <label for="client-previous-name">Previously Known As</label>
+                                   <label for="client-previous-name">Previously Known As <div class="optional">(optional)</div></label>
                                    <input id="client-previous-name" name="company-name" type="text">
                               </div>
                               <!-- // FORM ITEM - 8 - END // -->
@@ -236,16 +249,16 @@
                               <!-- // FORM ITEM - 9 - END // -->
 
                               <!-- // FORM ITEM - 10a - START // -->
-                              <div class="form-group">
+                              <!-- <div class="form-group">
                                    <label for="client-postcode">Postcode</label>
                                    <input id="client-postcode" name="client-postcode" type="text" class="one-third" value="CV32 788">
                                    <a class="main-cta secondary" id="find-postcode">Find address</a>
                                    <a href="#" id="address-manual">Enter address manually</a>
-                              </div>
+                              </div> -->
                               <!-- // FORM ITEM - 10a - END // -->
 
                               <!-- // FORM ITEM - 10b - START // -->
-                              <div class="form-group address-list">
+                              <!-- <div class="form-group address-list">
                                    <label for="client-address-1" class="radio address">
                                         <input id="client-address-1" type="radio" name="client-address">
                                         1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
@@ -294,35 +307,31 @@
                                         <input id="client-address-12" type="radio" name="client-address">
                                         12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
                                    </label>
-
-                              </div>
+                              </div> -->
                               <!-- // FORM ITEM - 10b - END // -->
 
                               <!-- // FORM ITEM - 10c - START // -->
-                              <div id="manual-address-entry">
-                                   <div class="form-group">
-                                        <label for="client-address-line-1">Address</label>
-                                        <input id="client-address-line-1" name="client-address-line-1" type="text" value="1 Grimwald Place">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="client-address-line-2" class="hide">Address line 2</label>
-                                        <input id="client-address-line-2" name="client-address-line-2" type="text" value="Buckley">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="client-address-line-3" class="hide">Address line 3</label>
-                                        <input id="client-address-line-3" name="client-address-line-3" type="text">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="client-address-town">Town</label>
-                                        <input id="client-address-town" name="client-address-town" type="text" value="Flintshire">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="client-manual-postcode">Postcode</label>
-                                        <input id="client-manual-postcode" name="client-manual-postcode" type="text" class="one-third" value="CV32 788">
-                                   </div>
+                              <div class="form-group">
+                                   <label for="client-address-line-1">Address</label>
+                                   <input id="client-address-line-1" name="client-address-line-1" type="text" value="1 Grimwald Place">
+                              </div>
+                              <div class="form-group">
+                                   <label for="client-address-line-2" class="hide">Address line 2</label>
+                                   <input id="client-address-line-2" name="client-address-line-2" type="text" value="Buckley">
+                              </div>
+                              <div class="form-group">
+                                   <label for="client-address-line-3" class="hide">Address line 3</label>
+                                   <input id="client-address-line-3" name="client-address-line-3" type="text">
+                              </div>
+                              <div class="form-group">
+                                   <label for="client-address-town">Town</label>
+                                   <input id="client-address-town" name="client-address-town" type="text" value="Flintshire">
+                              </div>
+                              <div class="form-group">
+                                   <label for="client-manual-postcode">Postcode</label>
+                                   <input id="client-manual-postcode" name="client-manual-postcode" type="text" class="one-third" value="CV32 788">
                               </div>
                               <!-- // FORM ITEM - 10c - END // -->
-
 
                               <!-- // FORM ITEM - 11 - START // -->
                               <div class="form-group">
@@ -412,7 +421,7 @@
                                         Medical Condition
                                         <span class="hint">Medical condition(s) up to 250 character</span>
                                    </label>
-                                   <textarea name="textarea" class="jqte-test" id="client-medical-condition" maxlength="250">Alzheimer's</textarea>
+                                   <textarea name="textarea" id="client-medical-condition" maxlength="250">Alzheimer's</textarea>
                               </div>
                               <!-- // FORM ITEM - 18 - END // -->
 
@@ -457,13 +466,13 @@
                               <!-- // FORM ITEM - 20 - END // -->
 
                               <!-- // FORM ITEM - 21 - START // -->
-                              <div class="form-group violent-risk">
+                              <!-- <div class="form-group violent-risk">
                                    <span></span>
                                    <label class="normal" for="client-violent-risk">
                                         <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="Yes">
                                         Is the client a violent risk?
                                    </label>
-                              </div>
+                              </div> -->
                               <!-- // FORM ITEM - 21 - END // -->
 
                          </form>

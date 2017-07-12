@@ -411,7 +411,7 @@ $(document).ready(function() {
                     <br>
                     <span>Where: <strong>${ $("#assets").find('#visit-where').val() }</strong></span>
                     <br>
-                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-day').val() + '/' + $("#assets").find('#visit-date-reported-month').val() + '/' + $("#assets").find('#visit-date-reported-year').val() }</strong></span>
+                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-date').val() }</strong></span>
                     <span class="edit"></span>
                     <span class="remove"></span>
                </li>`
@@ -424,7 +424,7 @@ $(document).ready(function() {
                     <br>
                     <span>Where: <strong>${ $("#assets").find('#visit-where').val() }</strong></span>
                     <br>
-                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-day').val() + '/' + $("#assets").find('#visit-date-reported-month').val() + '/' + $("#assets").find('#visit-date-reported-year').val() }</strong></span>
+                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-date').val() }</strong></span>
                     <span class="remove"></span>
                </li>`
           );
@@ -626,23 +626,6 @@ $("#visit-dangers-no").click( function(){
 
 $(".visit-family-background").click( function(){
      $('#cta-footer').slideDown('slow');
-});
-
-// Document viewer
-$(document).ready(function() {
-     $(".hide-page-1").click(function(){
-          $("#page-1").animate({width: 'toggle'}, "slow");
-          setTimeout(function() {
-               $("#page-2").animate({width: 'toggle'}, "slow");
-          }, 500);
-     });
-     $("#back").click(function(){
-          $("#page-2").animate({width: 'toggle'}, "slow");
-          setTimeout(function() {
-               $("#page-1").animate({width: 'toggle'}, "slow");
-          }, 500);
-     });
-
 });
 
 // Side panel content

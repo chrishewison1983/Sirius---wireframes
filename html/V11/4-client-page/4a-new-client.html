@@ -1,0 +1,2177 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V11/jquery.min.js"></script>
+
+     <!-- <script src="../../../production/js/V11/application.js"></script> -->
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- MAIN NAV - START -->
+<header class="main">
+
+     <nav>
+
+          <a href="../dashboard.html" class="logo">
+               <img src="../../../production/img/V11/sirius-logo-small.svg" alt="Sirius">
+               <p><span>My Tasks</span></p>
+          </a>
+
+          <!-- <a href="#" class="user-cta">
+               <span class="nav-icon"></span>
+               <div class="sirius-user-id">Susan Smith</div>
+          </a> -->
+
+          <a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+               <span class="nav-icon"></span>
+               <p><span>Create client</span></p>
+          </a>
+
+          <!-- <ul class="padding-wrapper">
+               <li class="actions create-letter">
+                    <a href="2-create-letter/2a-create-letter.html">
+                         <span class="nav-icon"></span>
+                         Create letter
+                    </a>
+               </li>
+               <li class="actions create-letter">
+                    <a href="#">
+                         <span class="nav-icon"></span>
+                         Add deputy
+                    </a>
+               </li>
+          </ul> -->
+
+          <a href="../index.html" class="main-cta sign-out">
+               <span class="nav-icon"></span>
+               <p><span>Sign out</span></p>
+          </a>
+
+          <!-- <a href="#" class="minimise">
+               Minimise
+          </a> -->
+
+     </nav>
+
+</header>
+<!-- MAIN NAV - END -->
+<!-- PRIMARY CONTENT - START --><main class="default new-client"> <!-- PRIMARY NAV - START -->
+<nav class="client-nav">
+	<ul class="client-details">
+
+		<!-- Link 1 - START -->
+		<li class="tablinks overview active" onclick="openTab(event, 'client-overview')" id="defaultOpen">
+			<div class="wrapper">
+				<span></span>
+		          <h1>Overview</h1>
+			</div>
+		</li>
+		<!-- Link 1 - END -->
+
+		<!-- Link 2 - START -->
+		<li class="tablinks health" onclick="openTab(event, 'client-health')">
+			<div class="days-left">
+				<div class="wrapper">
+					<span class="number-of-days">25</span>
+					<span>days</span>
+				</div>
+			</div>
+			<div class="wrapper items">
+				<h1><span class="icon welfare"></span> H &amp; W <div class="sep">|</div> 19273638</h1>
+				<div class="border"></div>
+				<div class="info-row">
+					<div class="tasks">
+						<i class="icon"></i>
+						<p>Tasks</p>
+						<span class="number">4</span>
+					</div>
+					<div class="deputies">
+						<i class="icon"></i>
+						<p>Deputies</p>
+						<span class="number">2</span>
+					</div>
+				</div>
+			</div>
+			<div class="due-date">
+				<p>Due date:</p>
+				<p>17/07/2017</p>
+			</div>
+		</li>
+		<!-- Link 2 - END -->
+
+		<!-- Link 3 - START -->
+		<li class="tablinks property" onclick="openTab(event, 'client-property')">
+			<div class="wrapper items">
+				<h1><span class="icon property"></span> PFA <div class="sep">|</div> 14820940</h1>
+				<div class="border"></div>
+				<div class="info-row">
+					<div class="tasks">
+						<i class="icon"></i>
+						<p>Tasks</p>
+						<span class="number">1</span>
+					</div>
+					<div class="deputies">
+						<i class="icon"></i>
+						<p>Deputies</p>
+						<span class="number">1</span>
+					</div>
+				</div>
+			</div>
+			<div class="due-date">
+				<p>Due date:</p>
+				<p>21/09/2017</p>
+			</div>
+		</li>
+		<!-- Link 3 - END -->
+
+		<!-- Link 4 - START -->
+		<li class="tablinks unassigned" onclick="openTab(event, 'client-unassigned')">
+			<div class="wrapper">
+				<span class="number"><div class="inner">6</div></span>
+				<h1>Unsupervised cases</h1>
+			</div>
+		</li>
+		<!-- Link 4 - END -->
+
+	</ul>
+
+</nav>
+<!-- PRIMARY NAV - END -->
+ <!-- SECTION HEADER - START --> <div id="section-header" class="client-page"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<div class="preferences">
+				<a href="#" class="user-cta">
+					<div class="wrapper">
+						<span class="nav-icon"></span>
+						<div class="sirius-user-id">Susan Smith</div>
+					</div>
+				</a>
+
+				<ul class="user-settings">
+					<li><a href="#">Help and guidance</a></li>
+					<li class="multiple-options">
+						<span>Theme:</span>
+						<a href="#" class="multiple current">Light</a>
+						<a href="#" class="multiple">Dark</a>
+						<a href="#" class="multiple">Pink</a>
+					</li>
+					<li class="multiple-options">
+						<span>Font size:</span>
+						<a href="#" class="multiple current">Regular</a>
+						<a href="#" class="multiple">Large</a>
+					</li>
+				</ul>
+			</div>
+
+			<form action="search.html">
+				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="submit">
+			</form>
+
+			<label class="switch">
+				<span>Supervision</span>
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+
+		</div>
+	</div>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-7 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-5 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+<nav class="actions-nav header">
+
+	<ul>
+		<li class="supervision">
+			<a href="../7-edit-client/7a-edit-client.html" class="action edit-client">
+				<span class="icon"></span>
+				<span>Edit client</span>
+			</a>
+		</li>
+		<li class="supervision">
+			<a href="../5-add-edit-deputy/5a-search-deputy.html" class="action create-deputy">
+				<span class="icon"></span>
+				<span>Add/edit deputy</span>
+			</a>
+		</li>
+		<li class="allocations">
+			<a href="../1-create-case/1a-the-order.html" class="action create-case">
+				<span class="icon"></span>
+				<span>Create case</span>
+			</a>
+		</li>
+		<li class="allocations edit-case-link">
+			<a href="../1-create-case/0-select-case.html" class="action edit-case">
+				<span class="icon"></span>
+				<span>Edit case</span>
+			</a>
+		</li>
+	</ul>
+
+</nav>
+<!-- // ACTIONS NAV - END // -->
+ </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- TAB CONTENT - START --> <div id="client-overview" class="tabcontent current"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- // LIST OF SUMMARIES - START // -->
+<div id="list-of-summary">
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+			<div id="edit-client-confirm" class="confirmation-panel">
+				<div class="content">
+					<h2>
+						<span></span>
+						<div class="client-title">Mr</div>
+						<div class="client-first-name">Gerald</div>
+						<div class="client-last-name">Brackens</div>
+						has now been updated
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+
+	<!-- <div class="no-items">
+		<p>There are no summary for this client as we have yet to enter more info.</p>
+		<a href="#" class="main-cta">Create case</a>
+	</div> -->
+
+	<!-- // ================================ DASHBOARD CONTENT - START ================================ // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<!-- =========== TABS - START =========== -->
+			<ul class="client-details tabs">
+				<li class="tab-link current" data-tab="summary-tab-1">
+					Summary
+				</li>
+				<li class="tab-link" data-tab="summary-tab-2">
+					Client details
+				</li>
+			</ul>
+			<!-- =========== TABS - END =========== -->
+
+			<!-- =========== TAB CONTENT - 1 - START =========== -->
+			<div id="summary-tab-1" class="client-details tab-content current">
+				<div class="row">
+
+					<div class="large-12 large-uncentered columns">
+
+						<div id="new-client-summary">
+							<div class="no-items">
+								<p>
+									<span class="client-title">Mr</span>
+									<span class="client-first-name">Gerald</span>
+									<span class="client-last-name">Brackens</span>
+									is a brand new client so no dashboard is available for them yet,
+									the more information you add the more the more will appear on the dashboard.
+								</p>
+								<a href="../1-create-case/1a-the-order.html" class="main-cta">Create case</a>
+							</div>
+						</div>
+
+						<div id="client-summary">
+
+							<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
+							<div class="dashboard-row full-width content-items-4">
+
+								<!-- // ITEM 1 - START // -->
+								<div class="item client-info">
+									<div class="left">
+										<span class="icon welfare blue"></span>
+									</div>
+									<div class="right">
+										<p>H &amp; W | Court reference:</p>
+										<h1>19273638</h1>
+									</div>
+								</div>
+								<!-- // ITEM 1 - END // -->
+
+								<!-- // ITEM 2 - START // -->
+								<div class="item client-info">
+									<div class="left">
+										<span class="icon property blue"></span>
+									</div>
+									<div class="right">
+										<p>PFA | Court reference:</p>
+										<h1>19273638</h1>
+									</div>
+								</div>
+								<!-- // ITEM 2 - END // -->
+
+								<!-- // ITEM 3 - START // -->
+								<div class="item client-info">
+									<div class="left">
+										<span class="icon dob"></span>
+									</div>
+									<div class="right">
+										<p>Born:</p>
+										<h1>
+											<span class="client-dob-day">25</span>
+											<span>/</span>
+											<span class="client-dob-month">06</span>
+											<span>/</span>
+											<span class="client-dob-year">1943</span>
+											<span class="age">74</span>
+										</h1>
+									</div>
+								</div>
+								<!-- // ITEM 3 - END // -->
+
+								<!-- // ITEM 4 - START // -->
+								<div class="item client-info">
+									<div class="left">
+										<span class="icon medical"></span>
+									</div>
+									<div class="right">
+										<p>Medical Condition:</p>
+										<h1><span class="client-medical-condition">Alzheimer's</span></h1>
+									</div>
+								</div>
+								<!-- // ITEM 4 - END // -->
+
+								<!-- // ITEM 4 - START // -->
+								<!-- <div class="item client-info">
+									<div class="left">
+										<span class="icon record"></span>
+									</div>
+									<div class="right">
+										<p>Record:</p>
+										<h1>7000-0000-2803</h1>
+									</div>
+								</div> -->
+								<!-- // ITEM 4 - END // -->
+
+							</div>
+							<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
+
+							<!-- ///////////////////// ROW - 2 - START ///////////////////// -->
+							<div class="dashboard-row two-items">
+
+								<!-- // ITEM 1 - START // -->
+								<div class="item with-title">
+									<div class="title"><span class="important"></span><p>Important remarks</p></div>
+									<ol class="summary-list">
+										<li>
+											<p>Risks to the clients:</p>
+											<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+										</li>
+										<li>
+											<p>Outstanding issues:</p>
+											<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+										</li>
+										<li>
+											<p>Safegaurding issues:</p>
+											<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+										</li>
+										<li>
+											<p>Client is violent:</p>
+											<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+										</li>
+									</ol>
+								</div>
+								<!-- // ITEM 1 - END // -->
+
+								<!-- // ITEM 2 - START // -->
+								<div class="item no-colour highlight">
+									<section class="full-colour-block alert-colour right-focus compliant">
+										<div class="left">
+											<h1 class="sub-text">non-compliant</h1>
+										</div>
+										<div class="right font-size-6rem">
+											<h1 class="main-text">
+												30
+												<span>days</span>
+											</h1>
+										</div>
+									</section>
+									<section class="full-colour-block main-colour left-focus payment">
+										<div class="left font-size-3rem">
+											<h1 class="main-text">&pound;200</h1>
+										</div>
+										<div class="right">
+											<h2 class="sub-text">Outstanding payment</h2>
+										</div>
+									</section>
+									<section class="full-colour-block report-dates">
+										<div class="date">
+											<div class="wrapper">
+												<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
+												<h2 class="sub-text">19273638</h2>
+												<h2 class="sub-text">Report due</h2>
+											</div>
+											<div class="colour-wrapper"></div>
+										</div>
+										<div class="date">
+											<div class="wrapper">
+												<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
+												<h2 class="sub-text">19273638</h2>
+												<h2 class="sub-text">Report due</h2>
+											</div>
+											<div class="colour-wrapper"></div>
+										</div>
+									</section>
+								</div>
+								<!-- // ITEM 2 - END // -->
+
+							</div>
+							<!-- ///////////////////// ROW - 2 - END ///////////////////// -->
+
+							<!-- ///////////////////// ROW - 3 - START ///////////////////// -->
+							<div class="dashboard-row three-items">
+
+								<!-- // ITEM 1 - START // -->
+								<div class="item deputies with-title">
+									<div class="title"><span class="deputy"></span><p>Deputy</p></div>
+									<span class="number">1</span>
+									<h1>
+										Lara Stevens
+										<span class="icon fee-payer"><p>Fee payer</p></span>
+										<span class="icon main-contact"><p>Main deputy</p></span>
+										<span class="icon welfare"><p>Health &amp; welfare</p></span>
+										<span class="type">Joint</span>
+									</h1>
+									<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+						               <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div>
+						               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+								</div>
+								<!-- // ITEM 1 - END // -->
+
+								<!-- // ITEM 2 - START // -->
+								<div class="item deputies with-title">
+									<div class="title"><span class="deputy"></span><p>Deputy</p></div>
+									<span class="number">2</span>
+									<h1>
+										Carla Frith
+										<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
+										<span class="type">Joint &amp; severally</span>
+									</h1>
+									<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+						               <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div>
+						               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+								</div>
+								<!-- // ITEM 2 - END // -->
+
+								<!-- // ITEM 3 - START // -->
+								<div class="item deputies with-title">
+									<div class="title"><span class="deputy"></span><p>Deputy</p></div>
+									<span class="number">3</span>
+									<h1>
+										Melanie Rand
+										<span class="icon property"><p>Property &amp; finance</p></span>
+										<span class="type">Joint &amp; severally</span>
+									</h1>
+									<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+						               <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div>
+						               <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div>
+								</div>
+								<!-- // ITEM 3 - END // -->
+
+							</div>
+							<!-- ///////////////////// ROW - 3 - END ///////////////////// -->
+
+							<!-- ///////////////////// ROW - 4 - START ///////////////////// -->
+							<div class="dashboard-row two-items">
+
+								<!-- // ITEM 1 - START // -->
+								<div class="item no-colour highlight">
+									<section class="full-colour-block background right-focus">
+										<div class="left">
+											<h1 class="sub-text">Case 1:</h1>
+											<h2 class="main-text">19273638</h2>
+										</div>
+										<div class="right">
+											<i class="icon property white"></i>
+										</div>
+										<div class="colour-wrapper"></div>
+									</section>
+									<section class="full-colour-block background left-focus">
+										<div class="left">
+											<i class="icon welfare white"></i>
+										</div>
+										<div class="right">
+											<h1 class="sub-text">Case 2:</h1>
+											<h2 class="main-text">19273638</h2>
+										</div>
+										<div class="colour-wrapper"></div>
+									</section>
+								</div>
+								<!-- // ITEM 1 - END // -->
+
+								<!-- // ITEM 2 - START // -->
+								<div class="item with-title">
+									<div class="title"><span class="history"></span><p>Case history</p></div>
+									<ol class="summary-list">
+										<li>
+											<p>When a visit was carried out?:</p>
+											<p class="answer">25/06/2016</p>
+										</li>
+										<li>
+											<p>Have they been non-compliant before?:</p>
+											<p class="answer">Yes</p>
+										</li>
+										<li>
+											<p>Is there is a problem with the case?:</p>
+											<p class="answer">No</p>
+										</li>
+										<li>
+											<p>Do the deputies get on?</p>
+											<p class="answer">No, they can never agree on the right course of action</p>
+										</li>
+									</ol>
+								</div>
+								<!-- // ITEM 2 - END // -->
+
+							</div>
+							<!-- ///////////////////// ROW - 4 - END ///////////////////// -->
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 2 - START =========== -->
+			<div id="summary-tab-2" class="client-details tab-content">
+				<div class="row">
+
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // CLIENT DETAILS - START // -->
+						<div class="check-details" id="client-details">
+
+							<h2 class="description-title">
+								<div class="client-title">Mr</div>
+								<div class="client-first-name">Gerald</div>
+								<div class="client-last-name">Brackens</div>
+								details
+								<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit client</a>
+							</h2>
+
+							<!-- // CLIENT ITEM - 1 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Client status:</p>
+								<p class="answer client-status">Active</p>
+							</div>
+							<!-- // CLIENT ITEM - 1 - END // -->
+
+							<!-- // CLIENT ITEM - 2 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Status date:</p>
+								<p class="answer">
+									<span class="client-status-date">05/04/2017</span>
+								</p>
+							</div>
+							<!-- // CLIENT ITEM - 2 - END // -->
+
+							<!-- // CLIENT ITEM - 3 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Title:</p>
+								<p class="answer client-title">Mr.</p>
+							</div>
+							<!-- // CLIENT ITEM - 3 - END // -->
+
+							<!-- // CLIENT ITEM - 4 - START // -->
+							<div class="person-detail-item">
+								<p class="item">First name:</p>
+								<p class="answer client-first-name">Gerald</p>
+							</div>
+							<!-- // CLIENT ITEM - 4 - END // -->
+
+							<!-- // CLIENT ITEM - 5 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Middle names:</p>
+								<p class="answer client-middle-name">Brackens</p>
+							</div>
+							<!-- // CLIENT ITEM - 5 - END // -->
+
+							<!-- // CLIENT ITEM - 6 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Last name:</p>
+								<p class="answer client-last-name">Stephen</p>
+							</div>
+							<!-- // CLIENT ITEM - 6 - END // -->
+
+							<!-- // CLIENT ITEM - 7 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Date of birth:</p>
+								<p class="answer">
+									<span class="client-dob">09/08/1956</span>
+								</p>
+							</div>
+							<!-- // CLIENT ITEM - 7 - END // -->
+
+							<!-- // CLIENT ITEM - 8 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Previously Known As:</p>
+								<p class="answer client-previously-known-as">N/A</p>
+							</div>
+							<!-- // CLIENT ITEM - 8 - END // -->
+
+
+							<!-- // CLIENT ITEM - 9 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Country:</p>
+								<p class="answer client-country">England</p>
+							</div>
+							<!-- // CLIENT ITEM - 9 - END // -->
+
+							<!-- // CLIENT ITEM - 10 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Address:</p>
+								<p class="answer">
+									<span class="client-address-line-1">1 Grimwald Place</span>,<br>
+									<span class="client-address-line-2">Buckley</span>,<br>
+									<span class="client-address-town">Flintshire</span>,<br>
+									<span class="client-manual-postcode">CV32 788</span>.
+								</p>
+							</div>
+							<!-- // CLIENT ITEM - 10 - END // -->
+
+							<!-- // CLIENT ITEM - 11 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Is airmail required?:</p>
+								<p class="answer client-airmail">No</p>
+							</div>
+							<!-- // CLIENT ITEM - 11 - END // -->
+
+							<!-- // CLIENT ITEM - 12 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Daytime telephone number:</p>
+								<p class="answer client-phone-number">0123456789</p>
+							</div>
+							<!-- // CLIENT ITEM - 12 - END // -->
+
+							<!-- // CLIENT ITEM - 13 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Mobile telephone number:</p>
+								<p class="answer client-mob-number">07768948823</p>
+							</div>
+							<!-- // CLIENT ITEM - 13 - END // -->
+
+							<!-- // CLIENT ITEM - 14 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Email address:</p>
+								<p class="answer client-email">gerald.brackens@hotmail.com</p>
+							</div>
+							<!-- // CLIENT ITEM - 14 - END // -->
+
+							<!-- // CLIENT ITEM - 15 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Financial reference:</p>
+								<p class="answer client-financial">192848291</p>
+							</div>
+							<!-- // CLIENT ITEM - 15 - END // -->
+
+							<!-- // CLIENT ITEM - 16 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Casarec Number:</p>
+								<p class="answer client-casarec">183920478</p>
+							</div>
+							<!-- // CLIENT ITEM - 16 - END // -->
+
+							<!-- // CLIENT ITEM - 17 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Accommodation Type:</p>
+								<p class="answer client-accommodation">LA Nursing home</p>
+							</div>
+							<!-- // CLIENT ITEM - 17 - END // -->
+
+							<!-- // CLIENT ITEM - 18 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Medical Condition:</p>
+								<p class="answer client-medical-condition-answer">Alzheimer's</p>
+							</div>
+							<!-- // CLIENT ITEM - 18 - END // -->
+
+							<!-- // CLIENT ITEM - 19 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Marital Status:</p>
+								<p class="answer client-marital-status">Divorced</p>
+							</div>
+							<!-- // CLIENT ITEM - 19 - END // -->
+
+							<!-- // CLIENT ITEM - 20 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Correspondence By:</p>
+								<ul class="answer">
+									<li class="client-correspondence-post">Post</li>
+									<li class="client-correspondence-email">Email</li>
+								</ul>
+							</div>
+							<!-- // CLIENT ITEM - 20 - END // -->
+
+							<!-- // CLIENT ITEM - 21 - START // -->
+							<div class="person-detail-item">
+								<p class="item">Is the client a violent risk?:</p>
+								<p class="answer client-violent-risk">No</p>
+							</div>
+							<!-- // CLIENT ITEM - 21 - END // -->
+
+						</div>
+						<!-- // CLIENT DETAILS - END // -->
+
+					</div>
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+		</div>
+	</div>
+	<!-- //  ================================ DASHBOARD CONTENT - END ================================ // -->
+
+</div>
+<!-- // LIST OF SUMMARIES - END // -->
+ </div> </div> </div> <div id="client-health" class="tabcontent"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- CONTENT WRAPPER - START -->
+<div class="content-wrapper">
+
+	<div class="row">
+		<div class="large-9 large-uncentered columns">
+
+			<!-- =========== TABS - START =========== -->
+			<ul class="client-details tabs">
+				<li class="tab-link current" data-tab="health-tab-1">
+					Summary
+				</li>
+				<li class="tab-link" data-tab="health-tab-2">
+					Deputies
+				</li>
+				<li class="tab-link" data-tab="health-tab-3">
+					Warnings
+				</li>
+				<li class="tab-link" data-tab="health-tab-4">
+					Timeline
+				</li>
+				<li class="tab-link" data-tab="health-tab-5">
+					<span>4</span> Tasks
+				</li>
+				<li class="tab-link" data-tab="health-tab-6">
+					Documents
+				</li>
+			</ul>
+			<!-- =========== TABS - END =========== -->
+
+			<!-- =========== TAB CONTENT - 1 - START =========== -->
+			<div id="health-tab-1" class="client-details tab-content current">
+				<div class="row">
+
+					<!-- // CREATE CLIENT - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF SUMMARIES - START // -->
+						<div id="list-of-summary">
+
+							<!-- <div class="no-items">
+								<p>There are no summary for this client as we have yet to enter more info.</p>
+								<a href="#" class="main-cta">Create case</a>
+							</div> -->
+
+							<!-- // ================================ DASHBOARD CONTENT - START ================================ // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<div id="client-summary" class="health">
+
+										<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
+										<div class="dashboard-row full-width content-items-3">
+
+											<!-- // ITEM 1 - START // -->
+											<div class="item client-info">
+												<div class="left">
+													<span class="icon welfare blue"></span>
+												</div>
+												<div class="right">
+													<p>Court reference:</p>
+													<h1>19273638</h1>
+												</div>
+											</div>
+											<!-- // ITEM 1 - END // -->
+
+											<!-- // ITEM 2 - START // -->
+											<div class="item client-info">
+												<div class="left">
+													<span class="icon dob"></span>
+												</div>
+												<div class="right">
+													<p>Born:</p>
+													<h1>
+														<span class="client-dob-day">25</span>
+														<span>/</span>
+														<span class="client-dob-month">06</span>
+														<span>/</span>
+														<span class="client-dob-year">1943</span>
+													</h1>
+												</div>
+											</div>
+											<!-- // ITEM 2 - END // -->
+
+											<!-- // ITEM 3 - START // -->
+											<div class="item client-info">
+												<div class="left">
+													<span class="icon medical"></span>
+												</div>
+												<div class="right">
+													<p>Medical Condition:</p>
+													<h1><span class="client-medical-condition">Alzheimer's</span></h1>
+												</div>
+											</div>
+											<!-- // ITEM 3 - END // -->
+
+											<!-- // ITEM 4 - START // -->
+											<!-- <div class="item client-info">
+												<div class="left">
+													<span class="icon record"></span>
+												</div>
+												<div class="right">
+													<p>Record:</p>
+													<h1>7000-0000-2803</h1>
+												</div>
+											</div> -->
+											<!-- // ITEM 4 - END // -->
+
+										</div>
+										<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
+
+										<!-- ///////////////////// ROW - 2 - START ///////////////////// -->
+										<div class="dashboard-row two-items">
+
+											<!-- // ITEM 1 - START // -->
+											<div class="item with-title">
+												<div class="title"><span class="important"></span><p>Important remarks</p></div>
+												<ol class="summary-list">
+													<li>
+														<p>Risks to the clients:</p>
+														<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+													</li>
+													<li>
+														<p>Outstanding issues:</p>
+														<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+													</li>
+													<li>
+														<p>Safegaurding issues:</p>
+														<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+													</li>
+													<li>
+														<p>Client is violent:</p>
+														<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+													</li>
+												</ol>
+											</div>
+											<!-- // ITEM 1 - END // -->
+
+											<!-- // ITEM 2 - START // -->
+											<div class="item no-colour highlight">
+												<section class="full-colour-block alert-colour right-focus compliant">
+													<div class="left">
+														<h1 class="sub-text">non-compliant</h1>
+													</div>
+													<div class="right font-size-6rem">
+														<h1 class="main-text">
+															30
+															<span>days</span>
+														</h1>
+													</div>
+												</section>
+												<section class="full-colour-block main-colour left-focus payment">
+													<div class="left font-size-3rem">
+														<h1 class="main-text">&pound;200</h1>
+													</div>
+													<div class="right">
+														<h2 class="sub-text">Outstanding payment</h2>
+													</div>
+												</section>
+												<section class="full-colour-block report-dates">
+													<div class="date">
+														<div class="wrapper">
+															<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
+															<h2 class="sub-text">19273638</h2>
+															<h2 class="sub-text">Report due</h2>
+														</div>
+														<div class="colour-wrapper"></div>
+													</div>
+												</section>
+											</div>
+											<!-- // ITEM 2 - END // -->
+
+										</div>
+										<!-- ///////////////////// ROW - 2 - END ///////////////////// -->
+
+										<!-- ///////////////////// ROW - 3 - START ///////////////////// -->
+										<div class="dashboard-row two-items">
+
+											<!-- // ITEM 1 - START // -->
+											<div class="item deputies with-title">
+												<div class="title"><span class="deputy"></span><p>Deputy</p></div>
+												<span class="number">1</span>
+												<h1>
+													Lara Stevens
+													<span class="icon fee-payer"><p>Fee payer</p></span>
+													<span class="icon main-contact"><p>Main deputy</p></span>
+													<span class="icon welfare"><p>Health &amp; welfare</p></span>
+													<span class="type">Joint</span>
+												</h1>
+												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+									               <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div>
+									               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+											</div>
+											<!-- // ITEM 1 - END // -->
+
+											<!-- // ITEM 2 - START // -->
+											<div class="item deputies with-title">
+												<div class="title"><span class="deputy"></span><p>Deputy</p></div>
+												<span class="number">2</span>
+												<h1>
+													Carla Frith
+													<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
+													<span class="type">Joint &amp; severally</span>
+												</h1>
+												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+									               <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div>
+									               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+											</div>
+											<!-- // ITEM 2 - END // -->
+
+											<!-- // ITEM 3 - START // -->
+											<!-- <div class="item deputies with-title">
+												<div class="title"><span class="deputy"></span><p>Deputy</p></div>
+												<span class="number">3</span>
+												<h1>
+													Melanie Rand
+													<span class="icon property"><p>Property &amp; finance</p></span>
+													<span class="type">Joint &amp; severally</span>
+												</h1>
+												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+									               <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div>
+									               <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div>
+											</div> -->
+											<!-- // ITEM 3 - END // -->
+
+										</div>
+										<!-- ///////////////////// ROW - 3 - END ///////////////////// -->
+
+										<!-- ///////////////////// ROW - 4 - START ///////////////////// -->
+										<div class="dashboard-row two-items">
+
+											<!-- // ITEM 1 - START // -->
+											<div class="item no-colour">
+												<ul class="related-cases">
+													<li>
+														<a href="#" class="answer">
+															<div class="wrapper">
+																<span></span>
+																<p>Related case:</p>
+																<p class="title">18304726</p>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="#" class="answer">
+															<div class="wrapper">
+																<span></span>
+																<p>Related case:</p>
+																<p class="title">13647304</p>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="#" class="answer">
+															<div class="wrapper">
+																<span></span>
+																<p>Related case:</p>
+																<p class="title">14627936</p>
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="#" class="answer">
+															<div class="wrapper">
+																<span></span>
+																<p>Related case:</p>
+																<p class="title">16472946</p>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- // ITEM 1 - END // -->
+
+											<!-- // ITEM 2 - START // -->
+											<div class="item with-title">
+												<div class="title"><span class="history"></span><p>Case history</p></div>
+												<ol class="summary-list">
+													<li>
+														<p>When a visit was carried out?:</p>
+														<p class="answer">25/06/2016</p>
+													</li>
+													<li>
+														<p>Have they been non-compliant before?:</p>
+														<p class="answer">Yes</p>
+													</li>
+													<li>
+														<p>Is there is a problem with the case?:</p>
+														<p class="answer">No</p>
+													</li>
+													<li>
+														<p>Do the deputies get on?</p>
+														<p class="answer">No, they can never agree on the right course of action</p>
+													</li>
+												</ol>
+											</div>
+											<!-- // ITEM 2 - END // -->
+
+										</div>
+										<!-- ///////////////////// ROW - 4 - END ///////////////////// -->
+
+									</div>
+								</div>
+							</div>
+							<!-- //  ================================ DASHBOARD CONTENT - END ================================ // -->
+
+						</div>
+						<!-- // LIST OF SUMMARIES - END // -->
+
+					</div>
+					<!-- // CREATE CLIENT - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 2 - START =========== -->
+			<div id="health-tab-2" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DEPUTIES - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF DEPUTIES - START // -->
+						<div id="list-of-deputies">
+
+							<div class="no-items">
+								<p>There are no deputies currently added to this client.</p>
+								<a href="../5-add-edit-deputy/5a-search-deputy.html" class="main-cta">Add/edit deputies</a>
+							</div>
+
+							<!-- // CONFIRMATION MESSAGE - START // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<div id="deputy-confirmation" class="confirmation-panel">
+										<div class="content">
+											<h2>
+												<span></span>
+												<div class="deputy-first-name">Deputy first name</div>
+												<div class="deputy-last-name">Deputy last name</div>
+												has now been added as a deputy to
+												<div class="client-first-name">Client first name</div>
+												<div class="client-last-name">Client last name</div><div>'s</div>
+												account
+											</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // CONFIRMATION MESSAGE - END // -->
+
+							<!-- <div class="deputies">
+
+							</div> -->
+
+						</div>
+						<!-- // LIST OF DEPUTIES - END // -->
+
+					</div>
+					<!-- // CLIENT DEPUTIES - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="health-tab-3" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // WARNINGS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF DEPUTIES - START // -->
+						<div id="list-of-warnings">
+
+							<div class="no-items">
+								<p>There are no warnings currently added to this client.</p>
+								<a href="#" class="main-cta">Add warning</a>
+							</div>
+
+						</div>
+						<!-- // LIST OF DEPUTIES - END // -->
+
+					</div>
+					<!-- // WARNINGS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="health-tab-4" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF SUMMARIES - START // -->
+						<div id="list-of-timeline">
+
+							<!-- <div class="no-items">
+								<p>There are no summary for this client as we have yet to enter more info.</p>
+								<a href="#" class="main-cta">Create case</a>
+							</div> -->
+
+							<!-- // CONFIRMATION MESSAGE - START // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<div id="visit-confirmation" class="confirmation-panel">
+										<div class="content">
+											<h2>
+												<span></span>
+												A visit has now been commission to:
+												<ul id="visits">
+												</ul>
+											</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // CONFIRMATION MESSAGE - END // -->
+
+							<!-- // COMMISSION VISIT MESSAGE - START // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<ol id="task-list">
+
+										<!-- DATE INDICATOR - START -->
+										<li class="date-indicator">
+											<span class="dot"></span>
+											<span class="border"></span>
+											<div>Today</div>
+										</li>
+										<!-- DATE INDICATOR - END -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="outstanding pdf-review">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<form>
+
+												<!-- // FORM ITEM - 1 - START // -->
+						                              <div class="form-group">
+													<span class="icon"></span>
+						                                   <label class="normal" for="confirm-read">Visit report received</label>
+													<!-- // STATUS - START // -->
+													<div class="status">
+														outstanding
+													</div>
+													<!-- // STATUS - END // -->
+
+													<input id="confirm-read" name="confirm-read" type="checkbox" value="post">
+						                              </div>
+						                              <!-- // FORM ITEM - 1 - END // -->
+
+											</form>
+
+											<div class="wrapper">
+
+												<a href="#review-report-1" rel="modal:open">Review report</a>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- DATE INDICATOR - START -->
+										<li class="date-indicator">
+											<span class="dot"></span>
+											<span class="border"></span>
+											<div>This week</div>
+										</li>
+										<!-- DATE INDICATOR - END -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li>
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+							                              <h2>
+														<span class="icon"></span>
+														Commissioned visit
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<a class="more-info indent">More info</a>
+
+												<div class="details">
+
+													<!-- // DEPUTY ITEM - 1 - START // -->
+								                         <div class="visit-detail-item">
+								                              <span class="item">Case no.:</span>
+								                              <span class="answer case-no">29273638201</span>
+								                         </div>
+								                         <!-- // DEPUTY ITEM - 1 - END // -->
+
+													<!-- // DEPUTY ITEM - 2 - START // -->
+								                         <div class="visit-detail-item">
+								                              <span class="item">Visiting:</span>
+														<span class="answer">
+															<ul id="visiting">
+															</ul>
+														</span>
+								                         </div>
+								                         <!-- // DEPUTY ITEM - 2 - END // -->
+
+													<!-- // DEPUTY ITEM - 3 - START // -->
+								                         <div class="visit-detail-item">
+								                              <span class="item">Team:</span>
+								                              <span class="answer visit-team">Health &amp; welfare teams</span>
+								                         </div>
+								                         <!-- // DEPUTY ITEM - 3 - END // -->
+
+													<!-- // DEPUTY ITEM - 4 - START // -->
+								                         <div class="visit-detail-item">
+								                              <span class="item">Type of visit:</span>
+								                              <span class="answer type-of-visit"></span>
+								                         </div>
+								                         <!-- // DEPUTY ITEM - 4 - END // -->
+
+													<!-- // DEPUTY ITEM - 5 - START // -->
+								                         <div class="visit-detail-item">
+								                              <span class="item">Due back date:</span>
+								                              <span class="answer visit-due-back-date">Fri Apr 28 2017</span>
+								                         </div>
+								                         <!-- // DEPUTY ITEM - 5 - END // -->
+
+													<!-- // DEPUTY ITEM - 6 - START // -->
+								                         <div class="visit-detail-item">
+								                              <span class="item">Commission date:</span>
+								                              <span class="answer visit-commission-date">Fri Apr 28 2017</span>
+								                         </div>
+								                         <!-- // DEPUTY ITEM - 6 - END // -->
+
+												</div>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="case">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Case created
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p>Date created: <strong>Tue Apr 18 2017</strong></p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- DATE INDICATOR - START -->
+										<li class="date-indicator">
+											<span class="dot"></span>
+											<span class="border"></span>
+											<div>This month</div>
+										</li>
+										<!-- DATE INDICATOR - END -->
+
+
+
+										<!-- DATE INDICATOR - START -->
+										<li class="date-indicator">
+											<span class="dot"></span>
+											<span class="border"></span>
+											<div>Older</div>
+										</li>
+										<!-- DATE INDICATOR - END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="client">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Level of Supervision
+														<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+														<div class="date"><span class="icon"></span>06 Jul 2017 14:23 — #XWClient</div>
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p><strong>Super Mario</strong> (700000002472)</p>
+												<p>Court Reference 11605598</p>
+												<p>SageID 123453 changed to 1234532</p>
+												<p>Status date: 01/01/2009 changed to 01/01/2010</p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="case">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Level of Supervision
+														<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+														<div class="date"><span class="icon"></span>06 Jul 2017 14:22 — #XU</div>
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p>Level of supervision set to <strong>General</strong> from 01/01/2017</p>
+												<p>Notes: Notes</p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="case">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Case created
+														<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+														<div class="date"><span class="icon"></span>06 Jul 2017 14:21 — #XROrder</div>
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p><strong>PFA 7000-0000-2506</strong></p>
+												<p>Order case (7000-0000-2506) created on: 06/07/2017</p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="client">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Client phone number
+														<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+														<div class="date"><span class="icon"></span>06 Jul 2017 14:17 — #XPPhone Number</div>
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p>Work number was changed to <strong>07476989745</strong></p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="client">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Client address
+														<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+														<div class="date"><span class="icon"></span>06 Jul 2017 14:17 — #XO</div>
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p><strong>Address updated</strong></p>
+												<p>128 middleton hall, harborne, b, Birmingham, West Midlands, B301SL, United Kingdom.</p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+										<!-- /////////////////////////// LI ITEM - START /////////////////////////// -->
+										<li class="client">
+
+											<span class="dot"></span>
+											<span class="border"></span>
+
+											<div class="wrapper">
+
+												<!-- // ACTION TITLE - 1 - START // -->
+												<div class="title">
+													<h2>
+														<span class="icon"></span>
+														Client created
+														<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+														<div class="date"><span class="icon"></span>06 Jul 2017 14:17 — #XN</div>
+													</h2>
+												</div>
+												<!-- // ACTION TITLE - 1 - END // -->
+
+												<p><strong>Super Mario</strong> (7000-0000-2472)</p>
+												<p>Court Reference: 11605598</p>
+
+											</div>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM - END /////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									</ol>
+								</div>
+							</div>
+							<!-- // COMMISSION VISIT MESSAGE - END // -->
+
+						</div>
+						<!-- // LIST OF SUMMARIES - END // -->
+
+						<!-- // MODAL - START // -->
+						<div id="review-report-1" style="display:none;">
+							<img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item">
+						</div>
+						<!-- // MODAL - END // -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="health-tab-5" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF DEPUTIES - START // -->
+						<div id="list-of-tasks">
+
+							<div class="no-items">
+								<p>There are no tasks currently added to this client.</p>
+								<a href="#" class="main-cta">Create task</a>
+							</div>
+
+							<!-- // COMMISSION VISIT MESSAGE - START // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<ol id="task-list">
+
+										<h2 class="description-title">Your outstanding tasks</h2>
+
+										<!-- // CONFIRMATION MESSAGE - START // -->
+										<div class="row">
+											<div class="large-12 large-uncentered columns">
+												<div id="confirmation-dashboard-visit" class="confirmation-panel">
+													<div class="content">
+														<h2>
+															<span></span>
+															Your visit has been commissioned to
+															<div class="client-first-name">Gerald</div>
+															<div class="client-last-name">Brackens</div>
+														</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- // CONFIRMATION MESSAGE - END // -->
+
+										<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
+										<li class="outstanding pdf-review">
+
+											<span class="dot"></span>
+
+											<form>
+
+												<!-- // FORM ITEM - 1 - START // -->
+						                              <div class="form-group">
+						                                   <label class="normal" for="confirm-read">
+						                                        <input id="confirm-read" name="confirm-read" type="checkbox" value="post">
+														<span class="icon"></span>
+						                                        Visit report received
+
+														<!-- // STATUS - START // -->
+														<div class="status">
+															outstanding
+														</div>
+														<!-- // STATUS - END // -->
+
+						                                   </label>
+						                              </div>
+						                              <!-- // FORM ITEM - 1 - END // -->
+
+											</form>
+
+											<a href="#review-report-2" rel="modal:open">Review report</a>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
+
+									</ol>
+								</div>
+							</div>
+							<!-- // COMMISSION VISIT MESSAGE - END // -->
+
+						</div>
+						<!-- // LIST OF DEPUTIES - END // -->
+
+						<!-- // MODAL - START // -->
+						<div id="review-report-2" style="display:none;">
+							<img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item">
+						</div>
+						<!-- // MODAL - END // -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="health-tab-6" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DOCUMENTS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF DEPUTIES - START // -->
+						<div id="list-of-documents">
+
+							<div class="no-items">
+								<p>There are no documents currently added to this client.</p>
+								<a href="../2-create-letter/2a-create-letter.html" class="main-cta">Create letter</a>
+							</div>
+
+							<!-- // CONFIRMATION MESSAGE - START // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<div id="document-confirmation" class="confirmation-panel">
+										<div class="content">
+											<h2>
+												<span></span>
+												Your document
+												<div class="document-title"></div>
+												has been created and sent for print for:
+												<ul id="document-recipients">
+												</ul>
+											</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // CONFIRMATION MESSAGE - END // -->
+
+						</div>
+						<!-- // LIST OF DEPUTIES - END // -->
+
+					</div>
+					<!-- // CLIENT DOCUMENTS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 6 - END =========== -->
+
+		</div>
+
+		<div class="large-3 large-uncentered columns">
+			<!-- // ACTIONS NAV - START // -->
+			<nav class="actions-nav client-panel">
+
+				<h1>Perform case task:</h1>
+
+				<ul>
+					<li class="supervision">
+						<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
+							<span class="icon"></span>
+							<span>Commission a visit</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
+							<span class="icon"></span>
+							<span>Create document</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../8-create-task/8a-create-task.html" class="action create-task">
+							<span class="icon"></span>
+							<span>Create task</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../9-reporting-period/9a-reporting-period.html" class="action report">
+							<span class="icon"></span>
+							<span>Reporting period</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../10-supervision-level/10a-supervision-level.html" class="action supervision-level">
+							<span class="icon"></span>
+							<span>Supervision level</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../11-new-event/11a-new-event.html" class="action new-event">
+							<span class="icon"></span>
+							<span>New event</span>
+						</a>
+					</li>
+
+					<!-- YET TO CODE - START -->
+					<!-- <li class="allocations">
+						<a href="#" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit case</span>
+						</a>
+					</li> -->
+					<!-- YET TO CODE - END -->
+				</ul>
+
+			</nav>
+			<!-- // ACTIONS NAV - END // -->
+		</div>
+
+	</div>
+	<!-- =========== TAB CONTENT - END =========== -->
+
+</div>
+<!-- CONTENT WRAPPER - END -->
+ </div> </div> </div> <div id="client-property" class="tabcontent"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- CONTENT WRAPPER - START -->
+<div class="content-wrapper">
+
+	<div class="row">
+		<div class="large-9 large-uncentered columns">
+
+			<!-- =========== TABS - START =========== -->
+			<ul class="client-details tabs">
+				<li class="tab-link current" data-tab="property-tab-1">
+					Summary
+				</li>
+				<li class="tab-link" data-tab="property-tab-2">
+					Deputies
+				</li>
+				<li class="tab-link" data-tab="property-tab-3">
+					Warnings
+				</li>
+				<li class="tab-link" data-tab="property-tab-4">
+					Timeline
+				</li>
+				<li class="tab-link" data-tab="property-tab-5">
+					<span>1</span> Tasks
+				</li>
+				<li class="tab-link" data-tab="property-tab-6">
+					Documents
+				</li>
+			</ul>
+			<!-- =========== TABS - END =========== -->
+
+			<!-- =========== TAB CONTENT - 1 - START =========== -->
+			<div id="property-tab-1" class="client-details tab-content current">
+				<div class="row">
+
+					<!-- // CREATE CLIENT - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-summary.html') }} -->
+
+					</div>
+					<!-- // CREATE CLIENT - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 2 - START =========== -->
+			<div id="property-tab-2" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DEPUTIES - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-deputies.html') }} -->
+
+					</div>
+					<!-- // CLIENT DEPUTIES - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="property-tab-3" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // WARNINGS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-warnings.html') }} -->
+
+					</div>
+					<!-- // WARNINGS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="property-tab-4" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-timeline.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="property-tab-5" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-tasks.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="property-tab-6" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DOCUMENTS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-documents.html') }} -->
+
+					</div>
+					<!-- // CLIENT DOCUMENTS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 6 - END =========== -->
+
+		</div>
+
+		<div class="large-3 large-uncentered columns">
+			<!-- // ACTIONS NAV - START // -->
+			<nav class="actions-nav client-panel">
+
+				<h1>Perform case task:</h1>
+
+				<ul>
+					<li class="supervision">
+						<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
+							<span class="icon"></span>
+							<span>Commission a visit</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
+							<span class="icon"></span>
+							<span>Create document</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../8-create-task/8a-create-task.html" class="action create-task">
+							<span class="icon"></span>
+							<span>Create task</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../9-reporting-period/9a-reporting-period.html" class="action report">
+							<span class="icon"></span>
+							<span>Reporting period</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../10-supervision-level/10a-supervision-level.html" class="action supervision-level">
+							<span class="icon"></span>
+							<span>Supervision level</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../11-new-event/11a-new-event.html" class="action new-event">
+							<span class="icon"></span>
+							<span>New event</span>
+						</a>
+					</li>
+
+					<!-- YET TO CODE - START -->
+					<!-- <li class="allocations">
+						<a href="#" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit case</span>
+						</a>
+					</li> -->
+					<!-- YET TO CODE - END -->
+				</ul>
+
+			</nav>
+			<!-- // ACTIONS NAV - END // -->
+		</div>
+
+	</div>
+	<!-- =========== TAB CONTENT - END =========== -->
+
+</div>
+<!-- CONTENT WRAPPER - END -->
+ </div> </div> </div> <div id="client-unassigned" class="tabcontent"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- CONTENT WRAPPER - START -->
+<div class="content-wrapper">
+
+	<div class="row">
+		<div class="large-9 large-uncentered columns">
+
+			<!-- =========== TABS - START =========== -->
+			<ul class="client-details tabs">
+				<li class="tab-link current" data-tab="unassigned-tab-1">
+					Summary
+				</li>
+				<li class="tab-link" data-tab="unassigned-tab-2">
+					Deputies
+				</li>
+				<li class="tab-link" data-tab="unassigned-tab-3">
+					Warnings
+				</li>
+				<li class="tab-link" data-tab="unassigned-tab-4">
+					Timeline
+				</li>
+				<li class="tab-link" data-tab="unassigned-tab-5">
+					Tasks
+				</li>
+				<li class="tab-link" data-tab="unassigned-tab-6">
+					Documents
+				</li>
+			</ul>
+			<!-- =========== TABS - END =========== -->
+
+			<!-- =========== TAB CONTENT - 1 - START =========== -->
+			<div id="unassigned-tab-1" class="client-details tab-content current">
+				<div class="row">
+
+					<!-- // CREATE CLIENT - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-summary.html') }} -->
+
+					</div>
+					<!-- // CREATE CLIENT - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 2 - START =========== -->
+			<div id="unassigned-tab-2" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DEPUTIES - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-deputies.html') }} -->
+
+					</div>
+					<!-- // CLIENT DEPUTIES - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="unassigned-tab-3" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // WARNINGS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-warnings.html') }} -->
+
+					</div>
+					<!-- // WARNINGS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="unassigned-tab-4" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-timeline.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="unassigned-tab-5" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-tasks.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="unassigned-tab-6" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DOCUMENTS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-documents.html') }} -->
+
+					</div>
+					<!-- // CLIENT DOCUMENTS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 6 - END =========== -->
+
+		</div>
+
+		<div class="large-3 large-uncentered columns">
+			<!-- // ACTIONS NAV - START // -->
+			<nav class="actions-nav client-panel">
+
+				<h1>Perform case task:</h1>
+
+				<ul>
+					<li class="supervision">
+						<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
+							<span class="icon"></span>
+							<span>Commission a visit</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
+							<span class="icon"></span>
+							<span>Create document</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../8-create-task/8a-create-task.html" class="action create-task">
+							<span class="icon"></span>
+							<span>Create task</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../9-reporting-period/9a-reporting-period.html" class="action report">
+							<span class="icon"></span>
+							<span>Reporting period</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../10-supervision-level/10a-supervision-level.html" class="action supervision-level">
+							<span class="icon"></span>
+							<span>Supervision level</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../11-new-event/11a-new-event.html" class="action new-event">
+							<span class="icon"></span>
+							<span>New event</span>
+						</a>
+					</li>
+
+					<!-- YET TO CODE - START -->
+					<!-- <li class="allocations">
+						<a href="#" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit case</span>
+						</a>
+					</li> -->
+					<!-- YET TO CODE - END -->
+				</ul>
+
+			</nav>
+			<!-- // ACTIONS NAV - END // -->
+		</div>
+
+	</div>
+	<!-- =========== TAB CONTENT - END =========== -->
+
+</div>
+<!-- CONTENT WRAPPER - END -->
+ </div> </div> </div> <!-- TAB CONTENT - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function() { //      // JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) { //      //      $('#document-recipients').append('<li>' + recipient + '</li>'); //      // }); // }); // ===================================== ALL JAVASCRIPT MUST COME AFTER THIS LINE ===================================== // // Populates the client page with list of 4a - recipients and document people JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) { $('#visiting').append(` <li> ${ recipient }, </li> `); $('#visits').append(` <li> ${ recipient }, </li> `); }); JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) { $('#document-recipients').append('<li>' + recipient + '</li>'); }); // Get the element with id="defaultOpen" and click on it document.getElementById("defaultOpen").click();</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V11/hideShowPassword.js"></script>
+	<script src="../../../production/js/V11/my-jquery.js"></script>
+	<script src="../../../production/js/V11/jquery.cookie.js"></script>
+	<script src="../../../production/js/V11/jquery.modal.js"></script>
+	<script src="../../../production/js/V11/jquery-datepicker.js"></script>
+	<script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script>
+	<script src="../../../production/js/V11/my-cookies.js"></script>
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../../production/js/V11/my-cookies-commission-visit.js"></script>
+	<script src="../../../production/js/V11/my-cookies-create-case.js"></script>
+	<script src="../../../production/js/V11/my-cookies-create-task.js"></script>
+	<script src="../../../production/js/V11/my-cookies-report-period.js"></script>
+	<script src="../../../production/js/V11/my-cookies-supervision-level.js"></script>
+	<script src="../../../production/js/V11/my-cookies-new-event.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../../production/js/V11/my-jquery-client-page.js"></script>
+	<script src="../../../production/js/V11/my-jquery-commission-visit.js"></script>
+	<script src="../../../production/js/V11/my-jquery-create-case.js"></script>
+	<script src="../../../production/js/V11/my-jquery-create-task.js"></script>
+	<script src="../../../production/js/V11/my-jquery-report-period.js"></script>
+	<script src="../../../production/js/V11/my-jquery-supervision-level.js"></script>
+	<script src="../../../production/js/V11/my-jquery-new-event.js"></script>
+	<!-- User Journey - JQuery - END -->
+
+ 	<script src="../../../production/js/V11/my-jquery-progress-bar.js"></script>
+	<script src="../../../production/js/V11/jquery.tablesorter.js"></script>
+
+	<script src="../../../production/js/V11/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V11/autocomplete-sub-section.js"></script>
+	<script src="../../../production/js/V11/autocomplete-create-task.js"></script>
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V11/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+	</script>
+
+	<script src="../../../production/js/V11/sticky-item.js"></script>
+<!-- // JS BODY END - END // -->
+</body></html>
