@@ -44,6 +44,16 @@ $(document).ready(function () {
           $('.tablinks.health').addClass('active');
           $('#client-overview').hide();
           $('#client-health').show();
+          $('.edit-case-link').show();
+     }
+
+     // Changes the tabs to be focused on the Properties tab
+     if (window.location.href.indexOf("property") != -1) {
+          $('.tablinks.overview').removeClass('active');
+          $('.tablinks.property').addClass('active');
+          $('#client-overview').hide();
+          $('#client-property').show();
+          $('.edit-case-link').show();
      }
 
      // Shows the state of a brand new client
@@ -188,3 +198,5 @@ $('#task-list li .more-info').click( function(e){
      $(this).siblings('.details').toggle();
      $(this).toggleClass('open');
 });
+
+// Property and finance

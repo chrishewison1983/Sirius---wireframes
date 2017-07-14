@@ -5,7 +5,7 @@
 
 //  FOR ALL
 
-#list-of-summary {
+#list-of-summary, #health-summary, #property-summary {
      // margin: 3em 0 0 0;
      ul, ol {
           margin: 0;
@@ -204,6 +204,10 @@
                                    width: 1.5em;
                                    height: 1.5em;
                                    margin: 0 0.5em -0.35em 0;
+                                   &.case {
+                                        background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50%;
+                                        background-size: 1.5em;
+                                   }
                                    &.important {
                                         background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 50% 50%;
                                         background-size: contain;
@@ -220,7 +224,7 @@
                          }
                     }
                     &.highlight {
-                         .right-focus, .left-focus {
+                         .right-focus, .left-focus, .center-focus {
                               @include flexbox;
                               @include align-items(center);
                               position: relative;
@@ -352,6 +356,42 @@
                                    .left {
                                         background: rgba($main-colour,0.2);
                                    }
+                              }
+                         }
+                         .center-focus {
+                              text-align: center;
+                              .main-text {
+                                   font-size: 3.5rem;
+                                   margin-bottom: 0.15em;
+                              }
+                              .sub-text {
+                                   margin-bottom: 0.15em;
+                                   text-transform: none;
+                              }
+                              a.edit, a.dispense, a.add {
+                                   float: none;
+                                   color: $white;
+                                   border-bottom: 1px dashed $white;
+                                   margin: 0.75em 0.5em 0 0.5em;
+                                   position: relative;
+                                   top: -0.15em;
+                                   background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
+                                   background-size: 1em;
+                                   &:hover {
+                                        border-bottom: 1px solid $white;
+                                   }
+                              }
+                              a.dispense {
+                                   background: url(#{$image-path}/icons/delete-white.svg) no-repeat 0% 50%;
+                                   background-size: 1em;
+                              }
+                              &#create-bond {
+                                   .main-text {
+                                        font-size: 2.15rem;
+                                   }
+                              }
+                              &#edit-bond {
+
                               }
                          }
                     }
@@ -503,7 +543,7 @@
                               }
                          }
                     }
-                    section {
+                    section, a {
                          h1, h2 {
                               width: 100%;
                               font-family: $Montserrat;
@@ -653,7 +693,7 @@
      }
 }
 
-#list-of-summary {
+#list-of-summary, #health-summary, #property-summary {
      #client-summary {
           &.health, &.property {
                .dashboard-row {
@@ -681,7 +721,7 @@
                                    }
                               }
                          }
-                         section {
+                         section, a {
                               h1, h2 {
                                    &.sub-text {
                                         font-size: 1.4rem;
@@ -700,6 +740,10 @@
           }
      }
 }
+
+// #edit-bond {
+//      display: none;
+// }
 
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {

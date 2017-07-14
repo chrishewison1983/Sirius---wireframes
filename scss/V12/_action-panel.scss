@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+#action-panel {
+     position: relative;
+     float: right !important;
+     .create-case {
+          width: 100%;
+          .section-title {
+               text-transform: uppercase;
+               border-bottom: 6px solid rgba($main-colour,0.1);
+               padding-bottom: 0.65em;
+               margin-top: 2em;
+               margin-bottom: 1.5em;
+               &:first-of-type {
+                    margin-top: 0;
+               }
+          }
+          .the-bond-details {
+               .section-title {
+                    &:first-of-type {
+                         margin-top: 2em;
+                    }
+               }
+          }
+     }
+     .section-title {
+          &:first-of-type {
+               text-transform: uppercase;
+               border-bottom: 6px solid rgba($main-colour,0.1);
+               padding-bottom: 0.65em;
+               margin-bottom: 1.5em;
+          }
+     }
+}

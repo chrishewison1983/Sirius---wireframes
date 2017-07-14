@@ -388,6 +388,9 @@ header {
                div {
                     display: inline-block;
                     margin: 0 0.25em 0 0;
+                    &.client-last-name {
+                         margin: 0;
+                    }
                }
           }
           a {
@@ -403,6 +406,9 @@ header {
                     // &:last-of-type {
                     //      margin: 0;
                     // }
+                    &.client-last-name {
+                         margin: 0;
+                    }
                }
           }
      }

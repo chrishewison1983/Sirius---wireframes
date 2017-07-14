@@ -49,6 +49,12 @@ main {
                     margin-top: 2em;
                }
           }
+          #client-property, #client-health {
+               .case-info {
+                    margin-top: 2em;
+               }
+          }
+
 
           #client-health, #client-property, #client-unassigned {
                .content-wrapper {
@@ -156,7 +162,7 @@ h1, h2, h3, h4 {
                padding: 0 0 0 1.5em;
                background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 50%;
                background-size: 1em;
-               margin: 0.25em 0 0 0;
+               margin: 0.25em 0 0 1em;
           }
      }
      img.document-item {
@@ -304,6 +310,25 @@ a {
      }
      .hashtag {
           color: $black;
+     }
+     &.edit, &.dispense, &.add {
+          float: right;
+          font-size: 1rem;
+          text-transform: capitalize;
+          font-family: $Montserrat;
+          font-weight: normal;
+          padding: 0 0 0 1.5em;
+          background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 50%;
+          background-size: 1em;
+          margin: 0.25em 0 0 0;
+     }
+     &.dispense {
+          background: url(#{$image-path}/icons/delete-blue.svg) no-repeat 0% 50%;
+          background-size: 1em;
+     }
+     &.add {
+          background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+          background-size: 1em;
      }
 }
 
@@ -516,6 +541,7 @@ hr {
 }
 
 .index-date {
+     margin-top: -1em;
      p {
           text-align: right;
           margin: 0;
@@ -532,6 +558,37 @@ hr {
                background: url(#{$image-path}/icons/date-dark.svg) no-repeat 50% 50%;
                background-size: contain;
                float: none;
+          }
+     }
+     .tickets {
+          display: inline-block;
+          margin: 0.7em 0 0 0;
+          width: 100%;
+          span {
+               display: inline-block;
+               float: right;
+               border-radius: $global-border-radius;
+               padding: 0.5em 0.5em 0.5em 2.35em;
+               margin: 0.5em 0 0 0.5em;
+               color: rgba($main-colour,0.5);
+               background: url(#{$image-path}/icons/to-do.svg) no-repeat 7.5% 50% $white-off;
+               background-size: 1.45em;
+               line-height: 1.4;
+               a {
+                    color: $white;
+                    border: none;
+                    font-weight: normal;
+               }
+               &.done {
+                    color: $white;
+                    background: url(#{$image-path}/icons/tick.svg) no-repeat 7.5% 50% $green;
+                    background-size: 1.45em;
+               }
+               &.in-progress {
+                    color: $white;
+                    background: url(#{$image-path}/icons/in-progress-white.svg) no-repeat 7.5% 50% $blue;
+                    background-size: 1.45em;
+               }
           }
      }
 }

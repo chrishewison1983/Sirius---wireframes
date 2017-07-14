@@ -53,18 +53,14 @@
                     <!-- =========== TABS - START =========== -->
                     <ul id="side-panel-tabs" class="tabs">
                          <li class="tab-link" data-tab="tab-1">
-                              <span class="info"></span>
-                              <p>Case details</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-2">
                               <span class="client-details"></span>
                               <p>Client details</p>
                          </li>
-                         <li class="tab-link" data-tab="tab-3">
+                         <li class="tab-link" data-tab="tab-2">
                               <span class="deputy-details"></span>
                               <p>Deputy details</p>
                          </li>
-                         <li class="tab-link current" data-tab="tab-4">
+                         <li class="tab-link current" data-tab="tab-3">
                               <span class="documents"></span>
                               <p>Documents</p>
                          </li>
@@ -74,11 +70,7 @@
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
                     <div id="tab-1" class="tab-content side-panel">
 
-                         <!-- // VISIT SUMMARY - START // -->
-                         <h2 class="section-title">Create case info</h2>
-
-                         {{= it.include('side-panel/create-case.html') }}
-                         <!-- // VISIT SUMMARY - END // -->
+                         {{= it.include('side-panel/client-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 1 - END =========== -->
@@ -86,28 +78,20 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content side-panel">
 
-                         {{= it.include('side-panel/client-details.html') }}
+                         <h2 class="section-title">Deputy details</h2>
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 3 - START =========== -->
-                    <div id="tab-3" class="tab-content side-panel">
-
-                         <h2 class="section-title">Deputy details</h2>
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 3 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="tab-content side-panel current">
+                    <div id="tab-3" class="tab-content side-panel current">
 
                          <!-- <h2 class="section-title">Case documents</h2> -->
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
                     </div>
-                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
 
                </div>
 
@@ -118,16 +102,16 @@
                          <h2 class="section-title">The order</h2>
 
                          <!-- =========== THE ORDER SECTION - START =========== -->
-                         <form class="case-details">
+                         <form id="order-details" class="case-details">
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group order-type">
                                    <legend>Order type</legend>
-                                   <label for="case-type-welfare" class="radio">
+                                   <label for="case-type-welfare" class="radio radio-health-welfare">
                                         <input id="case-type-welfare" type="radio" name="case-type" value="Health and Welfare">
                                         <span>Health &amp; welfare</span> <span class="icon welfare"></span>
                                    </label>
-                                   <label for="case-type-property" class="radio">
+                                   <label for="case-type-property" class="radio radio-property">
                                         <input id="case-type-property" type="radio" name="case-type" value="Property and finance">
                                         <span>Property &amp; affairs</span> <span class="icon property"></span>
                                    </label>
@@ -195,7 +179,7 @@
                          <h2 class="section-title">How have the deputy / deputies been appointed?</h2>
 
                          <!-- =========== DEPUTIES SECTION - START =========== -->
-                         <form class="case-details">
+                         <form id="deputy-details" class="case-details">
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group">
@@ -228,7 +212,9 @@
                          </form>
                          <!-- =========== DEPUTIES SECTION - END =========== -->
 
-                         <h2 class="section-title">The files</h2>
+                         <h2 class="section-title">
+                              The files <div class="optional">(optional)</div>
+                         </h2>
 
                          <!-- =========== FILE LOCATION SECTION - START =========== -->
                          <form class="case-details">
@@ -279,43 +265,94 @@
                          </form>
                          <!-- =========== FILE LOCATION SECTION - END =========== -->
 
-                         <h2 class="section-title">The bond</h2>
+                         <div class="the-bond-details" id="bond-details-section">
+                              <h2 class="section-title">
+                                   The bond <div class="optional">(optional)</div>
+                              </h2>
 
-                         <!-- =========== THE BOND SECTION - START =========== -->
-                         <form class="case-details">
+                              <!-- =========== THE BOND SECTION - START =========== -->
+                              <form class="case-details">
 
-                              <!-- // FORM ITEM - 1a - START // -->
-                              <div class="form-group security-bond">
-                                   <legend>Security bond</legend>
-                                   <label for="case-security-bond-yes" class="radio">
-                                        <input id="case-security-bond-yes" type="radio" name="security-bond" value="Yes">
-                                        Yes
-                                   </label>
-                                   <label for="case-security-bond-no" class="radio">
-                                        <input id="case-security-bond-no" type="radio" name="security-bond" value="No">
-                                        No
-                                   </label>
-                              </div>
-                              <!-- // FORM ITEM - 1a - END // -->
-
-                              <!-- // FORM ITEM - 1b - START // -->
-                              <div class="form-group bond-answer-hidden hidden">
-                                   <div class="form-group">
-                                        <label for="bond-ref-number">Bond reference number</label>
-                                        <input id="bond-ref-number" name="bond-ref-number" type="text" class="half" placeholder="" value="">
+                                   <!-- // FORM ITEM - 1a - START // -->
+                                   <div class="form-group security-bond">
+                                        <legend>Security bond</legend>
+                                        <label for="case-security-bond-yes" class="radio">
+                                             <input id="case-security-bond-yes" type="radio" name="security-bond" value="Yes">
+                                             Yes
+                                        </label>
+                                        <label for="case-security-bond-no" class="radio">
+                                             <input id="case-security-bond-no" type="radio" name="security-bond" value="No">
+                                             No
+                                        </label>
+                                        <label for="case-security-bond-dispense" class="radio dispense-bond-option">
+                                             <input id="case-security-bond-dispense" type="radio" name="security-bond" value="Dispense">
+                                             Dispense
+                                        </label>
                                    </div>
-                                   <div class="form-group currency">
-                                        <label for="bond-value">Bond value (£)</label>
-                                        <div class="date-wrapper">
-                                             <span></span>
-                                             <input id="bond-value" name="bond-value" type="text" class="" placeholder="" value="">
+                                   <!-- // FORM ITEM - 1a - END // -->
+
+                                   <!-- // FORM ITEM - 1b - START // -->
+                                   <div class="form-group bond-answer-hidden hidden">
+
+                                        <!-- DISPENSE ITEMS - START -->
+                                        <div class="form-group dispense-bond-info">
+                                             <div class="half">
+                                                  <label for="bond-dispensed-date">Discharge date</label>
+                                                  <input id="bond-dispensed-date" name="bond-dispensed-date" type="text" placeholder="Example - 05/04/2017" maxlength="12">
+                                             </div>
+                                        </div>
+                                        <div class="form-group dispense-bond-info">
+                                             <label for="bond-dispensed-reason">Dispensed reason</label>
+                                             <select id="bond-dispensed-reason" class="full-width">
+                                                  <option value="">-- Select --</option>
+                                                  <option value="Reason 1">Reason 1</option>
+                                                  <option value="Reason 2">Reason 2</option>
+                                                  <option value="Reason 3">Reason 3</option>
+                                                  <option value="Reason 4">Reason 4</option>
+                                             </select>
+                                        </div>
+                                        <!-- DISPENSE ITEMS - END -->
+
+                                        <div class="form-group currency">
+                                             <label for="bond-amount">Required bond amount (£)</label>
+                                             <div class="date-wrapper">
+                                                  <span></span>
+                                                  <input id="bond-amount" name="bond-amount" type="text" class="" placeholder="" value="">
+                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                             <label for="bond-company">Company</label>
+                                             <select id="bond-company" class="full-width">
+                                                  <option value="">-- Select --</option>
+                                                  <option value="Company 1">Company 1</option>
+                                                  <option value="Company 2">Company 2</option>
+                                                  <option value="Company 3">Company 3</option>
+                                                  <option value="Company 4">Company 4</option>
+                                             </select>
+                                        </div>
+                                        <div class="form-group">
+                                             <label for="bond-ref-number">Reference number</label>
+                                             <input id="bond-ref-number" name="bond-ref-number" type="text" class="half" placeholder="" value="">
+                                        </div>
+                                        <div class="form-group currency">
+                                             <label for="bond-value">Amount (£)</label>
+                                             <div class="date-wrapper">
+                                                  <span></span>
+                                                  <input id="bond-value" name="bond-value" type="text" class="" placeholder="" value="">
+                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                             <div class="half">
+                                                  <label for="bond-renewal-date">Renewal date:</label>
+                                                  <input id="bond-renewal-date" name="bond-renewal-date" type="text" placeholder="Example - 05/04/2017" maxlength="12">
+                                             </div>
                                         </div>
                                    </div>
-                              </div>
-                              <!-- // FORM ITEM - 1b - END // -->
+                                   <!-- // FORM ITEM - 1b - END // -->
 
-                         </form>
-                         <!-- =========== THE BOND SECTION - END =========== -->
+                              </form>
+                              <!-- =========== THE BOND SECTION - END =========== -->
+                         </div>
 
                     </div>
 
@@ -329,11 +366,23 @@
 
      <!-- CTA-FOOTER - START -->
      <div id="cta-footer" class="cta-row">
-          <a class="main-cta primary" id="create-case" href="1b-the-bond.html">Save &amp; continue</a>
+          <a class="main-cta primary" id="create-case-button" href="1b-confirmation-page.html">Save &amp; continue</a>
           <span class="separator"></span>
-          <a href="#" onclick="history.back();" class="cancel">Cancel visit</a>
+          <a href="#" onclick="history.back();" class="cancel">Cancel</a>
      </div>
      <!-- CTA-FOOTER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="edit-case-modal" style="display:none;">
+          <h1>Edit case</h1>
+          <p>Are you sure you wish to edit the case details?</p>
+          <div class="cta-row">
+               <a class="main-cta" href="1a-the-order.html#Edit" value="Refresh Page" onClick="window.location.reload()">Edit case</a>
+               <a href="#" rel="modal:close">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
 
 </main>
 <!-- PRIMARY CONTENT - END -->

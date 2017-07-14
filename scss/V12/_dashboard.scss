@@ -555,6 +555,20 @@ table {
           color: $text-main-colour;
           font-family: $Opensans-Regular;
           border-collapse: collapse;
+          thead {
+               border-bottom: 10px solid $white-off;
+               tr {
+                    th {
+                         border-bottom: 15px solid $white;
+                    }
+               }
+          }
+          tbody {
+               tr {
+                    border-top: 5px solid $white;
+                    border-bottom: 5px solid $white;
+               }
+          }
           tr {
                // box-shadow: inset 10px 0px 0px 0px rgba($red,1);
                // padding-left: 1em;
@@ -702,7 +716,7 @@ table {
           a.task {
                font-family: $Montserrat;
                font-weight: bold;
-               font-size: 1.2rem;
+               font-size: 1.4rem;
                border-bottom: none;
                color: $black;
                text-decoration: underline;

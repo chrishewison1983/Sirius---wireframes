@@ -212,8 +212,8 @@
 				<span>Create case</span>
 			</a>
 		</li>
-		<li class="allocations edit-case-link">
-			<a href="../1-create-case/0-select-case.html" class="action edit-case">
+		<li class="supervision edit-case-link">
+			<a href="../1-create-case/1a-the-order.html#EditCase" class="action edit-case">
 				<span class="icon"></span>
 				<span>Edit case</span>
 			</a>
@@ -748,18 +748,21 @@
 					Summary
 				</li>
 				<li class="tab-link" data-tab="health-tab-2">
-					Deputies
+					Case details
 				</li>
 				<li class="tab-link" data-tab="health-tab-3">
-					Warnings
+					Deputies
 				</li>
 				<li class="tab-link" data-tab="health-tab-4">
-					Timeline
+					Warnings
 				</li>
 				<li class="tab-link" data-tab="health-tab-5">
-					<span>4</span> Tasks
+					Timeline
 				</li>
 				<li class="tab-link" data-tab="health-tab-6">
+					<span>4</span> Tasks
+				</li>
+				<li class="tab-link" data-tab="health-tab-7">
 					Documents
 				</li>
 			</ul>
@@ -772,8 +775,8 @@
 					<!-- // CREATE CLIENT - START // -->
 					<div class="large-12 large-uncentered columns">
 
-						<!-- // LIST OF SUMMARIES - START // -->
-						<div id="list-of-summary">
+						<!-- // HEALTH SUMMARIES - START // -->
+						<div id="health-summary">
 
 							<!-- <div class="no-items">
 								<p>There are no summary for this client as we have yet to enter more info.</p>
@@ -786,66 +789,6 @@
 									<div id="client-summary" class="health">
 
 										<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
-										<div class="dashboard-row full-width content-items-3">
-
-											<!-- // ITEM 1 - START // -->
-											<div class="item client-info">
-												<div class="left">
-													<span class="icon welfare blue"></span>
-												</div>
-												<div class="right">
-													<p>Court reference:</p>
-													<h1>19273638</h1>
-												</div>
-											</div>
-											<!-- // ITEM 1 - END // -->
-
-											<!-- // ITEM 2 - START // -->
-											<div class="item client-info">
-												<div class="left">
-													<span class="icon dob"></span>
-												</div>
-												<div class="right">
-													<p>Born:</p>
-													<h1>
-														<span class="client-dob-day">25</span>
-														<span>/</span>
-														<span class="client-dob-month">06</span>
-														<span>/</span>
-														<span class="client-dob-year">1943</span>
-													</h1>
-												</div>
-											</div>
-											<!-- // ITEM 2 - END // -->
-
-											<!-- // ITEM 3 - START // -->
-											<div class="item client-info">
-												<div class="left">
-													<span class="icon medical"></span>
-												</div>
-												<div class="right">
-													<p>Medical Condition:</p>
-													<h1><span class="client-medical-condition">Alzheimer's</span></h1>
-												</div>
-											</div>
-											<!-- // ITEM 3 - END // -->
-
-											<!-- // ITEM 4 - START // -->
-											<!-- <div class="item client-info">
-												<div class="left">
-													<span class="icon record"></span>
-												</div>
-												<div class="right">
-													<p>Record:</p>
-													<h1>7000-0000-2803</h1>
-												</div>
-											</div> -->
-											<!-- // ITEM 4 - END // -->
-
-										</div>
-										<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
-
-										<!-- ///////////////////// ROW - 2 - START ///////////////////// -->
 										<div class="dashboard-row two-items">
 
 											<!-- // ITEM 1 - START // -->
@@ -907,9 +850,9 @@
 											<!-- // ITEM 2 - END // -->
 
 										</div>
-										<!-- ///////////////////// ROW - 2 - END ///////////////////// -->
+										<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
 
-										<!-- ///////////////////// ROW - 3 - START ///////////////////// -->
+										<!-- ///////////////////// ROW - 2 - START ///////////////////// -->
 										<div class="dashboard-row two-items">
 
 											<!-- // ITEM 1 - START // -->
@@ -960,9 +903,9 @@
 											<!-- // ITEM 3 - END // -->
 
 										</div>
-										<!-- ///////////////////// ROW - 3 - END ///////////////////// -->
+										<!-- ///////////////////// ROW - 2 - END ///////////////////// -->
 
-										<!-- ///////////////////// ROW - 4 - START ///////////////////// -->
+										<!-- ///////////////////// ROW - 3 - START ///////////////////// -->
 										<div class="dashboard-row two-items">
 
 											<!-- // ITEM 1 - START // -->
@@ -1033,7 +976,7 @@
 											<!-- // ITEM 2 - END // -->
 
 										</div>
-										<!-- ///////////////////// ROW - 4 - END ///////////////////// -->
+										<!-- ///////////////////// ROW - 3 - END ///////////////////// -->
 
 									</div>
 								</div>
@@ -1041,7 +984,7 @@
 							<!-- //  ================================ DASHBOARD CONTENT - END ================================ // -->
 
 						</div>
-						<!-- // LIST OF SUMMARIES - END // -->
+						<!-- // HEALTH SUMMARIES - END // -->
 
 					</div>
 					<!-- // CREATE CLIENT - END // -->
@@ -1052,6 +995,179 @@
 
 			<!-- =========== TAB CONTENT - 2 - START =========== -->
 			<div id="health-tab-2" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CASE DETAILS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- ///////////// CASE INFO - START ///////////// -->
+						<section class="case-info">
+
+							<h2 class="description-title">
+								Case details
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit case</a>
+							</h2>
+
+							<!-- ITEM - 1 - START -->
+							<div class="info-section">
+								<p>Order type:</p>
+								<p class="answer case-order-type-answer">Health &amp; welfare</p>
+							</div>
+							<!-- ITEM - 1 - END -->
+
+							<!-- ITEM - 2 - START -->
+							<div class="info-section">
+								<p>Court reference:</p>
+								<p class="answer case-court-ref-answer">12345678</p>
+							</div>
+							<!-- ITEM - 2 - END -->
+
+							<!-- ITEM - 3 - START -->
+							<div class="info-section">
+								<p>Order date:</p>
+								<p class="answer case-order-date-answer">28/08/2018</p>
+							</div>
+							<!-- ITEM - 3 - END -->
+
+							<!-- ITEM - 4 - START -->
+							<div class="info-section">
+								<p>Order issue date:</p>
+								<p class="answer case-order-issue-date-answer">28/08/2017</p>
+							</div>
+							<!-- ITEM - 4 - END -->
+
+							<!-- ITEM - 5 - START -->
+							<div class="info-section">
+								<p>Order status:</p>
+								<p class="answer case-order-status-answer">Open</p>
+							</div>
+							<!-- ITEM - 5 - END -->
+
+							<!-- ITEM - 6 - START -->
+							<div class="info-section">
+								<p>Status date:</p>
+								<p class="answer case-status-date-answer">28/08/2017</p>
+							</div>
+							<!-- ITEM - 6 - END -->
+
+							<!-- ITEM - 7 - START -->
+							<div class="info-section">
+								<p>Order received date:</p>
+								<p class="answer case-status-date-answer">28/07/2017</p>
+							</div>
+							<!-- ITEM - 7 - END -->
+
+							<!-- ITEM - 8 - START -->
+							<div class="info-section">
+								<p>Order title:</p>
+								<p class="answer case-order-title-answer">Order title</p>
+							</div>
+							<!-- ITEM - 8 - END -->
+
+							<h2 class="description-title">
+								How have the deputy/deputies been appointed?
+							</h2>
+
+							<!-- ITEM - 9 - START -->
+							<div class="info-section">
+								<p>There are deputies appointed jointly and severally?:</p>
+								<p class="answer deputies-jointly-severally-answer">Yes</p>
+							</div>
+							<!-- ITEM - 9 - END -->
+
+							<!-- ITEM - 10 - START -->
+							<div class="info-section">
+								<p>There are deputies appointed jointly?:</p>
+								<p class="answer deputies-jointly-answer">Yes</p>
+							</div>
+							<!-- ITEM - 10 - END -->
+
+							<h2 class="description-title">
+								The files
+							</h2>
+
+							<!-- ITEM - 11 - START -->
+							<div class="info-section">
+								<p>File location?:</p>
+								<p class="answer file-location-answer">N/A</p>
+							</div>
+							<!-- ITEM - 11 - END -->
+
+							<!-- ITEM - 12 - START -->
+							<div class="info-section file-location-info">
+								<p>File address:</p>
+								<p class="answer">
+									<span class="file-address-line-1-answer"></span>
+									<span class="file-address-line-2-answer"></span>
+									<span class="file-address-line-3-answer"></span>
+									<span class="file-address-town-answer"></span>
+									<span class="file-address-county-answer"></span>
+									<span class="file-address-postcode-answer"></span>
+								</p>
+							</div>
+							<!-- ITEM - 12 - END -->
+
+							<h2 class="description-title">
+								The bond
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit bond</a>
+								<a href="../1-create-case/1a-the-order.html#DispenseBond" class="dispense">Dispense bond</a>
+							</h2>
+
+							<!-- ITEM - 13 - START -->
+							<div class="info-section">
+								<p>Security bond?:</p>
+								<p class="answer security-bond-answer">N/A</p>
+							</div>
+							<!-- ITEM - 13 - END -->
+
+							<!-- ITEM - 14 - START -->
+							<div class="info-section bond-info">
+								<p>Required bond amount (£):</p>
+								<p class="answer">£ <span class="bond-amount-answer">N/A</span></p>
+							</div>
+							<!-- ITEM - 14 - END -->
+
+							<!-- ITEM - 15 - START -->
+							<div class="info-section bond-info">
+								<p>Company:</p>
+								<p class="answer bond-company-answer">N/A</p>
+							</div>
+							<!-- ITEM - 15 - END -->
+
+							<!-- ITEM - 16 - START -->
+							<div class="info-section bond-info">
+								<p>Bond reference number:</p>
+								<p class="answer bond-ref-number-answer">N/A</p>
+							</div>
+							<!-- ITEM - 16 - END -->
+
+							<!-- ITEM - 17 - START -->
+							<div class="info-section bond-info">
+								<p>Amount (£):</p>
+								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
+							</div>
+							<!-- ITEM - 17 - END -->
+
+							<!-- ITEM - 18 - START -->
+							<div class="info-section bond-info">
+								<p>Renewal date:</p>
+								<p class="answer bond-renewal-date-answer">N/A</p>
+							</div>
+							<!-- ITEM - 18 - END -->
+
+
+						</section>
+						<!-- ///////////// CASE INFO - END ///////////// -->
+
+					</div>
+					<!-- // CASE DETAILS - START // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="health-tab-3" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT DEPUTIES - START // -->
@@ -1097,10 +1213,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 2 - END =========== -->
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 3 - START =========== -->
-			<div id="health-tab-3" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="health-tab-4" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // WARNINGS - START // -->
@@ -1122,10 +1238,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 3 - END =========== -->
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 4 - START =========== -->
-			<div id="health-tab-4" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="health-tab-5" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT TASKS - START // -->
@@ -1538,10 +1654,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 4 - END =========== -->
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 5 - START =========== -->
-			<div id="health-tab-5" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="health-tab-6" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT TASKS - START // -->
@@ -1629,10 +1745,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 5 - END =========== -->
+			<!-- =========== TAB CONTENT - 6 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 6 - START =========== -->
-			<div id="health-tab-6" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 7 - START =========== -->
+			<div id="health-tab-7" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT DOCUMENTS - START // -->
@@ -1673,7 +1789,7 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 6 - END =========== -->
+			<!-- =========== TAB CONTENT - 7 - END =========== -->
 
 		</div>
 
@@ -1752,18 +1868,21 @@
 					Summary
 				</li>
 				<li class="tab-link" data-tab="property-tab-2">
-					Deputies
+					Case details
 				</li>
 				<li class="tab-link" data-tab="property-tab-3">
-					Warnings
+					Deputies
 				</li>
 				<li class="tab-link" data-tab="property-tab-4">
-					Timeline
+					Warnings
 				</li>
 				<li class="tab-link" data-tab="property-tab-5">
-					<span>1</span> Tasks
+					Timeline
 				</li>
 				<li class="tab-link" data-tab="property-tab-6">
+					<span>1</span> Tasks
+				</li>
+				<li class="tab-link" data-tab="property-tab-7">
 					Documents
 				</li>
 			</ul>
@@ -1776,7 +1895,82 @@
 					<!-- // CREATE CLIENT - START // -->
 					<div class="large-12 large-uncentered columns">
 
-						<!-- {{= it.include('property-tab-summary.html') }} -->
+						<!-- // PROPERTY SUMMARIES - START // -->
+						<div id="property-summary">
+
+							<!-- // ================================ DASHBOARD CONTENT - START ================================ // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<div id="client-summary" class="health">
+
+										<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
+										<div class="dashboard-row two-items">
+
+											<!-- // ITEM 1 - START // -->
+											<div class="item with-title">
+												<div class="title"><span class="important"></span><p>Important remarks</p></div>
+												<ol class="summary-list">
+													<li>
+														<p>Risks to the clients:</p>
+														<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+													</li>
+													<li>
+														<p>Outstanding issues:</p>
+														<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+													</li>
+													<li>
+														<p>Safegaurding issues:</p>
+														<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+													</li>
+													<li>
+														<p>Client is violent:</p>
+														<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+													</li>
+												</ol>
+											</div>
+											<!-- // ITEM 1 - END // -->
+
+											<!-- // ITEM 2 - START // -->
+											<div class="item no-colour highlight">
+												<section class="full-colour-block report-dates">
+													<div class="date">
+														<div class="wrapper">
+															<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
+															<h2 class="sub-text">19273638</h2>
+															<h2 class="sub-text">Report due</h2>
+														</div>
+														<div class="colour-wrapper"></div>
+													</div>
+												</section>
+												<section id="create-bond" class="full-colour-block main-colour center-focus payment">
+													<div class="wrapper">
+														<h1 class="sub-text">Bond value</h1>
+														<h2 class="main-text">No bond inplace</h2>
+														<a href="../1-create-case/1a-the-order.html#EditCase" class="add">Add bond</a>
+													</div>
+												</section>
+												<section id="edit-bond" class="full-colour-block main-colour center-focus payment">
+													<div class="wrapper">
+														<h1 class="sub-text">Bond value</h1>
+														<h2 class="main-text">&pound;<div class="bond-value-answer">200</div></h2>
+														<div class="ctas">
+															<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit</a>
+															<a id="dispense-bond" href="../1-create-case/1a-the-order.html#EditCase" class="dispense">Dispense</a>
+														</div>
+													</div>
+												</section>
+											</div>
+											<!-- // ITEM 2 - END // -->
+
+										</div>
+										<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- // PROPERTY SUMMARIES - END // -->
 
 					</div>
 					<!-- // CREATE CLIENT - END // -->
@@ -1789,6 +1983,206 @@
 			<div id="property-tab-2" class="client-details tab-content">
 				<div class="row">
 
+					<!-- // CASE DETAILS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- ///////////// CASE INFO - START ///////////// -->
+						<section class="case-info">
+
+							<h2 class="description-title">
+								Case details
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit case</a>
+							</h2>
+
+							<!-- ITEM - 1 - START -->
+							<div class="info-section">
+								<p>Order type:</p>
+								<p class="answer case-order-type-answer">Property &amp; affiars</p>
+							</div>
+							<!-- ITEM - 1 - END -->
+
+							<!-- ITEM - 2 - START -->
+							<div class="info-section">
+								<p>Court reference:</p>
+								<p class="answer case-court-ref-answer">12345678</p>
+							</div>
+							<!-- ITEM - 2 - END -->
+
+							<!-- ITEM - 3 - START -->
+							<div class="info-section">
+								<p>Order date:</p>
+								<p class="answer case-order-date-answer">28/08/2018</p>
+							</div>
+							<!-- ITEM - 3 - END -->
+
+							<!-- ITEM - 4 - START -->
+							<div class="info-section">
+								<p>Order issue date:</p>
+								<p class="answer case-order-issue-date-answer">28/08/2017</p>
+							</div>
+							<!-- ITEM - 4 - END -->
+
+							<!-- ITEM - 5 - START -->
+							<div class="info-section">
+								<p>Order status:</p>
+								<p class="answer case-order-status-answer">Open</p>
+							</div>
+							<!-- ITEM - 5 - END -->
+
+							<!-- ITEM - 6 - START -->
+							<div class="info-section">
+								<p>Status date:</p>
+								<p class="answer case-status-date-answer">28/08/2017</p>
+							</div>
+							<!-- ITEM - 6 - END -->
+
+							<!-- ITEM - 7 - START -->
+							<div class="info-section">
+								<p>Order received date:</p>
+								<p class="answer case-status-date-answer">28/07/2017</p>
+							</div>
+							<!-- ITEM - 7 - END -->
+
+							<!-- ITEM - 8 - START -->
+							<div class="info-section">
+								<p>Order title:</p>
+								<p class="answer case-order-title-answer">Order title</p>
+							</div>
+							<!-- ITEM - 8 - END -->
+
+							<h2 class="description-title">
+								How have the deputy/deputies been appointed?
+							</h2>
+
+							<!-- ITEM - 9 - START -->
+							<div class="info-section">
+								<p>There are deputies appointed jointly and severally?:</p>
+								<p class="answer deputies-jointly-severally-answer">Yes</p>
+							</div>
+							<!-- ITEM - 9 - END -->
+
+							<!-- ITEM - 10 - START -->
+							<div class="info-section">
+								<p>There are deputies appointed jointly?:</p>
+								<p class="answer deputies-jointly-answer">Yes</p>
+							</div>
+							<!-- ITEM - 10 - END -->
+
+							<h2 class="description-title">
+								The files
+							</h2>
+
+							<!-- ITEM - 11 - START -->
+							<div class="info-section">
+								<p>File location?:</p>
+								<p class="answer file-location-answer">N/A</p>
+							</div>
+							<!-- ITEM - 11 - END -->
+
+							<!-- ITEM - 12 - START -->
+							<div class="info-section file-location-info">
+								<p>File address:</p>
+								<p class="answer">
+									<span class="file-address-line-1-answer"></span>
+									<span class="file-address-line-2-answer"></span>
+									<span class="file-address-line-3-answer"></span>
+									<span class="file-address-town-answer"></span>
+									<span class="file-address-county-answer"></span>
+									<span class="file-address-postcode-answer"></span>
+								</p>
+							</div>
+							<!-- ITEM - 12 - END -->
+
+							<h2 class="description-title">
+								The bond
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit bond</a>
+								<a href="../1-create-case/1a-the-order.html#DispenseBond" class="dispense">Dispense bond</a>
+							</h2>
+
+							<!-- ITEM - 13 - START -->
+							<div class="info-section">
+								<p>Security bond?:</p>
+								<p class="answer security-bond-answer">N/A</p>
+							</div>
+							<!-- ITEM - 13 - END -->
+
+							<!-- ITEM - 14 - START -->
+							<div class="info-section bond-info">
+								<p>Discharge date:</p>
+								<p class="answer bond-dispensed-date-answer">N/A</p>
+							</div>
+							<!-- ITEM - 14 - END -->
+
+							<!-- ITEM - 15 - START -->
+							<div class="info-section bond-info">
+								<p>Dispensed reason:</p>
+								<p class="answer bond-dispensed-reason-answer">N/A</p>
+							</div>
+							<!-- ITEM - 15 - END -->
+
+							<!-- ITEM - 16 - START -->
+							<div class="info-section bond-info">
+								<p>Required bond amount (£):</p>
+								<p class="answer">£ <span class="bond-amount-answer">N/A</span></p>
+							</div>
+							<!-- ITEM - 16 - END -->
+
+							<!-- ITEM - 17 - START -->
+							<div class="info-section bond-info">
+								<p>Company:</p>
+								<p class="answer bond-company-answer">N/A</p>
+							</div>
+							<!-- ITEM - 17 - END -->
+
+							<!-- ITEM - 18 - START -->
+							<div class="info-section bond-info">
+								<p>Bond reference number:</p>
+								<p class="answer bond-ref-number-answer">N/A</p>
+							</div>
+							<!-- ITEM - 18 - END -->
+
+							<!-- ITEM - 19 - START -->
+							<div class="info-section bond-info">
+								<p>Amount (£):</p>
+								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
+							</div>
+							<!-- ITEM - 19 - END -->
+
+							<!-- ITEM - 20 - START -->
+							<div class="info-section bond-info">
+								<p>Renewal date:</p>
+								<p class="answer bond-renewal-date-answer">N/A</p>
+							</div>
+							<!-- ITEM - 20 - END -->
+
+						</section>
+						<!-- ///////////// CASE INFO - END ///////////// -->
+
+					</div>
+					<!-- // CASE DETAILS - START // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="property-tab-3" class="client-details tab-content">
+				<div class="row">
+
 					<!-- // CLIENT DEPUTIES - START // -->
 					<div class="large-12 large-uncentered columns">
 
@@ -1799,10 +2193,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 2 - END =========== -->
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 3 - START =========== -->
-			<div id="property-tab-3" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="property-tab-4" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // WARNINGS - START // -->
@@ -1815,10 +2209,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 3 - END =========== -->
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 4 - START =========== -->
-			<div id="property-tab-4" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="property-tab-5" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT TASKS - START // -->
@@ -1831,10 +2225,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 4 - END =========== -->
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 5 - START =========== -->
-			<div id="property-tab-5" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="property-tab-6" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT TASKS - START // -->
@@ -1847,10 +2241,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 5 - END =========== -->
+			<!-- =========== TAB CONTENT - 6 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 6 - START =========== -->
-			<div id="property-tab-6" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 7 - START =========== -->
+			<div id="property-tab-7" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT DOCUMENTS - START // -->
@@ -1863,7 +2257,7 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 6 - END =========== -->
+			<!-- =========== TAB CONTENT - 7 - END =========== -->
 
 		</div>
 
@@ -2135,6 +2529,7 @@
 	<script src="../../../production/js/V12/my-cookies/commission-visit.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-case.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V12/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V12/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V12/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V12/my-cookies/new-event.js"></script>
@@ -2149,7 +2544,7 @@
 	<script src="../../../production/js/V12/my-jquery/report-period.js"></script>
 	<script src="../../../production/js/V12/my-jquery/supervision-level.js"></script>
 	<script src="../../../production/js/V12/my-jquery/new-event.js"></script>
-	<script src="../../../production/js/V12/my-jquery-progress-bar.js"></script>
+	<script src="../../../production/js/V12/my-jquery/progress-bar.js"></script>
 	<!-- User Journey - JQuery - END -->
 
 	<script src="../../../production/js/V12/jquery.tablesorter.js"></script>
