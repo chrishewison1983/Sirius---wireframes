@@ -112,6 +112,10 @@ ul.tabs {
                               background: url(#{$image-path}/icons/info-white.svg) no-repeat 50% 50%;
                               background-size: contain;
                          }
+                         &.draft-letters {
+                              background: url(#{$image-path}/icons/drafts-white.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
                          &.client-details {
                               background: url(#{$image-path}/icons/client-white.svg) no-repeat 50% 50%;
                               background-size: contain;
@@ -146,6 +150,10 @@ ul.tabs {
                     border-radius: 0;
                     &.info {
                          background: url(#{$image-path}/icons/info-black.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+                    &.draft-letters {
+                         background: url(#{$image-path}/icons/drafts-black.svg) no-repeat 50% 50%;
                          background-size: contain;
                     }
                     &.client-details {
@@ -188,7 +196,7 @@ ul.tabs {
           margin-top: 0.75em;
           width: 97%;
           float: left;
-          min-height: 14em;
+          min-height: 86vh;
           .section-title {
                margin-top: 0;
           }

@@ -36,7 +36,7 @@ $(document).ready(function(){
 // Top nav search
 $("label.switch span").click(function () {
      $(this).text(function(i, v){
-          return v === 'Supervision' ? 'LPA' : 'Supervision'
+          return v === 'Switch to: Supervision cases' ? 'Switch to: LPA cases' : 'Switch to: Supervision cases'
      })
 });
 
@@ -144,41 +144,6 @@ function openTab(evt, tabName) {
      evt.currentTarget.className += " active";
 }
 
-
-// Correspondant
-$(document).ready(function() {
-
-     $('#suggested ul li a').click(function(e) {
-          e.preventDefault();
-          $(this).hide();
-          $("#selected-list").append(`
-               <li data-correspondant-id='${$(this).data('correspondant-id')}'>
-                    <a class="correspondent">
-                         <span>${ $(this).find('[data-value="name"]').text() }</span>
-                         <br>
-                         <span class="sub-text">${ $(this).find('[data-value="address"]').text() }</span>
-                    </a>
-               </li>`
-          );
-          $("#recipients").append(`
-               <li data-correspondant-id='${$(this).data('correspondant-id')}'>
-                    ${ $(this).find('[data-value="name"]').text() }
-               </li>`
-          );
-          persistSelectedRecipients();
-     });
-
-     $('#selected-list').on('click', 'a', function(e) {
-          e.preventDefault();
-          var id = $(this).parent().data('correspondant-id');
-          $(this).remove();
-          $(`#recipients [data-correspondant-id="${id}"]`).remove();
-          $(`#suggested [data-correspondant-id="${id}"]`).show();
-          persistSelectedRecipients();
-     });
-
-});
-
 // Forms
 $(document).ready(function(){
      $('input, select').on('focus', function(e) {
@@ -190,73 +155,20 @@ $(document).ready(function(){
      });
 });
 
-// Add deputy
-$(document).ready(function(){
-     $('#deputy-added').hide();
-
-     $('#add-another-deputy').click(function(){
-     	$('#deputy-added').slideDown('slow');
-     });
-});
-
-// CREATE LETTER
-$(document).ready(function(){
-     $('.preview').click(function(e){
-          e.preventDefault();
-          var docName = $(this).siblings().find('h2').text();
-          $('#preview-doc').find('h1').text(docName);
-     });
-});
 
 // Clear -Forms
 // var form = document.getElementById("add-third-party-form");
 // form.reset();
 
-// Add edit deputies
-// $('.remove-deputy').click(function(){
-//      $('h2.case-number').append($(this).parent().parent().find('h2').text());
-// });
-//
-$('#confirm-remove-1').click(function(){
-     $('.case-item[data-case-id="1"]').hide('slow', function(){ $(this).remove(); });
-});
-$('#confirm-remove-2').click(function(){
-     $('.case-item[data-case-id="2"]').hide('slow', function(){ $(this).remove(); });
-});
-$('#confirm-remove-3').click(function(){
-     $('.case-item[data-case-id="3"]').hide('slow', function(){ $(this).remove(); });
-});
-$('#confirm-remove-4').click(function(){
-     $('.case-item[data-case-id="4"]').hide('slow', function(){ $(this).remove(); });
-});
-
-// $('#edit-deputy').click(function(){
-//      $("#edit-title, .edit-deputy-form").show('slow');
-//      $("#check-details-title").hide('slow');
-// });
-
-
-// Exisiting deputies
-$('#exisiting-deputies').hide();
-
-$(document).ready(function(){
-     $('#deputy-last-name').keypress(function(){
-     	$('#add-new-deputy').removeClass('de-activate');
-          $('#exisiting-deputies').slideDown('slow');
-     });
-     $("#deputy-first-name").keyup(function(event) {
-          var stt = $(this).val();
-          $(".deputy-first-name").text(stt);
-     });
-     $("#deputy-last-name").keyup(function(event) {
-          var stt = $(this).val();
-          $(".deputy-last-name").text(stt);
-     });
-});
-
 // Create client
 function persistSelectedRecipients() {
      sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
+          return $(this).text().trim();
+     }).toArray()));
+}
+
+function persistSelectedInserts() {
+     sessionStorage.setItem('selected-inserts', JSON.stringify($('#inserts-selected li').map(function() {
           return $(this).text().trim();
      }).toArray()));
 }
@@ -309,50 +221,6 @@ $(document).ready(function() {
           e.preventDefault();
      });
 });
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-//
-// for (i = 0; i < acc.length; i++) {
-//      acc[i].onclick = function(){
-//           /* Toggle between adding and removing the "active" class,
-//           to highlight the button that controls the panel */
-//           this.classList.toggle("active");
-//
-//           /* Toggle between hiding and showing the active panel */
-//           var panel = this.nextElementSibling;
-//           if (panel.style.display === "inline-block") {
-//                panel.style.display = "none";
-//           } else {
-//                panel.style.display = "inline-block";
-//           }
-//           // $(this).siblings().removeClass('active');
-//           // $(this).nextElementSibling().hide();
-//      }
-// }
-
-// Side panel
-// $('.minimise').on('click', function(e) {
-//      if ($(this).hasClass('open')) {
-//           $(this).removeClass('open');
-//           $(this).parent().parent().removeClass('shrink');
-//           $(this).parent().parent().parent().find('main').removeClass('full-width');
-//           $('nav').find('.create-client, .user-cta').show();
-//           $('nav').find('.logo').html('<img src="../../../production/img/V12/sirius-logo.svg" alt="Sirius">');
-//           $('nav').find('.sign-out').html('<span class="nav-icon"></span> Sign out');
-//           $(this).parent().parent().parent().find('.row').removeClass('full-width-row');
-//           $(this).closest('body').find('nav.client-nav').removeClass('full-width');
-//      } else {
-//           $(this).addClass('open');
-//           $(this).parent().parent().addClass('shrink');
-//           $(this).parent().parent().parent().find('main').addClass('full-width');
-//           $('nav').find('.create-client, .user-cta').hide();
-//           $('nav').find('.sign-out').html('<span class="nav-icon"></span>');
-//           $('nav').find('.logo').html('');
-//           $(this).parent().parent().parent().find('.row').addClass('full-width-row');
-//           $(this).closest('body').find('nav.client-nav').addClass('full-width');
-//      }
-//      return false;
-// })
 
 // Dashboard
 $(document).ready(function() {
@@ -363,17 +231,6 @@ $(document).ready(function() {
           $(this).toggleClass('close');
      })
 
-     // $('#completed-tasks-table').hide();
-
-     // $('#myTable input:checkbox').change(function(){
-     //      if($(this).is(":checked")) {
-     //           $(this).closest("tr").addClass("complete");
-     //           $(this).closest("tr").hide('slow').delay(1500);
-     //           $(this).closest("main").find('.tab-link.current span').html(function(i, val) { return +val-1 });
-     //      } else {
-     //           $(this).closest("tr").removeClass("complete");
-     //      }
-     // });
 });
 
 // Document viewer
@@ -426,21 +283,5 @@ $(document).ready(function() {
 
      });
 
-
-});
-
-// Error messaging
-$(document).ready(function () {
-
-     if (window.location.href.indexOf("error-message") != -1) {
-          // Show's the error message
-          $('#error-message').show();
-
-          // Add anchor links to the selected groups
-          $('#client-dob').closest('.form-group').attr('id', 'dob-error').addClass('error-field');
-          $('#client-mob-number').closest('.form-group').attr('id', 'mobile-error').addClass('error-field');
-          $('#client-email').closest('.form-group').attr('id', 'email-error').addClass('error-field');
-
-     }
 
 });

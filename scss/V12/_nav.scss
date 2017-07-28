@@ -75,7 +75,7 @@ nav.top-nav {
                bottom: -12.35em;
                margin: 0;
                // float: right;
-               width: 15em;
+               min-width: 22.5em;
                display: none;
                background: $white;
                border-radius: 0 5px 5px 5px;
@@ -175,14 +175,18 @@ nav.top-nav {
 label.switch {
      position: relative;
      display: inline-block;
-     width: 12em;
+     width: 20em;
      height: 34px;
      float: right;
      margin: 0 1.5em 0 0;
      z-index: 1;
+     text-align: center;
      &.checked {
           span {
-               color: $white;
+               color: rgba($white,0.7);
+               strong {
+                    color: $white;
+               }
                // content: "LPA";
           }
           input:checked + .slider {
@@ -197,17 +201,21 @@ label.switch {
      span {
           display: inline-block;
           font-size: 0.9rem;
-          font-weight: bold;
-          color: $white;
+          font-weight: normal;
+          color: rgba($white,0.7);
           padding: 0.65em 0 0 0;
-          position: absolute;
-          top: 0;
-          left: 0;
+          position: relative;
+          // position: absolute;
+          // top: 0;
+          // left: 0;
           line-height: 1;
           z-index: 10;
-          width: 12em;
+          width: 16em;
           height: 34px;
           text-align: center;
+          strong {
+               color: $white;
+          }
      }
      input {
           display: none;
@@ -247,20 +255,23 @@ label.switch {
           box-shadow: 0 0 1px $blue;
      }
      input:checked + .slider:before {
-          -webkit-transform: translateX(9.5em);
-          -ms-transform: translateX(9.5em);
-          transform: translateX(9.5em);
+          -webkit-transform: translateX(17.5em);
+          -ms-transform: translateX(17.5em);
+          transform: translateX(17.5em);
      }
 }
 
 nav.client-nav {
      background: $main-colour;
-     width: 19%;
+     width: 100%;
      float: left;
-     position: fixed;
-     top: 0;
-     bottom: 0;
-     left: 4%;
+     height: 10em;
+     margin-top: 3px;
+     position: relative;
+     // position: fixed;
+     // top: 0;
+     // bottom: 0;
+     // left: 4%;
      z-index: 10;
      // &.full-width {
      //      left: 4.75%;
@@ -294,27 +305,29 @@ nav.client-nav {
           }
      }
      ul.client-details {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
+          // position: absolute;
+          // top: 0;
+          // bottom: 0;
+          // left: 0;
+          // right: 0;
           display: inline-block;
           width: 100%;
-          height: 100%;
+          height: 10em;
           margin: 0;
           border-bottom: none;
-          border-right: 10px solid $blue;
+          // border-right: 10px solid $blue;
           li {
-               position: absolute;
-               left: 0;
-               right: 0;
+               position: relative;
+               // left: 0;
+               // right: 0;
+               float: left;
                color: $white;
                padding: 0 0.75em;
                line-height: 1;
                text-decoration: none;
-               border-bottom: 1px solid darken($main-colour,20%);
-               height: 25%;
+               border-right: 3px solid darken($main-colour,20%);
+               height: 10em;
+               width: 33.333%;
                background: darken($main-colour,7.5%);
                @include flexbox;
                @include align-items(center);
@@ -352,7 +365,8 @@ nav.client-nav {
                          }
                     }
                     .due-date {
-                         background: darken($blue,5%);
+                         border-top: 1px solid rgba($white,0.1);
+                         background: $blue;
                          p:nth-of-type(1n) {
                               color: rgba($white,0.7);
                          }
@@ -368,29 +382,30 @@ nav.client-nav {
                     &:after {
                          content: '';
                          position: absolute;
-                         right: -2.5em;
-                         top: 40%;
-                         width: 1.5em;
-                         height: 4em;
+                         left: 50%;
+                         bottom: -1.5em;
+                         margin: 0 0 0 -2em;
+                         width: 4em;
+                         height: 1.5em;
                          // background: $blue;
                          z-index: 150;
                          border-style: solid;
-                         border-width: 2em 0 2em 2em;
-                         border-color: transparent transparent transparent $blue;
+                         border-width: 1em 2em 0 2em;
+                         border-color: $blue transparent transparent transparent;
                     }
                }
-               &:nth-of-type(1n) {
-                    top: 0%;
-               }
-               &:nth-of-type(2n) {
-                    top: 25%;
-               }
-               &:nth-of-type(3n) {
-                    top: 50%;
-               }
-               &:nth-of-type(4n) {
-                    top: 75%;
-                    border-bottom: none;
+               // &:nth-of-type(1n) {
+               //      top: 0%;
+               // }
+               // &:nth-of-type(2n) {
+               //      top: 25%;
+               // }
+               // &:nth-of-type(3n) {
+               //      top: 50%;
+               // }
+               &:last-of-type {
+                    // top: 75%;
+                    border-right: none;
                }
                span {
                     display: inline-block;
@@ -552,6 +567,7 @@ nav.client-nav {
                     right: 0;
                     bottom: 0;
                     padding: 0.5em 1em;
+                    // border-top: 1px solid rgba($white,0.1);
                     background: darken($main-colour,5%);
                     p {
                          width: auto;
@@ -581,7 +597,7 @@ nav.client-nav {
                .days-left {
                     display: inline-block;
                     position: absolute;
-                    right: 1.5em;
+                    right: 0.5em;
                     top: -1.5em;
                     background: $red;
                     color: $white;

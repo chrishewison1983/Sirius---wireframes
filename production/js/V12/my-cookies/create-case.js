@@ -15,8 +15,8 @@ $("#create-case-button").on("click", function (e) {
      $.cookie("case-order-title", $("#case-order-title").val(), {path:'/'});
 
      // Cookies for side bar - DEPUTY/DEPUTIES
-     $.cookie("deputies-jointly-severally", $("input[name=deputies-jointly-severally]:checked").val(), {path:'/'});
-     $.cookie("deputies-jointly", $("input[name=deputies-jointly]:checked").val(), {path:'/'});
+     $.cookie("deputies-appointed", $("input[name=deputies-appointed]:checked").val(), {path:'/'});
+     // $.cookie("deputies-jointly", $("input[name=deputies-jointly]:checked").val(), {path:'/'});
 
      // Cookies for side bar - FILE LOCATION
      $.cookie("file-location", $("input[name=file-location]:checked").val(), {path:'/'});
@@ -47,6 +47,9 @@ $('.file-location-info').hide();
 $('.bond-info').hide();
 $('.dispense').hide();
 
+if ($.cookie("client-casarec")) { $("#case-court-ref").val($.cookie("client-casarec")); }
+
+
 // Populate side bar - THE ORDER
 if ($.cookie("case-order-type")) { $(".case-order-type-answer").text($.cookie("case-order-type")); }
 if ($.cookie("case-court-ref")) { $(".case-court-ref-answer").text($.cookie("case-court-ref")); }
@@ -58,8 +61,8 @@ if ($.cookie("case-received-date")) { $(".case-received-date-answer").text($.coo
 if ($.cookie("case-order-title")) { $(".case-order-title-answer").text($.cookie("case-order-title")); }
 
 // Populate side bar - DEPUTY/DEPUTIES
-if ($.cookie("deputies-jointly-severally")) { $(".deputies-jointly-severally-answer").text($.cookie("deputies-jointly-severally")); }
-if ($.cookie("deputies-jointly")) { $(".deputies-jointly-answer").text($.cookie("deputies-jointly")); }
+if ($.cookie("deputies-appointed")) { $(".deputies-appointed-answer").text($.cookie("deputies-appointed")); }
+// if ($.cookie("deputies-jointly")) { $(".deputies-jointly-answer").text($.cookie("deputies-jointly")); }
 
 // Populate side bar - FILE LOCATION
 if ($.cookie("file-location")) { $(".file-location-answer").text($.cookie("file-location")); }
@@ -178,8 +181,16 @@ if ($.cookie('dispense-bond-journey') == 'true' ) {
 
 // Changes the confirm url
 if ($.cookie('case-order-type') === 'Health and Welfare' ) {
-     $('#confirm-create-case').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('#confirm-create-case, #dont-create').attr('href', '../4-client-page/4a-new-client.html#HandW');
 }
 if ($.cookie('case-order-type') === 'Property and finance' ) {
-     $('#confirm-create-case').attr('href', '../4-client-page/4a-new-client.html#property');
+     $('#confirm-create-case, #dont-create').attr('href', '../4-client-page/4a-new-client.html#property');
 }
+
+// Create task page
+$('.create-case #cta-footer').show();
+
+$("#datepicker").on("click", function (e) {
+     $('#confirm-create-case').removeClass('de-activate');
+     $('#confirm-create-case').removeAttr('disabled');
+});

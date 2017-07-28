@@ -10,19 +10,19 @@
 					Summary
 				</li>
 				<li class="tab-link" data-tab="health-tab-2">
-					Case details
+					<span>4</span> Tasks
 				</li>
 				<li class="tab-link" data-tab="health-tab-3">
-					Deputies
+					Case details
 				</li>
 				<li class="tab-link" data-tab="health-tab-4">
-					Warnings
+					Deputies
 				</li>
 				<li class="tab-link" data-tab="health-tab-5">
-					Timeline
+					Warnings
 				</li>
 				<li class="tab-link" data-tab="health-tab-6">
-					<span>4</span> Tasks
+					Timeline
 				</li>
 				<li class="tab-link" data-tab="health-tab-7">
 					Documents
@@ -127,8 +127,10 @@
 													<span class="icon main-contact"><p>Main deputy</p></span>
 													<span class="icon welfare"><p>Health &amp; welfare</p></span>
 													<span class="type">Joint</span>
+													<a href="#" class="edit">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+												<div class="info"><span>Status:</span> <strong>Open</strong></div>
 									               <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div>
 									               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
 											</div>
@@ -141,9 +143,11 @@
 												<h1>
 													Carla Frith
 													<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
-													<span class="type">Joint &amp; severally</span>
+													<span class="type">Joint</span>
+													<a href="#" class="edit">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+												<div class="info"><span>Status:</span> <strong>Active</strong></div>
 									               <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div>
 									               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
 											</div>
@@ -259,6 +263,97 @@
 			<div id="health-tab-2" class="client-details tab-content">
 				<div class="row">
 
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // LIST OF DEPUTIES - START // -->
+						<div id="list-of-tasks">
+
+							<div class="no-items">
+								<p>There are no tasks currently added to this client.</p>
+								<a href="#" class="main-cta">Create task</a>
+							</div>
+
+							<!-- // COMMISSION VISIT MESSAGE - START // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<ol id="task-list">
+
+										<h2 class="description-title">Your outstanding tasks</h2>
+
+										<!-- // CONFIRMATION MESSAGE - START // -->
+										<div class="row">
+											<div class="large-12 large-uncentered columns">
+												<div id="confirmation-dashboard-visit" class="confirmation-panel">
+													<div class="content">
+														<h2>
+															<span></span>
+															Your visit has been commissioned to
+															<div class="client-first-name">Gerald</div>
+															<div class="client-last-name">Brackens</div>
+														</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- // CONFIRMATION MESSAGE - END // -->
+
+										<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
+										<li class="outstanding pdf-review">
+
+											<span class="dot"></span>
+
+											<form>
+
+												<!-- // FORM ITEM - 1 - START // -->
+												<div class="form-group">
+													<label class="normal" for="confirm-read">
+														<input id="confirm-read" name="confirm-read" type="checkbox" value="post">
+														<span class="icon"></span>
+														Visit report received
+
+														<!-- // STATUS - START // -->
+														<div class="status">
+															outstanding
+														</div>
+														<!-- // STATUS - END // -->
+
+													</label>
+												</div>
+												<!-- // FORM ITEM - 1 - END // -->
+
+											</form>
+
+											<a href="#review-report-2" rel="modal:open">Review report</a>
+
+										</li>
+										<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
+
+									</ol>
+								</div>
+							</div>
+							<!-- // COMMISSION VISIT MESSAGE - END // -->
+
+						</div>
+						<!-- // LIST OF DEPUTIES - END // -->
+
+						<!-- // MODAL - START // -->
+						<div id="review-report-2" style="display:none;">
+							<img src="../../../production/img/V12/document-thumbnail.png" alt="Document" class="document-item">
+						</div>
+						<!-- // MODAL - END // -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="health-tab-3" class="client-details tab-content">
+				<div class="row">
+
 					<!-- // CASE DETAILS - START // -->
 					<div class="large-12 large-uncentered columns">
 
@@ -326,22 +421,22 @@
 							</div>
 							<!-- ITEM - 8 - END -->
 
-							<h2 class="description-title">
+							<!-- <h2 class="description-title">
 								How have the deputy/deputies been appointed?
-							</h2>
+							</h2> -->
 
 							<!-- ITEM - 9 - START -->
 							<div class="info-section">
-								<p>There are deputies appointed jointly and severally?:</p>
-								<p class="answer deputies-jointly-severally-answer">Yes</p>
+								<p>How have the deputy/deputies been appointed?:</p>
+								<p class="answer deputies-appointed-answer">Sole</p>
 							</div>
 							<!-- ITEM - 9 - END -->
 
 							<!-- ITEM - 10 - START -->
-							<div class="info-section">
+							<!-- <div class="info-section">
 								<p>There are deputies appointed jointly?:</p>
 								<p class="answer deputies-jointly-answer">Yes</p>
-							</div>
+							</div> -->
 							<!-- ITEM - 10 - END -->
 
 							<h2 class="description-title">
@@ -426,10 +521,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 2 - END =========== -->
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 3 - START =========== -->
-			<div id="health-tab-3" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="health-tab-4" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // CLIENT DEPUTIES - START // -->
@@ -475,10 +570,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 3 - END =========== -->
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 4 - START =========== -->
-			<div id="health-tab-4" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="health-tab-5" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // WARNINGS - START // -->
@@ -500,13 +595,13 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 4 - END =========== -->
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 5 - START =========== -->
-			<div id="health-tab-5" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="health-tab-6" class="client-details tab-content">
 				<div class="row">
 
-					<!-- // CLIENT TASKS - START // -->
+					<!-- // TIMELINE - START // -->
 					<div class="large-12 large-uncentered columns">
 
 						<!-- // LIST OF SUMMARIES - START // -->
@@ -912,98 +1007,7 @@
 						<!-- // MODAL - END // -->
 
 					</div>
-					<!-- // CLIENT TASKS - END // -->
-
-				</div>
-			</div>
-			<!-- =========== TAB CONTENT - 5 - END =========== -->
-
-			<!-- =========== TAB CONTENT - 6 - START =========== -->
-			<div id="health-tab-6" class="client-details tab-content">
-				<div class="row">
-
-					<!-- // CLIENT TASKS - START // -->
-					<div class="large-12 large-uncentered columns">
-
-						<!-- // LIST OF DEPUTIES - START // -->
-						<div id="list-of-tasks">
-
-							<div class="no-items">
-								<p>There are no tasks currently added to this client.</p>
-								<a href="#" class="main-cta">Create task</a>
-							</div>
-
-							<!-- // COMMISSION VISIT MESSAGE - START // -->
-							<div class="row">
-								<div class="large-12 large-uncentered columns">
-									<ol id="task-list">
-
-										<h2 class="description-title">Your outstanding tasks</h2>
-
-										<!-- // CONFIRMATION MESSAGE - START // -->
-										<div class="row">
-											<div class="large-12 large-uncentered columns">
-												<div id="confirmation-dashboard-visit" class="confirmation-panel">
-													<div class="content">
-														<h2>
-															<span></span>
-															Your visit has been commissioned to
-															<div class="client-first-name">Gerald</div>
-															<div class="client-last-name">Brackens</div>
-														</h2>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- // CONFIRMATION MESSAGE - END // -->
-
-										<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
-										<li class="outstanding pdf-review">
-
-											<span class="dot"></span>
-
-											<form>
-
-												<!-- // FORM ITEM - 1 - START // -->
-						                              <div class="form-group">
-						                                   <label class="normal" for="confirm-read">
-						                                        <input id="confirm-read" name="confirm-read" type="checkbox" value="post">
-														<span class="icon"></span>
-						                                        Visit report received
-
-														<!-- // STATUS - START // -->
-														<div class="status">
-															outstanding
-														</div>
-														<!-- // STATUS - END // -->
-
-						                                   </label>
-						                              </div>
-						                              <!-- // FORM ITEM - 1 - END // -->
-
-											</form>
-
-											<a href="#review-report-2" rel="modal:open">Review report</a>
-
-										</li>
-										<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
-
-									</ol>
-								</div>
-							</div>
-							<!-- // COMMISSION VISIT MESSAGE - END // -->
-
-						</div>
-						<!-- // LIST OF DEPUTIES - END // -->
-
-						<!-- // MODAL - START // -->
-						<div id="review-report-2" style="display:none;">
-							<img src="../../../production/img/V12/document-thumbnail.png" alt="Document" class="document-item">
-						</div>
-						<!-- // MODAL - END // -->
-
-					</div>
-					<!-- // CLIENT TASKS - END // -->
+					<!-- // TIMELINE - END // -->
 
 				</div>
 			</div>
@@ -1071,7 +1075,7 @@
 					<li class="supervision">
 						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 							<span class="icon"></span>
-							<span>Create document</span>
+							<span>Create correspondence</span>
 						</a>
 					</li>
 					<li class="supervision">

@@ -44,77 +44,80 @@
 
           <div class="row">
 
-               <div id="side-panel" class="large-8 large-uncentered columns">
+               <div class="large-8 large-uncentered columns">
 
-                    <!-- =========== TABS - START =========== -->
-                    <ul id="side-panel-tabs" class="tabs">
-                         <li class="tab-link current" data-tab="tab-1">
-                              <span class="info"></span>
-                              <p>Letter info</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-2">
-                              <span class="client-details"></span>
-                              <p>Client details</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-3">
-                              <span class="deputy-details"></span>
-                              <p>Deputy details</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-4">
-                              <span class="documents"></span>
-                              <p>Documents</p>
-                         </li>
-                    </ul>
-                    <!-- =========== TABS - END =========== -->
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
 
-                    <!-- =========== TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="tab-content side-panel current">
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Letter info</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
 
-                         <!-- // DOCUMENT SUMMARY - START // -->
-                         <h2 class="section-title">Document information</h2>
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel current">
 
-                         <h3 class="sub-section-title">Letter template chosen</h3>
+                              {{= it.include('side-panel/letter-details.html') }}
 
-                         <div class="document">
-                              <img src="../../../production/img/V9/document-thumbnail.png" alt="Document" class="document-item">
-                              <h3 class="title">CT-bb: Blank complaints team template</h3>
                          </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
 
-                         <h3 class="sub-section-title">Recipients chosen</h3>
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
 
-                         <ol id="recipients">
-                              <li data-correspondant-id='1'>Ms Lara Stevens (Correspondent)</li>
-                         </ol>
-                         <!-- // DOCUMENT SUMMARY - END // -->
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              <h2 class="section-title">Deputy details</h2>
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
 
                     </div>
-                    <!-- =========== TAB CONTENT - 1 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 2 - START =========== -->
-                    <div id="tab-2" class="tab-content side-panel">
-
-                         {{= it.include('side-panel/client-details.html') }}
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 2 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 3 - START =========== -->
-                    <div id="tab-3" class="tab-content side-panel">
-
-                         <h2 class="section-title">Deputy details</h2>
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 3 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="tab-content side-panel">
-
-                         <!-- <h2 class="section-title">Case documents</h2> -->
-
-                         {{= it.include('side-panel/document-viewer.html') }}
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+                    <!-- ////////// SIDE PANEL - END ////////// -->
 
                </div>
 
@@ -132,7 +135,8 @@
                                    <li data-correspondant-id='1'>
                                         <a class="correspondent">
                                              <span class="icon fee-payer"></span>
-                                             <span>Ms Lara Stevens (Correspondent)</span><br>
+                                             <span>Ms Lara Stevens</span><br>
+                                             <span class="type">Correspondent</span><br>
                                              <span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
                                         </a>
                                    </li>
@@ -156,7 +160,8 @@
                                    <li>
                                         <a class="correspondent" data-correspondant-id='1' style="display:none;">
                                              <span class="fee-payer"></span>
-                                             <span data-value='name'>Ms Lara Stevens (Correspondent)</span><br>
+                                             <span data-value='name'>Ms Lara Stevens</span><br>
+                                             <span data-value='type' class="type">Correspondent</span><br>
                                              <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
                                         </a>
                                    </li>
@@ -165,8 +170,8 @@
                                    <!-- // CORRESPONDANCE - 2 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='2'>
-                                             <span data-value='name'>Mr Gerald Brackens (Client)</span>
-                                             <br>
+                                             <span data-value='name'>Mr Gerald Brackens</span><br>
+                                             <span data-value='type' class="type">Client</span><br>
                                              <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
                                         </a>
                                    </li>
@@ -175,7 +180,8 @@
                                    <!-- // CORRESPONDANCE - 3 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='3'>
-                                             <span data-value='name'>Mrs Carla Frith (Deputy)</span><br>
+                                             <span data-value='name'>Mrs Carla Frith</span><br>
+                                             <span data-value='type' class="type">Deputy</span><br>
                                              <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
                                         </a>
                                    </li>
@@ -184,8 +190,8 @@
                                    <!-- // CORRESPONDANCE - 4 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='4'>
-                                             <span data-value='name'>Mrs Melanie Rand (Deputy)</span>
-                                             <br>
+                                             <span data-value='name'>Mrs Melanie Rand</span><br>
+                                             <span data-value='type' class="type">Deputy</span><br>
                                              <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
                                         </a>
                                    </li>
@@ -194,8 +200,8 @@
                                    <!-- // CORRESPONDANCE - 5 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='5'>
-                                             <span data-value='name'>Toby Daniels (Notified Person)</span>
-                                             <br>
+                                             <span data-value='name'>Toby Daniels</span><br>
+                                             <span data-value='type' class="type">Notified Person</span><br>
                                              <span data-value='address' class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span>
                                         </a>
                                    </li>
@@ -204,8 +210,8 @@
                                    <!-- // CORRESPONDANCE - 6 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='6'>
-                                             <span data-value='name'>TrustMe Limited (Trust Corporation)</span>
-                                             <br>
+                                             <span data-value='name'>TrustMe Limited</span><br>
+                                             <span data-value='type' class="type">Trust Corporation</span><br>
                                              <span data-value='address' class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span>
                                         </a>
                                    </li>
@@ -234,17 +240,14 @@
      </div>
      <!-- CONTENT WRAPPER - END -->
 
-     <!-- CTA-FOOTER - START -->
-     <div id="cta-footer" class="cta-row">
-          <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html">Create letter</a>
-          <a href="#" onclick="history.back();">Cancel</a>
-     </div>
-     <!-- CTA-FOOTER - END -->
-
 </main>
 <!-- PRIMARY CONTENT - END -->
 
 <!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html">Create letter</a>
+     <a href="#" onclick="history.back();">Cancel</a>
+</footer>
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
@@ -254,6 +257,9 @@
           sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
                return $(this).text().trim();
           }).toArray()));
+          JSON.parse(sessionStorage.getItem('selected-inserts')).forEach(function(insert) {
+               $('#inserts-selected').append('<li>' + insert + '</li>');
+          });
      });
 
 </script>

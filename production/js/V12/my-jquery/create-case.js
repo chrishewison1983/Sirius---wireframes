@@ -20,7 +20,7 @@ $("#case-type-property").click( function(){
 // }
 
 ////////////////////////////////////// DEPUTIES //////////////////////////////////////
-$(".deputies-jointly").click( function(){
+$(".deputies-appointed").click( function(){
      $('#cta-footer').slideDown('slow');
 });
 
@@ -132,34 +132,22 @@ if (window.location.href.indexOf("EditCase") != -1) {
      $('#case-order-title').val($.cookie("case-order-title"));
 
      // Deputies jointly severally
-     $('#deputies-jointly-severally-yes, #deputies-jointly-severally-no').attr('disabled', true);
-     $('#deputies-jointly-severally-yes, #deputies-jointly-severally-no').closest('.form-group').addClass('read-only');
-     // $('#deputies-jointly-severally-yes').parent().addClass('checked');
-     if ($.cookie('deputies-jointly-severally') === 'Yes' ) {
-          $('#deputies-jointly-severally-yes').parent().addClass('checked');
-          $('#deputies-jointly-severally-yes').attr('checked', 'checked');
-          $('#deputies-jointly-severally-no').parent().removeClass('checked');
+     $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').attr('disabled', true);
+     $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').closest('.form-group').addClass('read-only');
+     if ($.cookie('deputies-appointed') === 'Sole' ) {
+          $('#deputies-appointed-sole').parent().addClass('checked');
+          $('#deputies-appointed-sole').attr('checked', 'checked');
+          $('#deputies-appointed-joint, #deputies-appointed-joint-severally').parent().removeClass('checked');
      }
-     if ($.cookie('deputies-jointly-severally') === 'No' ) {
-          $('#deputies-jointly-severally-no').parent().addClass('checked');
-          $('#deputies-jointly-severally-no').attr('checked', 'checked');
-          $('#deputies-jointly-severally-yes').parent().removeClass('checked');
+     if ($.cookie('deputies-appointed') === 'Joint' ) {
+          $('#deputies-appointed-joint').parent().addClass('checked');
+          $('#deputies-appointed-joint').attr('checked', 'checked');
+          $('#deputies-appointed-sole, #deputies-appointed-joint-severally').parent().removeClass('checked');
      }
-
-     // Deputies jointly
-     $('#deputies-jointly-yes, #deputies-jointly-no').attr('disabled', true);
-     $('#deputies-jointly-yes, #deputies-jointly-no').closest('.form-group').addClass('read-only');
-     if ($.cookie('deputies-jointly') === 'Yes' ) {
-          $('#deputies-jointly-yes').parent().addClass('checked');
-          $('#deputies-jointly-yes').attr('checked', 'checked');
-          $('#deputies-jointly-no').parent().removeClass('checked');
-          $('#deputies-jointly-no').removeAttr('checked', 'checked');
-     }
-     if ($.cookie('deputies-jointly') === 'No' ) {
-          $('#deputies-jointly-no').parent().addClass('checked');
-          $('#deputies-jointly-no').attr('checked', 'checked');
-          $('#deputies-jointly-yes').parent().removeClass('checked');
-          $('#deputies-jointly-yes').removeAttr('checked', 'checked');
+     if ($.cookie('deputies-appointed') === 'Joint &amp; severally' ) {
+          $('#deputies-appointed-joint-severally').parent().addClass('checked');
+          $('#deputies-appointed-joint-severally').attr('checked', 'checked');
+          $('#deputies-appointed-sole, #deputies-appointed-joint').parent().removeClass('checked');
      }
 
      // File location
@@ -267,29 +255,20 @@ if (window.location.href.indexOf("Edit") != -1) {
      $('#case-order-title').val($.cookie("case-order-title"));
 
      // Deputies jointly severally
-     if ($.cookie('deputies-jointly-severally') === 'Yes' ) {
-          $('#deputies-jointly-severally-yes').parent().addClass('checked');
-          $('#deputies-jointly-severally-yes').attr('checked', 'checked');
-          $('#deputies-jointly-severally-no').parent().removeClass('checked');
+     if ($.cookie('deputies-appointed') === 'Sole' ) {
+          $('#deputies-appointed-sole').parent().addClass('checked');
+          $('#deputies-appointed-sole').attr('checked', 'checked');
+          $('#deputies-appointed-joint, #deputies-appointed-joint-severally').parent().removeClass('checked');
      }
-     if ($.cookie('deputies-jointly-severally') === 'No' ) {
-          $('#deputies-jointly-severally-no').parent().addClass('checked');
-          $('#deputies-jointly-severally-no').attr('checked', 'checked');
-          $('#deputies-jointly-severally-yes').parent().removeClass('checked');
+     if ($.cookie('deputies-appointed') === 'Joint' ) {
+          $('#deputies-appointed-joint').parent().addClass('checked');
+          $('#deputies-appointed-joint').attr('checked', 'checked');
+          $('#deputies-appointed-sole, #deputies-appointed-joint-severally').parent().removeClass('checked');
      }
-
-     // Deputies jointly
-     if ($.cookie('deputies-jointly') === 'Yes' ) {
-          $('#deputies-jointly-yes').parent().addClass('checked');
-          $('#deputies-jointly-yes').attr('checked', 'checked');
-          $('#deputies-jointly-no').parent().removeClass('checked');
-          $('#deputies-jointly-no').removeAttr('checked', 'checked');
-     }
-     if ($.cookie('deputies-jointly') === 'No' ) {
-          $('#deputies-jointly-no').parent().addClass('checked');
-          $('#deputies-jointly-no').attr('checked', 'checked');
-          $('#deputies-jointly-yes').parent().removeClass('checked');
-          $('#deputies-jointly-yes').removeAttr('checked', 'checked');
+     if ($.cookie('deputies-appointed') === 'Joint &amp; severally' ) {
+          $('#deputies-appointed-joint-severally').parent().addClass('checked');
+          $('#deputies-appointed-joint-severally').attr('checked', 'checked');
+          $('#deputies-appointed-sole, #deputies-appointed-joint').parent().removeClass('checked');
      }
 
      // File location

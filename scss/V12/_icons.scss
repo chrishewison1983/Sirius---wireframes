@@ -5,7 +5,8 @@
 
 //  FOR ALL
 .icon {
-     &.fee-payer, &.main-contact, &.welfare, &.welfare-property, &.property, &.chosen-location, &.location, &.date {
+     &.fee-payer, &.main-contact, &.welfare, &.welfare-property, &.property, &.chosen-location, &.location, &.date,
+     &.template, &.drafts, &.contacts, &.saved, &.welsh, &.violent {
           position: relative;
           z-index: 11;
           display: inline-block;
@@ -49,6 +50,14 @@
                     border-color: transparent transparent rgba($black,0.6) transparent;
                }
           }
+     }
+     &.violent {
+          background: url(#{$image-path}/icons/violent-white.svg) no-repeat 50% 50% $red;
+          background-size: 0.5em;
+     }
+     &.welsh {
+          background: url(#{$image-path}/icons/welsh-white.svg) no-repeat 50% 50% $main-colour;
+          background-size: 0.5em;
      }
      &.fee-payer {
           background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
@@ -113,6 +122,22 @@
           background-size: 1.25em;
           display: none;
           border: none !important;
+     }
+     &.template {
+          background: url(#{$image-path}/icons/templates-white.svg) no-repeat 50% 50% $blue;
+          background-size: 0.85em;
+     }
+     &.drafts {
+          background: url(#{$image-path}/icons/drafts-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1em;
+     }
+     &.saved {
+          background: url(#{$image-path}/icons/saved-grey.svg) no-repeat 50% 50% $blue;
+          background-size: 1em;
+     }
+     &.contacts {
+          background: url(#{$image-path}/icons/contacts-white.svg) no-repeat 50% 50% $blue;
+          background-size: 0.85em;
      }
      &.location {
           background: url(#{$image-path}/icons/location-blue.svg) no-repeat 50% 50%;

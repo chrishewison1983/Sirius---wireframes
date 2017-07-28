@@ -62,7 +62,7 @@
 
 </header>
 <!-- MAIN NAV - END -->
-<!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header" class="confirmation-message"> <!-- // MAIN MAV - START // -->
+<!-- PRIMARY CONTENT - START --><main class="default create-case"> <!-- SECTION HEADER - START --> <div id="section-header" class="confirmation-message"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
 	<div class="row">
@@ -98,7 +98,7 @@
 			</form>
 
 			<label class="switch">
-				<span>Supervision</span>
+				<span>Switch to: <strong>LPA Cases</strong></span>
 				<input type="checkbox">
 				<div class="slider round"></div>
 			</label>
@@ -108,7 +108,545 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create case</span> </nav> <h1> Your case has been created </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case-journey"> <div class="row"> <!-- // EDIT DOCUMENT - START // --> <div class="large-6 large-uncentered columns"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label class="section-title" for="letter-actions">Add task to the case</label> <textarea name="textarea" class="jqte-test" id="case-actions"></textarea> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <legend for="case-date-reported-day"> </legend> <div class="half"> <label for="case-reminder-date" class="">Set a reminder for the case task:</label> <input id="case-reminder-date" name="case-reminder-date" type="text" value="05/06/2017" maxlength="12"> </div> <!-- <div class="one-third"> <label for="visit-reminder-day" class="sub-label">Day</label> <input id="visit-reminder-day" name="visit-reminder-day" type="text" value="05" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-month" class="sub-label">Month</label> <input id="visit-reminder-month" name="visit-reminder-month" type="text" value="04" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-year" class="sub-label">Year</label> <input id="visit-reminder-year" name="visit-reminder-year" type="text" value="2017" maxlength="4"> </div> --> </div> <!-- // FORM ITEM - 2 - END // --> </form> </div> <!-- // EDIT DOCUMENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a id="confirm-create-case" class="main-cta primary" href="../4-client-page/4a-new-client.html">Add task</a> <a href="#" onclick="history.back();">Don't create task</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(function(){// $( ".date-input-css" ).datepicker();// })</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create case</span> </nav> <h1> Your case has been created - add a task </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar commission-visit">
+	<ul class="steps-six">
+		<li class="step-1">
+			<a href="6a-why.html" class="wrapper">
+				<div class="number"><span>1</span></div>
+				<p>Why?</p>
+			</a>
+		</li>
+		<li class="step-2">
+			<a href="6b-who.html" class="wrapper">
+				<div class="number"><span>2</span></div>
+				<p>Who &amp; where?</p>
+			</a>
+		</li>
+		<li class="step-3">
+			<a href="6c-where.html" class="wrapper">
+				<div class="number"><span>3</span></div>
+				<p>Third parties?</p>
+			</a>
+		</li>
+		<li class="step-4">
+			<a href="6d-case-details.html" class="wrapper">
+				<div class="number"><span>4</span></div>
+				<p>Case summary &amp; Assets</p>
+			</a>
+		</li>
+		<li class="step-5">
+			<a href="6e-summary-of-case.html" class="wrapper">
+				<div class="number"><span>5</span></div>
+				<p>Case details</p>
+			</a>
+		</li>
+		<li class="step-6">
+			<a href="6f-confirm-visit.html" class="wrapper">
+				<div class="number"><span>6</span></div>
+				<p>Visit summary</p>
+			</a>
+		</li>
+		<span class="border"></span>
+	</ul>
+</nav>
+ </div> </div> --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-8 large-uncentered columns"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
+<h2 class="section-title">
+	<div class="client-title">Mr</div>
+	<div class="client-first-name">Gerald</div>
+	<div class="client-last-name">Brackens</div>
+	details
+	<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+</h2>
+
+<div class="check-details" id="client-details">
+
+	<!-- // CLIENT ITEM - 1 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Client status:</p>
+		<p class="answer client-status">Active</p>
+	</div>
+	<!-- // CLIENT ITEM - 1 - END // -->
+
+	<!-- // CLIENT ITEM - 2 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Status date:</p>
+		<p class="answer">
+			<span class="client-status-date">05/04/2017</span>
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 2 - END // -->
+
+	<!-- // CLIENT ITEM - 3 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Title:</p>
+		<p class="answer client-title">Mr.</p>
+	</div>
+	<!-- // CLIENT ITEM - 3 - END // -->
+
+	<!-- // CLIENT ITEM - 4 - START // -->
+	<div class="person-detail-item">
+		<p class="item">First name:</p>
+		<p class="answer client-first-name">Gerald</p>
+	</div>
+	<!-- // CLIENT ITEM - 4 - END // -->
+
+	<!-- // CLIENT ITEM - 5 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Middle names:</p>
+		<p class="answer client-middle-name">Brackens</p>
+	</div>
+	<!-- // CLIENT ITEM - 5 - END // -->
+
+	<!-- // CLIENT ITEM - 6 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Last name:</p>
+		<p class="answer client-last-name">Stephen</p>
+	</div>
+	<!-- // CLIENT ITEM - 6 - END // -->
+
+	<!-- // CLIENT ITEM - 7 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Date of birth:</p>
+		<p class="answer">
+			<span class="client-dob">09/08/1956</span>
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 7 - END // -->
+
+	<!-- // CLIENT ITEM - 8 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Previously Known As:</p>
+		<p class="answer client-previously-known-as">N/A</p>
+	</div>
+	<!-- // CLIENT ITEM - 8 - END // -->
+
+
+	<!-- // CLIENT ITEM - 9 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Country:</p>
+		<p class="answer client-country">England</p>
+	</div>
+	<!-- // CLIENT ITEM - 9 - END // -->
+
+	<!-- // CLIENT ITEM - 10 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Address:</p>
+		<p class="answer">
+			<span class="client-address-line-1">1 Grimwald Place</span>,<br>
+			<span class="client-address-line-2">Buckley</span>,<br>
+			<span class="client-address-town">Flintshire</span>,<br>
+			<span class="client-manual-postcode">CV32 788</span>.
+		</p>
+	</div>
+	<!-- // CLIENT ITEM - 10 - END // -->
+
+	<!-- // CLIENT ITEM - 11 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is airmail required?:</p>
+		<p class="answer client-airmail">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 11 - END // -->
+
+	<!-- // CLIENT ITEM - 12 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Daytime telephone number:</p>
+		<p class="answer client-phone-number">0123456789</p>
+	</div>
+	<!-- // CLIENT ITEM - 12 - END // -->
+
+	<!-- // CLIENT ITEM - 13 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Mobile telephone number:</p>
+		<p class="answer client-mob-number">07768948823</p>
+	</div>
+	<!-- // CLIENT ITEM - 13 - END // -->
+
+	<!-- // CLIENT ITEM - 14 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Email address:</p>
+		<p class="answer client-email">gerald.brackens@hotmail.com</p>
+	</div>
+	<!-- // CLIENT ITEM - 14 - END // -->
+
+	<!-- // CLIENT ITEM - 15 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Financial reference:</p>
+		<p class="answer client-financial">192848291</p>
+	</div>
+	<!-- // CLIENT ITEM - 15 - END // -->
+
+	<!-- // CLIENT ITEM - 16 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Casarec Number:</p>
+		<p class="answer client-casarec">183920478</p>
+	</div>
+	<!-- // CLIENT ITEM - 16 - END // -->
+
+	<!-- // CLIENT ITEM - 17 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Accommodation Type:</p>
+		<p class="answer client-accommodation">LA Nursing home</p>
+	</div>
+	<!-- // CLIENT ITEM - 17 - END // -->
+
+	<!-- // CLIENT ITEM - 18 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Medical Condition:</p>
+		<p class="answer client-medical-condition-answer">Alzheimer's</p>
+	</div>
+	<!-- // CLIENT ITEM - 18 - END // -->
+
+	<!-- // CLIENT ITEM - 19 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Marital Status:</p>
+		<p class="answer client-marital-status">Divorced</p>
+	</div>
+	<!-- // CLIENT ITEM - 19 - END // -->
+
+	<!-- // CLIENT ITEM - 20 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Correspondence By:</p>
+		<ul class="answer">
+			<li class="client-correspondence-post">Post</li>
+			<li class="client-correspondence-email">Email</li>
+		</ul>
+	</div>
+	<!-- // CLIENT ITEM - 20 - END // -->
+
+	<!-- // CLIENT ITEM - 21 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is the client a violent risk?:</p>
+		<p class="answer client-violent-risk">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 21 - END // -->
+
+</div>
+<!-- // CLIENT DETAILS - END // -->
+ </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel current"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
+<div id="document-viewer">
+
+	<!-- ============================ DOCUMENT 1 - START ============================ -->
+	<div class="doc-container document-1">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1">
+
+			<table class="livelink-documents">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<!-- <th>UID</th> -->
+						<th>Doc type</th>
+						<!-- <th>Case type</th> -->
+						<th>Direction</th>
+						<th>Date created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- <ul class="livelink-documents">
+				<li>
+					<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
+					<section class="documents-details">
+						<span>: <strong>7000-0000-2563</strong></span>
+						<span>: <strong>IT-SS-ORDER</strong></span>
+						<span>: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>: <strong>Outgoing</strong></span>
+						<span>: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-1">
+							<input id="add-to-visit-1" name="add-to-visit-1" type="checkbox" value="post" value="1">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-2">
+							<input id="add-to-visit-2" name="add-to-visit-2" type="checkbox" value="post" value="2">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-3">
+							<input id="add-to-visit-3" name="add-to-visit-3" type="checkbox" value="post" value="3">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Correspondance_document_1.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-4">
+							<input id="add-to-visit-4" name="add-to-visit-4" type="checkbox" value="post" value="4">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Correspondance_document_2.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-5">
+							<input id="add-to-visit-5" name="add-to-visit-5" type="checkbox" value="post" value="5">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal checked" for="add-to-visit-6">
+							<input id="add-to-visit-6" name="add-to-visit-6" type="checkbox" value="post" value="6">
+							Add to visit
+						</label>
+					</form>
+				</li>
+				<li>
+					<a href="#" class="hide-page-1">Other_document.pdf</a>
+					<section class="documents-details">
+						<span>UID: <strong>7000-0000-2563</strong></span>
+						<span>Doc type: <strong>IT-SS-ORDER</strong></span>
+						<span>Case type: <strong>DEP - PFA</strong></span>
+						<br>
+						<span>Direction: <strong>Outgoing</strong></span>
+						<span>Date created: <strong>27/06/2017 11:07:13</strong></span>
+					</section>
+					<form>
+						<label class="normal" for="add-to-visit-7">
+							<input id="add-to-visit-7" name="add-to-visit-7" type="checkbox" value="post" value="7">
+							Add to visit
+						</label>
+					</form>
+				</li>
+			</ul> -->
+
+		</div>
+
+		<div class="page-2 document-viewing-panel">
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+					<!-- <a href="#" class="close">Close</a> -->
+				</div>
+				<img src="../../../production/img/V12/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V12/document-report.png" alt="Document">
+			</div>
+		</div>
+	</div>
+	<!-- ============================ DOCUMENT 1 - END ============================ -->
+
+
+
+	<!-- ============================ DOCUMENT 2 - START ============================ -->
+	<div class="doc-container document-2">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1">
+
+			<table class="livelink-documents">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<!-- <th>UID</th> -->
+						<th>Doc type</th>
+						<!-- <th>Case type</th> -->
+						<th>Direction</th>
+						<th>Date created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td>IT-SS-ORDER</td>
+						<!-- <td>DEP - PFA</td> -->
+						<td>Outgoing</td>
+						<td>27/06/2017 11:07:13</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="page-2 document-viewing-panel">
+			<!-- <span class="compare-icon"></span> -->
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+				</div>
+				<img src="../../../production/img/V12/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V12/document-report.png" alt="Document">
+			</div>
+		</div>
+
+	</div>
+	<!-- ============================ DOCUMENT 2 - END ============================ -->
+
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- =========== CREATE CLIENT - START =========== --> <div id="action-panel" class="large-4 large-uncentered columns"> <div class="commission-visit right"> <form class="edit-client-form"> <h2 class="section-title">Add a task</h2> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="task-type">Task type</label> <select id="task-type" class="full-width"> <option value="">-- Select --</option> <option value="CWRD">Case Work - Reply Due</option> <option value="ORRE">Order - Review the order</option> <option value="ORAL">Order - Allocate to team</option> <option value="INAR">Intro - Arrange settling in</option> <option value="INSE">Intro - Settling in call</option> <option value="INNDR">Intro - New Deputy Report</option> <option value="VICO">Visit - Commission</option> <option value="VIRE">Visit - Required</option> <option value="VIURE">Visit - Urgent required</option> <option value="VIRD">Visit - Report due</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="task-name">Task name</label> <input id="task-name" name="task-name" type="text" value=""> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group task-notes"> <label for="task-notes">Task notes</label> <textarea name="textarea" class="jqte-test" id="task-notes"></textarea> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4a - START // --> <div class="form-group assign-to"> <legend>Assign to</legend> <label for="assign-to-user" class="radio"> <input id="assign-to-user" type="radio" name="assign-to" value="User"> User </label> <label for="assign-to-team" class="radio"> <input id="assign-to-team" type="radio" name="assign-to" value="Team"> Team </label> </div> <!-- // FORM ITEM - 4a - END // --> <!-- // FORM ITEM - 4b - START // --> <div class="form-group answer-task-user"> <label for="task-user">Search for user</label> <input id="task-user" name="task-user" type="text" value=""> </div> <!-- // FORM ITEM - 4b - END // --> <!-- // FORM ITEM - 4c - START // --> <div class="form-group answer-task-team"> <label for="task-team">Select team</label> <select id="task-team" class="full-width"> <option value="">-- Select --</option> <option value="1">Attorneyship Investigation Team</option> <option value="2">Complaints Team</option> <option value="3">Dispatch Team</option> <option value="4">EPA Team</option> <option value="5">File Creation Team</option> <option value="6">Filing Team</option> <option value="8">Registration Team</option> <option value="7">Safeguarding Team</option> </select> </div> <!-- // FORM ITEM - 4c - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group"> <label for="datepicker">Due date</label> <div class="date-wrapper"> <input type="text" id="datepicker"> <i class="date"></i> </div> </div> <!-- // FORM ITEM - 5 - END // --> </form> </div> </div> <!-- =========== CREATE CLIENT - 1 - END =========== --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <input type="button" class="main-cta primary de-activate" id="confirm-create-case" onclick="location.href='../4-client-page/4a-new-client.html';" value="Add task" disabled /> <a href="#" id="dont-create" href="../4-client-page/4a-new-client.html">Don't create task</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V12/hideShowPassword.js"></script>
 	<script src="../../../production/js/V12/jquery.cookie.js"></script>
@@ -123,6 +661,7 @@
 	<script src="../../../production/js/V12/my-cookies/commission-visit.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-case.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V12/my-cookies/create-letter.js"></script>
 	<script src="../../../production/js/V12/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V12/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V12/my-cookies/supervision-level.js"></script>
@@ -134,7 +673,10 @@
 	<script src="../../../production/js/V12/my-jquery/client-page.js"></script>
 	<script src="../../../production/js/V12/my-jquery/commission-visit.js"></script>
 	<script src="../../../production/js/V12/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V12/my-jquery/create-client.js"></script>
 	<script src="../../../production/js/V12/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V12/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V12/my-jquery/create-letter.js"></script>
 	<script src="../../../production/js/V12/my-jquery/report-period.js"></script>
 	<script src="../../../production/js/V12/my-jquery/supervision-level.js"></script>
 	<script src="../../../production/js/V12/my-jquery/new-event.js"></script>

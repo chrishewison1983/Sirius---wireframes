@@ -72,10 +72,20 @@
           display: inline-block;
           width: 100%;
           margin-top: 1em;
+          .main-cta {
+               &.delete-action {
+                    background: $red;
+                    border: 3px solid $red;
+                    &:hover {
+                         background: darken($red,7.5%);
+                         border: 3px solid darken($red,7.5%);
+                    }
+               }
+          }
      }
 }
 
-#preview-doc {
+#preview-doc, #delete {
      &.modal {
           h1 {
                margin: 0;
@@ -95,6 +105,20 @@
                img {
                     max-height: 37em;
                }
+          }
+     }
+}
+
+#delete {
+     &.modal {
+          h2 {
+               color: $blue;
+               text-transform: inherit;
+               font-size: 1.2rem;
+               font-weight: normal;
+               padding-bottom: 0.5em;
+               margin-bottom: 0.75em;
+               border-bottom: none;
           }
      }
 }

@@ -31,14 +31,17 @@ main {
           display: inline-block;
           width: 96%;
           float: left;
-          margin: 0 0 5em 4%;
+          margin: 0 0 2em 4%;
           position: relative;
           // padding: 3em;
           @include standard-transition;
           .content-wrapper {
-               padding: 3em 0;
+               padding: 1em 0 0 0;
                &.commission-visit {
                     padding-top: 0;
+               }
+               &.create-letter-journey {
+                    padding-top: 3em;
                }
           }
           #client-overview {
@@ -54,8 +57,6 @@ main {
                     margin-top: 2em;
                }
           }
-
-
           #client-health, #client-property, #client-unassigned {
                .content-wrapper {
                     padding: 2em 0 3em 0;
@@ -76,9 +77,9 @@ main {
           }
      }
      &.new-client {
-          width: 77%;
+          // width: 77%;
           position: relative;
-          margin: 0 0 5em 23%;
+          // margin: 0 0 5em 23%;
           .row {
                // max-width: 65rem;
                &.full-width-row {
@@ -185,6 +186,11 @@ h1, h2, h3, h4 {
                background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 50%;
                background-size: 1em;
           }
+          .current-document-title {
+               // float: left;
+               display: inline-block;
+               width: auto;
+          }
      }
      div {
           display: inline-block;
@@ -290,6 +296,24 @@ ol {
      div {
           display: inline-block;
      }
+     &.main {
+          margin-top: -1em;
+          text-transform: uppercase;
+          border-bottom: 5px solid $white-off;
+          padding: 0 0 0.75em 0;
+          font-size: 1.6rem;
+          span {
+               display: inline-block;
+               // background: $blue;
+               border-radius: 50%;
+               width: 2em;
+               height: 2em;
+               position: relative;
+               top: 0.55em;
+               margin: 0 0.25em 0 0;
+               float: none;
+          }
+     }
 }
 
 .sub-section-title {
@@ -311,7 +335,7 @@ a {
      .hashtag {
           color: $black;
      }
-     &.edit, &.dispense, &.add {
+     &.edit, &.dispense, &.add, &.delete {
           float: right;
           font-size: 1rem;
           text-transform: capitalize;
@@ -330,9 +354,13 @@ a {
           background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
           background-size: 1em;
      }
+     &.delete {
+          background: url(#{$image-path}/icons/delete-blue.svg) no-repeat 0% 50%;
+          background-size: 1em;
+     }
 }
 
-a.main-cta {
+.main-cta {
      @include standard-transition;
      background: $blue;
      border: 3px solid $blue;
@@ -362,6 +390,12 @@ a.main-cta {
           &:hover {
                transform: scale(1);
           }
+          &.secondary {
+               &:hover {
+                    background: $white;
+                    color: $blue;
+               }
+          }
      }
      &.primary {
           background-color: $green;
@@ -380,9 +414,9 @@ a.main-cta {
 }
 
 .cta-row {
-     a.main-cta {
+     .main-cta {
           width: auto;
-          float: left;
+          float: none;
           margin: 0 1em 0 0;
           &.secondary {
                margin: 0;
@@ -430,7 +464,7 @@ a.main-cta {
           }
      }
      &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit,
-     &#edit-client-confirm, &#error-message {
+     &#edit-client-confirm, &#error-message, &#draft-saved, &#draft-deleted-message {
           display: none;
           margin: 2em 0 0 0;
           width: 100%;
@@ -452,6 +486,20 @@ a.main-cta {
                     &:last-of-type {
                          margin: 0;
                     }
+               }
+          }
+     }
+     &#draft-deleted-message {
+          margin: 0 0 1.25em 0;
+     }
+     &#draft-saved {
+          margin: 0 0 1.25em 0;
+          h2 {
+               font-size: 1.25rem;
+               span {
+                    width: 1.25em;
+                    height: 1.25em;
+                    margin: 0 0.5em 0 0;
                }
           }
      }

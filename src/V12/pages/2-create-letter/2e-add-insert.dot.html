@@ -1,0 +1,190 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default select-inserts">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW">
+                              <div>H &amp; W | 19273638</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Create letter</span>
+                    </nav>
+                    <h1>
+                         Add inserts
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-letter-journey">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Letter info</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/letter-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              <h2 class="section-title">Deputy details</h2>
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="create-letter">
+
+                         <!-- =========== CORRESPONDANCE SECTION - 1 - START =========== -->
+                         <h2 class="section-title">Select inserts</h2>
+
+                         <ul id="inserts-list">
+                              <!-- // INSERT - 1 - START // -->
+                              <li>
+                                   <a class="insert" data-insert-id='1'>
+                                        <span data-value='insert-name'>IT-01: Closure – attorney – death of donor - LPA</span>
+                                   </a>
+                              </li>
+                              <!-- // INSERT - 1 - END // -->
+
+                              <!-- // INSERT - 2 - START // -->
+                              <li>
+                                   <a class="insert" data-insert-id='2'>
+                                        <span data-value='insert-name'>IT-03: Closure – attorney – attorney has disclaimed - LPA</span>
+                                   </a>
+                              </li>
+                              <!-- // INSERT - 2 - END // -->
+
+                              <!-- // INSERT - 3 - START // -->
+                              <li>
+                                   <a class="insert" data-insert-id='3'>
+                                        <span data-value='insert-name'>IT-05: Closure – attorney – donor has revoked - LPA</span>
+                                   </a>
+                              </li>
+                              <!-- // INSERT - 3 - END // -->
+
+                         </ul>
+                         <!-- =========== CORRESPONDANCE SECTION - 1 - END =========== -->
+
+                    </div>
+
+
+               </div>
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="add-inserts" href="2b-add-correspondance.html">Select recipients</a>
+     <a href="#" onclick="history.back();">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function(){
+     //      sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
+     //           return $(this).text().trim();
+     //      }).toArray()));
+     // });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

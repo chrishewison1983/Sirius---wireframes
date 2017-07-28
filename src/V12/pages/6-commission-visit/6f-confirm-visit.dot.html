@@ -52,66 +52,72 @@
 
           <div class="row">
 
-               <div id="side-panel" class="large-8 large-uncentered columns">
+               <div class="large-8 large-uncentered columns">
 
-                    <!-- =========== TABS - START =========== -->
-                    <ul id="side-panel-tabs" class="tabs">
-                         <li class="tab-link current" data-tab="tab-1">
-                              <span class="info"></span>
-                              <p>Visit details</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-2">
-                              <span class="client-details"></span>
-                              <p>Client details</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-3">
-                              <span class="deputy-details"></span>
-                              <p>Deputy details</p>
-                         </li>
-                         <li class="tab-link current" data-tab="tab-4">
-                              <span class="documents"></span>
-                              <p>Documents</p>
-                         </li>
-                    </ul>
-                    <!-- =========== TABS - END =========== -->
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
 
-                    <!-- =========== TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="tab-content side-panel">
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Visit details</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-4">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
 
-                         <!-- // VISIT SUMMARY - START // -->
-                         <h2 class="section-title">Commission visit info</h2>
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
 
-                         {{= it.include('side-panel/commission-visit.html') }}
-                         <!-- // VISIT SUMMARY - END // -->
+                              <!-- // VISIT SUMMARY - START // -->
+                              <h2 class="section-title">Commission visit info</h2>
+
+                              {{= it.include('side-panel/commission-visit.html') }}
+                              <!-- // VISIT SUMMARY - END // -->
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              <h2 class="section-title">Deputy details</h2>
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
 
                     </div>
-                    <!-- =========== TAB CONTENT - 1 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 2 - START =========== -->
-                    <div id="tab-2" class="tab-content side-panel">
-
-                         {{= it.include('side-panel/client-details.html') }}
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 2 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 3 - START =========== -->
-                    <div id="tab-3" class="tab-content side-panel">
-
-                         <h2 class="section-title">Deputy details</h2>
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 3 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="tab-content side-panel current">
-
-                         <!-- <h2 class="section-title">Case documents</h2> -->
-
-                         {{= it.include('side-panel/document-viewer.html') }}
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+                    <!-- ////////// SIDE PANEL - END ////////// -->
 
                </div>
 
@@ -211,16 +217,6 @@
      </div>
      <!-- CONTENT WRAPPER - END -->
 
-     <!-- CTA-FOOTER - START -->
-     <div id="cta-footer" class="cta-row">
-          <a class="main-cta primary" id="add-visitors-step-6" href="#ex1" rel="modal:open">Preview visit form</a>
-          <span class="separator"></span>
-          <a href="#" onclick="history.back();" class="back">Back to step 5</a>
-          <span class="separator"></span>
-          <a href="#" onclick="../dashboard.html" class="cancel">Cancel visit</a>
-     </div>
-     <!-- CTA-FOOTER - END -->
-
 </main>
 <!-- PRIMARY CONTENT - END -->
 
@@ -237,6 +233,13 @@
 
 
 <!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="add-visitors-step-6" href="#ex1" rel="modal:open">Preview visit form</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="back">Back to step 5</a>
+     <span class="separator"></span>
+     <a href="#" onclick="../dashboard.html" class="cancel">Cancel visit</a>
+</footer>
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->

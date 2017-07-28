@@ -15,7 +15,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../dashboard.html" class="dashboard">My dashboard</a>
+                         <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-page/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -47,77 +47,70 @@
 
           <div class="row">
 
-               <div id="side-panel" class="large-8 large-uncentered columns">
+               <div class="large-8 large-uncentered columns">
 
-                    <!-- =========== TABS - START =========== -->
-                    <ul id="side-panel-tabs" class="tabs">
-                         <li class="tab-link" data-tab="tab-1">
-                              <span class="info"></span>
-                              <p>Edit deputy</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-2">
-                              <span class="client-details"></span>
-                              <p>Client details</p>
-                         </li>
-                         <li class="tab-link" data-tab="tab-3">
-                              <span class="deputy-details"></span>
-                              <p>Deputy details</p>
-                         </li>
-                         <li class="tab-link current" data-tab="tab-4">
-                              <span class="documents"></span>
-                              <p>Documents</p>
-                         </li>
-                    </ul>
-                    <!-- =========== TABS - END =========== -->
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
 
-                    <!-- =========== TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="tab-content side-panel">
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Edit deputy</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-4">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
 
-                         <!-- // DOCUMENT SUMMARY - START // -->
-                         <h2 class="section-title">Document information</h2>
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
 
-                         <h3 class="sub-section-title">Letter template chosen</h3>
+                              <!-- // DOCUMENT SUMMARY - START // -->
+                              <h2 class="section-title">General information</h2>
+                              <!-- // DOCUMENT SUMMARY - END // -->
 
-                         <div class="document">
-                              <img src="../../../production/img/V12/document-thumbnail.png" alt="Document" class="document-item">
-                              <h3 class="title">CT-bb: Blank complaints team template</h3>
                          </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
 
-                         <h3 class="sub-section-title">Recipients chosen</h3>
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
 
-                         <ol id="recipients">
-                              <li>Ms Lara Stevens (Correspondent)</li>
-                         </ol>
-                         <!-- // DOCUMENT SUMMARY - END // -->
+                              {{= it.include('side-panel/client-details.html') }}
 
-                    </div>
-                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
 
-                    <!-- =========== TAB CONTENT - 2 - START =========== -->
-                    <div id="tab-2" class="tab-content side-panel">
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
 
-                         {{= it.include('side-panel/client-details.html') }}
+                              <h2 class="section-title">Deputy details</h2>
 
-                    </div>
-                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
 
-                    <!-- =========== TAB CONTENT - 3 - START =========== -->
-                    <div id="tab-3" class="tab-content side-panel">
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel current">
 
-                         <h2 class="section-title">Deputy details</h2>
+                              <!-- <h2 class="section-title">Case documents</h2> -->
 
-                    </div>
-                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+                              {{= it.include('side-panel/document-viewer.html') }}
 
-                    <!-- =========== TAB CONTENT - 4 - START =========== -->
-                    <div id="tab-4" class="tab-content side-panel current">
-
-                         <!-- <h2 class="section-title">Case documents</h2> -->
-
-                         {{= it.include('side-panel/document-viewer.html') }}
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
 
                     </div>
-                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+                    <!-- ////////// SIDE PANEL - END ////////// -->
 
                </div>
 
@@ -405,17 +398,14 @@
      </div>
      <!-- CONTENT WRAPPER - END -->
 
-     <!-- CTA-FOOTER - START -->
-     <div id="cta-footer" class="cta-row">
-          <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html">Save &amp; update deputy</a>
-          <a href="#" onclick="history.back();">Cancel</a>
-     </div>
-     <!-- CTA-FOOTER - END -->
-
 </main>
 <!-- PRIMARY CONTENT - END -->
 
 <!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html">Save &amp; update deputy</a>
+     <a href="#" onclick="history.back();">Cancel</a>
+</footer>
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->

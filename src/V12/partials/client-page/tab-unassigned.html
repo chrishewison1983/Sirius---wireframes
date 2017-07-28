@@ -10,16 +10,16 @@
 					Summary
 				</li>
 				<li class="tab-link" data-tab="unassigned-tab-2">
-					Deputies
+					Tasks
 				</li>
 				<li class="tab-link" data-tab="unassigned-tab-3">
-					Warnings
+					Deputies
 				</li>
 				<li class="tab-link" data-tab="unassigned-tab-4">
-					Timeline
+					Warnings
 				</li>
 				<li class="tab-link" data-tab="unassigned-tab-5">
-					Tasks
+					Timeline
 				</li>
 				<li class="tab-link" data-tab="unassigned-tab-6">
 					Documents
@@ -47,6 +47,22 @@
 			<div id="unassigned-tab-2" class="client-details tab-content">
 				<div class="row">
 
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('unassigned-tab-tasks.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="unassigned-tab-3" class="client-details tab-content">
+				<div class="row">
+
 					<!-- // CLIENT DEPUTIES - START // -->
 					<div class="large-12 large-uncentered columns">
 
@@ -57,10 +73,10 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 2 - END =========== -->
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
 
-			<!-- =========== TAB CONTENT - 3 - START =========== -->
-			<div id="unassigned-tab-3" class="client-details tab-content">
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="unassigned-tab-4" class="client-details tab-content">
 				<div class="row">
 
 					<!-- // WARNINGS - START // -->
@@ -73,22 +89,6 @@
 
 				</div>
 			</div>
-			<!-- =========== TAB CONTENT - 3 - END =========== -->
-
-			<!-- =========== TAB CONTENT - 4 - START =========== -->
-			<div id="unassigned-tab-4" class="client-details tab-content">
-				<div class="row">
-
-					<!-- // CLIENT TASKS - START // -->
-					<div class="large-12 large-uncentered columns">
-
-						<!-- {{= it.include('unassigned-tab-timeline.html') }} -->
-
-					</div>
-					<!-- // CLIENT TASKS - END // -->
-
-				</div>
-			</div>
 			<!-- =========== TAB CONTENT - 4 - END =========== -->
 
 			<!-- =========== TAB CONTENT - 5 - START =========== -->
@@ -98,7 +98,7 @@
 					<!-- // CLIENT TASKS - START // -->
 					<div class="large-12 large-uncentered columns">
 
-						<!-- {{= it.include('unassigned-tab-tasks.html') }} -->
+						<!-- {{= it.include('unassigned-tab-timeline.html') }} -->
 
 					</div>
 					<!-- // CLIENT TASKS - END // -->
@@ -141,7 +141,7 @@
 					<li class="supervision">
 						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 							<span class="icon"></span>
-							<span>Create document</span>
+							<span>Create correspondence</span>
 						</a>
 					</li>
 					<li class="supervision">

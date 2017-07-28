@@ -98,7 +98,7 @@
 			</form>
 
 			<label class="switch">
-				<span>Supervision</span>
+				<span>Switch to: <strong>LPA Cases</strong></span>
 				<input type="checkbox">
 				<div class="slider round"></div>
 			</label>
@@ -108,7 +108,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create case</span> </nav> <h1> Your case has been created </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case-journey"> <div class="row"> <!-- // EDIT DOCUMENT - START // --> <div class="large-6 large-uncentered columns"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label class="section-title" for="letter-actions">Add task to the case</label> <textarea name="textarea" class="jqte-test" id="case-actions"></textarea> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <legend for="case-date-reported-day"> </legend> <div class="half"> <label for="case-reminder-date" class="">Set a reminder for the case task:</label> <input id="case-reminder-date" name="case-reminder-date" type="text" value="05/06/2017" maxlength="12"> </div> <!-- <div class="one-third"> <label for="visit-reminder-day" class="sub-label">Day</label> <input id="visit-reminder-day" name="visit-reminder-day" type="text" value="05" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-month" class="sub-label">Month</label> <input id="visit-reminder-month" name="visit-reminder-month" type="text" value="04" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-year" class="sub-label">Year</label> <input id="visit-reminder-year" name="visit-reminder-year" type="text" value="2017" maxlength="4"> </div> --> </div> <!-- // FORM ITEM - 2 - END // --> </form> </div> <!-- // EDIT DOCUMENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a id="confirm-create-case" class="main-cta primary" href="../4-client-page/4a-new-client.html">Add actions</a> <a href="#" onclick="history.back();">Cancel</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(function(){// $( ".date-input-css" ).datepicker();// })</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>Create case</span> </nav> <h1> Your case has been created </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case-journey"> <div class="row"> <!-- // EDIT DOCUMENT - START // --> <div class="large-6 large-uncentered columns"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label class="section-title" for="letter-actions">Add task to the case</label> <textarea name="textarea" class="jqte-test" id="case-actions"></textarea> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <legend for="case-date-reported-day"> </legend> <div class="half"> <label for="case-reminder-date" class="">Set a reminder for the case task:</label> <input id="case-reminder-date" name="case-reminder-date" type="text" value="05/06/2017" maxlength="12"> </div> <!-- <div class="one-third"> <label for="visit-reminder-day" class="sub-label">Day</label> <input id="visit-reminder-day" name="visit-reminder-day" type="text" value="05" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-month" class="sub-label">Month</label> <input id="visit-reminder-month" name="visit-reminder-month" type="text" value="04" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-year" class="sub-label">Year</label> <input id="visit-reminder-year" name="visit-reminder-year" type="text" value="2017" maxlength="4"> </div> --> </div> <!-- // FORM ITEM - 2 - END // --> </form> </div> <!-- // EDIT DOCUMENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- CTA-FOOTER - START --> <div id="cta-footer" class="cta-row"> <a id="confirm-create-case" class="main-cta primary" href="../4-client-page/4a-new-client.html">Add task</a> <a href="#" onclick="history.back();">Don't create task</a> </div> <!-- CTA-FOOTER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(function(){// $( ".date-input-css" ).datepicker();// })</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V12/hideShowPassword.js"></script>
 	<script src="../../../production/js/V12/jquery.cookie.js"></script>
@@ -123,6 +123,8 @@
 	<script src="../../../production/js/V12/my-cookies/commission-visit.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-case.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V12/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V12/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V12/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V12/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V12/my-cookies/new-event.js"></script>
@@ -133,7 +135,10 @@
 	<script src="../../../production/js/V12/my-jquery/client-page.js"></script>
 	<script src="../../../production/js/V12/my-jquery/commission-visit.js"></script>
 	<script src="../../../production/js/V12/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V12/my-jquery/create-client.js"></script>
 	<script src="../../../production/js/V12/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V12/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V12/my-jquery/create-letter.js"></script>
 	<script src="../../../production/js/V12/my-jquery/report-period.js"></script>
 	<script src="../../../production/js/V12/my-jquery/supervision-level.js"></script>
 	<script src="../../../production/js/V12/my-jquery/new-event.js"></script>
