@@ -1,0 +1,222 @@
+{
+  "template": "default"
+}
+
+{{= it.include('main-nav.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <span>Welcome:</span>
+                    </nav>
+                    <h1><div class="sirius-user-id">Susan Smith</div></h1>
+                    <span class="horizontal-border"></span>
+                    <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper dashboard">
+
+          <!-- =========== FILTER - START =========== -->
+          <!-- <form class="filter" action="search.html">
+               <div class="row">
+
+                    <div class="large-6 large-uncentered columns">
+
+                         <div class="wrapper dashboard-search">
+                              <label for="visit-commissioned-by">Search:</label>
+                         	<input data-default="178.4" name="search" id="sirius-search" placeholder="Search by SIRIUS ID or Client name..." type="search">
+                         	<input class="submit" type="submit">
+                         </div>
+
+                    </div>
+
+               </div>
+          </form> -->
+          <!-- =========== FILTER - END =========== -->
+
+          <!-- =========== TABS - START =========== -->
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <ul class="tabs">
+                         <li class="tab-link current" data-tab="tab-1">
+                              <span>9</span> My tasks
+                         </li>
+               		<!-- <li class="tab-link" data-tab="tab-2">
+                              <span>4</span> My cases
+                         </li> -->
+                         <li class="tab-link completed" data-tab="tab-3">
+                              <span>0</span> My completed tasks
+                         </li>
+                    </ul>
+               </div>
+          </div>
+          <!-- =========== TABS - END =========== -->
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content dashboard current">
+
+                         {{= it.include('dashboard/dashboard-tab-tasks.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content dashboard">
+
+                         {{= it.include('dashboard/dashboard-tab-cases.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content dashboard">
+
+                         {{= it.include('dashboard/dashboard-tab-completed-tasks.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== -->
+
+
+
+               </div>
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- // MODAL - START // -->
+<div id="deputies-1" style="display:none;" class="modal">
+     <h1>Deputy details:</h1>
+	<ol>
+          <li>
+               <div class="name">Lara Stevens <span></span></div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+          </li>
+          <li>
+               <div class="name">Carla Frith</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+          </li>
+          <li>
+               <div class="name">Melanie Rand</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div>
+          </li>
+     </ol>
+</div>
+
+<div id="deputies-2" style="display:none;" class="modal">
+     <h1>Deputy details:</h1>
+	<ol>
+          <li>
+               <div class="name">Kate Robson <span></span></div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>94 Seaford Road, CULDUIE, IV54 5TD</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+          </li>
+          <li>
+               <div class="name">Finley Buckley</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>80 Red Lane, EVENLEY, NN13 0LU</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Brother</strong></div>
+          </li>
+          <li>
+               <div class="name">Ewan Baker</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>40 Red Lane, ERROL, PH2 0QW</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Friend</strong></div>
+          </li>
+          <li>
+               <div class="name">Brooke Spencer</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>98 Stone Cellar Road, KINGSTON RUSSELL, DT2 7XD</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Cousin</strong></div>
+          </li>
+     </ol>
+</div>
+
+<div id="deputies-3" style="display:none;" class="modal">
+     <h1>Deputy details:</h1>
+	<ol>
+          <li>
+               <div class="name">Elizabeth Matthews <span></span></div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>19 Dunmow Road, GRINSHILL, SY4 1UT</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div>
+          </li>
+          <li>
+               <div class="name">Corey Bibi</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>9 Wenlock Terrace, PENYCAE, LL14 5RE</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Son</strong></div>
+          </li>
+          <li>
+               <div class="name">Jake Greenwood</div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>31 Rowland Rd, OSTERLEY PARK, TW7 8SJ</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Friend</strong></div>
+          </li>
+     </ol>
+</div>
+
+<div id="deputies-4" style="display:none;" class="modal">
+     <ol>
+          <li>
+               <div class="name">Charles Duncan <span></span></div>
+               <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
+               <div class="info"><span>Address:</span> <strong>26 Moulton Road, GUITING POWER, GL54 3UP</strong></div>
+               <div class="info"><span>Relationship:</span> <strong>Son</strong></div>
+          </li>
+     </ol>
+</div>
+
+<div id="visit-commission" style="display:none;" class="modal">
+     <img src="../../../production/img/V13/document-thumbnail.png" alt="Document" class="document-item">
+     <hr>
+     <div class="cta-row">
+          <a href="#" rel="modal:close">Close</a>
+     </div>
+</div>
+
+<!-- // MODAL - END // -->
+
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+     $(document).ready(function() {
+          $("#tasks-table, #completed-tasks-table").tablesorter();
+     });
+
+     $(document).ready(function() {
+          $("#myTable, #completed-tasks-table").tablesorter( {sortList: [[0,0], [1,0]]} );
+     });
+</script>
+<!-- SCRIPT CONTENT - END -->

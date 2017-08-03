@@ -87,7 +87,7 @@
 
           <div class="row">
 
-               <div class="large-6 large-uncentered columns">
+               <div class="large-6 large-uncentered columns side-panel-parent">
 
                     <!-- ////////// SIDE PANEL - START ////////// -->
                     <div id="side-panel">
@@ -111,6 +111,10 @@
                                    <p>Deputies</p>
                               </li>
                               <li class="tab-link" data-tab="tab-5">
+                                   <span class="client-contacts"></span>
+                                   <p>Contacts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-6">
                                    <span class="documents"></span>
                                    <p>Documents</p>
                               </li>
@@ -154,10 +158,20 @@
 
                               <!-- <h2 class="section-title">Case documents</h2> -->
 
-                              {{= it.include('side-panel/document-viewer.html') }}
+                              {{= it.include('side-panel/document-contacts.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 6 - START =========== -->
+                         <div id="tab-6" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 6 - END =========== -->
 
                     </div>
                     <!-- ////////// SIDE PANEL - END ////////// -->
@@ -174,11 +188,12 @@
 
                <!-- // MODAL - START // -->
                <div id="ex1" style="display:none;">
-                    <img src="../../../production/img/V9/document-thumbnail.png" alt="Document">
+                    <img src="../../../production/img/V12/letters/opg-letter-header.png" alt="Document" class="header">
+                    <div id="letter-contents"></div>
                     <hr>
                     <div class="cta-row">
                          <a class="main-cta" href="../4-client-page/4a-new-client.html">Print &amp; send document</a>
-                         <a href="#" rel="modal:close">Back</a>
+                         <a href="#" rel="modal:close">Back to my letter</a>
                     </div>
                </div>
                <div id="delete" style="display:none;">
@@ -204,10 +219,12 @@
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="create-letter" href="#ex1" rel="modal:open">Preview &amp; Print</a>
+     <a class="main-cta primary" id="create-letter" href="#ex1" rel="modal:open">Preview &amp; publish</a>
      <a class="main-cta secondary" id="save" href="#">Save draft</a>
      <a class="main-cta secondary" id="save-and-exit" href="../4-client-page/4a-new-client.html">Save draft &amp; Exit</a>
-     <a href="#" onclick="history.back();">Cancel letter</a>
+     <a href="#delete" rel="modal:open" class="main-cta secondary" id="delete-draft" href="#">Delete draft</a>
+     <a href="#" onclick="history.back();" class="back">Back</a>
+     <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a>
 </footer>
 <!-- FOOTER CONTENT - END -->
 

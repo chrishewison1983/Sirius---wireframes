@@ -108,32 +108,36 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW"> <div>H &amp; W | 19273638</div> </a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Add inserts </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div class="large-8 large-uncentered columns"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link" data-tab="tab-5"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW"> <div>H &amp; W | 19273638</div> </a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Add inserts </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link" data-tab="tab-5"> <span class="client-contacts"></span> <p>Contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // -->
 <h2 class="section-title">Document information</h2>
 
-<h3 class="sub-section-title">Letter template chosen</h3>
+<p id="letter-not-started" class="place-holder-text">No templates or drafts have been chosen to edit</p>
 
-<div class="document">
-	<span class="icon document"></span>
-	<!-- <img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item"> -->
-	<h3 class="title">CT-bb: Blank complaints team template</h3>
-</div>
+<div id="letter-started">
+	<h3 class="sub-section-title">Letter template chosen</h3>
 
-<div id="inserts-section">
-	<h3 class="sub-section-title">Inserts chosen</h3>
+	<div class="document">
+		<span class="icon document"></span>
+		<!-- <img src="../../../production/img/V11/document-thumbnail.png" alt="Document" class="document-item"> -->
+		<h3 class="title">CT-bb: Blank complaints team template</h3>
+	</div>
 
-	<p class="place-holder-text">No inserts have been chosen yet</p>
+	<div id="inserts-section">
+		<h3 class="sub-section-title">Inserts chosen</h3>
 
-	<ol id="inserts-selected">
-	</ol>
-</div>
+		<p class="place-holder-text">No inserts have been chosen yet</p>
 
-<div id="recipients-section">
-	<h3 class="sub-section-title">Recipients chosen</h3>
+		<ol id="inserts-selected">
+		</ol>
+	</div>
 
-	<ol id="recipients">
-		<li>Ms Lara Stevens</li>
-	</ol>
+	<div id="recipients-section">
+		<h3 class="sub-section-title">Recipients chosen</h3>
+
+		<ol id="recipients">
+			<li>Ms Lara Stevens</li>
+		</ol>
+	</div>
 </div>
 <!-- // DOCUMENT SUMMARY - END // -->
  </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content side-panel"> <!-- // DRAFTS - START // -->
@@ -144,7 +148,7 @@
 	<h2 class="sub-section-title"><span class="icon welfare"></span>Health &amp; welfare drafts</h2>
 
 	<ol class="draft-list">
-		<li class="selected doc-1" data-value='doc-1'>
+		<li class="doc-1" data-value='doc-1'>
 			<span class="title">Blank Receiver.doc</span><br>
 			<div class="info">
 				<span>
@@ -236,7 +240,7 @@
 
 	<h2 class="sub-section-title"><span class="icon property"></span>Property &amp; finance drafts</h2>
 
-	<ol class="draft-list">
+	<ol class="draft-list" start="5">
 		<li class="doc-5" data-value='doc-5'>
 			<span class="title">Acknowledgement Letter.doc</span><br>
 			<div class="info">
@@ -436,6 +440,90 @@
 </div>
 <!-- // CLIENT DETAILS - END // -->
  </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content side-panel"> <h2 class="section-title">Deputy details</h2> </div> <!-- =========== TAB CONTENT - 4 - END =========== --> <!-- =========== TAB CONTENT - 5 - START =========== --> <div id="tab-5" class="tab-content side-panel"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
+<div id="document-contacts">
+
+	<h2 class="section-title">
+		Client contacts
+		<a class="main-cta">Add correspondent</a>
+	</h2>
+
+	<ul class="contact-list">
+
+		<!-- // CORRESPONDANT - 1 - START // -->
+		<li>
+			<a href="#" class="correspondent">
+				Mr Gerald Brackens<br>
+				<span class="sub-title">Client</span><br>
+				<span class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
+				<span class="edit">Edit</span>
+			</a>
+		</li>
+		<!-- // CORRESPONDANT - 1 - END // -->
+
+		<!-- // CORRESPONDANT - 2 - START // -->
+		<li>
+			<a href="#" class="correspondent">
+				<span class="icon fee-payer"><p>Fee payer</p></span>
+				<span class="icon welsh"><p>Welsh</p></span>
+				Ms Lara Stevens<br>
+				<span class="sub-title">Correspondent</span><br>
+				<span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
+				<span class="edit">Edit</span>
+			</a>
+		</li>
+		<!-- // CORRESPONDANT - 2 - END // -->
+
+		<!-- // CORRESPONDANT - 3 - START // -->
+		<li>
+			<a href="#" class="correspondent">
+				Mrs Carla Frith<br>
+				<span class="sub-title">Deputy</span><br>
+				<span class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+				<span class="edit">Edit</span>
+			</a>
+		</li>
+		<!-- // CORRESPONDANT - 3 - END // -->
+
+		<!-- // CORRESPONDANT - 4 - START // -->
+		<li>
+			<a href="#" class="correspondent">
+				Mrs Melanie Rand<br>
+				<span class="sub-title">Deputy</span><br>
+				<span class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
+				<span class="edit">Edit</span>
+			</a>
+		</li>
+		<!-- // CORRESPONDANT - 4 - END // -->
+
+		<!-- // CORRESPONDANT - 5 - START // -->
+		<li>
+			<a href="#" class="correspondent">
+				<span class="icon welsh"><p>Welsh</p></span>
+				<span class="icon violent"><p>Violent</p></span>
+				Toby Daniels<br>
+				<span class="sub-title">Notified Person</span><br>
+				<span class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span>
+				<span class="edit">Edit</span>
+			</a>
+		</li>
+		<!-- // CORRESPONDANT - 5 - END // -->
+
+		<!-- // CORRESPONDANT - 6 - START // -->
+		<li>
+			<a href="#" class="correspondent">
+				TrustMe Limited<br>
+				<span class="sub-title">Trust Corporation</span><br>
+				<span class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span>
+				<span class="edit">Edit</span>
+			</a>
+		</li>
+		<!-- // CORRESPONDANT - 6 - END // -->
+
+	</ul>
+
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> <!-- =========== TAB CONTENT - 5 - END =========== --> <!-- =========== TAB CONTENT - 6 - START =========== --> <div id="tab-6" class="tab-content side-panel"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
 	<!-- ============================ DOCUMENT 1 - START ============================ -->
@@ -759,7 +847,7 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 5 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <div id="action-panel" class="large-4 large-uncentered columns"> <div class="create-letter"> <!-- =========== CORRESPONDANCE SECTION - 1 - START =========== --> <h2 class="section-title">Select inserts</h2> <ul id="inserts-list"> <!-- // INSERT - 1 - START // --> <li> <a class="insert" data-insert-id='1'> <span data-value='insert-name'>IT-01: Closure – attorney – death of donor - LPA</span> </a> </li> <!-- // INSERT - 1 - END // --> <!-- // INSERT - 2 - START // --> <li> <a class="insert" data-insert-id='2'> <span data-value='insert-name'>IT-03: Closure – attorney – attorney has disclaimed - LPA</span> </a> </li> <!-- // INSERT - 2 - END // --> <!-- // INSERT - 3 - START // --> <li> <a class="insert" data-insert-id='3'> <span data-value='insert-name'>IT-05: Closure – attorney – donor has revoked - LPA</span> </a> </li> <!-- // INSERT - 3 - END // --> </ul> <!-- =========== CORRESPONDANCE SECTION - 1 - END =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="add-inserts" href="2b-add-correspondance.html">Select recipients</a> <a href="#" onclick="history.back();">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function(){ //      sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() { //           return $(this).text().trim(); //      }).toArray())); // });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 6 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <div id="action-panel" class="large-4 large-uncentered columns"> <div class="create-letter"> <!-- =========== CORRESPONDANCE SECTION - 1 - START =========== --> <h2 class="section-title">Select inserts</h2> <ul id="inserts-list"> <!-- // INSERT - 1 - START // --> <li> <a class="insert" data-insert-id='1'> <span data-value='insert-name'>IT-01: Closure – attorney – death of donor - LPA</span> </a> </li> <!-- // INSERT - 1 - END // --> <!-- // INSERT - 2 - START // --> <li> <a class="insert" data-insert-id='2'> <span data-value='insert-name'>IT-03: Closure – attorney – attorney has disclaimed - LPA</span> </a> </li> <!-- // INSERT - 2 - END // --> <!-- // INSERT - 3 - START // --> <li> <a class="insert" data-insert-id='3'> <span data-value='insert-name'>IT-05: Closure – attorney – donor has revoked - LPA</span> </a> </li> <!-- // INSERT - 3 - END // --> </ul> <!-- =========== CORRESPONDANCE SECTION - 1 - END =========== --> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="add-inserts" href="2b-add-correspondance.html">Select recipients</a> <a href="#" onclick="history.back();">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function(){ //      sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() { //           return $(this).text().trim(); //      }).toArray())); // });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V12/hideShowPassword.js"></script>
 	<script src="../../../production/js/V12/jquery.cookie.js"></script>
@@ -775,6 +863,8 @@
 	<script src="../../../production/js/V12/my-cookies/create-case.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-task.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V12/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V12/my-cookies/create-deputy.js"></script>
 	<script src="../../../production/js/V12/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V12/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V12/my-cookies/supervision-level.js"></script>

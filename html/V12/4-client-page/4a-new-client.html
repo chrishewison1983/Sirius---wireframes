@@ -108,7 +108,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-7 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-5 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+ <div class="row"> <div class="large-10 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-2 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
 <nav class="actions-nav header">
 
 	<ul>
@@ -118,16 +118,16 @@
 				<span>Edit client</span>
 			</a>
 		</li>
-		<li class="supervision">
-			<a href="../5-add-edit-deputy/5a-search-deputy.html" class="action create-deputy">
-				<span class="icon"></span>
-				<span>Add/edit deputy</span>
-			</a>
-		</li>
 		<li class="allocations">
 			<a href="../1-create-case/1a-the-order.html" class="action create-case">
 				<span class="icon"></span>
 				<span>Create case</span>
+			</a>
+		</li>
+		<!-- <li class="supervision add-deputy-link">
+			<a href="../5-add-edit-deputy/5a-search-deputy.html" class="action create-deputy">
+				<span class="icon"></span>
+				<span>Add deputy</span>
 			</a>
 		</li>
 		<li class="supervision edit-case-link">
@@ -135,7 +135,7 @@
 				<span class="icon"></span>
 				<span>Edit case</span>
 			</a>
-		</li>
+		</li> -->
 	</ul>
 
 </nav>
@@ -155,12 +155,12 @@
 
 		<!-- Link 2 - START -->
 		<li class="tablinks health" onclick="openTab(event, 'client-health')">
-			<div class="days-left">
+			<!-- <div class="days-left">
 				<div class="wrapper">
 					<span class="number-of-days">25</span>
 					<span>days</span>
 				</div>
-			</div>
+			</div> -->
 			<div class="wrapper items">
 				<h1><span class="icon welfare"></span> H &amp; W <div class="sep">|</div> 19273638</h1>
 				<!-- <div class="border"></div>
@@ -178,8 +178,7 @@
 				</div> -->
 			</div>
 			<div class="due-date">
-				<p>Due date:</p>
-				<p>17/07/2017</p>
+				<p>Due date: <strong>17/07/2017</strong> - <span class="due-number-of-days">due in 25 days</span></p>
 			</div>
 		</li>
 		<!-- Link 2 - END -->
@@ -203,19 +202,18 @@
 				</div> -->
 			</div>
 			<div class="due-date">
-				<p>Due date:</p>
-				<p>21/09/2017</p>
+				<p>Due date: <strong>21/09/2017</strong></p>
 			</div>
 		</li>
 		<!-- Link 3 - END -->
 
 		<!-- Link 4 - START -->
-		<!-- <li class="tablinks unassigned" onclick="openTab(event, 'client-unassigned')">
+		<li class="tablinks unassigned" onclick="openTab(event, 'client-unassigned')">
 			<div class="wrapper">
 				<span class="number"><div class="inner">6</div></span>
 				<h1>Unsupervised cases</h1>
 			</div>
-		</li> -->
+		</li>
 		<!-- Link 4 - END -->
 
 	</ul>
@@ -307,7 +305,7 @@
 									</div>
 									<div class="right">
 										<p>PFA | Court reference:</p>
-										<h1>19273638</h1>
+										<h1>14820940</h1>
 									</div>
 								</div>
 								<!-- // ITEM 2 - END // -->
@@ -367,19 +365,19 @@
 									<ol class="summary-list">
 										<li>
 											<p>Risks to the clients:</p>
-											<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+											<p class="answer">A recent visitor report highlighted that the deputies have not been to see the client once this year. This is according to the nursing home care manager. This is contrary to what the deputy says in the report.</p>
 										</li>
 										<li>
 											<p>Outstanding issues:</p>
-											<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+											<p class="answer">Deputy has been aggressive in the past during phone calls.</p>
 										</li>
 										<li>
 											<p>Safegaurding issues:</p>
-											<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+											<p class="answer">A recent visitor report highlighted that the client was looking very disheveled and wearing very old clothes. Has not had regular pocket money deposited.</p>
 										</li>
 										<li>
 											<p>Client is violent:</p>
-											<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+											<p class="answer">Gerald is not physically violent, but has been known to be verbally abusive to care home staff.</p>
 										</li>
 									</ol>
 								</div>
@@ -409,7 +407,7 @@
 									<section class="full-colour-block report-dates">
 										<div class="date">
 											<div class="wrapper">
-												<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
+												<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
 												<h2 class="sub-text">19273638</h2>
 												<h2 class="sub-text">Report due</h2>
 											</div>
@@ -417,8 +415,8 @@
 										</div>
 										<div class="date">
 											<div class="wrapper">
-												<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
-												<h2 class="sub-text">19273638</h2>
+												<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
+												<h2 class="sub-text">14820940</h2>
 												<h2 class="sub-text">Report due</h2>
 											</div>
 											<div class="colour-wrapper"></div>
@@ -439,10 +437,11 @@
 									<span class="number">1</span>
 									<h1>
 										Lara Stevens
+										<span class="icon fee-payer"><p>Fee payer</p></span>
 										<span class="icon main-contact"><p>Main deputy</p></span>
 										<span class="icon welfare"><p>Health &amp; welfare</p></span>
 										<span class="type">Joint</span>
-										<a href="#" class="edit">edit</a>
+										<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
 									</h1>
 									<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 									<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -459,7 +458,7 @@
 										Carla Frith
 										<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
 										<span class="type">Joint</span>
-										<a href="#" class="edit">edit</a>
+										<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
 									</h1>
 									<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 									<div class="info"><span>Status:</span> <strong>Active</strong></div>
@@ -476,7 +475,7 @@
 										Melanie Rand
 										<span class="icon property"><p>Property &amp; finance</p></span>
 										<span class="type">Joint</span>
-										<a href="#" class="edit">edit</a>
+										<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
 									</h1>
 									<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 									<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -759,7 +758,7 @@
 					Case details
 				</li>
 				<li class="tab-link" data-tab="health-tab-4">
-					Deputies
+					<span>2</span> Deputies
 				</li>
 				<li class="tab-link" data-tab="health-tab-5">
 					Warnings
@@ -772,6 +771,15 @@
 				</li>
 			</ul>
 			<!-- =========== TABS - END =========== -->
+
+
+
+
+
+
+
+
+
 
 			<!-- =========== TAB CONTENT - 1 - START =========== -->
 			<div id="health-tab-1" class="client-details tab-content current">
@@ -802,19 +810,19 @@
 												<ol class="summary-list">
 													<li>
 														<p>Risks to the clients:</p>
-														<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+														<p class="answer">A recent visitor report highlighted that the deputies have not been to see the client once this year. This is according to the nursing home care manager. This is contrary to what the deputy says in the report.</p>
 													</li>
 													<li>
 														<p>Outstanding issues:</p>
-														<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+														<p class="answer">Deputy has been aggressive in the past during phone calls.</p>
 													</li>
 													<li>
 														<p>Safegaurding issues:</p>
-														<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+														<p class="answer">A recent visitor report highlighted that the client was looking very disheveled and wearing very old clothes. Has not had regular pocket money deposited.</p>
 													</li>
 													<li>
 														<p>Client is violent:</p>
-														<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+														<p class="answer">Gerald is not physically violent, but has been known to be verbally abusive to care home staff.</p>
 													</li>
 												</ol>
 											</div>
@@ -844,7 +852,7 @@
 												<section class="full-colour-block report-dates">
 													<div class="date">
 														<div class="wrapper">
-															<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
+															<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
 															<h2 class="sub-text">19273638</h2>
 															<h2 class="sub-text">Report due</h2>
 														</div>
@@ -870,12 +878,12 @@
 													<span class="icon main-contact"><p>Main deputy</p></span>
 													<span class="icon welfare"><p>Health &amp; welfare</p></span>
 													<span class="type">Joint</span>
-													<a href="#" class="edit">edit</a>
+													<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 												<div class="info"><span>Status:</span> <strong>Open</strong></div>
 									               <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div>
-									               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+									               <div class="info"><span>Relationship:</span> <strong>Sibling</strong></div>
 											</div>
 											<!-- // ITEM 1 - END // -->
 
@@ -887,12 +895,12 @@
 													Carla Frith
 													<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
 													<span class="type">Joint</span>
-													<a href="#" class="edit">edit</a>
+													<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 												<div class="info"><span>Status:</span> <strong>Active</strong></div>
 									               <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div>
-									               <div class="info"><span>Relationship:</span> <strong>Sister</strong></div>
+									               <div class="info"><span>Relationship:</span> <strong>Sibling</strong></div>
 											</div>
 											<!-- // ITEM 2 - END // -->
 
@@ -1002,6 +1010,15 @@
 			</div>
 			<!-- =========== TAB CONTENT - 1 - END =========== -->
 
+
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 2 - START =========== -->
 			<div id="health-tab-2" class="client-details tab-content">
 				<div class="row">
@@ -1092,6 +1109,15 @@
 				</div>
 			</div>
 			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+
+
+
+
+
+
+
+
 
 			<!-- =========== TAB CONTENT - 3 - START =========== -->
 			<div id="health-tab-3" class="client-details tab-content">
@@ -1266,6 +1292,15 @@
 			</div>
 			<!-- =========== TAB CONTENT - 3 - END =========== -->
 
+
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 4 - START =========== -->
 			<div id="health-tab-4" class="client-details tab-content">
 				<div class="row">
@@ -1278,7 +1313,7 @@
 
 							<div class="no-items">
 								<p>There are no deputies currently added to this client.</p>
-								<a href="../5-add-edit-deputy/5a-search-deputy.html" class="main-cta">Add/edit deputies</a>
+								<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
 							</div>
 
 							<!-- // CONFIRMATION MESSAGE - START // -->
@@ -1308,12 +1343,445 @@
 						</div>
 						<!-- // LIST OF DEPUTIES - END // -->
 
+						<!-- // DEPUTY DETAILS - START // -->
+						<section class="case-info">
+							<h2 class="description-title">
+								Deputy details
+							</h2>
+							<table id="deputies-table" class="tablesorter">
+								<thead>
+									<tr class="six-column">
+										<th><span></span>Details</th>
+										<th><span></span>Type</th>
+										<th><span></span>Status</th>
+										<th><span></span>Relationship</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- DEPUTY SUMMARY ROW 1 - START -->
+									<tr class="summary-row" data-value="1">
+										<td>
+											<span class="icon deputy"></span>
+											<div class="deputy-name">Mrs Lara Stevens</div><br>
+											<div class="deputy-appointed">JOINT</div><br>
+											<div class="deputy-address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div>
+											<a href="#" class="full-details" data-value="1">View full details</a>
+										</td>
+										<td>
+											Lay deputy
+										</td>
+										<td>
+											Open
+										</td>
+										<td>
+											Sibling
+										</td>
+										<td>
+											<span class="icon fee-payer"><p>Fee payer</p></span>
+											<span class="icon main-contact"><p>Main deputy</p></span>
+											<span class="icon welfare"><p>Health &amp; welfare</p></span>
+										</td>
+										<td>
+											<a class="main-cta edit" href="../12-edit-deputy/12c-edit-deputy.html">edit</a>
+										</td>
+									</tr>
+									<!-- DEPUTY SUMMARY ROW 1 - END -->
+
+									<!-- DEPUTY DETAILS ROW 1 - START -->
+									<tr class="details-row" data-value="1">
+										<td colspan="6">
+
+											<h2 class="section-title">Case details:</h2>
+
+						                         <!-- // DEPUTY ITEM - 1 - START // -->
+						                         <div class="person-detail-item">
+						                              <p class="item">Type of deputy:</p>
+						                              <p class="answer">Lay</p>
+						                         </div>
+						                         <!-- // DEPUTY ITEM - 1 - END // -->
+
+						                         <!-- // DEPUTY ITEM - 2 - START // -->
+						                         <div class="person-detail-item">
+						                              <p class="item">Relationship to the client:</p>
+						                              <div class="mulitple-answers">
+						                                   <p class="answer">Sibling</p>
+						     					</div>
+						                         </div>
+						                         <!-- // DEPUTY ITEM - 2 - END // -->
+
+											<!-- // DEPUTY ITEM - 3 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Deputy status:</p>
+												<p class="answer">Open</p>
+											</div>
+											<!-- // DEPUTY ITEM - 3 - END // -->
+
+											<h2 class="section-title">Personal details:</h2>
+
+											<!-- // DEPUTY ITEM - 1 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Name:</p>
+												<p class="answer">Mrs Lara Stevens</p>
+											</div>
+											<!-- // DEPUTY ITEM - 1 - END // -->
+
+											<!-- // DEPUTY ITEM - 2 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Previously Known As:</p>
+												<p class="answer">Miss Lara Hodgeson</p>
+											</div>
+											<!-- // DEPUTY ITEM - 2 - END // -->
+
+											<!-- // DEPUTY ITEM - 3 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Date of birth:</p>
+												<p class="answer">17/07/1981</p>
+											</div>
+											<!-- // DEPUTY ITEM - 3 - END // -->
+
+											<!-- // DEPUTY ITEM - 4 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Country:</p>
+												<p class="answer">England</p>
+											</div>
+											<!-- // DEPUTY ITEM - 4 - END // -->
+
+											<!-- // DEPUTY ITEM - 5 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Address:</p>
+												<p class="answer">
+													34 Broomfield Place,<br>
+													STOKESLEY,<br>
+													TS9 8TU.
+												</p>
+											</div>
+											<!-- // DEPUTY ITEM - 5 - END // -->
+
+											<!-- // DEPUTY ITEM - 6 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is airmail required?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 6 - END // -->
+
+											<!-- // DEPUTY ITEM - 7 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Daytime telephone number:</p>
+												<p class="answer">07079962666</p>
+											</div>
+											<!-- // DEPUTY ITEM - 7 - END // -->
+
+											<!-- // DEPUTY ITEM - 8 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Mobile telephone number:</p>
+												<p class="answer">07079962666</p>
+											</div>
+											<!-- // DEPUTY ITEM - 8 - END // -->
+
+											<!-- // DEPUTY ITEM - 9 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Email address:</p>
+												<p class="answer">lara.stevens@jourrapide.com</p>
+											</div>
+											<!-- // DEPUTY ITEM - 9 - END // -->
+
+											<!-- // DEPUTY ITEM - 10 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Digital?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 10 - END // -->
+
+											<!-- // DEPUTY ITEM - 11 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Occupation:</p>
+												<p class="answer">University professor</p>
+											</div>
+											<!-- // DEPUTY ITEM - 11 - END // -->
+
+											<!-- // DEPUTY ITEM - 12 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Correspondence By:</p>
+												<ul class="answer">
+													<li>Email</li>
+												</ul>
+											</div>
+											<!-- // DEPUTY ITEM - 12 - END // -->
+
+											<!-- // DEPUTY ITEM - 13 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Special correspondence requirements:</p>
+												<ul class="answer">
+													<li>Spelling of name requires care</li>
+												</ul>
+											</div>
+											<!-- // DEPUTY ITEM - 13 - END // -->
+
+											<!-- // DEPUTY ITEM - 14 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Interpreter required?:</p>
+												<div class="mulitple-answers">
+													<p class="answer">No</p>
+												</div>
+											</div>
+											<!-- // DEPUTY ITEM - 14 - END // -->
+
+											<!-- // DEPUTY ITEM - 15 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Newsletter?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 15 - END // -->
+
+											<!-- // DEPUTY ITEM - 16 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Financial reference:</p>
+												<p class="answer">1234567890</p>
+											</div>
+											<!-- // DEPUTY ITEM - 16 - END // -->
+
+											<!-- // DEPUTY ITEM - 17 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is the deputy the fee payer?:</p>
+												<p class="answer">Yes</p>
+											</div>
+											<!-- // DEPUTY ITEM - 17 - END // -->
+
+											<!-- // DEPUTY ITEM - 18 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is the deputy a violent risk?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 18 - END // -->
+
+										</td>
+									</tr>
+									<!-- DEPUTY DETAILS ROW 1 - END -->
+
+									<!-- DEPUTY SUMMARY ROW 2 - START -->
+									<tr class="summary-row violent" data-value="2">
+										<td>
+											<span class="icon violent">
+												<p>Violent</p>
+											</span>
+											<div class="deputy-name">Mrs Carla Frith</div><br>
+											<div class="deputy-appointed">JOINT</div><br>
+											<div class="deputy-address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div>
+											<a href="#" class="full-details" data-value="2">View full details</a>
+										</td>
+										<td>
+											Lay deputy
+										</td>
+										<td>
+											Active
+										</td>
+										<td>
+											Sibling
+										</td>
+										<td>
+											<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td>
+										<td>
+											<a class="main-cta edit" href="../12-edit-deputy/12c-edit-deputy.html">edit</a>
+										</td>
+									</tr>
+									<!-- DEPUTY SUMMARY ROW 2 - END -->
+
+									<!-- DEPUTY DETAILS ROW 2 - START -->
+									<tr class="details-row" data-value="2">
+										<td colspan="6">
+
+											<h2 class="section-title">Case details:</h2>
+
+						                         <!-- // DEPUTY ITEM - 1 - START // -->
+						                         <div class="person-detail-item">
+						                              <p class="item">Type of deputy:</p>
+						                              <p class="answer">Lay</p>
+						                         </div>
+						                         <!-- // DEPUTY ITEM - 1 - END // -->
+
+						                         <!-- // DEPUTY ITEM - 2 - START // -->
+						                         <div class="person-detail-item">
+						                              <p class="item">Relationship to the client:</p>
+						                              <div class="mulitple-answers">
+						                                   <p class="answer">Sibling</p>
+						     					</div>
+						                         </div>
+						                         <!-- // DEPUTY ITEM - 2 - END // -->
+
+											<!-- // DEPUTY ITEM - 3 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Deputy status:</p>
+												<p class="answer">Active</p>
+											</div>
+											<!-- // DEPUTY ITEM - 3 - END // -->
+
+											<h2 class="section-title">Personal details:</h2>
+
+											<!-- // DEPUTY ITEM - 1 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Name:</p>
+												<p class="answer">Mrs Carla Frith</p>
+											</div>
+											<!-- // DEPUTY ITEM - 1 - END // -->
+
+											<!-- // DEPUTY ITEM - 2 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Previously Known As:</p>
+												<p class="answer">Ms Carla Walton</p>
+											</div>
+											<!-- // DEPUTY ITEM - 2 - END // -->
+
+											<!-- // DEPUTY ITEM - 3 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Date of birth:</p>
+												<p class="answer">25/06/1983</p>
+											</div>
+											<!-- // DEPUTY ITEM - 3 - END // -->
+
+											<!-- // DEPUTY ITEM - 4 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Country:</p>
+												<p class="answer">England</p>
+											</div>
+											<!-- // DEPUTY ITEM - 4 - END // -->
+
+											<!-- // DEPUTY ITEM - 5 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Address:</p>
+												<p class="answer">
+													35 Broad Street,<br>
+													LOWER WELSON,<br>
+													HR3 1UD.
+												</p>
+											</div>
+											<!-- // DEPUTY ITEM - 5 - END // -->
+
+											<!-- // DEPUTY ITEM - 6 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is airmail required?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 6 - END // -->
+
+											<!-- // DEPUTY ITEM - 7 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Daytime telephone number:</p>
+												<p class="answer">07772881687</p>
+											</div>
+											<!-- // DEPUTY ITEM - 7 - END // -->
+
+											<!-- // DEPUTY ITEM - 8 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Mobile telephone number:</p>
+												<p class="answer">07772881687</p>
+											</div>
+											<!-- // DEPUTY ITEM - 8 - END // -->
+
+											<!-- // DEPUTY ITEM - 9 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Email address:</p>
+												<p class="answer">carla.frith@jourrapide.com</p>
+											</div>
+											<!-- // DEPUTY ITEM - 9 - END // -->
+
+											<!-- // DEPUTY ITEM - 10 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Digital?:</p>
+												<p class="answer">Yes</p>
+											</div>
+											<!-- // DEPUTY ITEM - 10 - END // -->
+
+											<!-- // DEPUTY ITEM - 11 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Occupation:</p>
+												<p class="answer">Mental health assistant</p>
+											</div>
+											<!-- // DEPUTY ITEM - 11 - END // -->
+
+											<!-- // DEPUTY ITEM - 12 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Correspondence By:</p>
+												<ul class="answer">
+													<li>Phone</li>
+													<li>Email</li>
+												</ul>
+											</div>
+											<!-- // DEPUTY ITEM - 12 - END // -->
+
+											<!-- // DEPUTY ITEM - 13 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Special correspondence requirements:</p>
+												<ul class="answer">
+													<li>N/A</li>
+												</ul>
+											</div>
+											<!-- // DEPUTY ITEM - 13 - END // -->
+
+											<!-- // DEPUTY ITEM - 14 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Interpreter required?:</p>
+												<div class="mulitple-answers">
+													<p class="answer">No</p>
+												</div>
+											</div>
+											<!-- // DEPUTY ITEM - 14 - END // -->
+
+											<!-- // DEPUTY ITEM - 15 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Newsletter?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 15 - END // -->
+
+											<!-- // DEPUTY ITEM - 16 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Financial reference:</p>
+												<p class="answer">1234567890</p>
+											</div>
+											<!-- // DEPUTY ITEM - 16 - END // -->
+
+											<!-- // DEPUTY ITEM - 17 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is the deputy the fee payer?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 17 - END // -->
+
+											<!-- // DEPUTY ITEM - 18 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is the deputy a violent risk?:</p>
+												<p class="answer">Yes</p>
+											</div>
+											<!-- // DEPUTY ITEM - 18 - END // -->
+
+										</td>
+									</tr>
+									<!-- DEPUTY DETAILS ROW 2 - END -->
+
+
+								</tbody>
+							</table>
+						</section>
+						<!-- // DEPUTY DETAILS - END // -->
+
+
 					</div>
 					<!-- // CLIENT DEPUTIES - END // -->
 
 				</div>
 			</div>
 			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+
+
+
+
+
+
+
+
 
 			<!-- =========== TAB CONTENT - 5 - START =========== -->
 			<div id="health-tab-5" class="client-details tab-content">
@@ -1339,6 +1807,15 @@
 				</div>
 			</div>
 			<!-- =========== TAB CONTENT - 5 - END =========== -->
+
+
+
+
+
+
+
+
+
 
 			<!-- =========== TAB CONTENT - 6 - START =========== -->
 			<div id="health-tab-6" class="client-details tab-content">
@@ -1756,6 +2233,15 @@
 			</div>
 			<!-- =========== TAB CONTENT - 6 - END =========== -->
 
+
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 7 - START =========== -->
 			<div id="health-tab-7" class="client-details tab-content">
 				<div class="row">
@@ -1802,6 +2288,15 @@
 
 		</div>
 
+
+
+
+
+
+
+
+
+
 		<div class="large-3 large-uncentered columns">
 			<!-- // ACTIONS NAV - START // -->
 			<nav class="actions-nav client-panel">
@@ -1809,6 +2304,23 @@
 				<h1>Perform case task:</h1>
 
 				<ul>
+					<!-- // MAIN CTA's -  START // -->
+					<li class="supervision add-deputy-link">
+						<a href="../5-add-edit-deputy/5a-search-deputy.html" class="action create-deputy">
+							<span class="icon"></span>
+							<span>Add deputy</span>
+						</a>
+					</li>
+					<li class="supervision edit-case-link">
+						<a href="../1-create-case/1a-the-order.html#EditCase" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit case</span>
+						</a>
+					</li>
+					<!-- // MAIN CTA's -  END // -->
+
+					<li class="seperator"></li>
+					
 					<li class="supervision">
 						<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
 							<span class="icon"></span>
@@ -1883,7 +2395,7 @@
 					Case details
 				</li>
 				<li class="tab-link" data-tab="property-tab-4">
-					Deputies
+					<span>1</span> Deputy
 				</li>
 				<li class="tab-link" data-tab="property-tab-5">
 					Warnings
@@ -1944,8 +2456,8 @@
 												<section class="full-colour-block report-dates">
 													<div class="date">
 														<div class="wrapper">
-															<h1 class="main-text"><span class="icon date"></span>25/06/2017</h1>
-															<h2 class="sub-text">19273638</h2>
+															<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
+															<h2 class="sub-text">14820940</h2>
 															<h2 class="sub-text">Report due</h2>
 														</div>
 														<div class="colour-wrapper"></div>
@@ -2277,6 +2789,23 @@
 				<h1>Perform case task:</h1>
 
 				<ul>
+					<!-- // MAIN CTA's -  START // -->
+					<li class="supervision add-deputy-link">
+						<a href="../5-add-edit-deputy/5a-search-deputy.html" class="action create-deputy">
+							<span class="icon"></span>
+							<span>Add deputy</span>
+						</a>
+					</li>
+					<li class="supervision edit-case-link">
+						<a href="../1-create-case/1a-the-order.html#EditCase" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit case</span>
+						</a>
+					</li>
+					<!-- // MAIN CTA's -  END // -->
+
+					<li class="seperator"></li>
+
 					<li class="supervision">
 						<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
 							<span class="icon"></span>
@@ -2539,6 +3068,8 @@
 	<script src="../../../production/js/V12/my-cookies/create-case.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-task.js"></script>
 	<script src="../../../production/js/V12/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V12/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V12/my-cookies/create-deputy.js"></script>
 	<script src="../../../production/js/V12/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V12/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V12/my-cookies/supervision-level.js"></script>

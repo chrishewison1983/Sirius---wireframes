@@ -1,0 +1,521 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <!-- <a href="#">7000-000-0310</a>
+                         <div class="separator"> > </div> -->
+                         <!-- <a href="5a-search-deputy.html">Create new deputy</a>
+                         <div class="separator"> > </div> -->
+                         <span>Edit deputy</span>
+                    </nav>
+                    <h1>
+                         Edit deputy:
+                         <div class="deputy-title-answer">Mr</div>
+                         <div class="deputy-first-name-answer">Joe</div>
+                         <div class="deputy-last-name-answer">Bloggs</div>
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Edit deputy</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-4">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              <!-- // DOCUMENT SUMMARY - START // -->
+                              <h2 class="section-title">General information</h2>
+                              <!-- // DOCUMENT SUMMARY - END // -->
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              <h2 class="section-title">Deputy details</h2>
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- // CREATE RECIPIENT - START // -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <form class="edit-deputy-form">
+
+                         <h2 class="section-title">Edit deputies case details</h2>
+
+                         <!-- // FORM ITEM - 1a - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-type">Type of deputy</label>
+                              <select id="edit-deputy-type" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option value="Lay">Lay</option>
+                                   <option value="Professional">Professional</option>
+                                   <option value="Public authority">Public authority</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1a - END // -->
+
+                         <!-- // FORM ITEM - 1b - START // -->
+                         <div class="form-group edit-relationship-lay">
+                              <label for="edit-deputy-relationship-lay">Relationship to the client</label>
+                              <select id="edit-deputy-relationship-lay" class="full-width" disabled>
+                                   <option value="">-- Select --</option>
+                                   <option value='Sibling'>Sibling</option>
+                                   <option value='Spouse'>Spouse</option>
+                                   <option value='Child of Patient'>Child of Patient</option>
+                                   <option value='Parent of Patient'>Parent of Patient</option>
+                                   <option value='Civil Partner'>Civil Partner</option>
+                                   <option value='Friend'>Friend</option>
+                                   <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
+                                   <option value='Other Relation'>Other Relation</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1b - END // -->
+
+                         <!-- // FORM ITEM - 1c - START // -->
+                         <div class="form-group edit-relationship-professional">
+                              <label for="edit-deputy-relationship-professional">Relationship to the client</label>
+                              <select id="edit-deputy-relationship-professional" class="full-width" disabled>
+                                   <option value="">-- Select --</option>
+                                   <option value='Panel Deputy'>Panel Deputy</option>
+                                   <option value='Bank Official'>Bank Official</option>
+                                   <option value='Solicitor'>Solicitor</option>
+                                   <option value='Accountant'>Accountant</option>
+                                   <option value='Unregulated Pro Deputy'>Unregulated Pro Deputy</option>
+                                   <option value='Legal Professional'>Legal Professional</option>
+                                   <option value='Trust Companies (Not NHS/PCT)'>Trust Companies (Not NHS/PCT)</option>
+                                   <option value='Other Professional'>Other Professional</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1c - END // -->
+
+                         <!-- // FORM ITEM - 1d - START // -->
+                         <div class="form-group relationship-public">
+                              <label for="edit-deputy-relationship-public">Relationship to the client</label>
+                              <select id="edit-deputy-relationship-public" class="full-width" disabled>
+                                   <option value="">-- Select --</option>
+                                   <option value='Local Authority'>Local Authority</option>
+                                   <option value='NHS Trust'>NHS Trust</option>
+                                   <option value='PCT'>PCT</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1d - END // -->
+
+                         <!-- // FORM ITEM - 1e - START // -->
+                         <div class="form-group other-relation">
+                              <label for="edit-deputy-other-relation">Other relation - please specify</label>
+                              <input id="edit-deputy-other-relation" name="edit-deputy-other-relation" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 1e - END // -->
+
+                         <!-- // FORM ITEM - 1f - START // -->
+                         <div class="form-group other-professional">
+                              <label for="edit-deputy-other-professional">Other professional - please specify</label>
+                              <input id="edit-deputy-other-professional" name="edit-deputy-other-professional" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 1f - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-status">Deputy status</label>
+                              <select id="edit-deputy-status" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option value="Open">Open</option>
+                                   <option value="Active">Active</option>
+                                   <option value="Closed">Closed</option>
+                                   <option value="Deceased">Deceased</option>
+                                   <option value="Discharged">Discharged</option>
+                                   <option value="Suspended">Suspended</option>
+                                   <option value="Error">Error</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <h2 class="section-title">Edit deputies personal details</h2>
+
+                         <!-- ////////// ERROR MESSAGE - START //////////-->
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+                                   <div id="error-message" class="confirmation-panel">
+                                        <div class="content">
+                                             <h1>
+                                                  <span></span>
+                                                  There appears to be a problem with the form
+                                             </h1>
+                                             <p>Some of the fileds require your attention:</p>
+                                             <ul>
+                                                  <li class="too-young"><a href="#dob-error">Date of birth - the deputy must be older than 18 years of age</a></li>
+                                                  <li class="too-old"><a href="#dob-error">Date of birth - the deputy cannot be born before 1880</a></li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- ////////// ERROR MESSAGE - END //////////-->
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-title">Title</label>
+                              <select id="edit-deputy-title">
+                                   <option>-- Select --</option>
+                                   <option value="Mr." selected>Mr.</option>
+                                   <option value="Mrs.">Mrs.</option>
+                                   <option value="Ms.">Ms.</option>
+                                   <option value="Miss">Miss</option>
+                                   <option value="Dr.">Dr.</option>
+                                   <option value="Prof.">Prof.</option>
+                                   <option value="Rev.">Rev.</option>
+                                   <option value="Other">Other</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-first-name">First name <span class="required">*</span></label>
+                              <input id="edit-deputy-first-name" name="edit-deputy-first-name" type="text" value="Joe">
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-middle-name">Middle names</label>
+                              <input id="edit-deputy-middle-name" name="edit-deputy-middle-name" type="text" value="Fred">
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                         <!-- // FORM ITEM - 4 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-last-name">Last name <span class="required">*</span></label>
+                              <input id="edit-deputy-last-name" name="edit-deputy-last-name" type="text" value="Bloggs">
+                         </div>
+                         <!-- // FORM ITEM - 4 - END // -->
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-previous-name">Previously Known As</label>
+                              <input id="edit-deputy-previous-name" name="company-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group" id="dob-error">
+                              <legend for="dob"></legend>
+                              <div class="half">
+                                   <label for="edit-deputy-dob">Date of birth</label>
+                                   <input id="edit-deputy-dob" name="edit-deputy-dob" type="text" placeholder="Example - 25/06/1972" maxlength="12" value="17/07/1959">
+                              </div>
+                              <!-- <div class="one-third">
+                                   <label for="edit-deputy-dob-day" class="sub-label">Day</label>
+                                   <input id="edit-deputy-dob-day" name="edit-deputy-dob-day" type="text" placeholder="-- Day --" maxlength="2">
+                              </div>
+                              <div class="one-third">
+                                   <label for="edit-deputy-dob-month" class="sub-label">Month</label>
+                                   <input id="edit-deputy-dob-month" name="edit-deputy-dob-month" type="text" placeholder="-- Month --" maxlength="2">
+                              </div>
+                              <div class="one-third">
+                                   <label for="edit-deputy-dob-year" class="sub-label">Year</label>
+                                   <input id="edit-deputy-dob-year" name="edit-deputy-dob-year" type="text" placeholder="-- Year --" maxlength="4">
+                              </div> -->
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-address-line-1">Address</label>
+                              <input id="edit-deputy-address-line-1" name="edit-deputy-address-line-1" type="text" value="1 Grimwald Place">
+                         </div>
+                         <div class="form-group">
+                              <label for="edit-deputy-address-line-2" class="hide">Address line 2</label>
+                              <input id="edit-deputy-address-line-2" name="edit-deputy-address-line-2" type="text" value="Buckley">
+                         </div>
+                         <div class="form-group">
+                              <label for="edit-deputy-address-line-3" class="hide">Address line 3</label>
+                              <input id="edit-deputy-address-line-3" name="edit-deputy-address-line-3" type="text">
+                         </div>
+                         <div class="form-group">
+                              <label for="edit-deputy-address-town">Town</label>
+                              <input id="edit-deputy-address-town" name="edit-deputy-address-town" type="text" value="Flintshire">
+                         </div>
+                         <div class="form-group">
+                              <label for="edit-deputy-country">Country</label>
+                              <select id="edit-deputy-country" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option value="England" selected>England</option>
+                                   <option value="Ireland">Ireland</option>
+                                   <option value="Scotland">Scotland</option>
+                                   <option value="Wales">Wales</option>
+                                   <option value="Northern Ireland">Northern Ireland</option>
+                              </select>
+                         </div>
+                         <div class="form-group">
+                              <label for="edit-deputy-manual-postcode">Postcode</label>
+                              <input id="edit-deputy-manual-postcode" name="edit-deputy-manual-postcode" type="text" class="one-third" value="CT78 9IL">
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <!-- // FORM ITEM - 9 - START // -->
+                         <div class="form-group">
+                              <legend>Is airmail required?</legend>
+                              <label for="edit-deputy-airmail-yes" class="radio">
+                                   <input id="edit-deputy-airmail-yes" type="radio" name="edit-deputy-airmail" value="Yes">
+                                   Yes
+                              </label>
+                              <label for="edit-deputy-airmail-no" class="radio checked">
+                                   <input id="edit-deputy-airmail-no" type="radio" name="edit-deputy-airmail" value="No" checked>
+                                   No
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 9 - END // -->
+
+                         <!-- // FORM ITEM - 10 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-phone-number">Daytime telephone number</label>
+                              <input id="edit-deputy-phone-number" name="edit-deputy-phone-number" type="text" class="half" value="0123456789">
+                         </div>
+                         <!-- // FORM ITEM - 10 - END // -->
+
+                         <!-- // FORM ITEM - 11 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-mob-number">Mobile telephone number</label>
+                              <input id="edit-deputy-mob-number" name="edit-deputy-mob-number" type="text" class="half" value="07768948823">
+                         </div>
+                         <!-- // FORM ITEM - 11 - END // -->
+
+                         <!-- // FORM ITEM - 12 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-email">Email address</label>
+                              <input id="edit-deputy-email" name="email" type="text" value="edit-deputy@opg.com">
+                         </div>
+                         <!-- // FORM ITEM - 12 - END // -->
+
+                         <!-- // FORM ITEM - 13 - START // -->
+                         <div class="form-group">
+                              <legend>Digital?</legend>
+                              <label for="edit-deputy-digital-yes" class="radio checked">
+                                   <input id="edit-deputy-digital-yes" type="radio" name="edit-deputy-digital" value="Yes" checked>
+                                   Yes
+                              </label>
+                              <label for="edit-deputy-digital-no" class="radio">
+                                   <input id="edit-deputy-digital-no" type="radio" name="edit-deputy-digital" value="No">
+                                   No
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 13 - END // -->
+
+                         <!-- // FORM ITEM - 14 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-occupation">Occupation</label>
+                              <input id="edit-deputy-occupation" name="occupation" type="text" value="Salesman">
+                         </div>
+                         <!-- // FORM ITEM - 14 - END // -->
+
+                         <!-- // FORM ITEM - 15 - START // -->
+                         <div class="form-group">
+                              <legend>Correspondence By</legend>
+                              <label class="normal" for="edit-deputy-correspondence-post">
+                                   <input id="edit-deputy-correspondence-post" name="edit-deputy-correspondence-post" type="checkbox" value="post">
+                                   Post
+                              </label>
+                              <label class="normal" for="edit-deputy-correspondence-phone">
+                                   <input id="edit-deputy-correspondence-phone" name="edit-deputy-correspondence-phone" type="checkbox" value="phone">
+                                   Phone
+                              </label>
+                              <label class="normal" for="edit-deputy-correspondence-email">
+                                   <input id="edit-deputy-correspondence-email" name="edit-deputy-correspondence-email" type="checkbox" value="email">
+                                   Email
+                              </label>
+
+                              <label class="normal" for="edit-deputy-correspondence-welsh">
+                                   <input id="edit-deputy-correspondence-welsh" name="edit-deputy-correspondence-welsh" type="checkbox" value="welsh">
+                                   Welsh
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 15 - END // -->
+
+                         <!-- // FORM ITEM - 16 - START // -->
+                         <div class="form-group">
+                              <legend>Special correspondence requirements</legend>
+                              <label class="normal" for="edit-deputy-special-audio">
+                                   <input id="edit-deputy-special-audio" name="edit-deputy-special-audio" type="checkbox" value="audio">
+                                   Audio tape
+                              </label>
+                              <label class="normal" for="edit-deputy-special-print">
+                                   <input id="edit-deputy-special-print" name="edit-deputy-special-print" type="checkbox" value="print">
+                                   Large print
+                              </label>
+                              <label class="normal" for="edit-deputy-special-hearing">
+                                   <input id="edit-deputy-special-hearing" name="edit-deputy-special-hearing" type="checkbox" value="hearing">
+                                   Hearing impaired
+                              </label>
+
+                              <label class="normal" for="edit-deputy-special-spelling">
+                                   <input id="edit-deputy-special-spelling" name="edit-deputy-special-spelling" type="checkbox" value="spelling">
+                                   Spelling of name requires care
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 16 - END // -->
+
+                         <!-- // FORM ITEM - 17a - START // -->
+                         <div class="form-group">
+                              <legend>Interpreter required?</legend>
+                              <label for="edit-deputy-interpreter-yes" class="radio">
+                                   <input id="edit-deputy-interpreter-yes" type="radio" name="edit-deputy-interpreter" value="Yes">
+                                   Yes
+                              </label>
+                              <label for="edit-deputy-interpreter-no" class="radio">
+                                   <input id="edit-deputy-interpreter-no" type="radio" name="edit-deputy-interpreter" value="No">
+                                   No
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 17a - END // -->
+
+                         <!-- // FORM ITEM - 17b - START // -->
+                         <div class="form-group interpreter-details">
+                              <label for="edit-deputy-interpreter-details">Interpreter - please give details</label>
+                              <input id="edit-deputy-interpreter-details" name="edit-deputy-interpreter-details" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 17b - END // -->
+
+                         <!-- // FORM ITEM - 18 - START // -->
+                         <div class="form-group">
+                              <legend>Newsletter?</legend>
+                              <label for="edit-deputy-newsletter-yes" class="radio">
+                                   <input id="edit-deputy-newsletter-yes" type="radio" name="edit-deputy-newsletter" value="Yes">
+                                   Yes
+                              </label>
+                              <label for="edit-deputy-newsletter-no" class="radio">
+                                   <input id="edit-deputy-newsletter-no" type="radio" name="edit-deputy-newsletter" value="No">
+                                   No
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 18 - END // -->
+
+                         <!-- // FORM ITEM - 19 - START // -->
+                         <div class="form-group">
+                              <label for="edit-deputy-financial">Financial reference</label>
+                              <input id="edit-deputy-financial" name="edit-deputy-financial" type="text" class="half" value="0123456789">
+                         </div>
+                         <!-- // FORM ITEM - 19 - END // -->
+
+                         <!-- // FORM ITEM - 20 - START // -->
+                         <div class="form-group fee-payer">
+                              <span></span>
+                              <label class="normal" for="edit-deputy-fee-payer">
+                                   <input id="edit-deputy-fee-payer" name="edit-deputy-fee-payer" type="checkbox" value="post">
+                                   Is the deputy the fee payer?
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 20 - END // -->
+
+                         <!-- // FORM ITEM - 21 - START // -->
+                         <div class="form-group violent-risk">
+                              <span></span>
+                              <label class="normal" for="edit-deputy-violent-risk">
+                                   <input id="edit-deputy-violent-risk" name="edit-deputy-violent-risk" type="checkbox" value="post">
+                                   Is the deputy a violent risk?
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 21 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- // CREATE RECIPIENT - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html#HandW">Save &amp; update deputy</a>
+     <a href="#" onclick="history.back();">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

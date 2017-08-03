@@ -1,0 +1,76 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+// =====================================  Autocomplete drop down - START ===================================== //
+.autocomplete-suggestions {
+     overflow: auto;
+     max-height: 30em !important;
+     // padding: 1em;
+     font-family: $Montserrat;
+     font-size: 1rem;
+     line-height: 1.4;
+     border: 2px solid $blue;
+     border-top: 3px dashed $blue;
+     margin: -3px 0 0 0;
+     border-radius: 0 0 5px 5px;
+     background: $white;
+     box-shadow: 0 10px 0 0 rgba($black,0.2);
+     .autocomplete-suggestion {
+          padding: 1em;
+          color: $black;
+          // border: 2px solid $blue;
+          border-bottom: 2px dashed rgba($black,0.2);
+          &.autocomplete-selected, &:hover {
+               cursor: pointer;
+               background: $white-off;
+          }
+          &:last-of-type {
+               border-bottom: none;
+          }
+          strong {
+               color: $blue;
+          }
+          a {
+               font-weight: normal;
+               strong {
+                    color: $blue;
+               }
+               .title {
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    color: $black;
+                    font-size: 1.2rem;
+                    span {
+                         font-weight: normal;
+                         color: $text-main-colour;
+                         font-family: $Opensans-Regular;
+                         font-size: 0.875rem;
+                    }
+               }
+               .sub-title {
+                    font-weight: normal;
+                    color: lighten($text-main-colour,10%);
+                    font-size: 0.875rem;
+                    font-family: $Opensans-Regular;
+                    span {
+                         color: $text-main-colour;
+                         font-family: $Opensans-Bold;
+                    }
+               }
+               &.footer {
+                    .sub-title {
+                         width: auto;
+                         &:first-of-type {
+                              float: left;
+                         }
+                         &:last-of-type {
+                              float: right;
+                         }
+                    }
+               }
+          }
+     }
+}
+// =====================================  Autocomplete drop down - END ===================================== //
