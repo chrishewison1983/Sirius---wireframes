@@ -23,9 +23,7 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
-                         <a href="../4-client-page/4a-new-client.html#HandW">
-                              <div>H &amp; W | 19273638</div>
-                         </a>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
                          <div class="separator"> > </div>
                          <span>Create letter</span>
                     </nav>
@@ -148,7 +146,7 @@
                          <!-- =========== TAB CONTENT - 4 - START =========== -->
                          <div id="tab-4" class="tab-content side-panel">
 
-                              <h2 class="section-title">Deputy details</h2>
+                              {{= it.include('side-panel/deputy-details.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 4 - END =========== -->
@@ -190,9 +188,12 @@
                <div id="ex1" style="display:none;">
                     <img src="../../../production/img/V13/letters/opg-letter-header.png" alt="Document" class="header">
                     <div id="letter-contents"></div>
+                    <p>
+                         Cymraeg: if you’d prefer to hear from us in Welsh, call 0300 456 0300 or emailcustomerservices@publicguardian.gsi.gov.uk
+                    </p>
                     <hr>
                     <div class="cta-row">
-                         <a class="main-cta" href="../4-client-page/4a-new-client.html">Print &amp; send document</a>
+                         <a class="main-cta" id="confirm-print-send">Print &amp; send document</a>
                          <a href="#" rel="modal:close">Back to my letter</a>
                     </div>
                </div>
@@ -223,8 +224,8 @@
      <a class="main-cta secondary" id="save" href="#">Save draft</a>
      <a class="main-cta secondary" id="save-and-exit" href="../4-client-page/4a-new-client.html">Save draft &amp; Exit</a>
      <a href="#delete" rel="modal:open" class="main-cta secondary" id="delete-draft" href="#">Delete draft</a>
-     <a href="#" onclick="history.back();" class="back">Back</a>
-     <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a>
+     <a onclick="history.back();" class="back">Back</a>
+     <!-- <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a> -->
 </footer>
 <!-- FOOTER CONTENT - END -->
 

@@ -23,8 +23,8 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
-                         <!-- <a href="#">7000-000-0310</a>
-                         <div class="separator"> > </div> -->
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
                          <span>Create new deputy</span>
                     </nav>
                     <h1>
@@ -71,9 +71,7 @@
                          <!-- =========== TAB CONTENT - 1 - START =========== -->
                          <div id="tab-1" class="tab-content side-panel">
 
-                              <!-- // DOCUMENT SUMMARY - START // -->
-                              <h2 class="section-title">General information</h2>
-                              <!-- // DOCUMENT SUMMARY - END // -->
+                              {{= it.include('side-panel/new-deputy-details.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 1 - END =========== -->
@@ -89,7 +87,7 @@
                          <!-- =========== TAB CONTENT - 3 - START =========== -->
                          <div id="tab-3" class="tab-content side-panel">
 
-                              <h2 class="section-title">Deputy details</h2>
+                              {{= it.include('side-panel/deputy-details.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 3 - END =========== -->
@@ -143,40 +141,43 @@
                          </p>
 
                          <!-- // DEPUTY - 1 - START // -->
-                         <button class="deputy" onclick="location.href='5c-check-deputy.html'">
+                         <button class="deputy" onclick="location.href='../12-edit-deputy/12a-check-deputy.html'">
                               <div class="title">
                                    <h3><div class="deputy-first-name-answer">Joe</div> <div class="deputy-last-name-answer">Bloggs</div></h3>
                                    <a href="../12-edit-deputy/12a-check-deputy.html" class="check-edit">Check &amp; edit</a>
                               </div>
                               <div class="content">
                                    <p>EPA / PFA 7000-0000-1003</p>
-                                   <p>116 Sandy Lane, Nottingham, N12 Q78</p>
+                                   <p class="address">116 Sandy Lane, Nottingham, N12 Q78</p>
+                                   <p class="client">Miss Maddison Francis</p>
                               </div>
                          </button>
                          <!-- // DEPUTY - 1 - END // -->
 
                          <!-- // DEPUTY - 2 - START // -->
-                         <button class="deputy" onclick="location.href='5c-check-deputy.html'">
+                         <button class="deputy" onclick="location.href='../12-edit-deputy/12a-check-deputy.html'">
                               <div class="title">
                                    <h3><div class="deputy-first-name-answer">Joe</div> <div class="deputy-last-name-answer">Bloggs</div></h3>
                                    <a href="../12-edit-deputy/12a-check-deputy.html" class="check-edit">Check &amp; edit</a>
                               </div>
                               <div class="content">
                                    <p>EPA / PFA 7000-0000-8018</p>
-                                   <p>6 Veronica Road, Line 2, London, London, SW178QL</p>
+                                   <p class="address">6 Veronica Road, Line 2, London, London, SW178QL</p>
+                                   <p class="client">Mr Charles Crawford</p>
                               </div>
                          </button>
                          <!-- // DEPUTY - 2 - START // -->
 
                          <!-- // DEPUTY - 3 - START // -->
-                         <button class="deputy" onclick="location.href='5c-check-deputy.html'">
+                         <button class="deputy" onclick="location.href='../12-edit-deputy/12a-check-deputy.html'">
                               <div class="title">
                                    <h3><div class="deputy-first-name-answer">Joe</div> <div class="deputy-last-name-answer">Bloggs</div></h3>
                                    <a href="../12-edit-deputy/12a-check-deputy.html" class="check-edit">Check &amp; edit</a>
                               </div>
                               <div class="content">
                                    <p>EPA / PFA 7000-0000-9102</p>
-                                   <p>Flat 22a, The Grove, Golf Lane, Warwick, Warwickshire, CV67 9LY</p>
+                                   <p class="address">Flat 22a, The Grove, Golf Lane, Warwick, Warwickshire, CV67 9LY</p>
+                                   <p class="client">Mr Dominic Bevan</p>
                               </div>
                          </button>
                          <!-- // DEPUTY - 3 - START // -->
@@ -200,7 +201,7 @@
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
      <a class="main-cta de-activate primary" id="add-new-deputy" href="5b-add-deputy.html">Add a new deputy</a>
-     <a href="#" onclick="history.back();">Cancel</a>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
 </footer>
 <!-- FOOTER CONTENT - END -->
 

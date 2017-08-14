@@ -1,0 +1,87 @@
+{
+  "name": "swing",
+  "description": "A swipeable cards interface. The swipe-left/swipe-right for yes/no input. As seen in apps like Jelly and Tinder.",
+  "keywords": [
+    "swipe",
+    "cards",
+    "swipeable"
+  ],
+  "version": "3.0.3",
+  "main": "./dist/index.js",
+  "author": {
+    "name": "Gajus Kuizinas",
+    "email": "gajus@gajus.com",
+    "url": "http://gajus.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gajus/swing.git"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "chai": "^3.2.0",
+    "del": "^2.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-eslint": "^1.0.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
+    "jsdom": "^6.3.0",
+    "jsonfile": "^2.2.1",
+    "mocha": "^2.3.0",
+    "pragmatist": "^3.0.21",
+    "sinon": "^1.16.1",
+    "webpack": "^1.12.1"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.4",
+    "lodash": "^4.6.1",
+    "raf": "^3.1.0",
+    "rebound": "^0.0.13",
+    "sister": "^3.0.0",
+    "vendor-prefix": "^0.1.0"
+  },
+  "scripts": {
+    "pragmatist": "pragmatist --es5",
+    "lint": "npm run pragmatist lint",
+    "test": "npm run pragmatist test",
+    "build": "npm run pragmatist build",
+    "watch": "npm run pragmatist watch",
+    "watch-lint": "npm run pragmatist watch-lint",
+    "watch-test": "npm run pragmatist watch-test",
+    "watch-build": "npm run pragmatist watch-build"
+  },
+  "gitHead": "d2cb9615b6ef0dc78dd080e7ab2978c968db748f",
+  "bugs": {
+    "url": "https://github.com/gajus/swing/issues"
+  },
+  "homepage": "https://github.com/gajus/swing#readme",
+  "_id": "swing@3.0.3",
+  "_shasum": "6d421c54f66ac74eff8489ebd7ab693d43b14e98",
+  "_from": "swing@latest",
+  "_npmVersion": "3.8.1",
+  "_nodeVersion": "5.8.0",
+  "_npmUser": {
+    "name": "gajus",
+    "email": "gajus@gajus.com"
+  },
+  "dist": {
+    "shasum": "6d421c54f66ac74eff8489ebd7ab693d43b14e98",
+    "tarball": "https://registry.npmjs.org/swing/-/swing-3.0.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "gajus",
+      "email": "gk@anuary.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/swing-3.0.3.tgz_1457808598201_0.07674384023994207"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/swing/-/swing-3.0.3.tgz"
+}

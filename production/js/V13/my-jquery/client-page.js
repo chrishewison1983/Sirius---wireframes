@@ -46,6 +46,8 @@ $(document).ready(function () {
           $('#client-health').show();
           $('.edit-case-link').show();
           $('.add-deputy-link').show();
+          $('.normal').text('H & W | 19273638');
+          $('.breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>H & W | 19273638</span>');
      }
 
      // Changes the tabs to be focused on the Properties tab
@@ -56,6 +58,8 @@ $(document).ready(function () {
           $('#client-property').show();
           $('.edit-case-link').show();
           $('.add-deputy-link').show();
+          $('.normal').text('PFA | 14820940');
+          $('.breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>PFA | 14820940</span>');
      }
 
      // Shows the state of a brand new client
@@ -220,4 +224,18 @@ $('.full-details').click( function(e){
 });
 
 
-// Property and finance
+// Create letter
+// $(document).ready(function(){
+//
+//      JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+//           $('#document-recipients').append('<li>' + recipient + '</li>');
+//      });
+//
+//      JSON.parse(sessionStorage.getItem('selected-inserts')).forEach(function(inserts) {
+//           $('#document-inserts').append('<li>' + inserts + '</li>');
+//      });
+//
+//      // Get the element with id="defaultOpen" and click on it
+//      document.getElementById("defaultOpen").click();
+//
+// });

@@ -1,0 +1,106 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default new-client">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="client-page">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-8 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Client summary</span>
+                    </nav>
+                    <h1>
+                         <div class="client-title">Mr</div>
+                         <div class="client-first-name">Gerald</div>
+                         <div class="client-last-name">Brackens</div>
+
+                         <span class="normal-status">Client's summary page</span>
+                         <span class="violent">Client is violent</span>
+                         <span class="welsh">Client's prefered language is Welsh</span>
+                         <span class="deceased">Client is deceased</span>
+
+                    </h1>
+               </div>
+
+               <div class="large-4 large-uncentered columns">
+                    {{= it.include('actions-header.html') }}
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     {{= it.include('client-nav.html') }}
+
+     <!-- TAB CONTENT - START -->
+     <div id="client-overview" class="tabcontent current">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-summary.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-health" class="tabcontent">
+
+          {{= it.include('confirmation/correspondence-sent.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-health.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-property" class="tabcontent">
+
+          {{= it.include('confirmation/correspondence-sent.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-property.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-unassigned" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-unassigned.html') }}
+
+               </div>
+          </div>
+     </div>
+     <!-- TAB CONTENT - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+</script>
+<!-- SCRIPT CONTENT - END -->

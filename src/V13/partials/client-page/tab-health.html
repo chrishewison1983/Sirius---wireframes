@@ -109,10 +109,15 @@
 												</section>
 												<section class="full-colour-block report-dates">
 													<div class="date">
-														<div class="wrapper">
-															<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
-															<h2 class="sub-text">19273638</h2>
-															<h2 class="sub-text">Report due</h2>
+														<div class="left">
+															<i class="icon welfare white"></i>
+														</div>
+														<div class="right">
+															<div class="wrapper">
+																<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
+																<h2 class="sub-text">19273638</h2>
+																<h2 class="sub-text">Report due</h2>
+															</div>
 														</div>
 														<div class="colour-wrapper"></div>
 													</div>
@@ -136,7 +141,7 @@
 													<span class="icon main-contact"><p>Main deputy</p></span>
 													<span class="icon welfare"><p>Health &amp; welfare</p></span>
 													<span class="type">Joint</span>
-													<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
+													<a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 												<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -153,7 +158,7 @@
 													Carla Frith
 													<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
 													<span class="type">Joint</span>
-													<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
+													<a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 												<div class="info"><span>Status:</span> <strong>Active</strong></div>
@@ -284,82 +289,167 @@
 					<!-- // CLIENT TASKS - START // -->
 					<div class="large-12 large-uncentered columns">
 
-						<!-- // LIST OF DEPUTIES - START // -->
-						<div id="list-of-tasks">
+						<section class="case-info">
 
-							<div class="no-items">
-								<p>There are no tasks currently added to this client.</p>
-								<a href="#" class="main-cta">Create task</a>
-							</div>
+							<h2 class="description-title">Tasks</h2>
 
-							<!-- // COMMISSION VISIT MESSAGE - START // -->
-							<div class="row">
-								<div class="large-12 large-uncentered columns">
-									<ol id="task-list">
-
-										<h2 class="description-title">Your outstanding tasks</h2>
-
-										<!-- // CONFIRMATION MESSAGE - START // -->
-										<div class="row">
-											<div class="large-12 large-uncentered columns">
-												<div id="confirmation-dashboard-visit" class="confirmation-panel">
-													<div class="content">
-														<h2>
-															<span></span>
-															Your visit has been commissioned to
-															<div class="client-first-name">Gerald</div>
-															<div class="client-last-name">Brackens</div>
-														</h2>
+							<table id="tasks-table" class="tablesorter">
+								<thead>
+									<tr class="four-column">
+										<th><span></span>Type</th>
+										<th><span></span>Task due date</th>
+										<th><span></span>Task status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- TASK 1 - START -->
+									<tr class="urgent-row">
+										<td>
+											<div class="wrapper">
+												<!-- <div class="icon">
+													<span class="task-type review-correspondence"></span>
+												</div> -->
+												<div class="text">
+													<a href="#" class="task create-letter-journey change-tab">Review application correspondence</a>
+													<p class="task-intro">Task name</p>
+													<div class="details">
+														<p><a href="#" class="open">Description</a></a>
+													</div>
+													<div class="description">
+														<p>
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+														</p>
 													</div>
 												</div>
 											</div>
-										</div>
-										<!-- // CONFIRMATION MESSAGE - END // -->
+										</td>
+										<td>
+											<span class="icon date"></span>
+											<p>20/05/2017</p>
+											<div class="counter alert">
+												<span class="number">-4</span>
+												days
+											</div>
+										</td>
+										<td>
+											<div class="rag-rating">
+												<span class="traffic-light red">A</span>
+												<span class="traffic-light"></span>
+												<span class="traffic-light"></span>
+												<div class="border"></div>
+											</div>
+										</td>
+									</tr>
+									<!-- TASK 1 - END -->
 
-										<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
-										<li class="outstanding pdf-review">
-
-											<span class="dot"></span>
-
-											<form>
-
-												<!-- // FORM ITEM - 1 - START // -->
-												<div class="form-group">
-													<label class="normal" for="confirm-read">
-														<input id="confirm-read" name="confirm-read" type="checkbox" value="post">
-														<span class="icon"></span>
-														Visit report received
-
-														<!-- // STATUS - START // -->
-														<div class="status">
-															outstanding
-														</div>
-														<!-- // STATUS - END // -->
-
-													</label>
+									<!-- TASK 2 - START -->
+									<tr class="urgent-row link-for-commission-visit">
+										<td>
+											<div class="wrapper">
+												<!-- <div class="icon">
+													<span class="task-type commission-visit"></span>
+												</div> -->
+												<div class="text">
+													<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+													<p class="task-intro">Task name</p>
 												</div>
-												<!-- // FORM ITEM - 1 - END // -->
+											</div>
+										</td>
+										<td>
+											<span class="icon date"></span>
+											<p>20/04/2017</p>
+											<div class="counter alert">
+												<span class="number">-2</span>
+												day
+											</div>
+										</td>
+										<td>
+											<div class="rag-rating">
+												<span class="traffic-light red">A</span>
+												<span class="traffic-light"></span>
+												<span class="traffic-light"></span>
+												<div class="border"></div>
+											</div>
+										</td>
+									</tr>
+									<!-- TASK 2 - START -->
 
-											</form>
+									<!-- TASK 3 - START -->
+									<tr>
+										<td>
+											<div class="wrapper">
+												<!-- <div class="icon">
+													<span class="task-type review-report"></span>
+												</div> -->
+												<div class="text">
+													<a href="#" class="task">Review annual report</a>
+													<p class="task-intro">Task name</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="icon date"></span>
+											<p>25/06/2017</p>
+											<div class="counter">
+												<span class="number">5</span>
+												days
+											</div>
+										</td>
+										<td>
+											<div class="rag-rating">
+												<span class="traffic-light"></span>
+												<span class="traffic-light"></span>
+												<span class="traffic-light green">C</span>
+												<div class="border"></div>
+											</div>
+										</td>
+									</tr>
+									<!-- TASK 3 - END -->
 
-											<a href="#review-report-2" rel="modal:open">Review report</a>
+									<!-- TASK 4 - START -->
+									<tr>
+										<td>
+											<div class="wrapper">
+												<!-- <div class="icon">
+													<span class="task-type print-notice"></span>
+												</div> -->
+												<div class="text">
+													<a href="#" class="task">Print and send generated notice(s)</a>
+													<p class="task-intro">Task name</p>
+													<div class="details">
+														<p><a href="#" class="open">Description</a></a>
+													</div>
+													<div class="description">
+														<p>
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+														</p>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="icon date"></span>
+											<p>25/06/2017</p>
+											<div class="counter">
+												<span class="number">5</span>
+												days
+											</div>
+										</td>
+										<td>
+											<div class="rag-rating">
+												<span class="traffic-light"></span>
+												<span class="traffic-light"></span>
+												<span class="traffic-light green">C</span>
+												<div class="border"></div>
+											</div>
+										</td>
+									</tr>
+									<!-- TASK 4 - START -->
 
-										</li>
-										<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
+								</tbody>
+							</table>
 
-									</ol>
-								</div>
-							</div>
-							<!-- // COMMISSION VISIT MESSAGE - END // -->
-
-						</div>
-						<!-- // LIST OF DEPUTIES - END // -->
-
-						<!-- // MODAL - START // -->
-						<div id="review-report-2" style="display:none;">
-							<img src="../../../production/img/V13/document-thumbnail.png" alt="Document" class="document-item">
-						</div>
-						<!-- // MODAL - END // -->
+						</section>
 
 					</div>
 					<!-- // CLIENT TASKS - END // -->
@@ -378,7 +468,7 @@
 
 
 			<!-- =========== TAB CONTENT - 3 - START =========== -->
-			<div id="health-tab-3" class="client-details tab-content">
+			<div id="health-tab-3" class="case-details tab-content">
 				<div class="row">
 
 					<!-- // CASE DETAILS - START // -->
@@ -389,20 +479,20 @@
 
 							<h2 class="description-title">
 								Case details
-								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit case</a>
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-health">Edit case</a>
 							</h2>
 
 							<!-- ITEM - 1 - START -->
 							<div class="info-section">
 								<p>Order type:</p>
-								<p class="answer case-order-type-answer">Health &amp; welfare</p>
+								<p class="answer">Health &amp; welfare</p>
 							</div>
 							<!-- ITEM - 1 - END -->
 
 							<!-- ITEM - 2 - START -->
 							<div class="info-section">
 								<p>Court reference:</p>
-								<p class="answer case-court-ref-answer">12345678</p>
+								<p class="answer case-court-ref-answer">19273638</p>
 							</div>
 							<!-- ITEM - 2 - END -->
 
@@ -455,7 +545,7 @@
 							<!-- ITEM - 9 - START -->
 							<div class="info-section">
 								<p>How have the deputy/deputies been appointed?:</p>
-								<p class="answer deputies-appointed-answer">Sole</p>
+								<p class="answer deputies-appointed-answer">Joint</p>
 							</div>
 							<!-- ITEM - 9 - END -->
 
@@ -491,55 +581,6 @@
 							</div>
 							<!-- ITEM - 12 - END -->
 
-							<h2 class="description-title">
-								The bond
-								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit bond</a>
-								<a href="../1-create-case/1a-the-order.html#DispenseBond" class="dispense">Dispense bond</a>
-							</h2>
-
-							<!-- ITEM - 13 - START -->
-							<div class="info-section">
-								<p>Security bond?:</p>
-								<p class="answer security-bond-answer">N/A</p>
-							</div>
-							<!-- ITEM - 13 - END -->
-
-							<!-- ITEM - 14 - START -->
-							<div class="info-section bond-info">
-								<p>Required bond amount (£):</p>
-								<p class="answer">£ <span class="bond-amount-answer">N/A</span></p>
-							</div>
-							<!-- ITEM - 14 - END -->
-
-							<!-- ITEM - 15 - START -->
-							<div class="info-section bond-info">
-								<p>Company:</p>
-								<p class="answer bond-company-answer">N/A</p>
-							</div>
-							<!-- ITEM - 15 - END -->
-
-							<!-- ITEM - 16 - START -->
-							<div class="info-section bond-info">
-								<p>Bond reference number:</p>
-								<p class="answer bond-ref-number-answer">N/A</p>
-							</div>
-							<!-- ITEM - 16 - END -->
-
-							<!-- ITEM - 17 - START -->
-							<div class="info-section bond-info">
-								<p>Amount (£):</p>
-								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
-							</div>
-							<!-- ITEM - 17 - END -->
-
-							<!-- ITEM - 18 - START -->
-							<div class="info-section bond-info">
-								<p>Renewal date:</p>
-								<p class="answer bond-renewal-date-answer">N/A</p>
-							</div>
-							<!-- ITEM - 18 - END -->
-
-
 						</section>
 						<!-- ///////////// CASE INFO - END ///////////// -->
 
@@ -571,7 +612,7 @@
 
 							<div class="no-items">
 								<p>There are no deputies currently added to this client.</p>
-								<a href="../12-edit-deputy/12c-edit-deputy.html" class="edit">edit</a>
+								<a href="../5-add-edit-deputy/5a-search-deputy.html" class="edit">Add deputy</a>
 							</div>
 
 							<!-- // CONFIRMATION MESSAGE - START // -->
@@ -605,14 +646,15 @@
 						<section class="case-info">
 							<h2 class="description-title">
 								Deputy details
+								<a href="../5-add-edit-deputy/5a-search-deputy.html" class="add-deputies">Add deputy/deputies</a>
 							</h2>
-							<table id="deputies-table" class="tablesorter">
+							<table id="deputies-table">
 								<thead>
 									<tr class="six-column">
-										<th><span></span>Details</th>
-										<th><span></span>Type</th>
-										<th><span></span>Status</th>
-										<th><span></span>Relationship</th>
+										<th>Details</th>
+										<th>Type</th>
+										<th>Status</th>
+										<th>Relationship</th>
 										<th></th>
 										<th></th>
 									</tr>
@@ -642,7 +684,7 @@
 											<span class="icon welfare"><p>Health &amp; welfare</p></span>
 										</td>
 										<td>
-											<a class="main-cta edit" href="../12-edit-deputy/12c-edit-deputy.html">edit</a>
+											<a class="main-cta edit" href="../12-edit-deputy/12a-check-deputy-1.html">edit</a>
 										</td>
 									</tr>
 									<!-- DEPUTY SUMMARY ROW 1 - END -->
@@ -651,7 +693,10 @@
 									<tr class="details-row" data-value="1">
 										<td colspan="6">
 
-											<h2 class="section-title">Case details:</h2>
+											<h2 class="section-title">
+												Case details:
+												<a href="../5-add-edit-deputy/5b-add-deputy.html#Deputy-1" class="edit">Edit</a>
+											</h2>
 
 						                         <!-- // DEPUTY ITEM - 1 - START // -->
 						                         <div class="person-detail-item">
@@ -676,7 +721,17 @@
 											</div>
 											<!-- // DEPUTY ITEM - 3 - END // -->
 
-											<h2 class="section-title">Personal details:</h2>
+											<!-- // DEPUTY ITEM - 4 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is the deputy the fee payer?:</p>
+												<p class="answer">Yes</p>
+											</div>
+											<!-- // DEPUTY ITEM - 4 - END // -->
+
+											<h2 class="section-title">
+												Personal details:
+												<a href="../5-add-edit-deputy/5c-deputy-details.html#Deputy-1" class="edit">Edit</a>
+											</h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
 											<div class="person-detail-item">
@@ -747,72 +802,67 @@
 
 											<!-- // DEPUTY ITEM - 10 - START // -->
 											<div class="person-detail-item">
-												<p class="item">Digital?:</p>
-												<p class="answer">No</p>
+												<p class="item">Financial reference:</p>
+												<p class="answer">1234567890</p>
 											</div>
 											<!-- // DEPUTY ITEM - 10 - END // -->
 
-											<!-- // DEPUTY ITEM - 11 - START // -->
+											<h2 class="section-title">Additonal information:</h2>
+
+											<!-- // DEPUTY ITEM - 1 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Digital?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 1 - END // -->
+
+											<!-- // DEPUTY ITEM - 2 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Occupation:</p>
 												<p class="answer">University professor</p>
 											</div>
-											<!-- // DEPUTY ITEM - 11 - END // -->
+											<!-- // DEPUTY ITEM - 2 - END // -->
 
-											<!-- // DEPUTY ITEM - 12 - START // -->
+											<!-- // DEPUTY ITEM - 3 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Correspondence By:</p>
 												<ul class="answer">
 													<li>Email</li>
 												</ul>
 											</div>
-											<!-- // DEPUTY ITEM - 12 - END // -->
+											<!-- // DEPUTY ITEM - 3 - END // -->
 
-											<!-- // DEPUTY ITEM - 13 - START // -->
+											<!-- // DEPUTY ITEM - 4 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Special correspondence requirements:</p>
 												<ul class="answer">
 													<li>Spelling of name requires care</li>
 												</ul>
 											</div>
-											<!-- // DEPUTY ITEM - 13 - END // -->
+											<!-- // DEPUTY ITEM - 4 - END // -->
 
-											<!-- // DEPUTY ITEM - 14 - START // -->
+											<!-- // DEPUTY ITEM - 5 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Interpreter required?:</p>
 												<div class="mulitple-answers">
 													<p class="answer">No</p>
 												</div>
 											</div>
-											<!-- // DEPUTY ITEM - 14 - END // -->
+											<!-- // DEPUTY ITEM - 5 - END // -->
 
-											<!-- // DEPUTY ITEM - 15 - START // -->
+											<!-- // DEPUTY ITEM - 6 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Newsletter?:</p>
 												<p class="answer">No</p>
 											</div>
-											<!-- // DEPUTY ITEM - 15 - END // -->
+											<!-- // DEPUTY ITEM - 6 - END // -->
 
-											<!-- // DEPUTY ITEM - 16 - START // -->
-											<div class="person-detail-item">
-												<p class="item">Financial reference:</p>
-												<p class="answer">1234567890</p>
-											</div>
-											<!-- // DEPUTY ITEM - 16 - END // -->
-
-											<!-- // DEPUTY ITEM - 17 - START // -->
-											<div class="person-detail-item">
-												<p class="item">Is the deputy the fee payer?:</p>
-												<p class="answer">Yes</p>
-											</div>
-											<!-- // DEPUTY ITEM - 17 - END // -->
-
-											<!-- // DEPUTY ITEM - 18 - START // -->
+											<!-- // DEPUTY ITEM - 7 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Is the deputy a violent risk?:</p>
 												<p class="answer">No</p>
 											</div>
-											<!-- // DEPUTY ITEM - 18 - END // -->
+											<!-- // DEPUTY ITEM - 7 - END // -->
 
 										</td>
 									</tr>
@@ -841,7 +891,7 @@
 										<td>
 											<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td>
 										<td>
-											<a class="main-cta edit" href="../12-edit-deputy/12c-edit-deputy.html">edit</a>
+											<a class="main-cta edit" href="../12-edit-deputy/12a-check-deputy-2.html">edit</a>
 										</td>
 									</tr>
 									<!-- DEPUTY SUMMARY ROW 2 - END -->
@@ -850,7 +900,10 @@
 									<tr class="details-row" data-value="2">
 										<td colspan="6">
 
-											<h2 class="section-title">Case details:</h2>
+											<h2 class="section-title">
+												Case details:
+												<a href="../5-add-edit-deputy/5b-add-deputy.html#Deputy-2" class="edit">Edit</a>
+											</h2>
 
 						                         <!-- // DEPUTY ITEM - 1 - START // -->
 						                         <div class="person-detail-item">
@@ -875,7 +928,17 @@
 											</div>
 											<!-- // DEPUTY ITEM - 3 - END // -->
 
-											<h2 class="section-title">Personal details:</h2>
+											<!-- // DEPUTY ITEM - 4 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Is the deputy the fee payer?:</p>
+												<p class="answer">No</p>
+											</div>
+											<!-- // DEPUTY ITEM - 4 - END // -->
+
+											<h2 class="section-title">
+												Personal details:
+												<a href="../5-add-edit-deputy/5c-deputy-details.html#Deputy-2" class="edit">Edit</a>
+											</h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
 											<div class="person-detail-item">
@@ -946,19 +1009,28 @@
 
 											<!-- // DEPUTY ITEM - 10 - START // -->
 											<div class="person-detail-item">
-												<p class="item">Digital?:</p>
-												<p class="answer">Yes</p>
+												<p class="item">Financial reference:</p>
+												<p class="answer">1234567890</p>
 											</div>
 											<!-- // DEPUTY ITEM - 10 - END // -->
 
-											<!-- // DEPUTY ITEM - 11 - START // -->
+											<h2 class="section-title">Additonal information:</h2>
+
+											<!-- // DEPUTY ITEM - 1 - START // -->
+											<div class="person-detail-item">
+												<p class="item">Digital?:</p>
+												<p class="answer">Yes</p>
+											</div>
+											<!-- // DEPUTY ITEM - 1 - END // -->
+
+											<!-- // DEPUTY ITEM - 2 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Occupation:</p>
 												<p class="answer">Mental health assistant</p>
 											</div>
-											<!-- // DEPUTY ITEM - 11 - END // -->
+											<!-- // DEPUTY ITEM - 2 - END // -->
 
-											<!-- // DEPUTY ITEM - 12 - START // -->
+											<!-- // DEPUTY ITEM - 3 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Correspondence By:</p>
 												<ul class="answer">
@@ -966,53 +1038,39 @@
 													<li>Email</li>
 												</ul>
 											</div>
-											<!-- // DEPUTY ITEM - 12 - END // -->
+											<!-- // DEPUTY ITEM - 3 - END // -->
 
-											<!-- // DEPUTY ITEM - 13 - START // -->
+											<!-- // DEPUTY ITEM - 4 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Special correspondence requirements:</p>
 												<ul class="answer">
 													<li>N/A</li>
 												</ul>
 											</div>
-											<!-- // DEPUTY ITEM - 13 - END // -->
+											<!-- // DEPUTY ITEM - 4 - END // -->
 
-											<!-- // DEPUTY ITEM - 14 - START // -->
+											<!-- // DEPUTY ITEM - 5 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Interpreter required?:</p>
 												<div class="mulitple-answers">
 													<p class="answer">No</p>
 												</div>
 											</div>
-											<!-- // DEPUTY ITEM - 14 - END // -->
+											<!-- // DEPUTY ITEM - 5 - END // -->
 
-											<!-- // DEPUTY ITEM - 15 - START // -->
+											<!-- // DEPUTY ITEM - 6 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Newsletter?:</p>
 												<p class="answer">No</p>
 											</div>
-											<!-- // DEPUTY ITEM - 15 - END // -->
+											<!-- // DEPUTY ITEM - 6 - END // -->
 
-											<!-- // DEPUTY ITEM - 16 - START // -->
-											<div class="person-detail-item">
-												<p class="item">Financial reference:</p>
-												<p class="answer">1234567890</p>
-											</div>
-											<!-- // DEPUTY ITEM - 16 - END // -->
-
-											<!-- // DEPUTY ITEM - 17 - START // -->
-											<div class="person-detail-item">
-												<p class="item">Is the deputy the fee payer?:</p>
-												<p class="answer">No</p>
-											</div>
-											<!-- // DEPUTY ITEM - 17 - END // -->
-
-											<!-- // DEPUTY ITEM - 18 - START // -->
+											<!-- // DEPUTY ITEM - 7 - START // -->
 											<div class="person-detail-item">
 												<p class="item">Is the deputy a violent risk?:</p>
 												<p class="answer">Yes</p>
 											</div>
-											<!-- // DEPUTY ITEM - 18 - END // -->
+											<!-- // DEPUTY ITEM - 7 - END // -->
 
 										</td>
 									</tr>
@@ -1512,7 +1570,7 @@
 
 							<div class="no-items">
 								<p>There are no documents currently added to this client.</p>
-								<a href="../2-create-letter/2a-create-letter.html" class="main-cta">Create letter</a>
+								<a href="../2-create-letter/2a-create-letter.html" class="main-cta">Create correspondence</a>
 							</div>
 
 							<!-- // CONFIRMATION MESSAGE - START // -->
@@ -1536,6 +1594,234 @@
 
 						</div>
 						<!-- // LIST OF DEPUTIES - END // -->
+
+						<section class="case-info">
+
+							<h2 class="description-title">
+								Order documents
+								<a href="../2-create-letter/2a-create-letter.html" class="create-letter-button">Create correspondence</a>
+							</h2>
+
+							<!-- // DOCUMENT VIEWER - START // -->
+							<div id="document-viewer">
+
+								<!-- ============================ DOCUMENT 1 - START ============================ -->
+								<div class="doc-container document-1">
+
+									<a href="#" class="close">Close</a>
+
+									<div class="page-1">
+
+										<table class="livelink-documents">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<!-- <th>UID</th> -->
+													<th>Doc type</th>
+													<!-- <th>Case type</th> -->
+													<th>Direction</th>
+													<th>Date created</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Incoming</td>
+													<td>27/08/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+
+									<div class="page-2 document-viewing-panel">
+										<div class="control-panel">
+											<h2>Current annual report</h2>
+											<div class="buttons">
+												<a href="#" class="back">Back</a>
+												<a href="#" class="compare">Compare</a>
+												<!-- <a href="#" class="close">Close</a> -->
+											</div>
+											<img src="../../../production/img/V13/control-panel.png" alt="Document" class="control-panel-buttons">
+										</div>
+										<div class="wrapper">
+											<img src="../../../production/img/V13/document-report.png" alt="Document">
+										</div>
+									</div>
+								</div>
+								<!-- ============================ DOCUMENT 1 - END ============================ -->
+
+
+
+								<!-- ============================ DOCUMENT 2 - START ============================ -->
+								<div class="doc-container document-2">
+
+									<a href="#" class="close">Close</a>
+
+									<div class="page-1">
+
+										<table class="livelink-documents">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<!-- <th>UID</th> -->
+													<th>Doc type</th>
+													<!-- <th>Case type</th> -->
+													<th>Direction</th>
+													<th>Date created</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Incoming</td>
+													<td>27/08/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+													<!-- <td>7000-0000-2563</td> -->
+													<td>IT-SS-ORDER</td>
+													<!-- <td>DEP - PFA</td> -->
+													<td>Outgoing</td>
+													<td>27/06/2017 11:07:13</td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+
+									<div class="page-2 document-viewing-panel">
+										<!-- <span class="compare-icon"></span> -->
+										<div class="control-panel">
+											<h2>Current annual report</h2>
+											<div class="buttons">
+												<a href="#" class="back">Back</a>
+												<a href="#" class="compare">Compare</a>
+											</div>
+											<img src="../../../production/img/V13/control-panel.png" alt="Document" class="control-panel-buttons">
+										</div>
+										<div class="wrapper">
+											<img src="../../../production/img/V13/document-report.png" alt="Document">
+										</div>
+									</div>
+
+								</div>
+								<!-- ============================ DOCUMENT 2 - END ============================ -->
+
+							</div>
+							<!-- // DOCUMENT VIEWER - END // -->
+
+						</section>
 
 					</div>
 					<!-- // CLIENT DOCUMENTS - END // -->
@@ -1585,12 +1871,12 @@
 							<span>Commission a visit</span>
 						</a>
 					</li>
-					<li class="supervision">
+					<!-- <li class="supervision">
 						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 							<span class="icon"></span>
 							<span>Create correspondence</span>
 						</a>
-					</li>
+					</li> -->
 					<li class="supervision">
 						<a href="../8-create-task/8a-create-task.html" class="action create-task">
 							<span class="icon"></span>

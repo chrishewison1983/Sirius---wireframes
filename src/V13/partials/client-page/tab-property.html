@@ -30,6 +30,15 @@
 			</ul>
 			<!-- =========== TABS - END =========== -->
 
+
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 1 - START =========== -->
 			<div id="property-tab-1" class="client-details tab-content current">
 				<div class="row">
@@ -54,19 +63,19 @@
 												<ol class="summary-list">
 													<li>
 														<p>Risks to the clients:</p>
-														<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a convallis nunc.</p>
+														<p class="answer">A recent visitor report highlighted that the deputies have not been to see the client once this year. This is according to the nursing home care manager. This is contrary to what the deputy says in the report.</p>
 													</li>
 													<li>
 														<p>Outstanding issues:</p>
-														<p class="answer">Ut euismod libero sit amet felis fringilla ornare et euismod dolor.</p>
+														<p class="answer">Deputy has been aggressive in the past during phone calls.</p>
 													</li>
 													<li>
 														<p>Safegaurding issues:</p>
-														<p class="answer">Maecenas mollis ex at libero accumsan lobortis.</p>
+														<p class="answer">A recent visitor report highlighted that the client was looking very disheveled and wearing very old clothes. Has not had regular pocket money deposited.</p>
 													</li>
 													<li>
 														<p>Client is violent:</p>
-														<p class="answer">Nam vehicula urna at est aliquet, vel semper mi lacinia.</p>
+														<p class="answer">Gerald is not physically violent, but has been known to be verbally abusive to care home staff.</p>
 													</li>
 												</ol>
 											</div>
@@ -76,10 +85,15 @@
 											<div class="item no-colour highlight">
 												<section class="full-colour-block report-dates">
 													<div class="date">
-														<div class="wrapper">
-															<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
-															<h2 class="sub-text">14820940</h2>
-															<h2 class="sub-text">Report due</h2>
+														<div class="left">
+															<i class="icon property white"></i>
+														</div>
+														<div class="right">
+															<div class="wrapper">
+																<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
+																<h2 class="sub-text">14820940</h2>
+																<h2 class="sub-text">Report due</h2>
+															</div>
 														</div>
 														<div class="colour-wrapper"></div>
 													</div>
@@ -88,16 +102,55 @@
 													<div class="wrapper">
 														<h1 class="sub-text">Bond value</h1>
 														<h2 class="main-text">No bond inplace</h2>
-														<a href="../1-create-case/1a-the-order.html#EditCase" class="add">Add bond</a>
+														<a href="../1-create-case/1b-the-bond.html" class="add add-bond">Add bond</a>
 													</div>
 												</section>
 												<section id="edit-bond" class="full-colour-block main-colour center-focus payment">
 													<div class="wrapper">
 														<h1 class="sub-text">Bond value</h1>
-														<h2 class="main-text">&pound;<div class="bond-value-answer">200</div></h2>
+														<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
 														<div class="ctas">
-															<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit</a>
-															<a id="dispense-bond" href="../1-create-case/1a-the-order.html#EditCase" class="dispense">Dispense</a>
+															<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit</a>
+															<!-- <a href="#dispense" rel="modal:open" class="delete">Dispense</a> -->
+														</div>
+													</div>
+												</section>
+												<section id="bond-dispensed" class="full-colour-block main-colour center-focus payment">
+													<div class="wrapper">
+														<h1 class="sub-text">Bond dispensed</h1>
+														<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
+														<div class="ctas">
+															<script language="JavaScript">
+
+																Stamp = new Date();
+																year = Stamp.getYear();
+																if (year < 2000) year = 1900 + year;
+																document.write('<div class="bond-dispensed-date-answer">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+																var Hours;
+																var Mins;
+																var Time;
+																Hours = Stamp.getHours();
+																if (Hours >= 12) {
+																	Time = " P.M.";
+																}
+																else {
+																	Time = " A.M.";
+																}
+																if (Hours > 12) {
+																	Hours -= 12;
+																}
+																if (Hours == 0) {
+																	Hours = 12;
+																}
+																Mins = Stamp.getMinutes();
+																	if (Mins < 10) {
+																	Mins = "0" + Mins;
+																}
+																document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+															</script>
+															<br>
+															<div class="bond-dispensed-reason-answer"></div><br>
+															<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">edit</a>
 														</div>
 													</div>
 												</section>
@@ -121,6 +174,15 @@
 			</div>
 			<!-- =========== TAB CONTENT - 1 - END =========== -->
 
+
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 2 - START =========== -->
 			<div id="property-tab-2" class="client-details tab-content">
 				<div class="row">
@@ -137,8 +199,16 @@
 			</div>
 			<!-- =========== TAB CONTENT - 2 - END =========== -->
 
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 3 - START =========== -->
-			<div id="property-tab-2" class="client-details tab-content">
+			<div id="property-tab-3" class="case-details tab-content">
 				<div class="row">
 
 					<!-- // CASE DETAILS - START // -->
@@ -149,20 +219,20 @@
 
 							<h2 class="description-title">
 								Case details
-								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit case</a>
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-pfa">Edit case</a>
 							</h2>
 
 							<!-- ITEM - 1 - START -->
 							<div class="info-section">
 								<p>Order type:</p>
-								<p class="answer case-order-type-answer">Property &amp; affiars</p>
+								<p class="answer">Property &amp; affiars</p>
 							</div>
 							<!-- ITEM - 1 - END -->
 
 							<!-- ITEM - 2 - START -->
 							<div class="info-section">
 								<p>Court reference:</p>
-								<p class="answer case-court-ref-answer">12345678</p>
+								<p class="answer case-court-ref-answer">14820940</p>
 							</div>
 							<!-- ITEM - 2 - END -->
 
@@ -214,17 +284,10 @@
 
 							<!-- ITEM - 9 - START -->
 							<div class="info-section">
-								<p>There are deputies appointed jointly and severally?:</p>
-								<p class="answer deputies-jointly-severally-answer">Yes</p>
+								<p>How have the deputy / deputies been appointed?:</p>
+								<p class="answer deputies-appointed-answer">Joint</p>
 							</div>
 							<!-- ITEM - 9 - END -->
-
-							<!-- ITEM - 10 - START -->
-							<div class="info-section">
-								<p>There are deputies appointed jointly?:</p>
-								<p class="answer deputies-jointly-answer">Yes</p>
-							</div>
-							<!-- ITEM - 10 - END -->
 
 							<h2 class="description-title">
 								The files
@@ -253,8 +316,8 @@
 
 							<h2 class="description-title">
 								The bond
-								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit">Edit bond</a>
-								<a href="../1-create-case/1a-the-order.html#DispenseBond" class="dispense">Dispense bond</a>
+								<a href="../1-create-case/1b-the-bond.html" class="edit">Edit bond</a>
+								<a href="../1-create-case/1b-the-bond.html" class="bond-dispense">Dispense bond</a>
 							</h2>
 
 							<!-- ITEM - 13 - START -->
@@ -280,7 +343,7 @@
 
 							<!-- ITEM - 16 - START -->
 							<div class="info-section bond-info">
-								<p>Required bond amount (£):</p>
+								<p>Required bond amount (£ - Court order):</p>
 								<p class="answer">£ <span class="bond-amount-answer">N/A</span></p>
 							</div>
 							<!-- ITEM - 16 - END -->
@@ -301,7 +364,7 @@
 
 							<!-- ITEM - 19 - START -->
 							<div class="info-section bond-info">
-								<p>Amount (£):</p>
+								<p>Yearly premium amount (£):</p>
 								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
 							</div>
 							<!-- ITEM - 19 - END -->
@@ -353,6 +416,14 @@
 			</div>
 			<!-- =========== TAB CONTENT - 4 - END =========== -->
 
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 5 - START =========== -->
 			<div id="property-tab-5" class="client-details tab-content">
 				<div class="row">
@@ -369,6 +440,15 @@
 			</div>
 			<!-- =========== TAB CONTENT - 5 - END =========== -->
 
+
+
+
+
+
+
+
+
+
 			<!-- =========== TAB CONTENT - 6 - START =========== -->
 			<div id="property-tab-6" class="client-details tab-content">
 				<div class="row">
@@ -384,6 +464,14 @@
 				</div>
 			</div>
 			<!-- =========== TAB CONTENT - 6 - END =========== -->
+
+
+
+
+
+
+
+
 
 			<!-- =========== TAB CONTENT - 7 - START =========== -->
 			<div id="property-tab-7" class="client-details tab-content">
@@ -423,6 +511,12 @@
 							<span>Edit case</span>
 						</a>
 					</li>
+					<li class="supervision add-bond-link">
+						<a href="../1-create-case/1b-the-bond.html" class="action add-bond">
+							<span class="icon"></span>
+							<span class="text">Add bond</span>
+						</a>
+					</li>
 					<!-- // MAIN CTA's -  END // -->
 
 					<li class="seperator"></li>
@@ -433,12 +527,12 @@
 							<span>Commission a visit</span>
 						</a>
 					</li>
-					<li class="supervision">
+					<!-- <li class="supervision">
 						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 							<span class="icon"></span>
 							<span>Create correspondence</span>
 						</a>
-					</li>
+					</li> -->
 					<li class="supervision">
 						<a href="../8-create-task/8a-create-task.html" class="action create-task">
 							<span class="icon"></span>

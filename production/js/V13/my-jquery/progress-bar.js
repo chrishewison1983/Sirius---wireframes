@@ -262,3 +262,81 @@ if ($.cookie("create-case-step-1") && $.cookie("create-case-step-2") && $.cookie
      $('.create-case .border').addClass('one-hundred-percent');
 }
 // ============================================= CREATE CASE - END ============================================= //
+
+// ============================================= CREATE DEPUTY - START ============================================= //
+/////////////////// Step - 1 ///////////////////
+if ($('.create-deputy-journery').hasClass('step-1')) {
+     $('ul li.step-1').removeClass("inactive");
+     $('ul li.step-1').addClass("current");
+     $('ul li.step-2, ul li.step-3').addClass("inactive");
+
+     // Removes the HREF's from the progress bar
+     $('ul li.step-2 a, ul li.step-3 a').removeAttr("href");
+}
+
+/////////////////// Step - 2 ///////////////////
+if ($('.create-deputy-journery').hasClass('step-2')) {
+     $('ul li.step-1, ul li.step-2').removeClass("inactive");
+     $('ul li.step-2').addClass("current");
+     $('ul li.step-3').addClass("inactive");
+     $('.border').addClass('fifty-percent');
+
+     // Removes the HREF's from the progress bar
+     $('ul li.step-3 a').removeAttr("href");
+}
+
+/////////////////// Step - 3 ///////////////////
+if ($('.create-deputy-journey').hasClass('step-3')) {
+     $('ul li.step-1, ul li.step-2, ul li.step-3').removeClass("inactive");
+     $('ul li.step-3').addClass("current");
+     $('.border').addClass('one-hundred-percent');
+
+     // Removes the HREF's from the progress bar
+     // $('ul li.step-4 a').removeAttr("href");
+}
+
+// =================================== Progress bar - COOKIES =================================== //
+if ($.cookie("create-deputy-step-1") == 'true') {
+     // Progress bar classes
+     $('nav.progress-bar .step-1 a').attr('href','5b-add-deputy.html');
+
+     $('ul li.step-1').addClass('complete').removeClass('inactive').removeClass('current-incomplete');
+     $('ul li.step-2').addClass('current-incomplete').removeClass('inactive');
+
+     $('ul li.step-1 .number span').text('');
+
+     $('main.step-1 #cta-footer').show();
+
+     $('.create-deputy .border').addClass('fifty-percent');
+}
+
+if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") == 'true') {
+     // Progress bar classes
+     $('nav.progress-bar .step-1 a').attr('href','5b-add-deputy.html');
+     $('nav.progress-bar .step-2 a').attr('href','5c-deputy-details.html');
+
+     $('ul li.step-1, ul li.step-2').addClass('complete').removeClass('inactive').removeClass('current-incomplete');
+     $('ul li.step-3').addClass('current-incomplete').removeClass('inactive');
+
+     $('ul li.step-1 .number span, ul li.step-2 .number span').text('');
+
+     $('main.step-1 #cta-footer, main.step-2 #cta-footer').show();
+
+     $('.create-deputy .border').addClass('one-hundred-percent');
+}
+
+if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") && $.cookie("create-deputy-step-3") == 'true') {
+     // Progress bar classes
+     $('nav.progress-bar .step-1 a').attr('href','5b-add-deputy.html');
+     $('nav.progress-bar .step-2 a').attr('href','5c-deputy-details.html');
+     $('nav.progress-bar .step-3 a').attr('href','5d-additional-info.html');
+
+     $('ul li.step-1, ul li.step-2, ul li.step-3').addClass('complete').removeClass('inactive').removeClass('current-incomplete');
+
+     $('ul li.step-1 .number span, ul li.step-2 .number span, ul li.step-3 .number span').text('');
+
+     $('main.step-1 #cta-footer, main.step-2 #cta-footer, main.step-3 #cta-footer').show();
+
+     $('.create-deputy .border').addClass('one-hundred-percent');
+}
+// ============================================= CREATE DEPUTY - END ============================================= //

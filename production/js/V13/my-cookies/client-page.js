@@ -16,14 +16,23 @@
 //
 // // Populate side bar
 if ($.cookie('security-bond') === 'undefined' ) {
-     $('#edit-bond').hide();
+     $('#edit-bond, #bond-dispensed').hide();
      $('#create-bond').show();
-}
-if ($.cookie('security-bond') === 'no' ) {
-     $('#edit-bond').hide();
+     $('.add-bond .text').text('Add bond');
+} else if ($.cookie('security-bond') === 'No' ) {
+     $('#edit-bond, #bond-dispensed').hide();
      $('#create-bond').show();
-}
-if ($.cookie('security-bond') === 'Yes' ) {
+     $('.add-bond .text').text('Add bond');
+} else if ($.cookie('security-bond') === 'Yes' ) {
      $('#edit-bond').show();
-     $('#create-bond').hide();
+     $('#create-bond, #bond-dispensed').hide();
+     $('.add-bond .text').text('Edit bond');
+} else if ($.cookie('security-bond') === 'dispense' ) {
+     $('#bond-dispensed').show();
+     $('#create-bond, #edit-bond').hide();
+     $('.add-bond .text').text('Edit bond');
+} else {
+     $('#edit-bond, #bond-dispensed').hide();
+     $('#create-bond').show();
+     $('.add-bond .text').text('Add bond');
 }

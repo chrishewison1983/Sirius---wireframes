@@ -23,9 +23,7 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
-                         <a href="../4-client-page/4a-new-client.html#HandW">
-                              <div>H &amp; W | 19273638</div>
-                         </a>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
                          <div class="separator"> > </div>
                          <span>Create letter</span>
                     </nav>
@@ -105,7 +103,7 @@
                          <!-- =========== TAB CONTENT - 4 - START =========== -->
                          <div id="tab-4" class="tab-content side-panel">
 
-                              <h2 class="section-title">Deputy details</h2>
+                              {{= it.include('side-panel/deputy-details.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 4 - END =========== -->
@@ -140,7 +138,7 @@
                     <div class="create-letter">
 
                          <!-- =========== CORRESPONDANCE SECTION - 1 - START =========== -->
-                         <h2 class="section-title">Select recipient</h2>
+                         <h2 class="section-title">Select recipient/s</h2>
 
                          <div id="selected">
 
@@ -184,9 +182,10 @@
                                    <!-- // CORRESPONDANCE - 2 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='2'>
-                                             <span data-value='name'>Mr Gerald Brackens</span><br>
-                                             <span data-value='type' class="type">Client</span><br>
-                                             <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
+                                             <span data-value='name'>Mrs Carla Frith</span><br>
+                                             <span data-value='type' class="type">Deputy</span><br>
+                                             <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                             <span class="communication-preferences">Preferences: <strong>Welsh</strong></span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 2 - END // -->
@@ -194,9 +193,9 @@
                                    <!-- // CORRESPONDANCE - 3 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='3'>
-                                             <span data-value='name'>Mrs Carla Frith</span><br>
+                                             <span data-value='name'>Mrs Melanie Rand</span><br>
                                              <span data-value='type' class="type">Deputy</span><br>
-                                             <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
+                                             <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 3 - END // -->
@@ -204,9 +203,11 @@
                                    <!-- // CORRESPONDANCE - 4 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='4'>
-                                             <span data-value='name'>Mrs Melanie Rand</span><br>
-                                             <span data-value='type' class="type">Deputy</span><br>
-                                             <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
+                                             <span class="icon violent"><p>Violent</p></span>
+                                             <span data-value='name'>Toby Daniels</span><br>
+                                             <span data-value='type' class="type">Notified Person</span><br>
+                                             <span data-value='address' class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span>
+                                             <span class="communication-preferences">Preferences: <strong>Large print</strong>, <strong>Hearing impaired</strong></span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 4 - END // -->
@@ -214,9 +215,9 @@
                                    <!-- // CORRESPONDANCE - 5 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='5'>
-                                             <span data-value='name'>Toby Daniels</span><br>
-                                             <span data-value='type' class="type">Notified Person</span><br>
-                                             <span data-value='address' class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span>
+                                             <span data-value='name'>TrustMe Limited</span><br>
+                                             <span data-value='type' class="type">Trust Corporation</span><br>
+                                             <span data-value='address' class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 5 - END // -->
@@ -224,12 +225,13 @@
                                    <!-- // CORRESPONDANCE - 6 - START // -->
                                    <li>
                                         <a class="correspondent" data-correspondant-id='6'>
-                                             <span data-value='name'>TrustMe Limited</span><br>
-                                             <span data-value='type' class="type">Trust Corporation</span><br>
-                                             <span data-value='address' class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span>
+                                             <span data-value='name'>Mr Gerald Brackens</span><br>
+                                             <span data-value='type' class="type">Client</span><br>
+                                             <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
                                         </a>
                                    </li>
                                    <!-- // CORRESPONDANCE - 6 - END // -->
+
 
                               </ul>
 
@@ -260,8 +262,8 @@
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
      <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html#EditDoc">Create letter</a>
-     <a href="#" onclick="history.back();" class="back">Back</a>
-     <a href="#" onclick="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a>
+     <a onclick="history.back();" class="back">Back</a>
+     <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a>
 </footer>
 <!-- FOOTER CONTENT - END -->
 

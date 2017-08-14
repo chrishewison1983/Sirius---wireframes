@@ -1,0 +1,174 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V13/jquery.min.js"></script>
+
+     <!-- <script src="../../../production/js/V13/application.js"></script> -->
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- MAIN NAV - START -->
+<header class="main">
+
+     <nav>
+
+          <a href="../dashboard.html" class="logo">
+               <img src="../../../production/img/V13/sirius-logo-small.svg" alt="Sirius">
+               <p><span>My Tasks</span></p>
+          </a>
+
+          <!-- <a href="#" class="user-cta">
+               <span class="nav-icon"></span>
+               <div class="sirius-user-id">Susan Smith</div>
+          </a> -->
+
+          <a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+               <span class="nav-icon"></span>
+               <p><span>Create client</span></p>
+          </a>
+
+          <!-- <ul class="padding-wrapper">
+               <li class="actions create-letter">
+                    <a href="2-create-letter/2a-create-letter.html">
+                         <span class="nav-icon"></span>
+                         Create letter
+                    </a>
+               </li>
+               <li class="actions create-letter">
+                    <a href="#">
+                         <span class="nav-icon"></span>
+                         Add deputy
+                    </a>
+               </li>
+          </ul> -->
+
+          <a href="../index.html" class="main-cta sign-out">
+               <span class="nav-icon"></span>
+               <p><span>Sign out</span></p>
+          </a>
+
+          <!-- <a href="#" class="minimise">
+               Minimise
+          </a> -->
+
+     </nav>
+
+</header>
+<!-- MAIN NAV - END -->
+<!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header" class="confirmation-message"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<div class="preferences">
+				<a href="#" class="user-cta">
+					<div class="wrapper">
+						<span class="nav-icon"></span>
+						<div class="sirius-user-id">Susan Smith</div>
+					</div>
+				</a>
+
+				<ul class="user-settings">
+					<li><a href="#">Help and guidance</a></li>
+					<li class="multiple-options">
+						<span>Theme:</span>
+						<a href="#" class="multiple current">Light</a>
+						<a href="#" class="multiple">Dark</a>
+						<a href="#" class="multiple">Pink</a>
+					</li>
+					<li class="multiple-options">
+						<span>Font size:</span>
+						<a href="#" class="multiple current">Regular</a>
+						<a href="#" class="multiple">Large</a>
+					</li>
+				</ul>
+			</div>
+
+			<form action="search.html">
+				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="submit">
+			</form>
+
+			<label class="switch">
+				<span>Switch to: <strong>LPA Cases</strong></span>
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+
+		</div>
+	</div>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a> <div class="separator"> > </div> <span>Commission a visit</span> </nav> <h1> Your visit has been commissioned </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <!-- // EDIT DOCUMENT - START // --> <div class="large-6 large-uncentered columns"> <form> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label class="section-title" for="letter-actions">Add task to the visit</label> <textarea name="textarea" class="jqte-test" id="visit-actions"></textarea> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <legend for="visit-date-reported-day"> </legend> <div class="half"> <label for="visit-reminder-date" class="">Set a reminder for the visit:</label> <input id="visit-reminder-date" name="visit-reminder-date" type="text" value="05/06/2017" maxlength="12"> </div> <!-- <div class="one-third"> <label for="visit-reminder-day" class="sub-label">Day</label> <input id="visit-reminder-day" name="visit-reminder-day" type="text" value="05" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-month" class="sub-label">Month</label> <input id="visit-reminder-month" name="visit-reminder-month" type="text" value="04" maxlength="2"> </div> <div class="one-third"> <label for="visit-reminder-year" class="sub-label">Year</label> <input id="visit-reminder-year" name="visit-reminder-year" type="text" value="2017" maxlength="4"> </div> --> </div> <!-- // FORM ITEM - 2 - END // --> </form> </div> <!-- // EDIT DOCUMENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a id="add-letter" class="main-cta primary" href="../4-client-page/4a-new-client.html#HandW">Add actions</a> <a href="#" onclick="history.back();">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(function(){// $( ".date-input-css" ).datepicker();// })</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V13/hideShowPassword.js"></script>
+	<script src="../../../production/js/V13/jquery.cookie.js"></script>
+	<script src="../../../production/js/V13/jquery.modal.js"></script>
+	<script src="../../../production/js/V13/jquery-datepicker.js"></script>
+	<script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script>
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../../production/js/V13/my-cookies/my-cookies.js"></script>
+	<script src="../../../production/js/V13/my-cookies/commission-visit.js"></script>
+	<script src="../../../production/js/V13/my-cookies/create-case.js"></script>
+	<script src="../../../production/js/V13/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V13/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V13/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V13/my-cookies/create-deputy.js"></script>
+	<script src="../../../production/js/V13/my-cookies/client-page.js"></script>
+	<script src="../../../production/js/V13/my-cookies/report-period.js"></script>
+	<script src="../../../production/js/V13/my-cookies/supervision-level.js"></script>
+	<script src="../../../production/js/V13/my-cookies/new-event.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../../production/js/V13/my-jquery/my-jquery.js"></script>
+	<script src="../../../production/js/V13/my-jquery/client-page.js"></script>
+	<script src="../../../production/js/V13/my-jquery/commission-visit.js"></script>
+	<script src="../../../production/js/V13/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V13/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V13/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V13/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V13/my-jquery/create-letter.js"></script>
+	<script src="../../../production/js/V13/my-jquery/report-period.js"></script>
+	<script src="../../../production/js/V13/my-jquery/supervision-level.js"></script>
+	<script src="../../../production/js/V13/my-jquery/new-event.js"></script>
+	<script src="../../../production/js/V13/my-jquery/progress-bar.js"></script>
+	<!-- User Journey - JQuery - END -->
+
+	<script src="../../../production/js/V13/jquery.tablesorter.js"></script>
+
+	<!-- Autocomplete - JQuery - START -->
+	<script src="../../../production/js/V13/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V13/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V13/autocomplete/create-task.js"></script>
+	<!-- Autocomplete - JQuery - END -->
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V13/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+	</script>
+
+	<script src="../../../production/js/V13/sticky-item.js"></script>
+<!-- // JS BODY END - END // -->
+</body></html>

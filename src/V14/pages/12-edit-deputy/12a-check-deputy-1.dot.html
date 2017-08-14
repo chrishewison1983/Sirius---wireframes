@@ -1,0 +1,300 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Check deputy details</span>
+                    </nav>
+                    <h1>
+                         Check Mrs Lara Stevens details
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- // CREATE DEPUTY - START // -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="check-details">
+
+                         <h2 class="section-title">
+                              Case details
+                              <a href="../5-add-deputy/5b-add-deputy.html#Deputy-1" class="edit">Edit</a>
+                         </h2>
+
+                         <!-- // DEPUTY ITEM - 1 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Type of deputy:</p>
+                              <p class="answer">Lay</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 1 - END // -->
+
+                         <!-- // DEPUTY ITEM - 2 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Relationship to the client:</p>
+                              <div class="mulitple-answers">
+                                   <p class="answer">Sibling</p>
+                              </div>
+                         </div>
+                         <!-- // DEPUTY ITEM - 2 - END // -->
+
+                         <!-- // DEPUTY ITEM - 3 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Deputy status:</p>
+                              <p class="answer">Open</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 3 - END // -->
+
+                         <!-- // DEPUTY ITEM - 4 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Is the deputy the fee payer?:</p>
+                              <p class="answer">Yes</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 4 - END // -->
+
+                         <h2 class="section-title">
+                              Personal details:
+                              <a href="../5-add-deputy/5c-deputy-details.html#Deputy-1" class="edit">Edit</a>
+                         </h2>
+
+                         <!-- // DEPUTY ITEM - 1 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Name:</p>
+                              <p class="answer">Mrs Lara Stevens</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 1 - END // -->
+
+                         <!-- // DEPUTY ITEM - 2 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Previously Known As:</p>
+                              <p class="answer">Miss Lara Hodgeson</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 2 - END // -->
+
+                         <!-- // DEPUTY ITEM - 3 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Date of birth:</p>
+                              <p class="answer">17/07/1981</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 3 - END // -->
+
+                         <!-- // DEPUTY ITEM - 4 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Country:</p>
+                              <p class="answer">England</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 4 - END // -->
+
+                         <!-- // DEPUTY ITEM - 5 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Address:</p>
+                              <p class="answer">
+                                   34 Broomfield Place,<br>
+                                   STOKESLEY,<br>
+                                   TS9 8TU.
+                              </p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 5 - END // -->
+
+                         <!-- // DEPUTY ITEM - 6 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Is airmail required?:</p>
+                              <p class="answer">No</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 6 - END // -->
+
+                         <!-- // DEPUTY ITEM - 7 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Daytime telephone number:</p>
+                              <p class="answer">07079962666</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 7 - END // -->
+
+                         <!-- // DEPUTY ITEM - 8 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Mobile telephone number:</p>
+                              <p class="answer">07079962666</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 8 - END // -->
+
+                         <!-- // DEPUTY ITEM - 9 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Email address:</p>
+                              <p class="answer">lara.stevens@jourrapide.com</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 9 - END // -->
+
+                         <!-- // DEPUTY ITEM - 10 - START // -->
+                         <!-- <div class="person-detail-item">
+                              <p class="item">Financial reference:</p>
+                              <p class="answer">1234567890</p>
+                         </div> -->
+                         <!-- // DEPUTY ITEM - 10 - END // -->
+
+                         <h2 class="section-title">
+                              Additional information:
+                              <a href="#" class="edit">Edit</a>
+                         </h2>
+
+                         <!-- // DEPUTY ITEM - 1 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Digital?:</p>
+                              <p class="answer">No</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 1 - END // -->
+
+                         <!-- // DEPUTY ITEM - 2 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Occupation:</p>
+                              <p class="answer">University professor</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 2 - END // -->
+
+                         <!-- // DEPUTY ITEM - 3 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Correspondence By:</p>
+                              <ul class="answer">
+                                   <li>Email</li>
+                              </ul>
+                         </div>
+                         <!-- // DEPUTY ITEM - 3 - END // -->
+
+                         <!-- // DEPUTY ITEM - 4 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Special correspondence requirements:</p>
+                              <ul class="answer">
+                                   <li>Spelling of name requires care</li>
+                              </ul>
+                         </div>
+                         <!-- // DEPUTY ITEM - 4 - END // -->
+
+                         <!-- // DEPUTY ITEM - 5 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Interpreter required?:</p>
+                              <div class="mulitple-answers">
+                                   <p class="answer">No</p>
+                              </div>
+                         </div>
+                         <!-- // DEPUTY ITEM - 5 - END // -->
+
+                         <!-- // DEPUTY ITEM - 6 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Newsletter?:</p>
+                              <p class="answer">No</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 6 - END // -->
+
+                         <!-- // DEPUTY ITEM - 7 - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Is the deputy a violent risk?:</p>
+                              <p class="answer">No</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 7 - END // -->
+
+                    </div>
+
+               </div>
+               <!-- // CREATE DEPUTY - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <!-- <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html">Confirm and add deputy</a>
+     <a class="main-cta secondary" id="edit-deputy" href="12b-confirm-page.html">Edit deputy</a> -->
+     <a href="#" onclick="history.back();" class="solo-link cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

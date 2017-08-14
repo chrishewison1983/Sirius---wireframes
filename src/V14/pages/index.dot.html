@@ -1,0 +1,44 @@
+{
+  "template": "default"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="login">
+
+     <div class="row">
+          <div class="large-4 large-centered columns">
+               <form class="login-form">
+                    <img src="../../production/img/V14/sirius-logo.svg" alt="Sirius">
+                    <div class="input-holder">
+                         <label for="username">Username</label>
+                         <input type="text" name="username" id="username">
+                    </div>
+                    <div class="input-holder login-password">
+                         <label for="password" class="password">Password</label>
+                         <input type="password" name="password" id="password">
+                         <label class="show-password" for="show-password">
+                              <input id="show-password" name="show-password" type="checkbox" value="show-password">
+                              Show password
+                         </label>
+                    </div>
+                    <div class="row">
+                         <div class="large-12 large-uncentered columns">
+                    		<a class="main-cta de-activate" id="login-button" href="dashboard.html">Log in</a>
+                         </div>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <div class="colour-wrapper"></div>
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+     $('#show-password').change(function(){
+          $('#password').hideShowPassword($(this).prop('checked'));
+     });
+</script>
+<!-- SCRIPT CONTENT - END -->

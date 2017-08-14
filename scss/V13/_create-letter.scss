@@ -89,7 +89,7 @@
                     }
                }
                .info {
-                    margin: 0.25em 0 0 11%;
+                    margin: 0.25em 0 0 0;
                }
           }
      }
@@ -147,6 +147,10 @@
           width: 100%;
           height: 100%;
           padding: 1em;
+          &.preview {
+               background: url(#{$image-path}/icons/search-white.svg) no-repeat 50% 50% $main-colour;
+               background-size: 1em;
+          }
           &:hover {
                // border-bottom: none;
                background: lighten($border-colour,2.5%);
@@ -166,43 +170,86 @@
                     font-size: 1.1rem;
                }
           }
-          &.preview {
-               display: inline-block;
-               position: absolute;
-               z-index: 10;
-               top: -1em;
-               right: -1em;
-               text-indent: -1000em;
-               width: 2em;
-               height: 2em;
-               background: url(#{$image-path}/icons/search-white.svg) no-repeat 50% 50% $main-colour;
-               background-size: 1em;
-               border-radius: 50%;
-               border: none;
-          }
+     }
+}
+
+a.preview {
+     display: inline-block;
+     position: absolute;
+     z-index: 10;
+     top: -1em;
+     right: -1em;
+     text-indent: -1000em;
+     width: 2em;
+     height: 2em;
+     background: url(#{$image-path}/icons/search-white.svg) no-repeat 50% 50% $main-colour;
+     background-size: 1em;
+     border-radius: 50%;
+     border: none;
+     &:hover {
+          background: url(#{$image-path}/icons/search-white.svg) no-repeat 50% 50% $main-colour;
+          background-size: 1em;
      }
 }
 
 #inserts-list {
      li {
+          position: relative;
+          &:hover {
+               z-index: 1;
+               a {
+                    background: none;
+               }
+          }
           a {
-               font-size: 1rem;
-               border: 2px solid $border-colour;
-               border-radius: $global-border-radius;
-               padding: 1em 1em 1em 3.5em;
-               margin-bottom: 1em;
-               &:before {
-                    width: 25px;
-                    height: 25px;
+               &:hover {
+                    background: lighten($border-colour,2.5%);
+                    transform: scale(1.05);
+                    cursor: pointer;
                }
-               &:after {
-
-               }
-               &.selected {
+               &.insert {
+                    font-size: 1rem;
+                    border: 2px solid $border-colour;
+                    border-radius: $global-border-radius;
+                    padding: 1em 1em 1em 3.5em;
+                    margin-bottom: 1em;
+                    &:hover {
+                         z-index: 2;
+                    }
+                    &:before {
+                         width: 25px;
+                         height: 25px;
+                    }
                     &:after {
-                         width: 14px;
-                         height: 9px;
-                         top: 1.4em;
+
+                    }
+                    &.selected {
+                         &:after {
+                              width: 14px;
+                              height: 9px;
+                              top: 1.4em;
+                         }
+                    }
+               }
+               &.preview {
+                    border-radius: 50%;
+                    width: 1.5em;
+                    height: 1.5em;
+                    top: -0.75em;
+                    right: -0.75em;
+                    background-size: 0.75em;
+                    padding: 0;
+                    border: none;
+                    position: absolute;
+                    z-index: 10;
+                    background: url(#{$image-path}/icons/search-white.svg) no-repeat 50% 50% $main-colour;
+                    background-size: 0.75em;
+                    &:before, &:after {
+                         display: none;
+                    }
+                    &:hover {
+                         background: url(#{$image-path}/icons/search-white.svg) no-repeat 50% 50% $main-colour;
+                         background-size: 0.75em;
                     }
                }
           }
@@ -213,12 +260,14 @@
      ul.contact-list {
           li {
                a.correspondent {
-                    padding: 1em;
+                    padding: 1em 1em 3em 1em;
+                    position: relative;
                     color: $black;
                     font-family: $Montserrat;
                     font-weight: bold;
                     font-size: 1.3rem;
                     line-height: 1.1;
+                    height: 100%;
                     border-radius: $global-border-radius;
                     border: 2px solid $white-off;
                     @include standard-transition;
@@ -276,6 +325,9 @@
                          line-height: 1.2;
                     }
                     span.edit {
+                         position: absolute;
+                         left: 1.25em;
+                         bottom: 1.25em;
                          padding: 0 0 0 1.5em;
                          margin: 1em 0 0 0;
                          border: none;
@@ -328,6 +380,13 @@
                     padding: 1em 1em 1.5em 1em;
                     // background: $blue;
                     // color: $white;
+                    .title {
+                         div {
+                              &.user {
+                                   margin-left: 0;
+                              }
+                         }
+                    }
                     .info {
                          margin-left: 0;
                     }
@@ -360,11 +419,31 @@
                     font-weight: bold;
                     color: $main-colour;
                     font-size: 1.2rem;
+                    padding: 0 0 0 0;
+                    div {
+                         display: inline-block;
+                         // width: 100%;
+                         &.user {
+                              // float: left;
+                              // clear: both;
+                              font-size: 0.875rem;
+                              color: lighten($main-colour,10%);
+                              font-family: $Opensans-Regular;
+                              // width: 90%;
+                              display: block;
+                              margin-left: 3.15em;
+                              div {
+                                   color: $blue;
+                              }
+                         }
+                    }
                }
                .info {
                     display: inline-block;
-                    width: 93%;
-                    margin: 0 0 0 4.75%;
+                    width: 100%;
+                    margin: 0.75em 0 0 0;
+                    padding: 0.75em 0 0 0;
+                    border-top: 1px dashed $border-colour;
                     span {
                          display: inline-block;
                          width: 100%;
@@ -390,7 +469,7 @@
                               }
                          }
                          strong {
-                              color: ligthen($main-colour,10%);
+                              color: lighten($main-colour,10%);
                               font-family: $Opensans-Bold;
                          }
                     }
@@ -414,6 +493,23 @@
 
 .add-correspondent {
 }
+
+.communication-preferences {
+     display: inline-block;
+     width: 100%;
+     border-top: 1px dashed $border-colour;
+     padding: 0.75em 0 0 0;
+     margin: 0.75em 0 0 0;
+     font-size: 1rem;
+     font-family: $Opensans-Regular;
+     font-weight: normal;
+     color: $text-main-colour;
+     strong {
+          color: $black;
+          font-family: $Opensans-Bold;
+     }
+}
+
 
 .create-letter {
      ul {
@@ -484,7 +580,7 @@
                     }
                     span.sub-text {
                          font-family: $Opensans-Regular;
-                         color: lighten($main-colour,40%);
+                         color: $text-main-colour;
                          font-size: 1rem;
                     }
                     span.type {

@@ -23,9 +23,7 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
-                         <a href="../4-client-page/4a-new-client.html#HandW">
-                              <div>H &amp; W | 19273638</div>
-                         </a>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
                          <div class="separator"> > </div>
                          <span>Create correspondence</span>
                     </nav>
@@ -105,7 +103,7 @@
                          <!-- =========== TAB CONTENT - 4 - START =========== -->
                          <div id="tab-4" class="tab-content side-panel">
 
-                              <h2 class="section-title">Deputy details</h2>
+                              {{= it.include('side-panel/deputy-details.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 4 - END =========== -->
@@ -146,7 +144,7 @@
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
                          <a href="2e-add-insert.html" class="letter-title inserts-journey">
                               <span class="doc-title">Acknowledgement Letter.doc</span>
-                              <span>Inserts available</span>
+                              <!-- <span>Inserts available</span> -->
                          </a>
                     </div>
                     <!-- // DOCUMENT - 1 - END // -->

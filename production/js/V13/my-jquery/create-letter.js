@@ -4,9 +4,18 @@ $(document).ready(function(){
      $('.preview').click(function(e){
           e.preventDefault();
           var docName = $(this).siblings().find('.doc-title').text();
+          var insertName = $(this).siblings().find('span').text();
           $('#preview-doc').find('h1').text(docName);
+          $('#preview-insert').find('h1').text(insertName);
+
+          var insertID = $(this).data('preview-id');
+          $('#preview-insert .preview').hide();
+          $(`#preview-insert [data-preview-id="${insertID}"]`).show();
+          // console.log(insertID);
      });
 });
+
+
 
 // $('#edit-letter > .doc-1').addClass('test');
 
@@ -72,7 +81,7 @@ $('#drafts .edit').click(function(e) {
      e.preventDefault();
      $('.tab-content').find('li').removeClass('selected');
      $(this).closest('li').addClass('selected');
-     var docTitle = $(this).closest('li').find('.title').text();
+     var docTitle = $(this).closest('li').find('.title .doc-type').text();
      var docRecipient = $(this).closest('li').find('.recipient-name').text();
 
      $('#action-panel').find('.current-document-title').text(docTitle);
@@ -109,7 +118,7 @@ $('#drafts .edit').click(function(e) {
 // Delete draft
 $('#drafts .delete, #client-drafts .delete').click(function(e) {
      e.preventDefault();
-     var deletedDocTitle = $(this).closest('li').find('.title').text();
+     var deletedDocTitle = $(this).closest('li').find('.title .doc-type').text();
 
      $(this).closest('li').addClass('delete-item');
 
@@ -172,6 +181,7 @@ $(document).ready(function() {
 
      $('.letter-title, .correspondent').click(function(e) {
           persistSelectedInserts();
+          // persistSelectedLetter();
      });
 
 });
@@ -183,7 +193,7 @@ $(document).ready(function () {
           $('#edit-letter .doc-1').addClass('selected');
           var currentDocTitle = $('#action-panel').find('.current-document-title').text();
           var currentDocRecipient = $('#action-panel').find('.recipient-name').text();
-          $('.doc-1 .title').text(currentDocTitle);
+          $('.doc-1 .title .doc-type').text(currentDocTitle);
           $('.doc-1 .recipient-name').text(currentDocRecipient);
      }
 
@@ -199,4 +209,16 @@ $(document).ready(function () {
           // console.log('#edit-document').text();
      });
 
+});
+
+// Change tab for the letter journey
+$('.change-tab').click(function(e) {
+     e.preventDefault();
+     $('.tab-content').removeClass('current');
+     $('#health-tab-7').addClass('current');
+     $('.client-details .tab-link').removeClass('current');
+     $('.client-details .tab-link[data-tab="health-tab-7"]').addClass('current');
+     $('#document-viewer .document-1 .page-1').hide();
+     $('#document-viewer .document-1 .page-2').show();
+     $('#document-viewer .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
 });

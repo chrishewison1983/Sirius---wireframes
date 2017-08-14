@@ -1,11 +1,17 @@
 // =================================== Create deputy - COOKIES =================================== //
 // Add deputy populate
-$("#add-new-deputy, #add-deputy, #add-another-deputy, .check-edit").on("click", function (e) {
+$('#new-deputy-details .place-holder-text').show();
+$('#new-deputy-details .person-detail-item').hide();
+
+$("#add-new-deputy, #add-deputy-step-2, #add-another-deputy, .check-edit").on("click", function (e) {
      $.cookie("deputy-first-name", $("#deputy-first-name").val(), {path:'/'});
      $.cookie("deputy-last-name", $("#deputy-last-name").val(), {path:'/'});
 });
 
-$("#add-deputy, #add-another-deputy").on("click", function (e) {
+// Step 1
+$("#add-deputy-step-1").on("click", function (e) {
+
+     $.cookie("create-deputy-step-1", true, {path:'/'});
 
      // DEPUTY CASE DETAILS
      $.cookie("deputy-type", $("#deputy-type").val(), {path:'/'});
@@ -14,6 +20,13 @@ $("#add-deputy, #add-another-deputy").on("click", function (e) {
      // Other - these are dependent on other values
      $.cookie("deputy-other-relation", $("#deputy-other-relation").val(), {path:'/'});
      $.cookie("deputy-other-professional", $("#deputy-other-professional").val(), {path:'/'});
+     $.cookie("deputy-fee-payer", $("#deputy-fee-payer").is(':checked'), {path:'/'});
+
+});
+
+$("#add-deputy-step-2").on("click", function (e) {
+
+     $.cookie("create-deputy-step-2", true, {path:'/'});
 
      // DEPUTY PERSONAL DETAILS
      $.cookie("deputy-title", $("#deputy-title").val(), {path:'/'});
@@ -22,16 +35,26 @@ $("#add-deputy, #add-another-deputy").on("click", function (e) {
      $.cookie("deputy-last-name", $("#deputy-last-name").val(), {path:'/'});
      $.cookie("deputy-previous-name", $("#deputy-previous-name").val(), {path:'/'});
      $.cookie("deputy-dob", $("#deputy-dob").val(), {path:'/'});
-     $.cookie("deputy-country", $("#deputy-country").val(), {path:'/'});
      $.cookie("deputy-address-line-1", $("#deputy-address-line-1").val(), {path:'/'});
      $.cookie("deputy-address-line-2", $("#deputy-address-line-2").val(), {path:'/'});
      $.cookie("deputy-address-line-3", $("#deputy-address-line-3").val(), {path:'/'});
      $.cookie("deputy-address-town", $("#deputy-address-town").val(), {path:'/'});
      $.cookie("deputy-manual-postcode", $("#deputy-manual-postcode").val(), {path:'/'});
+     $.cookie("deputy-country", $("#deputy-country").val(), {path:'/'});
+     $.cookie("deputy-country-desc", $("#deputy-country-description").val(), {path:'/'});
      $.cookie("deputy-airmail", $("input[name=deputy-airmail]:checked").val(), {path:'/'});
      $.cookie("deputy-phone-number", $("#deputy-phone-number").val(), {path:'/'});
      $.cookie("deputy-mob-number", $("#deputy-mob-number").val(), {path:'/'});
      $.cookie("deputy-email", $("#deputy-email").val(), {path:'/'});
+     $.cookie("deputy-financial", $("#deputy-financial").val(), {path:'/'});
+
+});
+
+$("#add-deputy-step-3, #add-another-deputy").on("click", function (e) {
+
+     $.cookie("create-deputy-step-3", true, {path:'/'});
+
+     // ADDITIONAL DEPUTY DETAILS
      $.cookie("deputy-digital", $("input[name=deputy-digital]:checked").val(), {path:'/'});
      $.cookie("deputy-occupation", $("#deputy-occupation").val(), {path:'/'});
      $.cookie("deputy-correspondence-post", $("#deputy-correspondence-post:checked").val(), {path:'/'});
@@ -45,14 +68,17 @@ $("#add-deputy, #add-another-deputy").on("click", function (e) {
      $.cookie("deputy-interpreter", $("input[name=deputy-interpreter]:checked").val(), {path:'/'});
      $.cookie("deputy-interpreter-details", $("#deputy-interpreter-details").val(), {path:'/'});
      $.cookie("deputy-newsletter", $("input[name=deputy-newsletter]:checked").val(), {path:'/'});
-     $.cookie("deputy-financial", $("#deputy-financial").val(), {path:'/'});
-     $.cookie("deputy-fee-payer", $("#deputy-fee-payer").is(':checked'), {path:'/'});
      $.cookie("deputy-violent-risk", $("#deputy-violent-risk").is(':checked'), {path:'/'});
 
 });
 
 // DEPUTY CASE DETAILS
 if ($.cookie("deputy-type")) {
+     $("#deputy-type").val($.cookie("deputy-type"));
+
+     $('#deputy-relationship').parent().removeClass('read-only');
+     $('#deputy-relationship').removeAttr('disabled');
+
      $("#edit-deputy-type").val($.cookie("deputy-type"));
      $(".deputy-type-answer").text($.cookie("deputy-type"));
 }
@@ -63,26 +89,77 @@ $('.edit-relationship-public').hide();
 
 // VALUES for: deputy-type - LAY
 if ($.cookie("deputy-type") == 'Lay') {
+     $('.relationship-lay').show();
+     $('.relationship-professional').hide();
+     $('.relationship-public').hide();
+
      $('.edit-relationship-lay').show();
      $('.edit-relationship-professional').hide();
      $('.edit-relationship-public').hide();
-     $("#edit-deputy-relationship-lay").val($.cookie("deputy-relationship"));
+
+     $("#deputy-relationship, #edit-deputy-relationship").html(`
+          <option value=''>-- Select --</option>
+          <option value='Sibling'>Sibling</option>
+          <option value='Spouse'>Spouse</option>
+          <option value='Child of Patient'>Child of Patient</option>
+          <option value='Parent of Patient'>Parent of Patient</option>
+          <option value='Civil Partner'>Civil Partner</option>
+          <option value='Friend'>Friend</option>
+          <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
+          <option value='Other Relation'>Other Relation</option>
+     `);
+     $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Lay options</strong>');
+
+     $("#deputy-relationship").val($.cookie("deputy-relationship"));
+     $("#edit-deputy-relationship").val($.cookie("deputy-relationship"));
      $(".deputy-relationship-answer").text($.cookie("deputy-relationship"));
 }
 // VALUES for: deputy-type - PROFESSIONAL
 if ($.cookie("deputy-type") == 'Professional') {
+     $('.relationship-lay').hide();
+     $('.relationship-professional').show();
+     $('.relationship-public').hide();
+
      $('.edit-relationship-lay').hide();
      $('.edit-relationship-professional').show();
      $('.edit-relationship-public').hide();
-     $("#edit-deputy-relationship-professional").val($.cookie("deputy-relationship"));
+
+     $("#deputy-relationship").html(`
+          <option value=''>-- Select --</option>
+          <option value='Panel Deputy'>Panel Deputy</option>
+          <option value='Bank Official'>Bank Official</option>
+          <option value='Solicitor'>Solicitor</option>
+          <option value='Accountant'>Accountant</option>
+          <option value='Unregulated Pro Deputy'>Unregulated Pro Deputy</option>
+          <option value='Legal Professional'>Legal Professional</option>
+          <option value='Trust Companies (Not NHS/PCT)'>Trust Companies (Not NHS/PCT)</option>
+          <option value='Other Professional'>Other Professional</option>
+     `);
+     $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Professional options</strong>');
+
+     $("#deputy-relationship").val($.cookie("deputy-relationship"));
+     $("#edit-deputy-relationship").val($.cookie("deputy-relationship"));
      $(".deputy-relationship-answer").text($.cookie("deputy-relationship"));
 }
 // VALUES for: deputy-type - PUBLIC AUTHORITY
 if ($.cookie("deputy-type") == 'Public authority') {
+     $('.relationship-lay').hide();
+     $('.relationship-professional').hide();
+     $('.relationship-public').show();
+
      $('.edit-relationship-lay').hide();
      $('.edit-relationship-professional').hide();
      $('.edit-relationship-public').show();
-     $("#edit-deputy-relationship-public").val($.cookie("deputy-relationship"));
+
+     $("#deputy-relationship").html(`
+          <option value='Local Authority'>Local Authority</option>
+          <option value='NHS Trust'>NHS Trust</option>
+          <option value='PCT'>PCT</option>
+     `);
+     $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Public authority options</strong>');
+
+     $("#deputy-relationship").val($.cookie("deputy-relationship"));
+     $("#edit-deputy-relationship").val($.cookie("deputy-relationship"));
      $(".deputy-relationship-answer").text($.cookie("deputy-relationship"));
 }
 
@@ -109,8 +186,23 @@ if ($.cookie("deputy-relationship") == 'Other Professional') {
 }
 
 if ($.cookie("deputy-status")) {
+     $("#deputy-status").val($.cookie("deputy-status"));
      $("#edit-deputy-status").val($.cookie("deputy-status"));
      $(".deputy-status-answer").text($.cookie("deputy-status"));
+}
+
+if ($.cookie("deputy-fee-payer") == 'true') {
+     $("#deputy-fee-payer").parent().addClass('checked');
+     $("#deputy-fee-payer").attr('checked', 'checked');
+     $("#edit-deputy-fee-payer").parent().addClass('checked');
+     $("#edit-deputy-fee-payer").attr('checked', 'checked');
+     $(".deputy-fee-payer-answer").text('Yes');
+} else {
+     $("#deputy-fee-payer").parent().removeClass('checked');
+     $("#deputy-fee-payer").removeAttr('checked');
+     $("#edit-deputy-fee-payer").parent().removeClass('checked');
+     $("#edit-deputy-fee-payer").removeAttr('checked');
+     $(".deputy-fee-payer-answer").text('No');
 }
 
 // DEPUTY PERSONAL DETAILS
@@ -122,12 +214,35 @@ if ($.cookie("deputy-first-name")) {
      $("#edit-deputy-first-name").val($.cookie("deputy-first-name"));
      $("#deputy-first-name").val($.cookie("deputy-first-name"));
      $(".deputy-first-name-answer").text($.cookie("deputy-first-name"));
+     $('#new-deputy-details .place-holder-text').hide();
+     $('#new-deputy-details .person-detail-item').show();
+}
+if ($.cookie("deputy-middle-name")) {
+     $("#edit-deputy-middle-name").val($.cookie("deputy-middle-name"));
+     $(".deputy-middle-name-answer").text($.cookie("deputy-middle-name"));
 }
 if ($.cookie("deputy-last-name")) {
      $("#edit-deputy-last-name").val($.cookie("deputy-last-name"));
      $("#deputy-last-name").val($.cookie("deputy-last-name"));
      $(".deputy-last-name-answer").text($.cookie("deputy-last-name"));
+     $('#new-deputy-details .place-holder-text').hide();
+     $('#new-deputy-details .person-detail-item').show();
 }
+
+// if ($("#deputy-first-name, #deputy-last-name").val() == '') {
+//      $('#add-deputy, #add-another-deputy').addClass('de-activate');
+//      $('#add-deputy').removeAttr('href');
+//      $('#add-another-deputy').removeAttr('href');
+// } else if ($.cookie("deputy-first-name") && $.cookie("deputy-last-name")) {
+//      $('#add-deputy, #add-another-deputy').addClass('de-activate');
+//      $('#add-deputy').removeAttr('href');
+//      $('#add-another-deputy').removeAttr('href');
+// } else {
+//      $('#add-deputy, #add-another-deputy').removeClass('de-activate');
+//      $('#add-deputy').attr('href', '../4-client-page/4a-new-client.html#HandW');
+//      $('#add-another-deputy').attr('href' ,'#');
+// }
+
 if ($.cookie("deputy-previous-name")) {
      $("#edit-deputy-previous-name").val($.cookie("deputy-previous-name"));
      $(".deputy-previous-name-answer").text($.cookie("deputy-previous-name"));
@@ -136,23 +251,21 @@ if ($.cookie("deputy-dob")) {
      $("#edit-deputy-dob").val($.cookie("deputy-dob"));
      $(".deputy-dob-answer").text($.cookie("deputy-dob"));
 }
-if ($.cookie("deputy-country")) {
-     $("#edit-deputy-country").val($.cookie("deputy-country"));
-     $(".deputy-country-answer").text($.cookie("deputy-country"));
-}
 if ($.cookie("deputy-address-line-1")) {
      $("#edit-deputy-address-line-1").val($.cookie("deputy-address-line-1"));
      $(".deputy-address-line-1-answer").text($.cookie("deputy-address-line-1"));
 }
-if ($.cookie("deputy-address-line-2")) {
+if ($.cookie("deputy-address-line-2") == '' || $.cookie("deputy-address-line-2") == null || $.cookie("deputy-address-line-2") == 'undefined') {
+     $(".deputy-address-line-2-answer").hide();
+} else if ($.cookie("deputy-address-line-2")) {
      $("#edit-deputy-address-line-2").val($.cookie("deputy-address-line-2"));
-     $(".deputy-address-line-2-answer").text($.cookie("deputy-address-line-2"));
+     $(".deputy-address-line-2-answer").html($.cookie("deputy-address-line-2") + ',<br>');
 }
 if ($.cookie("deputy-address-line-3") == '' || $.cookie("deputy-address-line-3") == null || $.cookie("deputy-address-line-3") == 'undefined') {
      $(".deputy-address-line-3-answer").hide();
 } else if ($.cookie("deputy-address-line-3")) {
      $("#edit-deputy-address-line-3").val($.cookie("deputy-address-line-3"));
-     $(".deputy-address-line-3-answer").text($.cookie("deputy-address-line-3") + ',<br>');
+     $(".deputy-address-line-3-answer").html($.cookie("deputy-address-line-3") + ',<br>');
 }
 if ($.cookie("deputy-address-town")) {
      $("#edit-deputy-address-town").val($.cookie("deputy-address-town"));
@@ -160,12 +273,24 @@ if ($.cookie("deputy-address-town")) {
 }
 if ($.cookie("deputy-manual-postcode")) {
      $("#edit-deputy-manual-postcode").val($.cookie("deputy-manual-postcode"));
-     $(".deputy-manual-postcode-answer").text($.cookie("deputy-manual-postcode"));
+     $(".deputy-manual-postcode-answer").html($.cookie("deputy-manual-postcode") + ',<br>');
 }
-if ($.cookie("deputy-airmail")) {
+if ($.cookie("deputy-country")) {
+     $("#edit-deputy-country").val($.cookie("deputy-country"));
+     $(".deputy-country-answer").html($.cookie("deputy-country") + '.');
+     $('.deputy-outside-uk, .deputy-airmail-required, .deputy-airmail-required-answer').hide();
+} else if ($.cookie("deputy-country") == 'Outside') {
+     $("#edit-deputy-country-desc").val($.cookie("deputy-country"));
+     $('.deputy-outside-uk, .deputy-airmail-required, .deputy-airmail-required-answer').show();
+     $(".deputy-country-answer").html($.cookie("deputy-country-desc") + '.');
+}
+if ($.cookie("deputy-airmail") == '' || $.cookie("deputy-airmail") == null || $.cookie("deputy-airmail") == 'undefined') {
+     $(".deputy-airmail-answer").text('No');
+} else if ($.cookie("deputy-airmail")) {
      $("#edit-deputy-airmail").val($.cookie("deputy-airmail"));
      $(".deputy-airmail-answer").text($.cookie("deputy-airmail"));
 }
+
 if ($.cookie("deputy-phone-number")) {
      $("#edit-deputy-phone-number").val($.cookie("deputy-phone-number"));
      $(".deputy-phone-number-answer").text($.cookie("deputy-phone-number"));
@@ -178,6 +303,21 @@ if ($.cookie("deputy-email")) {
      $("#edit-deputy-email").val($.cookie("deputy-email"));
      $(".deputy-email-answer").text($.cookie("deputy-email"));
 }
+if ($.cookie("deputy-financial")) {
+     $("#edit-deputy-financial").val($.cookie("deputy-financial"));
+     $(".deputy-financial-answer").text($.cookie("deputy-financial"));
+}
+if ($.cookie("deputy-violent-risk") == 'true') {
+     $("#edit-deputy-violent-risk").parent().addClass('checked');
+     $("#edit-deputy-violent-risk").attr('checked', 'checked');
+     $(".deputy-violent-risk-answer").text('Yes');
+} else {
+     $("#edit-deputy-violent-risk").parent().removeClass('checked');
+     $("#edit-deputy-violent-risk").removeAttr('checked');
+     $(".deputy-violent-risk-answer").text('No');
+}
+
+// DEPUTY ADDITIONAL DETAILS
 if ($.cookie("deputy-digital")) {
      $("#edit-deputy-digital").val($.cookie("deputy-digital"));
      $(".deputy-digital-answer").text($.cookie("deputy-digital"));
@@ -289,37 +429,6 @@ if ($.cookie("deputy-newsletter") == 'Yes') {
      $("#edit-deputy-newsletter-no").attr('checked', 'checked');
      $("#edit-deputy-newsletter-no").parent().addClass('checked');
 }
-if ($.cookie("deputy-financial")) {
-     $("#edit-deputy-financial").val($.cookie("deputy-financial"));
-     $(".deputy-financial-answer").text($.cookie("deputy-financial"));
-}
-if ($.cookie("deputy-fee-payer") == 'true') {
-     $("#edit-deputy-fee-payer").parent().addClass('checked');
-     $("#edit-deputy-fee-payer").attr('checked', 'checked');
-     $(".deputy-fee-payer-answer").text('Yes');
-} else {
-     $("#edit-deputy-fee-payer").parent().removeClass('checked');
-     $("#edit-deputy-fee-payer").removeAttr('checked');
-     $(".deputy-fee-payer-answer").text('No');
-}
-if ($.cookie("deputy-violent-risk") == 'true') {
-     $("#edit-deputy-violent-risk").parent().addClass('checked');
-     $("#edit-deputy-violent-risk").attr('checked', 'checked');
-     $(".deputy-violent-risk-answer").text('Yes');
-} else {
-     $("#edit-deputy-violent-risk").parent().removeClass('checked');
-     $("#edit-deputy-violent-risk").removeAttr('checked');
-     $(".deputy-violent-risk-answer").text('No');
-}
-
-
-
-
-
-
-
-
-
 
 // $('.remove-deputy').click(function(){
 //      $.cookie("remove-case-number", $("h2").text(), {path:'/'});
@@ -347,4 +456,22 @@ if ($.cookie("user-journey") == 2) {
      setTimeout(function() {
           $("#list-of-deputies #deputy-confirmation").hide(500)
      }, 5000);
+}
+
+// Side panel details
+$('#new-deputy-case-details').hide();
+$('#new-deputy-additional-info').hide();
+
+if ($.cookie("create-deputy-step-1")) {
+     $('#new-deputy-case-details').show();
+     $('#new-deputy-personal-details, #new-deputy-additional-info').hide();
+}
+
+if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") == 'true') {
+     $('#new-deputy-case-details, #new-deputy-personal-details').show();
+     $('#new-deputy-additional-info').hide();
+}
+
+if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") && $.cookie("create-deputy-step-3") == 'true') {
+     $('#new-deputy-case-details, #new-deputy-personal-details, #new-deputy-additional-info').show();
 }

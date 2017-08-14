@@ -5,7 +5,7 @@
 {{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default">
+<main class="default create-case">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header" class="confirmation-message">
@@ -26,7 +26,7 @@
                          <span>Create case</span>
                     </nav>
                     <h1>
-                         Your case has been created
+                         Your case has been created - add a task
                     </h1>
                </div>
           </div>
@@ -35,75 +35,183 @@
      </div>
      <!-- SECTION HEADER - END -->
 
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
      <!-- CONTENT WRAPPER - START -->
-     <div class="content-wrapper create-case-journey">
+     <div class="content-wrapper">
 
           <div class="row">
 
-               <!-- // EDIT DOCUMENT - START // -->
-               <div class="large-6 large-uncentered columns">
+               <div class="large-8 large-uncentered columns side-panel-parent">
 
-                    <form>
-                         <!-- // FORM ITEM - 1 - START // -->
-                         <div class="form-group">
-                              <label class="section-title" for="letter-actions">Add task to the case</label>
-                              <textarea name="textarea" class="jqte-test" id="case-actions"></textarea>
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
                          </div>
-                         <!-- // FORM ITEM - 1 - END // -->
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
 
-                         <!-- // FORM ITEM - 2 - START // -->
-                         <div class="form-group">
-                              <legend for="case-date-reported-day">
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
 
-                              </legend>
-                              <div class="half">
-                                   <label for="case-reminder-date" class="">Set a reminder for the case task:</label>
-                                   <input id="case-reminder-date" name="case-reminder-date" type="text" value="05/06/2017" maxlength="12">
-                              </div>
-                              <!-- <div class="one-third">
-                                   <label for="visit-reminder-day" class="sub-label">Day</label>
-                                   <input id="visit-reminder-day" name="visit-reminder-day" type="text" value="05" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="visit-reminder-month" class="sub-label">Month</label>
-                                   <input id="visit-reminder-month" name="visit-reminder-month" type="text" value="04" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="visit-reminder-year" class="sub-label">Year</label>
-                                   <input id="visit-reminder-year" name="visit-reminder-year" type="text" value="2017" maxlength="4">
-                              </div> -->
+                              <h2 class="section-title">Deputy details</h2>
+
                          </div>
-                         <!-- // FORM ITEM - 2 - END // -->
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
 
-                    </form>
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
 
                </div>
-               <!-- // EDIT DOCUMENT - END // -->
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="commission-visit right">
+
+                         <form class="edit-client-form">
+
+                              <h2 class="section-title">Add a task</h2>
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <label for="task-type">Task type</label>
+                                   <select id="task-type" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="CWRD">Case Work - Reply Due</option>
+                                        <option value="ORRE">Order - Review the order</option>
+                                        <option value="ORAL">Order - Allocate to team</option>
+                                        <option value="INAR">Intro - Arrange settling in</option>
+                                        <option value="INSE">Intro - Settling in call</option>
+                                        <option value="INNDR">Intro - New Deputy Report</option>
+                                        <option value="VICO">Visit - Commission</option>
+                                        <option value="VIRE">Visit - Required</option>
+                                        <option value="VIURE">Visit - Urgent required</option>
+                                        <option value="VIRD">Visit - Report due</option>
+                              	</select>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group">
+                                   <label for="task-name">Task name</label>
+                                   <input id="task-name" name="task-name" type="text" value="">
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group task-notes">
+                                   <label for="task-notes">Task notes</label>
+                                   <textarea name="textarea" class="jqte-test" id="task-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
+
+                              <!-- // FORM ITEM - 4a - START // -->
+                              <div class="form-group assign-to">
+                                   <legend>Assign to</legend>
+                                   <label for="assign-to-user" class="radio">
+                                        <input id="assign-to-user" type="radio" name="assign-to" value="User">
+                                        User
+                                   </label>
+                                   <label for="assign-to-team" class="radio">
+                                        <input id="assign-to-team" type="radio" name="assign-to" value="Team">
+                                        Team
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 4a - END // -->
+
+                              <!-- // FORM ITEM - 4b - START // -->
+                              <div class="form-group answer-task-user">
+                                   <label for="task-user">Search for user</label>
+                                   <input id="task-user" name="task-user" type="text" value="">
+                              </div>
+                              <!-- // FORM ITEM - 4b - END // -->
+
+                              <!-- // FORM ITEM - 4c - START // -->
+                              <div class="form-group answer-task-team">
+                                   <label for="task-team">Select team</label>
+                                   <select id="task-team" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="1">Attorneyship Investigation Team</option>
+                                        <option value="2">Complaints Team</option>
+                                        <option value="3">Dispatch Team</option>
+                                        <option value="4">EPA Team</option>
+                                        <option value="5">File Creation Team</option>
+                                        <option value="6">Filing Team</option>
+                                        <option value="8">Registration Team</option>
+                                        <option value="7">Safeguarding Team</option>
+                              	</select>
+                              </div>
+                              <!-- // FORM ITEM - 4c - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group">
+                                   <label for="datepicker">Due date</label>
+                                   <div class="date-wrapper">
+                                        <input type="text" id="datepicker">
+                                        <i class="date"></i>
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                         </form>
+
+                    </div>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
 
           </div>
 
-
      </div>
      <!-- CONTENT WRAPPER - END -->
-
-     <!-- CTA-FOOTER - START -->
-     <div id="cta-footer" class="cta-row">
-          <a id="confirm-create-case" class="main-cta primary" href="../4-client-page/4a-new-client.html">Add task</a>
-          <a href="#" onclick="history.back();">Don't create task</a>
-     </div>
-     <!-- CTA-FOOTER - END -->
-
 
 </main>
 <!-- PRIMARY CONTENT - END -->
 
 <!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <input type="button" class="main-cta primary de-activate" id="confirm-create-case" onclick="location.href='../4-client-page/4a-new-client.html';" value="Add task" disabled />
+     <a href="#" id="dont-create" href="../4-client-page/4a-new-client.html">Don't create task</a>
+</footer>
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
-<script>
-     // $(function(){
-	// 	$( ".date-input-css" ).datepicker();
-	// })
-</script>
 <!-- SCRIPT CONTENT - END -->
