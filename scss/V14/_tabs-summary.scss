@@ -168,7 +168,7 @@
                          // height: calc(100% - 40px);  /* main-column-wrapper height less padding */
                          section {
                               width: 100%;
-                              margin: 0 0 2em 0;
+                              margin: 0 0 1.25em 0;
                               flex: 1;
                               flex-shrink: 0;
                               overflow: auto;
@@ -372,7 +372,7 @@
                                    float: none;
                                    color: $white;
                                    border-bottom: 1px dashed $white;
-                                   margin: 0.75em 0.5em 0 0.5em;
+                                   margin: 0.75em 0 0 0;
                                    position: relative;
                                    top: -0.15em;
                                    background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
@@ -391,7 +391,28 @@
                                    }
                               }
                               &#edit-bond {
-
+                                   .secondary-bond {
+                                        display: inline-block;
+                                        margin: 0.5em 0;
+                                        float: left;
+                                        width: 100%;
+                                   }
+                                   &.warning {
+                                        .wrapper {
+                                             padding-left: 10em;
+                                             background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 9% 50%;
+                                             background-size: 5em;
+                                             .main-text, .sub-text, .ctas {
+                                                  text-align: left;
+                                             }
+                                        }
+                                        .main-text {
+                                             font-size: 1.6rem;
+                                        }
+                                        .sub-text {
+                                             font-size: 1rem;
+                                        }
+                                   }
                               }
                               &#bond-dispensed {
                                    background: $red;
@@ -566,7 +587,7 @@
                          }
                     }
                     section, a {
-                         h1, h2 {
+                         h1, h2, h3 {
                               width: 100%;
                               font-family: $Montserrat;
                               font-weight: bold;

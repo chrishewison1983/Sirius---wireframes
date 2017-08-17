@@ -25,15 +25,6 @@ $("#create-case-button").on("click", function (e) {
      $.cookie("deputies-appointed", $("input[name=deputies-appointed]:checked").val(), {path:'/'});
      // $.cookie("deputies-jointly", $("input[name=deputies-jointly]:checked").val(), {path:'/'});
 
-     // Cookies for side bar - FILE LOCATION
-     $.cookie("file-location", $("input[name=file-location]:checked").val(), {path:'/'});
-     $.cookie("file-address-line-1", $("#file-address-line-1").val(), {path:'/'});
-     $.cookie("file-address-line-2", $("#file-address-line-2").val(), {path:'/'});
-     $.cookie("file-address-line-3", $("#file-address-line-3").val(), {path:'/'});
-     $.cookie("file-address-town", $("#file-address-town").val(), {path:'/'});
-     $.cookie("file-address-county", $("#file-address-county").val(), {path:'/'});
-     $.cookie("file-address-postcode", $("#file-address-postcode").val(), {path:'/'});
-
 });
 ////////////////////////////////////// COLLECT COOKIES - THE ORDER - END //////////////////////////////////////
 
@@ -128,34 +119,6 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#deputies-appointed-joint').parent().addClass('checked');
           $('#deputies-appointed-joint').attr('checked', 'checked');
           $('#deputies-appointed-sole, #deputies-appointed-joint-severally').parent().removeClass('checked');
-     }
-
-     // File location
-     if ($.cookie('file-location') === 'Physical' ) {
-          $('#case-file-physical').parent().addClass('checked');
-          $('#case-file-physical').attr('checked', 'checked');
-          $('#case-file-scanned').parent().removeClass('checked');
-          $('#case-file-scanned').removeAttr('checked', 'checked');
-
-          $('.file-location-hidden').show();
-
-          $("#file-address-line-1").val($.cookie("file-address-line-1"));
-          $("#file-address-line-2").val($.cookie("file-address-line-2"));
-          $("#file-address-line-3").val($.cookie("file-address-line-3"));
-          $("#file-address-town").val($.cookie("file-address-town"));
-          $("#file-address-county").val($.cookie("file-address-county"));
-          $("#file-address-postcode").val($.cookie("file-address-postcode"));
-     }
-     if ($.cookie('file-location') === 'Scanned' ) {
-          $('#case-file-scanned').parent().addClass('checked');
-          $('#case-file-scanned').attr('checked', 'checked');
-          $('#case-file-physical').parent().removeClass('checked');
-          $('#case-file-physical').removeAttr('checked', 'checked');
-          $('.file-location-hidden').hide();
-     }
-     if ($.cookie('file-location') === 'undefined' ) {
-          $('#case-file-scanned, #case-file-physical').parent().removeClass('checked');
-          $('.file-location-hidden').hide();
      }
 
 }
@@ -482,4 +445,15 @@ if ($.cookie('edit-security-bond-journey') === 'true') {
 
 } else {
 
+}
+
+// BOND WARNING
+$('.secondary-bond').hide();
+
+if ($.cookie('bond-amount') == '150,000' && $.cookie('bond-value') == '150,000') {
+     $('.secondary-bond').hide();
+     $('#edit-bond').removeClass('warning');
+} else {
+     $('.secondary-bond').show();
+     $('#edit-bond').addClass('warning');
 }

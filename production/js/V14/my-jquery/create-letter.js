@@ -148,7 +148,7 @@ $('ul#inserts-list li a').click(function(e) {
      $(this).toggleClass('selected');
 });
 
-$('#draft-list').hide();
+// $('#draft-list').hide();
 
 $(document).ready(function() {
 
