@@ -49,11 +49,11 @@
 
                          <!-- =========== TABS - START =========== -->
                          <ul id="side-panel-tabs" class="tabs">
-                              <li class="tab-link" data-tab="tab-1">
+                              <li class="tab-link current" data-tab="tab-1">
                                    <span class="info"></span>
                                    <p>Letter info</p>
                               </li>
-                              <li class="tab-link current" data-tab="tab-2">
+                              <li class="tab-link" data-tab="tab-2">
                                    <span class="draft-letters"></span>
                                    <p>Drafts</p>
                               </li>
@@ -77,7 +77,7 @@
                          <!-- =========== TABS - END =========== -->
 
                          <!-- =========== TAB CONTENT - 1 - START =========== -->
-                         <div id="tab-1" class="tab-content side-panel">
+                         <div id="tab-1" class="tab-content side-panel current">
 
                               {{= it.include('side-panel/letter-details.html') }}
 
@@ -85,7 +85,7 @@
                          <!-- =========== TAB CONTENT - 1 - END =========== -->
 
                          <!-- =========== TAB CONTENT - 2 - START =========== -->
-                         <div id="tab-2" class="tab-content side-panel current">
+                         <div id="tab-2" class="tab-content side-panel">
 
                               {{= it.include('side-panel/drafts.html') }}
 
@@ -142,8 +142,8 @@
                     <!-- // DOCUMENT - 1 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2e-add-insert.html" class="letter-title inserts-journey">
-                              <span class="doc-title">Acknowledgement Letter.doc</span>
+                         <a href="2e-add-insert.html" class="letter-title inserts-journey" data-letter-id='1'>
+                              <span class="doc-title" data-value='letter'>Acknowledgement Letter.doc</span>
                               <!-- <span>Inserts available</span> -->
                          </a>
                     </div>
@@ -152,8 +152,8 @@
                     <!-- // DOCUMENT - 2 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Blank Receiver.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='2'>
+                              <span class="doc-title" data-value='letter'>Blank Receiver.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 2 - END // -->
@@ -161,8 +161,8 @@
                     <!-- // DOCUMENT - 3 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Closure letter - attorney.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='3'>
+                              <span class="doc-title" data-value='letter'>Closure letter - attorney.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 3 - END // -->
@@ -170,8 +170,8 @@
                     <!-- // DOCUMENT - 4 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Family Care Payments COP App.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='4'>
+                              <span class="doc-title" data-value='letter'>Family Care Payments COP App.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 4 - END // -->
@@ -179,8 +179,8 @@
                     <!-- // DOCUMENT - 5 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Family Care Payments COP No Action.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='5'>
+                              <span class="doc-title" data-value='letter'>Family Care Payments COP No Action.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 5 - END // -->
@@ -190,8 +190,8 @@
                     <!-- // DOCUMENT - 6 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">OPG Complaint Ack.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='6'>
+                              <span class="doc-title" data-value='letter'>OPG Complaint Ack.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 6 - END // -->
@@ -199,8 +199,8 @@
                     <!-- // DOCUMENT - 7 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">OPG Complaint Esc.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='7'>
+                              <span class="doc-title" data-value='letter'>OPG Complaint Esc.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 7 - END // -->
@@ -208,8 +208,8 @@
                     <!-- // DOCUMENT - 8 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">OPG English.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='8'>
+                              <span class="doc-title" data-value='letter'>OPG English.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 8 - END // -->
@@ -217,8 +217,8 @@
                     <!-- // DOCUMENT - 9 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Original Death Cert Lay.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='9'>
+                              <span class="doc-title" data-value='letter'>Original Death Cert Lay.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 9 - END // -->
@@ -226,8 +226,8 @@
                     <!-- // DOCUMENT - 10 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Original Documents Letter.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='10'>
+                              <span class="doc-title" data-value='letter'>Original Documents Letter.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 10 - END // -->
@@ -235,8 +235,8 @@
                     <!-- // DOCUMENT - 11 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Third party letter.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='11'>
+                              <span class="doc-title" data-value='letter'>Third party letter.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 11 - END // -->
@@ -244,8 +244,8 @@
                     <!-- // DOCUMENT - 12 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Visit follow up letter.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='12'>
+                              <span class="doc-title" data-value='letter'>Visit follow up letter.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 12 - END // -->
@@ -253,8 +253,8 @@
                     <!-- // DOCUMENT - 13 - START // -->
                     <div class="document-item">
                          <a href="#preview-doc" rel="modal:open" class="preview">Preview</a>
-                         <a href="2b-add-correspondance.html" class="letter-title">
-                              <span class="doc-title">Visit follow up letter.doc</span>
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='13'>
+                              <span class="doc-title" data-value='letter'>Visit follow up letter.doc</span>
                          </a>
                     </div>
                     <!-- // DOCUMENT - 13 - END // -->
@@ -297,4 +297,13 @@
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
+<script>
+
+     $(document).ready(function(){
+          sessionStorage.setItem('selected-letter', JSON.stringify($('#draft-list li').map(function() {
+               return $(this).text().trim();
+          }).toArray()));
+     });
+
+</script>
 <!-- SCRIPT CONTENT - END -->

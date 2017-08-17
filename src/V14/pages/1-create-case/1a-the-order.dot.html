@@ -23,7 +23,7 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
-                         <span class="state">Create case</span>
+                         <span class="state">Create order</span>
                     </nav>
                     <h1>
                          The order
@@ -143,6 +143,20 @@
 
                               <!-- // FORM ITEM - 5 - START // -->
                               <div class="form-group">
+                                   <label for="case-received-date">Order received date</label>
+                                   <input id="case-received-date" name="received-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group">
+                                   <label for="case-order-title">Order title</label>
+                                   <input id="case-order-title" name="order-title" type="text" class="" value="">
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                              <!-- // FORM ITEM - 7 - START // -->
+                              <div class="form-group">
                                    <label for="case-order-status">Order status</label>
                                    <select id="case-order-status" class="full-width">
                                         <option value="">-- Select --</option>
@@ -152,26 +166,12 @@
                                         <option value="Duplicate">Duplicate</option>
                                    </select>
                               </div>
-                              <!-- // FORM ITEM - 5 - END // -->
-
-                              <!-- // FORM ITEM - 6 - START // -->
-                              <div class="form-group">
-                                   <label for="case-status-date">Status date</label>
-                                   <input id="case-status-date" name="status-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
-                              </div>
-                              <!-- // FORM ITEM - 6 - END // -->
-
-                              <!-- // FORM ITEM - 7 - START // -->
-                              <div class="form-group">
-                                   <label for="case-received-date">Order received date</label>
-                                   <input id="case-received-date" name="received-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
-                              </div>
                               <!-- // FORM ITEM - 7 - END // -->
 
                               <!-- // FORM ITEM - 8 - START // -->
                               <div class="form-group">
-                                   <label for="case-order-title">Order title</label>
-                                   <input id="case-order-title" name="order-title" type="text" class="" value="">
+                                   <label for="case-status-date">Status date</label>
+                                   <input id="case-status-date" name="status-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
                               </div>
                               <!-- // FORM ITEM - 8 - END // -->
 
@@ -196,75 +196,21 @@
                          </form>
                          <!-- =========== THE ORDER SECTION - END =========== -->
 
-                         <h2 class="section-title">
-                              The files <div class="optional">(optional)</div>
-                         </h2>
-
-                         <!-- =========== FILE LOCATION SECTION - START =========== -->
-                         <form class="case-details">
-
-                              <!-- // FORM ITEM - 1a - START // -->
-                              <div class="form-group file-location">
-                                   <legend>File location</legend>
-                                   <label for="case-file-physical" class="radio">
-                                        <input id="case-file-physical" type="radio" name="file-location" value="Physical">
-                                        Physical
-                                   </label>
-                                   <label for="case-file-scanned" class="radio">
-                                        <input id="case-file-scanned" type="radio" name="file-location" value="Scanned">
-                                        Scanned
-                                   </label>
-                              </div>
-                              <!-- // FORM ITEM - 1a - END // -->
-
-                              <!-- // FORM ITEM - 1b - START // -->
-                              <div class="form-group file-location-hidden hidden">
-                                   <div class="form-group">
-                                        <label for="file-address-line-1">File address</label>
-                                        <input id="file-address-line-1" name="file-address-line-1" type="text">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="file-address-line-2" class="hide">File address</label>
-                                        <input id="file-address-line-2" name="file-address-line-2" type="text">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="file-address-line-3" class="hide">File address</label>
-                                        <input id="file-address-line-3" name="file-address-line-3" type="text">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="file-address-town">City/Town</label>
-                                        <input id="file-address-town" name="file-address-town" type="text">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="file-address-county">County</label>
-                                        <input id="file-address-county" name="file-address-county" type="text">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="file-address-postcode">Postcode</label>
-                                        <input id="file-address-postcode" name="file-address-postcode" type="text" class="one-third">
-                                   </div>
-                              </div>
-                              <!-- // FORM ITEM - 1b - END // -->
-
-                         </form>
-                         <!-- =========== FILE LOCATION SECTION - END =========== -->
-
                     </div>
 
                </div>
 
           </div>
 
-
      </div>
      <!-- CONTENT WRAPPER - END -->
 
      <!-- // MODAL - START // -->
      <div id="edit-case-modal" style="display:none;">
-          <h1>Edit case</h1>
-          <p>Are you sure you wish to edit the case details?</p>
+          <h1>Edit order</h1>
+          <p>Are you sure you wish to edit the order details?</p>
           <div class="cta-row">
-               <a class="main-cta" rel="modal:close" id="confirm-edit-order">Edit case</a>
+               <a class="main-cta" rel="modal:close" id="confirm-edit-order">Edit order</a>
                <!-- <a class="main-cta" href="1a-the-order.html#Edit" value="Refresh Page" onClick="window.location.reload()">Edit case</a> -->
                <a href="#" rel="modal:close">Cancel</a>
           </div>

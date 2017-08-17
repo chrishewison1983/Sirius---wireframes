@@ -27,7 +27,7 @@
                          <div class="separator"> > </div>
                          <!-- <a href="5a-search-deputy.html">Create new deputy</a>
                          <div class="separator"> > </div> -->
-                         <span>Create new deputy</span>
+                         <span class="page-title">Create new deputy</span>
                     </nav>
                     <h1>
                          <div class="deputy-first-name-answer">Joe</div>'s personal details
@@ -50,25 +50,7 @@
      <!-- CONTENT WRAPPER - START -->
      <div class="content-wrapper">
 
-          <div class="row">
-               <div class="large-12 large-uncentered columns">
-                    <!-- // CONFIRMATION MESSAGE - START // -->
-                    <div id="deputy-added" class="confirmation-panel">
-                         <div class="content">
-                              <h2>
-                                   <span></span>
-                                   <div class="deputy-first-name">Deputy first name</div>
-                                   <div class="deputy-last-name">Deputy last name</div>
-                                   has now been created as a deputy to
-                                   <div class="client-first-name">Client first name</div>
-                                   <div class="client-last-name">Client last name</div><div>'s</div>
-                                   account
-                              </h2>
-                         </div>
-                    </div>
-                    <!-- // CONFIRMATION MESSAGE - END // -->
-               </div>
-          </div>
+          {{= it.include('confirmation/deputy-added.html') }}
 
           <div class="row">
 
@@ -144,39 +126,21 @@
 
                          <h2 class="section-title">Add <div class="deputy-first-name-answer">Joe</div>'s personal details</h2>
 
-                         <!-- ////////// ERROR MESSAGE - START //////////-->
-                         <div class="row">
-                              <div class="large-12 large-uncentered columns">
-                                   <div id="error-message" class="confirmation-panel">
-                                        <div class="content">
-                                             <h1>
-                                                  <span></span>
-                                                  There appears to be a problem with the form
-                                             </h1>
-                                             <p>Some of the fileds require your attention:</p>
-                                             <ul>
-                                                  <li class="too-young"><a href="#dob-error">Date of birth - the deputy must be older than 18 years of age</a></li>
-                                                  <li class="too-old"><a href="#dob-error">Date of birth - the deputy cannot be born before 1880</a></li>
-                                             </ul>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <!-- ////////// ERROR MESSAGE - END //////////-->
+                         {{= it.include('errors/deputy-dob.html') }}
 
                          <!-- // FORM ITEM - 1 - START // -->
                          <div class="form-group">
                               <label for="deputy-title">Title</label>
                               <select id="deputy-title">
                                    <option>-- Select --</option>
-                                   <option>Mr.</option>
-                                   <option>Mrs.</option>
-                                   <option>Ms.</option>
-                                   <option>Miss</option>
-                                   <option>Dr.</option>
-                                   <option>Prof.</option>
-                                   <option>Rev.</option>
-                                   <option>Other</option>
+                                   <option value="Mr">Mr.</option>
+                                   <option value="Mrs">Mrs.</option>
+                                   <option value="Ms">Ms.</option>
+                                   <option value="Miss">Miss</option>
+                                   <option value="Dr">Dr.</option>
+                                   <option value="Prof">Prof.</option>
+                                   <option value="Rev">Rev.</option>
+                                   <option value="Other">Other</option>
                               </select>
                          </div>
                          <!-- // FORM ITEM - 1 - END // -->
@@ -258,11 +222,11 @@
                               <label for="deputy-country">Country</label>
                               <select id="deputy-country" class="full-width">
                                    <option>-- Select --</option>
-                                   <option>England</option>
-                                   <option>Ireland</option>
-                                   <option>Scotland</option>
-                                   <option>Wales</option>
-                                   <option>Northern Ireland</option>
+                                   <option value="England">England</option>
+                                   <option value="Ireland">Ireland</option>
+                                   <option value="Scotland">Scotland</option>
+                                   <option value="Wales">Wales</option>
+                                   <option value="Northern Ireland">Northern Ireland</option>
                                    <option value="Outside">Outside of the United Kingdom</option>
                               </select>
                          </div>
@@ -350,9 +314,9 @@
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
      <!-- <a class="main-cta primary" id="add-deputy" href="#">Add deputy</a> -->
-     <a class="main-cta primary" id="add-deputy-step-1" href="5c-case-details.html">Save and continue</a>
-     <a class="main-cta primary" id="add-deputy-error-2000">Save and continue</a>
-     <a class="main-cta primary" id="add-deputy-error-1880">Save and continue</a>
+     <a class="main-cta primary" id="add-deputy-step-1" href="5c-case-details.html">Save &amp; continue</a>
+     <a class="main-cta primary" id="add-deputy-error-2000">Save &amp; continue</a>
+     <a class="main-cta primary" id="add-deputy-error-1880">Save &amp; continue</a>
      <a onclick="history.back();" class="back">Back</a>
      <a href="../4-client-page/4a-new-client.html#HandW" class="cancel">Cancel</a>
 </footer>

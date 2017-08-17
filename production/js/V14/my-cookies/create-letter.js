@@ -69,6 +69,7 @@ if ($.cookie("inserts-added") == 'true') {
 // Send to print
 $("#confirm-print-send").on("click", function (e) {
      $.cookie("sent-to-print", true, {path:'/'});
+     $.cookie("create-letter-started", false, {path:'/'});
 });
 
 if ($.cookie("sent-to-print") == 'true') {

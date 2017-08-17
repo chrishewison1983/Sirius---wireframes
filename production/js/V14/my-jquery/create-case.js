@@ -56,6 +56,17 @@ $('.bond-date-edit').click( function(e){
      $('#bond-renewal-date').removeAttr('disabled');
 });
 
+// THE BOND - activates the other section
+$('.bond-other-answer').hide();
+
+$("#bond-company").change(function () {
+     if ($(this).val() == 'Other') {
+          $('.bond-other-answer').slideDown();
+     } else {
+          $('.bond-other-answer').slideUp();
+     }
+});
+
 // $("#case-order-title").click( function(){
 //      $('#cta-footer').slideDown('slow');
 // });
@@ -205,26 +216,54 @@ $("#confirm-edit-order").click( function(){
 });
 // =================================== Edit Case - END - JAVASCRIPT =================================== //
 
-// =================================== Dispence Bond - START - JAVASCRIPT =================================== //
-$('#dispense-bond-true').hide();
+// =================================== Dispense Bond - START - JAVASCRIPT =================================== //
+// $('#dispense-bond-true').hide();
 
-$("#bond-dispense").keyup(function() {
-     if ($(this).val() == 'dispense the bond') {
-          $('#dispense-bond-true').show();
-          $('#dispense-bond-false').hide();
-     } else {
-          $('#dispense-bond-true').hide();
-          $('#dispense-bond-false').show();
-     }
-
-});
+// $("#bond-dispense").keyup(function() {
+//      if ($(this).val() == 'dispense the bond') {
+//           $('#dispense-bond-true').show();
+//           $('#dispense-bond-false').hide();
+//      } else {
+//           $('#dispense-bond-true').hide();
+//           $('#dispense-bond-false').show();
+//      }
+//
+// });
 $("#dispense-bond-true").on("click", function (e) {
      $('.bond-answer-hidden').slideUp('slow');
+     $('.why-edit-bond').slideUp('slow');
      $('.dispense-bond-info').slideDown();
      $('#dispense-bond').hide();
-     $('#bond-details-section .section-title').text('Dispence the bond');
-     $('.the-bond-info #section-header h1').text('Dispence the bond');
+     $('#bond-details-section .section-title').text('Dispense with the bond');
+     $('.the-bond-info #section-header h1').text('Dispense with the bond');
      $('#dispense-bond-button').show();
      $('#create-bond-button').hide();
 });
-// =================================== Dispence Bond - END - JAVASCRIPT =================================== //
+// =================================== Dispense Bond - END - JAVASCRIPT =================================== //
+
+// Error message
+$('.wrong-reference').hide();
+$('#add-bond-error').hide();
+
+$("#bond-ref-number").on('input', function(event){
+     if ($(this).val() == 'HOW1234') {
+          $('#create-bond-button').hide();
+          $("#add-bond-error").show();
+     } else {
+          $("#create-bond-button").show();
+          $("#add-bond-error").hide();
+     }
+});
+
+// DOB - error details
+$("#add-bond-error").click( function(){
+     // Show's the error message
+     $('#error-message').show();
+
+     // Add anchor links to the selected groups
+     $('#ref-error').addClass('error-field');
+
+     // Error relavent text
+     $('li.wrong-reference').css('display', 'list-item');
+     $('span.wrong-reference').css('display', 'inline-block');
+});

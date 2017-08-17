@@ -244,9 +244,10 @@ $("#create-bond-button").on("click", function (e) {
      $.cookie("security-bond", $("input[name=security-bond]:checked").val(), {path:'/'});
 
      $.cookie("bond-amount", $("#bond-amount").val(), {path:'/'});
-     $.cookie("bond-company", $("#bond-company").val(), {path:'/'});
-     $.cookie("bond-ref-number", $("#bond-ref-number").val(), {path:'/'});
      $.cookie("bond-value", $("#bond-value").val(), {path:'/'});
+     $.cookie("bond-company", $("#bond-company").val(), {path:'/'});
+     $.cookie("bond-company-other", $("#bond-other").val(), {path:'/'});
+     $.cookie("bond-ref-number", $("#bond-ref-number").val(), {path:'/'});
      $.cookie("bond-renewal-date", $("#bond-renewal-date").val(), {path:'/'});
 
 });
@@ -263,7 +264,7 @@ $('.edit-bond').on("click", function (e) {
 $("#dispense-bond-button").on("click", function (e) {
      $.cookie("security-bond", 'dispense', {path:'/'});
      $.cookie("bond-dispensed-date", $("#bond-dispensed-date").val(), {path:'/'});
-     $.cookie("bond-dispensed-reason", $("#bond-dispensed-reason").val(), {path:'/'});
+     $.cookie("bond-dispensed-reason", $("input[name=dispensed-reason]:checked").val(), {path:'/'});
 });
 
 ////////////////////////////////////// COLLECT COOKIES - THE BOND - END //////////////////////////////////////
@@ -276,6 +277,8 @@ $(".bond-dispensed-date-answer").hide();
 $(".bond-dispensed-reason-answer").hide();
 $('#dispense-bond-button').hide();
 $('#dispense-bond').hide();
+$('.case-info h2 .edit-bond, .actions-nav .edit-bond').hide();
+$('.why-edit-bond').hide();
 // $('#bond-dispensed-true').hide();
 // $('.radio.dispense-bond-option').hide();
 
@@ -292,6 +295,13 @@ if ($.cookie('security-bond') === 'Yes' ) {
      $('.the-bond-details .optional').hide();
      $('.security-bond').hide();
      $('#dispense-bond').hide();
+
+     $('.the-bond-info #section-header .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html">Client summary</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#property">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
+     $('.the-bond-info #section-header h1').text('Edit bond');
+
+     $('.case-info h2 .add-bond, .actions-nav .add-bond').hide();
+     $('.case-info h2 .edit-bond, .actions-nav .edit-bond').show();
+     $('.why-edit-bond').hide();
 }
 if ($.cookie('security-bond') === 'edit' ) {
      $('.bond-info').show();
@@ -305,6 +315,14 @@ if ($.cookie('security-bond') === 'edit' ) {
      $('.the-bond-details .optional').hide();
      $('.security-bond').hide();
      $('#dispense-bond').show();
+
+     $('.the-bond-info #section-header .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html">Client summary</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#property">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
+     $('.the-bond-info #section-header h1').text('Edit the bond');
+     $('#bond-details-section .section-title').text('Edit the bond');
+
+     $('.case-info h2 .add-bond, .actions-nav .add-bond').hide();
+     $('.case-info h2 .edit-bond, .actions-nav .edit-bond').show();
+     $('.why-edit-bond').show();
 }
 if ($.cookie('security-bond') === 'No' ) {
      $('.bond-info').hide();
@@ -316,6 +334,11 @@ if ($.cookie('security-bond') === 'No' ) {
      $('#create-bond').show();
      $('#bond-dispensed, #edit-bond').hide();
      $('.security-bond').show();
+     $('.the-bond-info #section-header h1').text('Create a bond');
+
+     $('.case-info h2 .add-bond').show();
+     $('.case-info h2 .edit-bond').hide();
+     $('.why-edit-bond').hide();
 }
 if ($.cookie('security-bond') === 'undefined' ) {
      $('.bond-info').hide();
@@ -327,6 +350,11 @@ if ($.cookie('security-bond') === 'undefined' ) {
      $('#create-bond').show();
      $('#bond-dispensed, #edit-bond').hide();
      $('.security-bond').show();
+     $('.the-bond-info #section-header h1').text('Create a bond');
+
+     $('.case-info h2 .add-bond, .actions-nav .add-bond').show();
+     $('.case-info h2 .edit-bond, .actions-nav .edit-bond').hide();
+     $('.why-edit-bond').hide();
 }
 if ($.cookie('security-bond') === 'dispense' ) {
      $('#bond-dispensed').show();
@@ -342,8 +370,8 @@ if ($.cookie('security-bond') === 'dispense' ) {
      // $('#case-security-bond-yes, #case-security-bond-no').parent().removeClass('checked');
      // $('#case-security-bond-yes, #case-security-bond-no').removeAttr('checked');
 
-     $('#bond-details-section .section-title').text('Dispence the bond');
-     $('.the-bond-info #section-header h1').text('Dispence the bond');
+     $('#bond-details-section .section-title').text('Dispense with the bond');
+     $('.the-bond-info #section-header h1').text('Dispense with the bond');
      $('.bond-info').show();
      $('.security-bond-answer').text('Dispensed');
      $('.bond-dispensed-date-answer').show();
@@ -358,25 +386,44 @@ if ($.cookie('security-bond') === 'dispense' ) {
      $('.security-bond').hide();
 
      $('.add-bond-link, .edit-bond').hide();
+     $('.case-info h2 .add-bond, .actions-nav .add-bond').hide();
+     $('.case-info h2 .edit-bond, .actions-nav .edit-bond').hide();
+     $('.why-edit-bond').hide();
 }
 
 if ($.cookie("bond-dispensed-date")) {
      $(".bond-dispensed-date-answer").text($.cookie("bond-dispensed-date"));
      $("#bond-dispensed-date").val($.cookie("bond-dispensed-date"));
 }
-if ($.cookie("bond-dispensed-reason")) {
+if ($.cookie("bond-dispensed-reason") == 'Court instructions') {
      $(".bond-dispensed-reason-answer").text($.cookie("bond-dispensed-reason"));
-     $("#bond-dispensed-reason").val($.cookie("bond-dispensed-reason"));
+     $("#dispensed-reason-court").parent().addClass('checked');
+     $("#dispensed-reason-court").attr('checked', 'checked');
+     $("#dispensed-reason-keying").parent().removeClass('checked');
+     $("#dispensed-reason-keying").removeAttr('checked');
+}
+if ($.cookie("bond-dispensed-reason") == 'Keying error') {
+     $(".bond-dispensed-reason-answer").text($.cookie("bond-dispensed-reason"));
+     $("#dispensed-reason-keying").parent().addClass('checked');
+     $("#dispensed-reason-keying").attr('checked', 'checked');
+     $("#dispensed-reason-court").parent().removeClass('checked');
+     $("#dispensed-reason-court").removeAttr('checked');
 }
 
 if ($.cookie("bond-amount")) {
      $(".bond-amount-answer").text($.cookie("bond-amount"));
      $("#bond-amount").val($.cookie("bond-amount"));
 }
-if ($.cookie("bond-company")) {
+
+if ($.cookie("bond-company") == 'Other') {
+     $(".bond-company-answer").hide();
+     $('.bond-other-answer-text').show();
+     $(".bond-other-answer-text").text($.cookie("bond-company-other"));
+} else {
      $(".bond-company-answer").text($.cookie("bond-company"));
      $("#bond-company").val($.cookie("bond-company"));
-
+     $(".bond-company-answer").show();
+     $('.bond-other-answer-text').hide();
 }
 if ($.cookie("bond-ref-number")) {
      $(".bond-ref-number-answer").text($.cookie("bond-ref-number"));

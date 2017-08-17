@@ -193,7 +193,7 @@
                     </p>
                     <hr>
                     <div class="cta-row">
-                         <a class="main-cta" id="confirm-print-send">Print &amp; send document</a>
+                         <a class="main-cta" id="confirm-print-send" href="../4-client-page/4a-new-client.html">Print &amp; send document</a>
                          <a href="#" rel="modal:close" class="back">Back to my letter</a>
                     </div>
                </div>
@@ -238,6 +238,9 @@
           });
           JSON.parse(sessionStorage.getItem('selected-inserts')).forEach(function(insert) {
                $('#inserts-selected').append('<li>' + insert + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+               $('#draft-list').append('<li>' + letter + '</li>');
           });
      });
 

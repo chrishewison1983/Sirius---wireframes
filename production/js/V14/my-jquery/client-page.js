@@ -1,5 +1,7 @@
 // =================================== Client Page - JAVASCRIPT =================================== //
 // Client summary
+$('.normal-status').css('display', 'inline-block');
+
 $(document).ready(function () {
 
      // Show the state when the client is at normal status, they're compliant & no outstanding payment
@@ -21,7 +23,7 @@ $(document).ready(function () {
           $("#section-header.client-page").removeClass('welsh-message, deceased-message').addClass('violent-risk-message');
           $("#section-header.client-page .normal-status").hide();
 
-          $('#section-header.client-page .client-nav').addClass('violent');
+          $('.new-client .client-nav').addClass('violent');
      }
 
      // Show the state when the client is Welsh
@@ -46,6 +48,7 @@ $(document).ready(function () {
           $('#client-health').show();
           $('.edit-case-link').show();
           $('.add-deputy-link').show();
+          $('.normal-status').css('display', 'inline-block');
           $('#section-header.client-page .normal-status').text('H & W | 19273638');
           $('#section-header.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>H & W | 19273638</span>');
      }
@@ -58,6 +61,7 @@ $(document).ready(function () {
           $('#client-property').show();
           $('.edit-case-link').show();
           $('.add-deputy-link').show();
+          $('.normal-status').css('display', 'inline-block');
           $('#section-header.client-page .normal-status').text('PFA | 14820940');
           $('#section-header.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>PFA | 14820940</span>');
      }
@@ -73,6 +77,8 @@ $(document).ready(function () {
                     <h1>Create case</h1>
                </a>
           `);
+
+          $('.normal-status').css('display', 'inline-block');
 
           // Change the compliant status
           $(".compliant").removeClass('alert-colour').addClass('normal-colour');

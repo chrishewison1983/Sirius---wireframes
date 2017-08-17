@@ -108,7 +108,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-8 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal-status">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-4 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+ <div class="row"> <div class="large-10 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal-status">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-2 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
 <nav class="actions-nav header">
 
 	<ul>
@@ -124,12 +124,12 @@
 				<span>Create case</span>
 			</a>
 		</li>
-		<li class="supervision">
+		<!-- <li class="supervision">
 			<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 				<span class="icon"></span>
 				<span>Create correspondence</span>
 			</a>
-		</li>
+		</li> -->
 		<!-- <li class="supervision add-deputy-link">
 			<a href="../5-add-deputy/5a-search-deputy.html" class="action create-deputy">
 				<span class="icon"></span>
@@ -226,6 +226,69 @@
 
 </nav>
 <!-- PRIMARY NAV - END -->
+ <!-- ///////////////////////////////// LETTER CONFIRMATION - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="correspondence-sent" class="confirmation-panel">
+			<a href="#" class="close-panel finished-letter">Close</a>
+			<div class="content">
+				<h2>
+					<span></span>
+					Your letters have been sent to print
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+					</script>
+				</h2>
+				<div class="row details">
+					<div class="large-4 large-uncentered columns">
+						<h2>Letter title:</h2>
+						<ul id="document-letter-title">
+							<li class="document-title"></li>
+						</ul>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<h2>Recipients:</h2>
+						<ul id="document-recipients">
+						</ul>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<h2>Inserts:</h2>
+						<ul id="document-inserts">
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="main-cta">Create task</a>
+				<a href="#" class="finished finished-letter">I've finished this task</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// LETTER CONFIRMATION - END ///////////////////////////////// -->
  <!-- TAB CONTENT - START --> <div id="client-overview" class="tabcontent current"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- // LIST OF SUMMARIES - START // -->
 <div id="list-of-summary">
 
@@ -772,70 +835,7 @@
 
 </div>
 <!-- // LIST OF SUMMARIES - END // -->
- </div> </div> </div> <div id="client-health" class="tabcontent"> <!-- ///////////////////////////////// LETTER CONFIRMATION - START ///////////////////////////////// -->
-<div class="row">
-	<div class="large-12 large-uncentered columns">
-		<div id="correspondence-sent" class="confirmation-panel">
-			<a href="#" class="close-panel finished-letter">Close</a>
-			<div class="content">
-				<h2>
-					<span></span>
-					Your letters have been sent to print
-					<script language="JavaScript">
-
-						Stamp = new Date();
-						year = Stamp.getYear();
-						if (year < 2000) year = 1900 + year;
-						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
-						var Hours;
-						var Mins;
-						var Time;
-						Hours = Stamp.getHours();
-						if (Hours >= 12) {
-							Time = " P.M.";
-						}
-						else {
-							Time = " A.M.";
-						}
-						if (Hours > 12) {
-							Hours -= 12;
-						}
-						if (Hours == 0) {
-							Hours = 12;
-						}
-						Mins = Stamp.getMinutes();
-							if (Mins < 10) {
-							Mins = "0" + Mins;
-						}
-						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
-					</script>
-				</h2>
-				<div class="row details">
-					<div class="large-4 large-uncentered columns">
-						<h2>Letter title:</h2>
-						<ul id="document-letter-title">
-							<li class="document-title"></li>
-						</ul>
-					</div>
-					<div class="large-4 large-uncentered columns">
-						<h2>Recipients:</h2>
-						<ul id="document-recipients">
-						</ul>
-					</div>
-					<div class="large-4 large-uncentered columns">
-						<h2>Inserts:</h2>
-						<ul id="document-inserts">
-						</ul>
-					</div>
-				</div>
-				<a href="#" class="main-cta">Create task</a>
-				<a href="#" class="finished finished-letter">I've finished this task</a>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- ///////////////////////////////// LETTER CONFIRMATION - END ///////////////////////////////// -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <!-- CONTENT WRAPPER - START -->
+ </div> </div> </div> <div id="client-health" class="tabcontent"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- CONTENT WRAPPER - START -->
 <div class="content-wrapper">
 
 	<div class="row">
@@ -850,7 +850,7 @@
 					<span>4</span> Tasks
 				</li>
 				<li class="tab-link" data-tab="health-tab-3">
-					Case details
+					Order details
 				</li>
 				<li class="tab-link" data-tab="health-tab-4">
 					<span>2</span> Deputies
@@ -978,7 +978,7 @@
 													<span class="icon main-contact"><p>Main deputy</p></span>
 													<span class="icon welfare"><p>Health &amp; welfare</p></span>
 													<span class="type">Joint</span>
-													<a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit">edit</a>
+													<a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit deputy-1">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 												<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -995,7 +995,7 @@
 													Carla Frith
 													<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
 													<span class="type">Joint</span>
-													<a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit">edit</a>
+													<a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit deputy-2">edit</a>
 												</h1>
 												<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 												<div class="info"><span>Status:</span> <strong>Active</strong></div>
@@ -1027,50 +1027,12 @@
 
 											<!-- // ITEM 1 - START // -->
 											<div class="item no-colour">
-												<ul class="related-cases">
-													<li>
-														<a href="#" class="answer">
-															<div class="wrapper">
-																<span></span>
-																<p>Related case:</p>
-																<p class="title">18304726</p>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="answer">
-															<div class="wrapper">
-																<span></span>
-																<p>Related case:</p>
-																<p class="title">13647304</p>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="answer">
-															<div class="wrapper">
-																<span></span>
-																<p>Related case:</p>
-																<p class="title">14627936</p>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="answer">
-															<div class="wrapper">
-																<span></span>
-																<p>Related case:</p>
-																<p class="title">16472946</p>
-															</div>
-														</a>
-													</li>
-												</ul>
 											</div>
 											<!-- // ITEM 1 - END // -->
 
 											<!-- // ITEM 2 - START // -->
 											<div class="item with-title">
-												<div class="title"><span class="history"></span><p>Case history</p></div>
+												<div class="title"><span class="history"></span><p>Order history</p></div>
 												<ol class="summary-list">
 													<li>
 														<p>When a visit was carried out?:</p>
@@ -1081,7 +1043,7 @@
 														<p class="answer">Yes</p>
 													</li>
 													<li>
-														<p>Is there is a problem with the case?:</p>
+														<p>Is there is a problem with the order?:</p>
 														<p class="answer">No</p>
 													</li>
 													<li>
@@ -1315,8 +1277,8 @@
 						<section class="case-info">
 
 							<h2 class="description-title">
-								Case details
-								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-health">Edit case</a>
+								Order details
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-health">Edit order</a>
 							</h2>
 
 							<!-- ITEM - 1 - START -->
@@ -1349,29 +1311,29 @@
 
 							<!-- ITEM - 5 - START -->
 							<div class="info-section">
-								<p>Order status:</p>
-								<p class="answer case-order-status-answer">Open</p>
+								<p>Order received date:</p>
+								<p class="answer case-status-date-answer">28/07/2017</p>
 							</div>
 							<!-- ITEM - 5 - END -->
 
 							<!-- ITEM - 6 - START -->
 							<div class="info-section">
-								<p>Status date:</p>
-								<p class="answer case-status-date-answer">28/08/2017</p>
+								<p>Order title:</p>
+								<p class="answer case-order-title-answer">Order title</p>
 							</div>
 							<!-- ITEM - 6 - END -->
 
 							<!-- ITEM - 7 - START -->
 							<div class="info-section">
-								<p>Order received date:</p>
-								<p class="answer case-status-date-answer">28/07/2017</p>
+								<p>Order status:</p>
+								<p class="answer case-order-status-answer">Open</p>
 							</div>
 							<!-- ITEM - 7 - END -->
 
 							<!-- ITEM - 8 - START -->
 							<div class="info-section">
-								<p>Order title:</p>
-								<p class="answer case-order-title-answer">Order title</p>
+								<p>Status date:</p>
+								<p class="answer case-status-date-answer">28/08/2017</p>
 							</div>
 							<!-- ITEM - 8 - END -->
 
@@ -1392,31 +1354,6 @@
 								<p class="answer deputies-jointly-answer">Yes</p>
 							</div> -->
 							<!-- ITEM - 10 - END -->
-
-							<h2 class="description-title">
-								The files
-							</h2>
-
-							<!-- ITEM - 11 - START -->
-							<div class="info-section">
-								<p>File location?:</p>
-								<p class="answer file-location-answer">N/A</p>
-							</div>
-							<!-- ITEM - 11 - END -->
-
-							<!-- ITEM - 12 - START -->
-							<div class="info-section file-location-info">
-								<p>File address:</p>
-								<p class="answer">
-									<span class="file-address-line-1-answer"></span>
-									<span class="file-address-line-2-answer"></span>
-									<span class="file-address-line-3-answer"></span>
-									<span class="file-address-town-answer"></span>
-									<span class="file-address-county-answer"></span>
-									<span class="file-address-postcode-answer"></span>
-								</p>
-							</div>
-							<!-- ITEM - 12 - END -->
 
 						</section>
 						<!-- ///////////// CASE INFO - END ///////////// -->
@@ -1500,7 +1437,7 @@
 									<!-- DEPUTY SUMMARY ROW 1 - START -->
 									<tr class="summary-row" data-value="1">
 										<td>
-											<span class="icon deputy"></span>
+											<!-- <span class="icon deputy"></span> -->
 											<div class="deputy-name">Mrs Lara Stevens</div><br>
 											<div class="deputy-appointed">JOINT</div><br>
 											<div class="deputy-address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div>
@@ -1532,7 +1469,7 @@
 
 											<h2 class="section-title">
 												Personal details:
-												<a href="../5-add-deputy/5c-deputy-details.html#Deputy-1" class="edit">Edit</a>
+												<a href="../5-add-deputy/5c-deputy-details.html#edit-deputy-1" class="edit deputy-1">Edit</a>
 											</h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
@@ -1610,8 +1547,8 @@
 											<!-- // DEPUTY ITEM - 10 - END // -->
 
 											<h2 class="section-title">
-												Case details:
-												<a href="../5-add-deputy/5b-add-deputy.html#Deputy-1" class="edit">Edit</a>
+												Order details:
+												<a href="../5-add-deputy/5b-add-deputy.html#edit-deputy-1" class="edit deputy-1">Edit</a>
 											</h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
@@ -1651,7 +1588,10 @@
 											</div>
 											<!-- // DEPUTY ITEM - 5 - END // -->
 
-											<h2 class="section-title">Additonal information:</h2>
+											<h2 class="section-title">
+						                              Additional information:
+						                              <a href="../5-add-deputy/5d-additional-info.html#edit-deputy-1" class="edit deputy-1">Edit</a>
+						                         </h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
 											<div class="person-detail-item">
@@ -1723,10 +1663,12 @@
 									<!-- DEPUTY SUMMARY ROW 2 - START -->
 									<tr class="summary-row violent" data-value="2">
 										<td>
-											<span class="icon violent">
-												<p>Violent</p>
-											</span>
-											<div class="deputy-name">Mrs Carla Frith</div><br>
+											<div class="deputy-name">
+												<span class="icon violent">
+													<p>Violent</p>
+												</span>
+												Mrs Carla Frith
+											</div><br>
 											<div class="deputy-appointed">JOINT</div><br>
 											<div class="deputy-address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div>
 											<a href="#" class="full-details" data-value="2">View full details</a>
@@ -1754,7 +1696,7 @@
 
 											<h2 class="section-title">
 												Personal details:
-												<a href="../5-add-deputy/5c-deputy-details.html#Deputy-2" class="edit">Edit</a>
+												<a href="../5-add-deputy/5c-deputy-details.html#edit-deputy-2" class="edit deputy-2">Edit</a>
 											</h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
@@ -1832,8 +1774,8 @@
 											<!-- // DEPUTY ITEM - 10 - END // -->
 
 											<h2 class="section-title">
-												Case details:
-												<a href="../5-add-deputy/5b-add-deputy.html#Deputy-2" class="edit">Edit</a>
+												Order details:
+												<a href="../5-add-deputy/5b-add-deputy.html#edit-deputy-2" class="edit deputy-2">Edit</a>
 											</h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
@@ -1873,7 +1815,10 @@
 											</div>
 											<!-- // DEPUTY ITEM - 5 - END // -->
 
-											<h2 class="section-title">Additonal information:</h2>
+											<h2 class="section-title">
+						                              Additional information:
+						                              <a href="../5-add-deputy/5d-additional-info.html#edit-deputy-2" class="edit deputy-2">Edit</a>
+						                         </h2>
 
 											<!-- // DEPUTY ITEM - 1 - START // -->
 											<div class="person-detail-item">
@@ -2108,7 +2053,7 @@
 
 													<!-- // DEPUTY ITEM - 1 - START // -->
 								                         <div class="visit-detail-item">
-								                              <span class="item">Case no.:</span>
+								                              <span class="item">Order no.:</span>
 								                              <span class="answer case-no">29273638201</span>
 								                         </div>
 								                         <!-- // DEPUTY ITEM - 1 - END // -->
@@ -2170,7 +2115,7 @@
 												<div class="title">
 													<h2>
 														<span class="icon"></span>
-														Case created
+														Order created
 													</h2>
 												</div>
 												<!-- // ACTION TITLE - 1 - END // -->
@@ -2283,7 +2228,7 @@
 												<div class="title">
 													<h2>
 														<span class="icon"></span>
-														Case created
+														Order created
 														<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
 														<div class="date"><span class="icon"></span>06 Jul 2017 14:21 — #XROrder</div>
 													</h2>
@@ -2711,7 +2656,7 @@
 			<!-- // ACTIONS NAV - START // -->
 			<nav class="actions-nav client-panel">
 
-				<h1>Perform case task:</h1>
+				<h1>Perform order task:</h1>
 
 				<ul>
 					<!-- // MAIN CTA's -  START // -->
@@ -2724,7 +2669,7 @@
 					<li class="supervision edit-case-link">
 						<a href="../1-create-case/1a-the-order.html#EditCase" class="action edit-case">
 							<span class="icon"></span>
-							<span>Edit case</span>
+							<span>Edit order</span>
 						</a>
 					</li>
 					<!-- // MAIN CTA's -  END // -->
@@ -2737,12 +2682,12 @@
 							<span>Commission a visit</span>
 						</a>
 					</li>
-					<!-- <li class="supervision">
+					<li class="supervision">
 						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 							<span class="icon"></span>
-							<span>Create correspondence</span>
+							<span>Create letter</span>
 						</a>
-					</li> -->
+					</li>
 					<li class="supervision">
 						<a href="../8-create-task/8a-create-task.html" class="action create-task">
 							<span class="icon"></span>
@@ -2865,7 +2810,7 @@
 					<span>1</span> Tasks
 				</li>
 				<li class="tab-link" data-tab="property-tab-3">
-					Case details
+					Order details
 				</li>
 				<li class="tab-link" data-tab="property-tab-4">
 					<span>1</span> Deputy
@@ -2962,7 +2907,7 @@
 														<h1 class="sub-text">Bond value</h1>
 														<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
 														<div class="ctas">
-															<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit</a>
+															<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit bond</a>
 															<!-- <a href="#dispense" rel="modal:open" class="delete">Dispense</a> -->
 														</div>
 													</div>
@@ -3070,8 +3015,8 @@
 						<section class="case-info">
 
 							<h2 class="description-title">
-								Case details
-								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-pfa">Edit case</a>
+								Order details
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-pfa">Edit order</a>
 							</h2>
 
 							<!-- ITEM - 1 - START -->
@@ -3104,29 +3049,29 @@
 
 							<!-- ITEM - 5 - START -->
 							<div class="info-section">
-								<p>Order status:</p>
-								<p class="answer case-order-status-answer">Open</p>
+								<p>Order received date:</p>
+								<p class="answer case-status-date-answer">28/07/2017</p>
 							</div>
 							<!-- ITEM - 5 - END -->
 
 							<!-- ITEM - 6 - START -->
 							<div class="info-section">
-								<p>Status date:</p>
-								<p class="answer case-status-date-answer">28/08/2017</p>
+								<p>Order title:</p>
+								<p class="answer case-order-title-answer">Order title</p>
 							</div>
 							<!-- ITEM - 6 - END -->
 
 							<!-- ITEM - 7 - START -->
 							<div class="info-section">
-								<p>Order received date:</p>
-								<p class="answer case-status-date-answer">28/07/2017</p>
+								<p>Order status:</p>
+								<p class="answer case-order-status-answer">Open</p>
 							</div>
 							<!-- ITEM - 7 - END -->
 
 							<!-- ITEM - 8 - START -->
 							<div class="info-section">
-								<p>Order title:</p>
-								<p class="answer case-order-title-answer">Order title</p>
+								<p>Status date:</p>
+								<p class="answer case-status-date-answer">28/08/2017</p>
 							</div>
 							<!-- ITEM - 8 - END -->
 
@@ -3142,52 +3087,28 @@
 							<!-- ITEM - 9 - END -->
 
 							<h2 class="description-title">
-								The files
-							</h2>
-
-							<!-- ITEM - 11 - START -->
-							<div class="info-section">
-								<p>File location?:</p>
-								<p class="answer file-location-answer">N/A</p>
-							</div>
-							<!-- ITEM - 11 - END -->
-
-							<!-- ITEM - 12 - START -->
-							<div class="info-section file-location-info">
-								<p>File address:</p>
-								<p class="answer">
-									<span class="file-address-line-1-answer"></span>
-									<span class="file-address-line-2-answer"></span>
-									<span class="file-address-line-3-answer"></span>
-									<span class="file-address-town-answer"></span>
-									<span class="file-address-county-answer"></span>
-									<span class="file-address-postcode-answer"></span>
-								</p>
-							</div>
-							<!-- ITEM - 12 - END -->
-
-							<h2 class="description-title">
 								The bond
-								<a href="../1-create-case/1b-the-bond.html" class="edit">Edit bond</a>
-								<a href="../1-create-case/1b-the-bond.html" class="bond-dispense">Dispense bond</a>
+								<a href="../1-create-case/1b-the-bond.html" class="edit add-bond">Add bond</a>
+								<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit bond</a>
+								<!-- <a href="../1-create-case/1b-the-bond.html" class="bond-dispense">Dispense bond</a> -->
 							</h2>
 
 							<!-- ITEM - 13 - START -->
 							<div class="info-section">
 								<p>Security bond?:</p>
-								<p class="answer security-bond-answer">N/A</p>
+								<p class="answer security-bond-answer">No</p>
 							</div>
 							<!-- ITEM - 13 - END -->
 
 							<!-- ITEM - 14 - START -->
-							<div class="info-section bond-info">
+							<div class="info-section dispense-bond-info">
 								<p>Discharge date:</p>
 								<p class="answer bond-dispensed-date-answer">N/A</p>
 							</div>
 							<!-- ITEM - 14 - END -->
 
 							<!-- ITEM - 15 - START -->
-							<div class="info-section bond-info">
+							<div class="info-section dispense-bond-info">
 								<p>Dispensed reason:</p>
 								<p class="answer bond-dispensed-reason-answer">N/A</p>
 							</div>
@@ -3202,22 +3123,23 @@
 
 							<!-- ITEM - 17 - START -->
 							<div class="info-section bond-info">
-								<p>Company:</p>
-								<p class="answer bond-company-answer">N/A</p>
+								<p>Bond amount taken (£):</p>
+								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
 							</div>
 							<!-- ITEM - 17 - END -->
 
 							<!-- ITEM - 18 - START -->
 							<div class="info-section bond-info">
-								<p>Bond reference number:</p>
-								<p class="answer bond-ref-number-answer">N/A</p>
+								<p>Company:</p>
+								<p class="answer bond-company-answer">N/A</p>
+								<p class="answer bond-other-answer-text">N/A</p>
 							</div>
 							<!-- ITEM - 18 - END -->
 
 							<!-- ITEM - 19 - START -->
 							<div class="info-section bond-info">
-								<p>Yearly premium amount (£):</p>
-								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
+								<p>Bond reference number:</p>
+								<p class="answer bond-ref-number-answer">N/A</p>
 							</div>
 							<!-- ITEM - 19 - END -->
 
@@ -3347,7 +3269,7 @@
 			<!-- // ACTIONS NAV - START // -->
 			<nav class="actions-nav client-panel">
 
-				<h1>Perform case task:</h1>
+				<h1>Perform order task:</h1>
 
 				<ul>
 					<!-- // MAIN CTA's -  START // -->
@@ -3360,13 +3282,17 @@
 					<li class="supervision edit-case-link">
 						<a href="../1-create-case/1a-the-order.html#EditCase" class="action edit-case">
 							<span class="icon"></span>
-							<span>Edit case</span>
+							<span>Edit order</span>
 						</a>
 					</li>
 					<li class="supervision add-bond-link">
 						<a href="../1-create-case/1b-the-bond.html" class="action add-bond">
 							<span class="icon"></span>
 							<span class="text">Add bond</span>
+						</a>
+						<a href="../1-create-case/1b-the-bond.html" class="action edit-bond">
+							<span class="icon"></span>
+							<span class="text">Edit bond</span>
 						</a>
 					</li>
 					<!-- // MAIN CTA's -  END // -->
@@ -3379,12 +3305,12 @@
 							<span>Commission a visit</span>
 						</a>
 					</li>
-					<!-- <li class="supervision">
+					<li class="supervision">
 						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 							<span class="icon"></span>
-							<span>Create correspondence</span>
+							<span>Create letter</span>
 						</a>
-					</li> -->
+					</li>
 					<li class="supervision">
 						<a href="../8-create-task/8a-create-task.html" class="action create-task">
 							<span class="icon"></span>

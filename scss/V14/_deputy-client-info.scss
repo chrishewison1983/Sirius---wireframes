@@ -139,6 +139,11 @@
                }
           }
      }
+     a.main-cta {
+          &.secondary {
+               width: auto;
+          }
+     }
 }
 
 #remove-deputy-1, #remove-deputy-2, #remove-deputy-3, #remove-deputy-4 {

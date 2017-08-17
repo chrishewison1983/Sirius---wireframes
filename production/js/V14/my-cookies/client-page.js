@@ -37,37 +37,37 @@ if ($.cookie('security-bond') === 'undefined') {
      $('.add-bond .text').text('Add bond');
 }
 
-if ($.cookie('order-journey') === 'HandW') {
-     // Changes the state of the Tabs
-     $('.new-client ul.client-details .tablinks').removeClass('active');
-     $('.new-client ul.client-details .tablinks.health').addClass('active');
-     $('.new-client .tabcontent').removeClass('current');
-     $('.new-client #client-health').addClass('current');
-
-     // Changes the content in the header
-     $('.client-page .normal-status').text('H & W | 19273638');
-     $('.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>H & W | 19273638</span>');
-} else if ($.cookie('order-journey') === 'PFA') {
-     // Changes the state of the Tabs
-     $('.new-client ul.client-details .tablinks').removeClass('active');
-     $('.new-client ul.client-details .tablinks.property').addClass('active');
-     $('.new-client .tabcontent').removeClass('current');
-     $('.new-client #client-property').addClass('current');
-
-     // Changes the content in the header
-     $('.client-page .normal-status').text('PFA | 14820940');
-     $('.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>PFA | 14820940</span>');
-} else {
-     // Changes the state of the Tabs
-     $('.new-client ul.client-details .tablinks').removeClass('active');
-     $('.new-client ul.client-details .tablinks.overview').addClass('active');
-     $('.new-client .tabcontent').removeClass('current');
-     $('.new-client #client-overview').addClass('current');
-
-     // Changes the content in the header
-     $('.client-page .normal-status').text("CLIENT'S SUMMARY PAGE");
-     $('.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <div>Client summary</div>');
-}
+// if ($.cookie('order-journey') === 'HandW') {
+//      // Changes the state of the Tabs
+//      $('.new-client ul.client-details .tablinks').removeClass('active');
+//      $('.new-client ul.client-details .tablinks.health').addClass('active');
+//      $('.new-client .tabcontent').removeClass('current');
+//      $('.new-client #client-health').addClass('current');
+//
+//      // Changes the content in the header
+//      $('.client-page .normal-status').text('H & W | 19273638');
+//      $('.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>H & W | 19273638</span>');
+// } else if ($.cookie('order-journey') === 'PFA') {
+//      // Changes the state of the Tabs
+//      $('.new-client ul.client-details .tablinks').removeClass('active');
+//      $('.new-client ul.client-details .tablinks.property').addClass('active');
+//      $('.new-client .tabcontent').removeClass('current');
+//      $('.new-client #client-property').addClass('current');
+//
+//      // Changes the content in the header
+//      $('.client-page .normal-status').text('PFA | 14820940');
+//      $('.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>PFA | 14820940</span>');
+// } else {
+//      // Changes the state of the Tabs
+//      $('.new-client ul.client-details .tablinks').removeClass('active');
+//      $('.new-client ul.client-details .tablinks.overview').addClass('active');
+//      $('.new-client .tabcontent').removeClass('current');
+//      $('.new-client #client-overview').addClass('current');
+//
+//      // Changes the content in the header
+//      $('.client-page .normal-status').text("CLIENT'S SUMMARY PAGE");
+//      $('.client-page .breadcrumb').html('<a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <div>Client summary</div>');
+// }
 
 // Makes the appropriate tab appear
 if ($.cookie('deputy-created') === 'true') {

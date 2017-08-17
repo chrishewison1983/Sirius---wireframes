@@ -17,7 +17,7 @@
           li {
                list-style: none;
                float: left;
-               width: 50%;
+               width: 100%;
                margin: 0 0 1em 0;
                &:last-of-type {
                     margin: 0;
@@ -152,7 +152,7 @@
                                    background-size: 1.25em;
                               }
                          }
-                         &.add-bond {
+                         &.add-bond, &.edit-bond {
                               background: none;
                               span.icon {
                                    background: url(#{$image-path}/icons/actions/bond-white.svg) no-repeat 50% 50% $pink;

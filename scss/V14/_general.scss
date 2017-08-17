@@ -43,6 +43,9 @@ main {
                &.create-letter-journey {
                     padding-top: 1em;
                }
+               &.dashboard {
+                    padding: 2em 0 0 0;
+               }
           }
           #client-overview {
                #list-of-summary {
@@ -357,7 +360,7 @@ a {
      .hashtag {
           color: $black;
      }
-     &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button {
+     &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back {
           float: right;
           font-size: 1rem;
           text-transform: capitalize;
@@ -386,8 +389,14 @@ a {
      }
      &.back {
           padding: 0 0 0 1.5em;
+          float: none;
           background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
           background-size: 1em;
+     }
+     &.cancel {
+          float: none;
+          background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+          background-size: 0.65em;
      }
 }
 

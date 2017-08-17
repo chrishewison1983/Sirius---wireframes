@@ -178,14 +178,20 @@ $(document).ready(function(){
 //      }).toArray()));
 // }
 
-function persistSelectedRecipients() {
-     sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
+function persistSelectedLetters() {
+     sessionStorage.setItem('selected-letter', JSON.stringify($('#draft-list li').map(function() {
           return $(this).text().trim();
      }).toArray()));
 }
 
 function persistSelectedInserts() {
      sessionStorage.setItem('selected-inserts', JSON.stringify($('#inserts-selected li').map(function() {
+          return $(this).text().trim();
+     }).toArray()));
+}
+
+function persistSelectedRecipients() {
+     sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
           return $(this).text().trim();
      }).toArray()));
 }

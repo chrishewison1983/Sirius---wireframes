@@ -148,6 +148,8 @@ $('ul#inserts-list li a').click(function(e) {
      $(this).toggleClass('selected');
 });
 
+$('#draft-list').hide();
+
 $(document).ready(function() {
 
      (function($) {
@@ -166,7 +168,7 @@ $(document).ready(function() {
 
      $('ul#inserts-list li a').clickToggle(function() {
           // e.preventDefault();
-          $('.place-holder-text').hide();
+          $('#inserts-section .place-holder-text').hide();
           $("#inserts-selected").show();
           $("#inserts-selected").append(`
                <li data-insert-id='${$(this).data('insert-id')}'>
@@ -180,8 +182,18 @@ $(document).ready(function() {
           persistSelectedInserts();
      });
 
-     $('.letter-title, .correspondent').click(function(e) {
+     $('#add-inserts').click(function(e) {
           persistSelectedInserts();
+          // persistSelectedLetter();
+     });
+
+     $('.letter-title').click(function(e) {
+          $("#draft-list").append(`
+               <li data-letter-id='${$(this).data('letter-id')}'>
+                    <div class="doc-type">${ $(this).find('[data-value="letter"]').text() }</div>
+               </li>`
+          );
+          persistSelectedLetters();
           // persistSelectedLetter();
      });
 

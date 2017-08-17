@@ -13,7 +13,7 @@
           {{= it.include('top-nav.html') }}
 
           <div class="row">
-               <div class="large-8 large-uncentered columns">
+               <div class="large-10 large-uncentered columns">
                     <nav class="breadcrumb">
                          <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
@@ -32,7 +32,7 @@
                     </h1>
                </div>
 
-               <div class="large-4 large-uncentered columns">
+               <div class="large-2 large-uncentered columns">
                     {{= it.include('actions-header.html') }}
                </div>
 
@@ -44,6 +44,8 @@
      <!-- SECTION HEADER - END -->
 
      {{= it.include('client-nav.html') }}
+
+     {{= it.include('confirmation/correspondence-sent.html') }}
 
      <!-- TAB CONTENT - START -->
      <div id="client-overview" class="tabcontent current">
@@ -57,8 +59,6 @@
      </div>
 
      <div id="client-health" class="tabcontent">
-
-          {{= it.include('confirmation/correspondence-sent.html') }}
 
           <div class="row">
                <div class="large-12 large-uncentered columns">

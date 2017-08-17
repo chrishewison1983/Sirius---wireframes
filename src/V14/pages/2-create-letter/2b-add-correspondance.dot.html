@@ -282,6 +282,9 @@
           JSON.parse(sessionStorage.getItem('selected-inserts')).forEach(function(insert) {
                $('#inserts-selected').append('<li>' + insert + '</li>');
           });
+          JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+               $('#draft-list').append('<li>' + letter + '</li>');
+          });
      });
 
 </script>

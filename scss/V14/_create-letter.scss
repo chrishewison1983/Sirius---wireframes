@@ -71,7 +71,7 @@
                margin: -0.225em 0.275em 0 0;
           }
      }
-     ol.draft-list {
+     ol#draft-list {
           width: 100%;
           li {
                border: 3px solid $white-off;
@@ -103,7 +103,7 @@
                margin: -0.225em 0.275em 0 0;
           }
      }
-     ol.draft-list {
+     ol#draft-list {
           width: 95%;
      }
      .sub-section-title {
@@ -213,6 +213,7 @@ a.preview {
                     border-radius: $global-border-radius;
                     padding: 1em 1em 1em 3.5em;
                     margin-bottom: 1em;
+                    line-height: 1.4;
                     &:hover {
                          z-index: 2;
                     }
@@ -361,7 +362,7 @@ a.preview {
                }
           }
      }
-     ol.draft-list {
+     ol#draft-list {
           // border: 3px solid $white-off;
           border-top: none;
           border-radius: 0 0 5px 5px;

@@ -243,11 +243,15 @@
 <!-- SCRIPT CONTENT - START -->
 <script>
 
-     // $(document).ready(function(){
-     //      sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
-     //           return $(this).text().trim();
-     //      }).toArray()));
-     // });
+     $(document).ready(function(){
+          JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+               $('#recipients').append('<li>' + recipient + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+               $('#draft-list').append('<li>' + letter + '</li>');
+          });
+
+     });
 
 </script>
 <!-- SCRIPT CONTENT - END -->
