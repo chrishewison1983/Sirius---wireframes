@@ -365,7 +365,7 @@ ul.contact-list {
 }
 
 .client-details {
-     #document-contacts {
+     #documents-contacts {
           .section-title {
                width: 100%;
           }
@@ -506,6 +506,10 @@ ol#draft-list {
                               background: url(#{$image-path}/icons/client-grey.svg) no-repeat 50% 50%;
                               background-size: contain;
                          }
+                         &.inserts {
+                              background: url(#{$image-path}/icons/insert-grey.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
                          &.date {
                               background: url(#{$image-path}/icons/date-grey.svg) no-repeat 50% 50%;
                               background-size: contain;
@@ -531,6 +535,8 @@ ol#draft-list {
 #letter-contents {
      .jqte_editor {
           resize: none;
+          overflow: inherit;
+          max-height: none;
           p {
                color: $black;
           }

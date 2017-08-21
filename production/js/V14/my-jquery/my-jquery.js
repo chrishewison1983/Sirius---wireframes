@@ -250,9 +250,24 @@ $(document).ready(function() {
 
      $('.open').on('click', function(e) {
           e.preventDefault();
+          $(this).siblings().removeClass('close');
           $(this).closest('td').find('.description').toggle();
+          $(this).closest('tr').find('.documents-list').hide();
           $(this).toggleClass('close');
-     })
+     });
+
+     $('.documents').on('click', function(e) {
+          e.preventDefault();
+          $(this).siblings().removeClass('close');
+          $(this).closest('td').find('.description').hide();
+          $(this).closest('tr').find('.documents-list').toggle();
+          // $(this).closest('td').find('.description').toggle();
+          $(this).toggleClass('close');
+
+          var orderID = $(this).data('order-id');
+
+          $('#order-table tr').data('documents-id' + orderID).toggle();
+     });
 
 });
 

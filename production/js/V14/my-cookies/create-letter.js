@@ -45,6 +45,10 @@ if ($.cookie("recipients")) {
      $("#recipients").val($.cookie("recipients"));
 }
 
+if ($.cookie("completed-letter") == 'true') {
+     $("#drafts .place-holder-text").hide();
+}
+
 // Inserts
 $('#inserts-section').hide();
 $('#inserts-selected').hide();
@@ -70,6 +74,7 @@ if ($.cookie("inserts-added") == 'true') {
 $("#confirm-print-send").on("click", function (e) {
      $.cookie("sent-to-print", true, {path:'/'});
      $.cookie("create-letter-started", false, {path:'/'});
+     $.cookie("create-letter-journey", false, {path:'/'});
 });
 
 if ($.cookie("sent-to-print") == 'true') {
@@ -89,9 +94,9 @@ if ($.cookie("create-letter-journey") == 'true') {
      $('#client-health #health-tab-7').addClass('current');
 
      // 4a - shows the document
-     $('#document-viewer .document-1 .page-1').hide();
-     $('#document-viewer .document-1 .page-2').show();
-     $('#document-viewer .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
+     $('#documents-viewer .document-1 .page-1').hide();
+     $('#documents-viewer .document-1 .page-2').show();
+     $('#documents-viewer .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
 
      // 2a - shows the documents tab
      $('#side-panel .tab-link').removeClass('current');

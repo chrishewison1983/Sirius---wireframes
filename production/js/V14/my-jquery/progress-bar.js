@@ -313,7 +313,7 @@ if ($.cookie("create-deputy-step-1") == 'true') {
 if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") == 'true') {
      // Progress bar classes
      $('nav.progress-bar .step-1 a').attr('href','5b-deputy-details.html');
-     $('nav.progress-bar .step-2 a').attr('href','5c-case-details.html');
+     $('nav.progress-bar .step-2 a').attr('href','5c-additional-info.html');
 
      $('ul li.step-1, ul li.step-2').addClass('complete').removeClass('inactive').removeClass('current-incomplete');
      $('ul li.step-3').addClass('current-incomplete').removeClass('inactive');
@@ -328,8 +328,8 @@ if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") == 'tru
 if ($.cookie("create-deputy-step-1") && $.cookie("create-deputy-step-2") && $.cookie("create-deputy-step-3") == 'true') {
      // Progress bar classes
      $('nav.progress-bar .step-1 a').attr('href','5b-deputy-details.html');
-     $('nav.progress-bar .step-2 a').attr('href','5c-case-details.html');
-     $('nav.progress-bar .step-3 a').attr('href','5d-additional-info.html');
+     $('nav.progress-bar .step-2 a').attr('href','5c-additional-info.html');
+     $('nav.progress-bar .step-3 a').attr('href','5d-case-details.html');
 
      $('ul li.step-1, ul li.step-2, ul li.step-3').addClass('complete').removeClass('inactive').removeClass('current-incomplete');
 

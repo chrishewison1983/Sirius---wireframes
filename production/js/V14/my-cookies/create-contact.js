@@ -53,7 +53,7 @@ if ($.cookie("contact-added") == 'true') {
                </a>
           </li>
      `);
-     $('#document-contacts .contact-list').append(`
+     $('#documents-contacts .contact-list').append(`
           <li class="correspondent">
                <div class="wrapper">
                     <div class="contact-name">

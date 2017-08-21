@@ -61,28 +61,37 @@
           &.doc-title {
                border-bottom: none;
                margin: 0 0 0 0;
-               .info {
+               .current-doc-info {
                     text-transform: none;
                     font-size: 1rem;
-                    margin: 0.25em 0 0.5em 0;
+                    margin: 1em 0 0 0;
+                    padding-bottom: 0.25em;
                     display: inline-block;
                     width: 100%;
                     font-family: $Opensans-Regular;
                     color: $text-main-colour;
-                    .icon {
+                    span {
+                         float: left;
                          display: inline-block;
-                         width: 1.5em;
-                         height: 1.5em;
-                         position: relative;
-                         top: 0.375em;
-                         &.recipient {
-                              background: url(#{$image-path}/icons/client-grey.svg) no-repeat 50% 50%;
-                              background-size: contain;
+                         width: auto;
+                         &.number {
+                              width: 1.5em;
                          }
                     }
-                    strong {
-                         font-family: $Montserrat;
-                    }
+                    // .icon {
+                    //      display: inline-block;
+                    //      width: 1.5em;
+                    //      height: 1.5em;
+                    //      position: relative;
+                    //      top: 0.375em;
+                    //      &.recipient {
+                    //           background: url(#{$image-path}/icons/client-grey.svg) no-repeat 50% 50%;
+                    //           background-size: contain;
+                    //      }
+                    // }
+                    // strong {
+                    //      font-family: $Montserrat;
+                    // }
                }
           }
      }

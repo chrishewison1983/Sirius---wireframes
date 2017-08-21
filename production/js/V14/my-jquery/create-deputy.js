@@ -36,17 +36,17 @@ $('#confirm-remove-4').click(function(){
 $('#exisiting-deputies').hide();
 
 $(document).ready(function(){
-     $('#deputy-last-name').keypress(function(){
+     $('#deputy-name').keypress(function(){
      	$('#add-new-deputy').removeClass('de-activate');
           $('#exisiting-deputies').slideDown('slow');
      });
-     $("#deputy-first-name").keyup(function(event) {
+     // $("#deputy-first-name").keyup(function(event) {
+     //      var stt = $(this).val();
+     //      $(".deputy-first-name-answer").text(stt);
+     // });
+     $("#deputy-name").keyup(function(event) {
           var stt = $(this).val();
-          $(".deputy-first-name-answer").text(stt);
-     });
-     $("#deputy-last-name").keyup(function(event) {
-          var stt = $(this).val();
-          $(".deputy-last-name-answer").text(stt);
+          $(".deputy-name-answer").text(stt);
      });
 });
 
@@ -179,23 +179,25 @@ $("#add-deputy-error-1880").click( function(){
 });
 
 // Page validation
-$("#deputy-first-name").keyup(function() {
-     if (!this.value) {
-          $('#add-deputy-step-1').addClass('de-activate');
-          $('#add-deputy-step-1').removeAttr('href');
-     } else {
-          $('#add-deputy-step-1').removeClass('de-activate');
-          $('#add-deputy-step-1').attr('href' ,'5c-case-details.html');
-     }
-});
+$('#add-deputy-step-1').addClass('de-activate').removeAttr('href');
 
+// $("#deputy-first-name").keyup(function() {
+//      if (!this.value) {
+//           $('#add-deputy-step-1').addClass('de-activate');
+//           $('#add-deputy-step-1').removeAttr('href');
+//      } else {
+//           $('#add-deputy-step-1').removeClass('de-activate');
+//           $('#add-deputy-step-1').attr('href' ,'5d-case-details.html');
+//      }
+// });
+//
 $("#deputy-last-name").keyup(function() {
      if (!this.value) {
           $('#add-deputy-step-1').addClass('de-activate');
           $('#add-deputy-step-1').removeAttr('href');
      } else {
           $('#add-deputy-step-1').removeClass('de-activate');
-          $('#add-deputy-step-1').attr('href' ,'5c-case-details.html');
+          $('#add-deputy-step-1').attr('href' ,'5c-additional-info.html');
      }
 });
 
@@ -217,6 +219,7 @@ if (window.location.href.indexOf("edit-deputy-1") != -1) {
      // Changes the header content
      $('.breadcrumb .page-title').text('Edit deputy');
      $('.deputy-first-name-answer').text('Lara');
+     $('#action-panel .section-title').html("Edit <div class=\"deputy-first-name-answer\">Lara</div>'s details");
 
      // Changes the footer content
      $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').text('Save & update deputy');
@@ -237,7 +240,20 @@ if (window.location.href.indexOf("edit-deputy-1") != -1) {
      $('#deputy-mob-number').val('07079962666');
      $('#deputy-email').val('lara.stevens@jourrapide.com');
 
-     // Form content - 2 - Case details
+     // Form content - 2 - Additional info
+     $('#deputy-digital-no').parent().addClass('checked');
+     $('#deputy-digital-no').attr('checked', 'checked');
+     $('#deputy-occupation').val('University professor');
+     $('#deputy-correspondence-email').parent().addClass('checked');
+     $('#deputy-correspondence-email').attr('checked', 'checked');
+     $('#deputy-special-spelling').parent().addClass('checked');
+     $('#deputy-special-spelling').attr('checked', 'checked');
+     $('#deputy-interpreter-no').parent().addClass('checked');
+     $('#deputy-interpreter-no').attr('checked', 'checked');
+     $('#deputy-newsletter-no').parent().addClass('checked');
+     $('#deputy-newsletter-no').attr('checked', 'checked');
+
+     // Form content - 3 - Case details
      $('#deputy-type').val('Lay');
      $('#deputy-relationship').val('Sibling');
      $('#deputy-relationship').parent().removeClass('read-only');
@@ -260,18 +276,6 @@ if (window.location.href.indexOf("edit-deputy-1") != -1) {
      $('#deputy-main-correspondent').parent().addClass('checked');
      $('#deputy-main-correspondent').attr('checked', 'checked');
 
-     // Form content - 3 - Additional info
-     $('#deputy-digital-no').parent().addClass('checked');
-     $('#deputy-digital-no').attr('checked', 'checked');
-     $('#deputy-occupation').val('University professor');
-     $('#deputy-correspondence-email').parent().addClass('checked');
-     $('#deputy-correspondence-email').attr('checked', 'checked');
-     $('#deputy-special-spelling').parent().addClass('checked');
-     $('#deputy-special-spelling').attr('checked', 'checked');
-     $('#deputy-interpreter-no').parent().addClass('checked');
-     $('#deputy-interpreter-no').attr('checked', 'checked');
-     $('#deputy-newsletter-no').parent().addClass('checked');
-     $('#deputy-newsletter-no').attr('checked', 'checked');
 }
 
 // Show's the values for Lara Stevens (Deputy 1)
@@ -282,6 +286,7 @@ if (window.location.href.indexOf("edit-deputy-2") != -1) {
      // Changes the header content
      $('.breadcrumb .page-title').text('Edit deputy');
      $('.deputy-first-name-answer').text('Carla');
+     $('#action-panel .section-title').html("Edit <div class=\"deputy-first-name-answer\">Carla</div>'s details");
 
      // Changes the footer content
      $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').text('Save & update deputy');
@@ -302,7 +307,20 @@ if (window.location.href.indexOf("edit-deputy-2") != -1) {
      $('#deputy-mob-number').val('07772881687');
      $('#deputy-email').val('carla.frith@jourrapide.com');
 
-     // Form content - 2 - Case details
+     // Form content - 2 - Additional info
+     $('#deputy-digital-yes').parent().addClass('checked');
+     $('#deputy-digital-yes').attr('checked', 'checked');
+     $('#deputy-occupation').val('Mental health assistant');
+     $('#deputy-correspondence-phone').parent().addClass('checked');
+     $('#deputy-correspondence-phone').attr('checked', 'checked');
+     $('#deputy-correspondence-email').parent().addClass('checked');
+     $('#deputy-correspondence-email').attr('checked', 'checked');
+     $('#deputy-interpreter-no').parent().addClass('checked');
+     $('#deputy-interpreter-no').attr('checked', 'checked');
+     $('#deputy-newsletter-no').parent().addClass('checked');
+     $('#deputy-newsletter-no').attr('checked', 'checked');
+
+     // Form content - 3 - Case details
      $('#deputy-type').val('Lay');
      $('#deputy-relationship').val('Sibling');
      $('#deputy-relationship').parent().removeClass('read-only');
@@ -323,16 +341,18 @@ if (window.location.href.indexOf("edit-deputy-2") != -1) {
      $('#deputy-violent-risk').parent().addClass('checked');
      $('#deputy-violent-risk').attr('checked', 'checked');
 
-     // Form content - 3 - Additional info
-     $('#deputy-digital-yes').parent().addClass('checked');
-     $('#deputy-digital-yes').attr('checked', 'checked');
-     $('#deputy-occupation').val('Mental health assistant');
-     $('#deputy-correspondence-phone').parent().addClass('checked');
-     $('#deputy-correspondence-phone').attr('checked', 'checked');
-     $('#deputy-correspondence-email').parent().addClass('checked');
-     $('#deputy-correspondence-email').attr('checked', 'checked');
-     $('#deputy-interpreter-no').parent().addClass('checked');
-     $('#deputy-interpreter-no').attr('checked', 'checked');
-     $('#deputy-newsletter-no').parent().addClass('checked');
-     $('#deputy-newsletter-no').attr('checked', 'checked');
 }
+
+// Deputy fee payer
+$("#make-deputy-fee-payer").click( function(){
+     // Removes the attribute for the fee payer tick box
+     $('.fee-payer').removeAttr('href');
+     $('.fee-payer').removeAttr('rel');
+
+     // Pre ticks the fee payer and main correspodence
+     $('#deputy-fee-payer').parent().addClass('checked');
+     $('#deputy-fee-payer').attr('checked', 'checked');
+     $('#deputy-main-correspondent').parent().addClass('checked');
+     $('#deputy-main-correspondent').attr('checked', 'checked');
+
+ });

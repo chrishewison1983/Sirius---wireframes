@@ -78,47 +78,13 @@ $('#save').click(function(e) {
      }, 5000);
 });
 
+// Save draft time stamp - after 30 seconds
+$('#draft-saved-timer').delay(30000).slideDown();
+$('#draft-saved-timer').delay(3500).slideUp();
+
 // Change draft
-$('#document-1').show();
-$('#document-2, #document-3, #document-4, #document-5').hide();
-
-$('#drafts .edit').click(function(e) {
-     e.preventDefault();
-     // $('.tab-content').find('li').removeClass('selected');
-     // $(this).closest('li').addClass('selected');
-     // var docTitle = $(this).closest('li').find('.title .doc-type').text();
-     // var docRecipient = $(this).closest('li').find('.recipient-name').text();
-     //
-     // $('#action-panel').find('.current-document-title').text(docTitle);
-     // $('#action-panel').find('.recipient-name').text(docRecipient);
-
-     // if ($(this).closest('li').hasClass('doc-1')) {
-     //      $('#document-1').show();
-     //      $('#document-2, #document-3, #document-4, #document-5').hide();
-     //      $('#action-panel .section-title .number').text('1');
-     // }
-     // if ($(this).closest('li').hasClass('doc-2')) {
-     //      $('#document-2').show();
-     //      $('#document-1, #document-3, #document-4, #document-5').hide();
-     //      $('#action-panel .section-title .number').text('2');
-     // }
-     // if ($(this).closest('li').hasClass('doc-3')) {
-     //      $('#document-3').show();
-     //      $('#document-1, #document-2, #document-4, #document-5').hide();
-     //      $('#action-panel .section-title .number').text('3');
-     // }
-     // if ($(this).closest('li').hasClass('doc-4')) {
-     //      $('#document-4').show();
-     //      $('#document-1, #document-2, #document-3, #document-5').hide();
-     //      $('#action-panel .section-title .number').text('4');
-     // }
-     // if ($(this).closest('li').hasClass('doc-5')) {
-     //      $('#document-5').show();
-     //      $('#document-1, #document-2, #document-3, #document-4').hide();
-     //      $('#action-panel .section-title .number').text('5');
-     // }
-
-});
+$('#documents-1').show();
+$('#documents-2, #documents-3, #documents-4, #documents-5').hide();
 
 // Delete draft
 $('#drafts .delete, #client-drafts .delete').click(function(e) {
@@ -206,13 +172,13 @@ $(document).ready(function() {
 // Edit letter
 $(document).ready(function () {
 
-     if (window.location.href.indexOf("EditDoc") != -1) {
-          $('#edit-letter .doc-1').addClass('selected');
-          var currentDocTitle = $('#action-panel').find('.current-document-title').text();
-          var currentDocRecipient = $('#action-panel').find('.recipient-name').text();
-          $('.doc-1 .title .doc-type').text(currentDocTitle);
-          $('.doc-1 .recipient-name').text(currentDocRecipient);
-     }
+     // if (window.location.href.indexOf("EditDoc") != -1) {
+     //      $('#edit-letter .doc-1').addClass('selected');
+     //      var currentDocTitle = $('#action-panel').find('.current-document-title').text();
+     //      var currentDocRecipient = $('#action-panel').find('.recipient-name').text();
+     //      $('.doc-1 .title .doc-type').text(currentDocTitle);
+     //      $('.doc-1 .recipient-name').text(currentDocRecipient);
+     // }
 
 });
 
@@ -221,9 +187,9 @@ $(document).ready(function () {
 
      $('#preview-letter').click(function(e) {
           var index = parseInt($('.current-doc-info .number').text());
-          var $letterContent = $('#document-' + index + ' .jqte_editor').clone();
+          var $letterContent = $('#documents-' + index + ' .jqte_editor').clone();
           $('#letter-contents').html($letterContent);
-
+          // alert(index);
           $('#print-send-modal').modal('show');
      });
 
@@ -242,6 +208,14 @@ $(document).ready(function () {
 
           $(this).siblings('.back').trigger('click');
 
+     });
+
+     $("#draft-list li .edit").on("click", function (e) {
+          e.preventDefault();
+          var index = parseInt($(this).closest('li').data('document-id'));
+
+          $('.form-group').hide();
+          $('#documents-' + index).show();
      });
 
      $('#create-letter').click(function(e) {
@@ -281,7 +255,7 @@ $('.change-tab').click(function(e) {
      $('#health-tab-7').addClass('current');
      $('.client-details .tab-link').removeClass('current');
      $('.client-details .tab-link[data-tab="health-tab-7"]').addClass('current');
-     $('#document-viewer .document-1 .page-1').hide();
-     $('#document-viewer .document-1 .page-2').show();
-     $('#document-viewer .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
+     $('#documents-viewer .document-1 .page-1').hide();
+     $('#documents-viewer .document-1 .page-2').show();
+     $('#documents-viewer .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
 });

@@ -59,7 +59,7 @@
           margin-top: 1em;
      }
      .tab-content.side-panel {
-          #client-details, #document-viewer, #commission-visit, #create-case, #drafts, #document-contacts, #deputy-details,
+          #client-details, #documents-viewer, #commission-visit, #create-case, #drafts, #documents-contacts, #deputy-details,
           #new-deputy-details-summary {
                height: 86vh;
                overflow-y: scroll;
@@ -85,7 +85,7 @@
      }
      &.viewport-bottom {
           .tab-content.side-panel {
-               #client-details, #document-viewer, #commission-visit, #create-case, #drafts, #document-contacts, #deputy-details,
+               #client-details, #documents-viewer, #commission-visit, #create-case, #drafts, #documents-contacts, #deputy-details,
                #new-deputy-details-summary {
                     padding-bottom: 0;
                }
@@ -95,7 +95,7 @@
 
 #side-panel {
      .tab-content.side-panel {
-          #document-viewer {
+          #documents-viewer {
                overflow-y: inherit;
                overflow-x: inherit;
                .page-1 {
@@ -204,7 +204,7 @@
      }
 }
 
-#document-viewer, #commission-visit, #create-case {
+#documents-viewer, #commission-visit, #create-case {
      line-height: 0;
      display: inline-block;
      max-height: 86vh;
@@ -435,6 +435,22 @@
                     background-size: 0.95em;
                     border-bottom: 1px solid $blue;
                }
+               &.mov-file {
+                    background: url(#{$image-path}/icons/mov-file-blue.svg) no-repeat 0% 50% $white;
+                    background-size: 1.15em;
+                    .download {
+                         display: inline-block;
+                         margin: 0 0 0 0.35em;
+                         width: 1.35em;
+                         height: 1.35em;
+                         position: relative;
+                         top: 0.3em;
+                         background: url(#{$image-path}/icons/download-blue.svg) no-repeat 0% 50%;
+                         background-size: 1.15em;
+                    }
+                    // width: 100%;
+                    // display: inline-block;
+               }
           }
           form {
                display: inline-block;
@@ -486,7 +502,7 @@
      }
 }
 
-#document-contacts {
+#documents-contacts {
      .section-title {
           width: 97.5%;
           .main-cta {
@@ -688,7 +704,7 @@ button.accordion-section-title {
 }
 
 /* Style the accordion panel. Note: hidden by default */
-#document-viewer, #commission-visit, #create-case {
+#documents-viewer, #commission-visit, #create-case {
      // position: relative;
      .accordion-section-content {
           padding: 1em;

@@ -2,7 +2,7 @@
 <h2 class="section-title doc-title">
 	Edit document:
 	<div class="current-doc-info">
-		<!-- <span class="number">1</span> -->
+		<span class="number">1</span>
 		<span>
 			<div class="recipient-name">Mr Gerald Brackens</div> -
 			<div class="current-document-title"> </div>
@@ -51,27 +51,52 @@
 				</h2>
 			</div>
 		</div>
+		<div id="draft-saved-timer" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your draft has been <div>autosaved</div>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+					</script>
+				</h2>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- // CONFIRMATION MESSAGE - END // -->
 
 <!-- // DOCUMENT 1 - START // -->
-<div class="form-group" id="document-1">
+<div class="form-group" id="documents-1">
 	<textarea name="textarea" class="jqte-test" id="edit-document">
-
+		<p><strong>DOCUMENT 1</strong></p>
 		<p>Your ref:</p>
 		<p><strong>OPG ref: «caseno»</strong></p>
-		<p></p>
-		<p>«dtitleinit» «rsurname»</p>
-		<p>«radrs1»</p>
-		<p>«radrs2»</p>
-		<p>«radrs3»</p>
-		<p>«radrs4»</p>
-		<p>«radrs5»</p>
-		<p>«rpostcode»</p>
-		<p></p>
-		<p>«credate»</p>
-		<p></p>
 		<p>Dear «salut»</p>
 		<p></p>
 		<p><strong>Re: «Title» «Forename» «Surname»</strong></p>
@@ -100,7 +125,7 @@
 <!-- // DOCUMENT 1 - END // -->
 
 <!-- // DOCUMENT 2 - START // -->
-<div class="form-group" id="document-2">
+<div class="form-group" id="documents-2">
 	<textarea name="textarea" class="jqte-test" id="edit-document">
 		<p><strong>DOCUMENT 2</strong></p>
 		<p>Our ref: <strong>Investigations/7000-0000-2654/[Your initials]</strong></p>
@@ -124,14 +149,12 @@
 		<p></p>
 		<p><strong>Office of the Public Guardian</strong></p>
 		<p></p>
-		<p>Cymraeg: if you'd prefer to hear from us in Welsh, call 0300 456 0300 or email customerservices@publicguardian.gis.gov.uk</p>
-		<p></p>
 	</textarea>
 </div>
 <!-- // DOCUMENT 2 - END // -->
 
 <!-- // DOCUMENT 3 - START // -->
-<div class="form-group" id="document-3">
+<div class="form-group" id="documents-3">
 	<textarea name="textarea" class="jqte-test" id="edit-document">
 		<p><strong>DOCUMENT 3</strong></p>
 		<p>Our ref: <strong>Investigations/7000-0000-2654/[Your initials]</strong></p>
@@ -155,14 +178,12 @@
 		<p></p>
 		<p><strong>Office of the Public Guardian</strong></p>
 		<p></p>
-		<p>Cymraeg: if you'd prefer to hear from us in Welsh, call 0300 456 0300 or email customerservices@publicguardian.gis.gov.uk</p>
-		<p></p>
 	</textarea>
 </div>
 <!-- // DOCUMENT 3 - END // -->
 
 <!-- // DOCUMENT 4 - START // -->
-<div class="form-group" id="document-4">
+<div class="form-group" id="documents-4">
 	<textarea name="textarea" class="jqte-test" id="edit-document">
 		<p><strong>DOCUMENT 4</strong></p>
 		<p>Our ref: <strong>Investigations/7000-0000-2654/[Your initials]</strong></p>
@@ -186,14 +207,12 @@
 		<p></p>
 		<p><strong>Office of the Public Guardian</strong></p>
 		<p></p>
-		<p>Cymraeg: if you'd prefer to hear from us in Welsh, call 0300 456 0300 or email customerservices@publicguardian.gis.gov.uk</p>
-		<p></p>
 	</textarea>
 </div>
 <!-- // DOCUMENT 4 - END // -->
 
 <!-- // DOCUMENT 5 - START // -->
-<div class="form-group" id="document-5">
+<div class="form-group" id="documents-5">
 	<textarea name="textarea" class="jqte-test" id="edit-document">
 		<p><strong>DOCUMENT 5</strong></p>
 		<p>Our ref: <strong>Investigations/7000-0000-2654/[Your initials]</strong></p>
@@ -216,8 +235,6 @@
 		<p></p>
 		<p></p>
 		<p><strong>Office of the Public Guardian</strong></p>
-		<p></p>
-		<p>Cymraeg: if you'd prefer to hear from us in Welsh, call 0300 456 0300 or email customerservices@publicguardian.gis.gov.uk</p>
 		<p></p>
 	</textarea>
 </div>

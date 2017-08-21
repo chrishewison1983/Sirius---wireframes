@@ -159,7 +159,7 @@ table {
      }
 }
 
-#tasks-table, #completed-tasks-table, #deputies-table {
+#tasks-table, #completed-tasks-table, #deputies-table, #order-table {
      color: $text-main-colour;
      font-family: $Opensans-Regular;
      border-collapse: collapse;
@@ -321,7 +321,7 @@ table {
                height: 2em;
           }
      }
-     a.task {
+     a.task, a.order {
           font-family: $Montserrat;
           font-weight: bold;
           font-size: 1.4rem;
@@ -331,8 +331,16 @@ table {
           display: block;
           margin: 0 0 0 0;
           // width: 85%;
+          // strong {
+          //      color: $blue;
+          //      text-decoration: none;
+          // }
      }
-     a.open {
+     a.order {
+          // text-decoration: none;
+          // border-bottom:
+     }
+     a.open, a.documents {
           padding: 0 0 0 1em;
           background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
           background-size: 0.75em;
@@ -341,6 +349,9 @@ table {
                background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
                background-size: 0.65em;
           }
+     }
+     a.documents {
+          margin-left: 1.5em;
      }
      .description {
           padding: 1em 0 0 0;
@@ -390,7 +401,7 @@ table {
      }
 }
 
-#tasks-table, #completed-tasks-table {
+#tasks-table, #completed-tasks-table, #order-table {
      thead {
           border-bottom: none;
           tr {
@@ -410,6 +421,37 @@ table {
                td {
                     box-shadow: inset 0 -20px 0 $white;
                     padding-bottom: 2em;
+               }
+          }
+     }
+}
+
+#order-table {
+     tbody {
+          tr {
+               &.documents-list {
+                    display: none;
+               }
+               td {
+                    padding-top: 1em;
+                    padding-bottom: 1.5em;
+                    &:first-of-type {
+                         box-shadow: inset 10px 0px 0px 0px rgba($main-colour,1);
+                    }
+                    .main-cta.edit {
+                         padding: 0.25em 0.75em 0.25em 2em;
+                         width: auto;
+                         float: right;
+                         text-align: center;
+                         margin: 0;
+                         background: url(#{$image-path}/icons/edit-white.svg) no-repeat 12.5% 50% $blue;
+                         background-size: 1em;
+                         &:hover {
+                              border: 3px solid darken($blue,5%);
+                              background: url(#{$image-path}/icons/edit-white.svg) no-repeat 12.5% 50% darken($blue,5%);
+                              background-size: 1em;
+                         }
+                    }
                }
           }
      }

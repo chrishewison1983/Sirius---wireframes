@@ -43,10 +43,13 @@
           .title {
                display: inline-block;
                width: 100%;
+               margin: 0 0 0.5em 0;
                h3 {
                     width: 100%;
                     display: inline-block;
                     margin: 0;
+                    text-transform: capitalize;
+                    font-size: 1.4rem;
                     div {
                          display: inline-block;
                     }
@@ -142,6 +145,17 @@
      a.main-cta {
           &.secondary {
                width: auto;
+               &.edit {
+                    float: left;
+                    padding: 1em 1em 1em 2em;
+                    background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 5% 50%;
+                    background-size: 1em;
+                    &:hover {
+                         color: $white;
+                         background: url(#{$image-path}/icons/edit-white.svg) no-repeat 5% 50% $blue;
+                         background-size: 1em;
+                    }
+               }
           }
      }
 }

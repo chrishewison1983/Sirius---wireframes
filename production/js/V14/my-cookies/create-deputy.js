@@ -3,7 +3,16 @@
 $('#new-deputy-details .place-holder-text').show();
 $('#new-deputy-details .person-detail-item').hide();
 
-$("#add-new-deputy, #add-deputy-step-1, #add-another-deputy, .check-edit").on("click", function (e) {
+// First page name capture
+$("#add-new-deputy").on("click", function (e) {
+     $.cookie("deputy-name", $("#deputy-name").val(), {path:'/'});
+});
+
+if ($.cookie("deputy-name")) {
+     $(".deputy-name-answer").text($.cookie("deputy-name"));
+}
+
+$("#add-deputy-step-1, #add-another-deputy, .check-edit").on("click", function (e) {
      $.cookie("deputy-first-name", $("#deputy-first-name").val(), {path:'/'});
      $.cookie("deputy-last-name", $("#deputy-last-name").val(), {path:'/'});
 });
@@ -41,23 +50,6 @@ $("#add-deputy-step-1").on("click", function (e) {
 $("#add-deputy-step-2").on("click", function (e) {
 
      $.cookie("create-deputy-step-2", true, {path:'/'});
-
-     // DEPUTY CASE DETAILS
-     $.cookie("deputy-type", $("#deputy-type").val(), {path:'/'});
-     $.cookie("deputy-relationship", $("#deputy-relationship").val(), {path:'/'});
-     $.cookie("deputy-status", $("#deputy-status").val(), {path:'/'});
-     // Other - these are dependent on other values
-     $.cookie("deputy-other-relation", $("#deputy-other-relation").val(), {path:'/'});
-     $.cookie("deputy-other-professional", $("#deputy-other-professional").val(), {path:'/'});
-     $.cookie("deputy-fee-payer", $("#deputy-fee-payer").is(':checked'), {path:'/'});
-     $.cookie("deputy-main-correspondent", $("#deputy-main-correspondent").is(':checked'), {path:'/'});
-
-});
-
-// Step 3
-$("#add-deputy-step-3, #add-another-deputy").on("click", function (e) {
-
-     $.cookie("create-deputy-step-3", true, {path:'/'});
      $.cookie("deputy-created", true, {path:'/'});
 
      // ADDITIONAL DEPUTY DETAILS
@@ -74,6 +66,23 @@ $("#add-deputy-step-3, #add-another-deputy").on("click", function (e) {
      $.cookie("deputy-interpreter", $("input[name=deputy-interpreter]:checked").val(), {path:'/'});
      $.cookie("deputy-interpreter-details", $("#deputy-interpreter-details").val(), {path:'/'});
      $.cookie("deputy-newsletter", $("input[name=deputy-newsletter]:checked").val(), {path:'/'});
+
+});
+
+// Step 3
+$("#add-deputy-step-3, #add-another-deputy").on("click", function (e) {
+
+     $.cookie("create-deputy-step-3", true, {path:'/'});
+
+     // DEPUTY CASE DETAILS
+     $.cookie("deputy-type", $("#deputy-type").val(), {path:'/'});
+     $.cookie("deputy-relationship", $("#deputy-relationship").val(), {path:'/'});
+     $.cookie("deputy-status", $("#deputy-status").val(), {path:'/'});
+     // Other - these are dependent on other values
+     $.cookie("deputy-other-relation", $("#deputy-other-relation").val(), {path:'/'});
+     $.cookie("deputy-other-professional", $("#deputy-other-professional").val(), {path:'/'});
+     $.cookie("deputy-fee-payer", $("#deputy-fee-payer").is(':checked'), {path:'/'});
+     $.cookie("deputy-main-correspondent", $("#deputy-main-correspondent").is(':checked'), {path:'/'});
 
 });
 
@@ -456,7 +465,7 @@ if ($.cookie("deputy-newsletter") == 'Yes') {
 $('.deputies-list').hide();
 $('#list-of-deputies').hide();
 
-$("#add-deputy").on("click", function (e) {
+$("#add-deputy-step-3").on("click", function (e) {
      $.cookie("user-journey", 2, {path:'/'});
 });
 

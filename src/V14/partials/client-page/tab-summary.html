@@ -38,7 +38,7 @@
 					Client details
 				</li>
 				<li class="tab-link" data-tab="summary-tab-3">
-					Sub orders
+					<span>6</span> Sub orders
 				</li>
 				<li class="tab-link" data-tab="summary-tab-4">
 					3rd party contacts
@@ -557,6 +557,63 @@
 				<div class="row">
 
 					<div class="large-12 large-uncentered columns">
+
+						<!-- // SUB ORDERS - START // -->
+						<h2 class="section-title">Client sub-orders</h2>
+
+						<table id="order-table" class="tablesorter">
+							<thead>
+								<tr class="five-column">
+									<th><span></span>Order details</th>
+									<th><span></span>Type</th>
+									<th><span></span>Date</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- TASK 1 - START -->
+								<tr class="">
+									<td>
+										<div class="wrapper">
+											<div class="text">
+												<a href="#" class="order">
+													<strong>Tenancy order:</strong> 901929145
+												</a>
+												<div class="details">
+													<p>
+														<a href="#" class="open">Notes</a>
+														<a href="#" class="documents" data-order-id="1">Order documents</a>
+													</p>
+												</div>
+												<div class="description">
+													<p>
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+													</p>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<a href="4-client-page/4a-new-client.html#property">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+									</td>
+									<td>
+										<span class="icon date"></span>
+										<p>20/05/2017</p>
+									</td>
+									<td>
+										<a class="main-cta edit" href="../13-sub-order/13a-the-order.html">Edit order</a>
+									</td>
+								</tr>
+
+								<tr class="documents-list" data-documents-id="1">
+									<td>Documents</td>
+								</tr>
+								<!-- TASK 1 - END -->
+
+							</tbody>
+						</table>
+						<!-- // SUB ORDERS - END // -->
+
 					</div>
 
 				</div>
@@ -578,8 +635,8 @@
 
 					<div class="large-12 large-uncentered columns">
 
-						<!-- // DOCUMENT VIEWER - START // -->
-						<div id="document-contacts">
+						<!-- // DOCUMENT CONTACTS - START // -->
+						<div id="documents-contacts">
 
 							<h2 class="section-title">
 								Client contacts
@@ -665,7 +722,7 @@
 							</ul>
 
 						</div>
-						<!-- // DOCUMENT VIEWER - END // -->
+						<!-- // DOCUMENT CONTACTS - END // -->
 
 					</div>
 
