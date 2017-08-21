@@ -108,7 +108,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a> <div class="separator"> > </div> <span>Create correspondence</span> </nav> <h1> Create correspondence </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link" data-tab="tab-5"> <span class="client-contacts"></span> <p>Contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a> <div class="separator"> > </div> <span>Create correspondence</span> </nav> <h1> Create correspondence </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="info"></span> <p>Letter</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link" data-tab="tab-5"> <span class="client-contacts"></span> <p>3rd party contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DOCUMENT SUMMARY - START // -->
 <h2 class="section-title">Document information</h2>
 
 <p id="letter-not-started" class="place-holder-text">No templates or drafts have been chosen to edit</p>
@@ -134,9 +134,7 @@
 	<div id="recipients-section">
 		<h3 class="sub-section-title">Recipients chosen</h3>
 
-		<ol id="recipients">
-			<li>Ms Lara Stevens</li>
-		</ol>
+		<ol id="recipients"></ol>
 	</div>
 </div>
 <!-- // DOCUMENT SUMMARY - END // -->
@@ -155,32 +153,109 @@
 	<!-- <h2 class="sub-section-title"><span class="icon welfare"></span>Health &amp; welfare drafts</h2> -->
 
 	<ol id="draft-list">
-		<li class="doc-1" data-value='doc-1'>
-			<span class="title">
-				<div class="doc-title">
-					<span class="recipient-name">Mr Gerald Brackens</span> - 
-					<span class="doc-type">Blank Receiver.doc</span>
-				</div>
-			 	<div class="user">Created by: <div class="sirius-user-id">Susan Smith</div></div>
-			</span>
-			<div class="info">
-				<span>
-					<div class="icon date"></div>
-					Date created:
-					<strong>25/06/2017 - 13:15</strong>
-				</span><br>
-				<span>
-					<div class="icon saved"></div>
-					Last saved:
-					<strong>25/06/2017 - 13:15</strong>
-				</span><br>
-				<a href="#" class="edit">Edit</a>
-				<a href="#delete" rel="modal:open" class="delete">Delete</a>
-			</div>
-		</li>
 	</ol>
 
 </div>
+
+<script>
+	var drafts;
+
+	$(document).ready(function(){
+		loadDrafts();
+
+		if (drafts && drafts.length > 0 && updateEditDraft){
+			updateEditDraft(drafts[0], 1);
+		}
+
+		$('#draft-list').on('click', '.edit', function(e) {
+			e.preventDefault();
+			if (updateEditDraft){
+				var item = parseInt($(this).closest('li').data('document-id'));
+
+				updateEditDraft(drafts[item-1], item);
+			}
+			$(this).closest('li').addClass('selected').siblings().removeClass('selected');
+		});
+
+		$('#draft-list').on('click', '.delete-document', function(e) {
+			e.preventDefault();
+
+			var item = parseInt($(this).closest('li').data('document-id'));
+
+			$('#delete').attr('data-document-id', item-1);
+			$('#delete').modal('show');
+		});
+
+		$('#drafts-list').on('click', 'li', function(e){
+			// $(this).siblings().removeClass('selected');
+			// $(this).addClass('selected');
+		});
+
+		$('#delete-draft').click(function(){
+			var item = parseInt($(this).parents('#delete').data('document-id'));
+			drafts.splice(item, 1);
+			sessionStorage.setItem('client-draft-letters', JSON.stringify(drafts));
+
+			loadDrafts();
+
+		});
+	});
+
+	function loadDrafts(){
+		$('#draft-list').empty();
+
+		var data = sessionStorage.getItem('client-draft-letters');
+		drafts = JSON.parse(data);
+		if (drafts) {
+
+			for (var i = 0; i < drafts.length; i++)
+			{
+				var draft = drafts[i];
+				var inserts = draft.selectedInserts ? draft.selectedInserts.join(', ') : '';
+
+				var li = $(`
+					<li class="doc-${ i+1 }" data-value='doc-${ i+1 }' data-document-id="${ i+1 }">
+						<span class="title">
+							<div class="doc-title">
+								<span class="recipient-name">${ draft.selectedRecipient }</span> -
+								<span class="doc-type">${ draft.selectedLetter }</span>
+							</div>
+							<div class="user">Created by: <div class="sirius-user-id">Susan Smith</div></div>
+						</span>
+						<div class="info">
+							<span class="inserts-selected" style="${ inserts !== '' ? '' : 'display:none;' }">
+							<div class="icon inserts"></div>
+								Inserts:
+								<strong>${ inserts }</strong>
+							</span>
+							<span>
+								<div class="icon date"></div>
+								Date created:
+								<strong>25/06/2017 - 13:15</strong>
+							</span>
+							<span>
+								<div class="icon saved"></div>
+								Last saved:
+								<strong>25/06/2017 - 13:15</strong>
+							</span><br>
+							<a href="#" class="edit">Edit</a>
+							<a class="delete delete-document">Delete</a>
+						</div>
+					</li>
+				`);
+
+				$('#draft-list ').append(li);
+
+			}
+		}
+
+		if (drafts && drafts.length > 0 && updateEditDraft){
+			updateEditDraft(drafts[0], 1);
+			$('#draft-list li[data-document-id=' + 1 + ']').addClass('selected').siblings().removeClass('selected');
+		}
+
+	}
+</script>
 <!-- // DRAFTS - END // -->
  </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
 <h2 class="section-title">
@@ -188,7 +263,7 @@
 	<div class="client-first-name">Gerald</div>
 	<div class="client-last-name">Brackens</div>
 	details
-	<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+	<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit client</a>
 </h2>
 
 <div class="check-details" id="client-details">
@@ -835,89 +910,104 @@
 
 	<h2 class="section-title">
 		Client contacts
-		<a class="main-cta" href="../2-create-letter/2c-add-correspondant.html">Add correspondent</a>
+		<a class="main-cta letter-contact-journey" href="../2-create-letter/2c-add-correspondant.html">Add contact</a>
 	</h2>
 
 	<ul class="contact-list">
 
 		<!-- // CORRESPONDANT - 1 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				Mr Gerald Brackens<br>
-				<span class="sub-title">Client</span><br>
-				<span class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
+		<li class="correspondent">
+			<div class="wrapper">
+				<div class="contact-name">Daniel D. Bobadilla</div>
+				<a href="#" class="edit">Edit</a>
+				<a href="#delete-contact" rel="modal:open" class="delete delete-contact">Delete</a>
+			</div>
+			<span class="sub-title">Doctor</span><br>
+			<span class="sub-text">73 Ilchester Road, MUGGLESWICK, DH8 6UA.</span>
+			<a href="#" class="full-details">View full details</a>
+			<div class="communication-preferences">
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Phone number: <strong>0123456789</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Mobile number: <strong>07739273398</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Email: <strong>daniel.d.bobadilla@nhs.com</strong></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Preferences: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Notes: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Interpreter required?: <strong>No</strong></span>
+					</div>
+				</div>
+			</div>
 		</li>
 		<!-- // CORRESPONDANT - 1 - END // -->
 
 		<!-- // CORRESPONDANT - 2 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				<span class="icon fee-payer"><p>Fee payer</p></span>
-				Ms Lara Stevens<br>
-				<span class="sub-title">Correspondent</span><br>
-				<span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
+		<li class="correspondent">
+			<div class="wrapper">
+				<div class="contact-name">TrustMe Limited</div>
+				<a href="#" class="edit">Edit</a>
+				<a href="#delete-contact" rel="modal:open" class="delete delete-contact">Delete</a>
+			</div>
+			<span class="sub-title">Trust Corporation</span><br>
+			<span class="sub-text">62 Review Road, Neasden, UK, NW27BE.</span>
+			<a href="#" class="full-details" data-value="1">View full details</a>
+			<div class="communication-preferences">
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Phone number: <strong>0123456789</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Mobile number: <strong>07739273398</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Email: <strong>contact@trustmeltd.com</strong></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Preferences: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Notes: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Interpreter required?: <strong>No</strong></span>
+					</div>
+				</div>
+			</div>
 		</li>
 		<!-- // CORRESPONDANT - 2 - END // -->
-
-		<!-- // CORRESPONDANT - 3 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				Mrs Carla Frith<br>
-				<span class="sub-title">Deputy</span><br>
-				<span class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
-				<span class="communication-preferences">Preferences: <strong>Welsh</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 3 - END // -->
-
-		<!-- // CORRESPONDANT - 4 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				Mrs Melanie Rand<br>
-				<span class="sub-title">Deputy</span><br>
-				<span class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 4 - END // -->
-
-		<!-- // CORRESPONDANT - 5 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				<span class="icon violent"><p>Violent</p></span>
-				Toby Daniels<br>
-				<span class="sub-title">Notified Person</span><br>
-				<span class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span>
-				<span class="communication-preferences">Preferences: <strong>Large print</strong>, <strong>Hearing impaired</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 5 - END // -->
-
-		<!-- // CORRESPONDANT - 6 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				TrustMe Limited<br>
-				<span class="sub-title">Trust Corporation</span><br>
-				<span class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 6 - END // -->
 
 	</ul>
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
+
+<!-- // MODAL - START // -->
+<div id="delete-contact" style="display:none;">
+	<h1>Delete this contact?</h1>
+	<h2><div class="contact-name">Joe</div></h2>
+	<p>
+		Are you sure you want to continue?
+	</p>
+	<hr>
+	<div class="cta-row">
+		<a class="main-cta" id="delete-contact-confirm">Delete the contact</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
  </div> <!-- =========== TAB CONTENT - 5 - END =========== --> <!-- =========== TAB CONTENT - 6 - START =========== --> <div id="tab-6" class="tab-content side-panel"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
@@ -1158,6 +1248,7 @@
 	<script src="../../../production/js/V14/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V14/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V14/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V14/my-cookies/create-contact.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
@@ -1173,6 +1264,7 @@
 	<script src="../../../production/js/V14/my-jquery/supervision-level.js"></script>
 	<script src="../../../production/js/V14/my-jquery/new-event.js"></script>
 	<script src="../../../production/js/V14/my-jquery/progress-bar.js"></script>
+	<script src="../../../production/js/V14/my-jquery/create-contact.js"></script>
 	<!-- User Journey - JQuery - END -->
 
 	<script src="../../../production/js/V14/jquery.tablesorter.js"></script>

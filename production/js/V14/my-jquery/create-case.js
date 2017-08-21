@@ -133,9 +133,11 @@ $("#case-security-bond-no").click( function(){
 // });
 
 // =================================== Edit Case - START - JAVASCRIPT =================================== //
+$('#edit-case-button').hide();
+
 if (window.location.href.indexOf("EditCase") != -1) {
 
-     $('#order-details, #deputy-details').wrap('<a href="#edit-case-modal" rel="modal:open" class="modal-wrapper"></a>');
+     // $('#order-details, #deputy-details').wrap('<a href="#edit-case-modal" rel="modal:open" class="modal-wrapper"></a>');
 
      $('#cta-footer').show();
 
@@ -178,6 +180,9 @@ if (window.location.href.indexOf("EditCase") != -1) {
      $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').attr('disabled', true);
      $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').closest('.form-group').addClass('read-only');
 
+     // Show's the EDIT CTA
+     $('#edit-case-button').show();
+     $('#create-case-button').hide();
 }
 
 // Removes the read-only and disabled attributes of the form
@@ -212,6 +217,10 @@ $("#confirm-edit-order").click( function(){
 
      // Deputies jointly severally
      $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').attr('disabled', false);
+
+     // Show's the EDIT CTA
+     $('#edit-case-button').hide();
+     $('#create-case-button').show();
 
 });
 // =================================== Edit Case - END - JAVASCRIPT =================================== //

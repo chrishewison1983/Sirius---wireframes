@@ -94,7 +94,7 @@
                          <ul id="side-panel-tabs" class="tabs">
                               <li class="tab-link" data-tab="tab-1">
                                    <span class="info"></span>
-                                   <p>Letter info</p>
+                                   <p>Letter</p>
                               </li>
                               <li class="tab-link current" data-tab="tab-2">
                                    <span class="draft-letters"></span>
@@ -110,7 +110,7 @@
                               </li>
                               <li class="tab-link" data-tab="tab-5">
                                    <span class="client-contacts"></span>
-                                   <p>Contacts</p>
+                                   <p>3rd party contacts</p>
                               </li>
                               <li class="tab-link" data-tab="tab-6">
                                    <span class="documents"></span>
@@ -185,7 +185,7 @@
                <!-- // EDIT DOCUMENT - END // -->
 
                <!-- // MODAL - START // -->
-               <div id="ex1" style="display:none;">
+               <div id="print-send-modal" style="display:none;">
                     <img src="../../../production/img/V14/letters/opg-letter-header.png" alt="Document" class="header">
                     <div id="letter-contents"></div>
                     <p>
@@ -193,7 +193,7 @@
                     </p>
                     <hr>
                     <div class="cta-row">
-                         <a class="main-cta" id="confirm-print-send" href="../4-client-page/4a-new-client.html">Print &amp; send document</a>
+                         <a class="main-cta" id="confirm-print-send">Print &amp; send document</a>
                          <a href="#" rel="modal:close" class="back">Back to my letter</a>
                     </div>
                </div>
@@ -203,7 +203,7 @@
                     <p>Are you sure you want to delete this draft?</p>
                     <hr>
                     <div class="cta-row">
-                         <a class="main-cta delete-action" rel="modal:close" id="delete-draft">Delete</a>
+                         <a class="main-cta" rel="modal:close" id="delete-draft">Delete draft</a>
                          <a href="#" rel="modal:close" id="cancel-delete">Cancel</a>
                     </div>
                </div>
@@ -220,10 +220,12 @@
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="create-letter" href="#ex1" rel="modal:open">Preview &amp; publish</a>
+     <a class="main-cta primary" id="preview-letter">Preview &amp; publish</a>
+     <span class="separator"></span>
      <a class="main-cta secondary" id="save" href="#">Save draft</a>
      <a class="main-cta secondary" id="save-and-exit" href="../4-client-page/4a-new-client.html">Save draft &amp; Exit</a>
      <a href="#delete" rel="modal:open" class="main-cta secondary" id="delete-draft" href="#">Delete draft</a>
+     <span class="separator"></span>
      <a onclick="history.back();" class="back">Back</a>
      <!-- <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a> -->
 </footer>
@@ -236,13 +238,27 @@
           JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
                $('#recipients').append('<li>' + recipient + '</li>');
           });
-          JSON.parse(sessionStorage.getItem('selected-inserts')).forEach(function(insert) {
-               $('#inserts-selected').append('<li>' + insert + '</li>');
-          });
-          JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+
+          var inserts = JSON.parse(sessionStorage.getItem('selected-inserts'));
+
+          if (inserts){
+               inserts.forEach(function(insert) {
+                    $('#inserts-selected').append('<li>' + insert + '</li>');
+               });
+          }
+          /*JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
                $('#draft-list').append('<li>' + letter + '</li>');
-          });
+          });*/
      });
+
+     function updateEditDraft(draft, index){
+          $('[id^="document-"]').hide();
+          $('#document-' + index).show();
+
+          $('.current-doc-info .number').text(index);
+          $('.current-doc-info .recipient-name').text(draft.selectedRecipient);
+          $('.current-doc-info .current-document-title').text(draft.selectedLetter);
+     }
 
 </script>
 <!-- SCRIPT CONTENT - END -->

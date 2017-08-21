@@ -13,30 +13,107 @@
 	<!-- <h2 class="sub-section-title"><span class="icon welfare"></span>Health &amp; welfare drafts</h2> -->
 
 	<ol id="draft-list">
-		<li class="doc-1" data-value='doc-1'>
-			<span class="title">
-				<div class="doc-title">
-					<span class="recipient-name">Mr Gerald Brackens</span> - 
-					<span class="doc-type">Blank Receiver.doc</span>
-				</div>
-			 	<div class="user">Created by: <div class="sirius-user-id">Susan Smith</div></div>
-			</span>
-			<div class="info">
-				<span>
-					<div class="icon date"></div>
-					Date created:
-					<strong>25/06/2017 - 13:15</strong>
-				</span><br>
-				<span>
-					<div class="icon saved"></div>
-					Last saved:
-					<strong>25/06/2017 - 13:15</strong>
-				</span><br>
-				<a href="#" class="edit">Edit</a>
-				<a href="#delete" rel="modal:open" class="delete">Delete</a>
-			</div>
-		</li>
 	</ol>
 
 </div>
+
+<script>
+	var drafts;
+
+	$(document).ready(function(){
+		loadDrafts();
+
+		if (drafts && drafts.length > 0 && updateEditDraft){
+			updateEditDraft(drafts[0], 1);
+		}
+
+		$('#draft-list').on('click', '.edit', function(e) {
+			e.preventDefault();
+			if (updateEditDraft){
+				var item = parseInt($(this).closest('li').data('document-id'));
+
+				updateEditDraft(drafts[item-1], item);
+			}
+			$(this).closest('li').addClass('selected').siblings().removeClass('selected');
+		});
+
+		$('#draft-list').on('click', '.delete-document', function(e) {
+			e.preventDefault();
+
+			var item = parseInt($(this).closest('li').data('document-id'));
+
+			$('#delete').attr('data-document-id', item-1);
+			$('#delete').modal('show');
+		});
+
+		$('#drafts-list').on('click', 'li', function(e){
+			// $(this).siblings().removeClass('selected');
+			// $(this).addClass('selected');
+		});
+
+		$('#delete-draft').click(function(){
+			var item = parseInt($(this).parents('#delete').data('document-id'));
+			drafts.splice(item, 1);
+			sessionStorage.setItem('client-draft-letters', JSON.stringify(drafts));
+
+			loadDrafts();
+
+		});
+	});
+
+	function loadDrafts(){
+		$('#draft-list').empty();
+
+		var data = sessionStorage.getItem('client-draft-letters');
+		drafts = JSON.parse(data);
+		if (drafts) {
+
+			for (var i = 0; i < drafts.length; i++)
+			{
+				var draft = drafts[i];
+				var inserts = draft.selectedInserts ? draft.selectedInserts.join(', ') : '';
+
+				var li = $(`
+					<li class="doc-${ i+1 }" data-value='doc-${ i+1 }' data-document-id="${ i+1 }">
+						<span class="title">
+							<div class="doc-title">
+								<span class="recipient-name">${ draft.selectedRecipient }</span> -
+								<span class="doc-type">${ draft.selectedLetter }</span>
+							</div>
+							<div class="user">Created by: <div class="sirius-user-id">Susan Smith</div></div>
+						</span>
+						<div class="info">
+							<span class="inserts-selected" style="${ inserts !== '' ? '' : 'display:none;' }">
+							<div class="icon inserts"></div>
+								Inserts:
+								<strong>${ inserts }</strong>
+							</span>
+							<span>
+								<div class="icon date"></div>
+								Date created:
+								<strong>25/06/2017 - 13:15</strong>
+							</span>
+							<span>
+								<div class="icon saved"></div>
+								Last saved:
+								<strong>25/06/2017 - 13:15</strong>
+							</span><br>
+							<a href="#" class="edit">Edit</a>
+							<a class="delete delete-document">Delete</a>
+						</div>
+					</li>
+				`);
+
+				$('#draft-list ').append(li);
+
+			}
+		}
+
+		if (drafts && drafts.length > 0 && updateEditDraft){
+			updateEditDraft(drafts[0], 1);
+			$('#draft-list li[data-document-id=' + 1 + ']').addClass('selected').siblings().removeClass('selected');
+		}
+
+	}
+</script>
 <!-- // DRAFTS - END // -->

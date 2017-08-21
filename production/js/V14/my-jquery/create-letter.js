@@ -52,7 +52,11 @@ $(document).ready(function() {
           $(`#suggested [data-correspondant-id="${id}"]`).show();
           $(`#suggested [data-correspondant-id="${id}"]`).parent().show();
           persistSelectedRecipients();
+
+
      });
+
+     $($('#suggested a')[0]).trigger('click');
 
 });
 
@@ -80,39 +84,39 @@ $('#document-2, #document-3, #document-4, #document-5').hide();
 
 $('#drafts .edit').click(function(e) {
      e.preventDefault();
-     $('.tab-content').find('li').removeClass('selected');
-     $(this).closest('li').addClass('selected');
-     var docTitle = $(this).closest('li').find('.title .doc-type').text();
-     var docRecipient = $(this).closest('li').find('.recipient-name').text();
+     // $('.tab-content').find('li').removeClass('selected');
+     // $(this).closest('li').addClass('selected');
+     // var docTitle = $(this).closest('li').find('.title .doc-type').text();
+     // var docRecipient = $(this).closest('li').find('.recipient-name').text();
+     //
+     // $('#action-panel').find('.current-document-title').text(docTitle);
+     // $('#action-panel').find('.recipient-name').text(docRecipient);
 
-     $('#action-panel').find('.current-document-title').text(docTitle);
-     $('#action-panel').find('.recipient-name').text(docRecipient);
-
-     if ($(this).closest('li').hasClass('doc-1')) {
-          $('#document-1').show();
-          $('#document-2, #document-3, #document-4, #document-5').hide();
-          $('#action-panel .section-title .number').text('1');
-     }
-     if ($(this).closest('li').hasClass('doc-2')) {
-          $('#document-2').show();
-          $('#document-1, #document-3, #document-4, #document-5').hide();
-          $('#action-panel .section-title .number').text('2');
-     }
-     if ($(this).closest('li').hasClass('doc-3')) {
-          $('#document-3').show();
-          $('#document-1, #document-2, #document-4, #document-5').hide();
-          $('#action-panel .section-title .number').text('3');
-     }
-     if ($(this).closest('li').hasClass('doc-4')) {
-          $('#document-4').show();
-          $('#document-1, #document-2, #document-3, #document-5').hide();
-          $('#action-panel .section-title .number').text('4');
-     }
-     if ($(this).closest('li').hasClass('doc-5')) {
-          $('#document-5').show();
-          $('#document-1, #document-2, #document-3, #document-4').hide();
-          $('#action-panel .section-title .number').text('5');
-     }
+     // if ($(this).closest('li').hasClass('doc-1')) {
+     //      $('#document-1').show();
+     //      $('#document-2, #document-3, #document-4, #document-5').hide();
+     //      $('#action-panel .section-title .number').text('1');
+     // }
+     // if ($(this).closest('li').hasClass('doc-2')) {
+     //      $('#document-2').show();
+     //      $('#document-1, #document-3, #document-4, #document-5').hide();
+     //      $('#action-panel .section-title .number').text('2');
+     // }
+     // if ($(this).closest('li').hasClass('doc-3')) {
+     //      $('#document-3').show();
+     //      $('#document-1, #document-2, #document-4, #document-5').hide();
+     //      $('#action-panel .section-title .number').text('3');
+     // }
+     // if ($(this).closest('li').hasClass('doc-4')) {
+     //      $('#document-4').show();
+     //      $('#document-1, #document-2, #document-3, #document-5').hide();
+     //      $('#action-panel .section-title .number').text('4');
+     // }
+     // if ($(this).closest('li').hasClass('doc-5')) {
+     //      $('#document-5').show();
+     //      $('#document-1, #document-2, #document-3, #document-4').hide();
+     //      $('#action-panel .section-title .number').text('5');
+     // }
 
 });
 
@@ -215,11 +219,57 @@ $(document).ready(function () {
 // Preview letter
 $(document).ready(function () {
 
-     $('#create-letter').click(function(e) {
-          var $letterContent = $('#document-1 .jqte_editor').clone();
+     $('#preview-letter').click(function(e) {
+          var index = parseInt($('.current-doc-info .number').text());
+          var $letterContent = $('#document-' + index + ' .jqte_editor').clone();
           $('#letter-contents').html($letterContent);
-          // $('#letter-contents').append($(this).prev('#document-1 .jqte_editor').html());
-          // console.log('#edit-document').text();
+
+          $('#print-send-modal').modal('show');
+     });
+
+     $("#confirm-print-send").on("click", function (e) {
+          e.preventDefault();
+          var index = parseInt($('.current-doc-info .number').text());
+
+          drafts.splice(index-1,1);
+          sessionStorage.setItem('client-draft-letters', JSON.stringify(drafts));
+
+          if (drafts.length === 0)
+               window.location.href = '../4-client-page/4a-new-client.html';
+
+          if (loadDrafts)
+               loadDrafts();
+
+          $(this).siblings('.back').trigger('click');
+
+     });
+
+     $('#create-letter').click(function(e) {
+
+          var data = sessionStorage.getItem('client-draft-letters');
+          var drafts = JSON.parse(data);
+          if (drafts == null) drafts = [];
+
+          var recipients = JSON.parse(sessionStorage.getItem('selected-recipients'));
+
+          for (var i = 0; i < recipients.length; i++)
+          {
+               var draft = {
+                    selectedRecipient: recipients[i],
+                    selectedInserts: JSON.parse(sessionStorage.getItem('selected-inserts')),
+                    selectedLetter: JSON.parse(sessionStorage.getItem('selected-letter'))
+               }
+
+               drafts.push(draft);
+          }
+
+          sessionStorage.setItem('client-draft-letters', JSON.stringify(drafts));
+
+          // sessionStorage.removeItem('selected-recipients');
+          // sessionStorage.removeItem('selected-inserts');
+          // sessionStorage.removeItem('selected-letter');
+
+
      });
 
 });

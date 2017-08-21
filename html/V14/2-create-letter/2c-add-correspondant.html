@@ -62,7 +62,7 @@
 
 </header>
 <!-- MAIN NAV - END -->
-<!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<!-- PRIMARY CONTENT - START --><main class="default add-contact-action"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
 	<div class="row">
@@ -108,7 +108,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Create new recipients for the client </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Letter info</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link current" data-tab="tab-5"> <span class="client-contacts"></span> <p>Contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a> <div class="separator"> > </div> <span>Create letter</span> </nav> <h1> Create a new contact for the client </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Letter</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link current" data-tab="tab-5"> <span class="client-contacts"></span> <p>3rd party contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // -->
 <h2 class="section-title">Document information</h2>
 
 <p id="letter-not-started" class="place-holder-text">No templates or drafts have been chosen to edit</p>
@@ -134,9 +134,7 @@
 	<div id="recipients-section">
 		<h3 class="sub-section-title">Recipients chosen</h3>
 
-		<ol id="recipients">
-			<li>Ms Lara Stevens</li>
-		</ol>
+		<ol id="recipients"></ol>
 	</div>
 </div>
 <!-- // DOCUMENT SUMMARY - END // -->
@@ -155,32 +153,109 @@
 	<!-- <h2 class="sub-section-title"><span class="icon welfare"></span>Health &amp; welfare drafts</h2> -->
 
 	<ol id="draft-list">
-		<li class="doc-1" data-value='doc-1'>
-			<span class="title">
-				<div class="doc-title">
-					<span class="recipient-name">Mr Gerald Brackens</span> - 
-					<span class="doc-type">Blank Receiver.doc</span>
-				</div>
-			 	<div class="user">Created by: <div class="sirius-user-id">Susan Smith</div></div>
-			</span>
-			<div class="info">
-				<span>
-					<div class="icon date"></div>
-					Date created:
-					<strong>25/06/2017 - 13:15</strong>
-				</span><br>
-				<span>
-					<div class="icon saved"></div>
-					Last saved:
-					<strong>25/06/2017 - 13:15</strong>
-				</span><br>
-				<a href="#" class="edit">Edit</a>
-				<a href="#delete" rel="modal:open" class="delete">Delete</a>
-			</div>
-		</li>
 	</ol>
 
 </div>
+
+<script>
+	var drafts;
+
+	$(document).ready(function(){
+		loadDrafts();
+
+		if (drafts && drafts.length > 0 && updateEditDraft){
+			updateEditDraft(drafts[0], 1);
+		}
+
+		$('#draft-list').on('click', '.edit', function(e) {
+			e.preventDefault();
+			if (updateEditDraft){
+				var item = parseInt($(this).closest('li').data('document-id'));
+
+				updateEditDraft(drafts[item-1], item);
+			}
+			$(this).closest('li').addClass('selected').siblings().removeClass('selected');
+		});
+
+		$('#draft-list').on('click', '.delete-document', function(e) {
+			e.preventDefault();
+
+			var item = parseInt($(this).closest('li').data('document-id'));
+
+			$('#delete').attr('data-document-id', item-1);
+			$('#delete').modal('show');
+		});
+
+		$('#drafts-list').on('click', 'li', function(e){
+			// $(this).siblings().removeClass('selected');
+			// $(this).addClass('selected');
+		});
+
+		$('#delete-draft').click(function(){
+			var item = parseInt($(this).parents('#delete').data('document-id'));
+			drafts.splice(item, 1);
+			sessionStorage.setItem('client-draft-letters', JSON.stringify(drafts));
+
+			loadDrafts();
+
+		});
+	});
+
+	function loadDrafts(){
+		$('#draft-list').empty();
+
+		var data = sessionStorage.getItem('client-draft-letters');
+		drafts = JSON.parse(data);
+		if (drafts) {
+
+			for (var i = 0; i < drafts.length; i++)
+			{
+				var draft = drafts[i];
+				var inserts = draft.selectedInserts ? draft.selectedInserts.join(', ') : '';
+
+				var li = $(`
+					<li class="doc-${ i+1 }" data-value='doc-${ i+1 }' data-document-id="${ i+1 }">
+						<span class="title">
+							<div class="doc-title">
+								<span class="recipient-name">${ draft.selectedRecipient }</span> -
+								<span class="doc-type">${ draft.selectedLetter }</span>
+							</div>
+							<div class="user">Created by: <div class="sirius-user-id">Susan Smith</div></div>
+						</span>
+						<div class="info">
+							<span class="inserts-selected" style="${ inserts !== '' ? '' : 'display:none;' }">
+							<div class="icon inserts"></div>
+								Inserts:
+								<strong>${ inserts }</strong>
+							</span>
+							<span>
+								<div class="icon date"></div>
+								Date created:
+								<strong>25/06/2017 - 13:15</strong>
+							</span>
+							<span>
+								<div class="icon saved"></div>
+								Last saved:
+								<strong>25/06/2017 - 13:15</strong>
+							</span><br>
+							<a href="#" class="edit">Edit</a>
+							<a class="delete delete-document">Delete</a>
+						</div>
+					</li>
+				`);
+
+				$('#draft-list ').append(li);
+
+			}
+		}
+
+		if (drafts && drafts.length > 0 && updateEditDraft){
+			updateEditDraft(drafts[0], 1);
+			$('#draft-list li[data-document-id=' + 1 + ']').addClass('selected').siblings().removeClass('selected');
+		}
+
+	}
+</script>
 <!-- // DRAFTS - END // -->
  </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
 <h2 class="section-title">
@@ -188,7 +263,7 @@
 	<div class="client-first-name">Gerald</div>
 	<div class="client-last-name">Brackens</div>
 	details
-	<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+	<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit client</a>
 </h2>
 
 <div class="check-details" id="client-details">
@@ -835,89 +910,104 @@
 
 	<h2 class="section-title">
 		Client contacts
-		<a class="main-cta" href="../2-create-letter/2c-add-correspondant.html">Add correspondent</a>
+		<a class="main-cta letter-contact-journey" href="../2-create-letter/2c-add-correspondant.html">Add contact</a>
 	</h2>
 
 	<ul class="contact-list">
 
 		<!-- // CORRESPONDANT - 1 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				Mr Gerald Brackens<br>
-				<span class="sub-title">Client</span><br>
-				<span class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
+		<li class="correspondent">
+			<div class="wrapper">
+				<div class="contact-name">Daniel D. Bobadilla</div>
+				<a href="#" class="edit">Edit</a>
+				<a href="#delete-contact" rel="modal:open" class="delete delete-contact">Delete</a>
+			</div>
+			<span class="sub-title">Doctor</span><br>
+			<span class="sub-text">73 Ilchester Road, MUGGLESWICK, DH8 6UA.</span>
+			<a href="#" class="full-details">View full details</a>
+			<div class="communication-preferences">
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Phone number: <strong>0123456789</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Mobile number: <strong>07739273398</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Email: <strong>daniel.d.bobadilla@nhs.com</strong></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Preferences: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Notes: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Interpreter required?: <strong>No</strong></span>
+					</div>
+				</div>
+			</div>
 		</li>
 		<!-- // CORRESPONDANT - 1 - END // -->
 
 		<!-- // CORRESPONDANT - 2 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				<span class="icon fee-payer"><p>Fee payer</p></span>
-				Ms Lara Stevens<br>
-				<span class="sub-title">Correspondent</span><br>
-				<span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
+		<li class="correspondent">
+			<div class="wrapper">
+				<div class="contact-name">TrustMe Limited</div>
+				<a href="#" class="edit">Edit</a>
+				<a href="#delete-contact" rel="modal:open" class="delete delete-contact">Delete</a>
+			</div>
+			<span class="sub-title">Trust Corporation</span><br>
+			<span class="sub-text">62 Review Road, Neasden, UK, NW27BE.</span>
+			<a href="#" class="full-details" data-value="1">View full details</a>
+			<div class="communication-preferences">
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Phone number: <strong>0123456789</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Mobile number: <strong>07739273398</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Email: <strong>contact@trustmeltd.com</strong></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-4 large-uncentered columns">
+						<span>Preferences: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Notes: <strong>None</strong></span>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<span>Interpreter required?: <strong>No</strong></span>
+					</div>
+				</div>
+			</div>
 		</li>
 		<!-- // CORRESPONDANT - 2 - END // -->
-
-		<!-- // CORRESPONDANT - 3 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				Mrs Carla Frith<br>
-				<span class="sub-title">Deputy</span><br>
-				<span class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span>
-				<span class="communication-preferences">Preferences: <strong>Welsh</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 3 - END // -->
-
-		<!-- // CORRESPONDANT - 4 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				Mrs Melanie Rand<br>
-				<span class="sub-title">Deputy</span><br>
-				<span class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 4 - END // -->
-
-		<!-- // CORRESPONDANT - 5 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				<span class="icon violent"><p>Violent</p></span>
-				Toby Daniels<br>
-				<span class="sub-title">Notified Person</span><br>
-				<span class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span>
-				<span class="communication-preferences">Preferences: <strong>Large print</strong>, <strong>Hearing impaired</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 5 - END // -->
-
-		<!-- // CORRESPONDANT - 6 - START // -->
-		<li>
-			<a href="#" class="correspondent">
-				TrustMe Limited<br>
-				<span class="sub-title">Trust Corporation</span><br>
-				<span class="sub-text">62 Review Road,Neasden,UK, NW27BE.</span>
-				<span class="communication-preferences">Preferences: <strong>None</strong></span>
-				<span class="edit">Edit</span>
-			</a>
-		</li>
-		<!-- // CORRESPONDANT - 6 - END // -->
 
 	</ul>
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
+
+<!-- // MODAL - START // -->
+<div id="delete-contact" style="display:none;">
+	<h1>Delete this contact?</h1>
+	<h2><div class="contact-name">Joe</div></h2>
+	<p>
+		Are you sure you want to continue?
+	</p>
+	<hr>
+	<div class="cta-row">
+		<a class="main-cta" id="delete-contact-confirm">Delete the contact</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
  </div> <!-- =========== TAB CONTENT - 5 - END =========== --> <!-- =========== TAB CONTENT - 6 - START =========== --> <div id="tab-6" class="tab-content side-panel"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
 <div id="document-viewer">
 
@@ -1136,7 +1226,7 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 6 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- // CREATE RECIPIENT - START // --> <div id="action-panel" class="large-4 large-uncentered columns"> <form class="add-correspondent-form"> <h2 class="section-title">Add a correspondent</h2> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="title">Title</label> <select id="title"> <option>-- Select --</option> <option>Mr.</option> <option>Mrs.</option> <option>Ms.</option> <option>Miss</option> <option>Dr.</option> <option>Prof.</option> <option>Rev.</option> <option>Other</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="first-name">First name</label> <input id="first-name" name="first-name" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="middle-name">Middle names</label> <input id="middle-name" name="middle-name" type="text"> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group"> <label for="last-name">Last name</label> <input id="last-name" name="last-name" type="text"> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group"> <label for="company-name">Company names (if relevant)</label> <input id="company-name" name="company-name" type="text"> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group"> <label for="relationship">Relationship to the client</label> <select id="relationship"> <option>-- Select --</option> <option>Father</option> <option>Mother</option> <option>Sister</option> <option>Brother</option> <option>Spouse</option> <option>Civil partner</option> <option>Cousin</option> <option>Friend</option> <option>Auntie</option> <option>Uncle</option> </select> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group"> <label for="country">Country</label> <select id="country" class="full-width"> <option selected="selected">-- Select --</option> <option>England</option> <option>Ireland</option> <option>Scotland</option> <option>Wales</option> <option>Northern Ireland</option> </select> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8a - START // --> <!-- <div class="form-group"> <label for="postcode">Postcode</label> <input id="postcode" name="postcode" type="text" class="one-third"> <a class="main-cta secondary" id="find-postcode">Find address</a> </div> --> <!-- // FORM ITEM - 8a - END // --> <!-- // FORM ITEM - 8b - START // --> <!-- <div class="form-group address-list"> <label for="client-address-1" class="radio address"> <input id="client-address-1" type="radio" name="radio-inline-group" value="client-address-1"> 1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-2" class="radio address"> <input id="client-address-2" type="radio" name="radio-inline-group" value="client-address-2"> 2 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-3" class="radio address"> <input id="client-address-3" type="radio" name="radio-inline-group" value="client-address-3"> 3 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-4" class="radio address"> <input id="client-address-4" type="radio" name="radio-inline-group" value="client-address-4"> 4 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-5" class="radio address"> <input id="client-address-5" type="radio" name="radio-inline-group" value="client-address-5"> 5 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-6" class="radio address"> <input id="client-address-6" type="radio" name="radio-inline-group" value="client-address-6"> 6 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-7" class="radio address"> <input id="client-address-7" type="radio" name="radio-inline-group" value="client-address-7"> 7 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-8" class="radio address"> <input id="client-address-8" type="radio" name="radio-inline-group" value="client-address-8"> 8 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-9" class="radio address"> <input id="client-address-9" type="radio" name="radio-inline-group" value="client-address-9"> 9 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-10" class="radio address"> <input id="client-address-10" type="radio" name="radio-inline-group" value="client-address-10"> 10 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-11" class="radio address"> <input id="client-address-11" type="radio" name="radio-inline-group" value="client-address-11"> 11 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> <label for="client-address-12" class="radio address"> <input id="client-address-12" type="radio" name="radio-inline-group" value="client-address-12"> 12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span> </label> </div> --> <div class="form-group"> <label for="address-line-1">Address</label> <input id="address-line-1" name="address-line-1" type="text" value=""> </div> <div class="form-group"> <label for="address-line-2" class="hide">Address line 2</label> <input id="address-line-2" name="address-line-2" type="text" value=""> </div> <div class="form-group"> <label for="address-line-3" class="hide">Address line 3</label> <input id="address-line-3" name="address-line-3" type="text"> </div> <div class="form-group"> <label for="address-town">Town</label> <input id="address-town" name="address-town" type="text" value=""> </div> <div class="form-group"> <label for="manual-postcode">Postcode</label> <input id="manual-postcode" name="manual-postcode" type="text" class="one-third" value=""> </div> <!-- // FORM ITEM - 8b - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group"> <legend>Is airmail required?</legend> <label for="airmail-yes" class="radio"> <input id="airmail-yes" type="radio" name="radio-inline-group" value="Yes"> Yes </label> <label for="airmail-no"  class="radio"> <input id="airmail-no" type="radio" name="radio-inline-group" value="No"> No </label> </div> <!-- // FORM ITEM - 9 - END // --> <!-- // FORM ITEM - 10 - START // --> <div class="form-group"> <label for="phone-number">Daytime telephone number</label> <input id="phone-number" name="phone-number" type="text" class="half"> </div> <!-- // FORM ITEM - 10 - END // --> <!-- // FORM ITEM - 11 - START // --> <div class="form-group"> <label for="mob-number">Mobile telephone number</label> <input id="mob-number" name="mob-number" type="text" class="half"> </div> <!-- // FORM ITEM - 11 - END // --> <!-- // FORM ITEM - 12 - START // --> <div class="form-group"> <label for="email">Email address</label> <input id="email" name="email" type="text"> </div> <!-- // FORM ITEM - 12 - END // --> <!-- // FORM ITEM - 13 - START // --> <div class="form-group"> <legend>Correspondence By</legend> <label class="normal" for="correspondence-post"> <input id="correspondence-post" name="correspondence-post" type="checkbox" value="correspondence-post"> Post </label> <label class="normal" for="correspondence-phone"> <input id="correspondence-phone" name="correspondence-phone" type="checkbox" value="correspondence-phone"> Phone </label> <label class="normal" for="correspondence-email"> <input id="correspondence-email" name="correspondence-email" type="checkbox" value="correspondence-email"> Email </label> <label class="normal" for="correspondence-welsh"> <input id="correspondence-welsh" name="correspondence-welsh" type="checkbox" value="correspondence-welsh"> Welsh </label> </div> <!-- // FORM ITEM - 13 - END // --> <!-- // FORM ITEM - 14 - START // --> <div class="form-group violent-risk"> <span></span> <label class="normal" for="client-violent-risk"> <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="post"> Is the client a violent risk? </label> </div> <!-- // FORM ITEM - 14 - END // --> </form> </div> <!-- // CREATE RECIPIENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="create-letter" href="2b-add-correspondance.html">Add correspondent</a> <a href="#" onclick="history.back();">Back</a> <a href="#" onclick="2a-create-letter.html" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-inserts')).forEach(function(insert) { $('#inserts-selected').append('<li>' + insert + '</li>'); }); JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) { $('#draft-list').append('<li>' + letter + '</li>'); }); });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 6 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- // CREATE RECIPIENT - START // --> <div id="action-panel" class="large-4 large-uncentered columns"> <form class="add-correspondent-form"> <h2 class="section-title">Create a new contact</h2> <!-- // FORM ITEM - 1 - START // --> <div class="form-group"> <label for="contact-type">Type of deputy</label> <select id="contact-type" class="full-width"> <option>-- Select --</option> <option value="Lay">Lay</option> <option value="Professional">Professional</option> <option value="Public authority">Public authority</option> </select> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="contact-title">Title</label> <select id="contact-title"> <option>-- Select --</option> <option>Mr.</option> <option>Mrs.</option> <option>Ms.</option> <option>Miss</option> <option>Dr.</option> <option>Prof.</option> <option>Rev.</option> <option>Other</option> </select> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="contact-first-name">First name <span class="required">*</span></label> <input id="contact-first-name" name="first-name" type="text"> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <label for="contact-last-name">Last name <span class="required">*</span></label> <input id="contact-last-name" name="last-name" type="text"> </div> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group contact-notes"> <label for="contact-notes"> Notes </label> <textarea name="textarea" class="jqte-test" id="contact-notes"></textarea> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group"> <label for="contact-address-line-1">Address</label> <input id="contact-address-line-1" name="contact-address-line-1" type="text" value=""> </div> <div class="form-group"> <label for="contact-address-line-2" class="hide">Address line 2</label> <input id="contact-address-line-2" name="contact-address-line-2" type="text" value=""> </div> <div class="form-group"> <label for="contact-address-line-3" class="hide">Address line 3</label> <input id="contact-address-line-3" name="contact-address-line-3" type="text"> </div> <div class="form-group"> <label for="contact-address-town">Town</label> <input id="contact-address-town" name="contact-address-town" type="text" value=""> </div> <div class="form-group"> <label for="contact-manual-postcode">Postcode</label> <input id="contact-manual-postcode" name="contact-manual-postcode" type="text" class="one-third" value=""> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6a - START // --> <div class="form-group"> <label for="contact-country">Country</label> <select id="contact-country" class="full-width"> <option selected="selected">-- Select --</option> <option value="England">England</option> <option value="Ireland">Ireland</option> <option value="Scotland">Scotland</option> <option value="Wales">Wales</option> <option value="Northern Ireland">Northern Ireland</option> <option value="Outside">Outside of the United Kingdom</option> </select> </div> <!-- // FORM ITEM - 6a - END // --> <!-- // FORM ITEM - 6b - START // --> <div class="form-group contact-outside-uk"> <label for="contact-country-description">Please provide the name of the country outside of the UK</label> <input id="contact-country-description" name="contact-country-description" type="text"> </div> <!-- // FORM ITEM - 6b - END // --> <!-- // FORM ITEM - 6c - START // --> <div class="form-group contact-airmail"> <legend>Is airmail required?</legend> <label for="contact-airmail-yes" class="radio"> <input id="contact-airmail-yes" type="radio" name="contact-airmail" value="Yes"> Yes </label> <label for="contact-airmail-no"  class="radio"> <input id="contact-airmail-no" type="radio" name="contact-airmail" value="No"> No </label> </div> <!-- // FORM ITEM - 6c - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group"> <label for="contact-phone-number">Daytime telephone number</label> <input id="contact-phone-number" name="contact-phone-number" type="text" class="half"> </div> <!-- // FORM ITEM - 7 - END // --> <!-- // FORM ITEM - 8 - START // --> <div class="form-group"> <label for="contact-mob-number">Mobile telephone number</label> <input id="contact-mob-number" name="contact-mob-number" type="text" class="half"> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group"> <label for="contact-email">Email address</label> <input id="contact-email" name="contact-email" type="text"> </div> <!-- // FORM ITEM - 9 - END // --> <!-- // FORM ITEM - 10 - START // --> <div class="form-group"> <legend>Correspondence By</legend> <label class="normal" for="contact-correspondence-post"> <input id="contact-correspondence-post" name="contact-correspondence-post" type="checkbox" value="post"> Post </label> <label class="normal" for="contact-correspondence-phone"> <input id="contact-correspondence-phone" name="contact-correspondence-phone" type="checkbox" value="phone"> Phone </label> <label class="normal" for="contact-correspondence-email"> <input id="contact-correspondence-email" name="contact-correspondence-email" type="checkbox" value="email"> Email </label> <label class="normal" for="contact-correspondence-welsh"> <input id="contact-correspondence-welsh" name="contact-correspondence-welsh" type="checkbox" value="welsh"> Welsh </label> </div> <!-- // FORM ITEM - 10 - END // --> <!-- // FORM ITEM - 11 - START // --> <div class="form-group"> <legend>Special correspondence requirements</legend> <label class="normal" for="contact-special-audio"> <input id="contact-special-audio" name="contact-special-audio" type="checkbox" value="audio"> Audio </label> <label class="normal" for="contact-special-print"> <input id="contact-special-print" name="contact-special-print" type="checkbox" value="print"> Large print </label> <label class="normal" for="contact-special-hearing"> <input id="contact-special-hearing" name="contact-special-hearing" type="checkbox" value="hearing"> Hearing impaired </label> <label class="normal" for="contact-special-spelling"> <input id="contact-special-spelling" name="contact-special-spelling" type="checkbox" value="spelling"> Spelling of name requires care </label> </div> <!-- // FORM ITEM - 11 - END // --> <!-- // FORM ITEM - 12a - START // --> <div class="form-group"> <legend>Interpreter required?</legend> <label for="contact-interpreter-yes" class="radio"> <input id="contact-interpreter-yes" type="radio" name="contact-interpreter" value="Yes"> Yes </label> <label for="contact-interpreter-no" class="radio"> <input id="contact-interpreter-no" type="radio" name="contact-interpreter" value="No"> No </label> </div> <!-- // FORM ITEM - 12a - END // --> <!-- // FORM ITEM - 12b - START // --> <div class="form-group contact-interpreter-details"> <label for="contact-interpreter-details">Interpreter - please give details</label> <input id="contact-interpreter-details" name="contact-interpreter-details" type="text"> </div> <!-- // FORM ITEM - 12b - END // --> </form> </div> <!-- // CREATE RECIPIENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="create-contact" href="2b-add-correspondance.html">Create contact</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="back">Back</a> <a href="#" onclick="2a-create-letter.html" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ var inserts = JSON.parse(sessionStorage.getItem('selected-inserts')); if (inserts){ inserts.forEach(function(insert) { $('#inserts-selected').append('<li>' + insert + '</li>'); }); }  });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V14/hideShowPassword.js"></script>
 	<script src="../../../production/js/V14/jquery.cookie.js"></script>
@@ -1158,6 +1248,7 @@
 	<script src="../../../production/js/V14/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V14/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V14/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V14/my-cookies/create-contact.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
@@ -1173,6 +1264,7 @@
 	<script src="../../../production/js/V14/my-jquery/supervision-level.js"></script>
 	<script src="../../../production/js/V14/my-jquery/new-event.js"></script>
 	<script src="../../../production/js/V14/my-jquery/progress-bar.js"></script>
+	<script src="../../../production/js/V14/my-jquery/create-contact.js"></script>
 	<!-- User Journey - JQuery - END -->
 
 	<script src="../../../production/js/V14/jquery.tablesorter.js"></script>

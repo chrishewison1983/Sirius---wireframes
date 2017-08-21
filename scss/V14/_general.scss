@@ -160,7 +160,7 @@ h1, h2, h3, h4 {
           &.edit, &.add-deputies {
                float: right;
                font-size: 1rem;
-               text-transform: capitalize;
+               text-transform: inherit;
                font-family: $Montserrat;
                font-weight: normal;
                padding: 0 0 0 1.5em;
@@ -363,7 +363,7 @@ a {
      &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back {
           float: right;
           font-size: 1rem;
-          text-transform: capitalize;
+          text-transform: inherit;
           font-family: $Montserrat;
           font-weight: normal;
           padding: 0 0 0 1.5em;
@@ -397,6 +397,18 @@ a {
           float: none;
           background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
           background-size: 0.65em;
+     }
+     &.full-details {
+          font-family: $Montserrat;
+          margin: 0.5em 0 0 0;
+          padding: 0 0 0 1.75em;
+          display: inline-block;
+          background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+          background-size: 1.25em;
+          &.close {
+               background: url(#{$image-path}/icons/subtract-blue.svg) no-repeat 0% 50%;
+               background-size: 1.25em;
+          }
      }
 }
 

@@ -83,6 +83,14 @@
                }
           }
      }
+     &.viewport-bottom {
+          .tab-content.side-panel {
+               #client-details, #document-viewer, #commission-visit, #create-case, #drafts, #document-contacts, #deputy-details,
+               #new-deputy-details-summary {
+                    padding-bottom: 0;
+               }
+          }
+     }
 }
 
 #side-panel {
@@ -496,26 +504,83 @@
      ul.contact-list {
           width: 97.5%;
           @include flexbox;
-          @include justify-content(center);
+          @include justify-content(flex-start);
           @include flex-wrap(wrap);
           li {
-               width: 48.75%;
-               margin: 0 2.5% 1.5em 0;
+               width: 100%;
+               margin: 0 0 1em 0;
                float: left;
                border: 3px solid $border-colour;
                border-radius: $global-border-radius;
+               padding-bottom: 0.5em;
+               &:last-of-type {
+                    margin-bottom: 0;
+               }
                &:hover {
-                    background: lighten($border-colour,2.5%);
+                    transition: none;
+                    transform: none;
+                    background: none;
+                    cursor: default;
+                    a {
+                         background-color: inherit;
+                         &.full-details {
+                              background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+                              background-size: 1em;
+                              &.close {
+                                   background: url(#{$image-path}/icons/subtract-blue.svg) no-repeat 0% 50%;
+                                   background-size: 1em;
+                              }
+                         }
+                    }
+               }
+               .row {
+                    width: 100%;
                }
                &:nth-of-type(even) {
                     margin-right: 0;
                }
+               div {
+                    display: inline-block;
+               }
+               .wrapper {
+                    width: 100%;
+                    a {
+                         float: right;
+                         margin: 0.5em 0 0 1.5em;
+                    }
+               }
                a {
                     border: none;
-                    margin: 0;
+                    border-bottom: 1px dashed $blue;
+                    margin: 1em 1em 0 0;
+                    padding: 0 0 0 1.25em;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    width: auto;
+                    transform: none;
+                    transition: none;
+                    &:before, &:after {
+                         display: none;
+                    }
                     &:hover {
                          transform: none;
-                         background: none;
+                         border-bottom: 1px solid $blue;
+                         background-color: none;
+                    }
+               }
+               .full-details {
+                    margin-bottom: 1em;
+                    background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+                    background-size: 1em;
+                    &.close {
+                         background: url(#{$image-path}/icons/subtract-blue.svg) no-repeat 0% 50%;
+                         background-size: 1em;
+                    }
+               }
+               .communication-preferences {
+                    strong {
+                         display: block;
+                         margin: 0.5em 0 1em 0;
                     }
                }
           }

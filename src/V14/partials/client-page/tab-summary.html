@@ -37,6 +37,12 @@
 				<li class="tab-link" data-tab="summary-tab-2">
 					Client details
 				</li>
+				<li class="tab-link" data-tab="summary-tab-3">
+					Sub orders
+				</li>
+				<li class="tab-link" data-tab="summary-tab-4">
+					3rd party contacts
+				</li>
 			</ul>
 			<!-- =========== TABS - END =========== -->
 
@@ -538,9 +544,154 @@
 			</div>
 			<!-- =========== TAB CONTENT - 2 - END =========== -->
 
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="summary-tab-3" class="client-details tab-content">
+				<div class="row">
+
+					<div class="large-12 large-uncentered columns">
+					</div>
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
+
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="summary-tab-4" class="client-details tab-content">
+				<div class="row">
+
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // DOCUMENT VIEWER - START // -->
+						<div id="document-contacts">
+
+							<h2 class="section-title">
+								Client contacts
+								<a class="main-cta add-contact-journey" href="../2-create-letter/2c-add-correspondant.html">Add contact</a>
+							</h2>
+
+							<ul class="contact-list">
+
+								<!-- // CORRESPONDANT - 1 - START // -->
+								<li class="correspondent">
+									<div class="wrapper">
+										<div class="contact-name">Daniel D. Bobadilla</div>
+										<a href="#" class="edit">Edit</a>
+										<a href="#delete-contact" rel="modal:open" class="delete delete-contact">Delete</a>
+									</div>
+									<span class="sub-title">Doctor</span><br>
+									<span class="sub-text">73 Ilchester Road, MUGGLESWICK, DH8 6UA.</span>
+									<a href="#" class="full-details">View full details</a>
+									<div class="communication-preferences">
+										<div class="row">
+											<div class="large-4 large-uncentered columns">
+												<span>Phone number: <strong>0123456789</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Mobile number: <strong>07739273398</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Email: <strong>daniel.d.bobadilla@nhs.com</strong></span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="large-4 large-uncentered columns">
+												<span>Preferences: <strong>None</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Notes: <strong>None</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Interpreter required?: <strong>No</strong></span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<!-- // CORRESPONDANT - 1 - END // -->
+
+								<!-- // CORRESPONDANT - 2 - START // -->
+								<li class="correspondent">
+									<div class="wrapper">
+										<div class="contact-name">TrustMe Limited</div>
+										<a href="#" class="edit">Edit</a>
+										<a href="#delete-contact" rel="modal:open" class="delete delete-contact">Delete</a>
+									</div>
+									<span class="sub-title">Trust Corporation</span><br>
+									<span class="sub-text">62 Review Road, Neasden, UK, NW27BE.</span>
+									<a href="#" class="full-details">View full details</a>
+									<div class="communication-preferences">
+										<div class="row">
+											<div class="large-4 large-uncentered columns">
+												<span>Phone number: <strong>0123456789</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Mobile number: <strong>07739273398</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Email: <strong>contact@trustmeltd.com</strong></span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="large-4 large-uncentered columns">
+												<span>Preferences: <strong>None</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Notes: <strong>None</strong></span>
+											</div>
+											<div class="large-4 large-uncentered columns">
+												<span>Interpreter required?: <strong>No</strong></span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<!-- // CORRESPONDANT - 2 - END // -->
+
+							</ul>
+
+						</div>
+						<!-- // DOCUMENT VIEWER - END // -->
+
+					</div>
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+
 		</div>
 	</div>
 	<!-- //  ================================ DASHBOARD CONTENT - END ================================ // -->
 
 </div>
 <!-- // LIST OF SUMMARIES - END // -->
+
+<!-- // MODAL - START // -->
+<div id="delete-contact" style="display:none;">
+	<h1>Delete this contact?</h1>
+	<h2><div class="contact-name">Joe</div></h2>
+	<p>
+		Are you sure you want to continue?
+	</p>
+	<hr>
+	<div class="cta-row">
+		<a class="main-cta" id="delete-contact-confirm">Delete the contact</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->

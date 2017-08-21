@@ -59,10 +59,10 @@ $(document).ready(function () {
           if (val == "Lay") {
                $("#deputy-relationship").html(`
                     <option value=''>-- Select --</option>
+                    <option value='Child of client'>Child of client</option>
                     <option value='Sibling'>Sibling</option>
                     <option value='Spouse'>Spouse</option>
-                    <option value='Child of Patient'>Child of Patient</option>
-                    <option value='Parent of Patient'>Parent of Patient</option>
+                    <option value='Parent of client'>Parent of client</option>
                     <option value='Civil Partner'>Civil Partner</option>
                     <option value='Friend'>Friend</option>
                     <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
@@ -245,10 +245,10 @@ if (window.location.href.indexOf("edit-deputy-1") != -1) {
      $('#deputy-relationship').siblings().html('Relationship to the client: <strong>Lay options</strong>');
      $('#deputy-relationship').html(`
           <option value=''>-- Select --</option>
+          <option value='Child of client'>Child of client</option>
           <option value='Sibling' selected>Sibling</option>
           <option value='Spouse'>Spouse</option>
-          <option value='Child of Patient'>Child of Patient</option>
-          <option value='Parent of Patient'>Parent of Patient</option>
+          <option value='Parent of client'>Parent of client</option>
           <option value='Civil Partner'>Civil Partner</option>
           <option value='Friend'>Friend</option>
           <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
@@ -310,10 +310,10 @@ if (window.location.href.indexOf("edit-deputy-2") != -1) {
      $('#deputy-relationship').siblings().html('Relationship to the client: <strong>Lay options</strong>');
      $('#deputy-relationship').html(`
           <option value=''>-- Select --</option>
+          <option value='Child of client'>Child of client</option>
           <option value='Sibling' selected>Sibling</option>
           <option value='Spouse'>Spouse</option>
-          <option value='Child of Patient'>Child of Patient</option>
-          <option value='Parent of Patient'>Parent of Patient</option>
+          <option value='Parent of client'>Parent of client</option>
           <option value='Civil Partner'>Civil Partner</option>
           <option value='Friend'>Friend</option>
           <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>

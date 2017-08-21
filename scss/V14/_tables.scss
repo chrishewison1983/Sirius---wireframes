@@ -624,18 +624,6 @@ table {
                                    background-size: 1em;
                               }
                          }
-                         .full-details {
-                              font-family: $Montserrat;
-                              margin: 0.5em 0 0 0;
-                              padding: 0 0 0 1.75em;
-                              display: inline-block;
-                              background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
-                              background-size: 1.25em;
-                              &.close {
-                                   background: url(#{$image-path}/icons/subtract-blue.svg) no-repeat 0% 50%;
-                                   background-size: 1.25em;
-                              }
-                         }
                     }
                }
                &.details-row {

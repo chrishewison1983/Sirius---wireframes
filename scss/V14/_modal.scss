@@ -75,7 +75,7 @@
      }
 }
 
-#preview-doc, #delete, #preview-insert {
+#preview-doc, #delete, #preview-insert, #delete-contact {
      &.modal {
           h1 {
                margin: 0;
@@ -119,7 +119,7 @@
      }
 }
 
-#delete {
+#delete, #delete-contact { 
      &.modal {
           h2 {
                color: $blue;

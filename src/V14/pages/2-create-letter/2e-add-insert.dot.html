@@ -51,7 +51,7 @@
                          <ul id="side-panel-tabs" class="tabs">
                               <li class="tab-link current" data-tab="tab-1">
                                    <span class="info"></span>
-                                   <p>Letter info</p>
+                                   <p>Letter</p>
                               </li>
                               <li class="tab-link" data-tab="tab-2">
                                    <span class="draft-letters"></span>
@@ -67,7 +67,7 @@
                               </li>
                               <li class="tab-link" data-tab="tab-5">
                                    <span class="client-contacts"></span>
-                                   <p>Contacts</p>
+                                   <p>3rd party contacts</p>
                               </li>
                               <li class="tab-link" data-tab="tab-6">
                                    <span class="documents"></span>
@@ -235,6 +235,7 @@
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
      <a class="main-cta primary" id="add-inserts" href="2b-add-correspondance.html">Continue to recipients</a>
+     <span class="separator"></span>
      <a onclick="history.back();" class="back">Back</a>
      <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel letter</a>
 </footer>
@@ -244,12 +245,9 @@
 <script>
 
      $(document).ready(function(){
-          JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
-               $('#recipients').append('<li>' + recipient + '</li>');
-          });
-          JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+          /*JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
                $('#draft-list').append('<li>' + letter + '</li>');
-          });
+          });*/
 
      });
 
