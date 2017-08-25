@@ -143,17 +143,19 @@
 
                          <!-- // FORM ITEM - 1 - START // -->
                          <div class="form-group">
-                              <label for="contact-type">Type of deputy</label>
+                              <label for="contact-type">Type of contact</label>
                               <select id="contact-type" class="full-width">
                                    <option>-- Select --</option>
-                                   <option value="Lay">Lay</option>
-                                   <option value="Professional">Professional</option>
-                                   <option value="Public authority">Public authority</option>
+                                   <option value="Value 1">Value 1</option>
+                                   <option value="Value 2">Value 2</option>
+                                   <option value="Value 3">Value 3</option>
+                                   <option value="Value 4">Value 4</option>
+                                   <option value="Value 5">Value 5</option>
                               </select>
                          </div>
                          <!-- // FORM ITEM - 1 - END // -->
 
-                         <!-- // FORM ITEM - 2 - START // -->
+                         <!-- // FORM ITEM - 2a - START // -->
                          <div class="form-group">
                               <label for="contact-title">Title</label>
                               <select id="contact-title">
@@ -165,35 +167,56 @@
                                    <option>Dr.</option>
                                    <option>Prof.</option>
                                    <option>Rev.</option>
-                                   <option>Other</option>
+                                   <option value="Other">Other</option>
                               </select>
                          </div>
-                         <!-- // FORM ITEM - 2 - END // -->
+                         <!-- // FORM ITEM - 2a - END // -->
 
-                         <!-- // FORM ITEM - 2 - START // -->
+                         <!-- // FORM ITEM - 2b - START // -->
+                         <div class="form-group contact-title-other-answer">
+                              <label for="contact-title-other">Other - please specify</label>
+                              <input id="contact-title-other" name="contact-title-other" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 2b - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
                          <div class="form-group">
                               <label for="contact-first-name">First name <span class="required">*</span></label>
                               <input id="contact-first-name" name="first-name" type="text">
                          </div>
-                         <!-- // FORM ITEM - 2 - END // -->
+                         <!-- // FORM ITEM - 3 - END // -->
 
-                         <!-- // FORM ITEM - 3 - START // -->
+                         <!-- // FORM ITEM - 4 - START // -->
                          <div class="form-group">
                               <label for="contact-last-name">Last name <span class="required">*</span></label>
                               <input id="contact-last-name" name="last-name" type="text">
                          </div>
-                         <!-- // FORM ITEM - 3 - END // -->
+                         <!-- // FORM ITEM - 4 - END // -->
 
-                         <!-- // FORM ITEM - 4 - START // -->
+                         <!-- // FORM ITEM - 5 - START // -->
                          <div class="form-group contact-notes">
                               <label for="contact-notes">
                                    Notes
                               </label>
                               <textarea name="textarea" class="jqte-test" id="contact-notes"></textarea>
                          </div>
-                         <!-- // FORM ITEM - 4 - END // -->
+                         <!-- // FORM ITEM - 5 - END // -->
 
-                         <!-- // FORM ITEM - 5 - START // -->
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group">
+                              <label for="contact-company-name">Company name <div class="optional">(if applicable)</div></label>
+                              <input id="contact-company-name" name="company-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group">
+                              <label for="contact-company-ref">Company reference <div class="optional">(if applicable)</div></label>
+                              <input id="contact-company-ref" name="company-ref" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <!-- // FORM ITEM - 8 - START // -->
                          <div class="form-group">
                               <label for="contact-address-line-1">Address</label>
                               <input id="contact-address-line-1" name="contact-address-line-1" type="text" value="">
@@ -211,12 +234,16 @@
                               <input id="contact-address-town" name="contact-address-town" type="text" value="">
                          </div>
                          <div class="form-group">
+                              <label for="contact-address-county">County</label>
+                              <input id="contact-address-county" name="contact-address-county" type="text" value="">
+                         </div>
+                         <div class="form-group">
                               <label for="contact-manual-postcode">Postcode</label>
                               <input id="contact-manual-postcode" name="contact-manual-postcode" type="text" class="one-third" value="">
                          </div>
-                         <!-- // FORM ITEM - 5 - END // -->
+                         <!-- // FORM ITEM - 8 - END // -->
 
-                         <!-- // FORM ITEM - 6a - START // -->
+                         <!-- // FORM ITEM - 9a - START // -->
                          <div class="form-group">
                               <label for="contact-country">Country</label>
                               <select id="contact-country" class="full-width">
@@ -229,16 +256,16 @@
                                    <option value="Outside">Outside of the United Kingdom</option>
                               </select>
                          </div>
-                         <!-- // FORM ITEM - 6a - END // -->
+                         <!-- // FORM ITEM - 9a - END // -->
 
-                         <!-- // FORM ITEM - 6b - START // -->
+                         <!-- // FORM ITEM - 9b - START // -->
                          <div class="form-group contact-outside-uk">
                               <label for="contact-country-description">Please provide the name of the country outside of the UK</label>
                               <input id="contact-country-description" name="contact-country-description" type="text">
                          </div>
-                         <!-- // FORM ITEM - 6b - END // -->
+                         <!-- // FORM ITEM - 9b - END // -->
 
-                         <!-- // FORM ITEM - 6c - START // -->
+                         <!-- // FORM ITEM - 9c - START // -->
                          <div class="form-group contact-airmail">
                               <legend>Is airmail required?</legend>
                               <label for="contact-airmail-yes" class="radio">
@@ -250,30 +277,30 @@
                                    No
                               </label>
                          </div>
-                         <!-- // FORM ITEM - 6c - END // -->
+                         <!-- // FORM ITEM - 9c - END // -->
 
-                         <!-- // FORM ITEM - 7 - START // -->
+                         <!-- // FORM ITEM - 10 - START // -->
                          <div class="form-group">
                               <label for="contact-phone-number">Daytime telephone number</label>
                               <input id="contact-phone-number" name="contact-phone-number" type="text" class="half">
                          </div>
-                         <!-- // FORM ITEM - 7 - END // -->
+                         <!-- // FORM ITEM - 10 - END // -->
 
-                         <!-- // FORM ITEM - 8 - START // -->
+                         <!-- // FORM ITEM - 11 - START // -->
                          <div class="form-group">
                               <label for="contact-mob-number">Mobile telephone number</label>
                               <input id="contact-mob-number" name="contact-mob-number" type="text" class="half">
                          </div>
-                         <!-- // FORM ITEM - 8 - END // -->
+                         <!-- // FORM ITEM - 11 - END // -->
 
-                         <!-- // FORM ITEM - 9 - START // -->
+                         <!-- // FORM ITEM - 11 - START // -->
                          <div class="form-group">
                               <label for="contact-email">Email address</label>
                               <input id="contact-email" name="contact-email" type="text">
                          </div>
-                         <!-- // FORM ITEM - 9 - END // -->
+                         <!-- // FORM ITEM - 11 - END // -->
 
-                         <!-- // FORM ITEM - 10 - START // -->
+                         <!-- // FORM ITEM - 12 - START // -->
                          <div class="form-group">
                               <legend>Correspondence By</legend>
                               <label class="normal" for="contact-correspondence-post">
@@ -294,9 +321,9 @@
                                    Welsh
                               </label>
                          </div>
-                         <!-- // FORM ITEM - 10 - END // -->
+                         <!-- // FORM ITEM - 12 - END // -->
 
-                         <!-- // FORM ITEM - 11 - START // -->
+                         <!-- // FORM ITEM - 13 - START // -->
                          <div class="form-group">
                               <legend>Special correspondence requirements</legend>
                               <label class="normal" for="contact-special-audio">
@@ -317,9 +344,9 @@
                                    Spelling of name requires care
                               </label>
                          </div>
-                         <!-- // FORM ITEM - 11 - END // -->
+                         <!-- // FORM ITEM - 13 - END // -->
 
-                         <!-- // FORM ITEM - 12a - START // -->
+                         <!-- // FORM ITEM - 14a - START // -->
                          <div class="form-group">
                               <legend>Interpreter required?</legend>
                               <label for="contact-interpreter-yes" class="radio">
@@ -331,14 +358,14 @@
                                    No
                               </label>
                          </div>
-                         <!-- // FORM ITEM - 12a - END // -->
+                         <!-- // FORM ITEM - 14a - END // -->
 
-                         <!-- // FORM ITEM - 12b - START // -->
+                         <!-- // FORM ITEM - 14b - START // -->
                          <div class="form-group contact-interpreter-details">
                               <label for="contact-interpreter-details">Interpreter - please give details</label>
                               <input id="contact-interpreter-details" name="contact-interpreter-details" type="text">
                          </div>
-                         <!-- // FORM ITEM - 12b - END // -->
+                         <!-- // FORM ITEM - 14b - END // -->
                     </form>
 
                </div>

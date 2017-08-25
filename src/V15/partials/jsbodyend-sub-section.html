@@ -1,0 +1,74 @@
+<!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V15/hideShowPassword.js"></script>
+	<script src="../../../production/js/V15/jquery.cookie.js"></script>
+	<script src="../../../production/js/V15/jquery.modal.js"></script>
+	<script src="../../../production/js/V15/jquery-datepicker.js"></script>
+	<script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script>
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../../production/js/V15/my-cookies/my-cookies.js"></script>
+	<script src="../../../production/js/V15/my-cookies/commission-visit.js"></script>
+	<script src="../../../production/js/V15/my-cookies/create-case.js"></script>
+	<script src="../../../production/js/V15/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V15/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V15/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V15/my-cookies/create-deputy.js"></script>
+	<script src="../../../production/js/V15/my-cookies/client-page.js"></script>
+	<script src="../../../production/js/V15/my-cookies/report-period.js"></script>
+	<script src="../../../production/js/V15/my-cookies/supervision-level.js"></script>
+	<script src="../../../production/js/V15/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V15/my-cookies/create-contact.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../../production/js/V15/my-jquery/my-jquery.js"></script>
+	<script src="../../../production/js/V15/my-jquery/client-page.js"></script>
+	<script src="../../../production/js/V15/my-jquery/commission-visit.js"></script>
+	<script src="../../../production/js/V15/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V15/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V15/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V15/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V15/my-jquery/create-letter.js"></script>
+	<script src="../../../production/js/V15/my-jquery/report-period.js"></script>
+	<script src="../../../production/js/V15/my-jquery/supervision-level.js"></script>
+	<script src="../../../production/js/V15/my-jquery/new-event.js"></script>
+	<script src="../../../production/js/V15/my-jquery/progress-bar.js"></script>
+	<script src="../../../production/js/V15/my-jquery/create-contact.js"></script>
+	<!-- <script src="../../../production/js/V15/my-jquery/search.js"></script> -->
+	<!-- User Journey - JQuery - END -->
+
+	<script src="../../../production/js/V15/jquery.tablesorter.js"></script>
+
+	<!-- Autocomplete - JQuery - START -->
+	<script src="../../../production/js/V15/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V15/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V15/autocomplete/create-task.js"></script>
+	<!-- Autocomplete - JQuery - END -->
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V15/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+
+		$(document).ready(function() {
+			$("#myTable, #tasks-table, #completed-tasks-table, #order-table").tablesorter();
+		});
+
+		$(document).ready(function() {
+			$("#myTable, #tasks-table, #completed-tasks-table, #order-table").tablesorter( {sortList: [[0,0], [1,0]]} );
+		});
+	</script>
+
+	<script src="../../../production/js/V15/sticky-item.js"></script>
+<!-- // JS BODY END - END // -->

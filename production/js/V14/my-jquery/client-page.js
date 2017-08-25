@@ -217,7 +217,7 @@ $('#task-list li .more-info').click( function(e){
 });
 
 // Shows the deputy details
-$('.communication-preferences').hide();
+$('.contact-info').hide();
 
 $('.full-details').click( function(e){
      e.preventDefault();
@@ -229,7 +229,7 @@ $('.full-details').click( function(e){
      $(`#deputies-table tr.details-row[data-value="${dataValue}"]`).toggle();
      // $(this).closest('tr').toggleClass('open');
      $(this).text($(this).text() == 'View full details' ? 'Hide full details' : 'View full details');
-     $(this).siblings('.communication-preferences').toggle();
+     $(this).siblings('.contact-info').toggle();
 });
 
 

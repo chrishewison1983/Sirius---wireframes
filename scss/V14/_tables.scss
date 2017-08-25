@@ -337,10 +337,9 @@ table {
           // }
      }
      a.order {
-          // text-decoration: none;
-          // border-bottom:
+
      }
-     a.open, a.documents {
+     a.open {
           padding: 0 0 0 1em;
           background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
           background-size: 0.75em;
@@ -349,9 +348,6 @@ table {
                background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
                background-size: 0.65em;
           }
-     }
-     a.documents {
-          margin-left: 1.5em;
      }
      .description {
           padding: 1em 0 0 0;
@@ -427,6 +423,27 @@ table {
 }
 
 #order-table {
+     thead {
+          tr {
+               &.four-column {
+                    th {
+                         &:nth-of-type(1n) {
+                              width: 40%;
+                         }
+                         &:nth-of-type(2n) {
+                              width: 15%;
+                         }
+                         &:nth-of-type(3n) {
+                              width: 15%;
+                         }
+                         &:nth-of-type(4n) {
+                              width: 30%;
+                              padding-right: 0;
+                         }
+                    }
+               }
+          }
+     }
      tbody {
           tr {
                &.documents-list {
@@ -438,18 +455,36 @@ table {
                     &:first-of-type {
                          box-shadow: inset 10px 0px 0px 0px rgba($main-colour,1);
                     }
-                    .main-cta.edit {
-                         padding: 0.25em 0.75em 0.25em 2em;
-                         width: auto;
-                         float: right;
-                         text-align: center;
-                         margin: 0;
-                         background: url(#{$image-path}/icons/edit-white.svg) no-repeat 12.5% 50% $blue;
-                         background-size: 1em;
-                         &:hover {
-                              border: 3px solid darken($blue,5%);
-                              background: url(#{$image-path}/icons/edit-white.svg) no-repeat 12.5% 50% darken($blue,5%);
+                    &:last-of-type {
+                         padding-right: 0;
+                    }
+                    .main-cta {
+                         &.edit, &.documents {
+                              padding: 0.25em 0.75em 0.25em 2em;
+                              width: auto;
+                              float: right;
+                              text-align: center;
+                              margin: 0;
+                         }
+                         &.edit {
+                              background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 7.5% 50% $white;
                               background-size: 1em;
+                              color: $blue;
+                              &:hover {
+                                   border: 3px solid darken($blue,5%);
+                                   background: url(#{$image-path}/icons/edit-white.svg) no-repeat 7.5% 50% darken($blue,5%);
+                                   background-size: 1em;
+                              }
+                         }
+                         &.documents {
+                              margin: 0 1em 0 0;
+                              background: url(#{$image-path}/icons/documents-white.svg) no-repeat 7.5% 50% $blue;
+                              background-size: 1em;
+                              &:hover {
+                                   border: 3px solid darken($blue,5%);
+                                   background: url(#{$image-path}/icons/documents-white.svg) no-repeat 7.5% 50% darken($blue,5%);
+                                   background-size: 1em;
+                              }
                          }
                     }
                }

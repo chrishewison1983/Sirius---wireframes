@@ -123,7 +123,7 @@
                          </div>
                          <!-- // FORM ITEM - 3 - END // -->
 
-                         <!-- // FORM ITEM - 4 - START // -->
+                         <!-- // FORM ITEM - 4a - START // -->
                          <div class="form-group">
                               <label for="client-title">Title</label>
                               <select id="client-title">
@@ -135,10 +135,17 @@
                                    <option>Dr.</option>
                                    <option>Prof.</option>
                                    <option>Rev.</option>
-                                   <option>Other</option>
+                                   <option value="Other">Other</option>
                               </select>
                          </div>
-                         <!-- // FORM ITEM - 4 - END // -->
+                         <!-- // FORM ITEM - 4a - END // -->
+
+                         <!-- // FORM ITEM - 4b - START // -->
+                         <div class="form-group client-title-other-answer">
+                              <label for="client-title-other">Other - please specify</label>
+                              <input id="client-title-other" name="client-title-other" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 4b - END // -->
 
                          <!-- // FORM ITEM - 5 - START // -->
                          <div class="form-group">
@@ -267,6 +274,10 @@
                          <div class="form-group">
                               <label for="client-address-town">Town</label>
                               <input id="client-address-town" name="client-address-town" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="client-address-county">County</label>
+                              <input id="client-address-county" name="client-address-county" type="text" value="">
                          </div>
                          <div class="form-group">
                               <label for="client-manual-postcode">Postcode</label>

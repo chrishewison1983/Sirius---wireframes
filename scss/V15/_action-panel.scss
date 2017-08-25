@@ -1,0 +1,98 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+.side-panel-parent {
+     height: 100%;
+}
+
+#action-panel {
+     position: relative;
+     float: right !important;
+     margin-top: 1em;
+     min-height: 52em;
+     // &.doc-editor {
+     //      border-left: 20px solid $blue;
+     //      padding-left: 1em;
+     // }
+     .create-case, .add-deputy-form, .edit-deputy-form, .check-details {
+          width: 100%;
+          .section-title {
+               text-transform: uppercase;
+               border-bottom: 6px solid rgba($main-colour,0.1);
+               padding-bottom: 0.65em;
+               margin-top: 2em;
+               margin-bottom: 1.5em;
+               &:first-of-type {
+                    margin-top: 0.5em;
+               }
+          }
+          // .the-bond-details {
+          //      .section-title {
+          //           &:first-of-type {
+          //                margin-top: 2em;
+          //           }
+          //      }
+          // }
+     }
+     .add-deputy-form, .edit-deputy-form, .check-details {
+          .section-title {
+               &:first-of-type {
+                    margin-top: 0.5em;
+               }
+          }
+     }
+     .check-details {
+          .section-title {
+               div {
+                    text-transform: capitalize;
+                    color: $blue;
+               }
+          }
+     }
+     .section-title {
+          &:first-of-type {
+               text-transform: uppercase;
+               border-bottom: 6px solid rgba($main-colour,0.1);
+               padding-bottom: 0.65em;
+               margin-bottom: 1.5em;
+          }
+          &.doc-title {
+               border-bottom: none;
+               margin: 0 0 0 0;
+               .current-doc-info {
+                    text-transform: none;
+                    font-size: 1rem;
+                    margin: 1em 0 0 0;
+                    padding-bottom: 0.25em;
+                    display: inline-block;
+                    width: 100%;
+                    font-family: $Opensans-Regular;
+                    color: $text-main-colour;
+                    span {
+                         float: left;
+                         display: inline-block;
+                         width: auto;
+                         &.number {
+                              width: 1.5em;
+                         }
+                    }
+                    // .icon {
+                    //      display: inline-block;
+                    //      width: 1.5em;
+                    //      height: 1.5em;
+                    //      position: relative;
+                    //      top: 0.375em;
+                    //      &.recipient {
+                    //           background: url(#{$image-path}/icons/client-grey.svg) no-repeat 50% 50%;
+                    //           background-size: contain;
+                    //      }
+                    // }
+                    // strong {
+                    //      font-family: $Montserrat;
+                    // }
+               }
+          }
+     }
+}

@@ -5,12 +5,17 @@
 
 //  FOR ALL
 .search-results {
+     display: inline-block;
+     margin: 1em 0 0 0;
      hr {
-          margin: 1.25em 0 2em 0;
+          margin: 1em 0 2em 0;
           border-bottom: 3px dashed $border-colour;
      }
      h2 {
-
+          text-transform: inherit;
+          strong {
+               text-transform: capitalize;
+          }
      }
      p {
           &.placeholder-text {
@@ -21,6 +26,66 @@
                border-radius: $global-border-radius;
                text-align: center;
                font-style: italic;
+          }
+     }
+}
+
+nav.pagination {
+     display: inline-block;
+     width: 100%;
+     margin: 0 0 0 0;
+     // border-top: 3px solid $white-off;
+     ul {
+          margin: 0;
+          li {
+               float: left;
+               @include flexbox;
+               @include align-items(center);
+               @include justify-content(center);
+               width: 12.5%;
+               text-align: center;
+               padding: 1em 0;
+               &:first-of-type {
+                    a {
+                         color: rgba($main-colour,0.5);
+                         background: $white-off;
+                         border-radius: 50%;
+                         &:hover {
+                              color: $blue;
+                         }
+                    }
+               }
+               &:last-of-type {
+                    a {
+                         background: rgba($blue,0.1);
+                         border-radius: 50%;
+                    }
+               }
+               a {
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    @include standard-transition;
+                    float: none;
+                    width: 2.5em;
+                    height: 2.5em;
+                    font-size: 1.2rem;
+                    border: none;
+                    color: $blue;
+                    &:hover {
+                         transform: scale(1.1);
+                         cursor: pointer;
+                         background: rgba($blue,0.1);
+                         border: none;
+                         border-radius: 50%;
+                    }
+                    &.selected {
+                         background: $white;
+                         color: $main-colour;
+                         border: 3px solid $main-colour;
+                         border-radius: 50%;
+                    }
+               }
           }
      }
 }

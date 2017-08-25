@@ -5,7 +5,7 @@
 {{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default create-deputy-journery step-3">
+<main class="default create-deputy-journery step-2">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header">
@@ -226,7 +226,7 @@
 
                          <!-- // FORM ITEM - 5b - START // -->
                          <div class="form-group interpreter-details">
-                              <label for="deputy-interpreter-details">Interpreter - please give details</label>
+                              <label for="deputy-interpreter-details">Interpreter - please give details  <span class="required">*</span></label>
                               <input id="deputy-interpreter-details" name="deputy-interpreter-details" type="text">
                          </div>
                          <!-- // FORM ITEM - 5b - END // -->
@@ -261,10 +261,9 @@
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
      <!-- <a class="main-cta primary" id="add-deputy" href="#">Add deputy</a> -->
-     <a class="main-cta primary" id="add-deputy-step-2" href="5d-case-details.html">Save &amp; add deputy</a>
-     <a class="main-cta secondary" id="add-another-deputy" href="#">Add another deputy</a>
+     <a class="main-cta primary" id="add-deputy-step-2" href="5d-case-details.html">Save &amp; continue</a>
      <span class="separator"></span>
-     <a href="#" onclick="history.back();">Cancel</a>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
 </footer>
 <!-- FOOTER CONTENT - END -->
 

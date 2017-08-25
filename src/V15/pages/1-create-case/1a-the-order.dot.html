@@ -1,0 +1,242 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default create-case-journey step-1">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span class="state">Create order</span>
+                    </nav>
+                    <h1>
+                         The order
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-case">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="create-case right">
+
+                         <h2 class="section-title">The order</h2>
+
+                         <!-- =========== THE ORDER SECTION - START =========== -->
+                         <form id="order-details" class="case-details">
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group order-type">
+                                   <legend>Order type <span class="required">*</span></legend>
+                                   <label for="case-type-welfare" class="radio radio-health-welfare">
+                                        <input id="case-type-welfare" type="radio" name="case-type" value="Health and Welfare">
+                                        <span>Health &amp; welfare</span> <span class="icon welfare"></span>
+                                   </label>
+                                   <label for="case-type-property" class="radio radio-property">
+                                        <input id="case-type-property" type="radio" name="case-type" value="Property and finance">
+                                        <span>Property &amp; affairs</span> <span class="icon property"></span>
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group">
+                                   <label for="case-court-ref">Court reference <span class="required">*</span></label>
+                                   <input id="case-court-ref" name="court-ref" type="text" class="half" value="">
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group">
+                                   <label for="case-order-date">Order date <span class="required">*</span></label>
+                                   <input id="case-order-date" name="order-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
+
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <label for="case-order-issue-date">Order issue date</label>
+                                   <input id="case-order-issue-date" name="order-issue-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group">
+                                   <label for="case-received-date">Order received date</label>
+                                   <input id="case-received-date" name="received-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group">
+                                   <label for="case-order-title">Order title</label>
+                                   <input id="case-order-title" name="order-title" type="text" class="" value="">
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                              <!-- // FORM ITEM - 7 - START // -->
+                              <div class="form-group">
+                                   <label for="case-order-status">Order status</label>
+                                   <select id="case-order-status" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Open" selected>Open</option>
+                                        <option value="Active">Active</option>
+                                        <option value="Closed">Closed</option>
+                                        <option value="Duplicate">Duplicate</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 7 - END // -->
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group">
+                                   <label for="case-status-date">Status date</label>
+                                   <input id="case-status-date" name="status-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
+
+                              <!-- // FORM ITEM - 9 - START // -->
+                              <div class="form-group deputies-appointed">
+                                   <legend>How have the deputy / deputies been appointed?</legend>
+                                   <label for="deputies-appointed-sole" class="radio">
+                                        <input id="deputies-appointed-sole" type="radio" name="deputies-appointed" value="Sole">
+                                        Sole
+                                   </label>
+                                   <label for="deputies-appointed-joint" class="radio">
+                                        <input id="deputies-appointed-joint" type="radio" name="deputies-appointed" value="Joint">
+                                        Joint
+                                   </label>
+                                   <label for="deputies-appointed-joint-severally" class="radio">
+                                        <input id="deputies-appointed-joint-severally" type="radio" name="deputies-appointed" value="Joint &amp; severally">
+                                        Joint &amp; severally
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 19 - END // -->
+
+                         </form>
+                         <!-- =========== THE ORDER SECTION - END =========== -->
+
+                    </div>
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="edit-case-modal" style="display:none;">
+          <h1>Edit order</h1>
+          <p>Are you sure you wish to edit the order details?</p>
+          <div class="cta-row">
+               <a class="main-cta" rel="modal:close" id="confirm-edit-order">Edit order</a>
+               <!-- <a class="main-cta" href="1a-the-order.html#Edit" value="Refresh Page" onClick="window.location.reload()">Edit case</a> -->
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="edit-case-button" href="#edit-case-modal" rel="modal:open">Edit order</a>
+     <a class="main-cta primary de-activate" id="create-case-button">Save &amp; continue</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function(){
+     //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) {
+     //           $('#why-commission-visit').append('<p>' + visit + '</p>');
+     //      });
+     // });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

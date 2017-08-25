@@ -1,0 +1,174 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default new-client">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="client-page">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-10 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Client summary</span>
+                    </nav>
+                    <h1>
+                         <span class="type">client</span>
+                         <div class="client-title">Mr</div>
+                         <div class="client-first-name">Gerald</div>
+                         <div class="client-last-name">Brackens</div>
+
+                         <span class="normal-status">Client's summary page</span>
+                         <span class="violent">Client is violent</span>
+                         <span class="welsh">Client's prefered language is Welsh</span>
+                         <span class="deceased">Client is deceased</span>
+
+                    </h1>
+               </div>
+
+               <div class="large-2 large-uncentered columns">
+                    {{= it.include('actions-header.html') }}
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     {{= it.include('client-nav.html') }}
+
+     {{= it.include('confirmation/correspondence-sent.html') }}
+
+     <!-- TAB CONTENT - START -->
+     <div id="client-overview" class="tabcontent current">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-summary.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-health" class="tabcontent">
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-health.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-property" class="tabcontent">
+
+          {{= it.include('confirmation/correspondence-sent.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-property.html') }}
+
+               </div>
+          </div>
+     </div>
+
+     <div id="client-unassigned" class="tabcontent">
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    {{= it.include('client-page/tab-unassigned.html') }}
+
+               </div>
+          </div>
+     </div>
+     <!-- TAB CONTENT - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="complete-task" style="display:none;">
+          <h1>Complete task</h1>
+          <p>Are you sure you wish to mark the <strong class="action-task-name"></strong> as complete?</p>
+          <div class="cta-row">
+               <a class="main-cta" rel="modal:close" id="confirm-complete-task">Complete task</a>
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <div id="re-assign-task" style="display:none;">
+          <h1>Re-assign task</h1>
+          <p>Are you sure you wish to re-assign the <strong class="action-task-name"></strong> task?</p>
+          <form>
+               <!-- // FORM ITEM - 1a - START // -->
+               <div class="form-group task-assign-to">
+                    <legend>Assign to <span class="required">*</span></legend>
+                    <label for="assign-to-myself" class="radio">
+                         <input id="assign-to-myself" type="radio" name="task-assign-to" value="Myself">
+                         Myself
+                    </label>
+                    <label for="assign-to-user" class="radio">
+                         <input id="assign-to-user" type="radio" name="task-assign-to" value="Another user">
+                         Another user
+                    </label>
+                    <label for="assign-to-my-team" class="radio">
+                         <input id="assign-to-my-team" type="radio" name="task-assign-to" value="My team">
+                         My team
+                    </label>
+                    <label for="assign-to-team" class="radio">
+                         <input id="assign-to-team" type="radio" name="task-assign-to" value="Other team">
+                         Other team
+                    </label>
+               </div>
+               <!-- // FORM ITEM - 1a - END // -->
+
+               <!-- // FORM ITEM - 1b - START // -->
+               <div class="form-group answer-task-user">
+                    <label for="task-user">Search for user</label>
+                    <input id="task-user" name="task-user" type="text" value="">
+               </div>
+               <!-- // FORM ITEM - 1b - END // -->
+
+               <!-- // FORM ITEM - 1c - START // -->
+               <div class="form-group answer-task-team">
+                    <label for="task-team">Select team</label>
+                    <select id="task-team" class="full-width">
+                         <option value="">-- Select --</option>
+                         <option value="1">Attorneyship Investigation Team</option>
+                         <option value="2">Complaints Team</option>
+                         <option value="3">Dispatch Team</option>
+                         <option value="4">EPA Team</option>
+                         <option value="5">File Creation Team</option>
+                         <option value="6">Filing Team</option>
+                         <option value="8">Registration Team</option>
+                         <option value="7">Safeguarding Team</option>
+                    </select>
+               </div>
+               <!-- // FORM ITEM - 1c - END // -->
+          </form>
+          <div class="cta-row">
+               <a class="main-cta" rel="modal:close" id="confirm-re-assign-task">Re-assign task</a>
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+</script>
+<!-- SCRIPT CONTENT - END -->
