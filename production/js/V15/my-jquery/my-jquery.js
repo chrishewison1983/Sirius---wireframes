@@ -21,6 +21,12 @@ $('#address-manual').click(function(e){
      })
 });
 
+$(".input-length").keyup(function () {
+     if (this.value.length == this.maxLength) {
+          $(this).next('.input-length').focus();
+     }
+});
+
 // Address look-up
 $(document).ready(function(){
      $('.address-list').hide();

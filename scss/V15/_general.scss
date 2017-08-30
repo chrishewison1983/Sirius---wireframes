@@ -231,6 +231,9 @@ p, ul, ul li {
 p {
      strong {
           font-family: $Opensans-Bold;
+          &.action-task-name {
+               color: $blue;
+          }
      }
      .letter {
           @include flexbox;

@@ -104,17 +104,17 @@
                          <h2 class="section-title">The order</h2>
 
                          <!-- =========== THE ORDER SECTION - START =========== -->
-                         <form id="order-details" class="case-details">
+                         <form id="order-details" class="order-details">
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group order-type">
                                    <legend>Order type <span class="required">*</span></legend>
-                                   <label for="case-type-welfare" class="radio radio-health-welfare">
-                                        <input id="case-type-welfare" type="radio" name="case-type" value="Health and Welfare">
+                                   <label for="order-type-welfare" class="radio radio-health-welfare">
+                                        <input id="order-type-welfare" type="radio" name="order-type" value="Health and Welfare">
                                         <span>Health &amp; welfare</span> <span class="icon welfare"></span>
                                    </label>
-                                   <label for="case-type-property" class="radio radio-property">
-                                        <input id="case-type-property" type="radio" name="case-type" value="Property and finance">
+                                   <label for="order-type-property" class="radio radio-property">
+                                        <input id="order-type-property" type="radio" name="order-type" value="Property and finance">
                                         <span>Property &amp; affairs</span> <span class="icon property"></span>
                                    </label>
                               </div>
@@ -122,43 +122,79 @@
 
                               <!-- // FORM ITEM - 2 - START // -->
                               <div class="form-group">
-                                   <label for="case-court-ref">Court reference <span class="required">*</span></label>
-                                   <input id="case-court-ref" name="court-ref" type="text" class="half" value="">
+                                   <label for="order-category">Sub order type <span class="required">*</span></label>
+                                   <select id="order-category" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Supplementary" selected>Supplementary</option>
+                                        <option value="Tenancy">Tenancy</option>
+                                        <option value="Trustee">Trustee</option>
+                                        <option value="Variation">Variation</option>
+                                        <option value="Direction">Direction</option>
+                                   </select>
                               </div>
                               <!-- // FORM ITEM - 2 - END // -->
 
                               <!-- // FORM ITEM - 3 - START // -->
                               <div class="form-group">
-                                   <label for="case-order-date">Order date <span class="required">*</span></label>
-                                   <input id="case-order-date" name="order-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                                   <label for="order-court-ref">Court reference <span class="required">*</span></label>
+                                   <input id="order-court-ref" name="court-ref" type="text" class="half" value="">
                               </div>
                               <!-- // FORM ITEM - 3 - END // -->
 
                               <!-- // FORM ITEM - 4 - START // -->
-                              <div class="form-group">
-                                   <label for="case-order-issue-date">Order issue date</label>
-                                   <input id="case-order-issue-date" name="order-issue-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                              <div class="form-group order-notes-section">
+                                   <label for="order-notes">Order notes</label>
+                                   <textarea name="textarea" class="jqte-test" id="order-notes"></textarea>
                               </div>
                               <!-- // FORM ITEM - 4 - END // -->
 
                               <!-- // FORM ITEM - 5 - START // -->
                               <div class="form-group">
-                                   <label for="case-received-date">Order received date</label>
-                                   <input id="case-received-date" name="received-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                                   <legend>Order date <span class="required">*</span></legend>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="order-date-day" class="input-length" name="order-date-day" type="text" placeholder="" maxlength="2">
+                                        <input id="order-date-month" class="input-length" name="order-date-month" type="text" placeholder="" maxlength="2">
+                                        <input id="order-date-year" class="input-length four" name="order-date-year" type="text" placeholder="" maxlength="4">
+                                   </div>
                               </div>
                               <!-- // FORM ITEM - 5 - END // -->
 
                               <!-- // FORM ITEM - 6 - START // -->
                               <div class="form-group">
-                                   <label for="case-order-title">Order title</label>
-                                   <input id="case-order-title" name="order-title" type="text" class="" value="">
+                                   <label for="order-issue-date">Order issue date</label>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="order-issue-day" class="input-length" name="order-issue-day" type="text" placeholder="" maxlength="2">
+                                        <input id="order-issue-month" class="input-length" name="order-issue-month" type="text" placeholder="" maxlength="2">
+                                        <input id="order-issue-year" class="input-length four" name="order-issue-year" type="text" placeholder="" maxlength="4">
+                                   </div>
                               </div>
                               <!-- // FORM ITEM - 6 - END // -->
 
                               <!-- // FORM ITEM - 7 - START // -->
                               <div class="form-group">
-                                   <label for="case-order-status">Order status</label>
-                                   <select id="case-order-status" class="full-width">
+                                   <label for="order-received-date">Order received date</label>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="order-received-day" class="input-length" name="order-received-day" type="text" placeholder="" maxlength="2">
+                                        <input id="order-received-month" class="input-length" name="order-received-month" type="text" placeholder="" maxlength="2">
+                                        <input id="order-received-year" class="input-length four" name="order-received-year" type="text" placeholder="" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 7 - END // -->
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group">
+                                   <label for="order-title">Order title</label>
+                                   <input id="order-title" name="order-title" type="text" class="" value="">
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
+
+                              <!-- // FORM ITEM - 9 - START // -->
+                              <div class="form-group">
+                                   <label for="order-status">Order status</label>
+                                   <select id="order-status" class="full-width">
                                         <option value="">-- Select --</option>
                                         <option value="Open" selected>Open</option>
                                         <option value="Active">Active</option>
@@ -166,16 +202,21 @@
                                         <option value="Duplicate">Duplicate</option>
                                    </select>
                               </div>
-                              <!-- // FORM ITEM - 7 - END // -->
+                              <!-- // FORM ITEM - 9 - END // -->
 
-                              <!-- // FORM ITEM - 8 - START // -->
+                              <!-- // FORM ITEM - 10 - START // -->
                               <div class="form-group">
-                                   <label for="case-status-date">Status date</label>
-                                   <input id="case-status-date" name="status-date" type="text" class="half" placeholder="Example - 05/04/2017" value="">
+                                   <label for="order-status-date">Status date</label>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="order-status-day" class="input-length" name="order-status-day" type="text" placeholder="" maxlength="2">
+                                        <input id="order-status-month" class="input-length" name="order-status-month" type="text" placeholder="" maxlength="2">
+                                        <input id="order-status-year" class="input-length four" name="order-status-year" type="text" placeholder="" maxlength="4">
+                                   </div>
                               </div>
-                              <!-- // FORM ITEM - 8 - END // -->
+                              <!-- // FORM ITEM - 10 - END // -->
 
-                              <!-- // FORM ITEM - 9 - START // -->
+                              <!-- // FORM ITEM - 11 - START // -->
                               <div class="form-group deputies-appointed">
                                    <legend>How have the deputy / deputies been appointed?</legend>
                                    <label for="deputies-appointed-sole" class="radio">
@@ -191,7 +232,7 @@
                                         Joint &amp; severally
                                    </label>
                               </div>
-                              <!-- // FORM ITEM - 19 - END // -->
+                              <!-- // FORM ITEM - 11 - END // -->
 
                          </form>
                          <!-- =========== THE ORDER SECTION - END =========== -->

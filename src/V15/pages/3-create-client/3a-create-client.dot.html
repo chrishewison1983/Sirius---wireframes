@@ -83,43 +83,18 @@
                                    <option value="Closed">Closed</option>
                                    <option value="Duplicate">Duplicate</option>
                               </select>
-                              <!-- <legend>Client status</legend>
-                              <label for="client-status-active" class="radio">
-                                   <input id="client-status-active" type="radio" name="radio-inline-group-3" value="Active">
-                                   Active
-                              </label>
-                              <label for="client-status-deceased"  class="radio">
-                                   <input id="client-status-deceased" type="radio" name="radio-inline-group-3" value="Deceased">
-                                   Deceased
-                              </label>
-                              <label for="client-status-202"  class="radio">
-                                   <input id="client-status-202" type="radio" name="radio-inline-group-3" value="Rule 202">
-                                   Rule 202
-                              </label> -->
                          </div>
                          <!-- // FORM ITEM - 2 - END // -->
 
                          <!-- // FORM ITEM - 3 - START // -->
                          <div class="form-group">
-                              <legend for="visit-status-day">
-
-                              </legend>
-                              <div class="half">
-                                   <label for="visit-status-date">Status date</label>
-                                   <input id="visit-status-date" name="visit-status-date" type="text" placeholder="Example - 05/04/2017" maxlength="12">
+                              <legend>Status date</legend>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="client-status-day" class="input-length" name="client-status-day" type="text" placeholder="" maxlength="2">
+                                   <input id="client-status-month" class="input-length" name="client-status-month" type="text" placeholder="" maxlength="2">
+                                   <input id="client-status-year" class="input-length four" name="client-status-year" type="text" placeholder="" maxlength="4">
                               </div>
-                              <!-- <div class="one-third">
-                                   <label for="visit-status-day" class="sub-label">Day</label>
-                                   <input id="visit-status-day" name="visit-status-day" type="text" value="05" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="visit-status-month" class="sub-label">Month</label>
-                                   <input id="visit-status-month" name="visit-status-month" type="text" value="04" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="visit-status-year" class="sub-label">Year</label>
-                                   <input id="visit-status-year" name="visit-status-year" type="text" value="2017" maxlength="4">
-                              </div> -->
                          </div>
                          <!-- // FORM ITEM - 3 - END // -->
 
@@ -180,85 +155,17 @@
 
                          <!-- // FORM ITEM - 9 - START // -->
                          <div class="form-group">
-                              <legend for="dob"></legend>
-                              <div class="half">
-                                   <label for="client-dob">Date of birth</label>
-                                   <input id="client-dob" name="client-dob" type="text" placeholder="Example - 05/04/1956" maxlength="12">
+                              <legend>Date of birth</legend>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="client-dob-day" class="input-length" name="client-dob-day" type="text" placeholder="" maxlength="2">
+                                   <input id="client-dob-month" class="input-length" name="client-dob-month" type="text" placeholder="" maxlength="2">
+                                   <input id="client-dob-year" class="input-length four" name="client-dob-year" type="text" placeholder="" maxlength="4">
                               </div>
-                              <!-- <div class="one-third">
-                                   <label for="client-dob-day" class="sub-label">Day</label>
-                                   <input id="client-dob-day" name="client-dob-day" type="text" placeholder="-- Day --" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="client-dob-month" class="sub-label">Month</label>
-                                   <input id="client-dob-month" name="client-dob-month" type="text" placeholder="-- Month --" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="client-dob-year" class="sub-label">Year</label>
-                                   <input id="client-dob-year" name="client-dob-year" type="text" placeholder="-- Year --" maxlength="4">
-                              </div> -->
                          </div>
                          <!-- // FORM ITEM - 9 - END // -->
 
-                         <!-- // FORM ITEM - 10a - START // -->
-                         <!-- <div class="form-group">
-                              <label for="client-postcode">Postcode</label>
-                              <input id="client-postcode" name="client-postcode" type="text" class="one-third">
-                              <a class="main-cta secondary" id="find-postcode">Find address</a>
-                         </div> -->
-                         <!-- // FORM ITEM - 10a - END // -->
-
                          <!-- // FORM ITEM - 10 - START // -->
-                         <!-- <div class="form-group address-list">
-                              <label for="client-address-1" class="radio address">
-                                   <input id="client-address-1" type="radio" name="radio-inline-group-1">
-                                   1 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-2" class="radio address">
-                                   <input id="client-address-2" type="radio" name="radio-inline-group-1">
-                                   2 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-3" class="radio address">
-                                   <input id="client-address-3" type="radio" name="radio-inline-group-1">
-                                   3 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-4" class="radio address">
-                                   <input id="client-address-4" type="radio" name="radio-inline-group-1">
-                                   4 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-5" class="radio address">
-                                   <input id="client-address-5" type="radio" name="radio-inline-group-1">
-                                   <span class="client-address">5 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.</span>
-                              </label>
-                              <label for="client-address-6" class="radio address">
-                                   <input id="client-address-6" type="radio" name="radio-inline-group-1">
-                                   6 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-7" class="radio address">
-                                   <input id="client-address-7" type="radio" name="radio-inline-group-1">
-                                   7 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-8" class="radio address">
-                                   <input id="client-address-8" type="radio" name="radio-inline-group-1">
-                                   8 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-9" class="radio address">
-                                   <input id="client-address-9" type="radio" name="radio-inline-group-1">
-                                   9 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-10" class="radio address">
-                                   <input id="client-address-10" type="radio" name="radio-inline-group-1">
-                                   10 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-11" class="radio address">
-                                   <input id="client-address-11" type="radio" name="radio-inline-group-1">
-                                   11 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                              <label for="client-address-12" class="radio address">
-                                   <input id="client-address-12" type="radio" name="radio-inline-group-1">
-                                   12 Grimwald Place, Buckley, Flintshire, <span class="postcode-value">CV32 7TH</span>.
-                              </label>
-                         </div> -->
                          <div class="form-group">
                               <label for="client-address-line-1">Address</label>
                               <input id="client-address-line-1" name="client-address-line-1" type="text" value="">
@@ -295,14 +202,14 @@
                                    <option>Scotland</option>
                                    <option>Wales</option>
                                    <option>Northern Ireland</option>
-                                   <option value="Outside">Outside of the United Kingdom</option>
+                                   <option value="Outside">Outside of the British Isles</option>
                               </select>
                          </div>
                          <!-- // FORM ITEM - 11a - END // -->
 
                          <!-- // FORM ITEM - 11b - START // -->
                          <div class="form-group client-outside-uk">
-                              <label for="client-country-description">Please provide the name of the country outside of the UK</label>
+                              <label for="client-country-description">Please provide the name of the country outside of the British Isles</label>
                               <input id="client-country-description" name="client-phone-number" type="text">
                          </div>
                          <!-- // FORM ITEM - 11b - END // -->
@@ -381,7 +288,8 @@
                          <!-- // FORM ITEM - 18 - START // -->
                          <div class="form-group client-medical-condition">
                               <label for="letter-medical-condition">Medical Condition</label>
-                              <textarea name="textarea" id="client-medical-condition" placeholder="Medical condition(s) up to 250 character" maxlength="250"></textarea>
+                              <span class="help-text">Medical condition(s) up to 250 character</span>
+                              <textarea name="textarea" id="client-medical-condition" placeholder="" maxlength="250"></textarea>
                          </div>
                          <!-- // FORM ITEM - 18 - END // -->
 

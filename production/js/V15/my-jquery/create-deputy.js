@@ -155,11 +155,11 @@ $("#add-deputy-error-2000, #add-deputy-error-1879").hide();
 //     window.location.reload();
 // }
 
-$("#deputy-dob").on('input', function(event){
-     if ($(this).val() == '25/12/2000') {
+$("#deputy-dob-year").on('input', function(event){
+     if ($(this).val() == '2000') {
           $('#add-deputy-step-1, #add-deputy-error-1879, #add-deputy-error-1879').hide();
           $("#add-deputy-error-2000").show();
-     } else if ($(this).val() == '25/12/1879') {
+     } else if ($(this).val() == '1879') {
           $('#add-deputy-step-1, #add-deputy-error-2000, #add-deputy-error-2000').hide();
           $("#add-deputy-error-1879").show();
      } else {
@@ -180,6 +180,7 @@ $("#add-deputy-error-2000").click( function(){
      $('li.too-young').css('display', 'list-item');
      $('span.too-young').css('display', 'inline-block');
      $('.too-old').hide();
+     $('.help-text').hide();
 
 });
 
@@ -195,6 +196,7 @@ $("#add-deputy-error-1879").click( function(){
      $('li.too-old').css('display', 'list-item');
      $('span.too-old').css('display', 'inline-block');
      $('.too-young').hide();
+     $('.help-text').hide();
 
 });
 
@@ -251,7 +253,9 @@ if (window.location.href.indexOf("edit-deputy-1") != -1) {
      $('#deputy-title').val('Mrs');
      $('#deputy-first-name').val('Lara');
      $('#deputy-last-name').val('Stevens');
-     $('#deputy-dob').val('17/07/1981');
+     $('#deputy-dob-day').val('17');
+     $('#deputy-dob-month').val('07');
+     $('#deputy-dob-year').val('1981');
      $('#deputy-address-line-1').val('34 Broomfield Place');
      $('#deputy-address-town').val('Stokesley');
      $('#deputy-manual-postcode').val('TS9 8TU');
@@ -319,7 +323,9 @@ if (window.location.href.indexOf("edit-deputy-2") != -1) {
      $('#deputy-title').val('Mrs');
      $('#deputy-first-name').val('Carla');
      $('#deputy-last-name').val('Frith');
-     $('#deputy-dob').val('25/06/1983');
+     $('#deputy-dob-day').val('25');
+     $('#deputy-dob-month').val('06');
+     $('#deputy-dob-year').val('1983');
      $('#deputy-address-line-1').val('35 Broad Street');
      $('#deputy-address-town').val('Lower Welson');
      $('#deputy-manual-postcode').val('HR3 1UD');

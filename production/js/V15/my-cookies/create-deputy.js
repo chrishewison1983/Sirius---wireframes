@@ -29,7 +29,9 @@ $("#add-deputy-step-1").on("click", function (e) {
      $.cookie("deputy-middle-name", $("#deputy-middle-name").val(), {path:'/'});
      $.cookie("deputy-last-name", $("#deputy-last-name").val(), {path:'/'});
      $.cookie("deputy-previous-name", $("#deputy-previous-name").val(), {path:'/'});
-     $.cookie("deputy-dob", $("#deputy-dob").val(), {path:'/'});
+     $.cookie("deputy-dob-day", $("#deputy-dob-day").val(), {path:'/'});
+     $.cookie("deputy-dob-month", $("#deputy-dob-month").val(), {path:'/'});
+     $.cookie("deputy-dob-year", $("#deputy-dob-year").val(), {path:'/'});
      $.cookie("deputy-address-line-1", $("#deputy-address-line-1").val(), {path:'/'});
      $.cookie("deputy-address-line-2", $("#deputy-address-line-2").val(), {path:'/'});
      $.cookie("deputy-address-line-3", $("#deputy-address-line-3").val(), {path:'/'});
@@ -271,10 +273,19 @@ if ($.cookie("deputy-previous-name")) {
      $("#edit-deputy-previous-name").val($.cookie("deputy-previous-name"));
      $(".deputy-previous-name-answer").text($.cookie("deputy-previous-name"));
 }
-if ($.cookie("deputy-dob")) {
-     $("#edit-deputy-dob").val($.cookie("deputy-dob"));
-     $(".deputy-dob-answer").text($.cookie("deputy-dob"));
+if ($.cookie("deputy-dob-day")) {
+     $("#edit-deputy-dob-day").val($.cookie("deputy-dob-day"));
+     $(".deputy-dob-day-answer").text($.cookie("deputy-dob-day"));
 }
+if ($.cookie("deputy-dob-month")) {
+     $("#edit-deputy-dob-month").val($.cookie("deputy-dob-month"));
+     $(".deputy-dob-month-answer").text($.cookie("deputy-dob-month"));
+}
+if ($.cookie("deputy-dob-year")) {
+     $("#edit-deputy-dob-year").val($.cookie("deputy-dob-year"));
+     $(".deputy-dob-year-answer").text($.cookie("deputy-dob-year"));
+}
+
 if ($.cookie("deputy-address-line-1")) {
      $("#edit-deputy-address-line-1").val($.cookie("deputy-address-line-1"));
      $(".deputy-address-line-1-answer").text($.cookie("deputy-address-line-1"));

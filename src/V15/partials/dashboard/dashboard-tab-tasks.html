@@ -14,6 +14,22 @@
 				</h2>
 			</div>
 		</div>
+		<div id="task-complete" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been marked as completed
+				</h2>
+			</div>
+		</div>
+		<div id="task-re-assigned" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been re-assigned
+				</h2>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- // CONFIRMATION MESSAGE - END // -->
@@ -22,11 +38,12 @@
 
 	<table id="tasks-table" class="tablesorter">
 		<thead>
-			<tr class="four-column">
+			<tr class="five-column">
 				<th><span></span>Type</th>
 				<th><span></span>Task due date</th>
 				<th><span></span>Case type</th>
 				<th><span></span>Task status</th>
+				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -74,6 +91,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 1 - END -->
 
@@ -115,6 +137,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 2 - START -->
 
@@ -155,6 +182,11 @@
 						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 3 - END -->
@@ -203,6 +235,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 4 - START -->
 
@@ -243,6 +280,11 @@
 						<span class="traffic-light"></span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 5 - END -->
@@ -291,6 +333,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 6 - START -->
 
@@ -331,6 +378,11 @@
 						<span class="traffic-light"></span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 7 - END -->
@@ -379,6 +431,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 8 - START -->
 
@@ -425,6 +482,11 @@
 						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 9 - END -->

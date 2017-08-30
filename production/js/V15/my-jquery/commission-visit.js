@@ -411,7 +411,7 @@ $(document).ready(function() {
                     <br>
                     <span>Where: <strong>${ $("#assets").find('#visit-where').val() }</strong></span>
                     <br>
-                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-date').val() }</strong></span>
+                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-day').val() + '/' + $("#assets").find('#visit-date-reported-month').val() + '/' + $("#assets").find('#visit-date-reported-year').val() }</strong></span>
                     <span class="edit"></span>
                     <span class="remove"></span>
                </li>`
@@ -424,7 +424,7 @@ $(document).ready(function() {
                     <br>
                     <span>Where: <strong>${ $("#assets").find('#visit-where').val() }</strong></span>
                     <br>
-                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-date').val() }</strong></span>
+                    <span>Date: <strong>${ $("#assets").find('#visit-date-reported-day').val() + '/' + $("#assets").find('#visit-date-reported-month').val() + '/' + $("#assets").find('#visit-date-reported-year').val() }</strong></span>
                     <span class="remove"></span>
                </li>`
           );

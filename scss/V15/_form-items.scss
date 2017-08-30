@@ -52,7 +52,7 @@ form {
      textarea {
           resize: none;
           min-height: 10em;
-          margin: 0.75em 0 0 0;
+          margin: 0.25em 0 0 0;
           display: inline-block;
      }
      select {
@@ -91,6 +91,7 @@ form {
           font-size: 1rem;
           line-height: 1.4;
           position: relative;
+          margin-bottom: 0.5em;
           span.required {
                font-size: 2.75rem;
                color: $red;
@@ -105,9 +106,9 @@ form {
                color: $blue;
           }
           &.sub-label {
-               color: lighten($main-colour,40%);
+               color: $text-main-colour;
                font-size: 0.875rem;
-               margin: 1em 0 0.5em 0;
+               margin: 0.25em 0 0.5em 0;
           }
           &.password {
                &.selected {
@@ -441,12 +442,24 @@ form {
                background: rgba($blue,0.1);
                // border-radius: $global-border-radius;
           }
+
+          .help-text {
+               display: inline-block;
+               width: 100%;
+               color: $text-main-colour;
+               line-height: 1.4;
+               margin: -0.5em 0 0.5em 0;
+               font-style: italic;
+               font-size: 0.875rem;
+               font-family: $Opensans-Regular;
+          }
           legend.margin-top {
                margin-top: 1em;
           }
           a.edit {
                float: none;
-               margin: 0 0 0 0.5em;
+               margin: 0.65em 0 0 0.5em;
+               display: inline-block;
           }
           p {
                &.info {
@@ -457,6 +470,15 @@ form {
                          font-weight: bold;
                          font-size: 1.4rem;
                     }
+               }
+          }
+          .input-length {
+               width: auto;
+               margin-right: 1.5em;
+               float: left;
+               width: 3.5em;
+               &.four {
+                    width: 5em;
                }
           }
      }

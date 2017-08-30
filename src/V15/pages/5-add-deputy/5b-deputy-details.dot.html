@@ -184,25 +184,15 @@
 
                          <!-- // FORM ITEM - 6 - START // -->
                          <div class="form-group" id="dob-error">
-                              <legend for="dob"></legend>
                               <label for="deputy-dob">Date of birth</label>
                               <span class="error-text too-young">The deputy must be older than 18 years of age</a></span>
                               <span class="error-text too-old">The deputy cannot be born before 1879</a></span>
-                              <div class="half">
-                                   <input id="deputy-dob" name="deputy-dob" type="text" placeholder="Example - 25/06/1972" maxlength="12">
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="deputy-dob-day" class="input-length" name="deputy-dob-day" type="text" placeholder="" maxlength="2">
+                                   <input id="deputy-dob-month" class="input-length" name="deputy-dob-month" type="text" placeholder="" maxlength="2">
+                                   <input id="deputy-dob-year" class="input-length four" name="deputy-dob-year" type="text" placeholder="" maxlength="4">
                               </div>
-                              <!-- <div class="one-third">
-                                   <label for="deputy-dob-day" class="sub-label">Day</label>
-                                   <input id="deputy-dob-day" name="deputy-dob-day" type="text" placeholder="-- Day --" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="deputy-dob-month" class="sub-label">Month</label>
-                                   <input id="deputy-dob-month" name="deputy-dob-month" type="text" placeholder="-- Month --" maxlength="2">
-                              </div>
-                              <div class="one-third">
-                                   <label for="deputy-dob-year" class="sub-label">Year</label>
-                                   <input id="deputy-dob-year" name="deputy-dob-year" type="text" placeholder="-- Year --" maxlength="4">
-                              </div> -->
                          </div>
                          <!-- // FORM ITEM - 6 - END // -->
 
@@ -240,14 +230,14 @@
                                    <option value="Scotland">Scotland</option>
                                    <option value="Wales">Wales</option>
                                    <option value="Northern Ireland">Northern Ireland</option>
-                                   <option value="Outside">Outside of the United Kingdom</option>
+                                   <option value="Outside">Outside of the British Isles</option>
                               </select>
                          </div>
                          <!-- // FORM ITEM - 7 - END // -->
 
                          <!-- // FORM ITEM - 7b - START // -->
                          <div class="form-group deputy-outside-uk">
-                              <label for="deputy-country-description">Please provide the name of the country outside of the UK</label>
+                              <label for="deputy-country-description">Please provide the name of the country outside of the British Isles</label>
                               <input id="deputy-country-description" name="deputy-phone-number" type="text">
                          </div>
                          <!-- // FORM ITEM - 7b - END // -->

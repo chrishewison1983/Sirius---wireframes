@@ -214,7 +214,9 @@ if ($.cookie("visit-location")) {  $(".visit-location").text($.cookie("visit-loc
 
 ////////////////////////////////////// Step - 3 (6C-WHERE?) //////////////////////////////////////
 $("#add-visitors-step-3").on("click", function (e) {
-     $.cookie("visit-due-back-date", $("#visit-report-date").val(), {path:'/'});
+     $.cookie("visit-due-back-day", $("#visit-report-day").val(), {path:'/'});
+     $.cookie("visit-due-back-month", $("#visit-report-month").val(), {path:'/'});
+     $.cookie("visit-due-back-year", $("#visit-report-year").val(), {path:'/'});
      // $.cookie("visit-due-back-month", $("#visit-report-month").val(), {path:'/'});
      // $.cookie("visit-due-back-year", $("#visit-report-year").val(), {path:'/'});
      $.cookie("completed-step-3", true, {path:'/'});
@@ -222,14 +224,16 @@ $("#add-visitors-step-3").on("click", function (e) {
      /* textarea */ $.cookie("third-party-needed", $(".third-party-needed .jqte_editor").html(), {path:'/'});
 });
 
-if ($.cookie("visit-due-back-day")) { $(".visit-due-back-date").text($.cookie("visit-due-back-day") + '/' + $.cookie("visit-due-back-month") + '/' + $.cookie("visit-due-back-year"));  }
+if ($.cookie("visit-due-back-day")) { $(".visit-due-back-day").text($.cookie("visit-due-back-day") + '/' + $.cookie("visit-due-back-month") + '/' + $.cookie("visit-due-back-year"));  }
 
 /////////////////// ======================== !!!!!!!!!! CHANGE BASED ON DATE OF TEST - START !!!!!!!!!! ======================== ///////////////////
 $('.weeks-6, .weeks-12').css('display', 'none');
 
 // ADD 6 WEEKS
 if ($.cookie("visit-urgent") === 'Yes') {
-     $("#visit-report-date").val('30/07/2017');
+     $("#visit-report-day").val('30');
+     $("#visit-report-month").val('07');
+     $("#visit-report-year").val('2017');
      // $("#visit-report-month").val('07');
      // $("#visit-report-year").val('2017');
      $('.weeks-6').css('display', 'inline-block');
@@ -237,7 +241,9 @@ if ($.cookie("visit-urgent") === 'Yes') {
 }
 // ADD 12 WEEKS
 else if ($.cookie("visit-urgent") == 'undefined') {
-     $("#visit-report-date").val('11/08/2017');
+     $("#visit-report-day").val('11');
+     $("#visit-report-month").val('08');
+     $("#visit-report-year").val('2017');
      // $("#visit-report-month").val('08');
      // $("#visit-report-year").val('2017');
      $('.weeks-6').css('display', 'none');
@@ -245,9 +251,16 @@ else if ($.cookie("visit-urgent") == 'undefined') {
 }
 /////////////////// ======================== !!!!!!!!!! CHANGE BASED ON DATE OF TEST - END !!!!!!!!!! ======================== ///////////////////
 
-if ($.cookie("visit-due-back-date")) {
-     $(".visit-due-back-date").text($.cookie("visit-due-back-date"));
+if ($.cookie("visit-due-back-day")) {
+     $(".visit-due-back-day").text($.cookie("visit-due-back-day"));
 }
+if ($.cookie("visit-due-back-month")) {
+     $(".visit-due-back-month").text($.cookie("visit-due-back-month"));
+}
+if ($.cookie("visit-due-back-year")) {
+     $(".visit-due-back-year").text($.cookie("visit-due-back-year"));
+}
+
 
 //////////////////////////////////////// Step - 4 (6D-CASE-SUMMARY-& ASSETS) //////////////////////////////////////
 $("#add-visitors-step-4").on("click", function (e) {
@@ -300,7 +313,9 @@ $("#add-visitors-step-5").on("click", function (e) {
      /* textarea */ $.cookie("visit-deputyship-order-answer", $(".visit-deputyship-order-answer .jqte_editor").val(), {path:'/'});
 
      $.cookie("visit-first", $("input[name=visit-first]:checked").parent().text(), {path:'/'});
-     $.cookie("visit-last-visit-date", $("#visit-last-visit-date").val(), {path:'/'});
+     $.cookie("visit-last-visit-day", $("#visit-last-visit-day").val(), {path:'/'});
+     $.cookie("visit-last-visit-month", $("#visit-last-visit-month").val(), {path:'/'});
+     $.cookie("visit-last-visit-year", $("#visit-last-visit-year").val(), {path:'/'});
      // $.cookie("visit-last-visit-month", $("#visit-last-visit-month").val(), {path:'/'});
      // $.cookie("visit-last-visit-year", $("#visit-last-visit-year").val(), {path:'/'});
 });
@@ -343,13 +358,21 @@ if ($.cookie("visit-deputyship-order-answer")) {
 }
 
 if ($.cookie("visit-first")) {  $(".visit-first").text($.cookie("visit-first")); }
-if ($.cookie("visit-last-visit-date")) {
-     $(".visit-first-date").text($.cookie("visit-last-visit-date"));
-     // $(".visit-first-date").text($.cookie("visit-last-visit-date") + '/' + $.cookie("visit-last-visit-month") + '/' + $.cookie("visit-last-visit-year"));
+if ($.cookie("visit-last-visit-day")) {
+     $(".visit-first-day").text($.cookie("visit-last-visit-day"));
 } else {
-     $(".visit-first-date").hide();
+     $(".visit-first-day").hide();
 }
-
+if ($.cookie("visit-last-visit-month")) {
+     $(".visit-first-month").text($.cookie("visit-last-visit-month"));
+} else {
+     $(".visit-first-month").hide();
+}
+if ($.cookie("visit-last-visit-year")) {
+     $(".visit-first-year").text($.cookie("visit-last-visit-year"));
+} else {
+     $(".visit-first-year").hide();
+}
 //////////////////////////////////////// Step - 6 (6E-VISIT SUMMARY) //////////////////////////////////////
 $("#add-visitors-step-6").on("click", function (e) {
      $.cookie("user-journey", 6, {path:'/'});

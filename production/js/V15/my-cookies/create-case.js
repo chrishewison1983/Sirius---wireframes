@@ -1,10 +1,10 @@
 // =================================== Create case - COOKIES =================================== //
 $(".edit-case-health").on("click", function (e) {
-     $.cookie("case-order-type", 'Health and Welfare', {path:'/'});
+     $.cookie("order-type", 'Health and Welfare', {path:'/'});
 });
 
 $(".edit-case-pfa").on("click", function (e) {
-     $.cookie("case-order-type", 'Property and finance', {path:'/'});
+     $.cookie("order-type", 'Property and finance', {path:'/'});
 });
 ////////////////////////////////////// COLLECT COOKIES - THE ORDER - START //////////////////////////////////////
 $("#create-case-button").on("click", function (e) {
@@ -12,14 +12,22 @@ $("#create-case-button").on("click", function (e) {
      $.cookie("create-case-journey", true, {path:'/'});
 
      // Cookies for side bar - THE ORDER
-     $.cookie("case-order-type", $("input[name=case-type]:checked").val(), {path:'/'});
-     $.cookie("case-court-ref", $("#case-court-ref").val(), {path:'/'});
-     $.cookie("case-order-date", $("#case-order-date").val(), {path:'/'});
-     $.cookie("case-order-issue-date", $("#case-order-issue-date").val(), {path:'/'});
-     $.cookie("case-order-status", $("#case-order-status").val(), {path:'/'});
-     $.cookie("case-status-date", $("#case-status-date").val(), {path:'/'});
-     $.cookie("case-received-date", $("#case-received-date").val(), {path:'/'});
-     $.cookie("case-order-title", $("#case-order-title").val(), {path:'/'});
+     $.cookie("order-type", $("input[name=order-type]:checked").val(), {path:'/'});
+     $.cookie("order-court-ref", $("#order-court-ref").val(), {path:'/'});
+     $.cookie("order-date-day", $("#order-date-day").val(), {path:'/'});
+     $.cookie("order-date-month", $("#order-date-month").val(), {path:'/'});
+     $.cookie("order-date-year", $("#order-date-year").val(), {path:'/'});
+     $.cookie("order-issue-day", $("#order-issue-day").val(), {path:'/'});
+     $.cookie("order-issue-month", $("#order-issue-month").val(), {path:'/'});
+     $.cookie("order-issue-year", $("#order-issue-year").val(), {path:'/'});
+     $.cookie("order-received-day", $("#order-received-day").val(), {path:'/'});
+     $.cookie("order-received-month", $("#order-received-month").val(), {path:'/'});
+     $.cookie("order-received-year", $("#order-received-year").val(), {path:'/'});
+     $.cookie("order-status", $("#order-status").val(), {path:'/'});
+     $.cookie("order-status-day", $("#order-status-day").val(), {path:'/'});
+     $.cookie("order-status-month", $("#order-status-month").val(), {path:'/'});
+     $.cookie("order-status-year", $("#order-status-year").val(), {path:'/'});
+     $.cookie("order-title", $("#order-title").val(), {path:'/'});
 
      // Cookies for side bar - DEPUTY/DEPUTIES
      $.cookie("deputies-appointed", $("input[name=deputies-appointed]:checked").val(), {path:'/'});
@@ -38,68 +46,111 @@ if (window.location.href.indexOf("EditCase") != -1) {
      $('.state').text('Edit case');
 
      // Order type
-     if ($.cookie('case-order-type') === 'Health and Welfare' ) {
-          $('#case-type-welfare').parent().addClass('checked');
-          $('#case-type-welfare').attr('checked', 'checked');
-          $('#case-type-property').parent().removeClass('checked');
+     if ($.cookie('order-type') === 'Health and Welfare' ) {
+          $('#order-type-welfare').parent().addClass('checked');
+          $('#order-type-welfare').attr('checked', 'checked');
+          $('#order-type-property').parent().removeClass('checked');
+          $('#order-type-property').removeAttr('checked');
           // $('#bond-details-section').hide();
      }
-     if ($.cookie('case-order-type') === 'Property and finance' ) {
-          $('#case-type-property').parent().addClass('checked');
-          $('#case-type-property').attr('checked', 'checked');
-          $('#case-type-welfare').parent().removeClass('checked');
+     if ($.cookie('order-type') === 'Property and finance' ) {
+          $('#order-type-property').parent().addClass('checked');
+          $('#order-type-property').attr('checked', 'checked');
+          $('#order-type-welfare').parent().removeClass('checked');
+          $('#order-type-welfare').removeAttr('checked');
           // $('#bond-details-section').show();
      }
 
      // Court reference
-     if ($.cookie("case-court-ref")) {
-          $('#case-court-ref').val($.cookie("case-court-ref"));
+     if ($.cookie("order-court-ref")) {
+          $('#order-court-ref').val($.cookie("order-court-ref"));
      } else if ($.cookie("client-casarec")) {
-          $("#case-court-ref").val($.cookie("client-casarec"));
+          $("#order-court-ref").val($.cookie("client-casarec"));
      } else {
-          $('#case-court-ref').val('19273638');
+          $('#order-court-ref').val('19273638');
      }
 
      // Order date
-     if ($.cookie("case-order-date")) {
-          $('#case-order-date').val($.cookie("case-order-date"));
+     if ($.cookie("order-day")) {
+          $('#order-day').val($.cookie("order-day"));
      } else {
-          $('#case-order-date').val('28/08/2018');
+          $('#order-day').val('28');
+     }
+     if ($.cookie("order-month")) {
+          $('#order-month').val($.cookie("order-month"));
+     } else {
+          $('#order-month').val('08');
+     }
+     if ($.cookie("order-year")) {
+          $('#order-year').val($.cookie("order-year"));
+     } else {
+          $('#order-year').val('2018');
      }
 
      // Order issue date
-     if ($.cookie("case-order-issue-date")) {
-          $('#case-order-issue-date').val($.cookie("case-order-issue-date"));
+     if ($.cookie("order-issue-day")) {
+          $('#order-issue-day').val($.cookie("order-issue-day"));
      } else {
-          $('#case-order-issue-date').val('28/08/2017');
+          $('#order-issue-day').val('28/08/2017');
+     }
+     if ($.cookie("order-issue-month")) {
+          $('#order-issue-month').val($.cookie("order-issue-month"));
+     } else {
+          $('#order-issue-month').val('08');
+     }
+     if ($.cookie("order-issue-year")) {
+          $('#order-issue-year').val($.cookie("order-issue-year"));
+     } else {
+          $('#order-issue-year').val('2017');
      }
 
      // Order status
-     if ($.cookie("case-order-status")) {
-          $('#case-order-status').val($.cookie("case-order-status"));
+     if ($.cookie("order-status")) {
+          $('#order-status').val($.cookie("order-status"));
      } else {
-          $('#case-order-status').val('Open');
+          $('#order-status').val('Open');
      }
 
      // Status date
-     if ($.cookie("case-status-date")) {
-          $('#case-status-date').val($.cookie("case-status-date"));
+     if ($.cookie("order-status-day")) {
+          $('#order-status-day').val($.cookie("order-status-day"));
      } else {
-          $('#case-status-date').val('28/08/2017');
+          $('#order-status-day').val('28');
+     }
+     if ($.cookie("order-status-month")) {
+          $('#order-status-month').val($.cookie("order-status-month"));
+     } else {
+          $('#order-status-month').val('08');
+     }
+
+     if ($.cookie("order-status-year")) {
+          $('#order-status-year').val($.cookie("order-status-year"));
+     } else {
+          $('#order-status-year').val('2018');
      }
 
      // Order received date
-     if ($.cookie("case-received-date")) {
-          $('#case-received-date').val($.cookie("case-received-date"));
+     if ($.cookie("order-received-day")) {
+          $('#order-received-day').val($.cookie("order-received-day"));
      } else {
-          $('#case-received-date').val('28/07/2017');
+          $('#order-received-day').val('28');
+     }
+     if ($.cookie("order-received-month")) {
+          $('#order-received-month').val($.cookie("order-received-month"));
+     } else {
+          $('#order-received-month').val('08');
+     }
+     if ($.cookie("order-received-year")) {
+          $('#order-received-year').val($.cookie("order-received-year"));
+     } else {
+          $('#order-received-year').val('2017');
      }
 
      // Order title
-     if ($.cookie("case-order-title")) {
-          $('#case-order-title').val($.cookie("case-order-title"));
+     if ($.cookie("order-title")) {
+          $('#order-title').val($.cookie("order-title"));
      } else {
-          $('#case-order-title').val('Order title');
+          $('#order-title').val('Order title');
      }
 
      // Deputies jointly severally
@@ -111,7 +162,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#deputies-appointed-joint').parent().addClass('checked');
           $('#deputies-appointed-joint').attr('checked', 'checked');
           $('#deputies-appointed-sole, #deputies-appointed-joint-severally').parent().removeClass('checked');
-     } else if ($.cookie('deputies-appointed') === 'Joint &amp; severally' ) {
+     } else if ($.cookie('deputies-appointed') === 'Joint & severally' ) {
           $('#deputies-appointed-joint-severally').parent().addClass('checked');
           $('#deputies-appointed-joint-severally').attr('checked', 'checked');
           $('#deputies-appointed-sole, #deputies-appointed-joint').parent().removeClass('checked');
@@ -124,31 +175,78 @@ if (window.location.href.indexOf("EditCase") != -1) {
 }
 
 if ($.cookie("order-journey") == 'PFA') {
-     $('#case-type-property').parent().addClass('checked');
-     $('#case-type-property').attr('checked', 'checked');
-     $('#case-type-welfare').parent().removeClass('checked');
-     $('#case-type-welfare').removeAttr('checked');
+     $('#order-type-property').parent().addClass('checked');
+     $('#order-type-property').attr('checked', 'checked');
+     $('#order-type-welfare').parent().removeClass('checked');
+     $('#order-type-welfare').removeAttr('checked');
 } if ($.cookie("order-journey") == 'HandW') {
-     $('#case-type-welfare').parent().addClass('checked');
-     $('#case-type-welfare').attr('checked', 'checked');
-     $('#case-type-property').parent().removeClass('checked');
-     $('#case-type-property').removeAttr('checked');
+     $('#order-type-welfare').parent().addClass('checked');
+     $('#order-type-welfare').attr('checked', 'checked');
+     $('#order-type-property').parent().removeClass('checked');
+     $('#order-type-property').removeAttr('checked');
 }
 
 // Populate side bar - THE ORDER
-if ($.cookie("case-order-type")) { $(".case-order-type-answer").text($.cookie("case-order-type")); }
-if ($.cookie("case-court-ref")) { $(".case-court-ref-answer").text($.cookie("case-court-ref")); }
-if ($.cookie("case-order-date")) {
-     $(".case-order-date-answer").text($.cookie("case-order-date"));
-     $('#bond-renewal-date').val($.cookie("case-order-date"));
+if ($.cookie('order-type') === 'Health and Welfare' ) {
+     $('#order-type-welfare').parent().addClass('checked');
+     $('#order-type-welfare').attr('checked', 'checked');
+     $('#order-type-property').parent().removeClass('checked');
+     $('#order-type-property').removeAttr('checked');
+     // $('#bond-details-section').hide();
 }
-if ($.cookie("case-order-issue-date")) { $(".case-order-issue-date-answer").text($.cookie("case-order-issue-date")); }
-if ($.cookie("case-order-status")) { $(".case-order-status-answer").text($.cookie("case-order-status")); }
-if ($.cookie("case-status-date")) { $(".case-status-date-answer").text($.cookie("case-status-date")); }
-if ($.cookie("case-received-date")) { $(".case-received-date-answer").text($.cookie("case-received-date")); }
-if ($.cookie("case-order-title")) { $(".case-order-title-answer").text($.cookie("case-order-title")); }
+if ($.cookie('order-type') === 'Property and finance' ) {
+     $('#order-type-property').parent().addClass('checked');
+     $('#order-type-property').attr('checked', 'checked');
+     $('#order-type-welfare').parent().removeClass('checked');
+     $('#order-type-welfare').removeAttr('checked');
+     // $('#bond-details-section').show();
+}
+if ($.cookie("order-type")) {
+     $(".order-type-answer").text($.cookie("order-type"));
+}
+if ($.cookie("order-court-ref")) { $(".order-court-ref-answer").text($.cookie("order-court-ref")); }
+if ($.cookie("order-day")) {
+     $(".order-day-answer").text($.cookie("order-day"));
+     $('#bond-renewal-day').val($.cookie("order-day"));
+}
+if ($.cookie("order-month")) {
+     $(".order-month-answer").text($.cookie("order-month"));
+     $('#bond-renewal-month').val($.cookie("order-month"));
+}
+if ($.cookie("order-year")) {
+     $(".order-year-answer").text($.cookie("order-year"));
+     $('#bond-renewal-year').val($.cookie("order-year"));
+}
+if ($.cookie("order-issue-day")) { $(".order-issue-day-answer").text($.cookie("order-issue-day")); }
+if ($.cookie("order-issue-month")) { $(".order-issue-month-answer").text($.cookie("order-issue-month")); }
+if ($.cookie("order-issue-year")) { $(".order-issue-year-answer").text($.cookie("order-issue-year")); }
+if ($.cookie("order-status")) { $(".order-status-answer").text($.cookie("order-status")); }
+if ($.cookie("order-status-day")) { $(".order-status-day-answer").text($.cookie("order-status-day")); }
+if ($.cookie("order-status-month")) { $(".order-status-month-answer").text($.cookie("order-status-month")); }
+if ($.cookie("order-status-year")) { $(".order-status-year-answer").text($.cookie("order-status-year")); }
+if ($.cookie("order-received-day")) { $(".order-received-day-answer").text($.cookie("order-received-day")); }
+if ($.cookie("order-received-month")) { $(".order-received-month-answer").text($.cookie("order-received-month")); }
+if ($.cookie("order-received-year")) { $(".order-received-year-answer").text($.cookie("order-received-year")); }
+if ($.cookie("order-title")) { $(".order-title-answer").text($.cookie("order-title")); }
 
 // Populate side bar - DEPUTY/DEPUTIES
+if ($.cookie('deputies-appointed') === 'Sole' ) {
+     $('#deputies-appointed-sole').parent().addClass('checked');
+     $('#deputies-appointed-sole').attr('checked', 'checked');
+     $('#deputies-appointed-joint, #deputies-appointed-joint-severally').parent().removeClass('checked');
+} else if ($.cookie('deputies-appointed') === 'Joint' ) {
+     $('#deputies-appointed-joint').parent().addClass('checked');
+     $('#deputies-appointed-joint').attr('checked', 'checked');
+     $('#deputies-appointed-sole, #deputies-appointed-joint-severally').parent().removeClass('checked');
+} else if ($.cookie('deputies-appointed') === 'Joint & severally' ) {
+     $('#deputies-appointed-joint-severally').parent().addClass('checked');
+     $('#deputies-appointed-joint-severally').attr('checked', 'checked');
+     $('#deputies-appointed-sole, #deputies-appointed-joint').parent().removeClass('checked');
+} else {
+     $('#deputies-appointed-joint').parent().addClass('checked');
+     $('#deputies-appointed-joint').attr('checked', 'checked');
+     $('#deputies-appointed-sole, #deputies-appointed-joint-severally').parent().removeClass('checked');
+}
 if ($.cookie("deputies-appointed")) { $(".deputies-appointed-answer").text($.cookie("deputies-appointed")); }
 // if ($.cookie("deputies-jointly")) { $(".deputies-jointly-answer").text($.cookie("deputies-jointly")); }
 
@@ -211,7 +309,9 @@ $("#create-bond-button").on("click", function (e) {
      $.cookie("bond-company", $("#bond-company").val(), {path:'/'});
      $.cookie("bond-company-other", $("#bond-other").val(), {path:'/'});
      $.cookie("bond-ref-number", $("#bond-ref-number").val(), {path:'/'});
-     $.cookie("bond-renewal-date", $("#bond-renewal-date").val(), {path:'/'});
+     $.cookie("bond-renewal-day", $("#bond-renewal-day").val(), {path:'/'});
+     $.cookie("bond-renewal-month", $("#bond-renewal-month").val(), {path:'/'});
+     $.cookie("bond-renewal-year", $("#bond-renewal-year").val(), {path:'/'});
 
 });
 
@@ -226,7 +326,9 @@ $('.edit-bond').on("click", function (e) {
 
 $("#dispense-bond-button").on("click", function (e) {
      $.cookie("security-bond", 'dispense', {path:'/'});
-     $.cookie("bond-dispensed-date", $("#bond-dispensed-date").val(), {path:'/'});
+     $.cookie("bond-dispensed-day", $("#bond-dispensed-day").val(), {path:'/'});
+     $.cookie("bond-dispensed-month", $("#bond-dispensed-month").val(), {path:'/'});
+     $.cookie("bond-dispensed-year", $("#bond-dispensed-year").val(), {path:'/'});
      $.cookie("bond-dispensed-reason", $("input[name=dispensed-reason]:checked").val(), {path:'/'});
 });
 
@@ -236,7 +338,7 @@ $("#dispense-bond-button").on("click", function (e) {
 $('#edit-bond').hide();
 $('.bond-answer-hidden').hide();
 $('.dispense-bond-info').hide();
-$(".bond-dispensed-date-answer").hide();
+$(".bond-dispensed-day-answer, .bond-dispensed-month-answer, .bond-dispensed-year-answer").hide();
 $(".bond-dispensed-reason-answer").hide();
 $('#dispense-bond-button').hide();
 $('#dispense-bond').hide();
@@ -250,8 +352,8 @@ if ($.cookie('security-bond') === 'Yes' ) {
      $('.bond-info').show();
      $('#edit-bond').show();
      $('.bond-answer-hidden').show();
-     $('#case-security-bond-yes').attr('checked', 'checked').parent().addClass('checked');
-     $('#case-security-bond-no').removeAttr('checked').parent().removeClass('checked');
+     $('#order-security-bond-yes').attr('checked', 'checked').parent().addClass('checked');
+     $('#order-security-bond-no').removeAttr('checked').parent().removeClass('checked');
 
      $('#edit-bond').show();
      $('#bond-dispensed, #create-bond').hide();
@@ -270,8 +372,8 @@ if ($.cookie('security-bond') === 'edit' ) {
      $('.bond-info').show();
      $('#edit-bond').show();
      $('.bond-answer-hidden').show();
-     $('#case-security-bond-yes').attr('checked', 'checked').parent().addClass('checked');
-     $('#case-security-bond-no').removeAttr('checked').parent().removeClass('checked');
+     $('#order-security-bond-yes').attr('checked', 'checked').parent().addClass('checked');
+     $('#order-security-bond-no').removeAttr('checked').parent().removeClass('checked');
 
      $('#edit-bond').show();
      $('#bond-dispensed, #create-bond').hide();
@@ -291,16 +393,16 @@ if ($.cookie('security-bond') === 'No' ) {
      $('.bond-info').hide();
      $('#edit-bond').hide();
      $('.bond-answer-hidden').hide();
-     $('#case-security-bond-no').attr('checked', 'checked').parent().addClass('checked');
-     $('#case-security-bond-yes').removeAttr('checked').parent().removeClass('checked');
+     $('#order-security-bond-no').attr('checked', 'checked').parent().addClass('checked');
+     $('#order-security-bond-yes').removeAttr('checked').parent().removeClass('checked');
 
      $('#create-bond').show();
      $('#bond-dispensed, #edit-bond').hide();
      $('.security-bond').show();
      $('.the-bond-info #section-header h1').text('Create a bond');
 
-     $('.case-info h2 .add-bond').show();
-     $('.case-info h2 .edit-bond').hide();
+     $('.order-info h2 .add-bond').show();
+     $('.order-info h2 .edit-bond').hide();
      $('.why-edit-bond').hide();
 }
 if ($.cookie('security-bond') === 'undefined' ) {
@@ -337,7 +439,7 @@ if ($.cookie('security-bond') === 'dispense' ) {
      $('.the-bond-info #section-header h1').text('Dispense with the bond');
      $('.bond-info').show();
      $('.security-bond-answer').text('Dispensed');
-     $('.bond-dispensed-date-answer').show();
+     $('.bond-dispensed-day-answer, .bond-dispensed-month-answer, .bond-dispensed-year-answer').show();
      $(".bond-dispensed-reason-answer").show();
 
      $('.description-title .bond-dispense').hide();
@@ -354,10 +456,19 @@ if ($.cookie('security-bond') === 'dispense' ) {
      $('.why-edit-bond').hide();
 }
 
-if ($.cookie("bond-dispensed-date")) {
-     $(".bond-dispensed-date-answer").text($.cookie("bond-dispensed-date"));
-     $("#bond-dispensed-date").val($.cookie("bond-dispensed-date"));
+if ($.cookie("bond-dispensed-day")) {
+     $(".bond-dispensed-day-answer").text($.cookie("bond-dispensed-day"));
+     $("#bond-dispensed-day").val($.cookie("bond-dispensed-day"));
 }
+if ($.cookie("bond-dispensed-month")) {
+     $(".bond-dispensed-month-answer").text($.cookie("bond-dispensed-month"));
+     $("#bond-dispensed-month").val($.cookie("bond-dispensed-month"));
+}
+if ($.cookie("bond-dispensed-year")) {
+     $(".bond-dispensed-year-answer").text($.cookie("bond-dispensed-year"));
+     $("#bond-dispensed-year").val($.cookie("bond-dispensed-year"));
+}
+
 if ($.cookie("bond-dispensed-reason") == 'Court instructions') {
      $(".bond-dispensed-reason-answer").text($.cookie("bond-dispensed-reason"));
      $("#dispensed-reason-court").parent().addClass('checked');
@@ -396,9 +507,17 @@ if ($.cookie("bond-value")) {
      $(".bond-value-answer").text($.cookie("bond-value"));
      $("#bond-value").val($.cookie("bond-value"));
 }
-if ($.cookie("bond-renewal-date")) {
-     $(".bond-renewal-date-answer").text($.cookie("bond-renewal-date"));
-     $("#bond-renewal-date").val($.cookie("bond-renewal-date"));
+if ($.cookie("bond-renewal-day")) {
+     $(".bond-renewal-day-answer").text($.cookie("bond-renewal-day"));
+     $("#bond-renewal-day").val($.cookie("bond-renewal-day"));
+}
+if ($.cookie("bond-renewal-month")) {
+     $(".bond-renewal-month-answer").text($.cookie("bond-renewal-month"));
+     $("#bond-renewal-month").val($.cookie("bond-renewal-month"));
+}
+if ($.cookie("bond-renewal-year")) {
+     $(".bond-renewal-year-answer").text($.cookie("bond-renewal-year"));
+     $("#bond-renewal-year").val($.cookie("bond-renewal-year"));
 }
 
 // Populate side bar - DISPENSE THE BOND
@@ -417,10 +536,10 @@ if ($.cookie("bond-renewal-date")) {
 
 
 // Changes the confirm url
-if ($.cookie('case-order-type') === 'Health and Welfare' ) {
+if ($.cookie('order-type') === 'Health and Welfare' ) {
      $('#confirm-create-case, #dont-create').attr('href', '../4-client-page/4a-new-client.html#HandW');
 }
-if ($.cookie('case-order-type') === 'Property and finance' ) {
+if ($.cookie('order-type') === 'Property and finance' ) {
      $('#confirm-create-case, #dont-create').attr('href', '../4-client-page/4a-new-client.html#property');
 }
 

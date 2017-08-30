@@ -104,6 +104,22 @@
 				</h2>
 			</div>
 		</div>
+		<div id="task-complete" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been marked as completed
+				</h2>
+			</div>
+		</div>
+		<div id="task-re-assigned" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been re-assigned
+				</h2>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- // CONFIRMATION MESSAGE - END // -->
@@ -112,11 +128,12 @@
 
 	<table id="tasks-table" class="tablesorter">
 		<thead>
-			<tr class="four-column">
+			<tr class="five-column">
 				<th><span></span>Type</th>
 				<th><span></span>Task due date</th>
 				<th><span></span>Case type</th>
 				<th><span></span>Task status</th>
+				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -164,6 +181,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 1 - END -->
 
@@ -205,6 +227,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 2 - START -->
 
@@ -245,6 +272,11 @@
 						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 3 - END -->
@@ -293,6 +325,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 4 - START -->
 
@@ -333,6 +370,11 @@
 						<span class="traffic-light"></span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 5 - END -->
@@ -381,6 +423,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 6 - START -->
 
@@ -421,6 +468,11 @@
 						<span class="traffic-light"></span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 7 - END -->
@@ -469,6 +521,11 @@
 						<div class="border"></div>
 					</div>
 				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
 			</tr>
 			<!-- TASK 8 - START -->
 
@@ -515,6 +572,11 @@
 						<span class="traffic-light green">C</span>
 						<div class="border"></div>
 					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
 			<!-- TASK 9 - END -->
@@ -801,7 +863,7 @@
 	</table>
 
 </div>
- </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- // MODAL - START // --><div id="deputies-1" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Lara Stevens <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Carla Frith</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Melanie Rand</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> </ol></div><div id="deputies-2" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Kate Robson <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>94 Seaford Road, CULDUIE, IV54 5TD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Finley Buckley</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>80 Red Lane, EVENLEY, NN13 0LU</strong></div> <div class="info"><span>Relationship:</span> <strong>Brother</strong></div> </li> <li> <div class="name">Ewan Baker</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Red Lane, ERROL, PH2 0QW</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> <li> <div class="name">Brooke Spencer</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>98 Stone Cellar Road, KINGSTON RUSSELL, DT2 7XD</strong></div> <div class="info"><span>Relationship:</span> <strong>Cousin</strong></div> </li> </ol></div><div id="deputies-3" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Elizabeth Matthews <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>19 Dunmow Road, GRINSHILL, SY4 1UT</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> <li> <div class="name">Corey Bibi</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>9 Wenlock Terrace, PENYCAE, LL14 5RE</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> <li> <div class="name">Jake Greenwood</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>31 Rowland Rd, OSTERLEY PARK, TW7 8SJ</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> </ol></div><div id="deputies-4" style="display:none;" class="modal"> <ol> <li> <div class="name">Charles Duncan <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>26 Moulton Road, GUITING POWER, GL54 3UP</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> </ol></div><div id="visit-commission" style="display:none;" class="modal"> <img src="../../../production/img/V15/document-thumbnail.png" alt="Document" class="document-item"> <hr> <div class="cta-row"> <a href="#" rel="modal:close">Close</a> </div></div><!-- // MODAL - END // --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script></script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- // MODAL - START // --><div id="deputies-1" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Lara Stevens <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>92 Greyfriars Road, CANNOCK WOOD, W5154AA</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Carla Frith</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Haslemere Road, CANNOCK WOOD, W5174LD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Melanie Rand</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>70 Moulton Road, Gunby Green, N6334RF</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> </ol></div><div id="deputies-2" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Kate Robson <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>94 Seaford Road, CULDUIE, IV54 5TD</strong></div> <div class="info"><span>Relationship:</span> <strong>Sister</strong></div> </li> <li> <div class="name">Finley Buckley</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>80 Red Lane, EVENLEY, NN13 0LU</strong></div> <div class="info"><span>Relationship:</span> <strong>Brother</strong></div> </li> <li> <div class="name">Ewan Baker</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>40 Red Lane, ERROL, PH2 0QW</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> <li> <div class="name">Brooke Spencer</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>98 Stone Cellar Road, KINGSTON RUSSELL, DT2 7XD</strong></div> <div class="info"><span>Relationship:</span> <strong>Cousin</strong></div> </li> </ol></div><div id="deputies-3" style="display:none;" class="modal"> <h1>Deputy details:</h1><ol> <li> <div class="name">Elizabeth Matthews <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>19 Dunmow Road, GRINSHILL, SY4 1UT</strong></div> <div class="info"><span>Relationship:</span> <strong>Daughter</strong></div> </li> <li> <div class="name">Corey Bibi</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>9 Wenlock Terrace, PENYCAE, LL14 5RE</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> <li> <div class="name">Jake Greenwood</div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>31 Rowland Rd, OSTERLEY PARK, TW7 8SJ</strong></div> <div class="info"><span>Relationship:</span> <strong>Friend</strong></div> </li> </ol></div><div id="deputies-4" style="display:none;" class="modal"> <ol> <li> <div class="name">Charles Duncan <span></span></div> <div class="info"><span>Type:</span> <strong>Lay deputy</strong></div> <div class="info"><span>Address:</span> <strong>26 Moulton Road, GUITING POWER, GL54 3UP</strong></div> <div class="info"><span>Relationship:</span> <strong>Son</strong></div> </li> </ol></div><div id="visit-commission" style="display:none;" class="modal"> <img src="../../../production/img/V15/document-thumbnail.png" alt="Document" class="document-item"> <hr> <div class="cta-row"> <a href="#" rel="modal:close">Close</a> </div></div><div id="complete-task" style="display:none;"> <h1>Complete task</h1> <p>Are you sure you wish to mark the <strong class="action-task-name"></strong> as complete?</p> <div class="cta-row"> <a class="main-cta" rel="modal:close" id="confirm-complete-task">Complete task</a> <a href="#" rel="modal:close" class="cancel">Cancel</a> </div></div><div id="re-assign-task" style="display:none;"> <h1>Re-assign task</h1> <p>Are you sure you wish to re-assign the <strong class="action-task-name"></strong> task?</p> <form> <!-- // FORM ITEM - 1a - START // --> <div class="form-group task-assign-to"> <legend>Assign to <span class="required">*</span></legend> <!-- <label for="assign-to-myself" class="radio"> <input id="assign-to-myself" type="radio" name="task-assign-to" value="Myself"> Myself </label> --> <label for="assign-to-user" class="radio"> <input id="assign-to-user" type="radio" name="task-assign-to" value="Another user"> Another user </label> <label for="assign-to-my-team" class="radio"> <input id="assign-to-my-team" type="radio" name="task-assign-to" value="My team"> My team </label> <label for="assign-to-team" class="radio"> <input id="assign-to-team" type="radio" name="task-assign-to" value="Other team"> Other team </label> </div> <!-- // FORM ITEM - 1a - END // --> <!-- // FORM ITEM - 1b - START // --> <div class="form-group answer-task-user"> <label for="task-user">Search for user</label> <input id="task-user" name="task-user" type="text" value=""> </div> <!-- // FORM ITEM - 1b - END // --> <!-- // FORM ITEM - 1c - START // --> <div class="form-group answer-task-team"> <label for="task-team">Select team</label> <select id="task-team" class="full-width"> <option value="">-- Select --</option> <option value="1">Attorneyship Investigation Team</option> <option value="2">Complaints Team</option> <option value="3">Dispatch Team</option> <option value="4">EPA Team</option> <option value="5">File Creation Team</option> <option value="6">Filing Team</option> <option value="8">Registration Team</option> <option value="7">Safeguarding Team</option> </select> </div> <!-- // FORM ITEM - 1c - END // --> </form> <div class="cta-row"> <a class="main-cta" rel="modal:close" id="confirm-re-assign-task">Re-assign task</a> <a href="#" rel="modal:close" class="cancel">Cancel</a> </div></div><!-- // MODAL - END // --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script></script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../production/js/V15/hideShowPassword.js"></script>
 	<script src="../../production/js/V15/jquery.cookie.js"></script>

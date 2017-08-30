@@ -2,10 +2,10 @@
 // $('.create-case-journey #cta-footer').hide();
 
 ////////////////////////////////////// THE ORDER //////////////////////////////////////
-$("#case-type-welfare").click( function(){
+$("#order-type-welfare").click( function(){
      if($(this).is(':checked')) { $('.the-bond-details').slideUp('slow'); }
 });
-$("#case-type-property").click( function(){
+$("#order-type-property").click( function(){
      if($(this).is(':checked')) { $('.the-bond-details').show(); }
 });
 
@@ -19,8 +19,8 @@ $(".radio-property").click( function(){
 });
 
 // THE ORDER - activates the CTA
-$("#case-order-date").on('input', function() {
-     if ($('.radio-health-welfare').hasClass('checked') || $('.radio-property').hasClass('checked') && $('#case-court-ref').length > 0) {
+$("#order-date-year").on('input', function() {
+     if ($('.radio-health-welfare').hasClass('checked') || $('.radio-property').hasClass('checked') && $('#order-court-ref').length > 0) {
           $('#create-case-button').removeClass('de-activate');
      }
 });
@@ -53,7 +53,7 @@ $("#bond-amount").keyup(function() {
 $('.bond-date-edit').click( function(e){
      e.preventDefault();
      $(this).parent().removeClass('read-only');
-     $('#bond-renewal-date').removeAttr('disabled');
+     $('#bond-renewal-day, #bond-renewal-month, #bond-renewal-year').removeAttr('disabled');
 });
 
 // THE BOND - activates the other section
@@ -93,14 +93,14 @@ $("#bond-company").change(function () {
 // }
 
 ////////////////////////////////////// THE FILES //////////////////////////////////////
-$('.file-location-hidden').hide();
-
-$("#case-file-physical").click( function(){
-     if($(this).is(':checked')) { $('.file-location-hidden').slideDown('slow'); }
-});
-$("#case-file-scanned").click( function(){
-     if($(this).is(':checked')) { $('.file-location-hidden').slideUp('slow'); }
-});
+// $('.file-location-hidden').hide();
+//
+// $("#case-file-physical").click( function(){
+//      if($(this).is(':checked')) { $('.file-location-hidden').slideDown('slow'); }
+// });
+// $("#case-file-scanned").click( function(){
+//      if($(this).is(':checked')) { $('.file-location-hidden').slideUp('slow'); }
+// });
 
 // $(".file-location").click( function(){
 //      $('#cta-footer').slideDown('slow');
@@ -113,13 +113,13 @@ $("#case-file-scanned").click( function(){
 // }
 
 ////////////////////////////////////// THE BOND //////////////////////////////////////
-$("#case-security-bond-yes").click( function(){
+$("#order-security-bond-yes").click( function(){
      if($(this).is(':checked')) {
           $('.bond-answer-hidden').slideDown('slow');
           $('.dispense-bond-info').slideUp();
      }
 });
-$("#case-security-bond-no").click( function(){
+$("#order-security-bond-no").click( function(){
      if($(this).is(':checked')) {
           $('.bond-answer-hidden').slideUp('slow');
           $('.dispense-bond-info').slideUp();
@@ -145,36 +145,44 @@ if (window.location.href.indexOf("EditCase") != -1) {
      $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html');
 
      // Order type
-     $('#case-type-welfare, #case-type-property').attr('disabled', true);
-     $('#case-type-welfare, #case-type-property').closest('.form-group').addClass('read-only');
+     $('#order-type-welfare, #order-type-property').attr('disabled', true);
+     $('#order-type-welfare, #order-type-property').closest('.form-group').addClass('read-only');
+
+     // Order category
+     $('#order-category').attr('disabled', true);
+     $('#order-category').closest('.form-group').addClass('read-only');
 
      // Court reference
-     $('#case-court-ref').attr('readonly', true);
-     $('#case-court-ref').parent().addClass('read-only');
+     $('#order-court-ref').attr('readonly', true);
+     $('#order-court-ref').parent().addClass('read-only');
+
+     // Order notes
+     $('.order-notes-section').attr('readonly', true);
+     $('.order-notes-section').addClass('read-only');
 
      // Order date
-     $('#case-order-date').attr('readonly', true);
-     $('#case-order-date').parent().addClass('read-only');
+     $('#order-date-day, #order-date-month, #order-date-year').attr('readonly', true);
+     $('#order-date-day, #order-date-month, #order-date-year').closest('.form-group').addClass('read-only');
 
      // Order issue date
-     $('#case-order-issue-date').attr('readonly', true);
-     $('#case-order-issue-date').parent().addClass('read-only');
+     $('#order-issue-day, #order-issue-month, #order-issue-year').attr('readonly', true);
+     $('#order-issue-day, #order-issue-month, #order-issue-year').closest('.form-group').addClass('read-only');
 
      // Order status
-     $('#case-order-status').attr('disabled', true);
-     $('#case-order-status').parent().addClass('read-only');
+     $('#order-status').attr('disabled', true);
+     $('#order-status').parent().addClass('read-only');
 
      // Status date
-     $('#case-status-date').attr('readonly', true);
-     $('#case-status-date').parent().addClass('read-only');
+     $('#order-status-day, #order-status-month, #order-status-year').attr('readonly', true);
+     $('#order-status-day, #order-status-month, #order-status-year').closest('.form-group').addClass('read-only');
 
      // Order received date
-     $('#case-received-date').attr('readonly', true);
-     $('#case-received-date').parent().addClass('read-only');
+     $('#order-received-day, #order-received-month, #order-received-year').attr('readonly', true);
+     $('#order-received-day, #order-received-month, #order-received-year').closest('.form-group').addClass('read-only');
 
      // Order title
-     $('#case-order-title').attr('readonly', true);
-     $('#case-order-title').parent().addClass('read-only');
+     $('#order-title').attr('readonly', true);
+     $('#order-title').parent().addClass('read-only');
 
      // Deputies jointly severally
      $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').attr('disabled', true);
@@ -192,28 +200,28 @@ $("#confirm-edit-order").click( function(){
      $('.form-group').removeClass('read-only');
 
      // Order type
-     $('#case-type-welfare, #case-type-property').attr('disabled', false);
+     $('#order-type-welfare, #order-type-property').attr('disabled', false);
 
      // Court reference
-     $('#case-court-ref').attr('readonly', false);
+     $('#order-court-ref').attr('readonly', false);
 
      // Order date
-     $('#case-order-date').attr('readonly', false);
+     $('#order-date-day, #order-date-month, #order-date-year').attr('readonly', false);
 
      // Order issue date
-     $('#case-order-issue-date').attr('readonly', false);
+     $('#order-issue-day, #order-issue-month, #order-issue-year').attr('readonly', false);
 
      // Order status
-     $('#case-order-status').attr('disabled', false);
+     $('#order-status').attr('disabled', false);
 
      // Status date
-     $('#case-status-date').attr('readonly', false);
+     $('#order-status-day, #order-status-month, #order-status-year').attr('readonly', false);
 
      // Order received date
-     $('#case-received-date').attr('readonly', false);
+     $('#order-received-day, #order-received-month, #order-received-year').attr('readonly', false);
 
      // Order title
-     $('#case-order-title').attr('readonly', false);
+     $('#order-title').attr('readonly', false);
 
      // Deputies jointly severally
      $('#deputies-appointed-sole, #deputies-appointed-joint, #deputies-appointed-joint-severally').attr('disabled', false);

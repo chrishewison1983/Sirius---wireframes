@@ -98,7 +98,7 @@
      }
      &#deputy-confirmation, &#visit-confirmation, &#deputy-added, &#document-confirmation, &#confirmation-dashboard-visit,
      &#edit-client-confirm, &#error-message, &#draft-saved, &#draft-deleted-message, &#correspondence-sent, &#draft-saved-timer,
-     &#previous-draft-saved {
+     &#previous-draft-saved, &#task-re-assigned, &#task-complete {
           display: none;
           margin: 2em 0 0 0;
           width: 100%;
@@ -126,7 +126,7 @@
      &#draft-deleted-message {
           margin: 0 0 1.25em 0;
      }
-     &#draft-saved, &#draft-saved-timer, &#previous-draft-saved {
+     &#draft-saved, &#draft-saved-timer, &#previous-draft-saved, &#task-re-assigned, &#task-complete {
           margin: 0 0 1.25em 0;
           h2 {
                font-size: 1.25rem;

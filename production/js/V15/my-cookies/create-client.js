@@ -10,9 +10,9 @@ $("#create-client, #edit-client").on("click", function (e) {
      $.cookie("client-first-name", $("#client-first-name").val(), {path:'/'});
      $.cookie("client-middle-name", $("#client-middle-name").val(), {path:'/'});
      $.cookie("client-last-name", $("#client-last-name").val(), {path:'/'});
-     $.cookie("client-dob", $("#client-dob").val(), {path:'/'});
-     // $.cookie("client-dob-month", $("#client-dob-month").val(), {path:'/'});
-     // $.cookie("client-dob-year", $("#client-dob-year").val(), {path:'/'});
+     $.cookie("client-dob-day", $("#client-dob-day").val(), {path:'/'});
+     $.cookie("client-dob-month", $("#client-dob-month").val(), {path:'/'});
+     $.cookie("client-dob-year", $("#client-dob-year").val(), {path:'/'});
      $.cookie("client-previous-name", $("#client-previous-name").val(), {path:'/'});
      $.cookie("client-country", $("#client-country").val(), {path:'/'});
      $.cookie("client-country-desc", $("#client-country-description").val(), {path:'/'});
@@ -67,18 +67,18 @@ if ($.cookie("client-status")) { $(".client-status").text($.cookie("client-statu
 //      $('#client-status-active, #client-status-deceased').parent().removeClass('checked');
 // }
 
-if ($.cookie("client-status-date")) {
-     $(".client-status-date").text($.cookie("client-status-date"));
-     $(".edit-client-form #client-status-date").val($.cookie("client-status-date"));
+if ($.cookie("client-status-day")) {
+     $(".client-status-day").text($.cookie("client-status-day"));
+     $(".edit-client-form #client-status-day").val($.cookie("client-status-day"));
 }
-// if ($.cookie("client-status-month")) {
-//      $(".client-status-month").text($.cookie("client-status-month"));
-//      $(".edit-client-form #client-status-month").val($.cookie("client-status-month"));
-// }
-// if ($.cookie("client-status-year")) {
-//      $(".client-status-year").text($.cookie("client-status-year"));
-//      $(".edit-client-form #client-status-year").val($.cookie("client-status-year"));
-// }
+if ($.cookie("client-status-month")) {
+     $(".client-status-month").text($.cookie("client-status-month"));
+     $(".edit-client-form #client-status-month").val($.cookie("client-status-month"));
+}
+if ($.cookie("client-status-year")) {
+     $(".client-status-year").text($.cookie("client-status-year"));
+     $(".edit-client-form #client-status-year").val($.cookie("client-status-year"));
+}
 if ($.cookie("client-title") == 'Other') {
      $(".client-title").text($.cookie("client-title-other"));
      $(".edit-client-form #client-title").val($.cookie("client-title-other"));
@@ -98,21 +98,21 @@ if ($.cookie("client-last-name")) {
      $(".client-last-name").text($.cookie("client-last-name"));
      $(".edit-client-form #client-last-name").val($.cookie("client-last-name"));
 }
-if ($.cookie("client-dob")) {
-     $(".client-dob").text($.cookie("client-dob"));
-     $(".edit-client-form #client-dob").val($.cookie("client-dob"));
-}
-// if ($.cookie("client-dob-month")) {
-//      $(".client-dob-month").text($.cookie("client-dob-month"));
-//      $(".edit-client-form #client-dob-month").val($.cookie("client-dob-month"));
-// }
-// if ($.cookie("client-dob-year")) {
-//      $(".client-dob-year").text($.cookie("client-dob-year"));
-//      $(".edit-client-form #client-dob-year").val($.cookie("client-dob-year"));
-// }
 if ($.cookie("client-previous-name")) {
      $(".client-previously-known-as").text($.cookie("client-previous-name"));
      $(".edit-client-form #client-previous-name").val($.cookie("client-previous-name"));
+}
+if ($.cookie("client-dob-day")) {
+     $(".client-dob-day").text($.cookie("client-dob-day"));
+     $(".edit-client-form #client-dob-day").val($.cookie("client-dob-day"));
+}
+if ($.cookie("client-dob-month")) {
+     $(".client-dob-month").text($.cookie("client-dob-month"));
+     $(".edit-client-form #client-dob-month").val($.cookie("client-dob-month"));
+}
+if ($.cookie("client-dob-year")) {
+     $(".client-dob-year").text($.cookie("client-dob-year"));
+     $(".edit-client-form #client-dob-year").val($.cookie("client-dob-year"));
 }
 // if ($.cookie("client-postcode")) {
 //      $(".client-postcode").text($.cookie("client-postcode"));
