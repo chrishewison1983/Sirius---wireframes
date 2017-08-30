@@ -442,7 +442,6 @@ form {
                background: rgba($blue,0.1);
                // border-radius: $global-border-radius;
           }
-
           .help-text {
                display: inline-block;
                width: 100%;
@@ -479,6 +478,45 @@ form {
                width: 3.5em;
                &.four {
                     width: 5em;
+               }
+          }
+          &.read-only {
+               .weeks-4, .weeks-8 {
+                    .wrapper {
+                         span {
+                              background: rgba($main-colour,0.5);
+                         }
+                    }
+               }
+          }
+          .weeks-4, .weeks-8 {
+               display: inline-block;
+               width: 100%;
+               background: $white-off;
+               margin: 0.25em 0 1em 0;
+               padding: 0.51em 0.5em 0.51em 3em;
+               border-radius: 20px;
+               position: relative;
+               .wrapper {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    span {
+                         @include flexbox;
+                         @include align-items(center);
+                         @include justify-content(center);
+                         border-radius: 50%;
+                         color: $white;
+                         background: $blue;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         font-size: 1.2rem;
+                         width: 2em;
+                         height: 2em;
+                    }
+               }
+               p {
+                    margin: 0;
                }
           }
      }
@@ -664,6 +702,12 @@ form.login-form {
                margin: 0;
                width: auto;
           }
+     }
+}
+
+form.reporting-period-form {
+     hr {
+          margin: 1em 0 2em 0;
      }
 }
 

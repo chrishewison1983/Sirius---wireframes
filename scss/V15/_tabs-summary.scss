@@ -703,8 +703,20 @@
                                    .right {
                                         width: 70%;
                                         padding: 0 0 0 20%;
-                                        h1, h2, h3, p {
+                                        h1, h2, h3, p, a {
                                              text-align: left;
+                                        }
+                                        a {
+                                             color: $white;
+                                             border-bottom: 1px dashed $white;
+                                             float: left;
+                                             &.edit {
+                                                  background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
+                                                  background-size: 1em;
+                                             }
+                                             &:hover {
+                                                  border-bottom: 1px solid $white;
+                                             }
                                         }
                                    }
                                    .main-text {

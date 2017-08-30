@@ -106,52 +106,129 @@
                <!-- =========== CREATE CLIENT - START =========== -->
                <div id="action-panel" class="large-4 large-uncentered columns">
 
-                    <div class="commission-visit right">
+                    <form class="reporting-period-form">
 
-                         <form class="edit-client-form">
+                         <h2 class="section-title">Reporting Period</h2>
 
-                              <h2 class="section-title">Reporting Period</h2>
-
-                              <!-- // FORM ITEM - 1 - START // -->
-                              <div class="form-group">
-                                   <p class="info">
-                                        Report Start Date<br>
-                                        <strong>01/01/2017</strong>
-                                   </p>
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group read-only">
+                              <label>Report start date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="report-start-day" class="input-length" name="report-start-day" type="text" value="01" maxlength="2" readonly>
+                                   <input id="report-start-month" class="input-length" name="report-start-month" type="text" value="01" maxlength="2" readonly>
+                                   <input id="report-start-year" class="input-length four" name="report-start-year" type="text" value="2017" maxlength="4" readonly>
                               </div>
-                              <!-- // FORM ITEM - 1 - END // -->
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
 
-                              <!-- // FORM ITEM - 2 - START // -->
-                              <div class="form-group">
-                                   <p class="info">
-                                        Report End Date<br>
-                                        <strong>31/12/2017</strong>
-
-                                   </p>
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group read-only">
+                              <label>Report end date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="report-end-day" class="input-length" name="report-end-day" type="text" value="01" maxlength="2" readonly>
+                                   <input id="report-end-month" class="input-length" name="report-end-month" type="text" value="01" maxlength="2" readonly>
+                                   <input id="report-end-year" class="input-length four" name="report-end-year" type="text" value="2018" maxlength="4" readonly>
                               </div>
-                              <!-- // FORM ITEM - 2 - END // -->
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
 
-                              <!-- // FORM ITEM - 3 - START // -->
-                              <div class="form-group">
-                                   <p class="info">
-                                        Report Reminder Date<br>
-                                        <strong>03/12/2017</strong>
-                                   </p>
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <!-- <div class="form-group read-only">
+                              <label>Report reminder date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div class="weeks-4">
+                                   <div class="wrapper"><span>4</span></div>
+                                   <p>weeks before the report end date</p>
                               </div>
-                              <!-- // FORM ITEM - 3 - END // -->
-
-                              <!-- // FORM ITEM - 4 - START // -->
-                              <div class="form-group">
-                                   <p class="info">
-                                        Report Due Date<br>
-                                        <strong>25/02/2018</strong>
-                                   </p>
+                              <div>
+                                   <input id="report-reminder-day" class="input-length" name="report-reminder-day" type="text" value="04" maxlength="2" readonly>
+                                   <input id="report-reminder-month" class="input-length" name="report-reminder-month" type="text" value="12" maxlength="2" readonly>
+                                   <input id="report-reminder-year" class="input-length four" name="report-reminder-year" type="text" value="2017" maxlength="4" readonly>
                               </div>
-                              <!-- // FORM ITEM - 4 - END // -->
+                         </div> -->
+                         <!-- // FORM ITEM - 3 - END // -->
 
-                         </form>
+                         <!-- // FORM ITEM - 4 - START // -->
+                         <div class="form-group read-only">
+                              <label>Report due date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div class="weeks-8">
+                                   <div class="wrapper"><span>8</span></div>
+                                   <p>weeks after the report end date</p>
+                              </div>
+                              <div>
+                                   <input id="report-due-day" class="input-length" name="report-due-day" type="text" value="26" maxlength="2" readonly>
+                                   <input id="report-due-month" class="input-length" name="report-due-month" type="text" value="02" maxlength="2" readonly>
+                                   <input id="report-due-year" class="input-length four" name="report-due-year" type="text" value="2018" maxlength="4" readonly>
+                              </div>
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
+                         </div>
+                         <!-- // FORM ITEM - 4 - END // -->
 
-                    </div>
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group report-level read-only">
+                              <legend>Report level</legend>
+                              <label for="report-level-min" class="radio checked">
+                                   <input id="report-level-min" type="radio" name="report-level" value="Minimal" checked disabled>
+                                   Minimal
+                              </label>
+                              <label for="report-level-gen" class="radio">
+                                   <input id="report-level-gen" type="radio" name="report-level" value="General" disabled>
+                                   General
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group general-report-level">
+                              <label for="report-level-why">Why has the level been changed?:</label>
+                              <input id="report-level-why" name="report-due-day" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group general-report-level">
+                              <label for="report-level-notes">Notes</label>
+                              <textarea name="textarea" class="jqte-test" id="report-level-notes"></textarea>
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <div class="edit-report-period">
+
+                              <hr>
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group">
+                                   <label for="report-why">Why are you changing the reporting period? <span class="required">*</span></label>
+                                   <select id="report-why" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Financial accounting year">Financial accounting year</option>
+                                        <option value="In line with the previous year">In line with the previous year</option>
+                                        <option value="Personal accounting year">Personal accounting year</option>
+                                        <option value="Input error">Input error</option>
+                                        <option value="In line with Type 3 to Type 2 reassessment">In line with Type 3 to Type 2 reassessment</option>
+                                        <option value="In line with the new order">In line with the new order</option>
+                                        <option value="In line with the last report filed">In line with the last report filed</option>
+                                        <option value="Interim report requested">Interim report requested</option>
+                                        <option value="Late allocation">Late allocation</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
+
+                              <!-- // FORM ITEM - 9 - START // -->
+                              <div class="form-group report-notes-section">
+                                   <label for="report-notes">Notes</label>
+                                   <textarea name="textarea" class="jqte-test" id="report-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 9 - END // -->
+
+                         </div>
+
+                    </form>
 
                </div>
                <!-- =========== CREATE CLIENT - 1 - END =========== -->
@@ -161,12 +238,26 @@
      </div>
      <!-- CONTENT WRAPPER - END -->
 
+     <!-- // MODAL - START // -->
+     <div id="edit-report" style="display:none;">
+          <h1>Are you sure you wish to edit the report?</h1>
+          <p>Changing the reporting period will changes all future reporting dates for this order.</p>
+          <hr>
+          <div class="cta-row">
+               <a class="main-cta" id="confirm-report-edit" rel="modal:close" href="../4-client-page/4a-new-client.html#HandW">Confirm the change</a>
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+
 </main>
 <!-- PRIMARY CONTENT - END -->
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="reporting-period-button" href="../4-client-page/4a-new-client.html#HandW">Save &amp; exit</a>
+     <a class="main-cta primary" id="edit-reporting-period">Edit reporting period</a>
+     <a class="main-cta primary de-activate" id="reporting-period-button">Save &amp; exit</a>
      <span class="separator"></span>
      <a href="#" onclick="history.back();" class="cancel">Cancel</a>
 </footer>
