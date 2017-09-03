@@ -1,0 +1,125 @@
+<!-- ///////////////////////////////// PROPERTY SUMMARY - START ///////////////////////////////// -->
+<div id="property-summary">
+
+	<!-- // ================================ DASHBOARD CONTENT - START ================================ // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+			<div id="client-summary" class="health">
+
+				<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
+				<div class="dashboard-row two-items">
+
+					<!-- // ITEM 1 - START // -->
+					<div class="item with-title">
+						<div class="title"><span class="important"></span><p>Important remarks</p></div>
+						<ol class="summary-list">
+							<li>
+								<p>Risks to the clients:</p>
+								<p class="answer">A recent visitor report highlighted that the deputies have not been to see the client once this year. This is according to the nursing home care manager. This is contrary to what the deputy says in the report.</p>
+							</li>
+							<li>
+								<p>Outstanding issues:</p>
+								<p class="answer">Deputy has been aggressive in the past during phone calls.</p>
+							</li>
+							<li>
+								<p>Safegaurding issues:</p>
+								<p class="answer">A recent visitor report highlighted that the client was looking very disheveled and wearing very old clothes. Has not had regular pocket money deposited.</p>
+							</li>
+							<li>
+								<p>Client is violent:</p>
+								<p class="answer">Gerald is not physically violent, but has been known to be verbally abusive to care home staff.</p>
+							</li>
+						</ol>
+					</div>
+					<!-- // ITEM 1 - END // -->
+
+					<!-- // ITEM 2 - START // -->
+					<div class="item no-colour highlight">
+						<section class="full-colour-block report-dates">
+							<div class="date">
+								<div class="left">
+									<i class="icon property white"></i>
+								</div>
+								<div class="right">
+									<div class="wrapper">
+										<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
+										<h2 class="sub-text">14820940</h2>
+										<h2 class="sub-text">Report due</h2>
+										<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-property">Edit</a>
+									</div>
+								</div>
+								<div class="colour-wrapper"></div>
+							</div>
+						</section>
+						<section id="create-bond" class="full-colour-block main-colour center-focus payment">
+							<div class="wrapper">
+								<h1 class="sub-text">Bond value</h1>
+								<h2 class="main-text">No bond inplace</h2>
+								<a href="../1-create-case/1b-the-bond.html" class="add add-bond">Add bond</a>
+							</div>
+						</section>
+						<section id="edit-bond" class="full-colour-block main-colour center-focus payment">
+							<div class="wrapper">
+								<h1 class="sub-text">Bond amount (Court order)</h1>
+								<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
+								<div class="secondary-bond">
+									<h2 class="sub-text">Bond amount taken</h2>
+									<h3 class="main-text">&pound;<div class="bond-value-answer">200</div></h3>
+								</div>
+								<div class="ctas">
+									<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit bond</a>
+									<!-- <a href="#dispense" rel="modal:open" class="delete">Dispense</a> -->
+								</div>
+							</div>
+						</section>
+						<section id="bond-dispensed" class="full-colour-block main-colour center-focus payment">
+							<div class="wrapper">
+								<h1 class="sub-text">Bond dispensed</h1>
+								<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
+								<div class="ctas">
+									<script language="JavaScript">
+
+										Stamp = new Date();
+										year = Stamp.getYear();
+										if (year < 2000) year = 1900 + year;
+										document.write('<div class="bond-dispensed-date-answer">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+										var Hours;
+										var Mins;
+										var Time;
+										Hours = Stamp.getHours();
+										if (Hours >= 12) {
+											Time = " P.M.";
+										}
+										else {
+											Time = " A.M.";
+										}
+										if (Hours > 12) {
+											Hours -= 12;
+										}
+										if (Hours == 0) {
+											Hours = 12;
+										}
+										Mins = Stamp.getMinutes();
+											if (Mins < 10) {
+											Mins = "0" + Mins;
+										}
+										document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+									</script>
+									<br>
+									<div class="bond-dispensed-reason-answer"></div><br>
+									<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">edit</a>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!-- // ITEM 2 - END // -->
+
+				</div>
+				<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
+
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- ///////////////////////////////// PROPERTY SUMMARY - END ///////////////////////////////// -->

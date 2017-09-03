@@ -42,14 +42,18 @@ $("#confirm-complete-task, #confirm-re-assign-task").click( function(){
 
 // Shows the confirmation panels
 $("#confirm-complete-task").click( function(){
+     var taskName = $(this).closest('.modal').find('.action-task-name').text();
      $('#task-complete').slideDown();
+     $('.task-title').text(taskName);
      setTimeout(function() {
           $("#task-complete").slideUp()
      }, 5000);
 });
 
 $("#confirm-re-assign-task").click( function(){
+     var taskName = $(this).closest('.modal').find('.action-task-name').text();
      $('#task-re-assigned').slideDown();
+     $('.task-title').text(taskName);
      setTimeout(function() {
           $("#task-re-assigned").slideUp()
      }, 5000);

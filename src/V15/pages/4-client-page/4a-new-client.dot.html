@@ -48,117 +48,373 @@
 
      {{= it.include('confirmation/correspondence-sent.html') }}
 
+     {{= it.include('confirmation/client-updated.html') }}
+
      <!-- TAB CONTENT - START -->
+
+     <!-- //////////////////////////////////// CLIENT OVERVIEW - START //////////////////////////////////// -->
      <div id="client-overview" class="tabcontent current">
           <div class="row">
                <div class="large-12 large-uncentered columns">
 
-                    {{= it.include('client-page/tab-summary.html') }}
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="client-details tabs">
+                         <li class="tab-link current" data-tab="summary-tab-1">
+                              Summary
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-2">
+                              Client details
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-3">
+                              <span>6</span> Sub-orders
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-4">
+                              <span class="contacts-number">2</span> 3rd party contacts
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+     			<div id="summary-tab-1" class="client-details tab-content current">
+     				<div class="row">
+
+     					<div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('confirmation/new-client-added.html') }}
+
+                                   <div id="list-of-summary">
+                                        {{= it.include('client-page/summary-overview.html') }}
+                                   </div>
+
+     					</div>
+     				</div>
+     			</div>
+     			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="summary-tab-2" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/client-details.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="summary-tab-3" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/client-sub-orders.html') }}
+
+                                   <section id="sub-order-docs" class="case-info">
+
+                                        <h2 class="description-title">
+                                             <span class="icon documents"></span>
+                                             <div class="sub-order-title">Order documents</div>
+                                             <div class="details">
+                                                  <span>Type: <strong class="type-details"></strong></span>
+                                                  <span>Date: <strong class="date-details"></strong></span>
+                                             </div>
+                                        </h2>
+
+                                        {{= it.include('side-panel/document-viewer.html') }}
+
+                                   </section>
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="summary-tab-4" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/document-contacts.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
 
                </div>
           </div>
      </div>
+     <!-- //////////////////////////////////// CLIENT OVERVIEW - END //////////////////////////////////// -->
 
+     <!-- //////////////////////////////////// CLIENT HEALTH - START //////////////////////////////////// -->
      <div id="client-health" class="tabcontent">
 
           <div class="row">
-               <div class="large-12 large-uncentered columns">
 
-                    {{= it.include('client-page/tab-health.html') }}
+               <div class="large-9 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="client-details tabs">
+                         <li class="tab-link current" data-tab="health-tab-1">
+                              Summary
+                         </li>
+                         <li class="tab-link" data-tab="health-tab-2">
+                              <span>4</span> Tasks
+                         </li>
+                         <li class="tab-link" data-tab="health-tab-3">
+                              Order details
+                         </li>
+                         <li class="tab-link" data-tab="health-tab-4">
+                              <span>2</span> Deputies
+                         </li>
+                         <li class="tab-link" data-tab="health-tab-5">
+                              Warnings
+                         </li>
+                         <li class="tab-link" data-tab="health-tab-6">
+                              Timeline
+                         </li>
+                         <li class="tab-link" data-tab="health-tab-7">
+                              Documents
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="health-tab-1" class="client-details tab-content current">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/summary-health.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="health-tab-2" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/tasks-health.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="health-tab-3" class="case-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/order-details-health.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="health-tab-4" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/deputy-details.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+     			<div id="health-tab-5" class="client-details tab-content">
+     				<div class="row">
+     					<div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/warnings-health.html') }}
+
+     					</div>
+     				</div>
+     			</div>
+     			<!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 6 - START =========== -->
+                    <div id="health-tab-6" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/timeline-health.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 7 - START =========== -->
+                    <div id="health-tab-7" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   <h2 class="description-title">
+                                        Order documents
+                                        <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a>
+                                   </h2>
+
+                                   {{= it.include('side-panel/document-viewer.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 7 - END =========== -->
+
 
                </div>
+
+               <div class="large-3 large-uncentered columns">
+
+                    {{= it.include('actions-health.html') }}
+
+     		</div>
+
           </div>
      </div>
+     <!-- //////////////////////////////////// CLIENT HEALTH - END //////////////////////////////////// -->
 
+     <!-- //////////////////////////////////// CLIENT PROPERTY - START //////////////////////////////////// -->
      <div id="client-property" class="tabcontent">
 
           {{= it.include('confirmation/correspondence-sent.html') }}
 
           <div class="row">
-               <div class="large-12 large-uncentered columns">
+               <div class="large-9 large-uncentered columns">
 
-                    {{= it.include('client-page/tab-property.html') }}
+                    <!-- =========== TABS - START =========== -->
+     			<ul class="client-details tabs">
+     				<li class="tab-link current" data-tab="property-tab-1">
+     					Summary
+     				</li>
+     				<li class="tab-link" data-tab="property-tab-2">
+     					<span>1</span> Tasks
+     				</li>
+     				<li class="tab-link" data-tab="property-tab-3">
+     					Order details
+     				</li>
+     				<li class="tab-link" data-tab="property-tab-4">
+     					<span>1</span> Deputy
+     				</li>
+     				<li class="tab-link" data-tab="property-tab-5">
+     					Warnings
+     				</li>
+     				<li class="tab-link" data-tab="property-tab-6">
+     					Timeline
+     				</li>
+     				<li class="tab-link" data-tab="property-tab-7">
+     					Documents
+     				</li>
+     			</ul>
+     			<!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="property-tab-1" class="client-details tab-content current">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/summary-property.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="property-tab-2" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="property-tab-3" class="case-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/order-details-property.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+     			<div id="property-tab-4" class="client-details tab-content">
+     				<div class="row">
+     					<div class="large-12 large-uncentered columns">
+
+
+     					</div>
+     				</div>
+     			</div>
+     			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+                    <div id="property-tab-5" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 6 - START =========== -->
+                    <div id="property-tab-6" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/timeline-property.html') }}
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 7 - START =========== -->
+                    <div id="property-tab-7" class="client-details tab-content">
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+
+
+                              </div>
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 7 - END =========== -->
+
 
                </div>
-          </div>
-     </div>
 
-     <div id="client-unassigned" class="tabcontent">
-          <div class="row">
-               <div class="large-12 large-uncentered columns">
+               <div class="large-3 large-uncentered columns">
 
-                    {{= it.include('client-page/tab-unassigned.html') }}
+                    {{= it.include('actions-property.html') }}
 
                </div>
+
           </div>
      </div>
+     <!-- //////////////////////////////////// CLIENT PROPERTY - END //////////////////////////////////// -->
      <!-- TAB CONTENT - END -->
-
-     <!-- // MODAL - START // -->
-     <div id="complete-task" style="display:none;">
-          <h1>Complete task</h1>
-          <p>Are you sure you wish to mark the <strong class="action-task-name"></strong> as complete?</p>
-          <div class="cta-row">
-               <a class="main-cta" rel="modal:close" id="confirm-complete-task">Complete task</a>
-               <a href="#" rel="modal:close" class="cancel">Cancel</a>
-          </div>
-     </div>
-     <div id="re-assign-task" style="display:none;">
-          <h1>Re-assign task</h1>
-          <p>Are you sure you wish to re-assign the <strong class="action-task-name"></strong> task?</p>
-          <form>
-               <!-- // FORM ITEM - 1a - START // -->
-               <div class="form-group task-assign-to">
-                    <legend>Assign to <span class="required">*</span></legend>
-                    <!-- <label for="assign-to-myself" class="radio">
-                         <input id="assign-to-myself" type="radio" name="task-assign-to" value="Myself">
-                         Myself
-                    </label> -->
-                    <label for="assign-to-user" class="radio">
-                         <input id="assign-to-user" type="radio" name="task-assign-to" value="Another user">
-                         Another user
-                    </label>
-                    <label for="assign-to-my-team" class="radio">
-                         <input id="assign-to-my-team" type="radio" name="task-assign-to" value="My team">
-                         My team
-                    </label>
-                    <label for="assign-to-team" class="radio">
-                         <input id="assign-to-team" type="radio" name="task-assign-to" value="Other team">
-                         Other team
-                    </label>
-               </div>
-               <!-- // FORM ITEM - 1a - END // -->
-
-               <!-- // FORM ITEM - 1b - START // -->
-               <div class="form-group answer-task-user">
-                    <label for="task-user">Search for user</label>
-                    <input id="task-user" name="task-user" type="text" value="">
-               </div>
-               <!-- // FORM ITEM - 1b - END // -->
-
-               <!-- // FORM ITEM - 1c - START // -->
-               <div class="form-group answer-task-team">
-                    <label for="task-team">Select team</label>
-                    <select id="task-team" class="full-width">
-                         <option value="">-- Select --</option>
-                         <option value="1">Attorneyship Investigation Team</option>
-                         <option value="2">Complaints Team</option>
-                         <option value="3">Dispatch Team</option>
-                         <option value="4">EPA Team</option>
-                         <option value="5">File Creation Team</option>
-                         <option value="6">Filing Team</option>
-                         <option value="8">Registration Team</option>
-                         <option value="7">Safeguarding Team</option>
-                    </select>
-               </div>
-               <!-- // FORM ITEM - 1c - END // -->
-          </form>
-          <div class="cta-row">
-               <a class="main-cta" rel="modal:close" id="confirm-re-assign-task">Re-assign task</a>
-               <a href="#" rel="modal:close" class="cancel">Cancel</a>
-          </div>
-     </div>
-     <!-- // MODAL - END // -->
 
 </main>
 <!-- PRIMARY CONTENT - END -->

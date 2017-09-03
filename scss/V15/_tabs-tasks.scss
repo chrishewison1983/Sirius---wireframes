@@ -4,63 +4,6 @@
 */
 
 //  FOR ALL
-#list-of-timeline {
-     ul, ol {
-          li {
-               position: relative;
-               padding: 0 0 5em 2em;
-               span.dot {
-                    display: inline-block;
-                    position: absolute;
-                    top: -0.1em;
-                    left: -1.35em;
-                    width: 2em;
-                    height: 2em;
-                    background: $white;
-                    border: 5px solid $black;
-                    border-radius: 50%;
-                    z-index: 10;
-               }
-               &:last-of-type {
-                    border-left: 10px solid $white;
-               }
-          }
-     }
-}
-
-#list-of-timeline {
-     #task-list {
-          li {
-               border-left: 10px solid $green;
-               &:last-of-type {
-                    border-left: 10px solid $white;
-               }
-               &.outstanding {
-                    border-left: 10px solid $pink;
-                    .border {
-                         background: $pink;
-                    }
-                    .icon {
-                         background-color: $pink;
-                    }
-                    &.complete {
-                         border-left: 10px solid $green;
-                         .border {
-                              background: $green;
-                         }
-                         .icon {
-                              background: url(#{$image-path}/icons/pdf-white.svg) no-repeat 50% 50% $green;
-                              background-size: 1.15em;
-                         }
-                    }
-               }
-               .icon {
-                    background-color: $green;
-               }
-          }
-     }
-}
-
 #task-list {
      // padding-left: 1em;
      // display: none;

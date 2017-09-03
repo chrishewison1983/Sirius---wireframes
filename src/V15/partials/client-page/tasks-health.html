@@ -1,0 +1,276 @@
+<!-- ///////////////////////////////// HEALTH TASKS - START ///////////////////////////////// -->
+<section class="case-info">
+
+	<h2 class="description-title">
+		Tasks
+		<a href="../8-create-task/8a-create-task.html" class="add">Create task</a>
+	</h2>
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+			<div id="task-complete" class="confirmation-panel">
+				<div class="content">
+					<h2>
+						<span></span>
+						Your task: "<div class="task-title">Task title</div>" has been marked as completed
+					</h2>
+				</div>
+			</div>
+			<div id="task-re-assigned" class="confirmation-panel">
+				<div class="content">
+					<h2>
+						<span></span>
+						Your task: "<div class="task-title">Task title</div>" has been re-assigned
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+	<table id="tasks-table" class="tablesorter client-page">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th><span></span>Task due date</th>
+				<th><span></span>Task status</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- TASK 1 - START -->
+			<tr class="urgent-row">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-correspondence"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task create-letter-journey-button change-tab">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<p><a href="#" class="open">Description</a></p>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">A</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
+			</tr>
+			<!-- TASK 1 - END -->
+
+			<!-- TASK 2 - START -->
+			<tr class="urgent-row link-for-commission-visit">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/04/2017</p>
+					<div class="counter alert">
+						<span class="number">-2</span>
+						day
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">A</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
+			</tr>
+			<!-- TASK 2 - START -->
+
+			<!-- TASK 3 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">C</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
+			</tr>
+			<!-- TASK 3 - END -->
+
+			<!-- TASK 4 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type print-notice"></span>
+						</div> -->
+						<div class="text">
+							<a href="#" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<p><a href="#" class="open">Description</a></p>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">C</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td>
+					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
+					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
+				</td>
+			</tr>
+			<!-- TASK 4 - START -->
+
+		</tbody>
+	</table>
+
+</section>
+<!-- ///////////////////////////////// HEALTH TASKS - END ///////////////////////////////// -->
+
+<!-- // MODAL - START // -->
+<div id="complete-task" style="display:none;">
+	<h1>Complete task</h1>
+	<p>Are you sure you wish to mark the <strong class="action-task-name"></strong> as complete?</p>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-complete-task">Complete task</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<div id="re-assign-task" style="display:none;">
+	<h1>Re-assign task</h1>
+	<p>Are you sure you wish to re-assign the <strong class="action-task-name"></strong> task?</p>
+	<form>
+		<!-- // FORM ITEM - 1a - START // -->
+		<div class="form-group task-assign-to">
+			<legend>Assign to <span class="required">*</span></legend>
+			<!-- <label for="assign-to-myself" class="radio">
+				<input id="assign-to-myself" type="radio" name="task-assign-to" value="Myself">
+				Myself
+			</label> -->
+			<label for="assign-to-user" class="radio">
+				<input id="assign-to-user" type="radio" name="task-assign-to" value="Another user">
+				Another user
+			</label>
+			<label for="assign-to-my-team" class="radio">
+				<input id="assign-to-my-team" type="radio" name="task-assign-to" value="My team">
+				My team
+			</label>
+			<label for="assign-to-team" class="radio">
+				<input id="assign-to-team" type="radio" name="task-assign-to" value="Other team">
+				Other team
+			</label>
+		</div>
+		<!-- // FORM ITEM - 1a - END // -->
+
+		<!-- // FORM ITEM - 1b - START // -->
+		<div class="form-group answer-task-user">
+			<label for="task-user">Search for user</label>
+			<input id="task-user" name="task-user" type="text" value="">
+		</div>
+		<!-- // FORM ITEM - 1b - END // -->
+
+		<!-- // FORM ITEM - 1c - START // -->
+		<div class="form-group answer-task-team">
+			<label for="task-team">Select team</label>
+			<select id="task-team" class="full-width">
+				<option value="">-- Select --</option>
+				<option value="1">Attorneyship Investigation Team</option>
+				<option value="2">Complaints Team</option>
+				<option value="3">Dispatch Team</option>
+				<option value="4">EPA Team</option>
+				<option value="5">File Creation Team</option>
+				<option value="6">Filing Team</option>
+				<option value="8">Registration Team</option>
+				<option value="7">Safeguarding Team</option>
+			</select>
+		</div>
+		<!-- // FORM ITEM - 1c - END // -->
+	</form>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-re-assign-task">Re-assign task</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->

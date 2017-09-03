@@ -2,7 +2,7 @@
 $(window).scroll(function() {
      $("#side-panel").removeClass("viewport-bottom");
      if($(window).scrollTop() + $(window).height() > ($(document).height() - 50) ) {
-          //you are at bottom
+          // you are at bottom
           $("#side-panel").addClass("viewport-bottom");
      }
 });
@@ -134,4 +134,4 @@ $(window).scroll(function() {
 
 $("#side-panel").pin({
       containerSelector: ".columns"
-})
+});

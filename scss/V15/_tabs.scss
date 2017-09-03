@@ -5,6 +5,10 @@
 
 //  FOR ALL
 
+#client-overview, #client-health, #client-property {
+     padding-top: 2em;
+}
+
 .dashboard {
      ul.tabs {
           height: 4.65em;
@@ -214,7 +218,7 @@ ul.tabs {
      }
      h1, h2, h3, h4 {
           &.description-title {
-               padding: 0 0 1em 0;
+               padding: 1.25em 0 1em 0;
                margin: 0 0 1em 0;
                border-bottom: 3px dashed $border-colour;
                text-transform: inherit;

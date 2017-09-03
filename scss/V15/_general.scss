@@ -49,17 +49,17 @@ main {
           }
           #client-overview {
                #list-of-summary {
-                    padding: 2em 0 3em 0;
+                    padding: 0 0 3em 0;
                }
                #client-details {
                     margin-top: 2em;
                }
           }
-          #client-property, #client-health {
-               .case-info {
-                    margin-top: 2em;
-               }
-          }
+          // #client-property, #client-health {
+          //      .case-info {
+          //           margin-top: 2em;
+          //      }
+          // }
           #client-health, #client-property, #client-unassigned {
                .content-wrapper {
                     padding: 2em 0 3em 0;
@@ -157,7 +157,7 @@ h1, h2, h3, h4 {
      }
      a, strong {
           color: $blue;
-          &.edit, &.add-deputies {
+          &.edit, &.add-deputies, &.add, &.hide-item {
                float: right;
                font-size: 1rem;
                text-transform: inherit;
@@ -173,6 +173,24 @@ h1, h2, h3, h4 {
           &.add-deputies {
                background: url(#{$image-path}/icons/add-deputies-blue.svg) no-repeat 0% 50%;
                background-size: 1em;
+          }
+          &.add {
+               background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+               background-size: 1em;
+               border-bottom: 1px dashed $blue;
+               text-decoration: none;
+               &:hover {
+                    text-decoration: none;
+                    border-bottom: 1px solid $blue;
+               }
+          }
+          &.hide-item {
+               background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+               background-size: 0.75em;
+               &.close {
+                    background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
+                    background-size: 1em;
+               }
           }
      }
      img.document-item {
@@ -351,7 +369,7 @@ ol {
 
 // =================== LINKS - START =================== //
 a {
-     font-family: $Opensans-Bold;
+     font-family: $Montserrat;
      line-height: 1.4;
      color: $blue;
      border-bottom: 1px dashed;
@@ -363,13 +381,12 @@ a {
      .hashtag {
           color: $black;
      }
-     &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back {
+     &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back, &.document {
           float: right;
           font-size: 1rem;
           text-transform: inherit;
-          font-family: $Montserrat;
           font-weight: normal;
-          padding: 0 0 0 1.5em;
+          padding: 0 0 0 1.35em;
           background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 50%;
           background-size: 1em;
           margin: 0.25em 0 0 0;
@@ -389,6 +406,11 @@ a {
      &.delete {
           background: url(#{$image-path}/icons/delete-blue.svg) no-repeat 0% 50%;
           background-size: 1em;
+     }
+     &.document {
+          float: left;
+          background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50%;
+          background-size: 0.9em;
      }
      &.back {
           padding: 0 0 0 1.5em;
@@ -432,6 +454,7 @@ a {
      &:hover {
           color: $white;
           background: darken($blue,5%);
+          border: 3px solid darken($blue,5%);
           transform: scale(1.1);
           cursor: pointer;
      }

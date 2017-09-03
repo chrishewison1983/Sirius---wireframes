@@ -1,6 +1,7 @@
 // =================================== Client Page - JAVASCRIPT =================================== //
 // Client summary
 $('.normal-status').css('display', 'inline-block');
+$('#new-client-summary').hide();
 
 $(document).ready(function () {
 
@@ -181,12 +182,6 @@ $(document).ready(function () {
 });
 
 // tasks
-// $('#task-list .more-info').click(function(e){
-//      e.preventDefault();
-//      $(this).siblings('.details').toggle('slow');
-//      $(this).toggleClass('open');
-// });
-
 // $('#task-list label').click( function(){
 //      var checked = $('input', this).is(':checked');
 //      $('.status').text(checked ? 'done' : 'outstanding');

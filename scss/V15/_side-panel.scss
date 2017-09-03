@@ -36,26 +36,7 @@
 }
 
 #side-panel {
-     // width: auto;
-     // position: relative;
-     // right: 0;
      margin-top: 1em;
-     // @include standard-transition;
-     // transition: all .5s ease-in-out;
-     // &.sticky {
-     //      margin-top: 0;
-     //      position: fixed;
-     //      top: 0;
-     //      width: 60.775%;
-     //      height: 95vh;
-     //      min-height: 95vh;
-     //      // @include standard-transition;
-     //      // right: 0;
-     //      // &.viewport-bottom {
-     //      //      height: 84vh;
-     //      //      min-height: 84vh;
-     //      // }
-     // }
      &.viewport-bottom {
           bottom: 8em;
           top: inherit !important;
@@ -212,6 +193,13 @@
                background-size: contain;
                font-family: $Opensans-Regular;
           }
+     }
+}
+
+.new-client {
+     #documents-viewer {
+          max-height: inherit;
+          overflow-y: inherit;
      }
 }
 
