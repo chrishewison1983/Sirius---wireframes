@@ -385,12 +385,12 @@
                                    background: url(#{$image-path}/icons/delete-white.svg) no-repeat 0% 50%;
                                    background-size: 1em;
                               }
-                              &#create-bond {
+                              #create-bond {
                                    .main-text {
                                         font-size: 2.15rem;
                                    }
                               }
-                              &#edit-bond {
+                              #edit-bond {
                                    .secondary-bond {
                                         display: inline-block;
                                         margin: 0.5em 0;
@@ -398,13 +398,11 @@
                                         width: 100%;
                                    }
                                    &.warning {
-                                        .wrapper {
-                                             padding-left: 10em;
-                                             background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 9% 50%;
-                                             background-size: 5em;
-                                             .main-text, .sub-text, .ctas {
-                                                  text-align: left;
-                                             }
+                                        padding-left: 10em;
+                                        background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 9% 50%;
+                                        background-size: 5em;
+                                        .main-text, .sub-text, .ctas {
+                                             text-align: left;
                                         }
                                         .main-text {
                                              font-size: 1.6rem;
@@ -414,11 +412,9 @@
                                         }
                                    }
                               }
-                              &#bond-dispensed {
+                              #bond-dispensed {
                                    background: $red;
-                                   .wrapper {
-                                        padding-top: 0.5em;
-                                   }
+                                   padding-top: 0.5em;
                                    .ctas {
                                         display: inline-block;
                                         margin: -0.5em 0 0 0;
@@ -580,9 +576,23 @@
                                    text-transform: uppercase;
                                    font-size: 0.875rem;
                               }
-                              .edit {
+                              .separator {
+                                   display: inline-block;
+                                   float: left;
+                                   width: 1px;
+                                   margin: 0.25em 0 0 0;
+                                   height: 0.75em;
+                                   background: darken($white-off,10%);
+                              }
+                              .edit, .view {
                                    float: left;
                                    margin: 0.25em 0 0 0;
+                              }
+                              .edit {
+                                   margin-right: 1.5em;
+                              }
+                              .view {
+                                   margin-left: 1.5em;
                               }
                          }
                     }
@@ -686,7 +696,7 @@
                                    }
                                    .left {
                                         background: rgba($black,0.4);
-                                        width: 30%;
+                                        width: 27.5%;
                                         position: absolute;
                                         top: 0;
                                         left: 0;
@@ -701,8 +711,8 @@
                                         }
                                    }
                                    .right {
-                                        width: 70%;
-                                        padding: 0 0 0 20%;
+                                        width: 95%;
+                                        padding: 0 0 0 30%;
                                         h1, h2, h3, p, a {
                                              text-align: left;
                                         }

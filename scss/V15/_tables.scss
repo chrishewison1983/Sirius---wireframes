@@ -159,7 +159,7 @@ table {
      }
 }
 
-#tasks-table, #completed-tasks-table, #deputies-table, #order-table {
+#tasks-table, #completed-tasks-table, #deputies-table, #order-table, #clients-table {
      color: $text-main-colour;
      font-family: $Opensans-Regular;
      border-collapse: collapse;
@@ -459,12 +459,12 @@ table {
                     &:last-of-type {
                          padding-right: 0;
                     }
-                    a.type {
-                         border: none;
-                         &:hover {
-                              border: none;
-                         }
-                    }
+                    // a.type {
+                    //      border: none;
+                    //      &:hover {
+                    //           border: none;
+                    //      }
+                    // }
                     .wrapper {
                          display: inline-block;
                          width: auto;
@@ -627,15 +627,7 @@ table {
      }
 }
 
-#deputies-table {
-     thead {
-          border-bottom: none;
-          tr {
-               th {
-                    border-bottom: none;
-               }
-          }
-     }
+#deputies-table, #clients-table {
      tbody {
           tr {
                // background: $border-colour;
@@ -678,46 +670,6 @@ table {
                               position: relative;
                               padding-left: 2em;
                               padding-top: 1em;
-                              // .icon {
-                              //      position: absolute;
-                              //      top: 0;
-                              //      bottom: 0.625em;
-                              //      left: 0;
-                              //      width: 7em;
-                              //      height: auto;
-                              //      // background: $blue;
-                              //      margin: 0;
-                              //      border-radius: 0;
-                              //      &:hover {
-                              //           transform: none;
-                              //      }
-                              //      &.deputy, &.violent {
-                              //           border: none;
-                              //      }
-                              //      &.deputy {
-                              //           background: url(#{$image-path}/icons/user-white.svg) no-repeat 50% 50% $main-colour;
-                              //           background-size: 4.5em;
-                              //      }
-                              //      &.violent {
-                              //           background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 50% 40% $red;
-                              //           background-size: 4em;
-                              //           p {
-                              //                display: inline-block;
-                              //                width: auto;
-                              //                text-transform: uppercase;
-                              //                font-size: 0.875rem;
-                              //                color: rgba($white,0.7);
-                              //                background: none;
-                              //                // top: 50%;
-                              //                left: 11%;
-                              //                bottom: 15%;
-                              //                letter-spacing: 0.15em;
-                              //                &:before {
-                              //                     display: none;
-                              //                }
-                              //           }
-                              //      }
-                              // }
                          }
                          &:last-of-type {
                               border-right: none;
@@ -751,7 +703,7 @@ table {
                                    }
                               }
                          }
-                         .deputy-name, .deputy-address, .deputy-appointed {
+                         .name, .address, .appointed, .accomodation {
                               color: $black;
                               font-family: $Montserrat;
                               font-weight: bold;
@@ -760,7 +712,7 @@ table {
                               float: left;
                               clear: left;
                          }
-                         .deputy-name {
+                         .name {
                               font-size: 1.4rem;
                               .icon {
                                    width: 1.25em;
@@ -772,28 +724,47 @@ table {
                                    }
                               }
                          }
-                         .deputy-address {
+                         .address {
                               font-size: 1rem;
                               font-weight: normal;
                               color: $text-main-colour;
                          }
-                         .deputy-appointed {
+                         .appointed, .accomodation {
                               font-size: 1rem;
                               font-weight: normal;
                               color: $blue;
                          }
-                         .main-cta.edit {
-                              padding: 0.25em 0.75em 0.25em 2em;
-                              width: auto;
-                              float: right;
-                              text-align: center;
-                              margin: 0;
-                              background: url(#{$image-path}/icons/edit-white.svg) no-repeat 12.5% 50% $blue;
-                              background-size: 1em;
-                              &:hover {
-                                   border: 3px solid darken($blue,5%);
-                                   background: url(#{$image-path}/icons/edit-white.svg) no-repeat 12.5% 50% darken($blue,5%);
+                         .accomodation {
+                              color: darken($blue-grey,30%);
+                         }
+                         .main-cta {
+                              &.edit, &.view {
+                                   padding: 0.25em 0.75em 0.25em 2em;
+                                   width: auto;
+                                   float: right;
+                                   text-align: center;
+                                   margin: 0;
+                                   &:hover {
+                                        border: 3px solid darken($blue,5%);
+                                   }
+                              }
+                              &.edit {
+                                   background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 12.5% 50%;
                                    background-size: 1em;
+                                   margin-right: 1em;
+                                   &:hover {
+                                        background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 12.5% 50%;
+                                        background-size: 1em;
+                                        color: $blue;
+                                   }
+                              }
+                              &.view {
+                                   background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 12.5% 50% $blue;
+                                   background-size: 1em;
+                                   &:hover {
+                                        background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 12.5% 50% darken($blue,5%);
+                                        background-size: 1em;
+                                   }
                               }
                          }
                     }
@@ -812,6 +783,15 @@ table {
                          .section-title {
                               &:first-of-type {
                                    margin-top: 0.5em;
+                              }
+                         }
+                         .details-wrap {
+                              @include flexbox;
+                              @include justify-content(flex-start);
+                              @include flex-wrap(wrap);
+                              width: 100%;
+                              .person-detail-item {
+                                   @include flexbox;
                               }
                          }
                          .person-detail-item {
@@ -849,6 +829,124 @@ table {
           }
      }
 }
+
+#deputies-table {
+     thead {
+          border-bottom: none;
+          tr {
+               th {
+                    border-bottom: none;
+               }
+               &.six-column {
+                    th:nth-of-type(1n) {
+                         width: 35%;
+                    }
+                    th:nth-of-type(2n) {
+                         width: 10%;
+                    }
+                    th:nth-of-type(3n) {
+                         width: 9.5%;
+                    }
+                    th:nth-of-type(4n) {
+                         width: 12.5%;
+                    }
+                    th:nth-of-type(5n) {
+                         width: 12.5%;
+                    }
+                    th:nth-of-type(6n) {
+                         width: 20.5%;
+                    }
+               }
+          }
+     }
+}
+
+#clients-table {
+     thead {
+          border-bottom: none;
+          tr {
+               th {
+                    border-bottom: none;
+                    color: $blue;
+               }
+               &.five-column {
+                    th:nth-of-type(1n) {
+                         width: 35%;
+                    }
+                    th:nth-of-type(2n) {
+                         width: 25%;
+                    }
+                    th:nth-of-type(3n) {
+                         width: 17.5%;
+                    }
+                    th:nth-of-type(4n) {
+                         width: 15%;
+                    }
+                    th:nth-of-type(5n) {
+                         width: 7.5%;
+                    }
+               }
+          }
+     }
+     tbody {
+          tr.summary-row {
+               td {
+                    .wrapper {
+                         @include align-items(center);
+                         margin: -0.625em 0 1em 0;
+                         .icon {
+                              margin: 0 0.5em 0 0;
+                         }
+                         a {
+                              margin: 0 0.5em 0 0;
+                         }
+                         // strong {
+                         //      color: $text-main-colour;
+                         //      font-weight: normal;
+                         //      margin: 0 0.5em;
+                         // }
+                    }
+                    .icon {
+                         margin-top: -0.625em;
+                    }
+               }
+          }
+     }
+}
+
+#side-panel {
+     #deputies-table {
+          thead {
+               border-bottom: none;
+               tr {
+                    th {
+                         border-bottom: none;
+                    }
+                    &.six-column {
+                         th:nth-of-type(1n) {
+                              width: 50%;
+                         }
+                         th:nth-of-type(2n) {
+                              width: 12.5%;
+                         }
+                         th:nth-of-type(3n) {
+                              width: 10%;
+                         }
+                         th:nth-of-type(4n) {
+                              width: 12.5%;
+                         }
+                         th:nth-of-type(5n) {
+                              width: 15%;
+                         }
+                         th:nth-of-type(6n) {
+                              width: 0%;
+                         }
+                    }
+               }
+          }
+     }
+}
+
 
 
 // ONLY FOR LARGE DESKTOP (1281 up)

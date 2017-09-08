@@ -150,15 +150,15 @@
 	</ul>
 </nav>
  </div> </div> --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
-<h2 class="description-title">
-	<div class="client-title">Mr</div>
-	<div class="client-first-name">Gerald</div>
-	<div class="client-last-name">Brackens</div>
-	details
-	<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit client</a>
-</h2>
-
 <div class="check-details" id="client-details">
+
+	<h2 class="description-title">
+		<div class="client-title">Mr</div>
+		<div class="client-first-name">Gerald</div>
+		<div class="client-last-name">Brackens</div>
+		details
+		<a href="../7-edit-client/7a-edit-client.html" class="edit">Edit client</a>
+	</h2>
 
 	<!-- // CLIENT ITEM - 1 - START // -->
 	<div class="person-detail-item">
@@ -195,14 +195,14 @@
 	<!-- // CLIENT ITEM - 5 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Middle names:</p>
-		<p class="answer client-middle-name">Brackens</p>
+		<p class="answer client-middle-name">Stephen</p>
 	</div>
 	<!-- // CLIENT ITEM - 5 - END // -->
 
 	<!-- // CLIENT ITEM - 6 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Last name:</p>
-		<p class="answer client-last-name">Stephen</p>
+		<p class="answer client-last-name">Brackens</p>
 	</div>
 	<!-- // CLIENT ITEM - 6 - END // -->
 
@@ -303,7 +303,7 @@
 
 	<!-- // CLIENT ITEM - 19 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Has the deputy expressed a preferred method of contact?:</p>
+		<p class="item">Has the client expressed a preferred method of contact?:</p>
 		<ul class="answer">
 			<li class="client-correspondence-post">Post</li>
 			<li class="client-correspondence-email">Email</li>
@@ -344,9 +344,9 @@
                <tr class="summary-row" data-value="1">
                     <td>
                          <!-- <span class="icon deputy"></span> -->
-                         <div class="deputy-name">Mrs Lara Stevens</div><br>
-                         <div class="deputy-appointed">JOINT</div><br>
-                         <div class="deputy-address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div>
+                         <div class="name">Mrs Lara Stevens</div><br>
+                         <div class="appointed">JOINT</div><br>
+                         <div class="address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div>
                          <a href="#" class="full-details" data-value="1">View full details</a>
                     </td>
                     <td>
@@ -364,7 +364,8 @@
                          <span class="icon welfare"><p>Health &amp; welfare</p></span>
                     </td>
                     <td>
-                         <a class="main-cta edit" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
+                         <a class="main-cta view" href="../14-deputy-page/14a-deputy-page.html">View</a>
+                         <a class="main-cta secondary edit" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 1 - END -->
@@ -374,186 +375,198 @@
                     <td colspan="6">
 
                          <h2 class="section-title">
-                              Personal details:
+                              Deputy details:
                               <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="edit deputy-1">Edit</a>
                          </h2>
 
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Name:</p>
-                              <p class="answer">Mrs Lara Stevens</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
+                         <div class="details-wrap">
 
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Previously Known As:</p>
-                              <p class="answer">Miss Lara Hodgeson</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
+                              <!-- // DEPUTY ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Name:</p>
+                                   <p class="answer">Mrs Lara Stevens</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 1 - END // -->
 
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Date of birth:</p>
-                              <p class="answer">17/07/1981</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
+                              <!-- // DEPUTY ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Previously Known As:</p>
+                                   <p class="answer">Miss Lara Hodgeson</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 2 - END // -->
 
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Address:</p>
-                              <p class="answer">
-                                   34 Broomfield Place,<br>
-                                   STOKESLEY,<br>
-                                   TS9 8TU.<br>
-                                   England
-                              </p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
+                              <!-- // DEPUTY ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Date of birth:</p>
+                                   <p class="answer">17/07/1981</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 3 - END // -->
 
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is airmail required?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
+                              <!-- // DEPUTY ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Address:</p>
+                                   <p class="answer">
+                                        34 Broomfield Place,<br>
+                                        STOKESLEY,<br>
+                                        TS9 8TU.<br>
+                                        England
+                                   </p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 4 - END // -->
 
-                         <!-- // DEPUTY ITEM - 6 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Daytime telephone number:</p>
-                              <p class="answer">07079962666</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
+                              <!-- // DEPUTY ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is airmail required?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 5 - END // -->
 
-                         <!-- // DEPUTY ITEM - 7 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Mobile telephone number:</p>
-                              <p class="answer">07079962666</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 7 - END // -->
+                              <!-- // DEPUTY ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Daytime telephone number:</p>
+                                   <p class="answer">07079962666</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 6 - END // -->
 
-                         <!-- // DEPUTY ITEM - 8 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Email address:</p>
-                              <p class="answer">lara.stevens@jourrapide.com</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 8 - END // -->
+                              <!-- // DEPUTY ITEM - 7 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Mobile telephone number:</p>
+                                   <p class="answer">07079962666</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 7 - END // -->
 
-                         <!-- // DEPUTY ITEM - 9 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy a violent risk?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 9 - END // -->
+                              <!-- // DEPUTY ITEM - 8 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Email address:</p>
+                                   <p class="answer">lara.stevens@jourrapide.com</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 8 - END // -->
 
-                         <!-- // DEPUTY ITEM - 10 - START // -->
-                         <div class="person-detail-item violent-answer">
-                              <p class="item">More details about the violent risk:</p>
-                              <p class="answer">N/A</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 10 - END // -->
+                              <!-- // DEPUTY ITEM - 9 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy a violent risk?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 9 - END // -->
 
-                         <!-- // DEPUTY ITEM - 11 - START // -->
-                         <!-- <div class="person-detail-item">
-                              <p class="item">Financial reference:</p>
-                              <p class="answer">1234567890</p>
-                         </div> -->
-                         <!-- // DEPUTY ITEM - 11 - END // -->
+                              <!-- // DEPUTY ITEM - 10 - START // -->
+                              <div class="person-detail-item violent-answer">
+                                   <p class="item">More details about the violent risk:</p>
+                                   <p class="answer">N/A</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 10 - END // -->
+
+                              <!-- // DEPUTY ITEM - 11 - START // -->
+                              <!-- <div class="person-detail-item">
+                                   <p class="item">Financial reference:</p>
+                                   <p class="answer">1234567890</p>
+                              </div> -->
+                              <!-- // DEPUTY ITEM - 11 - END // -->
+
+                         </div>
 
                          <h2 class="section-title">
                               Additional information:
                               <a href="../5-add-deputy/5c-additional-info.html#edit-deputy-1" class="edit deputy-1">Edit</a>
                          </h2>
 
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Digital?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
+                         <div class="details-wrap">
 
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Occupation:</p>
-                              <p class="answer">University professor</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
-
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Has the deputy expressed a preferred method of contact?:</p>
-                              <ul class="answer">
-                                   <li>Email</li>
-                              </ul>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
-
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Special correspondence requirements:</p>
-                              <ul class="answer">
-                                   <li>Spelling of name requires care</li>
-                              </ul>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
-
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Interpreter required?:</p>
-                              <div class="mulitple-answers">
+                              <!-- // DEPUTY ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Digital?:</p>
                                    <p class="answer">No</p>
                               </div>
-                         </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
+                              <!-- // DEPUTY ITEM - 1 - END // -->
 
-                         <!-- // DEPUTY ITEM - 6 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Newsletter?:</p>
-                              <p class="answer">No</p>
+                              <!-- // DEPUTY ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Occupation:</p>
+                                   <p class="answer">University professor</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 2 - END // -->
+
+                              <!-- // DEPUTY ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Has the deputy expressed a preferred method of contact?:</p>
+                                   <ul class="answer">
+                                        <li>Email</li>
+                                   </ul>
+                              </div>
+                              <!-- // DEPUTY ITEM - 3 - END // -->
+
+                              <!-- // DEPUTY ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Special correspondence requirements:</p>
+                                   <ul class="answer">
+                                        <li>Spelling of name requires care</li>
+                                   </ul>
+                              </div>
+                              <!-- // DEPUTY ITEM - 4 - END // -->
+
+                              <!-- // DEPUTY ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Interpreter required?:</p>
+                                   <div class="mulitple-answers">
+                                        <p class="answer">No</p>
+                                   </div>
+                              </div>
+                              <!-- // DEPUTY ITEM - 5 - END // -->
+
+                              <!-- // DEPUTY ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Newsletter?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 6 - END // -->
+
                          </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
 
                          <h2 class="section-title">
                               Case details:
                               <a href="../5-add-deputy/5d-case-details.html#edit-deputy-1" class="edit deputy-1">Edit</a>
                          </h2>
 
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Type of deputy:</p>
-                              <p class="answer">Lay</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
+                         <div class="details-wrap">
 
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Relationship to the client:</p>
-                              <div class="mulitple-answers">
-                                   <p class="answer">Sibling</p>
+                              <!-- // DEPUTY ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Type of deputy:</p>
+                                   <p class="answer">Lay</p>
                               </div>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
+                              <!-- // DEPUTY ITEM - 1 - END // -->
 
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Deputy status:</p>
-                              <p class="answer">Open</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
+                              <!-- // DEPUTY ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Relationship to the client:</p>
+                                   <div class="mulitple-answers">
+                                        <p class="answer">Sibling</p>
+                                   </div>
+                              </div>
+                              <!-- // DEPUTY ITEM - 2 - END // -->
 
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy the fee payer?:</p>
-                              <p class="answer">Yes</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
+                              <!-- // DEPUTY ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Deputy status:</p>
+                                   <p class="answer">Open</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 3 - END // -->
 
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy the main correspondent?:</p>
-                              <p class="answer">Yes</p>
+                              <!-- // DEPUTY ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy the fee payer?:</p>
+                                   <p class="answer">Yes</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 4 - END // -->
+
+                              <!-- // DEPUTY ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy the main correspondent?:</p>
+                                   <p class="answer">Yes</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 5 - END // -->
+
                          </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
 
                     </td>
                </tr>
@@ -562,14 +575,14 @@
                <!-- DEPUTY SUMMARY ROW 2 - START -->
                <tr class="summary-row violent" data-value="2">
                     <td>
-                         <div class="deputy-name">
+                         <div class="name">
                               <span class="icon violent">
                                    <p>Violent</p>
                               </span>
                               Mrs Carla Frith
                          </div><br>
-                         <div class="deputy-appointed">JOINT</div><br>
-                         <div class="deputy-address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div>
+                         <div class="appointed">JOINT</div><br>
+                         <div class="address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div>
                          <a href="#" class="full-details" data-value="2">View full details</a>
                     </td>
                     <td>
@@ -584,7 +597,8 @@
                     <td>
                          <span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td>
                     <td>
-                         <a class="main-cta edit" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
+                         <a class="main-cta view" href="../14-deputy-page/14a-deputy-page.html">View</a>
+                         <a class="main-cta secondary edit" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 2 - END -->
@@ -594,187 +608,199 @@
                     <td colspan="6">
 
                          <h2 class="section-title">
-                              Personal details:
+                              Deputy details:
                               <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="edit deputy-2">Edit</a>
                          </h2>
 
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Name:</p>
-                              <p class="answer">Mrs Carla Frith</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
+                         <div class="details-wrap">
 
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Previously Known As:</p>
-                              <p class="answer">Ms Carla Walton</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
+                              <!-- // DEPUTY ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Name:</p>
+                                   <p class="answer">Mrs Carla Frith</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 1 - END // -->
 
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Date of birth:</p>
-                              <p class="answer">25/06/1983</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
+                              <!-- // DEPUTY ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Previously Known As:</p>
+                                   <p class="answer">Ms Carla Walton</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 2 - END // -->
 
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Address:</p>
-                              <p class="answer">
-                                   35 Broad Street,<br>
-                                   LOWER WELSON,<br>
-                                   HR3 1UD.<br>
-                                   England
-                              </p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
+                              <!-- // DEPUTY ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Date of birth:</p>
+                                   <p class="answer">25/06/1983</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 3 - END // -->
 
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is airmail required?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
+                              <!-- // DEPUTY ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Address:</p>
+                                   <p class="answer">
+                                        35 Broad Street,<br>
+                                        LOWER WELSON,<br>
+                                        HR3 1UD.<br>
+                                        England
+                                   </p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 4 - END // -->
 
-                         <!-- // DEPUTY ITEM - 6 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Daytime telephone number:</p>
-                              <p class="answer">07772881687</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
+                              <!-- // DEPUTY ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is airmail required?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 5 - END // -->
 
-                         <!-- // DEPUTY ITEM - 7 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Mobile telephone number:</p>
-                              <p class="answer">07772881687</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 7 - END // -->
+                              <!-- // DEPUTY ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Daytime telephone number:</p>
+                                   <p class="answer">07772881687</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 6 - END // -->
 
-                         <!-- // DEPUTY ITEM - 8 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Email address:</p>
-                              <p class="answer">carla.frith@jourrapide.com</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 8 - END // -->
+                              <!-- // DEPUTY ITEM - 7 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Mobile telephone number:</p>
+                                   <p class="answer">07772881687</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 7 - END // -->
 
-                         <!-- // DEPUTY ITEM - 9 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy a violent risk?:</p>
-                              <p class="answer">Yes</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 9 - END // -->
+                              <!-- // DEPUTY ITEM - 8 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Email address:</p>
+                                   <p class="answer">carla.frith@jourrapide.com</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 8 - END // -->
 
-                         <!-- // DEPUTY ITEM - 10 - START // -->
-                         <div class="person-detail-item violent-answer-text">
-                              <p class="item">More details about the violent risk:</p>
-                              <p class="answer">N/A</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 10 - END // -->
+                              <!-- // DEPUTY ITEM - 9 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy a violent risk?:</p>
+                                   <p class="answer">Yes</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 9 - END // -->
 
-                         <!-- // DEPUTY ITEM - 10 - START // -->
-                         <!-- <div class="person-detail-item">
-                              <p class="item">Financial reference:</p>
-                              <p class="answer">1234567890</p>
-                         </div> -->
-                         <!-- // DEPUTY ITEM - 10 - END // -->
+                              <!-- // DEPUTY ITEM - 10 - START // -->
+                              <div class="person-detail-item violent-answer-text">
+                                   <p class="item">More details about the violent risk:</p>
+                                   <p class="answer">N/A</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 10 - END // -->
+
+                              <!-- // DEPUTY ITEM - 10 - START // -->
+                              <!-- <div class="person-detail-item">
+                                   <p class="item">Financial reference:</p>
+                                   <p class="answer">1234567890</p>
+                              </div> -->
+                              <!-- // DEPUTY ITEM - 10 - END // -->
+
+                         </div>
 
                          <h2 class="section-title">
                               Additional information:
                               <a href="../5-add-deputy/5c-additional-info.html#edit-deputy-2" class="edit deputy-2">Edit</a>
                          </h2>
 
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Digital?:</p>
-                              <p class="answer">Yes</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
+                         <div class="details-wrap">
 
-                         <!-- // DEPUTY ITEM - 11 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Occupation:</p>
-                              <p class="answer">Mental health assistant</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
+                              <!-- // DEPUTY ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Digital?:</p>
+                                   <p class="answer">Yes</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 1 - END // -->
 
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Has the deputy expressed a preferred method of contact?:</p>
-                              <ul class="answer">
-                                   <li>Phone</li>
-                                   <li>Email</li>
-                              </ul>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
+                              <!-- // DEPUTY ITEM - 11 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Occupation:</p>
+                                   <p class="answer">Mental health assistant</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 2 - END // -->
 
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Special correspondence requirements:</p>
-                              <ul class="answer">
-                                   <li>N/A</li>
-                              </ul>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
+                              <!-- // DEPUTY ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Has the deputy expressed a preferred method of contact?:</p>
+                                   <ul class="answer">
+                                        <li>Phone</li>
+                                        <li>Email</li>
+                                   </ul>
+                              </div>
+                              <!-- // DEPUTY ITEM - 3 - END // -->
 
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Interpreter required?:</p>
-                              <div class="mulitple-answers">
+                              <!-- // DEPUTY ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Special correspondence requirements:</p>
+                                   <ul class="answer">
+                                        <li>N/A</li>
+                                   </ul>
+                              </div>
+                              <!-- // DEPUTY ITEM - 4 - END // -->
+
+                              <!-- // DEPUTY ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Interpreter required?:</p>
+                                   <div class="mulitple-answers">
+                                        <p class="answer">No</p>
+                                   </div>
+                              </div>
+                              <!-- // DEPUTY ITEM - 5 - END // -->
+
+                              <!-- // DEPUTY ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Newsletter?:</p>
                                    <p class="answer">No</p>
                               </div>
-                         </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
+                              <!-- // DEPUTY ITEM - 6 - END // -->
 
-                         <!-- // DEPUTY ITEM - 6 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Newsletter?:</p>
-                              <p class="answer">No</p>
                          </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
 
                          <h2 class="section-title">
                               Case details:
                               <a href="../5-add-deputy/5d-case-details.html#edit-deputy-2" class="edit deputy-2">Edit</a>
                          </h2>
 
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Type of deputy:</p>
-                              <p class="answer">Lay</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
+                         <div class="details-wrap">
 
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Relationship to the client:</p>
-                              <div class="mulitple-answers">
-                                   <p class="answer">Sibling</p>
+                              <!-- // DEPUTY ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Type of deputy:</p>
+                                   <p class="answer">Lay</p>
                               </div>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
+                              <!-- // DEPUTY ITEM - 1 - END // -->
 
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Deputy status:</p>
-                              <p class="answer">Active</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
+                              <!-- // DEPUTY ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Relationship to the client:</p>
+                                   <div class="mulitple-answers">
+                                        <p class="answer">Sibling</p>
+                                   </div>
+                              </div>
+                              <!-- // DEPUTY ITEM - 2 - END // -->
 
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy the fee payer?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
+                              <!-- // DEPUTY ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Deputy status:</p>
+                                   <p class="answer">Active</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 3 - END // -->
 
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy the main correspondent?:</p>
-                              <p class="answer">No</p>
+                              <!-- // DEPUTY ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy the fee payer?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 4 - END // -->
+
+                              <!-- // DEPUTY ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy the main correspondent?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // DEPUTY ITEM - 5 - END // -->
+
                          </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
 
                     </td>
                </tr>
@@ -811,66 +837,66 @@
 					<tr>
 						<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Incoming</td>
-						<td>27/08/2017 11:07:13</td>
+						<td><p>Incoming</p></td>
+						<td><p>27/08/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td>
@@ -880,10 +906,10 @@
 							</a>
 						</td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Incoming</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Incoming</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 				</tbody>
 			</table>
@@ -931,66 +957,66 @@
 					<tr>
 						<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Incoming</td>
-						<td>27/08/2017 11:07:13</td>
+						<td><p>Incoming</p></td>
+						<td><p>27/08/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Outgoing</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 					<tr>
 						<td>
@@ -1000,10 +1026,10 @@
 							</a>
 						</td>
 						<!-- <td>7000-0000-2563</td> -->
-						<td>IT-SS-ORDER</td>
+						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
-						<td>Incoming</td>
-						<td>27/06/2017 11:07:13</td>
+						<td><p>Incoming</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
 					</tr>
 				</tbody>
 			</table>
@@ -1030,7 +1056,7 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- =========== CREATE CLIENT - START =========== --> <div id="action-panel" class="large-4 large-uncentered columns"> <form class="reporting-period-form"> <h2 class="section-title">Reporting Period</h2> <!-- // FORM ITEM - 1 - START // --> <div class="form-group read-only"> <label>Report start date:</label> <span class="help-text">Example - 05 04 2017</span> <div> <input id="report-start-day" class="input-length" name="report-start-day" type="text" value="01" maxlength="2" readonly> <input id="report-start-month" class="input-length" name="report-start-month" type="text" value="01" maxlength="2" readonly> <input id="report-start-year" class="input-length four" name="report-start-year" type="text" value="2017" maxlength="4" readonly> </div> <!-- <a href="#" class="edit bond-date-edit">edit</a> --> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group read-only"> <label>Report end date:</label> <span class="help-text">Example - 05 04 2017</span> <div> <input id="report-end-day" class="input-length" name="report-end-day" type="text" value="01" maxlength="2" readonly> <input id="report-end-month" class="input-length" name="report-end-month" type="text" value="01" maxlength="2" readonly> <input id="report-end-year" class="input-length four" name="report-end-year" type="text" value="2018" maxlength="4" readonly> </div> <!-- <a href="#" class="edit bond-date-edit">edit</a> --> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <!-- <div class="form-group read-only"> <label>Report reminder date:</label> <span class="help-text">Example - 05 04 2017</span> <div class="weeks-4"> <div class="wrapper"><span>4</span></div> <p>weeks before the report end date</p> </div> <div> <input id="report-reminder-day" class="input-length" name="report-reminder-day" type="text" value="04" maxlength="2" readonly> <input id="report-reminder-month" class="input-length" name="report-reminder-month" type="text" value="12" maxlength="2" readonly> <input id="report-reminder-year" class="input-length four" name="report-reminder-year" type="text" value="2017" maxlength="4" readonly> </div> </div> --> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group read-only"> <label>Report due date:</label> <span class="help-text">Example - 05 04 2017</span> <div class="weeks-8"> <div class="wrapper"><span>8</span></div> <p>weeks after the report end date</p> </div> <div> <input id="report-due-day" class="input-length" name="report-due-day" type="text" value="26" maxlength="2" readonly> <input id="report-due-month" class="input-length" name="report-due-month" type="text" value="02" maxlength="2" readonly> <input id="report-due-year" class="input-length four" name="report-due-year" type="text" value="2018" maxlength="4" readonly> </div> <!-- <a href="#" class="edit bond-date-edit">edit</a> --> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group report-level read-only"> <legend>Report level</legend> <label for="report-level-gen" class="radio"> <input id="report-level-gen" type="radio" name="report-level" value="General" disabled> General (102) </label> <label for="report-level-min" class="radio checked"> <input id="report-level-min" type="radio" name="report-level" value="Minimal" checked disabled> Minimal (103) </label> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group general-report-level"> <label for="report-level-why">Why has the level been changed?:</label> <input id="report-level-why" name="report-due-day" type="text"> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group general-report-level"> <label for="report-level-notes">Notes</label> <textarea name="textarea" class="jqte-test" id="report-level-notes"></textarea> </div> <!-- // FORM ITEM - 7 - END // --> <div class="edit-report-period"> <hr> <!-- // FORM ITEM - 8 - START // --> <div class="form-group"> <label for="report-why">Why are you changing the reporting period? <span class="required">*</span></label> <select id="report-why" class="full-width"> <option value="">-- Select --</option> <option value="Financial accounting year">Financial accounting year</option> <option value="In line with the previous year">In line with the previous year</option> <option value="Personal accounting year">Personal accounting year</option> <option value="Input error">Input error</option> <option value="In line with Type 3 to Type 2 reassessment">In line with Type 3 to Type 2 reassessment</option> <option value="In line with the new order">In line with the new order</option> <option value="In line with the last report filed">In line with the last report filed</option> <option value="Interim report requested">Interim report requested</option> <option value="Late allocation">Late allocation</option> </select> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group report-notes-section"> <label for="report-notes">Notes</label> <textarea name="textarea" class="jqte-test" id="report-notes"></textarea> </div> <!-- // FORM ITEM - 9 - END // --> </div> </form> </div> <!-- =========== CREATE CLIENT - 1 - END =========== --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- // MODAL - START // --> <div id="edit-report" style="display:none;"> <h1>Are you sure you wish to edit the reportin period?</h1> <p>Changing the reporting period will changes all future reporting dates for this order.</p> <hr> <div class="cta-row"> <a class="main-cta" id="confirm-report-edit" rel="modal:close" href="../4-client-page/4a-new-client.html#HandW">Confirm the change</a> <a href="#" rel="modal:close" class="cancel">Cancel</a> </div> </div> <!-- // MODAL - END // --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="edit-reporting-period">Edit reporting period</a> <a class="main-cta primary de-activate" id="reporting-period-button">Save &amp; exit</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- =========== CREATE CLIENT - START =========== --> <div id="action-panel" class="large-4 large-uncentered columns"> <form class="reporting-period-form"> <h2 class="section-title">Reporting Period</h2> <!-- // FORM ITEM - 1 - START // --> <div class="form-group read-only"> <label>Report start date:</label> <span class="help-text">Example - 05 04 2017</span> <div> <input id="report-start-day" class="input-length" name="report-start-day" type="text" value="01" maxlength="2" readonly> <input id="report-start-month" class="input-length" name="report-start-month" type="text" value="01" maxlength="2" readonly> <input id="report-start-year" class="input-length four" name="report-start-year" type="text" value="2017" maxlength="4" readonly> </div> <!-- <a href="#" class="edit bond-date-edit">edit</a> --> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group read-only"> <label>Report end date:</label> <span class="help-text">Example - 05 04 2017</span> <div> <input id="report-end-day" class="input-length" name="report-end-day" type="text" value="01" maxlength="2" readonly> <input id="report-end-month" class="input-length" name="report-end-month" type="text" value="01" maxlength="2" readonly> <input id="report-end-year" class="input-length four" name="report-end-year" type="text" value="2018" maxlength="4" readonly> </div> <!-- <a href="#" class="edit bond-date-edit">edit</a> --> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <!-- <div class="form-group read-only"> <label>Report reminder date:</label> <span class="help-text">Example - 05 04 2017</span> <div class="weeks-4"> <div class="wrapper"><span>4</span></div> <p>weeks before the report end date</p> </div> <div> <input id="report-reminder-day" class="input-length" name="report-reminder-day" type="text" value="04" maxlength="2" readonly> <input id="report-reminder-month" class="input-length" name="report-reminder-month" type="text" value="12" maxlength="2" readonly> <input id="report-reminder-year" class="input-length four" name="report-reminder-year" type="text" value="2017" maxlength="4" readonly> </div> </div> --> <!-- // FORM ITEM - 3 - END // --> <!-- // FORM ITEM - 4 - START // --> <div class="form-group read-only"> <label>Report due date:</label> <span class="help-text">Example - 05 04 2017</span> <div class="weeks-8"> <div class="wrapper"><span>8</span></div> <p>weeks after the report end date</p> </div> <div> <input id="report-due-day" class="input-length" name="report-due-day" type="text" value="26" maxlength="2" readonly> <input id="report-due-month" class="input-length" name="report-due-month" type="text" value="02" maxlength="2" readonly> <input id="report-due-year" class="input-length four" name="report-due-year" type="text" value="2018" maxlength="4" readonly> </div> <!-- <a href="#" class="edit bond-date-edit">edit</a> --> </div> <!-- // FORM ITEM - 4 - END // --> <!-- // FORM ITEM - 5 - START // --> <div class="form-group report-level read-only"> <legend>Report level</legend> <label for="report-level-gen" class="radio"> <input id="report-level-gen" type="radio" name="report-level" value="General" disabled> General (102) </label> <label for="report-level-min" class="radio checked"> <input id="report-level-min" type="radio" name="report-level" value="Minimal" checked disabled> Minimal (103) </label> </div> <!-- // FORM ITEM - 5 - END // --> <!-- // FORM ITEM - 6 - START // --> <div class="form-group general-report-level"> <label for="report-level-why">Why has the level been changed?:</label> <input id="report-level-why" name="report-due-day" type="text"> </div> <!-- // FORM ITEM - 6 - END // --> <!-- // FORM ITEM - 7 - START // --> <div class="form-group general-report-level"> <label for="report-level-notes">Notes</label> <textarea name="textarea" class="jqte-test" id="report-level-notes"></textarea> </div> <!-- // FORM ITEM - 7 - END // --> <div class="edit-report-period"> <hr> <!-- // FORM ITEM - 8 - START // --> <div class="form-group"> <label for="report-why">Why are you changing the reporting period? <span class="required">*</span></label> <select id="report-why" class="full-width"> <option value="">-- Select --</option> <option value="Financial accounting year">Financial accounting year</option> <option value="In line with the previous year">In line with the previous year</option> <option value="Personal accounting year">Personal accounting year</option> <option value="Input error">Input error</option> <option value="In line with Type 3 to Type 2 reassessment">In line with Type 3 to Type 2 reassessment</option> <option value="In line with the new order">In line with the new order</option> <option value="In line with the last report filed">In line with the last report filed</option> <option value="Interim report requested">Interim report requested</option> <option value="Late allocation">Late allocation</option> </select> </div> <!-- // FORM ITEM - 8 - END // --> <!-- // FORM ITEM - 9 - START // --> <div class="form-group report-notes-section"> <label for="report-notes">Notes</label> <textarea name="textarea" class="jqte-test" id="report-notes"></textarea> </div> <!-- // FORM ITEM - 9 - END // --> </div> </form> </div> <!-- =========== CREATE CLIENT - 1 - END =========== --> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- // MODAL - START // --> <div id="edit-report" style="display:none;"> <h1>Are you sure you wish to edit the reportin period?</h1> <p>Changing the reporting period will changes all future reporting dates for this order.</p> <hr> <div class="cta-row"> <a class="main-cta" id="confirm-report-edit" href="../4-client-page/4a-new-client.html#HandW">Confirm the change</a> <a href="#" rel="modal:close" class="cancel">Cancel</a> </div> </div> <!-- // MODAL - END // --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="edit-reporting-period">Edit reporting period</a> <a class="main-cta primary de-activate" id="reporting-period-button">Save &amp; exit</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V15/hideShowPassword.js"></script>
 	<script src="../../../production/js/V15/jquery.cookie.js"></script>
@@ -1048,12 +1074,15 @@
 	<script src="../../../production/js/V15/my-cookies/create-letter.js"></script>
 	<script src="../../../production/js/V15/my-cookies/create-client.js"></script>
 	<script src="../../../production/js/V15/my-cookies/create-deputy.js"></script>
+	<script src="../../../production/js/V15/my-cookies/edit-deputy.js"></script>
 	<script src="../../../production/js/V15/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V15/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V15/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V15/my-cookies/new-event.js"></script>
 	<script src="../../../production/js/V15/my-cookies/create-contact.js"></script>
 	<script src="../../../production/js/V15/my-cookies/timeline.js"></script>
+	<script src="../../../production/js/V15/my-cookies/deputy-death.js"></script>
+	<script src="../../../production/js/V15/my-cookies/deputy-page.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
@@ -1064,6 +1093,7 @@
 	<script src="../../../production/js/V15/my-jquery/create-client.js"></script>
 	<script src="../../../production/js/V15/my-jquery/create-task.js"></script>
 	<script src="../../../production/js/V15/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V15/my-jquery/edit-deputy.js"></script>
 	<script src="../../../production/js/V15/my-jquery/create-letter.js"></script>
 	<script src="../../../production/js/V15/my-jquery/report-period.js"></script>
 	<script src="../../../production/js/V15/my-jquery/supervision-level.js"></script>
@@ -1071,6 +1101,8 @@
 	<script src="../../../production/js/V15/my-jquery/progress-bar.js"></script>
 	<script src="../../../production/js/V15/my-jquery/create-contact.js"></script>
 	<script src="../../../production/js/V15/my-jquery/timeline.js"></script>
+	<script src="../../../production/js/V15/my-jquery/deputy-death.js"></script>
+	<script src="../../../production/js/V15/my-jquery/deputy-page.js"></script>
 	<!-- <script src="../../../production/js/V15/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
 

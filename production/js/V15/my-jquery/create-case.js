@@ -44,11 +44,6 @@ $("#bond-amount").keyup(function() {
      }
 });
 
-// $("#bond-amount").on('input', function() {
-//      $('#create-bond-button').removeClass('de-activate');
-//      $('#create-bond-button').attr('href', '../4-client-page/4a-new-client.html#property');
-// });
-
 // THE BOND - activates the renewal date
 $('.bond-date-edit').click( function(e){
      e.preventDefault();
@@ -67,51 +62,6 @@ $("#bond-company").change(function () {
      }
 });
 
-// $("#case-order-title").click( function(){
-//      $('#cta-footer').slideDown('slow');
-// });
-
-// if ($.cookie("create-case-step-1") == 'true') {
-//      $('.accordion').find('#step-1').removeClass('inactive');
-//      $('.accordion #step-1').find('.place-holder-text').hide();
-//      $('.accordion #step-1').find('.commission-visit-info').show();
-// }
-
-////////////////////////////////////// DEPUTIES //////////////////////////////////////
-// $(".deputies-appointed").click( function(){
-//      $('#cta-footer').slideDown('slow');
-// });
-
-// $(".deputies-jointly").click( function(){
-//      $('#cta-footer').slideDown('slow');
-// });
-
-// if ($.cookie("create-case-step-4") == 'true') {
-//      $('.accordion').find('#step-1, #step-2, #step-3, #step-4').removeClass('inactive');
-//      $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4').find('.place-holder-text').hide();
-//      $('.accordion #step-1, .accordion #step-2, .accordion #step-3, .accordion #step-4').find('.commission-visit-info').show();
-// }
-
-////////////////////////////////////// THE FILES //////////////////////////////////////
-// $('.file-location-hidden').hide();
-//
-// $("#case-file-physical").click( function(){
-//      if($(this).is(':checked')) { $('.file-location-hidden').slideDown('slow'); }
-// });
-// $("#case-file-scanned").click( function(){
-//      if($(this).is(':checked')) { $('.file-location-hidden').slideUp('slow'); }
-// });
-
-// $(".file-location").click( function(){
-//      $('#cta-footer').slideDown('slow');
-// });
-
-// if ($.cookie("create-case-step-3") == 'true') {
-//      $('.accordion').find('#step-1, #step-2, #step-3').removeClass('inactive');
-//      $('.accordion #step-1, .accordion #step-2, .accordion #step-3').find('.place-holder-text').hide();
-//      $('.accordion #step-1, .accordion #step-2, .accordion #step-3').find('.commission-visit-info').show();
-// }
-
 ////////////////////////////////////// THE BOND //////////////////////////////////////
 $("#order-security-bond-yes").click( function(){
      if($(this).is(':checked')) {
@@ -125,12 +75,6 @@ $("#order-security-bond-no").click( function(){
           $('.dispense-bond-info').slideUp();
      }
 });
-// $("#case-security-bond-dispense").click( function(){
-//      if($(this).is(':checked')) {
-//           $('.bond-answer-hidden').slideUp('slow');
-//           $('.dispense-bond-info').slideDown();
-//      }
-// });
 
 // =================================== Edit Case - START - JAVASCRIPT =================================== //
 $('#edit-case-button').hide();
@@ -234,18 +178,6 @@ $("#confirm-edit-order").click( function(){
 // =================================== Edit Case - END - JAVASCRIPT =================================== //
 
 // =================================== Dispense Bond - START - JAVASCRIPT =================================== //
-// $('#dispense-bond-true').hide();
-
-// $("#bond-dispense").keyup(function() {
-//      if ($(this).val() == 'dispense the bond') {
-//           $('#dispense-bond-true').show();
-//           $('#dispense-bond-false').hide();
-//      } else {
-//           $('#dispense-bond-true').hide();
-//           $('#dispense-bond-false').show();
-//      }
-//
-// });
 $("#dispense-bond-true").on("click", function (e) {
      $('.bond-answer-hidden').slideUp('slow');
      $('.why-edit-bond').slideUp('slow');

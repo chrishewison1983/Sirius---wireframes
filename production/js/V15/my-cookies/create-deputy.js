@@ -23,15 +23,20 @@ $("#add-deputy-step-1").on("click", function (e) {
      $.cookie("create-deputy-step-1", true, {path:'/'});
 
      // DEPUTY PERSONAL DETAILS
+     $.cookie("deputy-type", $("#deputy-type").val(), {path:'/'});
+     $.cookie("deputy-organisation", $("input[name=deputy-organisation]:checked").val(), {path:'/'});
      $.cookie("deputy-title", $("#deputy-title").val(), {path:'/'});
      $.cookie("deputy-title-other", $("#deputy-title-other").val(), {path:'/'});
      $.cookie("deputy-first-name", $("#deputy-first-name").val(), {path:'/'});
      $.cookie("deputy-middle-name", $("#deputy-middle-name").val(), {path:'/'});
      $.cookie("deputy-last-name", $("#deputy-last-name").val(), {path:'/'});
-     $.cookie("deputy-previous-name", $("#deputy-previous-name").val(), {path:'/'});
+     $.cookie("deputy-correspondence-name", $("#deputy-correspondence-name").val(), {path:'/'});
+     $.cookie("deputy-organisation-name", $("#deputy-organisation-name").val(), {path:'/'});
+     $.cookie("deputy-company-ref", $("#deputy-company-ref").val(), {path:'/'});
      $.cookie("deputy-dob-day", $("#deputy-dob-day").val(), {path:'/'});
      $.cookie("deputy-dob-month", $("#deputy-dob-month").val(), {path:'/'});
      $.cookie("deputy-dob-year", $("#deputy-dob-year").val(), {path:'/'});
+     $.cookie("deputy-previous-name", $("#deputy-previous-name").val(), {path:'/'});
      $.cookie("deputy-address-line-1", $("#deputy-address-line-1").val(), {path:'/'});
      $.cookie("deputy-address-line-2", $("#deputy-address-line-2").val(), {path:'/'});
      $.cookie("deputy-address-line-3", $("#deputy-address-line-3").val(), {path:'/'});
@@ -79,7 +84,7 @@ $("#add-deputy-step-3, #add-another-deputy").on("click", function (e) {
      $.cookie("create-deputy-step-3", true, {path:'/'});
 
      // DEPUTY CASE DETAILS
-     $.cookie("deputy-type", $("#deputy-type").val(), {path:'/'});
+     $.cookie("deputy-type", $("#deputy-type-order").val(), {path:'/'});
      $.cookie("deputy-relationship", $("#deputy-relationship").val(), {path:'/'});
      $.cookie("deputy-status", $("#deputy-status").val(), {path:'/'});
      // Other - these are dependent on other values
@@ -92,7 +97,7 @@ $("#add-deputy-step-3, #add-another-deputy").on("click", function (e) {
 
 // DEPUTY CASE DETAILS
 if ($.cookie("deputy-type")) {
-     $("#deputy-type").val($.cookie("deputy-type"));
+     $("#deputy-type-order").val($.cookie("deputy-type"));
 
      $('#deputy-relationship').parent().removeClass('read-only');
      $('#deputy-relationship').removeAttr('disabled');
@@ -131,6 +136,9 @@ if ($.cookie("deputy-type") == 'Lay') {
      $("#deputy-relationship").val($.cookie("deputy-relationship"));
      $("#edit-deputy-relationship").val($.cookie("deputy-relationship"));
      $(".deputy-relationship-answer").text($.cookie("deputy-relationship"));
+
+     // Hide the company info
+     $('.deputy-company-info').hide();
 }
 // VALUES for: deputy-type - PROFESSIONAL
 if ($.cookie("deputy-type") == 'Professional') {
@@ -158,12 +166,19 @@ if ($.cookie("deputy-type") == 'Professional') {
      $("#deputy-relationship").val($.cookie("deputy-relationship"));
      $("#edit-deputy-relationship").val($.cookie("deputy-relationship"));
      $(".deputy-relationship-answer").text($.cookie("deputy-relationship"));
+
+     // Show the company info
+     $('.deputy-company-info').show();
 }
 // VALUES for: deputy-type - PUBLIC AUTHORITY
 if ($.cookie("deputy-type") == 'Public authority') {
      $('.relationship-lay').hide();
      $('.relationship-professional').hide();
      $('.relationship-public').show();
+
+     // Hides other elements of the form for Step 2
+     $('.form-deputy-occupation, .form-deputy-special, .form-deputy-interpreter').hide();
+     $('.form-deputy-correspondence .welsh-correspondence').hide();
 
      $('.edit-relationship-lay').hide();
      $('.edit-relationship-professional').hide();
@@ -179,6 +194,13 @@ if ($.cookie("deputy-type") == 'Public authority') {
      $("#deputy-relationship").val($.cookie("deputy-relationship"));
      $("#edit-deputy-relationship").val($.cookie("deputy-relationship"));
      $(".deputy-relationship-answer").text($.cookie("deputy-relationship"));
+
+     // Show the company info
+     $('.deputy-company-info').show();
+
+     // Hide the company info
+     $('.non-company-info').hide();
+
 }
 
 if ($.cookie("deputy-relationship")) {
@@ -241,8 +263,17 @@ if ($.cookie("deputy-main-correspondent") == 'true') {
      $(".deputy-main-correspondent-answer").text('No');
 }
 
+// COMPANY DETAILS
+if ($.cookie("deputy-organisation") == 'undefined') {
+     $('.deputy-organisation-answer').text('Yes');
+} else {
+     $('.deputy-organisation-answer').text($.cookie("deputy-organisation"));
+}
+if ($.cookie("deputy-correspondence-name")) { $('.deputy-correspondence-name-answer').text($.cookie("deputy-correspondence-name")); }
+if ($.cookie("deputy-organisation-name")) { $('.deputy-organisation-name-answer').text($.cookie("deputy-organisation-name")); }
+if ($.cookie("deputy-company-ref")) { $('.deputy-company-ref-answer').text($.cookie("deputy-company-ref")); }
 
-// DEPUTY PERSONAL DETAILS
+// DEPUTY DETAILS
 if ($.cookie("deputy-title") == 'Other') {
      $("#edit-deputy-title").val($.cookie("deputy-title-other"));
      $(".deputy-title-answer").text($.cookie("deputy-title-other"));

@@ -31,7 +31,7 @@
                     </nav>
                     <h1>
                          <!-- <div class="deputy-name-answer">Joe</div>'s personal details -->
-                         Add personal details
+                         Add deputy details
                     </h1>
                </div>
           </div>
@@ -126,12 +126,40 @@
                     <form class="add-deputy-form">
 
                          <!-- <h2 class="section-title">Add <div class="deputy-name-answer">Joe</div>'s personal details</h2> -->
-                         <h2 class="section-title">Add personal details</h2>
+                         <h2 class="section-title">Add deputy details</h2>
 
                          {{= it.include('errors/deputy-dob.html') }}
 
                          <!-- // FORM ITEM - 1a - START // -->
                          <div class="form-group">
+                              <label for="deputy-type">Type of deputy <span class="required">*</span></label>
+                              <select id="deputy-type" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option value="Lay">Lay</option>
+                                   <option value="Professional">Professional</option>
+                                   <option value="Public authority">Public authority</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1a - END // -->
+
+                         <!-- // FORM ITEM - 1b - START // -->
+                         <div class="form-deputy-company-info">
+                              <div class="form-group form-deputy-company-organisation">
+                                   <legend>Is this an Organisation?<span class="required">*</span></legend>
+                                   <label for="deputy-organisation-yes" class="radio">
+                                        <input id="deputy-organisation-yes" type="radio" name="deputy-organisation" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="deputy-organisation-no" class="radio">
+                                        <input id="deputy-organisation-no" type="radio" name="deputy-organisation" value="No">
+                                        No
+                                   </label>
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 1b - END // -->
+
+                         <!-- // FORM ITEM - 2a - START // -->
+                         <div class="form-group form-deputy-title">
                               <label for="deputy-title">Title</label>
                               <select id="deputy-title">
                                    <option>-- Select --</option>
@@ -145,45 +173,55 @@
                                    <option value="Other">Other</option>
                               </select>
                          </div>
-                         <!-- // FORM ITEM - 1a - END // -->
+                         <!-- // FORM ITEM - 2a - END // -->
 
-                         <!-- // FORM ITEM - 1b - START // -->
+                         <!-- // FORM ITEM - 2b - START // -->
                          <div class="form-group deputy-title-other-answer">
                               <label for="deputy-title-other">Other - please specify</label>
                               <input id="deputy-title-other" name="other-title-other" type="text">
                          </div>
-                         <!-- // FORM ITEM - 1b - END // -->
-
-                         <!-- // FORM ITEM - 2 - START // -->
-                         <div class="form-group">
-                              <label for="deputy-first-name">First name <span class="required">*</span></label>
-                              <input id="deputy-first-name" name="deputy-first-name" type="text" value="" class="test">
-                         </div>
-                         <!-- // FORM ITEM - 2 - END // -->
+                         <!-- // FORM ITEM - 2b - END // -->
 
                          <!-- // FORM ITEM - 3 - START // -->
-                         <div class="form-group">
-                              <label for="deputy-middle-name">Middle names</label>
-                              <input id="deputy-middle-name" name="deputy-middle-name" type="text">
+                         <div class="form-group form-deputy-first-name">
+                              <label for="deputy-first-name">First name <span class="required">*</span></label>
+                              <input id="deputy-first-name" name="deputy-first-name" type="text" value="" class="test">
                          </div>
                          <!-- // FORM ITEM - 3 - END // -->
 
                          <!-- // FORM ITEM - 4 - START // -->
-                         <div class="form-group">
-                              <label for="deputy-last-name">Last name <span class="required">*</span></label>
-                              <input id="deputy-last-name" name="deputy-last-name" type="text" value="" class="test">
+                         <div class="form-group form-deputy-middle-name">
+                              <label for="deputy-middle-name">Middle names</label>
+                              <input id="deputy-middle-name" name="deputy-middle-name" type="text">
                          </div>
                          <!-- // FORM ITEM - 4 - END // -->
 
                          <!-- // FORM ITEM - 5 - START // -->
-                         <div class="form-group">
-                              <label for="deputy-previous-name">Previously Known As</label>
-                              <input id="deputy-previous-name" name="company-name" type="text">
+                         <div class="form-group form-deputy-last-name">
+                              <label for="deputy-last-name">Last name <span class="required">*</span></label>
+                              <input id="deputy-last-name" name="deputy-last-name" type="text" value="" class="test">
                          </div>
                          <!-- // FORM ITEM - 5 - END // -->
 
                          <!-- // FORM ITEM - 6 - START // -->
-                         <div class="form-group" id="dob-error">
+                         <div class="form-deputy-company-info">
+                              <div class="form-group form-deputy-correspondence-name">
+                                   <label for="deputy-correspondence-name">Correspondence Name<span class="required">*</span></label>
+                                   <input id="deputy-correspondence-name" name="deputy-correspondence-name" type="text">
+                              </div>
+                              <div class="form-group form-deputy-organisation-name">
+                                   <label for="deputy-organisation-name">Organisation Name<span class="required">*</span></label>
+                                   <input id="deputy-organisation-name" name="deputy-organisation-name" type="text">
+                              </div>
+                              <div class="form-group form-deputy-company-ref">
+                                   <label for="deputy-company-ref">Company reference<span class="required">*</span></label>
+                                   <input id="deputy-company-ref" name="deputy-company-ref" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group form-deputy-dob" id="dob-error">
                               <label for="deputy-dob">Date of birth</label>
                               <span class="error-text too-young">The deputy must be older than 18 years of age</a></span>
                               <span class="error-text too-old">The deputy cannot be born before 1879</a></span>
@@ -194,9 +232,16 @@
                                    <input id="deputy-dob-year" class="input-length four" name="deputy-dob-year" type="text" placeholder="" maxlength="4">
                               </div>
                          </div>
-                         <!-- // FORM ITEM - 6 - END // -->
+                         <!-- // FORM ITEM - 7 - END // -->
 
-                         <!-- // FORM ITEM - 7 - START // -->
+                         <!-- // FORM ITEM - 8 - START // -->
+                         <div class="form-group form-deputy-previous-name">
+                              <label for="deputy-previous-name">Previously Known As</label>
+                              <input id="deputy-previous-name" name="company-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 8 - END // -->
+
+                         <!-- // FORM ITEM - 9a - START // -->
                          <div class="form-group">
                               <label for="deputy-address-line-1">Address</label>
                               <input id="deputy-address-line-1" name="deputy-address-line-1" type="text" value="">
@@ -233,16 +278,16 @@
                                    <option value="Outside">Outside of the British Isles</option>
                               </select>
                          </div>
-                         <!-- // FORM ITEM - 7 - END // -->
+                         <!-- // FORM ITEM - 9a - END // -->
 
-                         <!-- // FORM ITEM - 7b - START // -->
+                         <!-- // FORM ITEM - 9b - START // -->
                          <div class="form-group deputy-outside-uk">
                               <label for="deputy-country-description">Please provide the name of the country outside of the British Isles</label>
                               <input id="deputy-country-description" name="deputy-phone-number" type="text">
                          </div>
-                         <!-- // FORM ITEM - 7b - END // -->
+                         <!-- // FORM ITEM - 9b - END // -->
 
-                         <!-- // FORM ITEM - 9 - START // -->
+                         <!-- // FORM ITEM - 10 - START // -->
                          <div class="form-group deputy-airmail-required">
                               <legend>Is airmail required?</legend>
                               <label for="deputy-airmail-yes" class="radio">
@@ -254,28 +299,28 @@
                                    No
                               </label>
                          </div>
-                         <!-- // FORM ITEM - 9 - END // -->
-
-                         <!-- // FORM ITEM - 10 - START // -->
-                         <div class="form-group">
-                              <label for="deputy-phone-number">Daytime telephone number</label>
-                              <input id="deputy-phone-number" name="deputy-phone-number" type="text" class="half">
-                         </div>
                          <!-- // FORM ITEM - 10 - END // -->
 
                          <!-- // FORM ITEM - 11 - START // -->
                          <div class="form-group">
-                              <label for="deputy-mob-number">Mobile telephone number</label>
-                              <input id="deputy-mob-number" name="deputy-mob-number" type="text" class="half">
+                              <label for="deputy-phone-number">Daytime telephone number</label>
+                              <input id="deputy-phone-number" name="deputy-phone-number" type="text" class="half">
                          </div>
                          <!-- // FORM ITEM - 11 - END // -->
 
                          <!-- // FORM ITEM - 12 - START // -->
                          <div class="form-group">
+                              <label for="deputy-mob-number">Mobile telephone number</label>
+                              <input id="deputy-mob-number" name="deputy-mob-number" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 12 - END // -->
+
+                         <!-- // FORM ITEM - 13 - START // -->
+                         <div class="form-group">
                               <label for="deputy-email">Email address</label>
                               <input id="deputy-email" name="email" type="text">
                          </div>
-                         <!-- // FORM ITEM - 12 - END // -->
+                         <!-- // FORM ITEM - 13 - END // -->
 
                          <!-- // FORM ITEM - 13 - START // -->
                          <!-- <div class="form-group">

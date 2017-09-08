@@ -5,7 +5,7 @@
 {{= it.include('main-nav-sub-section.html') }}
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default">
+<main class="default deputy-details-page">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header" class="deputy-page">
@@ -20,9 +20,12 @@
                          <span>Deputy details</span>
                     </nav>
                     <h1>
-                         <span class="type">deputy</span> Mrs Kate Eloise Smith
+                         <span class="type">lay<br>deputy</span> <div class="summary-deputy-name">Mrs Kate Eloise Smith</div>
+                         <span class="deputy-status">Deputies summary page</span>
+                         <span class="deceased">Deputy is deceased</span>
                     </h1>
                </div>
+
           </div>
 
           <div class="colour-wrapper"></div>
@@ -34,186 +37,72 @@
 
           <div class="row">
 
-               <div class="large-8 large-uncentered columns side-panel-parent">
+               <div class="large-9 large-uncentered columns">
 
-                    <!-- ////////// SIDE PANEL - START ////////// -->
-                    <div id="side-panel">
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="tabs">
+                         <li class="tab-link current" data-tab="tab-1">Details</li>
+                         <li class="tab-link" data-tab="tab-2">Client/s</li>
+                         <li class="tab-link" data-tab="tab-3">Warnings</li>
+                         <li class="tab-link" data-tab="tab-4">Timeline</li>
+                         <li class="tab-link" data-tab="tab-5">Documents</li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
 
-                         <!-- =========== TABS - START =========== -->
-                         <ul id="side-panel-tabs" class="tabs">
-                              <li class="tab-link current" data-tab="tab-1">
-                                   <span class="client-details"></span>
-                                   <p>Client/s</p>
-                              </li>
-                              <li class="tab-link" data-tab="tab-2">
-                                   <span class="documents"></span>
-                                   <p>Documents</p>
-                              </li>
-                         </ul>
-                         <!-- =========== TABS - END =========== -->
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content current">
 
-                         <!-- =========== TAB CONTENT - 1 - START =========== -->
-                         <div id="tab-1" class="tab-content side-panel current">
-
-                              {{= it.include('side-panel/multiple-client-details.html') }}
-
-                         </div>
-                         <!-- =========== TAB CONTENT - 1 - END =========== -->
-
-                         <!-- =========== TAB CONTENT - 2 - START =========== -->
-                         <div id="tab-3" class="tab-content side-panel">
-
-                              {{= it.include('side-panel/document-viewer.html') }}
-
-                         </div>
-                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+                         {{= it.include('side-panel/deputy-summary-details.html') }}
 
                     </div>
-                    <!-- ////////// SIDE PANEL - END ////////// -->
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content">
+
+                         {{= it.include('side-panel/multiple-client-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content">
+
+                         {{= it.include('side-panel/warnings-health.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content">
+
+                         {{= it.include('side-panel/timeline-health.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+                    <div id="tab-5" class="tab-content">
+
+                         <h2 class="description-title">
+                              Deputy documents
+                              <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a>
+                         </h2>
+
+                         {{= it.include('side-panel/document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
 
                </div>
 
-               <!-- // CREATE DEPUTY - START // -->
-               <div id="action-panel" class="large-4 large-uncentered columns">
+               <div class="large-3 large-uncentered columns">
 
-                    <div class="check-details">
-
-                         <h2 class="section-title">
-                              Personal details:
-                              <!-- <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="edit deputy-1">Edit</a> -->
-                         </h2>
-
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Name:</p>
-                              <p class="answer">Mrs Kate Eloise Smith</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
-
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Previously Known As:</p>
-                              <p class="answer">Mrs Kate Eloise Taylor</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
-
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Date of birth:</p>
-                              <p class="answer">21/09/1976</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
-
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Address:</p>
-                              <p class="answer">
-                                   39 Marlborough Crescent,<br>
-                                   Stevenage,<br>
-                                   South Malling,<br>
-                                   BN7 8LQ.<br>
-                                   England
-                              </p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
-
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is airmail required?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
-
-                         <!-- // DEPUTY ITEM - 6 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Daytime telephone number:</p>
-                              <p class="answer">01314993038</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
-
-                         <!-- // DEPUTY ITEM - 7 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Mobile telephone number:</p>
-                              <p class="answer">07840657726</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 7 - END // -->
-
-                         <!-- // DEPUTY ITEM - 8 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Email address:</p>
-                              <p class="answer">kate.smith@jourrapide.com</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 8 - END // -->
-
-                         <!-- // DEPUTY ITEM - 9 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Is the deputy a violent risk?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 9 - END // -->
-
-                         <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="main-cta secondary edit">Edit personal details</a>
-
-                         <h2 class="section-title">
-                              Additional information:
-                              <!-- <a href="../5-add-deputy/5d-additional-info.html#edit-deputy-1" class="edit deputy-1">Edit</a> -->
-                         </h2>
-
-                         <!-- // DEPUTY ITEM - 1 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Digital?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 1 - END // -->
-
-                         <!-- // DEPUTY ITEM - 2 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Occupation:</p>
-                              <p class="answer">Embalmer (Retired)</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 2 - END // -->
-
-                         <!-- // DEPUTY ITEM - 3 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Has the deputy expressed a preferred method of contact?:</p>
-                              <ul class="answer">
-                                   <li>Email</li>
-                              </ul>
-                         </div>
-                         <!-- // DEPUTY ITEM - 3 - END // -->
-
-                         <!-- // DEPUTY ITEM - 4 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Special correspondence requirements:</p>
-                              <p class="answer">None</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 4 - END // -->
-
-                         <!-- // DEPUTY ITEM - 5 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Interpreter required?:</p>
-                              <div class="mulitple-answers">
-                                   <p class="answer">No</p>
-                              </div>
-                         </div>
-                         <!-- // DEPUTY ITEM - 5 - END // -->
-
-                         <!-- // DEPUTY ITEM - 6 - START // -->
-                         <div class="person-detail-item">
-                              <p class="item">Newsletter?:</p>
-                              <p class="answer">No</p>
-                         </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
-
-                         <a href="../5-add-deputy/5c-additional-info.html#edit-deputy-1" class="main-cta secondary edit">Edit additional info</a>
-
-                    </div>
+                    {{= it.include('actions-deputy.html') }}
 
                </div>
-               <!-- // CREATE DEPUTY - END // -->
 
           </div>
-
 
      </div>
      <!-- CONTENT WRAPPER - END -->

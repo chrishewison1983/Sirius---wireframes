@@ -8,6 +8,16 @@
      position: relative;
 }
 
+#filter-results {
+     color: $main-colour;
+     // background: $blue;
+     border-bottom: 3px dashed $blue-grey;
+     display: none;
+     width: 100%;
+     margin-bottom: 2.5em;
+     padding: 0 0 1em 0;
+}
+
 #filter-panel {
      #scroller {
           display: inline-block;
@@ -31,7 +41,7 @@
                          &:last-of-type {
                               border-left: none;
                          }
-                         a {
+                         label, a {
                               display: inline-block;
                               border-radius: $global-border-radius;
                               margin: 0 0.75em 0 0;
@@ -41,6 +51,9 @@
                               font-size: 0.875rem;
                               font-family: $Montserrat;
                               @include standard-transition;
+                              // input {
+                              //      display: inline-block;
+                              // }
                               &:hover {
                                    transform: scale(1.05);
                                    background: $blue-grey;
@@ -48,7 +61,7 @@
                                    background: darken($blue-grey,35%);
                                    color: $white;
                               }
-                              &.active {
+                              &.checked {
                                    background: $green;
                                    color: $white;
                                    border: 3px solid $green;

@@ -128,22 +128,36 @@
 			<div id="filter-panel">
 				<div id="scroller-anchor"></div>
 				<div id="scroller">
-					<nav>
-						<ul>
-							<li><a class="filter-link all-filter active">All</a></li>
-							<li><a class="filter-link supervision-filter">Supervision level</a></li>
-							<li><a class="filter-link order-details-filter">Order details</a></li>
-							<li><a class="filter-link client-details-filter">Client details</a></li>
-							<li><a class="filter-link tasks-filter">Tasks completed</a></li>
-						</ul>
-					</nav>
+					<form>
+						<nav>
+							<ul>
+								<li>
+									<a class="filter-all checked">All</a>
+								</li>
+								<li>
+									<label><input type="checkbox" value="one" name="filter-value">Supervision level</label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="two" name="filter-value">Order details</label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="three" name="filter-value">Client details</label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="four" name="filter-value">Tasks completed</label>
+								</li>
+							</ul>
+						</nav>
+					</form>
 				</div>
 			</div>
 
 			<ol id="vertical-timeline">
 
+				<div id="filter-results">Filter timeline results...</div>
+
 				<!-- DATE INDICATOR - START -->
-				<li class="filter-all date-indicator">
+				<li class="sectionContent date-indicator all">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>Today</div>
@@ -151,7 +165,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
-				<li class="filter-all pdf-review filter-tasks">
+				<li class="sectionContent pdf-review four all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -172,7 +186,7 @@
 				<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 2 - START /////////////////////////// -->
-				<li class="filter-all case filter-supervision">
+				<li class="sectionContent case one all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -196,7 +210,7 @@
 				<!-- /////////////////////////// LI ITEM 2 - END /////////////////////////// -->
 
 				<!-- DATE INDICATOR - START -->
-				<li class="filter-all date-indicator">
+				<li class="sectionContent date-indicator all">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>This week</div>
@@ -204,7 +218,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 3 - START /////////////////////////// -->
-				<li class="filter-all commission-visit filter-tasks">
+				<li class="sectionContent commission-visit four all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -275,7 +289,7 @@
 				<!-- /////////////////////////// LI ITEM 3 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 4 - START /////////////////////////// -->
-				<li class="filter-all case filter-order-details">
+				<li class="sectionContent case two all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -297,7 +311,7 @@
 				<!-- /////////////////////////// LI ITEM 4 - END /////////////////////////// -->
 
 				<!-- DATE INDICATOR - START -->
-				<li class="filter-all date-indicator">
+				<li class="sectionContent date-indicator all">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>This month</div>
@@ -305,7 +319,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 5 - START /////////////////////////// -->
-				<li class="filter-all case filter-supervision">
+				<li class="sectionContent case one all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -329,7 +343,7 @@
 				<!-- /////////////////////////// LI ITEM 5 - END /////////////////////////// -->
 
 				<!-- DATE INDICATOR - START -->
-				<li class="filter-all date-indicator">
+				<li class="sectionContent date-indicator all">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>Older</div>
@@ -337,7 +351,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 6 - START /////////////////////////// -->
-				<li class="filter-all client filter-supervision">
+				<li class="sectionContent client one all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -365,7 +379,7 @@
 				<!-- /////////////////////////// LI ITEM 6 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 7 - START /////////////////////////// -->
-				<li class="filter-all case filter-supervision">
+				<li class="sectionContent case one all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -389,7 +403,7 @@
 				<!-- /////////////////////////// LI ITEM 7 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 8 - START /////////////////////////// -->
-				<li class="filter-all case filter-order-details">
+				<li class="sectionContent case two all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -413,7 +427,7 @@
 				<!-- /////////////////////////// LI ITEM 8 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 9 - START /////////////////////////// -->
-				<li class="filter-all client filter-client-details">
+				<li class="sectionContent client three all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -436,7 +450,7 @@
 				<!-- /////////////////////////// LI ITEM 9 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 10 - START /////////////////////////// -->
-				<li class="filter-all client filter-client-details">
+				<li class="sectionContent client three all">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -460,7 +474,7 @@
 				<!-- /////////////////////////// LI ITEM 10 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 11 - START /////////////////////////// -->
-				<li class="filter-all client filter-client-details">
+				<li class="sectionContent client three all">
 
 					<span class="dot"></span>
 					<span class="border"></span>

@@ -22,7 +22,7 @@ $(document).ready(function () {
      if (window.location.href.indexOf("violent") != -1) {
           // Change the client status
           $("#section-header.client-page").removeClass('welsh-message, deceased-message').addClass('violent-risk-message');
-          $("#section-header.client-page .normal-status").hide();
+          $("#section-header.client-page .normal-status, #section-header.client-page .type").hide();
 
           $('.new-client .client-nav').addClass('violent');
      }
@@ -31,14 +31,14 @@ $(document).ready(function () {
      if (window.location.href.indexOf("welsh") != -1) {
           // Change the client status
           $("#section-header.client-page").removeClass('violent-risk-message, deceased-message').addClass('welsh-message');
-          $("#section-header.client-page .normal-status").hide();
+          $("#section-header.client-page .normal-status, #section-header.client-page .type").hide();
      }
 
      // Show the state when the client is deceased
      if (window.location.href.indexOf("deceased") != -1) {
           // Change the client status
           $("#section-header.client-page").removeClass('violent-risk-message, welsh-message').addClass('deceased-message');
-          $("#section-header.client-page .normal-status").hide();
+          $("#section-header.client-page .normal-status, #section-header.client-page .type").hide();
      }
 
      // Changes the tabs to be focused on the Health & Welfare tab

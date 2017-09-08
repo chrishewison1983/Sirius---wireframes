@@ -35,6 +35,11 @@ main {
           position: relative;
           // padding: 3em;
           @include standard-transition;
+          &.deputy-details-page {
+               .content-wrapper {
+                    padding: 1em 0 0 0;
+               }
+          }
           .content-wrapper {
                padding: 1em 0 0 0;
                &.commission-visit {
@@ -51,9 +56,9 @@ main {
                #list-of-summary {
                     padding: 0 0 3em 0;
                }
-               #client-details {
-                    margin-top: 2em;
-               }
+               // #client-details {
+               //      margin-top: 2em;
+               // }
           }
           // #client-property, #client-health {
           //      .case-info {
@@ -157,7 +162,7 @@ h1, h2, h3, h4 {
      }
      a, strong {
           color: $blue;
-          &.edit, &.add-deputies, &.add, &.hide-item {
+          &.edit, &.add-deputies, &.add, &.hide-item, &.view {
                float: right;
                font-size: 1rem;
                text-transform: inherit;
@@ -191,6 +196,10 @@ h1, h2, h3, h4 {
                     background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
                     background-size: 1em;
                }
+          }
+          &.view {
+               background: url(#{$image-path}/icons/eye-open-blue.svg) no-repeat 0% 50%;
+               background-size: 1.25em;
           }
      }
      img.document-item {
@@ -381,7 +390,7 @@ a {
      .hashtag {
           color: $black;
      }
-     &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back, &.document {
+     &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back, &.document, &.view {
           float: right;
           font-size: 1rem;
           text-transform: inherit;
@@ -403,6 +412,10 @@ a {
           background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
           background-size: 1em;
      }
+     &.view {
+          background: url(#{$image-path}/icons/eye-open-blue.svg) no-repeat 0% 50%;
+          background-size: 1.25em;
+     }
      &.delete {
           background: url(#{$image-path}/icons/delete-blue.svg) no-repeat 0% 50%;
           background-size: 1em;
@@ -423,7 +436,7 @@ a {
           background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
           background-size: 0.65em;
      }
-     &.full-details {
+     &.full-details, &.view-full-details {
           font-family: $Montserrat;
           margin: 0.5em 0 0 0;
           padding: 0 0 0 1.75em;

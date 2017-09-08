@@ -114,31 +114,61 @@
 
                               <!-- // FORM ITEM - 1 - START // -->
                               <div class="form-group">
-                                   <label for="event-type">Event type</label>
+                                   <label for="event-type">Event type <span class="required">*</span></label>
                                    <select id="event-type" class="full-width">
                                         <option value="">-- Select --</option>
                                         <option value="Call">Call</option>
+                                        <option value="Case note">Case note</option>
+                                        <option value="Complaint">Complaint</option>
+                                        <option value="Correspondence">Correspondence</option>
                                         <option value="Email">Email</option>
                                         <option value="Order">Order</option>
+                                        <option value="Report - Financial Evidence">Report - Financial Evidence</option>
+                                        <option value="Report - general">Report - general</option>
+                                        <option value="Call">Call</option>
                               	</select>
                               </div>
                               <!-- // FORM ITEM - 1 - END // -->
 
                               <!-- // FORM ITEM - 2 - START // -->
-                              <div class="form-group">
-                                   <label for="event-subject">Subject</label>
-                                   <input id="event-subject" name="event-subject" type="text" value="">
+                              <div class="form-group order-type">
+                                   <legend>Direction</legend>
+                                   <label for="event-direction-inbound" class="radio">
+                                        <input id="event-direction-inbound" type="radio" name="event-direction" value="Inbound">
+                                        Inbound
+                                   </label>
+                                   <label for="event-direction-outbound" class="radio">
+                                        <input id="event-direction-outbound" type="radio" name="event-direction" value="Outbound">
+                                        Outbound
+                                   </label>
                               </div>
                               <!-- // FORM ITEM - 2 - END // -->
 
                               <!-- // FORM ITEM - 3 - START // -->
-                              <div class="form-group event-notes">
-                                   <label for="event-notes">Notes</label>
-                                   <textarea name="textarea" class="jqte-test" id="event-notes"></textarea>
+                              <div class="form-group">
+                                   <label for="datepicker">Date <span class="required">*</span></label>
+                                   <div class="date-wrapper">
+                                        <input type="text" id="datepicker">
+                                        <i class="date"></i>
+                                   </div>
                               </div>
                               <!-- // FORM ITEM - 3 - END // -->
 
                               <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <label for="event-subject">Subject</label>
+                                   <input id="event-subject" name="event-subject" type="text" value="">
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group event-notes">
+                                   <label for="event-notes">Notes <span class="required">*</span></label>
+                                   <textarea name="textarea" class="jqte-test" id="event-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
                               <div class="form-group">
                                    <label for="dropzone">File Upload</label>
                                    <div id="dropzone">
@@ -150,7 +180,7 @@
                                         </form>
                                    </div>
                               </div>
-                              <!-- // FORM ITEM - 4 - END // -->
+                              <!-- // FORM ITEM - 6 - END // -->
 
                          </form>
 

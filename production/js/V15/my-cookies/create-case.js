@@ -571,8 +571,8 @@ $('.secondary-bond').hide();
 
 if ($.cookie('bond-amount') == '150,000' && $.cookie('bond-value') == '150,000') {
      $('.secondary-bond').hide();
-     $('#edit-bond').removeClass('warning');
+     $('#edit-bond').parent().removeClass('warning');
 } else {
      $('.secondary-bond').show();
-     $('#edit-bond').addClass('warning');
+     $('#edit-bond').parent().addClass('warning');
 }

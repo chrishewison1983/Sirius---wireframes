@@ -4,17 +4,6 @@
 */
 
 // =====================================  Autocomplete drop down - START ===================================== //
-#side-panel {
-     a.main-cta, a.edit, a.delete {
-          display: none;
-     }
-     #draft-list {
-          a.main-cta, a.edit, a.delete {
-               display: inline-block;
-          }
-     }
-}
-
 .pin-wrapper {
      // float: left;
      // // width: 66.66667%;
@@ -43,15 +32,51 @@
           .check-details {
                padding-bottom: 0 !important;
           }
+          .tab-content.side-panel #documents-viewer {
+               height: 88vh;
+               .page-2.document-viewing-panel {
+                    .wrapper {
+                         height: 76vh;
+                         img {
+                              margin-top: 1em;
+                         }
+                    }
+               }
+               .compare {
+                    .page-1 {
+                         height: 87vh;
+                    }
+                    .page-2.document-viewing-panel {
+                         .wrapper {
+                              height: 80vh;
+                         }
+                    }
+               }
+          }
+          .tab-content.side-panel {
+               #client-details, #documents-viewer, #commission-visit, #create-case, #drafts, #documents-contacts, #deputy-details,
+               #new-deputy-details-summary {
+                    padding-bottom: 0;
+               }
+          }
      }
-}
-
-#side-panel {
+     a.main-cta, a.edit, a.delete, a.add {
+          display: none;
+     }
+     .description-title {
+          padding-top: 0;
+          width: 97%;
+     }
+     #draft-list {
+          a.main-cta, a.edit, a.delete {
+               display: inline-block;
+          }
+     }
      &.sticky {
           margin-top: 1em;
      }
      .tab-content.side-panel {
-          #client-details, #documents-viewer, #commission-visit, #create-case, #drafts, #documents-contacts, #deputy-details,
+          #client-details, #commission-visit, #create-case, #drafts, #documents-contacts, #deputy-details,
           #new-deputy-details-summary {
                height: 86vh;
                overflow-y: scroll;
@@ -67,6 +92,36 @@
                     width: 97.5%;
                }
           }
+          #documents-viewer {
+               height: 74vh;
+               padding-bottom: 0;
+               overflow-y: hidden;
+               overflow-x: hidden;
+               overflow: visible;
+               .page-1 {
+                    overflow-y: scroll;
+                    height: 74vh;
+               }
+               .page-2.document-viewing-panel {
+                    height: 86vh;
+                    padding-top: 5em;
+                    .wrapper {
+                         height: 64vh;
+                         overflow-y: scroll;
+                    }
+               }
+               .compare {
+                    .page-2.document-viewing-panel {
+                         padding-top: 3.75em;
+                         .wrapper {
+                              height: 66vh;
+                              img {
+                                   margin-top: 0;
+                              }
+                         }
+                    }
+               }
+          }
           .check-details {
                float: left;
                width: 100%;
@@ -75,32 +130,6 @@
                }
           }
      }
-     &.viewport-bottom {
-          .tab-content.side-panel {
-               #client-details, #documents-viewer, #commission-visit, #create-case, #drafts, #documents-contacts, #deputy-details,
-               #new-deputy-details-summary {
-                    padding-bottom: 0;
-               }
-          }
-     }
-}
-
-#side-panel {
-     .tab-content.side-panel {
-          #documents-viewer {
-               overflow-y: inherit;
-               overflow-x: inherit;
-               .page-1 {
-                    overflow-y: scroll;
-                    overflow-x: hidden;
-                    height: 86vh;
-               }
-          }
-     }
-}
-
-
-#side-panel {
      // float: right !important;
      #recipients, .document, #asset-summary, #documents {
           display: inline-block;
@@ -196,10 +225,13 @@
      }
 }
 
-.new-client {
+.new-client, .deputy-details-page {
      #documents-viewer {
           max-height: inherit;
           overflow-y: inherit;
+          table.livelink-documents {
+               width: 100%;
+          }
      }
 }
 

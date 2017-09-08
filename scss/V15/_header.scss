@@ -55,18 +55,6 @@ header {
           border-right: 1px solid $white;
           z-index: 100;
           box-shadow: 10px 0px 20px 0px rgba($black,0.2);
-          // @include standard-transition;
-          // &.shrink {
-          //      width: 4.875%;
-          //      .logo {
-          //           display: inline-block;
-          //           width: 3em;
-          //           height: 3em;
-          //           margin: 0 0 0 -0.35em;
-          //           background: url(#{$image-path}/sirius-logo-small.svg) no-repeat 50% 50%;
-          //           background-size: cover;
-          //      }
-          // }
           .logo, .create-client, .sign-out {
                padding: 1.5em 0.75em;
                text-align: center;
@@ -141,20 +129,12 @@ header {
                }
           }
           .create-client {
-               // margin: 1.5em 0.75em;
-               // width: auto;
-               // height: 2.65em;
-               // padding: 0.25em 0;
                background: none;
                border: none;
                &:hover {
                     background: none;
-                    // .nav-icon {
-                    //      transform: none;
-                    // }
                }
                .nav-icon {
-                    // margin: 0.25em 0;
                     width: 100%;
                     height: 2.5em;
                     border-radius: $global-border-radius;
@@ -190,75 +170,6 @@ header {
                     background-size: 1.5em;
                }
           }
-          // nav {
-          //      img {
-          //           width: 100%;
-          //           padding-bottom: 1.5em;
-          //           margin-bottom: 1.5em;
-          //           // border-bottom: 2px solid rgba($white,0.3);
-          //      }
-          //      ul {
-          //           margin: 0;
-          //           display: inline-block;
-          //           width: 100%;
-          //           border-top: 1px dashed rgba($white, 0.3);
-          //           li {
-          //                list-style: none;
-          //                margin: 0;
-          //                width: 100%;
-          //                display: inline-block;
-          //                padding-bottom: 1.5em;
-          //                &.constant-cta {
-          //                     padding: 0;
-          //                     // border-top: 2px dashed rgba($white, 0.3);
-          //                     // border-bottom: 2px dashed rgba($white, 0.3);
-          //                }
-          //                &.actions {
-          //                     padding: 0 0 1.5em 0;
-          //                }
-          //                &.create-letter {
-          //                     a {
-          //                          .nav-icon {
-          //                               background: url(#{$image-path}/icons/create-letter.svg) no-repeat 50% 50%;
-          //                               background-size: cover;
-          //                          }
-          //                     }
-          //                }
-          //                a {
-          //                     color: $white;
-          //                     display: inline-block;
-          //                     width: 100%;
-          //                     border-bottom: none;
-          //                     font-family: $Opensans-Regular;
-          //                }
-          //           }
-          //      }
-          // }
-          // .minimise {
-          //      position: absolute;
-          //      bottom: 0;
-          //      right: -3em;
-          //      height: 4.3em;
-          //      width: 3em;
-          //      text-indent: -1000em;
-          //      border-radius: 0 5px 5px 0;
-          //      @include standard-transition;
-          //      border-left: 1px solid $white;
-          //      box-shadow: inset 10px 0px 20px 0px rgba($black,0.2);
-          //      background: url(#{$image-path}/icons/arrows-left-white.svg) $blue no-repeat 50% 50%;
-          //      background-size: 1.25em;
-          //      &:hover {
-          //           background: darken($blue,5%);
-          //           width: 4em;
-          //           right: -4em;
-          //           background: url(#{$image-path}/icons/arrows-left-white.svg) $blue no-repeat 50% 50%;
-          //           background-size: 1.25em;
-          //      }
-          //      &.open {
-          //           background: url(#{$image-path}/icons/arrows-right-white.svg) $blue no-repeat 50% 50%;
-          //           background-size: 1.25em;
-          //      }
-          // }
      }
 }
 
@@ -286,11 +197,21 @@ header {
           }
      }
      &.client-page, &.deputy-page {
+          padding: 0;
           h1 {
                position: relative;
                padding: 0.275em 0 0 2.5em;
-               margin: 0 0 0.35em 0;
+               // margin: 0 0 0.35em 0;
+               line-height: 0.75;
+               margin: 0.25em 0;
+               font-size: 2.25rem;
+               span {
+                    margin: 0.25em 0 0 0;
+                    line-height: 1;
+               }
                span.type {
+                    line-height: 1.2;
+                    color: darken($blue,10%);
                     @include flexbox;
                     @include align-items(center);
                     @include justify-content(center);
@@ -312,24 +233,11 @@ header {
           }
      }
      &.client-page {
-          padding: 0;
-          h1 {
-               line-height: 0.75;
-               margin: 0.25em 0;
-               font-size: 2.25rem;
-               span {
-                    margin: 0.25em 0 0 0;
-                    line-height: 1;
-                    &.type {
-                         margin: 0 0.5em 0 0;
-                         line-height: 1.2;
-                         color: darken($blue,10%);
-                    }
-               }
-          }
      }
      &.deputy-page {
+          margin-bottom: 1em;
           h1 {
+               margin-bottom: 1em;
                span {
                     &.type {
                          color: darken($green,2.5%);
@@ -339,6 +247,14 @@ header {
           .colour-wrapper {
                background: rgba($green,0.8);
                mix-blend-mode: unset;
+          }
+          &.content-page {
+               margin-bottom: 0;
+               h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 0.65em;
+                    padding: 0;
+               }
           }
      }
      &.violent-risk-message, &.welsh-message, &.deceased-message {
@@ -377,6 +293,7 @@ header {
           h1 {
                background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 0 50%;
                background-size: contain;
+               margin-bottom: 0.75em;
                span.deceased {
                     display: inline-block;
                }

@@ -45,7 +45,7 @@
                          font-size: 0.9rem;
                          font-family: $Montserrat;
                          font-weight: bold;
-                         &.icon {
+                         &.icon, &.text {
                               display: inline-block;
                               width: 3em;
                               height: 3em;
@@ -63,6 +63,10 @@
           // background: rgba($white,0.15);
           margin: -1.5em 0 0 0;
           min-height: 10em;
+          // &.deputy {
+          //      padding: 1em 0 0 0;
+          //      min-height: 8em;
+          // }
           ul {
                li {
                     &:last-of-type {
@@ -104,6 +108,27 @@
                span.icon {
                     background: url(#{$image-path}/icons/create-letter-white.svg) no-repeat 50% 50% $pink;
                     background-size: 1.25em;
+               }
+          }
+          .deputy-delete {
+               span.icon {
+                    background: url(#{$image-path}/icons/delete-white.svg) no-repeat 50% 50% $pink;
+                    background-size: 1.25em;
+               }
+          }
+          .deputy-death {
+               span.text {
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    font-size: 0.375rem;
+                    text-transform: uppercase;
+                    background: $pink;
+                    border-radius: 50%;
+                    color: $white;
+                    width: 8em;
+                    height: 7.5em;
+                    margin-right: 2em;
                }
           }
      }
@@ -213,6 +238,27 @@
                               span.icon {
                                    background: url(#{$image-path}/icons/actions/supervision-level-white.svg) no-repeat 50% 50% $blue;
                                    background-size: 1.25em;
+                              }
+                         }
+                         &.deputy-delete {
+                              span.icon {
+                                   background: url(#{$image-path}/icons/delete-white.svg) no-repeat 50% 50% $pink;
+                                   background-size: 1.25em;
+                              }
+                         }
+                         &.deputy-death {
+                              span.text {
+                                   @include flexbox;
+                                   @include align-items(center);
+                                   @include justify-content(center);
+                                   font-size: 0.375rem;
+                                   text-transform: uppercase;
+                                   background: $pink;
+                                   border-radius: 50%;
+                                   color: $white;
+                                   width: 7.225em;
+                                   height: 7.225em;
+                                   margin-right: 2em;
                               }
                          }
                     }

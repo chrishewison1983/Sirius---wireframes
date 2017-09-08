@@ -252,9 +252,9 @@ form {
           display: inline-block;
           width: 100%;
           margin: 0 0 2em 0;
-          &:last-of-type {
-               margin-bottom: 1em;
-          }
+          // &:last-of-type {
+          //      margin-bottom: 1em;
+          // }
           // &.hidden {
           //      margin-top: -1.5em;
           // }
@@ -558,6 +558,10 @@ form {
           display: inline-block;
           padding: 1.5em 0 0 0;
      }
+}
+
+.form-deputy-company-info {
+     display: none;
 }
 
 #create-client-form {

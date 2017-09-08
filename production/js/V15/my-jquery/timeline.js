@@ -5,47 +5,6 @@ $('#vertical-timeline .more-info').click(function(e){
      $(this).toggleClass('open');
 });
 
-
-// Filter
-$('.filter-link').click(function(e){
-     e.preventDefault();
-     $('.filter-link').removeClass('active');
-     $(this).toggleClass('active');
-});
-
-$('#filter-panel .all-filter').click(function(e){
-     e.preventDefault();
-     $('#vertical-timeline .filter-all').slideDown();
-});
-
-$('#filter-panel .supervision-filter').click(function(e){
-     e.preventDefault();
-     $('.dot.end').show();
-     $('#vertical-timeline .filter-all').slideUp();
-     $('#vertical-timeline .filter-supervision').slideDown();
-});
-
-$('#filter-panel .order-details-filter').click(function(e){
-     e.preventDefault();
-     $('.dot.end').show();
-     $('#vertical-timeline .filter-all').slideUp();
-     $('#vertical-timeline .filter-order-details').slideDown();
-});
-
-$('#filter-panel .client-details-filter').click(function(e){
-     e.preventDefault();
-     $('.dot.end').show();
-     $('#vertical-timeline .filter-all').slideUp();
-     $('#vertical-timeline .filter-client-details').slideDown();
-});
-
-$('#filter-panel .tasks-filter').click(function(e){
-     e.preventDefault();
-     $('.dot.end').show();
-     $('#vertical-timeline .filter-all').slideUp();
-     $('#vertical-timeline .filter-tasks').slideDown();
-});
-
 // Fixes filter bar
 function moveScroller() {
      var $anchor = $("#scroller-anchor");
@@ -90,4 +49,53 @@ $('.show-chart').click(function(e){
 
 $('.show-supervision').click(function(e){
      $('#supervision-timeline').toggle();
+});
+
+// Filter
+
+$('input[value="all"]').change(function(){
+     if($(this).is(":checked")) {
+          $(this).parent().addClass("checked");
+          $('input[name="filter-value"]').parent().removeClass("checked");
+          $('#filter-results').hide();
+     }
+});
+
+$('input[name="filter-value"]').click(function(){
+     var checked = $('#filter-panel').find(':checked').length;
+     if($(this).is(":checked")) {
+          $(this).parent().addClass("checked");
+          $('input[value="all"]').parent().removeClass("checked");
+     }
+     if (!checked)
+         $('.filter-all').addClass('checked');
+         $('#filter-results').hide();
+});
+
+var sections = $('.sectionContent');
+function updateContentVisibility(){
+     var checked = $("#filter-panel :checkbox:checked");
+     if(checked.length){
+          sections.hide();
+          checked.each(function(){
+               $("." + $(this).val()).show();
+          });
+          $('.dot.end').show();
+          $('#filter-results').show();
+          $('.filter-all').removeClass('checked');
+     } else {
+          sections.show();
+     }
+}
+
+$("#filter-panel :checkbox").click(updateContentVisibility);
+updateContentVisibility();
+
+$('.filter-all').click(function(e){
+     e.preventDefault();
+     $('.sectionContent').show();
+     $(this).addClass('checked');
+     $('#filter-panel input').removeAttr('checked');
+     $('#filter-panel input').parent().removeClass('checked');
+     $('#filter-results').hide();
 });

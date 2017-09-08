@@ -1,4 +1,6 @@
 // =================================== Create Deputy - JAVASCRIPT =================================== //
+
+////////////////////////////////////// SEARCH - START //////////////////////////////////////
 // Add deputy
 $(document).ready(function(){
      $('#deputy-added').hide();
@@ -7,41 +9,6 @@ $(document).ready(function(){
      	$('#deputy-added').slideDown('slow');
      });
 });
-
-// Title - other
-$('.deputy-title-other-answer').hide();
-
-$("#deputy-title").change(function () {
-     if ($(this).val() == 'Other') {
-          $('.deputy-title-other-answer').slideDown();
-     } else {
-          $('.deputy-title-other-answer').slideUp();
-     }
-});
-
-// Add edit deputies
-// $('.remove-deputy').click(function(){
-//      $('h2.case-number').append($(this).parent().parent().find('h2').text());
-// });
-//
-$('#confirm-remove-1').click(function(){
-     $('.case-item[data-case-id="1"]').hide('slow', function(){ $(this).remove(); });
-});
-$('#confirm-remove-2').click(function(){
-     $('.case-item[data-case-id="2"]').hide('slow', function(){ $(this).remove(); });
-});
-$('#confirm-remove-3').click(function(){
-     $('.case-item[data-case-id="3"]').hide('slow', function(){ $(this).remove(); });
-});
-$('#confirm-remove-4').click(function(){
-     $('.case-item[data-case-id="4"]').hide('slow', function(){ $(this).remove(); });
-});
-
-// $('#edit-deputy').click(function(){
-//      $("#edit-title, .edit-deputy-form").show('slow');
-//      $("#check-details-title").hide('slow');
-// });
-
 
 // Exisiting deputies
 $('#exisiting-deputies').hide();
@@ -67,82 +34,18 @@ $(document).ready(function(){
           $('#add-new-deputy').attr('href', '5b-deputy-details.html');
      });
 
-
 });
+////////////////////////////////////// SEARCH - START //////////////////////////////////////
 
-// Type of deputy
-$(document).ready(function () {
-     $("#deputy-type").change(function () {
-          var val = $(this).val();
-          $("#deputy-relationship").parent().removeClass('read-only');
-          $("#deputy-relationship").removeAttr('disabled');
-          if (val == "Lay") {
-               $("#deputy-relationship").html(`
-                    <option value=''>-- Select --</option>
-                    <option value='Child of client'>Child of client</option>
-                    <option value='Sibling'>Sibling</option>
-                    <option value='Spouse'>Spouse</option>
-                    <option value='Parent of client'>Parent of client</option>
-                    <option value='Civil Partner'>Civil Partner</option>
-                    <option value='Friend'>Friend</option>
-                    <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
-                    <option value='Other Relation'>Other Relation</option>
-               `);
-               $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Lay options</strong>');
-               $(".other-relation, .other-professional").slideUp();
-          } else if (val == "Professional") {
-               $("#deputy-relationship").html(`
-                    <option value=''>-- Select --</option>
-                    <option value='Panel Deputy'>Panel Deputy</option>
-                    <option value='Bank Official'>Bank Official</option>
-                    <option value='Solicitor'>Solicitor</option>
-                    <option value='Accountant'>Accountant</option>
-                    <option value='Unregulated Pro Deputy'>Unregulated Pro Deputy</option>
-                    <option value='Legal Professional'>Legal Professional</option>
-                    <option value='Trust Companies (Not NHS/PCT)'>Trust Companies (Not NHS/PCT)</option>
-                    <option value='Other Professional'>Other Professional</option>
-               `);
-               $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Professional options</strong>');
-               $(".other-relation, .other-professional").slideUp();
-          } else if (val == "Public authority") {
-               $("#deputy-relationship").html(`
-                    <option value='Local Authority'>Local Authority</option>
-                    <option value='NHS Trust'>NHS Trust</option>
-                    <option value='PCT'>PCT</option>
-               `);
-               $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Public authority options</strong>');
-               $(".other-relation, .other-professional").slideUp();
-          }
-     });
-     $("#deputy-relationship").change(function () {
-          var val = $(this).val();
-          if (val == "Other Relation") {
-               $(".other-relation").slideDown();
-               $(".other-professional").slideUp();
-          } else if (val == "Other Professional") {
-               $(".other-relation").slideUp();
-               $(".other-professional").slideDown();
-          } else {
-               $(".other-relation, .other-professional").slideUp();
-          }
-     });
-});
+////////////////////////////////////// STEP - 1 - START //////////////////////////////////////
+// Title - other
+$('.deputy-title-other-answer').hide();
 
-$("#deputy-interpreter-yes").click( function(){
-     if($(this).is(':checked')) { $('.interpreter-details').slideDown(); }
-});
-$("#deputy-interpreter-no").click( function(){
-     if($(this).is(':checked')) { $('.interpreter-details').slideUp(); }
-});
-
-// Country functionality
-$('.deputy-outside-uk, .deputy-airmail-required').hide();
-
-$("#deputy-country").change(function () {
-     if ($(this).val() == 'Outside') {
-          $('.deputy-outside-uk, .deputy-airmail-required').slideDown();
+$("#deputy-title").change(function () {
+     if ($(this).val() == 'Other') {
+          $('.deputy-title-other-answer').slideDown();
      } else {
-          $('.deputy-outside-uk, .deputy-airmail-required').slideUp();
+          $('.deputy-title-other-answer').slideUp();
      }
 });
 
@@ -200,20 +103,21 @@ $("#add-deputy-error-1879").click( function(){
 
 });
 
+// Country functionality
+$('.deputy-outside-uk, .deputy-airmail-required').hide();
+
+$("#deputy-country").change(function () {
+     if ($(this).val() == 'Outside') {
+          $('.deputy-outside-uk, .deputy-airmail-required').slideDown();
+     } else {
+          $('.deputy-outside-uk, .deputy-airmail-required').slideUp();
+     }
+});
+
 // Page validation
 $('#add-deputy-step-1').addClass('de-activate').removeAttr('href');
 
-// $("#deputy-first-name").keyup(function() {
-//      if (!this.value) {
-//           $('#add-deputy-step-1').addClass('de-activate');
-//           $('#add-deputy-step-1').removeAttr('href');
-//      } else {
-//           $('#add-deputy-step-1').removeClass('de-activate');
-//           $('#add-deputy-step-1').attr('href' ,'5d-case-details.html');
-//      }
-// });
-//
-$("#deputy-last-name").keyup(function() {
+$("#deputy-last-name, #deputy-organisation-name").keyup(function() {
      if (!this.value) {
           $('#add-deputy-step-1').addClass('de-activate');
           $('#add-deputy-step-1').removeAttr('href');
@@ -223,6 +127,170 @@ $("#deputy-last-name").keyup(function() {
      }
 });
 
+// Changes depending on the type of deputy
+$("#deputy-type").change(function () {
+     if ($(this).val() == 'Lay') {
+          // Hides company info panel
+          $('.form-deputy-company-info').slideUp();
+
+          // Show fields
+          $('.form-deputy-title, .form-deputy-first-name, .form-deputy-middle-name, .form-deputy-last-name, .form-deputy-dob').show();
+     } else if ($(this).val() == 'Professional') {
+          // Shows company info panel
+          $('.form-deputy-company-info').slideDown();
+
+          // Changes the state of the organisation question
+          $('#deputy-organisation-yes').parent().parent().removeClass('read-only');
+          $('#deputy-organisation-yes').parent().removeClass('checked').removeAttr('checked');
+          $('#deputy-organisation-yes').removeAttr('disabled');
+          $('#deputy-organisation-no').removeAttr('disabled');
+
+          // Show fields
+          $('.form-deputy-title, .form-deputy-first-name, .form-deputy-middle-name, .form-deputy-last-name, .form-deputy-dob').show();
+
+     } else if ($(this).val() == 'Public authority') {
+          // Shows company info panel
+          $('.form-deputy-company-info').slideDown();
+
+          // Changes the state of the organisation question
+          $('#deputy-organisation-yes').parent().parent().addClass('read-only');
+          $('#deputy-organisation-yes').parent().addClass('checked').attr('checked', 'checked');
+          $('#deputy-organisation-yes').attr('disabled', 'disabled');
+          $('#deputy-organisation-no').attr('disabled', 'disabled');
+
+          // Changes manditory fields
+          $('.form-deputy-correspondence-name .required').show();
+          $('.form-deputy-organisation-name .required').show();
+          $('.form-deputy-company-ref .required').hide();
+
+          // Hide fields
+          $('.form-deputy-title, .form-deputy-first-name, .form-deputy-middle-name, .form-deputy-last-name, .form-deputy-dob').hide();
+
+     } else {
+          $('.form-deputy-company-info').slideUp();
+     }
+});
+
+// Changes manditory fields
+$("#deputy-organisation-yes").click( function(){
+     if($(this).is(':checked')) {
+          // Deputy details
+          $('.form-deputy-first-name .required').hide();
+          $('.form-deputy-last-name .required').hide();
+          $('.form-deputy-company-ref .required').hide();
+
+          // Company details
+          $('.form-deputy-correspondence-name .required').show();
+          $('.form-deputy-organisation-name .required').show();
+          $('.form-deputy-company-ref .required').hide();
+     }
+});
+
+$("#deputy-organisation-no").click( function(){
+     if($(this).is(':checked')) {
+          // Deputy details
+          $('.form-deputy-first-name .required').show();
+          $('.form-deputy-last-name .required').show();
+          $('.form-deputy-company-ref .required').show();
+
+          // Company details
+          $('.form-deputy-correspondence-name .required').hide();
+          $('.form-deputy-organisation-name .required').hide();
+          $('.form-deputy-company-ref .required').hide();
+     }
+});
+////////////////////////////////////// STEP - 1 - END //////////////////////////////////////
+
+// Add edit deputies
+// $('.remove-deputy').click(function(){
+//      $('h2.case-number').append($(this).parent().parent().find('h2').text());
+// });
+//
+$('#confirm-remove-1').click(function(){
+     $('.case-item[data-case-id="1"]').hide('slow', function(){ $(this).remove(); });
+});
+$('#confirm-remove-2').click(function(){
+     $('.case-item[data-case-id="2"]').hide('slow', function(){ $(this).remove(); });
+});
+$('#confirm-remove-3').click(function(){
+     $('.case-item[data-case-id="3"]').hide('slow', function(){ $(this).remove(); });
+});
+$('#confirm-remove-4').click(function(){
+     $('.case-item[data-case-id="4"]').hide('slow', function(){ $(this).remove(); });
+});
+
+// $('#edit-deputy').click(function(){
+//      $("#edit-title, .edit-deputy-form").show('slow');
+//      $("#check-details-title").hide('slow');
+// });
+
+////////////////////////////////////// STEP - 2 - START //////////////////////////////////////
+$("#deputy-interpreter-yes").click( function(){
+     if($(this).is(':checked')) { $('.interpreter-details').slideDown(); }
+});
+$("#deputy-interpreter-no").click( function(){
+     if($(this).is(':checked')) { $('.interpreter-details').slideUp(); }
+});
+////////////////////////////////////// STEP - 2 - END //////////////////////////////////////
+
+////////////////////////////////////// STEP - 3 - START //////////////////////////////////////
+// Type of deputy
+$(document).ready(function () {
+     $("#deputy-type-order").change(function () {
+          var val = $(this).val();
+          $("#deputy-relationship").parent().removeClass('read-only');
+          $("#deputy-relationship").removeAttr('disabled');
+          if (val == "Lay") {
+               $("#deputy-relationship").html(`
+                    <option value=''>-- Select --</option>
+                    <option value='Child of client'>Child of client</option>
+                    <option value='Sibling'>Sibling</option>
+                    <option value='Spouse'>Spouse</option>
+                    <option value='Parent of client'>Parent of client</option>
+                    <option value='Civil Partner'>Civil Partner</option>
+                    <option value='Friend'>Friend</option>
+                    <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
+                    <option value='Other Relation'>Other Relation</option>
+               `);
+               $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Lay options</strong>');
+               $(".other-relation, .other-professional").slideUp();
+          } else if (val == "Professional") {
+               $("#deputy-relationship").html(`
+                    <option value=''>-- Select --</option>
+                    <option value='Panel Deputy'>Panel Deputy</option>
+                    <option value='Bank Official'>Bank Official</option>
+                    <option value='Solicitor'>Solicitor</option>
+                    <option value='Accountant'>Accountant</option>
+                    <option value='Unregulated Pro Deputy'>Unregulated Pro Deputy</option>
+                    <option value='Legal Professional'>Legal Professional</option>
+                    <option value='Trust Companies (Not NHS/PCT)'>Trust Companies (Not NHS/PCT)</option>
+                    <option value='Other Professional'>Other Professional</option>
+               `);
+               $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Professional options</strong>');
+               $(".other-relation, .other-professional").slideUp();
+          } else if (val == "Public authority") {
+               $("#deputy-relationship").html(`
+                    <option value='Local Authority'>Local Authority</option>
+                    <option value='NHS Trust'>NHS Trust</option>
+                    <option value='PCT'>PCT</option>
+               `);
+               $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Public authority options</strong>');
+               $(".other-relation, .other-professional").slideUp();
+          }
+     });
+     $("#deputy-relationship").change(function () {
+          var val = $(this).val();
+          if (val == "Other Relation") {
+               $(".other-relation").slideDown();
+               $(".other-professional").slideUp();
+          } else if (val == "Other Professional") {
+               $(".other-relation").slideUp();
+               $(".other-professional").slideDown();
+          } else {
+               $(".other-relation, .other-professional").slideUp();
+          }
+     });
+});
 
 // Violent risk
 $('.violent-answer').hide();
@@ -231,144 +299,6 @@ $("#deputy-violent-risk").click( function(){
      if($(this).is(':checked')) { $('.violent-answer').slideDown(); }
      else { $('.violent-answer').slideUp(); }
 });
-
-// Edit deputy
-// Show's the values for Lara Stevens (Deputy 1)
-if (window.location.href.indexOf("edit-deputy-1") != -1) {
-     // Hides the progess bar
-     $('nav.progress-bar').hide();
-
-     // Changes the header content
-     $('.breadcrumb .page-title').text('Edit deputy');
-     $('.deputy-first-name-answer').text('Lara');
-     $('#action-panel .section-title').html("Edit <div class=\"deputy-first-name-answer\">Lara</div>'s details");
-
-     // Changes the footer content
-     $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').text('Save & update deputy');
-     $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').attr('href', '#');
-     $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').attr('onclick', 'history.back();');
-     $('#add-another-deputy').hide();
-
-     // Form content - 1 - Personal details
-     $('#deputy-title').val('Mrs');
-     $('#deputy-first-name').val('Lara');
-     $('#deputy-last-name').val('Stevens');
-     $('#deputy-dob-day').val('17');
-     $('#deputy-dob-month').val('07');
-     $('#deputy-dob-year').val('1981');
-     $('#deputy-address-line-1').val('34 Broomfield Place');
-     $('#deputy-address-town').val('Stokesley');
-     $('#deputy-manual-postcode').val('TS9 8TU');
-     $('#deputy-country').val('England');
-     $('#deputy-phone-number').val('07079962666');
-     $('#deputy-mob-number').val('07079962666');
-     $('#deputy-email').val('lara.stevens@jourrapide.com');
-
-     // Form content - 2 - Additional info
-     $('#deputy-digital-no').parent().addClass('checked');
-     $('#deputy-digital-no').attr('checked', 'checked');
-     $('#deputy-occupation').val('University professor');
-     $('#deputy-correspondence-email').parent().addClass('checked');
-     $('#deputy-correspondence-email').attr('checked', 'checked');
-     $('#deputy-special-spelling').parent().addClass('checked');
-     $('#deputy-special-spelling').attr('checked', 'checked');
-     $('#deputy-interpreter-no').parent().addClass('checked');
-     $('#deputy-interpreter-no').attr('checked', 'checked');
-     $('#deputy-newsletter-no').parent().addClass('checked');
-     $('#deputy-newsletter-no').attr('checked', 'checked');
-
-     // Form content - 3 - Case details
-     $('#deputy-type').val('Lay');
-     $('#deputy-relationship').val('Sibling');
-     $('#deputy-relationship').parent().removeClass('read-only');
-     $('#deputy-relationship').removeAttr('disabled');
-     $('#deputy-relationship').siblings().html('Relationship to the client: <strong>Lay options</strong>');
-     $('#deputy-relationship').html(`
-          <option value=''>-- Select --</option>
-          <option value='Child of client'>Child of client</option>
-          <option value='Sibling' selected>Sibling</option>
-          <option value='Spouse'>Spouse</option>
-          <option value='Parent of client'>Parent of client</option>
-          <option value='Civil Partner'>Civil Partner</option>
-          <option value='Friend'>Friend</option>
-          <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
-          <option value='Other Relation'>Other Relation</option>
-     `);
-     $('#deputy-status').val('Active');
-     $('#deputy-fee-payer').parent().addClass('checked');
-     $('#deputy-fee-payer').attr('checked', 'checked');
-     $('#deputy-main-correspondent').parent().addClass('checked');
-     $('#deputy-main-correspondent').attr('checked', 'checked');
-     $('#deputy-main-correspondent').parent().parent().addClass('read-only');
-     $('#deputy-main-correspondent').attr("disabled", true);
-}
-
-// Show's the values for Lara Stevens (Deputy 1)
-if (window.location.href.indexOf("edit-deputy-2") != -1) {
-     // Hides the progess bar
-     $('nav.progress-bar').hide();
-
-     // Changes the header content
-     $('.breadcrumb .page-title').text('Edit deputy');
-     $('.deputy-first-name-answer').text('Carla');
-     $('#action-panel .section-title').html("Edit <div class=\"deputy-first-name-answer\">Carla</div>'s details");
-
-     // Changes the footer content
-     $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').text('Save & update deputy');
-     $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').attr('href', '#');
-     $('#add-deputy-step-1, #add-deputy-step-2, #add-deputy-step-3').attr('onclick', 'history.back();');
-     $('#add-another-deputy').hide();
-
-     // Form content - 1 - Personal details
-     $('#deputy-title').val('Mrs');
-     $('#deputy-first-name').val('Carla');
-     $('#deputy-last-name').val('Frith');
-     $('#deputy-dob-day').val('25');
-     $('#deputy-dob-month').val('06');
-     $('#deputy-dob-year').val('1983');
-     $('#deputy-address-line-1').val('35 Broad Street');
-     $('#deputy-address-town').val('Lower Welson');
-     $('#deputy-manual-postcode').val('HR3 1UD');
-     $('#deputy-country').val('England');
-     $('#deputy-phone-number').val('07772881687');
-     $('#deputy-mob-number').val('07772881687');
-     $('#deputy-email').val('carla.frith@jourrapide.com');
-
-     // Form content - 2 - Additional info
-     $('#deputy-digital-yes').parent().addClass('checked');
-     $('#deputy-digital-yes').attr('checked', 'checked');
-     $('#deputy-occupation').val('Mental health assistant');
-     $('#deputy-correspondence-phone').parent().addClass('checked');
-     $('#deputy-correspondence-phone').attr('checked', 'checked');
-     $('#deputy-correspondence-email').parent().addClass('checked');
-     $('#deputy-correspondence-email').attr('checked', 'checked');
-     $('#deputy-interpreter-no').parent().addClass('checked');
-     $('#deputy-interpreter-no').attr('checked', 'checked');
-     $('#deputy-newsletter-no').parent().addClass('checked');
-     $('#deputy-newsletter-no').attr('checked', 'checked');
-
-     // Form content - 3 - Case details
-     $('#deputy-type').val('Lay');
-     $('#deputy-relationship').val('Sibling');
-     $('#deputy-relationship').parent().removeClass('read-only');
-     $('#deputy-relationship').removeAttr('disabled');
-     $('#deputy-relationship').siblings().html('Relationship to the client: <strong>Lay options</strong>');
-     $('#deputy-relationship').html(`
-          <option value=''>-- Select --</option>
-          <option value='Child of client'>Child of client</option>
-          <option value='Sibling' selected>Sibling</option>
-          <option value='Spouse'>Spouse</option>
-          <option value='Parent of client'>Parent of client</option>
-          <option value='Civil Partner'>Civil Partner</option>
-          <option value='Friend'>Friend</option>
-          <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
-          <option value='Other Relation'>Other Relation</option>
-     `);
-     $('#deputy-status').val('Active');
-     $('#deputy-violent-risk').parent().addClass('checked');
-     $('#deputy-violent-risk').attr('checked', 'checked');
-
-}
 
 // Make deputy fee payer
 $('#add-deputy-modal').hide();
@@ -424,3 +354,4 @@ $('#deputy-fee-payer').change(function(){
           $('#deputy-main-correspondent').removeAttr("disabled");
      }
 });
+////////////////////////////////////// STEP - 3 - END //////////////////////////////////////
