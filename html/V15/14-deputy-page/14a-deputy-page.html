@@ -3,7 +3,7 @@
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>OPG - Sirius</title>
-     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link rel="stylesheet" href="../../../production/css/prototype-V15.css" />
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
      <!-- ///////// Chris Prototyping Kit - START ///////// -->
@@ -108,7 +108,52 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Deputy details</span> </nav> <h1> <span class="type">lay<br>deputy</span> <div class="summary-deputy-name">Mrs Kate Eloise Smith</div> <span class="deputy-status">Deputies summary page</span> <span class="deceased">Deputy is deceased</span> </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="tabs"> <li class="tab-link current" data-tab="tab-1">Details</li> <li class="tab-link" data-tab="tab-2">Client/s</li> <li class="tab-link" data-tab="tab-3">Warnings</li> <li class="tab-link" data-tab="tab-4">Timeline</li> <li class="tab-link" data-tab="tab-5">Documents</li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content current"> <!-- // DEPUTY DETAILS - START // -->
+ <div class="row"> <div class="large-9 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Deputy details</span> </nav> <h1> <span class="type lay">lay<br>deputy</span> <div>Mrs Kate Eloise Smith</div> <span class="deputy-status">Deputies summary page</span> <span class="deceased">Deputy is deceased</span> </h1> </div> <div class="large-3 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+<nav class="actions-nav header deputy">
+
+	<ul>
+		<!-- <li class="supervision">
+			<a href="#" class="action deputy-delete">
+				<span class="icon"></span>
+				<span>Delete deputy</span>
+			</a>
+		</li> -->
+		<li class="supervision deputy-death-button">
+			<a href="../15-deputy-death/15a-deputy-death.html" class="action deputy-death">
+				<span class="text">deceased</span>
+				<span>Record death of deputy</span>
+			</a>
+		</li>
+	</ul>
+
+</nav>
+<!-- // ACTIONS NAV - END // -->
+ </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- ///////////////////////////////// LETTER CONFIRMATION - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="deputy-edited" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					<div class="edit-lay">
+						<div class="deputy-title">Mrs</div>
+						<div class="deputy-first-name">Kate</div>
+						<div class="deputy-last-name">Eloise</div>
+					</div>
+					<div class="edit-pro">
+						<div class="deputy-organisation-name">Connor, Caur &amp; Burrows</div>
+					</div>
+					<div class="edit-public">
+						<div class="deputy-organisation-name">Weston Parpenham</div>
+					</div>
+					has now been updated
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// LETTER CONFIRMATION - END ///////////////////////////////// -->
+ <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="tabs"> <li class="tab-link current" data-tab="tab-1">Details</li> <li class="tab-link" data-tab="tab-2"><span>3</span>Client's</li> <li class="tab-link" data-tab="tab-3">Warnings</li> <li class="tab-link" data-tab="tab-4">Timeline</li> <li class="tab-link" data-tab="tab-5">Documents</li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content current"> <!-- // DEPUTY DETAILS - START // -->
 <div class="check-details">
 
 	<h2 class="description-title">
@@ -125,15 +170,15 @@
 
 	<!-- // DEPUTY ITEM - 2 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Previously Known As:</p>
-		<p class="answer">Mrs Kate Eloise Taylor</p>
+		<p class="item">Date of birth:</p>
+		<p class="answer">21/09/1976</p>
 	</div>
 	<!-- // DEPUTY ITEM - 2 - END // -->
 
 	<!-- // DEPUTY ITEM - 3 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Date of birth:</p>
-		<p class="answer">21/09/1976</p>
+		<p class="item">Previously Known As:</p>
+		<p class="answer">Mrs Kate Eloise Taylor</p>
 	</div>
 	<!-- // DEPUTY ITEM - 3 - END // -->
 
@@ -185,7 +230,7 @@
 	</div>
 	<!-- // DEPUTY ITEM - 9 - END // -->
 
-	<a href="../5-add-deputy/5b-deputy-details.html#deputy-page-edit" class="main-cta secondary edit">Edit deputy details</a>
+	<a href="../5-add-deputy/5b-deputy-details.html#deputy-lay-edit" class="main-cta secondary edit edit-lay-deputy">Edit deputy details</a>
 
 	<p>&nbsp;</p>
 
@@ -196,86 +241,84 @@
 
 	<!-- // DEPUTY ITEM - 1 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Digital?:</p>
-		<p class="answer">No</p>
+		<p class="item">Occupation:</p>
+		<p class="answer">Embalmer (Retired)</p>
 	</div>
 	<!-- // DEPUTY ITEM - 1 - END // -->
 
 	<!-- // DEPUTY ITEM - 2 - START // -->
-	<div class="person-detail-item">
-		<p class="item">Occupation:</p>
-		<p class="answer">Embalmer (Retired)</p>
-	</div>
-	<!-- // DEPUTY ITEM - 2 - END // -->
-
-	<!-- // DEPUTY ITEM - 3 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Has the deputy expressed a preferred method of contact?:</p>
 		<ul class="answer">
 			<li>Email</li>
 		</ul>
 	</div>
-	<!-- // DEPUTY ITEM - 3 - END // -->
+	<!-- // DEPUTY ITEM - 2 - END // -->
 
-	<!-- // DEPUTY ITEM - 4 - START // -->
+	<!-- // DEPUTY ITEM - 3 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Special correspondence requirements:</p>
 		<p class="answer">None</p>
 	</div>
-	<!-- // DEPUTY ITEM - 4 - END // -->
+	<!-- // DEPUTY ITEM - 3 - END // -->
 
-	<!-- // DEPUTY ITEM - 5 - START // -->
+	<!-- // DEPUTY ITEM - 4 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Interpreter required?:</p>
 		<div class="mulitple-answers">
 			<p class="answer">No</p>
 		</div>
 	</div>
-	<!-- // DEPUTY ITEM - 5 - END // -->
+	<!-- // DEPUTY ITEM - 4 - END // -->
 
-	<!-- // DEPUTY ITEM - 6 - START // -->
+	<!-- // DEPUTY ITEM - 5 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Newsletter?:</p>
 		<p class="answer">No</p>
 	</div>
-	<!-- // DEPUTY ITEM - 6 - END // -->
+	<!-- // DEPUTY ITEM - 5 - END // -->
 
-	<a href="../5-add-deputy/5c-additional-info.html#deputy-page-edit" class="main-cta secondary edit">Edit additional info</a>
+	<a href="../5-add-deputy/5c-additional-info.html#deputy-lay-edit" class="main-cta secondary edit edit-lay-deputy">Edit additional info</a>
 
 </div>
 <!-- // DEPUTY DETAILS - END // -->
  </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content"> <!-- // DEPUTY DETAILS - START // -->
 <div id="deputy-details">
 
-     <h2 class="description-title">Client details</h2>
+     <h2 class="description-title">Kate's client's details</h2>
 
      <table id="clients-table">
           <thead>
                <tr class="five-column">
                     <th><span></span>Details</th>
                     <th><span></span>Type</th>
-                    <th><span></span>Deputy status</th>
+                    <th><span></span>Appointed</th>
                     <th><span></span>Relationship</th>
                     <th></th>
                </tr>
           </thead>
           <tbody>
+
                <!-- DEPUTY SUMMARY ROW 1 - START -->
                <tr class="summary-row" data-value="1">
                     <td>
                          <!-- <span class="icon deputy"></span> -->
-                         <div class="name">Mrs Lara Stevens</div><br>
+                         <div class="name">Mr Gerald Brackens</div><br>
                          <div class="accomodation">NH - Care/Nursing/Residential Home (Private/LA/Registered)</div>
                          <!-- <div class="address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div> -->
                          <a href="#" class="view-full-details" data-value="1">View full details</a>
                     </td>
                     <td>
                          <div class="wrapper">
-                              <span class="icon welfare"></span> <a href="#">ORDER - <strong>H&amp;W:</strong></a> Active
+                              <span class="icon welfare"></span> <a href="../4-client-page/4a-new-client.html#HandW">ORDER - <strong>H&amp;W:</strong></a> Active
+                         </div>
+                         <div class="wrapper">
+                              <span class="icon property"></span> <a href="../4-client-page/4a-new-client.html#property">ORDER <strong>PFA:</strong></a> Active
                          </div>
                     </td>
                     <td>
-                         Open
+                         Joint
+                         <!-- <div class="deputy-status-deceased">Open</div> -->
                     </td>
                     <td>
                          Sibling
@@ -299,6 +342,180 @@
                          <div class="details-wrap">
 
                               <!-- // CLIENT ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Client status:</p>
+                                   <p class="answer client-status">Active</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 1 - END // -->
+
+                              <!-- // CLIENT ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Status date:</p>
+                                   <p class="answer">09/09/2017</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 2 - END // -->
+
+                              <!-- // CLIENT ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Name:</p>
+                                   <p class="answer">Mr Gerald Brackens</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 3 - END // -->
+
+                              <!-- // CLIENT ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Previously Known As:</p>
+                                   <p class="answer">N/A</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 4 - END // -->
+
+                              <!-- // CLIENT ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Date of birth:</p>
+                                   <p class="answer">09/09/1983</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 5 - END // -->
+
+                              <!-- // CLIENT ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Address:</p>
+                                   <p class="answer">
+                                        1 Grimwald Place,<br>
+                                        Buckley,<br>
+                                        Flintshire,<br>
+                                        Flintshire,<br>
+                                        CV32 788.<br>
+                                        England
+                                   </p>
+                              </div>
+                              <!-- // CLIENT ITEM - 6 - END // -->
+
+                              <!-- // CLIENT ITEM - 7 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is airmail required?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 7 - END // -->
+
+                              <!-- // CLIENT ITEM - 8 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Daytime telephone number:</p>
+                                   <p class="answer">0123456789</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 8 - END // -->
+
+                              <!-- // CLIENT ITEM - 9 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Mobile telephone number:</p>
+                                   <p class="answer">07768948823</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 9 - END // -->
+
+                              <!-- // CLIENT ITEM - 10 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Email address:</p>
+                                   <p class="answer">gerald.brackens@hotmail.com</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 10 - END // -->
+
+                              <!-- // CLIENT ITEM - 11 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is the deputy a violent risk?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 11 - END // -->
+
+                              <!-- // CLIENT ITEM - 12 - START // -->
+                              <div class="person-detail-item violent-answer">
+                                   <p class="item">More details about the violent risk:</p>
+                                   <p class="answer">N/A</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 12 - END // -->
+
+                              <!-- // CLIENT ITEM - 13 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Casarec Number:</p>
+                                   <p class="answer">183947380</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 13 - END // -->
+
+                              <!-- // CLIENT ITEM - 14 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Accommodation Type:</p>
+                                   <p class="answer">NH - Care/Nursing/Residential Home (Private/LA/Registered)</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 14 - END // -->
+
+                              <!-- // CLIENT ITEM - 15 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Medical Condition:</p>
+                                   <p class="answer">Alzheimer's</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 15 - END // -->
+
+                              <!-- // CLIENT ITEM - 16 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Marital Status:</p>
+                                   <p class="answer">Divorced</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 16 - END // -->
+
+                              <!-- // CLIENT ITEM - 17 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Has the client expressed a preferred method of contact?:</p>
+                                   <ul class="answer">
+                                        <li>Post</li>
+                                        <li>Email</li>
+                                   </ul>
+                              </div>
+                              <!-- // CLIENT ITEM - 17 - END // -->
+
+                         </div>
+
+                    </td>
+               </tr>
+               <!-- DEPUTY DETAILS ROW 1 - END -->
+
+               <!-- DEPUTY SUMMARY ROW 2 - START -->
+               <tr class="summary-row" data-value="2">
+                    <td>
+                         <!-- <span class="icon deputy"></span> -->
+                         <div class="name">Mrs Lara Stevens</div><br>
+                         <div class="accomodation">NH - Care/Nursing/Residential Home (Private/LA/Registered)</div>
+                         <!-- <div class="address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div> -->
+                         <a href="#" class="view-full-details" data-value="1">View full details</a>
+                    </td>
+                    <td>
+                         <div class="wrapper">
+                              <span class="icon welfare"></span> <a href="#">ORDER - <strong>H&amp;W:</strong></a> Active
+                         </div>
+                    </td>
+                    <td>
+                         Joint
+                         <!-- <div class="deputy-status-deceased">Open</div> -->
+                    </td>
+                    <td>
+                         Sibling
+                    </td>
+                    <td>
+                         <span class="icon fee-payer"><p>Fee payer</p></span>
+                         <span class="icon main-contact"><p>Main correspondence</p></span>
+                    </td>
+               </tr>
+               <!-- DEPUTY SUMMARY ROW 2 - END -->
+
+               <!-- DEPUTY DETAILS ROW 2 - START -->
+               <tr class="details-row" data-value="2">
+                    <td colspan="5">
+
+                         <h2 class="section-title">
+                              Client details:
+                              <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         <div class="details-wrap">
+
+                              <!-- // CLIENT ITEM - 1 - START // -->
                          	<div class="person-detail-item">
                          		<p class="item">Client status:</p>
                          		<p class="answer client-status">Active</p>
@@ -308,7 +525,7 @@
                          	<!-- // CLIENT ITEM - 2 - START // -->
                          	<div class="person-detail-item">
                          		<p class="item">Status date:</p>
-                         		<p class="answer">09/09/1983</p>
+                         		<p class="answer">09/09/2017</p>
                          	</div>
                          	<!-- // CLIENT ITEM - 2 - END // -->
 
@@ -429,10 +646,10 @@
 
                     </td>
                </tr>
-               <!-- DEPUTY DETAILS ROW 1 - END -->
+               <!-- DEPUTY DETAILS ROW 2 - END -->
 
-               <!-- DEPUTY SUMMARY ROW 2 - START -->
-               <tr class="summary-row" data-value="2">
+               <!-- DEPUTY SUMMARY ROW 3 - START -->
+               <tr class="summary-row" data-value="3">
                     <td>
                          <div class="name">Mrs Carla Frith</div><br>
                          <div class="accomodation">PH - Private Hospital</div>
@@ -448,7 +665,8 @@
                          </div>
                     </td>
                     <td>
-                         Active
+                         Joint &amp; severally
+                         <!-- <div class="deputy-status-deceased">Active</div> -->
                     </td>
                     <td>
                          Sibling
@@ -457,10 +675,10 @@
                          <span class="icon main-contact"><p>Main correspondence</p></span>
                     </td>
                </tr>
-               <!-- DEPUTY SUMMARY ROW 2 - END -->
+               <!-- DEPUTY SUMMARY ROW 3 - END -->
 
-               <!-- DEPUTY DETAILS ROW 2 - START -->
-               <tr class="details-row" data-value="2">
+               <!-- DEPUTY DETAILS ROW 3 - START -->
+               <tr class="details-row" data-value="3">
                     <td colspan="5">
 
                          <h2 class="section-title">
@@ -480,7 +698,7 @@
                          	<!-- // CLIENT ITEM - 2 - START // -->
                          	<div class="person-detail-item">
                          		<p class="item">Status date:</p>
-                         		<p class="answer">09/09/1983</p>
+                         		<p class="answer">09/09/2017</p>
                          	</div>
                          	<!-- // CLIENT ITEM - 2 - END // -->
 
@@ -601,7 +819,7 @@
 
                     </td>
                </tr>
-               <!-- DEPUTY DETAILS ROW 2 - END -->
+               <!-- DEPUTY DETAILS ROW 3 - END -->
 
           </tbody>
      </table>
@@ -1254,15 +1472,15 @@
 				<span>Delete deputy</span>
 			</a>
 		</li> -->
-		<li class="supervision">
+		<!-- <li class="supervision deputy-death-button">
 			<a href="../15-deputy-death/15a-deputy-death.html" class="action deputy-death">
 				<span class="text">deceased</span>
 				<span>Record death of deputy</span>
 			</a>
-		</li>
+		</li> -->
 		<!-- // MAIN CTA's -  END // -->
 
-		<li class="seperator"></li>
+		<!-- <li class="seperator"></li> -->
 
 		<li class="supervision">
 			<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
@@ -1273,7 +1491,7 @@
 		<li class="supervision">
 			<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 				<span class="icon"></span>
-				<span>Create letter</span>
+				<span>Create correspondence</span>
 			</a>
 		</li>
 		<li class="supervision retrieve-drafts">
@@ -1324,6 +1542,7 @@
 	<script src="../../../production/js/V15/my-cookies/new-event.js"></script>
 	<script src="../../../production/js/V15/my-cookies/create-contact.js"></script>
 	<script src="../../../production/js/V15/my-cookies/timeline.js"></script>
+	<script src="../../../production/js/V15/my-cookies/client-death.js"></script>
 	<script src="../../../production/js/V15/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V15/my-cookies/deputy-page.js"></script>
 	<!-- User Journey - Cookies - END -->
@@ -1344,6 +1563,7 @@
 	<script src="../../../production/js/V15/my-jquery/progress-bar.js"></script>
 	<script src="../../../production/js/V15/my-jquery/create-contact.js"></script>
 	<script src="../../../production/js/V15/my-jquery/timeline.js"></script>
+	<script src="../../../production/js/V15/my-jquery/client-death.js"></script>
 	<script src="../../../production/js/V15/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V15/my-jquery/deputy-page.js"></script>
 	<!-- <script src="../../../production/js/V15/my-jquery/search.js"></script> -->

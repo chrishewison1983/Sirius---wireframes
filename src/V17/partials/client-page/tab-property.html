@@ -1,0 +1,571 @@
+<!-- CONTENT WRAPPER - START -->
+<div class="content-wrapper">
+
+	<div class="row">
+		<div class="large-9 large-uncentered columns">
+
+			<!-- =========== TABS - START =========== -->
+			<ul class="client-details tabs">
+				<li class="tab-link current" data-tab="property-tab-1">
+					Summary
+				</li>
+				<li class="tab-link" data-tab="property-tab-2">
+					<span>1</span> Tasks
+				</li>
+				<li class="tab-link" data-tab="property-tab-3">
+					Order details
+				</li>
+				<li class="tab-link" data-tab="property-tab-4">
+					<span>1</span> Deputy
+				</li>
+				<li class="tab-link" data-tab="property-tab-5">
+					Warnings
+				</li>
+				<li class="tab-link" data-tab="property-tab-6">
+					Timeline
+				</li>
+				<li class="tab-link" data-tab="property-tab-7">
+					Documents
+				</li>
+			</ul>
+			<!-- =========== TABS - END =========== -->
+
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 1 - START =========== -->
+			<div id="property-tab-1" class="client-details tab-content current">
+				<div class="row">
+
+					<!-- // CREATE CLIENT - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- // PROPERTY SUMMARIES - START // -->
+						<div id="property-summary">
+
+							<!-- // ================================ DASHBOARD CONTENT - START ================================ // -->
+							<div class="row">
+								<div class="large-12 large-uncentered columns">
+									<div id="client-summary" class="health">
+
+										<!-- ///////////////////// ROW - 1 - START ///////////////////// -->
+										<div class="dashboard-row two-items">
+
+											<!-- // ITEM 1 - START // -->
+											<div class="item with-title">
+												<div class="title"><span class="important"></span><p>Important remarks</p></div>
+												<ol class="summary-list">
+													<li>
+														<p>Risks to the clients:</p>
+														<p class="answer">A recent visitor report highlighted that the deputies have not been to see the client once this year. This is according to the nursing home care manager. This is contrary to what the deputy says in the report.</p>
+													</li>
+													<li>
+														<p>Outstanding issues:</p>
+														<p class="answer">Deputy has been aggressive in the past during phone calls.</p>
+													</li>
+													<li>
+														<p>Safegaurding issues:</p>
+														<p class="answer">A recent visitor report highlighted that the client was looking very disheveled and wearing very old clothes. Has not had regular pocket money deposited.</p>
+													</li>
+													<li>
+														<p>Client is violent:</p>
+														<p class="answer">Gerald is not physically violent, but has been known to be verbally abusive to care home staff.</p>
+													</li>
+												</ol>
+											</div>
+											<!-- // ITEM 1 - END // -->
+
+											<!-- // ITEM 2 - START // -->
+											<div class="item no-colour highlight">
+												<section class="full-colour-block report-dates">
+													<div class="date">
+														<div class="left">
+															<i class="icon property white"></i>
+														</div>
+														<div class="right">
+															<div class="wrapper">
+																<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
+																<h2 class="sub-text">14820940</h2>
+																<h2 class="sub-text">Report due</h2>
+																<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-property">Edit</a>
+															</div>
+														</div>
+														<div class="colour-wrapper"></div>
+													</div>
+												</section>
+												<section id="create-bond" class="full-colour-block main-colour center-focus payment">
+													<div class="wrapper">
+														<h1 class="sub-text">Bond value</h1>
+														<h2 class="main-text">No bond inplace</h2>
+														<a href="../1-create-case/1b-the-bond.html" class="add add-bond">Add bond</a>
+													</div>
+												</section>
+												<section id="edit-bond" class="full-colour-block main-colour center-focus payment">
+													<div class="wrapper">
+														<h1 class="sub-text">Bond amount (Court order)</h1>
+														<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
+														<div class="secondary-bond">
+															<h2 class="sub-text">Bond amount taken</h2>
+															<h3 class="main-text">&pound;<div class="bond-value-answer">200</div></h3>
+														</div>
+														<div class="ctas">
+															<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit bond</a>
+															<!-- <a href="#dispense" rel="modal:open" class="delete">Dispense</a> -->
+														</div>
+													</div>
+												</section>
+												<section id="bond-dispensed" class="full-colour-block main-colour center-focus payment">
+													<div class="wrapper">
+														<h1 class="sub-text">Bond dispensed</h1>
+														<h2 class="main-text">&pound;<div class="bond-amount-answer">200</div></h2>
+														<div class="ctas">
+															<script language="JavaScript">
+
+																Stamp = new Date();
+																year = Stamp.getYear();
+																if (year < 2000) year = 1900 + year;
+																document.write('<div class="bond-dispensed-date-answer">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+																var Hours;
+																var Mins;
+																var Time;
+																Hours = Stamp.getHours();
+																if (Hours >= 12) {
+																	Time = " P.M.";
+																}
+																else {
+																	Time = " A.M.";
+																}
+																if (Hours > 12) {
+																	Hours -= 12;
+																}
+																if (Hours == 0) {
+																	Hours = 12;
+																}
+																Mins = Stamp.getMinutes();
+																	if (Mins < 10) {
+																	Mins = "0" + Mins;
+																}
+																document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+															</script>
+															<br>
+															<div class="bond-dispensed-reason-answer"></div><br>
+															<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">edit</a>
+														</div>
+													</div>
+												</section>
+											</div>
+											<!-- // ITEM 2 - END // -->
+
+										</div>
+										<!-- ///////////////////// ROW - 1 - END ///////////////////// -->
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- // PROPERTY SUMMARIES - END // -->
+
+					</div>
+					<!-- // CREATE CLIENT - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 2 - START =========== -->
+			<div id="property-tab-2" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-timeline.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 2 - END =========== -->
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 3 - START =========== -->
+			<div id="property-tab-3" class="case-details tab-content">
+				<div class="row">
+
+					<!-- // CASE DETAILS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- ///////////// CASE INFO - START ///////////// -->
+						<section class="case-info">
+
+							<h2 class="description-title">
+								Order details
+								<a href="../1-create-case/1a-the-order.html#EditCase" class="edit edit-case-pfa">Edit order</a>
+							</h2>
+
+							<!-- ITEM - 1 - START -->
+							<div class="info-section">
+								<p>Order type:</p>
+								<p class="answer">Property &amp; affiars</p>
+							</div>
+							<!-- ITEM - 1 - END -->
+
+							<!-- ITEM - 2 - START -->
+							<div class="info-section">
+								<p>Court reference:</p>
+								<p class="answer case-court-ref-answer">14820940</p>
+							</div>
+							<!-- ITEM - 2 - END -->
+
+							<!-- ITEM - 3 - START -->
+							<div class="info-section">
+								<p>Order date:</p>
+								<p class="answer case-order-date-answer">28/08/2018</p>
+							</div>
+							<!-- ITEM - 3 - END -->
+
+							<!-- ITEM - 4 - START -->
+							<div class="info-section">
+								<p>Order issue date:</p>
+								<p class="answer case-order-issue-date-answer">28/08/2017</p>
+							</div>
+							<!-- ITEM - 4 - END -->
+
+							<!-- ITEM - 5 - START -->
+							<div class="info-section">
+								<p>Order received date:</p>
+								<p class="answer case-status-date-answer">28/07/2017</p>
+							</div>
+							<!-- ITEM - 5 - END -->
+
+							<!-- ITEM - 6 - START -->
+							<div class="info-section">
+								<p>Order title:</p>
+								<p class="answer case-order-title-answer">Order title</p>
+							</div>
+							<!-- ITEM - 6 - END -->
+
+							<!-- ITEM - 7 - START -->
+							<div class="info-section">
+								<p>Order status:</p>
+								<p class="answer case-order-status-answer">Open</p>
+							</div>
+							<!-- ITEM - 7 - END -->
+
+							<!-- ITEM - 8 - START -->
+							<div class="info-section">
+								<p>Status date:</p>
+								<p class="answer case-status-date-answer">28/08/2017</p>
+							</div>
+							<!-- ITEM - 8 - END -->
+
+							<h2 class="description-title">
+								How have the deputy/deputies been appointed?
+							</h2>
+
+							<!-- ITEM - 9 - START -->
+							<div class="info-section">
+								<p>How have the deputy / deputies been appointed?:</p>
+								<p class="answer deputies-appointed-answer">Joint</p>
+							</div>
+							<!-- ITEM - 9 - END -->
+
+							<h2 class="description-title">
+								The bond
+								<a href="../1-create-case/1b-the-bond.html" class="edit add-bond">Add bond</a>
+								<a href="../1-create-case/1b-the-bond.html" class="edit edit-bond">Edit bond</a>
+								<!-- <a href="../1-create-case/1b-the-bond.html" class="bond-dispense">Dispense bond</a> -->
+							</h2>
+
+							<!-- ITEM - 13 - START -->
+							<div class="info-section">
+								<p>Security bond?:</p>
+								<p class="answer security-bond-answer">No</p>
+							</div>
+							<!-- ITEM - 13 - END -->
+
+							<!-- ITEM - 14 - START -->
+							<div class="info-section dispense-bond-info">
+								<p>Discharge date:</p>
+								<p class="answer bond-dispensed-date-answer">N/A</p>
+							</div>
+							<!-- ITEM - 14 - END -->
+
+							<!-- ITEM - 15 - START -->
+							<div class="info-section dispense-bond-info">
+								<p>Dispensed reason:</p>
+								<p class="answer bond-dispensed-reason-answer">N/A</p>
+							</div>
+							<!-- ITEM - 15 - END -->
+
+							<!-- ITEM - 16 - START -->
+							<div class="info-section bond-info">
+								<p>Required bond amount (£ - Court order):</p>
+								<p class="answer">£ <span class="bond-amount-answer">N/A</span></p>
+							</div>
+							<!-- ITEM - 16 - END -->
+
+							<!-- ITEM - 17 - START -->
+							<div class="info-section bond-info">
+								<p>Bond amount taken (£):</p>
+								<p class="answer">£ <span class="bond-value-answer">N/A</span></p>
+							</div>
+							<!-- ITEM - 17 - END -->
+
+							<!-- ITEM - 18 - START -->
+							<div class="info-section bond-info">
+								<p>Company:</p>
+								<p class="answer bond-company-answer">N/A</p>
+								<p class="answer bond-other-answer-text">N/A</p>
+							</div>
+							<!-- ITEM - 18 - END -->
+
+							<!-- ITEM - 19 - START -->
+							<div class="info-section bond-info">
+								<p>Bond reference number:</p>
+								<p class="answer bond-ref-number-answer">N/A</p>
+							</div>
+							<!-- ITEM - 19 - END -->
+
+							<!-- ITEM - 20 - START -->
+							<div class="info-section bond-info">
+								<p>Renewal date:</p>
+								<p class="answer bond-renewal-date-answer">N/A</p>
+							</div>
+							<!-- ITEM - 20 - END -->
+
+						</section>
+						<!-- ///////////// CASE INFO - END ///////////// -->
+
+					</div>
+					<!-- // CASE DETAILS - START // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 3 - END =========== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 4 - START =========== -->
+			<div id="property-tab-4" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DEPUTIES - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-deputies.html') }} -->
+
+					</div>
+					<!-- // CLIENT DEPUTIES - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 4 - END =========== -->
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 5 - START =========== -->
+			<div id="property-tab-5" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // WARNINGS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-warnings.html') }} -->
+
+					</div>
+					<!-- // WARNINGS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 5 - END =========== -->
+
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 6 - START =========== -->
+			<div id="property-tab-6" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT TASKS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-tasks.html') }} -->
+
+					</div>
+					<!-- // CLIENT TASKS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 6 - END =========== -->
+
+
+
+
+
+
+
+
+
+			<!-- =========== TAB CONTENT - 7 - START =========== -->
+			<div id="property-tab-7" class="client-details tab-content">
+				<div class="row">
+
+					<!-- // CLIENT DOCUMENTS - START // -->
+					<div class="large-12 large-uncentered columns">
+
+						<!-- {{= it.include('property-tab-documents.html') }} -->
+
+					</div>
+					<!-- // CLIENT DOCUMENTS - END // -->
+
+				</div>
+			</div>
+			<!-- =========== TAB CONTENT - 7 - END =========== -->
+
+		</div>
+
+		<div class="large-3 large-uncentered columns">
+			<!-- // ACTIONS NAV - START // -->
+			<nav class="actions-nav client-panel">
+
+				<h1>Perform order task:</h1>
+
+				<ul>
+					<!-- // MAIN CTA's -  START // -->
+					<li class="supervision add-deputy-link">
+						<a href="../5-add-deputy/5a-search-deputy.html" class="action create-deputy">
+							<span class="icon"></span>
+							<span>Add deputy</span>
+						</a>
+					</li>
+					<li class="supervision edit-case-link">
+						<a href="../1-create-case/1a-the-order.html#EditCase" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit order</span>
+						</a>
+					</li>
+					<li class="supervision add-bond-link">
+						<a href="../1-create-case/1b-the-bond.html" class="action add-bond">
+							<span class="icon"></span>
+							<span class="text">Add bond</span>
+						</a>
+						<a href="../1-create-case/1b-the-bond.html" class="action edit-bond">
+							<span class="icon"></span>
+							<span class="text">Edit bond</span>
+						</a>
+					</li>
+					<!-- // MAIN CTA's -  END // -->
+
+					<li class="seperator"></li>
+
+					<li class="supervision">
+						<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
+							<span class="icon"></span>
+							<span>Commission a visit</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
+							<span class="icon"></span>
+							<span>Create letter</span>
+						</a>
+					</li>
+					<li class="supervision retrieve-drafts">
+						<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
+							<span class="icon"></span>
+							<span>Retrieve drafts</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../8-create-task/8a-create-task.html" class="action create-task">
+							<span class="icon"></span>
+							<span>Create task</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../9-reporting-period/9a-reporting-period.html" class="action report edit-property">
+							<span class="icon"></span>
+							<span>Edit reporting period</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../10-supervision-level/10a-supervision-level.html" class="action supervision-level">
+							<span class="icon"></span>
+							<span>Supervision level</span>
+						</a>
+					</li>
+					<li class="supervision">
+						<a href="../11-new-event/11a-new-event.html" class="action new-event">
+							<span class="icon"></span>
+							<span>New event</span>
+						</a>
+					</li>
+
+					<!-- YET TO CODE - START -->
+					<!-- <li class="allocations">
+						<a href="#" class="action edit-case">
+							<span class="icon"></span>
+							<span>Edit case</span>
+						</a>
+					</li> -->
+					<!-- YET TO CODE - END -->
+				</ul>
+
+			</nav>
+			<!-- // ACTIONS NAV - END // -->
+		</div>
+
+	</div>
+	<!-- =========== TAB CONTENT - END =========== -->
+
+</div>
+<!-- CONTENT WRAPPER - END -->

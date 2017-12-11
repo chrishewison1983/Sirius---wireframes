@@ -1,0 +1,224 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default reporting-period-journey">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Active report: Change reporting period</span>
+                    </nav>
+                    <h1>
+                         Change reporting period
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <form class="reporting-period-form">
+
+                         <h2 class="section-title">Active reporting period</h2>
+
+                         <p>Please note that a furture report cannot be more than a year in advance of the report start date.</p>
+
+                         <hr>
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group read-only">
+                              <label>Report period start date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="report-start-day" class="input-small" name="report-start-day" type="text" value="21" maxlength="2" readonly>
+                                   <input id="report-start-month" class="input-small" name="report-start-month" type="text" value="09" maxlength="2" readonly>
+                                   <input id="report-start-year" class="input-small four" name="report-start-year" type="text" value="2016" maxlength="4" readonly>
+                              </div>
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group read-only">
+                              <label>Report period end date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="report-end-day" class="input-small" name="report-end-day" type="text" value="21" maxlength="2" readonly>
+                                   <input id="report-end-month" class="input-small" name="report-end-month" type="text" value="09" maxlength="2" readonly>
+                                   <input id="report-end-year" class="input-small four" name="report-end-year" type="text" value="2017" maxlength="4" readonly>
+                              </div>
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <div class="edit-content-report-period">
+
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group">
+                                   <label for="report-why">Why are you changing the reporting period? <span class="required">*</span></label>
+                                   <select id="report-why" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Financial accounting year">Financial accounting year</option>
+                                        <option value="In line with the previous year">In line with the previous year</option>
+                                        <option value="Personal accounting year">Personal accounting year</option>
+                                        <option value="Input error">Input error</option>
+                                        <option value="In line with Type 3 to Type 2 reassessment">In line with Type 3 to Type 2 reassessment</option>
+                                        <option value="In line with the new order">In line with the new order</option>
+                                        <option value="In line with the last report filed">In line with the last report filed</option>
+                                        <option value="Interim report requested">Interim report requested</option>
+                                        <option value="Late allocation">Late allocation</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
+
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group report-notes-section">
+                                   <label for="report-notes">Please explain why <span class="required">*</span></label>
+                                   <textarea name="textarea" class="jqte-test" id="report-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                         </div>
+
+                         <hr>
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group read-only edit-due-date">
+                              <label for="datepicker">Report due date:</label>
+                              <div class="weeks-8">
+                                   <div class="wrapper"><span>8</span></div>
+                                   <p>weeks after the report end date</p>
+                              </div>
+                              <div class="date-wrapper">
+                                   <input type="text" id="datepicker" value="16 / 11 / 2017" disabled>
+                                   <i class="date"></i>
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="edit-report" style="display:none;">
+          <h1>Are you sure you wish to edit the reporting period?</h1>
+          <p>Changing the reporting period will changes all future reporting dates for this order.</p>
+          <hr>
+          <div class="cta-row">
+               <a class="main-cta" id="confirm-report-edit" href="../4-client-page/4a-new-client.html#HandW">Confirm the change</a>
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <!-- <a class="main-cta primary" id="reporting-end-date-button" href="../4-client-page/4a-new-client.html">Save &amp; exit</a> -->
+     <a class="main-cta secondary" id="edit-reporting-period">Change reporting period</a>
+     <a class="main-cta primary de-activate" id="reporting-period-button" href="#edit-report" rel="modal:open">Save &amp; exit</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

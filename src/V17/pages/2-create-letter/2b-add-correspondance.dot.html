@@ -1,0 +1,296 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Create correspondence</span>
+                    </nav>
+                    <h1>
+                         Select the recipient(s) for the correspondence
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-letter-journey">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Correspondence</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="client-contacts"></span>
+                                   <p>3rd party contacts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-6">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/letter-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-contacts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 6 - START =========== -->
+                         <div id="tab-6" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="create-letter">
+
+                         <!-- =========== CORRESPONDANCE SECTION - 1 - START =========== -->
+                         <h2 class="section-title">Select recipient/s</h2>
+
+                         <div id="selected">
+
+                              <ul id="selected-list">
+                                   <!-- // CORRESPONDANCE - 1 - START // -->
+                                   <!-- <li data-correspondent-id='1'>
+                                        <a class="correspondent">
+                                             <span class="icon fee-payer"></span>
+                                             <span>Ms Lara Stevens</span><br>
+                                             <span class="type">Correspondent</span><br>
+                                             <span class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span><br>
+                                             <span class="communication-preferences">Preferences: <strong>None</strong></span>
+                                        </a>
+                                   </li> -->
+                                   <!-- // CORRESPONDANCE - 1 - END // -->
+
+                              </ul>
+
+                         </div>
+                         <!-- =========== CORRESPONDANCE SECTION - 1 - END =========== -->
+
+                         <hr>
+
+                         <!-- =========== CORRESPONDANCE SECTION - 2 - START =========== -->
+                         <h2 class="section-title">Add additional recipients related to client</h2>
+
+                         <div id="suggested">
+
+                              <ul>
+
+                                   <!-- // CORRESPONDANCE - 1 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondent-id='1' style="display:none;">
+                                             <span class="icon fee-payer"></span>
+                                             <span data-value='name'>Ms Lara Stevens</span><br>
+                                             <span data-value='type' class="type">Main correspondent</span><br>
+                                             <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span><br>
+                                             <span data-value='pref' class="communication-preferences">Preferences: <strong>None</strong></span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 1 - END // -->
+
+                                   <!-- // CORRESPONDANCE - 2 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondent-id='2'>
+                                             <span data-value='name'>Mrs Carla Frith</span><br>
+                                             <span data-value='type' class="type">Deputy</span><br>
+                                             <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span><br>
+                                             <span data-value='pref' class="communication-preferences">Preferences: <strong>Welsh</strong></span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 2 - END // -->
+
+                                   <!-- // CORRESPONDANCE - 3 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondent-id='3'>
+                                             <span data-value='name'>Mrs Melanie Rand</span><br>
+                                             <span data-value='type' class="type">Deputy</span><br>
+                                             <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span><br>
+                                             <span data-value='pref' class="communication-preferences">Preferences: <strong>None</strong></span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 3 - END // -->
+
+                                   <!-- // CORRESPONDANCE - 4 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondent-id='4'>
+                                             <span class="icon violent"><p>Violent</p></span>
+                                             <span data-value='name'>Toby Daniels</span><br>
+                                             <span data-value='type' class="type">Notified Person</span><br>
+                                             <span data-value='address' class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span><br>
+                                             <span data-value='pref' class="communication-preferences">Preferences: <strong>Large print</strong>, <strong>Hearing impaired</strong></span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 4 - END // -->
+
+                                   <!-- // CORRESPONDANCE - 5 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondent-id='5'>
+                                             <span data-value='name'>TrustMe Limited</span><br>
+                                             <span data-value='type' class="type">Trust Corporation</span><br>
+                                             <span data-value='address' class="sub-text">62 Review Road, Neasden, UK, NW27BE.</span><br>
+                                             <span data-value='pref' class="communication-preferences">Preferences: <strong>None</strong></span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 5 - END // -->
+
+                                   <!-- // CORRESPONDANCE - 6 - START // -->
+                                   <li>
+                                        <a class="correspondent" data-correspondent-id='6'>
+                                             <span data-value='name'>Mr Gerald Brackens</span><br>
+                                             <span data-value='type' class="type">Client</span><br>
+                                             <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span><br>
+                                             <span data-value='pref' class="communication-preferences">Preferences: <strong>None</strong></span>
+                                        </a>
+                                   </li>
+                                   <!-- // CORRESPONDANCE - 6 - END // -->
+
+
+                              </ul>
+
+                         </div>
+
+                         <!-- =========== CORRESPONDANCE SECTION - 2 - START =========== -->
+
+                         <!-- // ADD NEW correspondent - START // -->
+                         <div class="cta-row">
+                              <a class="main-cta secondary letter-contact-journey" href="2c-add-correspondent.html">Add contact</a>
+                         </div>
+                         <!-- // ADD NEW correspondent - END // -->
+
+                    </div>
+
+
+               </div>
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html#EditDoc">Create correspondence</a>
+     <span class="separator"></span>
+     <a onclick="history.back();" class="back">Back</a>
+     <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel correspondence</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     $(document).ready(function(){
+          sessionStorage.setItem('selected-recipients', JSON.stringify($('#recipients li').map(function() {
+               return $(this).text().trim();
+          }).toArray()));
+          var inserts = JSON.parse(sessionStorage.getItem('selected-inserts'));
+
+          if (inserts){
+               inserts.forEach(function(insert) {
+                    $('#inserts-selected').append('<li>' + insert + '</li>');
+               });
+          }
+          /*JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+               $('#draft-list').append('<li>' + letter + '</li>');
+          });*/
+     });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

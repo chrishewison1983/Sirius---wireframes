@@ -1,0 +1,236 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default new-client">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="client-page">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Client summary</span>
+                    </nav>
+                    <h1>
+                         <span class="type client">client</span>
+                         <a href="#" class="client-home-button">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+
+                         <span class="normal-status">Client's summary page</span>
+                         <span class="violent">Client is violent</span>
+                         <span class="welsh">Client's prefered language is Welsh</span>
+                         <span class="deceased">Client is deceased</span>
+
+                    </h1>
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     {{= it.include('confirmation/reporting-period-updated.html') }}
+
+     {{= it.include('confirmation/correspondence-sent.html') }}
+
+     {{= it.include('confirmation/client-updated.html') }}
+
+     {{= it.include('confirmation/deputy-added.html') }}
+
+     {{= it.include('confirmation/supervision-level.html') }}
+
+     <!-- TAB CONTENT - START -->
+
+     <!-- //////////////////////////////////// CLIENT OVERVIEW - START //////////////////////////////////// -->
+     <div id="client-overview" class="tabcontent current">
+          <div class="row">
+               <div class="large-9 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="client-details tabs">
+                         <li class="tab-link current" data-tab="summary-tab-1">
+                              Warnings
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-2">
+                              <span class="contacts-number">2</span> 3rd party contacts
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-3">
+                              Reports
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-4">
+                              <span>5</span> Tasks
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-5">
+                              Order details
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-6">
+                              <span>3</span> Deputies
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-7">
+                              Timeline
+                         </li>
+                         <li class="tab-link" data-tab="summary-tab-8">
+                              Documents
+                         </li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="summary-tab-1" class="client-details tab-content current">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/warnings.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+     			<!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="summary-tab-2" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/document-contacts.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="summary-tab-3" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/ALPHA-reports.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="summary-tab-4" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/tasks.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+                    <div id="summary-tab-5" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 6 - START =========== -->
+                    <div id="summary-tab-6" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('side-panel/deputy-details.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 7 - START =========== -->
+                    <div id="summary-tab-7" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('client-page/timeline.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 7 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 8 - START =========== -->
+                    <div id="summary-tab-8" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   <h2 class="description-title">
+                                        Client documents
+                                        <!-- <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a> -->
+                                   </h2>
+
+                                   {{= it.include('side-panel/document-viewer.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 8 - END =========== -->
+
+               </div>
+
+               <div class="large-3 large-uncentered columns">
+
+                    {{= it.include('actions.html') }}
+
+               </div>
+
+          </div>
+     </div>
+     <!-- //////////////////////////////////// CLIENT OVERVIEW - END //////////////////////////////////// -->
+     <!-- TAB CONTENT - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+{{= it.include('modals/task-actions.html') }}
+
+{{= it.include('modals/view-report.html') }}
+
+{{= it.include('modals/view-document.html') }}
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+</script>
+<!-- SCRIPT CONTENT - END -->

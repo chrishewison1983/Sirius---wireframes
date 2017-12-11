@@ -1,0 +1,153 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.search-results {
+     display: inline-block;
+     margin: 1em 0 0 0;
+     hr {
+          margin: 1em 0 2em 0;
+          border-bottom: 3px dashed $border-colour;
+     }
+     h2 {
+          text-transform: inherit;
+          strong {
+               text-transform: capitalize;
+          }
+     }
+     p {
+          &.placeholder-text {
+               padding: 1em;
+               width: 100%;
+               border: 2px solid $border-colour;
+               background: rgba($border-colour,0.4);
+               border-radius: $global-border-radius;
+               text-align: center;
+               font-style: italic;
+          }
+     }
+}
+
+#pagination {
+     display: inline-block;
+     width: 100%;
+     margin: 0 0 0 0;
+     @include flexbox;
+     @include align-items(center);
+     @include justify-content(center);
+     // border-top: 3px solid $white-off;
+     a, i {
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
+          @include standard-transition;
+          float: left;
+          width: 2em;
+          height: 2em;
+          font-size: 1.1rem;
+          border: none;
+          color: $blue;
+          margin: 0 0.25em;
+          &:hover, &:active, &:focus {
+               transform: scale(1.1);
+               cursor: pointer;
+               background: rgba($blue,0.1);
+               border: none;
+               border-radius: 50%;
+          }
+          &.current {
+               background: $white;
+               color: $main-colour;
+               border: 3px solid $main-colour;
+               border-radius: 50%;
+          }
+     }
+     i {
+          width: auto;
+          margin: 0;
+          color: rgba($blue,0.4);
+          font-size: 0.875rem;
+          &:hover, &:active, &:focus {
+               background: none;
+               transform: scale(1);
+               cursor: default;
+          }
+     }
+     // ul {
+     //      margin: 0;
+     //      li {
+     //           float: left;
+     //           @include flexbox;
+     //           @include align-items(center);
+     //           @include justify-content(center);
+     //           width: 12.5%;
+     //           text-align: center;
+     //           padding: 1em 0;
+     //           &:first-of-type {
+     //                a {
+     //                     color: rgba($main-colour,0.5);
+     //                     background: $white-off;
+     //                     border-radius: 50%;
+     //                     &:hover {
+     //                          color: $blue;
+     //                     }
+     //                }
+     //           }
+     //           &:last-of-type {
+     //                a {
+     //                     background: rgba($blue,0.1);
+     //                     border-radius: 50%;
+     //                }
+     //           }
+     //      }
+     // }
+}
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

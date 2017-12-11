@@ -1,0 +1,158 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default warnings-journey">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Create important remark</span>
+                    </nav>
+                    <h1>
+                         Important remark
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="commission-visit right">
+
+                         <form class="edit-client-form">
+
+                              <h2 class="section-title">Create important remark</h2>
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <label for="warning-type">Remark type <span class="required">*</span></label>
+                                   <select id="warning-type" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Abuse suspected">Abuse suspected</option>
+                                        <option value="Death Notified">Death Notified</option>
+                                        <option value="Potentially Violent">Potentially Violent</option>
+                                        <option value="Safeguarding adult at risk">Safeguarding adult at risk</option>
+                                        <option value="Risk to the client">Risk to the client</option>
+                              	</select>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group warning-notes">
+                                   <label for="warning-notes">Notes <span class="required">*</span></label>
+                                   <textarea name="textarea" class="jqte-test" id="warning-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                         </form>
+
+                    </div>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary de-activate" id="new-warning-button">Save &amp; exit</a>
+     <span class="separator"></span>
+     <a href="#" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

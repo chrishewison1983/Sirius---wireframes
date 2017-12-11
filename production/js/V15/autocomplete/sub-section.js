@@ -26,10 +26,26 @@ $(function(){
           ` },
           { value: `
                <a href='../14-deputy-page/14a-deputy-page.html'>
-                    <div class='title'>Mrs Kate Eloise Smith <span>(Deputy)</span></div>
+                    <div class='title'>Mrs Kate Eloise Smith <span>(Lay deputy)</span></div>
                     <div class='sub-title'>Case: <span>LPA/PFA 7000-0000-1839</span></div>
-                    <div class='sub-title'>Address: <span>39 Marlborough Crescent, Stevenage ,South Malling, BN7 8LQ.</span></div>
+                    <div class='sub-title'>Address: <span>39 Marlborough Crescent, Stevenage, South Malling, BN7 8LQ.</span></div>
                     <div class='sub-title'>DOB: <span>16/11/1940</span></div>
+               </a>
+          ` },
+          { value: `
+               <a href='../14-deputy-page/14b-pro-deputy-page.html'>
+                    <div class='title'>Connor, Caur & Burrows <span>(Professional deputy)</span></div>
+                    <div class='sub-title'>Deputy type: <span>Solicitor</span></div>
+                    <div class='sub-title'>Clients: <span class="number">250+</span></div>
+                    <div class='sub-title'>Address: <span>92 York Road, Oxnop Ghyll, Wales, CF8 1HN.</span></div>
+               </a>
+          ` },
+          { value: `
+               <a href='../14-deputy-page/14c-pa-deputy-page.html'>
+                    <div class='title'>Weston Parpenham <span>(Public Authority deputy)</span></div>
+                    <div class='sub-title'>Deputy type: <span>Local authority</span></div>
+                    <div class='sub-title'>Clients: <span class="number">500+</span></div>
+                    <div class='sub-title'>Address: <span>7 Farburn Terrace, Weston Parpenham, PE17 0FS.</span></div>
                </a>
           ` },
           { value: `

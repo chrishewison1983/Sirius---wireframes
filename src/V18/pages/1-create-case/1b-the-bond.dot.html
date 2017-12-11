@@ -1,0 +1,317 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default create-case-journey the-bond-info">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>The bond</span>
+                    </nav>
+                    <h1>
+                         Create a Bond
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-case">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <!-- <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li> -->
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="create-case right">
+
+                         <div class="the-bond-details" id="bond-details-section">
+                              <h2 class="section-title">
+                                   The bond <div class="optional">(optional)</div>
+                              </h2>
+
+                              {{= it.include('errors/bond-reference-number.html') }}
+
+                              <!-- =========== THE BOND SECTION - START =========== -->
+                              <form class="case-details">
+
+                                   <!-- // FORM ITEM - 1 - START // -->
+                                   <div class="form-group security-bond">
+                                        <legend>Security bond</legend>
+                                        <label for="order-security-bond-yes" class="radio bond-yes">
+                                             <input id="order-security-bond-yes" type="radio" name="security-bond" value="Yes">
+                                             Yes
+                                        </label>
+                                        <label for="order-security-bond-no" class="radio bond-no">
+                                             <input id="order-security-bond-no" type="radio" name="security-bond" value="No">
+                                             No
+                                        </label>
+                                   </div>
+                                   <!-- // FORM ITEM - 1 - END // -->
+
+                                   <!-- // FORM ITEM - 2 - START // -->
+                                   <div class="form-group why-edit-bond">
+                                        <legend>Why are you editing the bond?</legend>
+                                        <label for="bond-why-edit-court" class="radio">
+                                             <input id="bond-why-edit-court" type="radio" name="edit-reason" value="Court instructions">
+                                             <span>Court instructions</span>
+                                        </label>
+                                        <label for="bond-why-edit-keying" class="radio">
+                                             <input id="bond-why-edit-keying" type="radio" name="edit-reason" value="Keying error">
+                                             <span>Keying error</span>
+                                        </label>
+                                   </div>
+                                   <!-- // FORM ITEM - 2 - END // -->
+
+                                   <!-- // FORM ITEM - 3 - START // -->
+                                   <div class="form-group bond-answer-hidden hidden">
+
+                                        <div class="form-group currency">
+                                             <label for="bond-amount">Required bond amount (£ - Court order) <span class="required">*</span></label>
+                                             <div class="date-wrapper">
+                                                  <span class="currency-icon"></span>
+                                                  <input id="bond-amount" name="bond-amount" type="text" class="" placeholder="" value="">
+                                             </div>
+                                        </div>
+                                        <div class="form-group currency">
+                                             <label for="bond-value">Bond amount taken (£)</label>
+                                             <div class="date-wrapper">
+                                                  <span class="currency-icon"></span>
+                                                  <input id="bond-value" name="bond-value" type="text" class="" placeholder="" value="">
+                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                             <label for="bond-company">Company</label>
+                                             <select id="bond-company" class="full-width">
+                                                  <option value="">-- Select --</option>
+                                                  <option value="Howdens">Howdens</option>
+                                                  <option value="Deputy Bond Services (DBS)">Deputy Bond Services (DBS)</option>
+                                                  <option value="Marsh">Marsh</option>
+                                                  <option value="Other">Other</option>
+                                             </select>
+                                        </div>
+                                        <div class="form-group bond-other-answer">
+                                             <label for="bond-other">Bond company name <span class="required">*</span></label>
+                                             <input id="bond-other" name="bond-other" type="text" placeholder="" value="">
+                                        </div>
+                                        <div class="form-group" id="ref-error">
+                                             <label for="bond-ref-number">Reference number</label>
+                                             <span class="error-text wrong-reference">This does not appear to be a valid Howdens reference number</a></span>
+                                             <input id="bond-ref-number" name="bond-ref-number" type="text" class="half" placeholder="" value="">
+                                        </div>
+                                        <div class="form-group read-only">
+                                             <label for="bond-renewal-date">Renewal date of the bond:</label>
+                                             <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                                             <div>
+                                                  <input id="bond-renewal-day" class="input-length" name="bond-renewal-day" placeholder="DD" type="text" value="28" maxlength="2">
+                                                  <input id="bond-renewal-month" class="input-length" name="bond-renewal-month" placeholder="MM" type="text" value="08" maxlength="2">
+                                                  <input id="bond-renewal-year" class="input-length four" name="bond-renewal-year" placeholder="YYYY" type="text" value="2018" maxlength="4">
+                                             </div>
+                                             <a href="#" class="edit edit-form-item">edit</a>
+                                        </div>
+                                   </div>
+                                   <!-- // FORM ITEM - 3 - END // -->
+
+                                   <!-- DISPENSE ITEMS - START -->
+                                   <div class="dispense-bond-info">
+                                        <div class="form-group">
+                                             <label for="bond-dispensed-date">Discharge date <span class="required">*</span></label>
+                                             <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                                             <div>
+                                                  <input id="bond-dispensed-day" class="input-length" name="bond-dispensed-day" type="text" placeholder="DD" maxlength="2">
+                                                  <input id="bond-dispensed-month" class="input-length" name="bond-dispensed-month" type="text" placeholder="MM" maxlength="2">
+                                                  <input id="bond-dispensed-year" class="input-length four" name="bond-dispensed-year" type="text" placeholder="YYYY" maxlength="4">
+                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                             <legend>Dispensed reason <span class="required">*</span></legend>
+                                             <label for="dispensed-reason-court" class="radio">
+                                                  <input id="dispensed-reason-court" type="radio" name="dispensed-reason" value="Court instructions">
+                                                  <span>Court instructions</span>
+                                             </label>
+                                             <label for="dispensed-reason-keying" class="radio">
+                                                  <input id="dispensed-reason-keying" type="radio" name="dispensed-reason" value="Keying error">
+                                                  <span>Keying error</span>
+                                             </label>
+                                        </div>
+
+                                        <hr>
+
+                                        <!-- BOND DETAIL ITEM - 1 - START -->
+                                        <div class="info-section bond-info">
+                                             <p>Required bond amount (Court order):</p>
+                                             <p class="answer">£ <span class="bond-amount-answer">N/A</span></p>
+                                        </div>
+                                        <!-- BOND DETAIL ITEM - 1 - END -->
+
+                                        <!-- BOND DETAIL ITEM - 2 - START -->
+                                        <div class="info-section bond-info">
+                                             <p>Bond amount taken (£):</p>
+                                             <p class="answer">£ <span class="bond-value-answer">N/A</span></p>
+                                        </div>
+                                        <!-- BOND DETAIL ITEM - 2 - END -->
+
+                                        <!-- BOND DETAIL ITEM - 3 - START -->
+                                        <div class="info-section bond-info">
+                                             <p>Company:</p>
+                                             <p class="answer bond-company-answer">N/A</p>
+                                        </div>
+                                        <!-- BOND DETAIL ITEM - 3 - END -->
+
+                                        <!-- BOND DETAIL ITEM - 4 - START -->
+                                        <div class="info-section bond-info">
+                                             <p>Bond reference number:</p>
+                                             <p class="answer bond-ref-number-answer">N/A</p>
+                                        </div>
+                                        <!-- BOND DETAIL ITEM - 4 - END -->
+
+                                        <!-- BOND DETAIL ITEM - 5 - START -->
+                                        <div class="info-section bond-info">
+                                             <p>Renewal date:</p>
+                                             <p class="answer">
+                                                  <span class="bond-renewal-day-answer"></span>/
+                                                  <span class="bond-renewal-month-answer"></span>/
+                                                  <span class="bond-renewal-year-answer"></span>
+                                             </p>
+                                        </div>
+                                        <!-- BOND DETAIL ITEM - 5 - END -->
+
+                                   </div>
+                                   <!-- DISPENSE ITEMS - END -->
+
+
+                              </form>
+                              <!-- =========== THE BOND SECTION - END =========== -->
+                         </div>
+
+                    </div>
+
+               </div>
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="dispense" style="display:none;">
+     	<h1>Dispense with the bond</h1>
+          <h2>Value of the bond</h2>
+          <p>Are you sure you want to dispense with this bond?</p>
+          <!-- <form>
+               <div class="form-group">
+                    <label for="bond-dispense">You must type the words "dispense the bond" to continue</label>
+                    <input id="bond-dispense" name="bond-dispense" type="text" class="" placeholder="" value="">
+               </div>
+          </form> -->
+     	<!-- <hr> -->
+     	<div class="cta-row">
+     		<!-- <a class="main-cta delete-action de-activate" id="dispense-bond-false">Dispense bond</a> -->
+               <a class="main-cta" id="dispense-bond-true" rel="modal:close">Dispense with the bond</a>
+     		<a href="#" rel="modal:close" class="cancel" id="cancel-delete">Cancel and keep the bond</a>
+     	</div>
+     </div>
+     <!-- // MODAL - END // -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="create-bond-button" href="../4-client-page/4a-new-client.html#PFA">Save &amp; continue</a>
+     <a class="main-cta primary" id="add-bond-error">Save &amp; continue</a>
+     <a class="main-cta primary" id="dispense-bond-button" href="../4-client-page/4a-new-client.html#PFA">Save &amp; dispense with the bond</a>
+     <a class="main-cta delete-action" id="dispense-bond" href="#dispense" rel="modal:open">Dispense with the bond</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function(){
+     //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) {
+     //           $('#why-commission-visit').append('<p>' + visit + '</p>');
+     //      });
+     // });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

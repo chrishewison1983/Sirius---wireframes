@@ -1,0 +1,123 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default deputy-details-page public">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="deputy-page public">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Deputy details</span>
+                    </nav>
+                    <h1>
+                         <span class="type public">public<br>authority<br>deputy</span> <div>Weston Parpenham</div>
+                         <span class="deputy-status">Deputies summary page</span>
+                    </h1>
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     {{= it.include('confirmation/deputy-edited.html') }}
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-9 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="tabs">
+                         <li class="tab-link current" data-tab="tab-1">Details</li>
+                         <li class="tab-link" data-tab="tab-2"><span class="larger-number">500+</span>Client's</li>
+                         <li class="tab-link" data-tab="tab-3">Warnings</li>
+                         <li class="tab-link" data-tab="tab-4">Timeline</li>
+                         <li class="tab-link" data-tab="tab-5">Documents</li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content current">
+
+                         {{= it.include('side-panel/deputy-public-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content">
+
+                         {{= it.include('side-panel/multiple-client-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content">
+
+                         {{= it.include('side-panel/warnings-health.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content">
+
+                         {{= it.include('side-panel/timeline-health.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+                    <div id="tab-5" class="tab-content">
+
+                         <h2 class="description-title">
+                              Deputy documents
+                              <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a>
+                         </h2>
+
+                         {{= it.include('side-panel/document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+               </div>
+
+               <div class="large-3 large-uncentered columns">
+
+                    {{= it.include('actions-deputy.html') }}
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <!-- <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html">Confirm and add deputy</a>
+     <a class="main-cta secondary" id="edit-deputy" href="12b-confirm-page.html">Edit deputy</a> -->
+     <a href="#" onclick="history.back();" class="solo-link back">Back</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

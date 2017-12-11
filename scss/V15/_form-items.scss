@@ -612,6 +612,46 @@ form {
      font-family: $Montserrat;
 }
 
+.interchangeable-values {
+     @include flexbox;
+     @include align-items(center);
+     @include justify-content(flex-start);
+     @include flex-wrap(wrap);
+     @include flex-direction(column);
+     .form-group {
+          align-self:stretch;
+     }
+     &.lay {
+          .form-deputy-title { order: 1; }
+          .deputy-title-other-answer { order: 2; }
+          .form-deputy-first-name { order: 3; }
+          .form-deputy-middle-name { order: 4; }
+          .form-deputy-last-name { order: 5; }
+          .form-deputy-company-info { order: 6; }
+          .form-deputy-dob { order: 7; }
+          .form-deputy-previous-name { order: 8; }
+     }
+     &.professional {
+          .form-deputy-company-info { order: 1; }
+          .form-deputy-title { order: 2; }
+          .deputy-title-other-answer { order: 3; }
+          .form-deputy-first-name { order: 4; }
+          .form-deputy-middle-name { order: 5; }
+          .form-deputy-last-name { order: 6; }
+          .form-deputy-dob { order: 7; }
+          .form-deputy-previous-name { order: 8; }
+     }
+     &.public {
+          .form-deputy-company-info { order: 1; }
+          .form-deputy-title { order: 2; }
+          .deputy-title-other-answer { order: 3; }
+          .form-deputy-first-name { order: 4; }
+          .form-deputy-middle-name { order: 5; }
+          .form-deputy-last-name { order: 6; }
+          .form-deputy-dob { order: 7; }
+          .form-deputy-previous-name { order: 8; }
+     }
+}
 
 .add {
      font-family: $Montserrat;
@@ -711,7 +751,7 @@ form.login-form {
 
 form.reporting-period-form {
      hr {
-          margin: 1em 0 2em 0;
+          margin: 0.5em 0 2em 0;
      }
 }
 

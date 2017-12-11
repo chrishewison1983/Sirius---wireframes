@@ -1,0 +1,99 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+// =====================================  DATE PICKER - START ===================================== //
+#datepicker {
+	float: left;
+}
+
+i.date {
+	display: inline-block;
+	width: 3.15em;
+	height: 3.15em;
+	float: left;
+	margin: 0 0 0 1em;
+	background: url(#{$image-path}/icons/date.svg) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+#ui-datepicker-div {
+	border: 3px solid $blue-grey;
+	border-radius: $global-border-radius;
+	padding: 0.25em;
+	// margin: 0.5em 0;
+	margin: 0;
+	&:before {
+		display: none;
+		width: 1em;
+		height: 1em;
+		position: absolute;
+		left: 1em;
+		top: -1em;
+		border-style: solid;
+		border-width: 0 1em 1em 1em;
+		border-color: transparent transparent $blue-grey transparent;
+	}
+	.ui-datepicker-header {
+		background: $blue-grey;
+		border-radius: 3px 3px 0 0;
+		border: none;
+		margin: -0.25em -0.25em 0 -0.25em;
+		.ui-datepicker-title {
+			font-family: $Montserrat;
+		}
+		.ui-datepicker-next, .ui-datepicker-prev {
+			border: none;
+			span {
+				display: none;
+			}
+		}
+		.ui-datepicker-next {
+			color: $blue;
+			background: url(#{$image-path}/icons/arrow-right-blue.svg) no-repeat 50% 50%;
+			background-size: 0.5em;
+		}
+		.ui-datepicker-prev {
+			color: $blue;
+			background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 50% 50%;
+			background-size: 0.5em;
+		}
+	}
+	table.ui-datepicker-calendar {
+		thead tr th {
+			box-shadow: none;
+			padding: 0.7em 0.3em 0.3em 0.3em;
+			span {
+				background: none;
+			}
+		}
+		tbody {
+			tr {
+				&:hover, &:active, &:focus {
+					background: none;
+				}
+				td {
+					padding: 0.25em;
+					&:first-of-type {
+						padding: 0.25em;
+					}
+					.ui-state-default {
+						padding: 0.25em;
+						border-radius: 3px;
+						border: none;
+						background: $blue-grey;
+						&:hover, &:active, &:focus {
+							background: darken($blue-grey,5%);
+						}
+						&.ui-state-active {
+							background: $blue;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// =====================================  DATE PICKER - END ===================================== //

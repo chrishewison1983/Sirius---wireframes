@@ -1,0 +1,268 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a>
+                         <div class="separator"> > </div>
+                         <span class="state">Record client death</span>
+                    </nav>
+                    <h1>Record death of a client</h1>
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client details</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-2">
+                                   <span class="client-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="create-case right">
+
+                         <h2 class="section-title">
+                              Record death of
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </h2>
+
+                         <!-- =========== THE ORDER SECTION - START =========== -->
+                         <form id="client-death-details">
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <legend>Date of death</legend>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="client-death-date-day" class="input-length" name="client-death-date-day" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-date-month" class="input-length" name="client-death-date-month" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-date-year" class="input-length four" name="client-death-date-year" type="text" placeholder="" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group">
+                                   <legend>Date notified</legend>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="client-death-notified-date-day" class="input-length" name="client-death-notified-date-day" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-notified-date-month" class="input-length" name="client-death-notified-date-month" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-notified-date-year" class="input-length four" name="client-death-notified-date-year" type="text" placeholder="" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                              <!-- // FORM ITEM - 3a - START // -->
+                              <div class="form-group">
+                                   <label for="client-death-notified">Notified by</label>
+                                   <select id="client-death-notified" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Deputy">Deputy</option>
+                                        <option value="Executor">Executor</option>
+                                        <option value="Other">Other</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 3a - END // -->
+
+                              <!-- // FORM ITEM - 3b - START // -->
+                              <div class="form-group other-notified-by">
+                                   <label for="client-death-notified-other">Other - please specify</label>
+                                   <input id="client-death-notified-other" name="court-ref" type="text" value="">
+                              </div>
+                              <!-- // FORM ITEM - 3b - END // -->
+
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <legend>How was the OPG notified?</legend>
+                                   <label for="client-death-how-notified-email" class="radio">
+                                        <input id="client-death-how-notified-email" type="radio" name="client-death-how-notified" value="Email">
+                                        Email
+                                   </label>
+                                   <label for="client-death-how-notified-call" class="radio">
+                                        <input id="client-death-how-notified-call" type="radio" name="client-death-how-notified" value="Call">
+                                        Phone
+                                   </label>
+                                   <label for="client-death-how-notified-letter" class="radio">
+                                        <input id="client-death-how-notified-letter" type="radio" name="client-death-how-notified" value="Letter">
+                                        Letter
+                                   </label>
+                                   <label for="client-death-how-notified-order" class="radio">
+                                        <input id="client-death-how-notified-order" type="radio" name="client-death-how-notified" value="Order">
+                                        Order
+                                   </label>
+                                   <label for="client-death-how-notified-fax" class="radio">
+                                        <input id="client-death-how-notified-fax" type="radio" name="client-death-how-notified" value="Fax">
+                                        Fax
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                              <!-- // FORM ITEM - 5a - START // -->
+                              <div class="form-group">
+                                   <legend>Proof of death received</legend>
+                                   <label for="client-death-proof-yes" class="radio">
+                                        <input id="client-death-proof-yes" type="radio" name="client-death-proof" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="client-death-proof-no" class="radio">
+                                        <input id="client-death-proof-no" type="radio" name="client-death-proof" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 5a - END // -->
+
+                              <!-- // FORM ITEM - 5b - START // -->
+                              <div class="form-group client-death-proof-no">
+                                   <legend>Proof of death request letter sent out</legend>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="client-death-letter-sent-day" class="input-length" name="client-death-letter-sent-day" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-letter-sent-month" class="input-length" name="client-death-letter-sent-month" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-letter-sent-year" class="input-length four" name="client-death-letter-sent-year" type="text" placeholder="" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 5b - END // -->
+
+                              <!-- // FORM ITEM - 5c - START // -->
+                              <div class="form-group client-death-proof-no">
+                                   <legend>General Records Office request</legend>
+                                   <label for="client-death-records-office-yes" class="radio checked">
+                                        <input id="client-death-records-office-yes" type="radio" name="client-death-records-office" value="Yes" checked>
+                                        Yes
+                                   </label>
+                                   <label for="client-death-records-office-no" class="radio">
+                                        <input id="client-death-records-office-no" type="radio" name="client-death-records-office" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 5c - END // -->
+
+                              <!-- // FORM ITEM - 5d - START // -->
+                              <div class="form-group client-death-proof-yes">
+                                   <legend>Date death certificate received</legend>
+                                   <span class="help-text">Example - 05 04 2017</span>
+                                   <div>
+                                        <input id="client-death-certificate-received-day" class="input-length" name="client-death-certificate-received-day" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-certificate-received-month" class="input-length" name="client-death-certificate-received-month" type="text" placeholder="" maxlength="2">
+                                        <input id="client-death-certificate-received-year" class="input-length four" name="client-death-certificate-received-year" type="text" placeholder="" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 5d - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group client-death-notes">
+                                   <label for="sub-order-notes">Notes <span class="optional">(optional)</span></label>
+                                   <textarea name="textarea" class="jqte-test" id="client-death-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                         </form>
+                         <!-- =========== THE ORDER SECTION - END =========== -->
+
+                    </div>
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="confirm-client-death" href="../4-client-page/4a-new-client.html#deceased">Confirm death</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function(){
+     //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) {
+     //           $('#why-commission-visit').append('<p>' + visit + '</p>');
+     //      });
+     // });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

@@ -1,0 +1,63 @@
+<!-- ///////////////////////////////// LETTER CONFIRMATION - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="correspondence-sent" class="confirmation-panel">
+			<a href="#" class="close-panel finished-letter">Close</a>
+			<div class="content">
+				<h2>
+					<span></span>
+					Your letters have been sent to print
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+					</script>
+				</h2>
+				<div class="row details">
+					<div class="large-4 large-uncentered columns">
+						<h2>Letter title:</h2>
+						<ul id="document-letter-title">
+							<li class="document-title"></li>
+						</ul>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<h2>Recipients:</h2>
+						<ul id="document-recipients">
+						</ul>
+					</div>
+					<div class="large-4 large-uncentered columns">
+						<h2>Inserts:</h2>
+						<ul id="document-inserts">
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="main-cta">Create task</a>
+				<a href="#" class="finished finished-letter">I've finished this task</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// LETTER CONFIRMATION - END ///////////////////////////////// -->

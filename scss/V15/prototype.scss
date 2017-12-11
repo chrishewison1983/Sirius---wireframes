@@ -24,6 +24,7 @@
 @import "_extends";
 @import "_mixins";
 @import "_general";
+@import "_non-app";
 
 @import "_header";
 @import "_progress-bar";
@@ -47,6 +48,7 @@
 
 // Journey Specific CSS Styles
 @import "_client-page";
+@import "_deputy-page";
 @import "_create-letter";
 // @import "_document-viewer";
 @import "_deputy-client-info";

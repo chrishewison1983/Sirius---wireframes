@@ -175,6 +175,42 @@ table {
           tr {
                border-top: 5px solid $white;
                border-bottom: 5px solid $white;
+               td {
+                    .action {
+                         width: 2em;
+                         height: 2em;
+                         margin: 0 0 0 0.5em;
+                         float: right;
+                         border: none;
+                         p {
+                              display: none;
+                              width: 10em;
+                              bottom: -3em;
+                              margin-left: -5em;
+                              border: none;
+                         }
+                         &:hover {
+                              cursor: pointer;
+                              p {
+                                   display: inline-block;
+                              }
+                         }
+                    }
+                    .main-cta {
+                         &.tertiary {
+                              float: right;
+                              clear: both;
+                              margin: 0 0 0.5em 0;
+                         }
+                    }
+               }
+               &.summary-row {
+                    td {
+                         .icon.welfare-property {
+                              border: none;
+                         }
+                    }
+               }
           }
      }
      tr {
@@ -469,35 +505,6 @@ table {
                          display: inline-block;
                          width: auto;
                     }
-                    .main-cta {
-                         &.edit, &.documents {
-                              padding: 0.25em 0.75em 0.25em 2em;
-                              width: auto;
-                              float: right;
-                              text-align: center;
-                              margin: 0;
-                         }
-                         &.edit {
-                              background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 7.5% 50% $white;
-                              background-size: 1em;
-                              color: $blue;
-                              &:hover {
-                                   border: 3px solid darken($blue,5%);
-                                   background: url(#{$image-path}/icons/edit-white.svg) no-repeat 7.5% 50% darken($blue,5%);
-                                   background-size: 1em;
-                              }
-                         }
-                         &.documents {
-                              margin: 0 1em 0 0;
-                              background: url(#{$image-path}/icons/documents-white.svg) no-repeat 7.5% 50% $blue;
-                              background-size: 1em;
-                              &:hover {
-                                   border: 3px solid darken($blue,5%);
-                                   background: url(#{$image-path}/icons/documents-white.svg) no-repeat 7.5% 50% darken($blue,5%);
-                                   background-size: 1em;
-                              }
-                         }
-                    }
                }
           }
      }
@@ -509,7 +516,7 @@ table {
                &.five-column {
                     th {
                          &:nth-of-type(1n) {
-                              width: 45%;
+                              width: 40%;
                          }
                          &:nth-of-type(2n) {
                               width: 17.5%;
@@ -521,7 +528,7 @@ table {
                               width: 12.5%;
                          }
                          &:nth-of-type(5n) {
-                              width: 10%;
+                              width: 15%;
                               padding-right: 0;
                               text-align: right;
                               color: $black;
@@ -561,26 +568,6 @@ table {
                     padding-top: 1.35em;
                     &:last-of-type {
                          padding-right: 0;
-                    }
-                    .action {
-                         width: 2em;
-                         height: 2em;
-                         margin: 0 0 0 0.5em;
-                         float: right;
-                         border: none;
-                         p {
-                              display: none;
-                              width: 10em;
-                              bottom: -3em;
-                              margin-left: -5em;
-                              border: none;
-                         }
-                         &:hover {
-                              cursor: pointer;
-                              p {
-                                   display: inline-block;
-                              }
-                         }
                     }
                }
           }
@@ -662,6 +649,39 @@ table {
                               }
                          }
                     }
+                    &.error-row {
+                         box-shadow: inset 10px 0 0 $amber;
+                         background: lighten($blue-grey,3.5%);
+                         td {
+                              color: rgba($black,0.25);
+                              .error-tag {
+                                   display: inline-block;
+                                   padding: 0.5em 0.75em;
+                                   margin: 0 0 0.75em 0;
+                                   text-transform: uppercase;
+                                   color: $white;
+                                   background: $amber;
+                                   border-radius: $global-border-radius;
+                                   font-size: 0.775rem;
+                                   font-family: $Montserrat;
+                              }
+                              .icon {
+                                   &.violent {
+                                        background-color: $black;
+                                   }
+                                   &.welfare-property {
+                                        opacity: 0.4;
+                                   }
+                              }
+                              .name, .appointed, .address {
+                                   opacity: 0.4;
+                              }
+                              &:last-of-type {
+                                   border-right: none;
+                                   padding-right: 1em;
+                              }
+                         }
+                    }
                     td {
                          padding-top: 1.25em;
                          padding-bottom: 3em;
@@ -736,36 +756,6 @@ table {
                          }
                          .accomodation {
                               color: darken($blue-grey,30%);
-                         }
-                         .main-cta {
-                              &.edit, &.view {
-                                   padding: 0.25em 0.75em 0.25em 2em;
-                                   width: auto;
-                                   float: right;
-                                   text-align: center;
-                                   margin: 0;
-                                   &:hover {
-                                        border: 3px solid darken($blue,5%);
-                                   }
-                              }
-                              &.edit {
-                                   background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 12.5% 50%;
-                                   background-size: 1em;
-                                   margin-right: 1em;
-                                   &:hover {
-                                        background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 12.5% 50%;
-                                        background-size: 1em;
-                                        color: $blue;
-                                   }
-                              }
-                              &.view {
-                                   background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 12.5% 50% $blue;
-                                   background-size: 1em;
-                                   &:hover {
-                                        background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 12.5% 50% darken($blue,5%);
-                                        background-size: 1em;
-                                   }
-                              }
                          }
                     }
                }
@@ -855,6 +845,17 @@ table {
                     }
                     th:nth-of-type(6n) {
                          width: 20.5%;
+                         text-align: right;
+                         padding-right: 0;
+                    }
+               }
+          }
+     }
+     tbody {
+          tr {
+               td {
+                    th:nth-of-type(6n) {
+                         text-align: right;
                     }
                }
           }
@@ -940,6 +941,9 @@ table {
                          }
                          th:nth-of-type(6n) {
                               width: 0%;
+                              div {
+                                   display: none;
+                              }
                          }
                     }
                }

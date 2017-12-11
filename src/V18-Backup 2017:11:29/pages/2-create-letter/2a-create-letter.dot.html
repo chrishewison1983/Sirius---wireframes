@@ -1,0 +1,309 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Create correspondence</span>
+                    </nav>
+                    <h1>
+                         Create correspondence
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-letter-journey">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Correspondence</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="client-contacts"></span>
+                                   <p>3rd party contacts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-6">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/letter-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-contacts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 6 - START =========== -->
+                         <div id="tab-6" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <h2 class="section-title">Select a template</h2>
+
+                    <!-- <h2 class="section-title">Your most frequently used templates</h2> -->
+
+                    <!-- // DOCUMENT - 1 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2e-add-insert.html" class="letter-title inserts-journey" data-letter-id='1'>
+                              <span class="doc-title" data-value='letter'>Acknowledgement Letter.doc</span>
+                              <!-- <span>Inserts available</span> -->
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 1 - END // -->
+
+                    <!-- // DOCUMENT - 2 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='2'>
+                              <span class="doc-title" data-value='letter'>Blank Receiver.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 2 - END // -->
+
+                    <!-- // DOCUMENT - 3 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='3'>
+                              <span class="doc-title" data-value='letter'>Closure letter - attorney.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 3 - END // -->
+
+                    <!-- // DOCUMENT - 4 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='4'>
+                              <span class="doc-title" data-value='letter'>Family Care Payments COP App.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 4 - END // -->
+
+                    <!-- // DOCUMENT - 5 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='5'>
+                              <span class="doc-title" data-value='letter'>Family Care Payments COP No Action.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 5 - END // -->
+
+                    <!-- <h2 class="section-title">Other templates you can use</h2> -->
+
+                    <!-- // DOCUMENT - 6 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='6'>
+                              <span class="doc-title" data-value='letter'>OPG Complaint Ack.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 6 - END // -->
+
+                    <!-- // DOCUMENT - 7 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='7'>
+                              <span class="doc-title" data-value='letter'>OPG Complaint Esc.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 7 - END // -->
+
+                    <!-- // DOCUMENT - 8 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='8'>
+                              <span class="doc-title" data-value='letter'>OPG English.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 8 - END // -->
+
+                    <!-- // DOCUMENT - 9 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='9'>
+                              <span class="doc-title" data-value='letter'>Original Death Cert Lay.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 9 - END // -->
+
+                    <!-- // DOCUMENT - 10 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='10'>
+                              <span class="doc-title" data-value='letter'>Original Documents Letter.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 10 - END // -->
+
+                    <!-- // DOCUMENT - 11 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='11'>
+                              <span class="doc-title" data-value='letter'>Third party letter.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 11 - END // -->
+
+                    <!-- // DOCUMENT - 12 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='12'>
+                              <span class="doc-title" data-value='letter'>Visit follow up letter.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 12 - END // -->
+
+                    <!-- // DOCUMENT - 13 - START // -->
+                    <div class="document-item">
+                         <!-- <a href="#preview-doc" rel="modal:open" class="preview">Preview</a> -->
+                         <a href="2b-add-correspondance.html" class="letter-title" data-letter-id='13'>
+                              <span class="doc-title" data-value='letter'>Visit follow up letter.doc</span>
+                         </a>
+                    </div>
+                    <!-- // DOCUMENT - 13 - END // -->
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="preview-doc" style="display:none;">
+          <h1>Acknowledgement Letter.doc</h1>
+          <h2 class="case-number">Preview document</h2>
+          <div class="image">
+               <img src="../../../production/img/V18/letters/letter-1-Acknowledgement-Letter.png" alt="Document">
+          </div>
+     </div>
+     <div id="delete" style="display:none;">
+          <h1>Delete draft</h1>
+          <h2 class="document-title"></h2>
+          <p>Are you sure you want to delete this draft?</p>
+          <hr>
+          <div class="cta-row">
+               <a class="main-cta delete-action" rel="modal:close" id="delete-draft">Delete</a>
+               <a href="#" rel="modal:close" id="cancel-delete">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <!-- <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html">Create letter</a> -->
+     <a href="#" onclick="history.back();" class="solo-link cancel">Cancel correspondence</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     $(document).ready(function(){
+          sessionStorage.setItem('selected-letter', JSON.stringify($('#draft-list li').map(function() {
+               return $(this).text().trim();
+          }).toArray()));
+     });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

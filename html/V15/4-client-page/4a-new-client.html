@@ -3,7 +3,7 @@
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>OPG - Sirius</title>
-     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link rel="stylesheet" href="../../../production/css/prototype-V15.css" />
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
      <!-- ///////// Chris Prototyping Kit - START ///////// -->
@@ -108,7 +108,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-10 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <span class="type">client</span> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal-status">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-2 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+ <div class="row"> <div class="large-8 large-uncentered columns"> <nav class="breadcrumb"> <a href="../dashboard.html">My tasks</a> <div class="separator"> > </div> <span>Client summary</span> </nav> <h1> <span class="type lay">client</span> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> <span class="normal-status">Client's summary page</span> <span class="violent">Client is violent</span> <span class="welsh">Client's prefered language is Welsh</span> <span class="deceased">Client is deceased</span> </h1> </div> <div class="large-4 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
 <nav class="actions-nav header">
 
 	<ul>
@@ -122,6 +122,12 @@
 			<a href="../1-create-case/1a-the-order.html" class="action create-case">
 				<span class="icon"></span>
 				<span>Create case</span>
+			</a>
+		</li>
+		<li class="supervision">
+			<a href="../16-client-death/16a-client-death.html" class="action deputy-death">
+				<span class="text">deceased</span>
+				<span>Record client death</span>
 			</a>
 		</li>
 		<!-- <li class="supervision">
@@ -444,7 +450,7 @@
 						<div class="wrapper">
 							<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
 							<h2 class="sub-text">19273638 - Report due date</h2>
-							<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-health">Edit</a>
+							<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-health">Change reporting period</a>
 						</div>
 					</div>
 					<div class="colour-wrapper"></div>
@@ -457,7 +463,7 @@
 						<div class="wrapper">
 							<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
 							<h2 class="sub-text">14820940 - Report due date</h2>
-							<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-property">Edit</a>
+							<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-property">Change reporting period</a>
 						</div>
 					</div>
 					<div class="colour-wrapper"></div>
@@ -482,9 +488,9 @@
 				<span class="icon main-contact"><p>Main deputy</p></span>
 				<span class="icon welfare"><p>Health &amp; welfare</p></span>
 				<span class="type">Joint</span>
-				<a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit">Edit</a>
-				<div class="separator"></div>
-				<a href="../14-deputy-page/14a-deputy-page.html" class="view">View deputy</a>
+				<!-- <a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit">Edit</a>
+				<div class="separator"></div> -->
+				<a href="../14-deputy-page/14a-deputy-page.html" class="">Go to deputy record</a>
 			</h1>
 			<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 			<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -501,9 +507,9 @@
 				Carla Frith
 				<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
 				<span class="type">Joint</span>
-				<a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit">Edit</a>
-				<div class="separator"></div>
-				<a href="../14-deputy-page/14a-deputy-page.html" class="view">View deputy</a>
+				<!-- <a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit">Edit</a>
+				<div class="separator"></div> -->
+				<a href="../14-deputy-page/14a-deputy-page.html" class="">Go to deputy record</a>
 			</h1>
 			<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 			<div class="info"><span>Status:</span> <strong>Active</strong></div>
@@ -520,9 +526,9 @@
 				Melanie Rand
 				<span class="icon property"><p>Property &amp; finance</p></span>
 				<span class="type">Joint</span>
-				<a href="../12-edit-deputy/12a-check-deputy-3.html" class="edit">Edit</a>
-				<div class="separator"></div>
-				<a href="../14-deputy-page/14a-deputy-page.html" class="view">View deputy</a>
+				<!-- <a href="../12-edit-deputy/12a-check-deputy-3.html" class="edit">Edit</a>
+				<div class="separator"></div> -->
+				<a href="../14-deputy-page/14a-deputy-page.html" class="">Go to deputy record</a>
 			</h1>
 			<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 			<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -615,40 +621,24 @@
 		<p class="answer">
 			<span class="client-status-day">09</span>/
 			<span class="client-status-month">09</span>/
-			<span class="client-status-year">1983</span>
+			<span class="client-status-year">2017</span>
 		</p>
 	</div>
 	<!-- // CLIENT ITEM - 2 - END // -->
 
 	<!-- // CLIENT ITEM - 3 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Title:</p>
-		<p class="answer client-title">Mr.</p>
+		<p class="item">Name:</p>
+		<p class="answer">
+			<span class="client-title">Mr.</span>
+			<span class="client-first-name">Gerald</span>
+			<span class="client-middle-name">Stephen</span>
+			<span class="client-last-name">Brackens</span>
+		</p>
 	</div>
 	<!-- // CLIENT ITEM - 3 - END // -->
 
 	<!-- // CLIENT ITEM - 4 - START // -->
-	<div class="person-detail-item">
-		<p class="item">First name:</p>
-		<p class="answer client-first-name">Gerald</p>
-	</div>
-	<!-- // CLIENT ITEM - 4 - END // -->
-
-	<!-- // CLIENT ITEM - 5 - START // -->
-	<div class="person-detail-item">
-		<p class="item">Middle names:</p>
-		<p class="answer client-middle-name">Stephen</p>
-	</div>
-	<!-- // CLIENT ITEM - 5 - END // -->
-
-	<!-- // CLIENT ITEM - 6 - START // -->
-	<div class="person-detail-item">
-		<p class="item">Last name:</p>
-		<p class="answer client-last-name">Brackens</p>
-	</div>
-	<!-- // CLIENT ITEM - 6 - END // -->
-
-	<!-- // CLIENT ITEM - 7 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Date of birth:</p>
 		<p class="answer">
@@ -657,16 +647,16 @@
 			<span class="client-dob-year">1983</span>
 		</p>
 	</div>
-	<!-- // CLIENT ITEM - 7 - END // -->
+	<!-- // CLIENT ITEM - 4 - END // -->
 
-	<!-- // CLIENT ITEM - 8 - START // -->
+	<!-- // CLIENT ITEM - 5 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Previously Known As:</p>
 		<p class="answer client-previously-known-as">N/A</p>
 	</div>
-	<!-- // CLIENT ITEM - 8 - END // -->
+	<!-- // CLIENT ITEM - 5 - END // -->
 
-	<!-- // CLIENT ITEM - 9 - START // -->
+	<!-- // CLIENT ITEM - 6 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Address:</p>
 		<p class="answer">
@@ -678,72 +668,72 @@
 			<span class="answer client-country">England</p>
 		</p>
 	</div>
+	<!-- // CLIENT ITEM - 6 - END // -->
+
+	<!-- // CLIENT ITEM - 7 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Is airmail required?:</p>
+		<p class="answer client-airmail">No</p>
+	</div>
+	<!-- // CLIENT ITEM - 7 - END // -->
+
+	<!-- // CLIENT ITEM - 8 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Daytime telephone number:</p>
+		<p class="answer client-phone-number">0123456789</p>
+	</div>
+	<!-- // CLIENT ITEM - 8 - END // -->
+
+	<!-- // CLIENT ITEM - 9 - START // -->
+	<div class="person-detail-item">
+		<p class="item">Mobile telephone number:</p>
+		<p class="answer client-mob-number">07768948823</p>
+	</div>
 	<!-- // CLIENT ITEM - 9 - END // -->
 
 	<!-- // CLIENT ITEM - 10 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Is airmail required?:</p>
-		<p class="answer client-airmail">No</p>
+		<p class="item">Email address:</p>
+		<p class="answer client-email">gerald.brackens@hotmail.com</p>
 	</div>
 	<!-- // CLIENT ITEM - 10 - END // -->
 
 	<!-- // CLIENT ITEM - 11 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Daytime telephone number:</p>
-		<p class="answer client-phone-number">0123456789</p>
+		<p class="item">Financial reference:</p>
+		<p class="answer client-financial">192848291</p>
 	</div>
 	<!-- // CLIENT ITEM - 11 - END // -->
 
 	<!-- // CLIENT ITEM - 12 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Mobile telephone number:</p>
-		<p class="answer client-mob-number">07768948823</p>
+		<p class="item">Casarec Number:</p>
+		<p class="answer client-casarec">183920478</p>
 	</div>
 	<!-- // CLIENT ITEM - 12 - END // -->
 
 	<!-- // CLIENT ITEM - 13 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Email address:</p>
-		<p class="answer client-email">gerald.brackens@hotmail.com</p>
+		<p class="item">Accommodation Type:</p>
+		<p class="answer client-accommodation">LA Nursing home</p>
 	</div>
 	<!-- // CLIENT ITEM - 13 - END // -->
 
 	<!-- // CLIENT ITEM - 14 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Financial reference:</p>
-		<p class="answer client-financial">192848291</p>
+		<p class="item">Medical Condition:</p>
+		<p class="answer client-medical-condition-answer">Alzheimer's</p>
 	</div>
 	<!-- // CLIENT ITEM - 14 - END // -->
 
 	<!-- // CLIENT ITEM - 15 - START // -->
 	<div class="person-detail-item">
-		<p class="item">Casarec Number:</p>
-		<p class="answer client-casarec">183920478</p>
+		<p class="item">Marital Status:</p>
+		<p class="answer client-marital-status">Divorced</p>
 	</div>
 	<!-- // CLIENT ITEM - 15 - END // -->
 
 	<!-- // CLIENT ITEM - 16 - START // -->
-	<div class="person-detail-item">
-		<p class="item">Accommodation Type:</p>
-		<p class="answer client-accommodation">LA Nursing home</p>
-	</div>
-	<!-- // CLIENT ITEM - 16 - END // -->
-
-	<!-- // CLIENT ITEM - 17 - START // -->
-	<div class="person-detail-item">
-		<p class="item">Medical Condition:</p>
-		<p class="answer client-medical-condition-answer">Alzheimer's</p>
-	</div>
-	<!-- // CLIENT ITEM - 17 - END // -->
-
-	<!-- // CLIENT ITEM - 18 - START // -->
-	<div class="person-detail-item">
-		<p class="item">Marital Status:</p>
-		<p class="answer client-marital-status">Divorced</p>
-	</div>
-	<!-- // CLIENT ITEM - 18 - END // -->
-
-	<!-- // CLIENT ITEM - 19 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Has the client expressed a preferred method of contact?:</p>
 		<ul class="answer">
@@ -751,14 +741,14 @@
 			<li class="client-correspondence-email">Email</li>
 		</ul>
 	</div>
-	<!-- // CLIENT ITEM - 19 - END // -->
+	<!-- // CLIENT ITEM - 16 - END // -->
 
-	<!-- // CLIENT ITEM - 20 - START // -->
+	<!-- // CLIENT ITEM - 17 - START // -->
 	<div class="person-detail-item">
 		<p class="item">Is the client a violent risk?:</p>
 		<p class="answer client-violent-risk">No</p>
 	</div>
-	<!-- // CLIENT ITEM - 20 - END // -->
+	<!-- // CLIENT ITEM - 17 - END // -->
 
 </div>
 <!-- // CLIENT DETAILS - END // -->
@@ -812,8 +802,8 @@
 				</p>
 			</td>
 			<td>
-				<a class="main-cta edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
-				<a class="main-cta documents" href="#">Documents</a>
+				<a class="main-cta tertiary edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
+				<a class="main-cta tertiary documents" href="#">Documents</a>
 			</td>
 		</tr>
 		<!-- SUB ORDER 1 - END -->
@@ -841,8 +831,8 @@
 				</p>
 			</td>
 			<td>
-				<a class="main-cta edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
-				<a class="main-cta documents" href="#">Documents</a>
+				<a class="main-cta tertiary edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
+				<a class="main-cta tertiary documents" href="#">Documents</a>
 			</td>
 		</tr>
 		<!-- SUB ORDER 2 - END -->
@@ -880,8 +870,8 @@
 				</p>
 			</td>
 			<td>
-				<a class="main-cta edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
-				<a class="main-cta documents" href="#">Documents</a>
+				<a class="main-cta tertiary edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
+				<a class="main-cta tertiary documents" href="#">Documents</a>
 			</td>
 		</tr>
 		<!-- SUB ORDER 3 - END -->
@@ -919,8 +909,8 @@
 				</p>
 			</td>
 			<td>
-				<a class="main-cta edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
-				<a class="main-cta documents" href="#">Documents</a>
+				<a class="main-cta tertiary edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
+				<a class="main-cta tertiary documents" href="#">Documents</a>
 			</td>
 		</tr>
 		<!-- SUB ORDER 4 - END -->
@@ -948,8 +938,8 @@
 				</p>
 			</td>
 			<td>
-				<a class="main-cta edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
-				<a class="main-cta documents" href="#">Documents</a>
+				<a class="main-cta tertiary edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
+				<a class="main-cta tertiary documents" href="#">Documents</a>
 			</td>
 		</tr>
 		<!-- SUB ORDER 5 - END -->
@@ -987,8 +977,8 @@
 				</p>
 			</td>
 			<td>
-				<a class="main-cta edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
-				<a class="main-cta documents" href="#">Documents</a>
+				<a class="main-cta tertiary edit" href="../1-create-case/1a-the-order.html#EditCase">Edit order</a>
+				<a class="main-cta tertiary documents" href="#">Documents</a>
 			</td>
 		</tr>
 		<!-- SUB ORDER 6 - END -->
@@ -1348,7 +1338,7 @@
 	</div>
 </div>
 <!-- // MODAL - END // -->
- </div> </div> </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> </div> </div> <!-- //////////////////////////////////// CLIENT OVERVIEW - END //////////////////////////////////// --> <!-- //////////////////////////////////// CLIENT HEALTH - START //////////////////////////////////// --> <div id="client-health" class="tabcontent"> <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="client-details tabs"> <li class="tab-link current" data-tab="health-tab-1"> Summary </li> <li class="tab-link" data-tab="health-tab-2"> <span>4</span> Tasks </li> <li class="tab-link" data-tab="health-tab-3"> Order details </li> <li class="tab-link" data-tab="health-tab-4"> <span>2</span> Deputies </li> <li class="tab-link" data-tab="health-tab-5"> Warnings </li> <li class="tab-link" data-tab="health-tab-6"> Timeline </li> <li class="tab-link" data-tab="health-tab-7"> Documents </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="health-tab-1" class="client-details tab-content current"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- ///////////////////////////////// HEALTH SUMMARY - START ///////////////////////////////// -->
+ </div> </div> </div> <!-- =========== TAB CONTENT - 4 - END =========== --> </div> </div> </div> <!-- //////////////////////////////////// CLIENT OVERVIEW - END //////////////////////////////////// --> <!-- //////////////////////////////////// CLIENT HEALTH - START //////////////////////////////////// --> <div id="client-health" class="tabcontent"> <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="client-details tabs"> <li class="tab-link current" data-tab="health-tab-1"> Summary </li> <li class="tab-link" data-tab="health-tab-2"> <span>4</span> Tasks </li> <li class="tab-link" data-tab="health-tab-3"> Order details </li> <li class="tab-link" data-tab="health-tab-4"> <span>2</span> Deputy(s) </li> <li class="tab-link" data-tab="health-tab-5"> Warnings </li> <li class="tab-link" data-tab="health-tab-6"> Timeline </li> <li class="tab-link" data-tab="health-tab-7"> Documents </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="health-tab-1" class="client-details tab-content current"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- ///////////////////////////////// HEALTH SUMMARY - START ///////////////////////////////// -->
 <div id="health-summary">
 
 	<!-- <div class="no-items">
@@ -1418,7 +1408,7 @@
 									<div class="wrapper">
 										<h1 class="main-text"><span class="icon date"></span>17/07/2017</h1>
 										<h2 class="sub-text">19273638 - Report due date</h2>
-										<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-health">Edit</a>
+										<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-health">Change reporting period</a>
 									</div>
 								</div>
 								<div class="colour-wrapper"></div>
@@ -1443,9 +1433,9 @@
 							<span class="icon main-contact"><p>Main correspondence</p></span>
 							<span class="icon welfare"><p>Health &amp; welfare</p></span>
 							<span class="type">Joint</span>
-							<a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit deputy-1">Edit</a>
-							<div class="separator"></div>
-							<a href="../14-deputy-page/14a-deputy-page.html" class="view">View deputy</a>
+							<!-- <a href="../12-edit-deputy/12a-check-deputy-1.html" class="edit deputy-1">Edit</a>
+							<div class="separator"></div> -->
+							<a href="../14-deputy-page/14a-deputy-page.html" class="">Go to deputy record</a>
 						</h1>
 						<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 						<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -1462,9 +1452,9 @@
 							Carla Frith
 							<span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>
 							<span class="type">Joint</span>
-							<a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit deputy-2">Edit</a>
-							<div class="separator"></div>
-							<a href="../14-deputy-page/14a-deputy-page.html" class="view">View deputy</a>
+							<!-- <a href="../12-edit-deputy/12a-check-deputy-2.html" class="edit deputy-2">Edit</a>
+							<div class="separator"></div> -->
+							<a href="../14-deputy-page/14a-deputy-page.html" class="">Go to deputy record</a>
 						</h1>
 						<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 						<div class="info"><span>Status:</span> <strong>Active</strong></div>
@@ -1613,7 +1603,7 @@
 				</td>
 				<td>
 					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
-					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="../8-create-task/8a-create-task.html" class="action edit"><p>Edit task</p></a>
 					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
@@ -1650,7 +1640,7 @@
 				</td>
 				<td>
 					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
-					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="../8-create-task/8a-create-task.html" class="action edit"><p>Edit task</p></a>
 					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
@@ -1687,7 +1677,7 @@
 				</td>
 				<td>
 					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
-					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="../8-create-task/8a-create-task.html" class="action edit"><p>Edit task</p></a>
 					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
@@ -1732,7 +1722,7 @@
 				</td>
 				<td>
 					<a href="#complete-task" rel="modal:open" class="action complete"><p>Task complete</p></a>
-					<a href="../8-create-task/8a-create-task" class="action edit"><p>Edit task</p></a>
+					<a href="../8-create-task/8a-create-task.html" class="action edit"><p>Edit task</p></a>
 					<a href="#re-assign-task" rel="modal:open" class="action re-assign"><p>Re-assign task</p></a>
 				</td>
 			</tr>
@@ -1901,6 +1891,21 @@
           <a href="../5-add-deputy/5a-search-deputy.html" class="add">Add deputy</a>
      </h2>
 
+     <!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+			<div id="unlink-complete" class="confirmation-panel">
+				<div class="content">
+					<h2>
+						<span></span>
+						"<div>Mrs Carla Frith</div>" has been unlinked as a deputy
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
      <table id="deputies-table">
           <thead>
                <tr class="six-column">
@@ -1909,7 +1914,7 @@
                     <th>Status</th>
                     <th>Relationship</th>
                     <th></th>
-                    <th></th>
+                    <th><div>Actions</div></th>
                </tr>
           </thead>
           <tbody>
@@ -1937,8 +1942,8 @@
                          <span class="icon welfare"><p>Health &amp; welfare</p></span>
                     </td>
                     <td>
-                         <a class="main-cta view" href="../14-deputy-page/14a-deputy-page.html">View</a>
-                         <a class="main-cta secondary edit" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
+                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <a class="main-cta tertiary edit" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 1 - END -->
@@ -2148,6 +2153,7 @@
                <!-- DEPUTY SUMMARY ROW 2 - START -->
                <tr class="summary-row violent" data-value="2">
                     <td>
+                         <!-- <div class="error-tag">Deputy added in Error</div> -->
                          <div class="name">
                               <span class="icon violent">
                                    <p>Violent</p>
@@ -2162,7 +2168,7 @@
                          Lay deputy
                     </td>
                     <td>
-                         Active
+                         <div class="deputy-status-error">Active</div>
                     </td>
                     <td>
                          Sibling
@@ -2170,8 +2176,9 @@
                     <td>
                          <span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td>
                     <td>
-                         <a class="main-cta view" href="../14-deputy-page/14a-deputy-page.html">View</a>
-                         <a class="main-cta secondary edit" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
+                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <a class="main-cta tertiary edit" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
+                         <a class="main-cta tertiary unlink" href="#unlink-deputy" rel="modal:open">Un-link deputy</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 2 - END -->
@@ -2385,6 +2392,18 @@
 
 </div>
 <!-- // DEPUTY DETAILS - END // -->
+
+<!-- // MODAL - START // -->
+<div id="unlink-deputy" style="display:none;">
+	<h1>Unlink this deputy</h1>
+     <h2>Mrs Carla Frith</h2>
+	<p>Are you sure you wish to unlink <strong>Mrs Carla Frith</strong> as a deputy for <strong>Mr Gerald Brackens</strong>?</p>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-unlink">Unlink deputy</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
  </div> </div> </div> <!-- =========== TAB CONTENT - 4 - END =========== --> <!-- =========== TAB CONTENT - 5 - START =========== --> <div id="health-tab-5" class="client-details tab-content"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- // WARNINGS - START // -->
 <div id="list-of-warnings">
 
@@ -3050,7 +3069,7 @@
 		<li class="supervision">
 			<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 				<span class="icon"></span>
-				<span>Create letter</span>
+				<span>Create correspondence</span>
 			</a>
 		</li>
 		<li class="supervision retrieve-drafts">
@@ -3159,7 +3178,7 @@
 	</div>
 </div>
 <!-- ///////////////////////////////// LETTER CONFIRMATION - END ///////////////////////////////// -->
- <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="client-details tabs"> <li class="tab-link current" data-tab="property-tab-1"> Summary </li> <li class="tab-link" data-tab="property-tab-2"> <span>1</span> Tasks </li> <li class="tab-link" data-tab="property-tab-3"> Order details </li> <li class="tab-link" data-tab="property-tab-4"> <span>1</span> Deputy </li> <li class="tab-link" data-tab="property-tab-5"> Warnings </li> <li class="tab-link" data-tab="property-tab-6"> Timeline </li> <li class="tab-link" data-tab="property-tab-7"> Documents </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="property-tab-1" class="client-details tab-content current"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- ///////////////////////////////// PROPERTY SUMMARY - START ///////////////////////////////// -->
+ <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="client-details tabs"> <li class="tab-link current" data-tab="property-tab-1"> Summary </li> <li class="tab-link" data-tab="property-tab-2"> <span>1</span> Tasks </li> <li class="tab-link" data-tab="property-tab-3"> Order details </li> <li class="tab-link" data-tab="property-tab-4"> <span>1</span> Deputy(s) </li> <li class="tab-link" data-tab="property-tab-5"> Warnings </li> <li class="tab-link" data-tab="property-tab-6"> Timeline </li> <li class="tab-link" data-tab="property-tab-7"> Documents </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="property-tab-1" class="client-details tab-content current"> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- ///////////////////////////////// PROPERTY SUMMARY - START ///////////////////////////////// -->
 <div id="property-summary">
 
 	<!-- // ================================ DASHBOARD CONTENT - START ================================ // -->
@@ -3213,7 +3232,7 @@
 									<div class="wrapper">
 										<h1 class="main-text"><span class="icon date"></span>21/09/2017</h1>
 										<h2 class="sub-text">14820940 - Report due date</h2>
-										<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-property">Edit</a>
+										<a href="../9-reporting-period/9a-reporting-period.html" class="edit edit-property">Change reporting period</a>
 									</div>
 								</div>
 								<div class="colour-wrapper"></div>
@@ -3291,9 +3310,9 @@
 							Melanie Rand
 							<span class="icon property"><p>Property &amp; finance</p></span>
 							<span class="type">Joint</span>
-							<a href="../12-edit-deputy/12a-check-deputy-3.html" class="edit">Edit</a>
-							<div class="separator"></div>
-							<a href="../14-deputy-page/14a-deputy-page.html" class="view">View deputy</a>
+							<!-- <a href="../12-edit-deputy/12a-check-deputy-3.html" class="edit">Edit</a>
+							<div class="separator"></div> -->
+							<a href="../14-deputy-page/14a-deputy-page.html" class="">Go to deputy record</a>
 						</h1>
 						<div class="info"><span>Type:</span> <strong>Lay deputy</strong></div>
 						<div class="info"><span>Status:</span> <strong>Open</strong></div>
@@ -3469,7 +3488,7 @@
 
 				<h2 class="description-title">
 					Financial details timeline
-					<a class="show-chart hide-item">Hide timeline</a>
+					<a class="show-chart hide-item close">Show timeline</a>
 				</h2>
 
 				<div id="chartdiv"></div>
@@ -3486,7 +3505,7 @@
 
 			<h2 class="description-title">
 				Supervision level timeline
-				<a class="show-supervision hide-item">Hide timeline</a>
+				<a class="show-supervision hide-item close">Show timeline</a>
 			</h2>
 
 			<div id="supervision-timeline">
@@ -3578,6 +3597,7 @@
 
 			<h2 class="description-title">
 				Order timeline
+				<a class="reverse-timeline">Reverse timeline</a>
 			</h2>
 
 			<div id="filter-panel">
@@ -3609,10 +3629,10 @@
 
 			<ol id="vertical-timeline">
 
-				<div id="filter-results">Filter timeline results...</div>
+				<div id="filter-results" class="order-1">Filtered timeline results...</div>
 
 				<!-- DATE INDICATOR - START -->
-				<li class="sectionContent date-indicator all">
+				<li class="sectionContent date-indicator all order-2">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>Today</div>
@@ -3620,7 +3640,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
-				<li class="sectionContent pdf-review four all">
+				<li class="sectionContent pdf-review four all order-3">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3641,7 +3661,7 @@
 				<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 2 - START /////////////////////////// -->
-				<li class="sectionContent case one all">
+				<li class="sectionContent case one all order-4">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3665,7 +3685,7 @@
 				<!-- /////////////////////////// LI ITEM 2 - END /////////////////////////// -->
 
 				<!-- DATE INDICATOR - START -->
-				<li class="sectionContent date-indicator all">
+				<li class="sectionContent date-indicator all order-5">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>This week</div>
@@ -3673,7 +3693,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 3 - START /////////////////////////// -->
-				<li class="sectionContent commission-visit four all">
+				<li class="sectionContent commission-visit four all order-6">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3744,7 +3764,7 @@
 				<!-- /////////////////////////// LI ITEM 3 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 4 - START /////////////////////////// -->
-				<li class="sectionContent case two all">
+				<li class="sectionContent case two all order-7">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3766,7 +3786,7 @@
 				<!-- /////////////////////////// LI ITEM 4 - END /////////////////////////// -->
 
 				<!-- DATE INDICATOR - START -->
-				<li class="sectionContent date-indicator all">
+				<li class="sectionContent date-indicator all order-8">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>This month</div>
@@ -3774,7 +3794,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 5 - START /////////////////////////// -->
-				<li class="sectionContent case one all">
+				<li class="sectionContent case one all order-9">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3798,7 +3818,7 @@
 				<!-- /////////////////////////// LI ITEM 5 - END /////////////////////////// -->
 
 				<!-- DATE INDICATOR - START -->
-				<li class="sectionContent date-indicator all">
+				<li class="sectionContent date-indicator all order-10">
 					<span class="dot"></span>
 					<span class="border"></span>
 					<div>Older</div>
@@ -3806,7 +3826,7 @@
 				<!-- DATE INDICATOR - END -->
 
 				<!-- /////////////////////////// LI ITEM 6 - START /////////////////////////// -->
-				<li class="sectionContent client one all">
+				<li class="sectionContent client one all order-11">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3834,7 +3854,7 @@
 				<!-- /////////////////////////// LI ITEM 6 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 7 - START /////////////////////////// -->
-				<li class="sectionContent case one all">
+				<li class="sectionContent case one all order-12">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3858,7 +3878,7 @@
 				<!-- /////////////////////////// LI ITEM 7 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 8 - START /////////////////////////// -->
-				<li class="sectionContent case two all">
+				<li class="sectionContent case two all order-13">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3882,7 +3902,7 @@
 				<!-- /////////////////////////// LI ITEM 8 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 9 - START /////////////////////////// -->
-				<li class="sectionContent client three all">
+				<li class="sectionContent client three all order-14">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3905,7 +3925,7 @@
 				<!-- /////////////////////////// LI ITEM 9 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 10 - START /////////////////////////// -->
-				<li class="sectionContent client three all">
+				<li class="sectionContent client three all order-15">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3929,7 +3949,7 @@
 				<!-- /////////////////////////// LI ITEM 10 - END /////////////////////////// -->
 
 				<!-- /////////////////////////// LI ITEM 11 - START /////////////////////////// -->
-				<li class="sectionContent client three all">
+				<li class="sectionContent client three all order-16">
 
 					<span class="dot"></span>
 					<span class="border"></span>
@@ -3984,7 +4004,251 @@
 
 </script>
 <!-- SCRIPT CONTENT - END -->
- </div> </div> </div> <!-- =========== TAB CONTENT - 6 - END =========== --> <!-- =========== TAB CONTENT - 7 - START =========== --> <div id="property-tab-7" class="client-details tab-content"> <div class="row"> <div class="large-12 large-uncentered columns"> </div> </div> </div> <!-- =========== TAB CONTENT - 7 - END =========== --> </div> <div class="large-3 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+ </div> </div> </div> <!-- =========== TAB CONTENT - 6 - END =========== --> <!-- =========== TAB CONTENT - 7 - START =========== --> <div id="property-tab-7" class="client-details tab-content"> <div class="row"> <div class="large-12 large-uncentered columns"> <h2 class="description-title"> Order documents <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a> </h2> <!-- // DOCUMENT VIEWER - START // -->
+<div id="documents-viewer">
+
+	<!-- ============================ DOCUMENT 1 - START ============================ -->
+	<div class="doc-container document-1">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1">
+
+			<table class="livelink-documents">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<!-- <th>UID</th> -->
+						<th>Doc type</th>
+						<!-- <th>Case type</th> -->
+						<th>Direction</th>
+						<th>Date created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Incoming</p></td>
+						<td><p>27/08/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../production/img/V15/Beef_Dripping.jpg" class="mov-file" download>
+								Video-of-client.mov
+								<span class="download"></span>
+							</a>
+						</td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Incoming</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="page-2 document-viewing-panel">
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+					<!-- <a href="#" class="close">Close</a> -->
+				</div>
+				<img src="../../../production/img/V15/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V15/document-report.png" alt="Document">
+			</div>
+		</div>
+	</div>
+	<!-- ============================ DOCUMENT 1 - END ============================ -->
+
+
+
+	<!-- ============================ DOCUMENT 2 - START ============================ -->
+	<div class="doc-container document-2">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1">
+
+			<table class="livelink-documents">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<!-- <th>UID</th> -->
+						<th>Doc type</th>
+						<!-- <th>Case type</th> -->
+						<th>Direction</th>
+						<th>Date created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Incoming</p></td>
+						<td><p>27/08/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_1.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Correspondance_document_2.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Outgoing</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../production/img/V15/Beef_Dripping.jpg" class="mov-file" download>
+								Video-of-client.mov
+								<span class="download"></span>
+							</a>
+						</td>
+						<!-- <td>7000-0000-2563</td> -->
+						<td><p>IT-SS-ORDER</p></td>
+						<!-- <td>DEP - PFA</td> -->
+						<td><p>Incoming</p></td>
+						<td><p>27/06/2017 11:07:13</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div class="page-2 document-viewing-panel">
+			<!-- <span class="compare-icon"></span> -->
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+				</div>
+				<img src="../../../production/img/V15/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V15/document-report.png" alt="Document">
+			</div>
+		</div>
+
+	</div>
+	<!-- ============================ DOCUMENT 2 - END ============================ -->
+
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> </div> </div> <!-- =========== TAB CONTENT - 7 - END =========== --> </div> <div class="large-3 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
 <nav class="actions-nav client-panel">
 
 	<h1>Perform order task:</h1>
@@ -4006,7 +4270,7 @@
 		<li class="supervision add-bond-link">
 			<a href="../1-create-case/1b-the-bond.html" class="action add-bond">
 				<span class="icon"></span>
-				<span class="text">Add bond</span>
+				<span class="text-bond">Add bond</span>
 			</a>
 			<a href="../1-create-case/1b-the-bond.html" class="action edit-bond">
 				<span class="icon"></span>
@@ -4026,7 +4290,7 @@
 		<li class="supervision">
 			<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
 				<span class="icon"></span>
-				<span>Create letter</span>
+				<span>Create correspondence</span>
 			</a>
 		</li>
 		<li class="supervision retrieve-drafts">
@@ -4097,6 +4361,7 @@
 	<script src="../../../production/js/V15/my-cookies/new-event.js"></script>
 	<script src="../../../production/js/V15/my-cookies/create-contact.js"></script>
 	<script src="../../../production/js/V15/my-cookies/timeline.js"></script>
+	<script src="../../../production/js/V15/my-cookies/client-death.js"></script>
 	<script src="../../../production/js/V15/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V15/my-cookies/deputy-page.js"></script>
 	<!-- User Journey - Cookies - END -->
@@ -4117,6 +4382,7 @@
 	<script src="../../../production/js/V15/my-jquery/progress-bar.js"></script>
 	<script src="../../../production/js/V15/my-jquery/create-contact.js"></script>
 	<script src="../../../production/js/V15/my-jquery/timeline.js"></script>
+	<script src="../../../production/js/V15/my-jquery/client-death.js"></script>
 	<script src="../../../production/js/V15/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V15/my-jquery/deputy-page.js"></script>
 	<!-- <script src="../../../production/js/V15/my-jquery/search.js"></script> -->

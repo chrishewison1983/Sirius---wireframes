@@ -1,0 +1,120 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default deputy-details-page professional">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="deputy-page professional">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Deputy details</span>
+                    </nav>
+                    <h1>
+                         <span class="type professional">PRO<br>deputy</span> <div class="deputy-organisation-name-answer">Connor, Caur &amp; Burrows</div>
+                         <span class="deputy-status">Deputies summary page</span>
+                    </h1>
+               </div>
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     {{= it.include('confirmation/deputy-updated.html') }}
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-9 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="tabs">
+                         <li class="tab-link current" data-tab="tab-1">Details</li>
+                         <li class="tab-link" data-tab="tab-2"><span class="larger-number">250+</span>Client's</li>
+                         <li class="tab-link" data-tab="tab-3">Warnings</li>
+                         <li class="tab-link" data-tab="tab-4">Timeline</li>
+                         <li class="tab-link" data-tab="tab-5">Documents</li>
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content current">
+
+                         {{= it.include('deputy-page/deputy-pro-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content">
+
+                         {{= it.include('deputy-page/multiple-client-details-pro.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content">
+
+                         {{= it.include('deputy-page/warnings.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content">
+
+                         {{= it.include('deputy-page/timeline.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+                    <div id="tab-5" class="tab-content">
+
+                         <h2 class="description-title">
+                              Deputy documents
+                              <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a>
+                         </h2>
+
+                         {{= it.include('side-panel/document-viewer.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+               </div>
+
+               <div class="large-3 large-uncentered columns">
+
+                    {{= it.include('actions-deputy.html') }}
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- <div id="animated-example" class="animated bounce with-cta-footer"></div> -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

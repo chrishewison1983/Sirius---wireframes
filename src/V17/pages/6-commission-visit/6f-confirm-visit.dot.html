@@ -1,0 +1,274 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default visit-commission step-6">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Commission a visit</span>
+                    </nav>
+                    <h1>
+                         Confirm visit
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div>
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper commission-visit">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Visit details</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="documents"></span>
+                                   <p>Important remarks</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-5">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              <!-- // VISIT SUMMARY - START // -->
+                              <h2 class="section-title">Commission visit info</h2>
+
+                              {{= it.include('side-panel/commission-visit.html') }}
+                              <!-- // VISIT SUMMARY - END // -->
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              {{= it.include('client-page/warnings-client.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="commission-visit right">
+
+                         <h2 class="section-title">Visit summary</h2>
+
+                         <p>
+                              Please note any risks to the visitor from deputy or client, based on any relevant information
+                              from other parties. Please also note other information about family relationships, relationships
+                              between caring organisations and family/client/deputy, etc.
+                         </p>
+
+                         <form class="why-visit">
+
+                              <!-- // FORM ITEM - 5a - START // -->
+                              <div class="form-group">
+                                   <legend>Any dangers/risks which the Visitor or others may face?</legend>
+                                   <label for="visit-dangers-yes" class="radio">
+                                        <input id="visit-dangers-yes" type="radio" name="visit-dangers" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-dangers-no" class="radio">
+                                        <input id="visit-dangers-no" type="radio" name="visit-dangers" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 5a - END // -->
+
+                              <!-- // FORM ITEM - 5b - START // -->
+                              <div class="form-group answer-5b hidden visit-dangers-answer">
+                                   <label for="visit-dangers-answer">
+                                        Please provide details:
+                                   </label>
+                                   <textarea name="textarea" class="jqte-test" id="visit-dangers-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5b - END // -->
+
+                              <!-- // FORM ITEM - 6a - START // -->
+                              <div class="form-group">
+                                   <legend>Any other important information which will assist the visitor?</legend>
+                                   <label for="visit-assist-visitor-yes" class="radio">
+                                        <input id="visit-assist-visitor-yes" type="radio" name="visit-assist-visitor" value="Yes">
+                                        Yes
+                                   </label>
+                                   <label for="visit-assist-visitor-no" class="radio">
+                                        <input id="visit-assist-visitor-no" type="radio" name="visit-assist-visitor" value="No">
+                                        No
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 6a - END // -->
+
+                              <!-- // FORM ITEM - 6b - START // -->
+                              <div class="form-group answer-6b hidden visit-assist-visitor-answer">
+                                   <label for="visit-assist-visitor-answer">
+                                        Please provide details:
+                                   </label>
+                                   <textarea name="textarea" class="jqte-test" id="visit-assist-visitor-answer"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6b - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group visit-medical-background">
+                                   <label for="visit-medical-background">
+                                        Case &amp; medical background:
+                                   </label>
+                                   <textarea name="textarea" class="jqte-test" id="visit-medical-background"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group visit-family-background">
+                                   <label for="visit-family-background">
+                                        Family background:
+                                   </label>
+                                   <span class="help-text">
+                                        Please include here full details of all family
+                                        members known to the Office of the Public Guardian even if they are not to be
+                                        contacted for this visit:
+                                   </span>
+                                   <textarea name="textarea" class="jqte-test" id="visit-family-background"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                         </form>
+
+
+                    </div>
+
+               </div>
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- // MODAL - START // -->
+<div id="ex1" style="display:none;">
+     <img src="../../../production/img/V17/document-thumbnail.png" alt="Document" class="document-item">
+     <hr>
+     <div class="cta-row">
+          <a class="main-cta primary" href="../4-client-page/4a-new-client.html">Commission visit</a>
+          <a href="#" rel="modal:close">Cancel</a>
+     </div>
+</div>
+<!-- // MODAL - END // -->
+
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="add-visitors-step-6" href="#ex1" rel="modal:open">Preview visit form</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="back">Back to step 5</a>
+     <span class="separator"></span>
+     <a href="#" onclick="../dashboard.html" class="cancel">Cancel visit</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     $(document).ready(function(){
+          JSON.parse(sessionStorage.getItem('selected-visitors')).forEach(function(recipient) {
+               $('#recipients').append('<li>' + recipient + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-third-parties')).forEach(function(thirdParties) {
+               $('#visit-third-parties').append('<li>' + thirdParties + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-assets')).forEach(function(asset) {
+               $('#asset-summary').append('<li>' + asset + '</li>');
+          });
+          JSON.parse(sessionStorage.getItem('selected-documents')).forEach(function(documents) {
+               $('#documents').append('<li>' + documents + '</li>');
+          });
+     });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

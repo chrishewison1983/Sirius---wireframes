@@ -1,0 +1,187 @@
+
+/////// APPLICATION VARIABLES ///////
+
+// Image path
+
+$image-path: "../../production/img/V17/";
+// $image-path-sub-level: "../../../production/img//";
+
+$global-border-radius: 5px;
+
+// Colours
+$white: #ffffff;
+$white-off: #efefef;
+
+
+$black: #000000;
+
+$red: #FC2B27;
+
+$amber: #FFBF47;
+
+$pink: #f36;
+
+$blue: #009BEF;
+$blue-grey: #ecf1f5;
+
+$highlight-green: #00F0AE;
+
+$green: #28A197;
+
+$main-colour: #2F3140;
+$text-main-colour: #6D787E;
+
+$border-colour: #EFEFEF;
+
+
+// Animations
+
+
+// Fonts
+
+// OpenSans Paths
+$font-path: '../../production/fonts';
+
+// @font-face {
+// 	font-family: 'Montserrat-Regular';
+// 	src: url('#{$font-path}/Montserrat/Montserrat-Regular.eot');
+// 	src: local('☺'), url('#{$font-path}/Montserrat/Montserrat-Regular.woff') format('woff'),
+// 	url('#{$font-path}/Montserrat/Montserrat-Regular.ttf') format('truetype'),
+// 	url('#{$font-path}/Montserrat/Montserrat-Regular.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+$Montserrat: 'Montserrat', san-serif;
+
+// @font-face {
+// 	font-family: 'Montserrat-Bold';
+// 	src: url('#{$font-path}/Montserrat/Montserrat-Bold.eot');
+// 	src: local('☺'), url('#{$font-path}/Montserrat/Montserrat-Bold.woff') format('woff'),
+// 	url('#{$font-path}/Montserrat/Montserrat-Bold.ttf') format('truetype'),
+// 	url('#{$font-path}/Montserrat/Montserrat-Bold.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// $Montserrat-Bold: 'Montserrat', san-serif;
+
+// @font-face {
+// 	font-family: 'OpenSans-Light';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-Light/OpenSans-Light.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-Light/OpenSans-Light.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-Light/OpenSans-Light.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-Light/OpenSans-Light.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-Light: 'OpenSans-Light', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-LightItalic';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-LightItalic: 'OpenSans-LightItalic', san-serif;
+//
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('#{$font-path}/OpenSans/OpenSans-Regular/OpenSans-Regular.eot');
+	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-Regular/OpenSans-Regular.woff') format('woff'),
+	url('#{$font-path}/OpenSans/OpenSans-Regular/OpenSans-Regular.ttf') format('truetype'),
+	url('#{$font-path}/OpenSans/OpenSans-Regular/OpenSans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$Opensans-Regular: 'OpenSans-Regular', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-Italic';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-Italic/OpenSans-Italic.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-Italic/OpenSans-Italic.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-Italic/OpenSans-Italic.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-Italic/OpenSans-Italic.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-Italic: 'OpenSans-Italic', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-Semibold';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-Semibold/OpenSans-Semibold.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-Semibold/OpenSans-Semibold.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-Semibold/OpenSans-Semibold.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-Semibold/OpenSans-Semibold.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-Semibold: 'OpenSans-Semibold', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-SemiboldItalic';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-SemiboldItalic: 'OpenSans-SemiboldItalic', san-serif;
+//
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('#{$font-path}/OpenSans/OpenSans-Bold/OpenSans-Bold.eot');
+	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-Bold/OpenSans-Bold.woff') format('woff'),
+	url('#{$font-path}/OpenSans/OpenSans-Bold/OpenSans-Bold.ttf') format('truetype'),
+	url('#{$font-path}/OpenSans/OpenSans-Bold/OpenSans-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$Opensans-Bold: 'OpenSans-Bold', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-BoldItalic';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-BoldItalic: 'OpenSans-BoldItalic', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-ExtraBold';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-ExtraBold: 'OpenSans-ExtraBold', san-serif;
+//
+// @font-face {
+// 	font-family: 'OpenSans-ExtraBoldItalic';
+// 	src: url('#{$font-path}/OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot');
+// 	src: local('☺'), url('#{$font-path}/OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff') format('woff'),
+// 	url('#{$font-path}/OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf') format('truetype'),
+// 	url('#{$font-path}/OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// $opensans-ExtraBoldItalic: 'OpenSans-ExtraBoldItalic', san-serif;

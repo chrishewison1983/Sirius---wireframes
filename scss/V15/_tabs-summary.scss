@@ -385,17 +385,26 @@
                                    background: url(#{$image-path}/icons/delete-white.svg) no-repeat 0% 50%;
                                    background-size: 1em;
                               }
-                              #create-bond {
+                              #create-bond, #edit-bond, #bond-dispensed {
                                    .main-text {
                                         font-size: 2.15rem;
                                    }
                               }
                               #edit-bond {
+                                   .main-text {
+                                        font-size: 2rem;
+                                   }
+                                   .sub-text {
+                                        font-size: 1.1rem;
+                                   }
                                    .secondary-bond {
                                         display: inline-block;
-                                        margin: 0.5em 0;
+                                        margin: 0 0 0.5em 0;
                                         float: left;
                                         width: 100%;
+                                        .main-text {
+                                             font-size: 1.4rem;
+                                        }
                                    }
                                    &.warning {
                                         padding-left: 10em;
@@ -552,7 +561,7 @@
                               margin: 0 0 0.75em 0;
                               border-bottom: 3px dashed $border-colour;
                               text-align: left;
-                              color: $blue;
+                              color: $main-colour;
                               line-height: 1;
                               .icon {
                                    border: 2px solid $border-colour;
@@ -721,6 +730,7 @@
                                              border-bottom: 1px dashed $white;
                                              float: left;
                                              &.edit {
+                                                  font-size: 0.875rem;
                                                   background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
                                                   background-size: 1em;
                                              }

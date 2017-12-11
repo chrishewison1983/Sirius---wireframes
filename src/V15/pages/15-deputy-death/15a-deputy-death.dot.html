@@ -19,9 +19,9 @@
                          <div class="separator"> > </div>
                          <a href="../14-deputy-page/14a-deputy-page.html">Mrs Kate Eloise Smith</a>
                          <div class="separator"> > </div>
-                         <span class="state">Record death of deputy</span>
+                         <span class="state">Record deputy death</span>
                     </nav>
-                    <h1>Record death</h1>
+                    <h1>Record death of deputy</h1>
                </div>
 
           </div>
@@ -51,7 +51,7 @@
                               </li>
                               <li class="tab-link current" data-tab="tab-2">
                                    <span class="deputy-details"></span>
-                                   <p>Client/s</p>
+                                   <p>Client(s)</p>
                               </li>
                               <li class="tab-link" data-tab="tab-3">
                                    <span class="documents"></span>
@@ -63,7 +63,7 @@
                          <!-- =========== TAB CONTENT - 1 - START =========== -->
                          <div id="tab-1" class="tab-content side-panel">
 
-                              {{= it.include('side-panel/deputy-summary-details.html') }}
+                              {{= it.include('side-panel/deputy-lay-details.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 1 - END =========== -->
@@ -144,10 +144,14 @@
 
                               <!-- // FORM ITEM - 4 - START // -->
                               <div class="form-group">
-                                   <legend>How notified</legend>
+                                   <legend>How was the OPG notified?</legend>
                                    <label for="deputy-death-how-notified-email" class="radio">
                                         <input id="deputy-death-how-notified-email" type="radio" name="deputy-death-how-notified" value="Email">
                                         Email
+                                   </label>
+                                   <label for="deputy-death-how-notified-call" class="radio">
+                                        <input id="deputy-death-how-notified-call" type="radio" name="deputy-death-how-notified" value="Call">
+                                        Phone
                                    </label>
                                    <label for="deputy-death-how-notified-letter" class="radio">
                                         <input id="deputy-death-how-notified-letter" type="radio" name="deputy-death-how-notified" value="Letter">
@@ -156,10 +160,6 @@
                                    <label for="deputy-death-how-notified-order" class="radio">
                                         <input id="deputy-death-how-notified-order" type="radio" name="deputy-death-how-notified" value="Order">
                                         Order
-                                   </label>
-                                   <label for="deputy-death-how-notified-call" class="radio">
-                                        <input id="deputy-death-how-notified-call" type="radio" name="deputy-death-how-notified" value="Call">
-                                        Call
                                    </label>
                                    <label for="deputy-death-how-notified-fax" class="radio">
                                         <input id="deputy-death-how-notified-fax" type="radio" name="deputy-death-how-notified" value="Fax">

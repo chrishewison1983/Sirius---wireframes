@@ -1,0 +1,272 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default create-deputy-journery step-3">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <!-- <a href="5a-search-deputy.html">Create new deputy</a>
+                         <div class="separator"> > </div> -->
+                         <span class="page-title">Create new deputy</span>
+                    </nav>
+                    <h1>
+                         <div class="deputy-name-answer">Joe</div>'s case details
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/add-deputy.html') }}
+          </div>
+     </div>
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <!-- // CONFIRMATION MESSAGE - START // -->
+                    <div id="deputy-added" class="confirmation-panel">
+                         <div class="content">
+                              <h2>
+                                   <span></span>
+                                   <div class="deputy-name-answer">Deputy name</div>
+                                   has now been created as a deputy to
+                                   <div class="client-first-name">Client first name</div>
+                                   <div class="client-last-name">Client last name</div><div>'s</div>
+                                   account
+                              </h2>
+                         </div>
+                    </div>
+                    <!-- // CONFIRMATION MESSAGE - END // -->
+               </div>
+          </div>
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Add Deputy</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-4">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/new-deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- // CREATE RECIPIENT - START // -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <form class="add-deputy-form">
+
+                         <h2 class="section-title">Add <div class="deputy-name-answer">Joe</div>'s order details</h2>
+
+                         <!-- // FORM ITEM - 1a - START // -->
+                         <div class="form-group">
+                              <label for="deputy-type-order">Type of deputy <span class="required">*</span></label>
+                              <select id="deputy-type-order" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option value="Lay">Lay</option>
+                                   <option value="Professional">Professional</option>
+                                   <option value="Public authority">Public authority</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1a - END // -->
+
+                         <!-- // FORM ITEM - 1b - START // -->
+                         <div class="form-group read-only">
+                              <label for="deputy-relationship">Relationship to the client <span class="required">*</span></label>
+                              <select id="deputy-relationship" class="full-width" disabled>
+                                   <option value="">-- Select --</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1b - END // -->
+
+                         <!-- // FORM ITEM - 1c - START // -->
+                         <div class="form-group other-relation">
+                              <label for="deputy-other-relation">Other relation - please specify <span class="required">*</span></label>
+                              <input id="deputy-other-relation" name="deputy-other-relation" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 1c - END // -->
+
+                         <!-- // FORM ITEM - 1d - START // -->
+                         <div class="form-group other-professional">
+                              <label for="deputy-other-professional">Other professional - please specify <span class="required">*</span></label>
+                              <input id="deputy-other-professional" name="deputy-other-professional" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 1d - END // -->
+
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label for="deputy-status">Deputy status <span class="required">*</span></label>
+                              <select id="deputy-status" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option value="Active" selected>Active</option>
+                                   <option value="Inactive">Inactive</option>
+                                   <option value="Suspended">Suspended</option>
+                                   <option value="Discharged">Discharged</option>
+                                   <option value="Deceased">Deceased</option>
+                                   <option value="Error">Error</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group fee-payer">
+                              <span></span>
+                              <label class="normal" for="deputy-fee-payer">
+                                   <input id="deputy-fee-payer" name="deputy-fee-payer" type="checkbox" value="post">
+                                   Is the deputy the fee payer?
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group">
+                              <label class="normal" for="deputy-main-correspondent">
+                                   <input id="deputy-main-correspondent" name="deputy-main-correspondent" type="checkbox" value="post">
+                                   Make deputy a main correspondent?
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- // CREATE RECIPIENT - END // -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="fee-payer" style="display:none;">
+          <h1>Make the deputy the fee payer?</h1>
+          <p>
+               Making <strong class="deputy-name-answer">Joe</strong> deputy the
+               fee payer will remove <strong>Carla Firth</strong> from being the fee payer.
+          </p>
+          <p>
+               Are you sure you want to continue?
+          </p>
+          <hr>
+          <div class="cta-row">
+               <a class="main-cta" id="make-deputy-fee-payer" rel="modal:close">Make the fee payer</a>
+               <a href="#" rel="modal:close" class="back">Back</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+     <!-- // MODAL - START // -->
+     <div id="unlink-deputy" style="display:none;">
+     	<h1>Unlink this deputy</h1>
+          <h2>Mrs Carla Frith</h2>
+     	<p>Are you sure you wish to unlink <strong class="unlink-deputy-name">Mrs Carla Frith</strong> as a deputy for <strong>Mr Gerald Brackens</strong>?</p>
+     	<div class="cta-row">
+     		<a class="main-cta" id="confirm-unlink" href="../4-client-page/4a-new-client.html">Unlink deputy</a>
+     		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+     	</div>
+     </div>
+     <!-- // MODAL - END // -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="add-deputy-step-3">Save &amp; continue</a>
+     <a class="main-cta primary" id="add-deputy-modal" href="#fee-payer" rel="modal:open">Save &amp; continue</a>
+     <a class="main-cta primary secondary" id="unlink-deputy-modal" href="#unlink-deputy" rel="modal:open">Save &amp; unlink deputy</a>
+     <!-- <a class="main-cta secondary" id="add-another-deputy" href="#">Add another deputy</a> -->
+     <span class="separator"></span>
+     <a onclick="history.back();" class="back">Back</a>
+     <a href="../4-client-page/4a-new-client.html" class="cancel">Exit</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

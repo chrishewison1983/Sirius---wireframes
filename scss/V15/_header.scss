@@ -200,7 +200,7 @@ header {
           padding: 0;
           h1 {
                position: relative;
-               padding: 0.275em 0 0 2.5em;
+               padding: 0.275em 0 0 2.75em;
                // margin: 0 0 0.35em 0;
                line-height: 0.75;
                margin: 0.25em 0;
@@ -215,20 +215,35 @@ header {
                     @include flexbox;
                     @include align-items(center);
                     @include justify-content(center);
-                    width: 6.5em;
-                    height: 6.5em;
                     position: absolute;
-                    top: 0;
                     left: -0.25em;
                     text-align: center;
+                    padding: 0 0 0 0.25em;
                     margin: 0 0.5em 0 0;
                     background: $white;
                     font-family: $Montserrat;
                     font-weight: bold;
                     letter-spacing: 0.15em;
-                    font-size: 0.75rem;
                     text-transform: uppercase;
                     border-radius: 50%;
+                    &.lay, &.professional, &.public {
+                         top: -0.25em;
+                    }
+                    &.lay {
+                         width: 7em;
+                         height: 7em;
+                         font-size: 0.75rem;
+                    }
+                    &.professional {
+                         width: 11.5em;
+                         height: 11.5em;
+                         font-size: 0.45rem;
+                    }
+                    &.public {
+                         width: 9em;
+                         height: 9em;
+                         font-size: 0.6rem;
+                    }
                }
           }
      }

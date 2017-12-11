@@ -32,7 +32,7 @@
           .check-details {
                padding-bottom: 0 !important;
           }
-          .tab-content.side-panel #documents-viewer {
+          .tab-content.side-panel #documents-viewer, .tab-content.side-panel #client-details {
                height: 88vh;
                .page-2.document-viewing-panel {
                     .wrapper {
@@ -41,6 +41,9 @@
                               margin-top: 1em;
                          }
                     }
+               }
+               .page-1 {
+                    height: 87vh;
                }
                .compare {
                     .page-1 {
@@ -60,7 +63,7 @@
                }
           }
      }
-     a.main-cta, a.edit, a.delete, a.add {
+     a.main-cta, a.edit, a.delete, a.add, a.unlink {
           display: none;
      }
      .description-title {

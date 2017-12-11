@@ -1,0 +1,264 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+footer {
+     position: relative;
+     bottom: 0;
+     overflow: visible;
+     left: 0;
+     width: 100%;
+     display: inline-block;
+     text-align: center;
+     z-index: 10000;
+     background: url(#{$image-path}/background.jpg) no-repeat 50% 50%;
+     background-size: cover;
+     padding: 1em;
+     border-top: 5px solid $white;
+     &.visible {
+          position: fixed;
+          display: none;
+          &.job-profile-page {
+               display: inline-block;
+          }
+     }
+     &.index {
+          position: fixed;
+     }
+     .container {
+          display: inline-block;
+          position: relative;
+          a {
+               border: 2px solid $white;
+               border-radius: 5px;
+               color: $white;
+               font-family: $Montserrat;
+               font-weight: bold;
+               padding: 1em 3em;
+               display: inline-block;
+               position: relative;
+               &:hover, &:active, &:focus {
+                    background: $white;
+                    color: $green;
+               }
+               &.main {
+                    background: $white;
+                    color: $green;
+                    // margin-right: 1em;
+               }
+               // img {
+               //      border-bottom: none;
+               //      border-top: 1px solid $white;
+               // }
+          }
+          .counter {
+               display: none;
+          }
+          span {
+               text-align: center;
+               position: absolute;
+               z-index: 1;
+               // right: 0.75em;
+               // display: none;
+               border-radius: 50%;
+               background: $white;
+               @include flexbox;
+               @include align-items(center);
+               @include justify-content(center);
+               box-shadow: 0px 0px 10px 0px rgba($black,0.25);
+               p {
+                    margin: 0;
+                    color: $green;
+                    opacity: 0.7;
+                    font-family: $Montserrat;
+                    a {
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                         line-height: 1;
+                         margin-bottom: -0.5em;
+                         padding: 0;
+                         border: none;
+                         color: $green;
+                         &:hover, &:active, &:focus {
+                              cursor: pointer;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+#cta-footer {
+     // width: 100%;
+     position: fixed;
+     // display: none;
+     // bottom: 0;
+     // left: 0;
+     // right: 0;
+     width: 96%;
+     margin: 0 0 0 4%;
+     padding: 1em 2em;
+     // padding: 1em 2em 1em 15%;
+     background: $white;
+     z-index: 10;
+     box-shadow: 10px 0px 20px 0px rgba(0,0,0,0.2);
+     text-align: center;
+     a.main-cta {
+          float: none;
+          margin-right: 1.5em;
+     }
+     .separator {
+          width: 1px;
+          height: 1em;
+          margin: 0;
+          display: inline-block;
+          border-left: 1px solid darken($border-colour,15%);
+     }
+     .cancel, .back {
+          padding: 0 0 0 1em;
+          margin-left: 1.5em;
+     }
+     .cancel {
+          background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+          background-size: 0.65em;
+     }
+     .back {
+          margin-right: 1.5em;
+          padding: 0 0 0 0.75em;
+          background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
+          background-size: 0.45em;
+     }
+}
+
+.cta-row {
+     .back {
+          margin-right: 1.5em;
+          padding: 0 0 0 0.75em;
+          background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
+          background-size: 0.45em;
+     }
+}
+
+.modal {
+     a.main-cta {
+          float: none;
+          background-color: $green;
+          border: 3px solid $green;
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+     footer {
+          .container {
+               span {
+                    width: 5em;
+                    height: 5em;
+                    top: -2.5em;
+                    right: -3em;
+                    p {
+                         font-size: 0.6rem;
+                         a {
+                              font-size: 2rem;
+                         }
+                    }
+               }
+          }
+     }
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+     footer {
+          .container {
+               span {
+                    width: 5em;
+                    height: 5em;
+                    top: -3.5em;
+                    right: -3em;
+                    p {
+                         font-size: 0.7rem;
+                         a {
+                              font-size: 2.75rem;
+                         }
+                    }
+               }
+          }
+     }
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+     footer {
+          padding: 0.75em;
+          .container {
+               width: 100%;
+               a {
+                    width: 100%;
+                    padding: 0.75em 1em;
+               }
+               span {
+                    width: 4em;
+                    height: 4em;
+                    top: -2em;
+                    right: -0.5em;
+                    p {
+                         font-size: 0.6rem;
+                         a {
+                              font-size: 1.8rem;
+                         }
+                    }
+               }
+          }
+          &.visible, &.visible.job-profile-page {
+               a {
+                    margin: 0 0 1em 0;
+                    &:last-of-type {
+                         margin: 0;
+                    }
+               }
+          }
+          &.visible.job-profile-page {
+               position: relative;
+          }
+     }
+
+}

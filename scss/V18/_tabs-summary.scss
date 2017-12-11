@@ -1,0 +1,1051 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+
+#list-of-summary, #health-summary, #property-summary {
+     // margin: 3em 0 0 0;
+     ul, ol {
+          margin: 0;
+          li {
+               position: relative;
+               // padding: 0 0 4em 2em;
+               // span.dot {
+               //      display: inline-block;
+               //      position: absolute;
+               //      top: -0.1em;
+               //      left: -1.295em;
+               //      width: 2em;
+               //      height: 2em;
+               //      background: $white;
+               //      border: 5px solid $black;
+               //      border-radius: 50%;
+               // }
+               &:last-of-type {
+                    // border-left: 10px solid $white;
+                    margin-bottom: 0;
+               }
+          }
+     }
+     #new-client-summary {
+          display: none;
+     }
+     #client-summary {
+          margin: 2em 0 0 0;
+          .dashboard-row {
+               @include flexbox;
+               @include flex-wrap(wrap);
+               width: 100%;
+               &.full-width, &.two-items, &.three-items {
+               }
+               &.full-width {
+                    width: 100%;
+                    border: none;
+                    border-radius: $global-border-radius;
+                    padding: 0;
+                    background: $white;
+                    margin: 0 0 2em 0;
+                    .item {
+                         border: none;
+                         border-radius: 0;
+                         background: none;
+                         padding: 0;
+                         margin: 0;
+                    }
+                    &.content-items-3, &.content-items-4, &.content-items-5 {
+                         .item {
+                              @include flexbox;
+                              @include align-items(center);
+                              @include justify-content(flex-start);
+                              flex-direction: initial;
+                              &.client-info {
+                                   .left, .right {
+                                        // display: inline-block;
+                                        // flex-direction: column;
+                                   }
+                                   .icon {
+                                        display: inline-block;
+                                        float: left;
+                                        width: 3em;
+                                        height: 3em;
+                                        margin: 0 0.5em 0 0;
+                                        border-radius: 50%;
+                                   }
+                                   h1, p {
+                                        width: auto;
+                                        float: left;
+                                        clear: both;
+                                   }
+                                   h1 {
+                                        font-size: 1.1rem;
+                                        margin: 0;
+                                        span {
+                                             float: left;
+                                             width: auto;
+                                             display: inline-block;
+                                             color: $main-colour;
+                                             font-family: $Montserrat;
+                                             font-weight: bold;
+                                             text-transform: uppercase;
+                                             font-size: 1.1rem;
+                                             &.age {
+                                                  @include flexbox;
+                                                  @include align-items(center);
+                                                  @include justify-content(center);
+                                                  float: left;
+                                                  border-radius: 50%;
+                                                  background: $main-colour;
+                                                  color: $white;
+                                                  width: 2em;
+                                                  height: 2em;
+                                                  font-size: 1rem;
+                                                  margin: -0.35em 0 0 0.5em;
+                                             }
+                                        }
+                                   }
+                                   p {
+                                        margin: 0;
+                                   }
+                              }
+                         }
+                    }
+                    &.content-items-3 {
+                         .item {
+                              width: 33.333%;
+                              &:nth-of-type(1n) {
+                                   @include justify-content(flex-start);
+                              }
+                              &:nth-of-type(2n) {
+                                   @include justify-content(center);
+                              }
+                              &:nth-of-type(3n) {
+                                   @include justify-content(flex-end);
+                              }
+                         }
+                    }
+                    &.content-items-4 {
+                         .item {
+                              width: 25%;
+                         }
+                    }
+                    &.content-items-5 {
+                         .item {
+                              width: 20%;
+                         }
+                    }
+               }
+               &.two-items {
+                    .item {
+                         width: 48.725%;
+                         margin: 0 2.5% 2em 0;
+                         &:last-of-type {
+                              margin-right: 0;
+                         }
+                    }
+               }
+               &.three-items {
+                    .item {
+                         width: 31.6667%;
+                         margin: 0 2.5% 2em 0;
+                         &:last-of-type {
+                              margin-right: 0;
+                         }
+                    }
+               }
+               .item {
+                    // background: $red;
+                    display: inline-block;
+                    position: relative;
+                    flex-direction: column;
+                    border: 3px solid $blue-grey;
+                    border-radius: $global-border-radius;
+                    padding: 1.5em;
+                    background: $blue-grey;
+                    &.no-colour {
+                         background: none;
+                         border: none;
+                         padding: 0;
+                         flex: 1;
+                         display: flex;
+                         flex-direction: column;
+                         // height: calc(100% - 40px);  /* main-column-wrapper height less padding */
+                         section {
+                              width: 100%;
+                              margin: 0 0 1.25em 0;
+                              flex: 1;
+                              flex-shrink: 0;
+                              overflow: auto;
+                              &:last-of-type {
+                                   margin: 0;
+                              }
+                         }
+                    }
+                    &.with-title {
+                         padding-top: 4.5em;
+                         .title {
+                              position: absolute;
+                              border-radius: 5px 5px 0 0;
+                              top: -3px;
+                              left: -3px;
+                              right: -3px;
+                              display: inline-block;
+                              background: $main-colour;
+                              color: $white;
+                              padding: 1em 1.5em;
+                              text-align: center;
+                              p {
+                                   color: $white;
+                                   margin: 0;
+                                   font-family: $Montserrat;
+                                   font-weight: bold;
+                                   width: auto;
+                                   float: none;
+                                   font-size: 1.2rem;
+                              }
+                              span {
+                                   display: inline-block;
+                                   width: 1.5em;
+                                   height: 1.5em;
+                                   margin: 0 0.5em -0.35em 0;
+                                   &.case {
+                                        background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 50% 50%;
+                                        background-size: 1.5em;
+                                   }
+                                   &.important {
+                                        background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                                   &.history {
+                                        background: url(#{$image-path}/icons/history-white.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                                   &.deputy {
+                                        background: url(#{$image-path}/icons/client-white.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                    }
+                    &.highlight {
+                         .right-focus, .left-focus, .center-focus {
+                              @include flexbox;
+                              @include align-items(center);
+                              position: relative;
+                              .left, .right {
+                                   text-align: center;
+                                   z-index: 10;
+                                   h1, h2, h3, p {
+                                        margin: 0;
+                                   }
+                                   &.font-size-3rem {
+                                        h1, h2, h3, p {
+                                             font-size: 3rem;
+                                        }
+                                   }
+                                   &.font-size-6rem {
+                                        h1, h2, h3, p {
+                                             font-size: 4rem;
+                                             line-height: 1;
+                                             position: relative;
+                                             margin: -0.25em 0 0 0;
+                                             span {
+                                                  font-size: 1rem;
+                                                  text-transform: uppercase;
+                                                  color: rgba($white,0.7);
+                                                  position: absolute;
+                                                  bottom: -0.75em;
+                                                  left: 0;
+                                                  right: 0;
+                                                  letter-spacing: 0.5em;
+                                                  font-weight: bold;
+                                                  font-family: $Montserrat;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                         .right-focus {
+                              @include justify-content(flex-start);
+                              padding: 0 11.5em 0 1.5em;
+                              .right {
+                                   @include flexbox;
+                                   @include align-items(center);
+                                   @include justify-content(center);
+                                   position: absolute;
+                                   right: 0;
+                                   top: 0;
+                                   bottom: 0;
+                                   width: 10em;
+                                   // background: rgba($black,0.5);
+                              }
+                              .left {
+                                   display: inline-block;
+                                   width: 100%;
+                                   h1, h2, p {
+                                        width: 100%;
+                                        text-align: left;
+                                   }
+                              }
+                              &.alert-colour {
+                                   .right {
+                                        background: darken($red,15%);
+                                   }
+                              }
+                              &.normal-colour {
+                                   .right {
+                                        background: darken($green,15%);
+                                   }
+                              }
+                              &.blue-colour {
+                                   .right {
+                                        background: darken($blue,15%);
+                                   }
+                              }
+                              &.main-colour {
+                                   .right {
+                                        background: lighten($main-colour,15%);
+                                   }
+                              }
+                              &.background {
+                                   .right {
+                                        background: rgba($main-colour,0.2);
+                                   }
+                              }
+                         }
+                         .left-focus {
+                              @include justify-content(flex-end);
+                              padding: 0 1.5em 0 11.5em;
+                              text-align: left;
+                              .left {
+                                   @include flexbox;
+                                   @include align-items(center);
+                                   @include justify-content(center);
+                                   position: absolute;
+                                   left: 0;
+                                   top: 0;
+                                   bottom: 0;
+                                   width: 10em;
+                                   // background: rgba($black,0.5);
+                              }
+                              .right {
+                                   display: inline-block;
+                                   width: 100%;
+                                   h1, h2, p {
+                                        width: 100%;
+                                        text-align: left;
+                                   }
+                              }
+                              &.alert-colour {
+                                   .left {
+                                        background: darken($red,15%);
+                                   }
+                              }
+                              &.normal-colour {
+                                   .right {
+                                        background: darken($green,15%);
+                                   }
+                              }
+                              &.blue-colour {
+                                   .left {
+                                        background: darken($blue,5%);
+                                   }
+                              }
+                              &.main-colour {
+                                   .left {
+                                        background: lighten($main-colour,15%);
+                                   }
+                              }
+                              &.background {
+                                   .left {
+                                        background: rgba($main-colour,0.2);
+                                   }
+                              }
+                         }
+                         .center-focus {
+                              text-align: center;
+                              .main-text {
+                                   font-size: 3.5rem;
+                                   margin-bottom: 0.15em;
+                              }
+                              .sub-text {
+                                   margin-bottom: 0.15em;
+                                   text-transform: none;
+                              }
+                              a.edit, a.delete, a.add {
+                                   float: none;
+                                   color: $white;
+                                   border-bottom: 1px dashed $white;
+                                   margin: 0.75em 0 0 0;
+                                   position: relative;
+                                   top: -0.15em;
+                                   background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
+                                   background-size: 1em;
+                                   &:hover, &:active, &:focus {
+                                        border-bottom: 1px solid $white;
+                                   }
+                              }
+                              a.delete {
+                                   background: url(#{$image-path}/icons/delete-white.svg) no-repeat 0% 50%;
+                                   background-size: 1em;
+                              }
+                              #create-bond, #edit-bond, #bond-dispensed {
+                                   .main-text {
+                                        font-size: 2.15rem;
+                                   }
+                              }
+                              #edit-bond {
+                                   width: 100%;
+                                   padding: 0.5em 1.5em;
+                                   position: relative;
+                                   .main-text, .sub-text, .secondary-bond {
+                                        float: left;
+                                        width: auto;
+                                        clear: both;
+                                   }
+                                   .main-text {
+                                        font-size: 1.8rem;
+                                   }
+                                   .sub-text {
+                                        font-size: 1rem;
+                                   }
+                                   .secondary-bond {
+                                        display: inline-block;
+                                        margin: 0;
+                                        float: left;
+                                        width: auto;
+                                        .main-text, .sub-text {
+                                             font-size: 1rem;
+                                        }
+                                        .main-text {
+                                             margin: 0;
+                                        }
+                                   }
+                                   .ctas {
+                                        display: inline-block;
+                                        width: auto;
+                                        // float: right;
+                                        position: absolute;
+                                        right: 1.5em;
+                                        top: 0.5em;
+                                   }
+                                   &.warning {
+                                        padding-left: 10em;
+                                        background: url(#{$image-path}/icons/violent-warning-white.svg) no-repeat 9% 50%;
+                                        background-size: 5em;
+                                        .main-text, .sub-text, .ctas {
+                                             text-align: left;
+                                        }
+                                        .main-text {
+                                             font-size: 1.6rem;
+                                        }
+                                        .sub-text {
+                                             font-size: 1rem;
+                                        }
+                                   }
+                              }
+                              #bond-dispensed {
+                                   background: $red;
+                                   padding-top: 0.5em;
+                                   .ctas {
+                                        display: inline-block;
+                                        margin: -0.5em 0 0 0;
+                                        div {
+                                             display: inline-block;
+                                             color: rgba($white,0.7);
+                                             line-height: 1.4;
+                                             &:last-of-type {
+                                                  margin-bottom: 0.75em;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    ol.summary-list {
+                         &.warnings-overview-list {
+                              li {
+                                   p {
+                                        &.answer {
+                                             display: none;
+                                             margin: 0.75em 0 0 2.45em;
+                                        }
+                                        &.date {
+                                             margin: 0.25em 0 0 2.75em;
+                                             .icon {
+                                                  margin: 0 0.5em 0 0;
+                                                  border-radius: 0;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                         li {
+                              margin: 0 0 1em 0;
+                              &:last-of-type {
+                                   margin-bottom: 0;
+                              }
+                              &:before {
+                                   float: left;
+                                   margin-top: -0.15em;
+                              }
+                              p {
+                                   margin: 0;
+                                   width: auto;
+                                   float: left;
+                                   font-family: $Montserrat;
+                                   color: $main-colour;
+                                   font-weight: bold;
+                                   &.answer, &.date {
+                                        float: left;
+                                        clear: left;
+                                        margin: 0 0 0 2.45em;
+                                        color: darken($blue-grey,50%);
+                                        font-weight: normal;
+                                        font-family: $Opensans-Regular;
+                                        width: 91%;
+                                   }
+                                   &.date {
+                                        color: darken($blue-grey,25%);
+                                        font-size: 0.875rem;
+                                   }
+                                   &.remark-title {
+                                        width: 91%;
+                                        font-size: 1.2rem;
+                                        a {
+                                             float: right;
+                                             margin: 0 0 0 1em;
+                                             font-size: 1rem;
+                                             padding: 0;
+                                             background: none;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    ul.related-cases {
+                         height: 100%;
+                         li {
+                              list-style: none;
+                              flex: 1;
+                              flex-shrink: 0;
+                              margin: 0 0 0.5em 0;
+                              &:last-of-type {
+                                   margin: 0;
+                              }
+                              a {
+                                   flex: 1;
+                                   flex-shrink: 0;
+                                   @include flexbox;
+                                   border-radius: $global-border-radius;
+                                   border: 3px solid $border-colour;
+                                   background: $white;
+                                   margin: 0;
+                                   padding: 0.75em 0 0.75em 5em;
+                                   position: relative;
+                                   // display: inline-block;
+                                   width: 100%;
+                                   &:hover, &:active, &:focus {
+                                        background: rgba($border-colour,0.4);
+                                        cursor: pointer;
+                                   }
+                                   span {
+                                        display: inline-block;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 4em;
+                                        background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat $border-colour 50% 50%;
+                                        background-size: 2em;
+                                   }
+                                   p {
+                                        margin: 0;
+                                        &.title {
+                                             font-size: 1.6rem;
+                                             color: $blue;
+                                             font-weight: bold;
+                                             font-family: $Montserrat;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    .number {
+                         position: absolute;
+                         top: -0.9em;
+                         left: -0.9em;
+                         width: 1.8em;
+                         height: 1.8em;
+                         background: $blue;
+                         border-radius: 50%;
+                         color: $white;
+                         font-size: 1.6rem;
+                         font-weight: bold;
+                         @include flexbox;
+                         @include align-items(center);
+                         @include justify-content(center);
+                    }
+                    .info {
+                         display: inline-block;
+                         width: 100%;
+                         margin: 0 0 0.75em 0;
+                         float: left;
+                         color: $text-main-colour;
+                         font-family: $Opensans-Regular;
+                         text-align: left;
+                         &:last-of-type {
+                              margin: 0;
+                         }
+                         span, strong {
+                              display: inline-block;
+                              float: left;
+                              line-height: 1.4;
+                              width: 100%;
+                         }
+                         span {
+                              // width: 35%;
+                              // margin: 0 5% 0 0;
+                         }
+                         strong {
+                              // width: 60%;
+                              font-family: $Montserrat;
+                              font-weight: bold;
+                              color: $black;
+                         }
+                    }
+                    &.deputies {
+                         text-align: center;
+                         h1 {
+                              font-size: 1.6rem;
+                              text-transform: inherit;
+                              padding: 0 0 0.75em 0;
+                              margin: 0 0 0.75em 0;
+                              border-bottom: 3px dashed darken($blue-grey,10%);
+                              text-align: left;
+                              color: $main-colour;
+                              line-height: 1;
+                              .icon {
+                                   border: 2px solid $border-colour;
+                                   &:first-of-type {
+                                        margin-left: 0;
+                                   }
+                              }
+                              .fee-payer, .main-contact, .welfare, .welfare-property, .property {
+                                   margin: 0 0 -0.45em -0.5em;
+                                   top: 0;
+                                   width: 1.5em;
+                                   height: 1.5em;
+                                   float: none;
+                              }
+                              .welfare-property {
+                                   border: none;
+                              }
+                              .type {
+                                   width: 100%;
+                                   font-family: $Montserrat;
+                                   text-transform: uppercase;
+                                   font-size: 0.875rem;
+                              }
+                              .separator {
+                                   display: inline-block;
+                                   float: left;
+                                   width: 1px;
+                                   margin: 0.25em 0 0 0;
+                                   height: 0.75em;
+                                   background: $blue-grey;
+                              }
+                              .edit, .view {
+                                   float: left;
+                                   margin: 0.25em 0 0 0;
+                              }
+                              .edit {
+                                   margin-right: 1.5em;
+                              }
+                              .view {
+                                   margin-left: 1.5em;
+                              }
+                         }
+                    }
+                    section, a {
+                         h1, h2, h3 {
+                              width: 100%;
+                              font-family: $Montserrat;
+                              font-weight: bold;
+                              margin: 0;
+                              line-height: 1;
+                              &.main-text {
+                                   color: $white;
+                                   font-size: 10rem;
+                              }
+                              &.sub-text {
+                                   color: rgba($white,0.5);
+                                   font-size: 1.75rem;
+                              }
+                         }
+                    }
+                    .full-colour-block {
+                         // position: absolute;
+                         @include flexbox;
+                         @include align-items(center);
+                         @include justify-content(center);
+                         border-radius: $global-border-radius;
+                         &.main-colour {
+                              background-color: $main-colour;
+                              // border: 3px solid $main-colour;
+                              &.alert {
+                                   .sub-text {
+                                        color: $red;
+                                   }
+                              }
+                         }
+                         &.alert-colour {
+                              background-color: $red;
+                              // border: 3px solid $red;
+                              .main-text {
+                                   color: $white;
+                              }
+                              .sub-text {
+                                   color: rgba($white,0.7);
+                              }
+                         }
+                         &.normal-colour {
+                              background-color: $green;
+                              // border: 3px solid $red;
+                              .main-text {
+                                   color: $white;
+                              }
+                              .sub-text {
+                                   color: rgba($white,0.7);
+                              }
+                              .tick {
+                                   display: inline-block;
+                                   width: 4.25em;
+                                   height: 4.25em;
+                                   background: url(#{$image-path}/icons/tick.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.blue-colour {
+                              background-color: $blue;
+                              // border: 3px solid $red;
+                              .main-text {
+                                   color: $white;
+                              }
+                              .sub-text {
+                                   color: rgba($white,0.7);
+                              }
+                              .tick {
+                                   display: inline-block;
+                                   width: 4.25em;
+                                   height: 4.25em;
+                                   background: url(#{$image-path}/icons/tick.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.report-dates {
+                              background: none;
+                              border: none;
+                              .date {
+                                   background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
+                                   background-size: cover;
+                                   border: none;
+                                   position: relative;
+                                   width: 48.75%;
+                                   margin: 0 5% 0 0;
+                                   height: 100%;
+                                   border-radius: $global-border-radius;
+                                   @include flexbox;
+                                   @include align-items(center);
+                                   @include justify-content(center);
+                                   overflow: hidden;
+                                   &:last-of-type {
+                                        margin: 0;
+                                   }
+                                   .left, .right {
+                                        z-index: 10;
+                                   }
+                                   .left {
+                                        background: rgba($black,0.4);
+                                        width: 27.5%;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        bottom: 0;
+                                        border-radius: 5px 0 0 5px;
+                                        @include flexbox;
+                                        @include align-items(center);
+                                        @include justify-content(center);
+                                        .icon {
+                                             width: 3em;
+                                             height: 3em;
+                                        }
+                                   }
+                                   .right {
+                                        width: 95%;
+                                        padding: 0 0 0 30%;
+                                        h1, h2, h3, p, a {
+                                             text-align: left;
+                                        }
+                                        .separator {
+                                             display: inline-block;
+                                             width: 1px;
+                                             height: 1em;
+                                             background: rgba($white,0.2);
+                                             margin: 0.25em 1em 0 1em;
+                                             float: left;
+                                        }
+                                        a {
+                                             color: $white;
+                                             border-bottom: 1px dashed $white;
+                                             float: left;
+                                             // margin-bottom: 0.5em;
+                                             &:last-of-type {
+                                                  margin: 0;
+                                             }
+                                             &.edit {
+                                                  font-size: 0.875rem;
+                                                  background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 50%;
+                                                  background-size: 1em;
+                                             }
+                                             &:hover, &:active, &:focus {
+                                                  border-bottom: 1px solid $white;
+                                             }
+                                        }
+                                   }
+                                   .main-text {
+                                        color: $white;
+                                        font-size: 1.4rem;
+                                        margin: 0 0 0.25em 0;
+                                        .icon.date {
+                                             display: inline-block;
+                                             width: 1em;
+                                             height: 1em;
+                                             margin: 0 0.5em -0.1em 0;
+                                             background: url(#{$image-path}/icons/date-white.svg) no-repeat 50% 50%;
+                                             background-size: contain;
+                                             border: none;
+                                             border-radius: 0;
+                                             float: none;
+                                        }
+                                   }
+                                   .sub-text {
+                                        color: rgba($white,0.6);
+                                        font-size: 1rem;
+                                        text-transform: inherit;
+                                        font-family: $Opensans-Regular;
+                                        font-weight: normal;
+                                        margin: 0 0 0.25em 0;
+                                   }
+                              }
+                         }
+                         &.background {
+                              background: url(#{$image-path}/index.jpg) no-repeat 50% 50%;
+                              background-size: cover;
+                              border: none;
+                              .main-text {
+                                   color: $white;
+                                   font-size: 2rem;
+                              }
+                              .sub-text {
+                                   color: rgba($white,0.7);
+                                   font-size: 1rem;
+                              }
+                              .icon {
+                                   width: 5.5em;
+                                   height: 5.5em;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.important-remarks {
+     min-height: 18em;
+}
+
+#list-of-summary, #health-summary, #property-summary {
+     #client-summary {
+          &.health, &.property {
+               .dashboard-row {
+                    .item {
+                         &.highlight {
+                              .left-focus, .right-focus {
+                                   .left, .right {
+                                        &.font-size-3rem {
+                                             h1 {
+                                                  font-size: 2rem;
+                                             }
+                                        }
+                                   }
+                              }
+                              .left-focus {
+                                   padding: 0 1.5em 0 9.5em;
+                                   .left {
+                                        width: 8em;
+                                   }
+                              }
+                              .right-focus {
+                                   padding: 0 9.5em 0 1.5em;
+                                   .right {
+                                        width: 8em;
+                                   }
+                              }
+                         }
+                         section, a {
+                              h1, h2 {
+                                   &.sub-text {
+                                        font-size: 1.4rem;
+                                   }
+                              }
+                         }
+                         .full-colour-block {
+                              &.report-dates {
+                                   .date {
+                                        width: 100%;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.case-info {
+     #documents-viewer {
+          max-height: inherit;
+          overflow-y: inherit;
+          table.livelink-documents {
+               width: 100%;
+          }
+     }
+     // h2 {
+     //      .icon {
+     //           width: 2em;
+     //           height: 2em;
+     //           margin: -0.45em 0.5em -0.5em 0;
+     //      }
+     // }
+}
+
+#list-of-documents {
+     display: none;
+}
+
+.important-remark-holder {
+     display: inline-block;
+     width: 100%;
+     padding: 1em;
+     background: $blue-grey;
+     border-left: 1em solid $blue;
+     border-radius: 0 5px 5px 0;
+     .title {
+          margin: 0 0 0.5em 0;
+          color: $black;
+          font-weight: bold;
+          font-family: $Montserrat;
+          font-size: 1.4rem;
+     }
+     .content {
+          margin: 0;
+     }
+}
+
+#summary-tab-1 {
+     #list-of-summary #client-summary .dashboard-row .item .full-colour-block.report-dates .date {
+          .main-text {
+               font-size: 1.1rem;
+               .icon.date {
+                    width: 0.75em;
+                    height: 0.75em;
+                    margin: 0 0.25em 0em 0;
+               }
+          }
+          .right {
+               a {
+                    font-size: 0.875rem;
+               }
+               .separator {
+                    margin: 0.25em 0.5em 0 0.5em;
+               }
+          }
+     }
+}
+
+#health-tab-1, #property-tab-1 {
+     #health-summary, #property-summary {
+          #client-summary .dashboard-row .item .full-colour-block.report-dates .date {
+               .left .icon {
+                    width: 4em;
+                    height: 4em;
+               }
+               .right {
+                    a {
+                         font-size: 0.875rem;
+                    }
+               }
+               .main-text {
+                    font-size: 2rem;
+                    .icon.date {
+                         width: 1.5em;
+                         height: 1.5em;
+                         margin: 0 0.35em -0.25em 0;
+                    }
+               }
+          }
+     }
+}
+
+// #edit-bond {
+//      display: none;
+// }
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

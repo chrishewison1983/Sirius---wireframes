@@ -13,17 +13,21 @@
           {{= it.include('top-nav.html') }}
 
           <div class="row">
-               <div class="large-12 large-uncentered columns">
+               <div class="large-9 large-uncentered columns">
                     <nav class="breadcrumb">
                          <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <span>Deputy details</span>
                     </nav>
                     <h1>
-                         <span class="type">lay<br>deputy</span> <div class="summary-deputy-name">Mrs Kate Eloise Smith</div>
+                         <span class="type lay">lay<br>deputy</span> <div>Mrs Kate Eloise Smith</div>
                          <span class="deputy-status">Deputies summary page</span>
                          <span class="deceased">Deputy is deceased</span>
                     </h1>
+               </div>
+
+               <div class="large-3 large-uncentered columns">
+                    {{= it.include('actions-header-deputy.html') }}
                </div>
 
           </div>
@@ -31,6 +35,8 @@
           <div class="colour-wrapper"></div>
      </div>
      <!-- SECTION HEADER - END -->
+
+     {{= it.include('confirmation/deputy-edited.html') }}
 
      <!-- CONTENT WRAPPER - START -->
      <div class="content-wrapper">
@@ -42,7 +48,7 @@
                     <!-- =========== TABS - START =========== -->
                     <ul class="tabs">
                          <li class="tab-link current" data-tab="tab-1">Details</li>
-                         <li class="tab-link" data-tab="tab-2">Client/s</li>
+                         <li class="tab-link" data-tab="tab-2"><span>3</span>Client's</li>
                          <li class="tab-link" data-tab="tab-3">Warnings</li>
                          <li class="tab-link" data-tab="tab-4">Timeline</li>
                          <li class="tab-link" data-tab="tab-5">Documents</li>
@@ -52,7 +58,7 @@
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
                     <div id="tab-1" class="tab-content current">
 
-                         {{= it.include('side-panel/deputy-summary-details.html') }}
+                         {{= it.include('side-panel/deputy-lay-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 1 - END =========== -->

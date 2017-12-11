@@ -110,6 +110,10 @@
 
                          <h2 class="section-title">Reporting Period</h2>
 
+                         <p>Please note that a furture report cannot be more than a year in advance of the report start date.</p>
+
+                         <hr>
+
                          <!-- // FORM ITEM - 1 - START // -->
                          <div class="form-group read-only">
                               <label>Report start date:</label>
@@ -124,7 +128,7 @@
                          <!-- // FORM ITEM - 1 - END // -->
 
                          <!-- // FORM ITEM - 2 - START // -->
-                         <div class="form-group read-only">
+                         <div class="form-group read-only make-editable">
                               <label>Report end date:</label>
                               <span class="help-text">Example - 05 04 2017</span>
                               <div>
@@ -136,72 +140,9 @@
                          </div>
                          <!-- // FORM ITEM - 2 - END // -->
 
-                         <!-- // FORM ITEM - 3 - START // -->
-                         <!-- <div class="form-group read-only">
-                              <label>Report reminder date:</label>
-                              <span class="help-text">Example - 05 04 2017</span>
-                              <div class="weeks-4">
-                                   <div class="wrapper"><span>4</span></div>
-                                   <p>weeks before the report end date</p>
-                              </div>
-                              <div>
-                                   <input id="report-reminder-day" class="input-length" name="report-reminder-day" type="text" value="04" maxlength="2" readonly>
-                                   <input id="report-reminder-month" class="input-length" name="report-reminder-month" type="text" value="12" maxlength="2" readonly>
-                                   <input id="report-reminder-year" class="input-length four" name="report-reminder-year" type="text" value="2017" maxlength="4" readonly>
-                              </div>
-                         </div> -->
-                         <!-- // FORM ITEM - 3 - END // -->
-
-                         <!-- // FORM ITEM - 4 - START // -->
-                         <div class="form-group read-only">
-                              <label>Report due date:</label>
-                              <span class="help-text">Example - 05 04 2017</span>
-                              <div class="weeks-8">
-                                   <div class="wrapper"><span>8</span></div>
-                                   <p>weeks after the report end date</p>
-                              </div>
-                              <div>
-                                   <input id="report-due-day" class="input-length" name="report-due-day" type="text" value="26" maxlength="2" readonly>
-                                   <input id="report-due-month" class="input-length" name="report-due-month" type="text" value="02" maxlength="2" readonly>
-                                   <input id="report-due-year" class="input-length four" name="report-due-year" type="text" value="2018" maxlength="4" readonly>
-                              </div>
-                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
-                         </div>
-                         <!-- // FORM ITEM - 4 - END // -->
-
-                         <!-- // FORM ITEM - 5 - START // -->
-                         <div class="form-group report-level read-only">
-                              <legend>Report level</legend>
-                              <label for="report-level-gen" class="radio">
-                                   <input id="report-level-gen" type="radio" name="report-level" value="General" disabled>
-                                   General (102)
-                              </label>
-                              <label for="report-level-min" class="radio checked">
-                                   <input id="report-level-min" type="radio" name="report-level" value="Minimal" checked disabled>
-                                   Minimal (103)
-                              </label>
-                         </div>
-                         <!-- // FORM ITEM - 5 - END // -->
-
-                         <!-- // FORM ITEM - 6 - START // -->
-                         <div class="form-group general-report-level">
-                              <label for="report-level-why">Why has the level been changed?:</label>
-                              <input id="report-level-why" name="report-due-day" type="text">
-                         </div>
-                         <!-- // FORM ITEM - 6 - END // -->
-
-                         <!-- // FORM ITEM - 7 - START // -->
-                         <div class="form-group general-report-level">
-                              <label for="report-level-notes">Notes</label>
-                              <textarea name="textarea" class="jqte-test" id="report-level-notes"></textarea>
-                         </div>
-                         <!-- // FORM ITEM - 7 - END // -->
-
                          <div class="edit-report-period">
 
-                              <hr>
-
-                              <!-- // FORM ITEM - 8 - START // -->
+                              <!-- // FORM ITEM - 3 - START // -->
                               <div class="form-group">
                                    <label for="report-why">Why are you changing the reporting period? <span class="required">*</span></label>
                                    <select id="report-why" class="full-width">
@@ -217,14 +158,74 @@
                                         <option value="Late allocation">Late allocation</option>
                                    </select>
                               </div>
-                              <!-- // FORM ITEM - 8 - END // -->
+                              <!-- // FORM ITEM - 3 - END // -->
 
-                              <!-- // FORM ITEM - 9 - START // -->
+                              <!-- // FORM ITEM - 4 - START // -->
                               <div class="form-group report-notes-section">
-                                   <label for="report-notes">Notes</label>
+                                   <label for="report-notes">Please explain why <span class="required">*</span></label>
                                    <textarea name="textarea" class="jqte-test" id="report-notes"></textarea>
                               </div>
-                              <!-- // FORM ITEM - 9 - END // -->
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                         </div>
+
+                         <hr>
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group read-only make-editable">
+                              <label>Report due date:</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div class="weeks-8">
+                                   <div class="wrapper"><span>8</span></div>
+                                   <p>weeks after the report end date</p>
+                              </div>
+                              <div>
+                                   <input id="report-due-day" class="input-length" name="report-due-day" type="text" value="26" maxlength="2" readonly>
+                                   <input id="report-due-month" class="input-length" name="report-due-month" type="text" value="02" maxlength="2" readonly>
+                                   <input id="report-due-year" class="input-length four" name="report-due-year" type="text" value="2018" maxlength="4" readonly>
+                              </div>
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <div class="edit-report-period">
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group report-notes-section">
+                                   <label for="report-notes">Why you are changing the due date? <span class="required">*</span></label>
+                                   <textarea name="textarea" class="jqte-test" id="report-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                         </div>
+
+
+                         <hr class="report-level">
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group report-level read-only make-editable">
+                              <label class="normal" for="report-level-gen">
+                                   <input id="report-level-gen" name="report-level-gen" type="checkbox" value="Yes">
+                                   Would you like the deputy to complete a 102?
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <div class="general-report-level">
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <!-- <div class="form-group ">
+                                   <label for="report-level-why">Why has the level been changed?</label>
+                                   <input id="report-level-why" name="report-due-day" type="text">
+                              </div> -->
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group report-level-notes">
+                                   <label for="report-level-notes">Please explain why <span class="required">*</span></label>
+                                   <textarea name="textarea" class="jqte-test" id="report-level-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
 
                          </div>
 
@@ -240,7 +241,7 @@
 
      <!-- // MODAL - START // -->
      <div id="edit-report" style="display:none;">
-          <h1>Are you sure you wish to edit the reportin period?</h1>
+          <h1>Are you sure you wish to edit the reporting period?</h1>
           <p>Changing the reporting period will changes all future reporting dates for this order.</p>
           <hr>
           <div class="cta-row">
@@ -256,7 +257,8 @@
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="edit-reporting-period">Edit reporting period</a>
+     <!-- <a class="main-cta primary" id="reporting-end-date-button" href="../4-client-page/4a-new-client.html">Save &amp; exit</a> -->
+     <a class="main-cta secondary" id="edit-reporting-period">Edit reporting period</a>
      <a class="main-cta primary de-activate" id="reporting-period-button">Save &amp; exit</a>
      <span class="separator"></span>
      <a href="#" onclick="history.back();" class="cancel">Cancel</a>

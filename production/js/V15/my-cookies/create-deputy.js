@@ -124,11 +124,10 @@ if ($.cookie("deputy-type") == 'Lay') {
           <option value=''>-- Select --</option>
           <option value='Sibling'>Sibling</option>
           <option value='Spouse'>Spouse</option>
+          <option value='Common law partner'>Common law partner</option>
           <option value='Child of Patient'>Child of Patient</option>
           <option value='Parent of Patient'>Parent of Patient</option>
-          <option value='Civil Partner'>Civil Partner</option>
           <option value='Friend'>Friend</option>
-          <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
           <option value='Other Relation'>Other Relation</option>
      `);
      $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Lay options</strong>');

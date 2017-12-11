@@ -7,12 +7,13 @@ $('#reporting-period-button').hide();
 
 $("#edit-reporting-period").click( function(e){
      e.preventDefault();
-     $('.form-group').removeClass('read-only');
-     $('input[type="text"]').removeAttr('readonly');
+     $('.make-editable').removeClass('read-only');
+     $('.make-editable input[type="text"]').removeAttr('readonly');
      $('.edit-report-period').slideDown();
      $(this).hide();
      $('#reporting-period-button').show();
      $('#report-level-min, #report-level-gen').removeAttr('disabled');
+     $('#reporting-end-date-button').hide();
 });
 
 $('#report-why').change(function(){

@@ -39,6 +39,8 @@ $(document).ready(function () {
           // Change the client status
           $("#section-header.client-page").removeClass('violent-risk-message, welsh-message').addClass('deceased-message');
           $("#section-header.client-page .normal-status, #section-header.client-page .type").hide();
+
+          $('#section-header.client-page .deceased').show();
      }
 
      // Changes the tabs to be focused on the Health & Welfare tab

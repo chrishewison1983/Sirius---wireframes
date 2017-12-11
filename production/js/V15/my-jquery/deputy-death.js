@@ -25,3 +25,12 @@ $("#deputy-death-proof-no").click( function(){
           $('.deputy-death-proof-no').slideDown();
      }
 });
+
+// Button validation
+$('#confirm-deputy-death').addClass('de-activate').removeAttr('href');
+
+$("#deputy-death-certificate-received-year, #deputy-death-letter-sent-year").keypress(function() {
+     if (!this.value) {
+          $('#confirm-deputy-death').removeClass('de-activate').attr('href', '../14-deputy-page/14a-deputy-page.html');
+     }
+});

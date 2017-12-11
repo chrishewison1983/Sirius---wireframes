@@ -1,0 +1,182 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default reporting-period-journey">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../dashboard.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Active report: Change report due date</span>
+                    </nav>
+                    <h1>
+                         Change report due date
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <form class="reporting-period-form">
+
+                         <h2 class="section-title">Due date on active report</h2>
+
+                         <div class="form-group">
+                              <label>Reporting period end date:</label>
+                              <p class="higlight">
+                                   <span class="report-end-day-answer">21</span>
+                                   /
+                                   <span class="report-end-month-answer">09</span>
+                                   /
+                                   <span class="report-end-year-answer">2017</span>
+                                   </p>
+                         </div>
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group read-only">
+                              <label for="datepicker">Report due date:</label>
+                              <div class="weeks-8">
+                                   <div class="wrapper"><span>8</span></div>
+                                   <p>weeks after the report end date</p>
+                              </div>
+                              <div class="date-wrapper">
+                                   <input type="text" id="datepicker" value="16/11/2017" disabled>
+                                   <i class="date"></i>
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group report-due-date-notes">
+                              <label for="report-notes">Why you are changing the due date? <span class="required">*</span></label>
+                              <textarea name="textarea" class="jqte-test" id="report-due-date-notes"></textarea>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="edit-report" style="display:none;">
+          <h1>Are you sure you wish to edit the report due date?</h1>
+          <p>Changing the report due date will only change the due date for this year only.</p>
+          <hr>
+          <div class="cta-row">
+               <a class="main-cta" id="confirm-report-edit" href="../4-client-page/4a-new-client.html#HandW">Confirm the change</a>
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <!-- <a class="main-cta primary" id="reporting-end-date-button" href="../4-client-page/4a-new-client.html">Save &amp; exit</a> -->
+     <a class="main-cta secondary" id="edit-report-due-date">Change report due date</a>
+     <a class="main-cta primary de-activate" id="due-date-button" href="#edit-report" rel="modal:open">Save &amp; exit</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

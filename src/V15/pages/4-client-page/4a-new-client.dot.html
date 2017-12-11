@@ -13,14 +13,14 @@
           {{= it.include('top-nav.html') }}
 
           <div class="row">
-               <div class="large-10 large-uncentered columns">
+               <div class="large-8 large-uncentered columns">
                     <nav class="breadcrumb">
                          <a href="../dashboard.html">My tasks</a>
                          <div class="separator"> > </div>
                          <span>Client summary</span>
                     </nav>
                     <h1>
-                         <span class="type">client</span>
+                         <span class="type lay">client</span>
                          <div class="client-title">Mr</div>
                          <div class="client-first-name">Gerald</div>
                          <div class="client-last-name">Brackens</div>
@@ -33,7 +33,7 @@
                     </h1>
                </div>
 
-               <div class="large-2 large-uncentered columns">
+               <div class="large-4 large-uncentered columns">
                     {{= it.include('actions-header-client.html') }}
                </div>
 
@@ -172,7 +172,7 @@
                               Order details
                          </li>
                          <li class="tab-link" data-tab="health-tab-4">
-                              <span>2</span> Deputies
+                              <span>2</span> Deputy(s)
                          </li>
                          <li class="tab-link" data-tab="health-tab-5">
                               Warnings
@@ -308,7 +308,7 @@
      					Order details
      				</li>
      				<li class="tab-link" data-tab="property-tab-4">
-     					<span>1</span> Deputy
+     					<span>1</span> Deputy(s)
      				</li>
      				<li class="tab-link" data-tab="property-tab-5">
      					Warnings
@@ -396,6 +396,12 @@
                          <div class="row">
                               <div class="large-12 large-uncentered columns">
 
+                                   <h2 class="description-title">
+                                        Order documents
+                                        <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a>
+                                   </h2>
+
+                                   {{= it.include('side-panel/document-viewer.html') }}
 
                               </div>
                          </div>

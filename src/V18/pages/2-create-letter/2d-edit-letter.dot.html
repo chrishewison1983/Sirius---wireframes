@@ -1,0 +1,263 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default" id="edit-letter">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <div class="separator"> > </div>
+                         <span>Create correspondence</span>
+                    </nav>
+                    <h1>
+                         Edit the correspondence
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-letter-journey">
+
+          <!-- // CONFIRMATION MESSAGE - START // -->
+          <div class="row">
+          	<div class="large-12 large-uncentered columns">
+          		<div id="draft-deleted-message" class="confirmation-panel">
+          			<div class="content">
+          				<h2>
+          					<span></span>
+          					Your draft has been deleted
+          					<script language="JavaScript">
+
+          						Stamp = new Date();
+          						year = Stamp.getYear();
+          						if (year < 2000) year = 1900 + year;
+          						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+          						var Hours;
+          						var Mins;
+          						var Time;
+          						Hours = Stamp.getHours();
+          						if (Hours >= 12) {
+          							Time = " P.M.";
+          						}
+          						else {
+          							Time = " A.M.";
+          						}
+          						if (Hours > 12) {
+          							Hours -= 12;
+          						}
+          						if (Hours == 0) {
+          							Hours = 12;
+          						}
+          						Mins = Stamp.getMinutes();
+          							if (Mins < 10) {
+          							Mins = "0" + Mins;
+          						}
+          						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+          					</script>
+          				</h2>
+          			</div>
+          		</div>
+          	</div>
+          </div>
+          <!-- // CONFIRMATION MESSAGE - END // -->
+
+          <div class="row">
+
+               <div class="large-6 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Correspondence</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="client-contacts"></span>
+                                   <p>Contacts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-6">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/letter-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-contacts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 6 - START =========== -->
+                         <div id="tab-6" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- // EDIT DOCUMENT - START // -->
+               <div id="action-panel" class="large-6 large-uncentered columns doc-editor">
+
+                    {{= it.include('documents/draft-documents.html') }}
+
+               </div>
+               <!-- // EDIT DOCUMENT - END // -->
+
+               <!-- // MODAL - START // -->
+               <div id="print-send-modal" style="display:none;">
+                    <img src="../../../production/img/V18/letters/opg-letter-header.png" alt="Document" class="header">
+                    <div id="letter-contents"></div>
+                    <p>
+                         Cymraeg: if you’d prefer to hear from us in Welsh, call 0300 456 0300 or emailcustomerservices@publicguardian.gsi.gov.uk
+                    </p>
+                    <!-- <hr> -->
+                    <div class="cta-row">
+                         <a class="main-cta" id="confirm-print-send">Publish document</a>
+                         <a href="#" rel="modal:close" class="back">Back to my correspondence</a>
+                    </div>
+               </div>
+               <div id="delete" style="display:none;">
+                    <h1>Delete draft</h1>
+                    <h2 class="document-title"></h2>
+                    <p>Are you sure you want to delete this draft?</p>
+                    <!-- <hr> -->
+                    <div class="cta-row">
+                         <a class="main-cta delete-action" rel="modal:close" id="delete-draft">Delete draft</a>
+                         <a href="#" rel="modal:close" id="cancel-delete">Cancel</a>
+                    </div>
+               </div>
+               <!-- // MODAL - END // -->
+
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="preview-letter">Preview &amp; publish</a>
+     <a class="main-cta secondary" id="save" href="#">Save draft</a>
+     <a class="main-cta secondary" id="save-and-exit" href="../4-client-page/4a-new-client.html#HandW">Save draft &amp; Exit</a>
+     <!-- <a href="#delete" rel="modal:open" class="main-cta secondary" id="delete-draft" href="#">Delete draft</a> -->
+     <span class="separator"></span>
+     <!-- <a onclick="history.back();" class="back">Back</a> -->
+     <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     $(document).ready(function(){
+          JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) {
+               $('#recipients').append('<li>' + recipient + '</li>');
+          });
+
+          var inserts = JSON.parse(sessionStorage.getItem('selected-inserts'));
+
+          if (inserts){
+               inserts.forEach(function(insert) {
+                    $('#inserts-selected').append('<li>' + insert + '</li>');
+               });
+          }
+          /*JSON.parse(sessionStorage.getItem('selected-letter')).forEach(function(letter) {
+               $('#draft-list').append('<li>' + letter + '</li>');
+          });*/
+     });
+
+     function updateEditDraft(draft, index){
+          $('[id^="document-"]').hide();
+          $('#document-' + index).show();
+
+          $('.current-doc-info .number').text(index);
+          $('.current-doc-info .recipient-name').text(draft.selectedRecipient);
+          $('.current-doc-info .current-document-title').text(draft.selectedLetter);
+     }
+
+</script>
+<!-- SCRIPT CONTENT - END -->

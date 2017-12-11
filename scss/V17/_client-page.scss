@@ -1,0 +1,104 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+a.back {
+     &.close-order-docs {
+          background-size: 0.45em;
+          padding: 0 0 0 0.85em;
+          float: right;
+     }
+}
+
+#sub-order-docs {
+     margin: 0.5em 0 0 0;
+     width: 100%;
+     // background: $blue-grey;
+     border: 3px solid $blue-grey;
+     border-radius: $global-border-radius;
+     padding: 7.75em 1em 1em 1em;
+     position: relative;
+     .description-title {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          padding: 0.75em;
+          margin: 0;
+          background: $blue-grey;
+          border-bottom: none;
+          border-radius: 5px 5px 0 0;
+          .icon.documents {
+               margin: 0 0.75em 0 0;
+               position: relative;
+               top: 0;
+               width: 3em;
+               height: 3em;
+               background-size: 1.25em;
+          }
+          .details {
+               width: auto;
+               display: flex;
+               border-top: 1px dashed darken($blue-grey,10%);
+               margin-top: 0.35em;
+               padding-top: 0.35em;
+               span {
+                    margin: 0 2em 0 0;
+                    font-size: 1rem;
+                    width: auto;
+               }
+          }
+     }
+     #documents-viewer {
+          background: $white;
+     }
+}
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

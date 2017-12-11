@@ -1,0 +1,261 @@
+{
+     "template": "default-sub-section"
+}
+
+{{= it.include('main-nav-sub-section.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default reporting-period-journey">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Create report</span>
+                    </nav>
+                    <h1>
+                         Create a report
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <form class="reporting-period-form">
+
+                         <h2 class="section-title">Create a report</h2>
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label for="report-value-status">Report status</label>
+                              <select id="report-value-status" class="full-width">
+                                   <option value="">-- Select --</option>
+                                   <option value="Active" selected>Active</option>
+                                   <option value="Lodged">Lodged</option>
+                                   <option value="Pending">Pending</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-assets">Total assets<span class="required">*</span></label>
+                              <span class="help-text">At report end date</span>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-assets" name="report-value-assets" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-opening">Cash opening balance<span class="required">*</span></label>
+                              <span class="help-text">At report start date</span>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-opening" name="report-value-opening" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                         <!-- // FORM ITEM - 4 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-closing">Cash closing balance<span class="required">*</span></label>
+                              <span class="help-text">At report end date</span>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-closing" name="report-value-closing" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 4 - END // -->
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-gifting">Gifting<span class="required">*</span></label>
+                              <span class="help-text">At report end date</span>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-gifting" name="report-value-gifting" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-expenditure">Deputy expenditure<span class="required">*</span></label>
+                              <span class="help-text">At report end date</span>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-expenditure" name="report-value-gifting" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-monthly-income">Monthly income<span class="required">*</span></label>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-monthly-income" name="report-value-monthly-income" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <!-- // FORM ITEM - 8 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-monthly-income">Monthly expenditure<span class="required">*</span></label>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-monthly-expenditure" name="report-value-monthly-expenditure" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 8 - END // -->
+
+                         <!-- // FORM ITEM - 9 - START // -->
+                         <div class="form-group currency">
+                              <label for="report-value-care-expenses">Monthly care expenses<span class="required">*</span></label>
+                              <div class="date-wrapper">
+                                   <span class="currency-icon"></span>
+                                   <input id="report-value-care-expenses" name="report-value-care-expenses" type="text">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 9 - END // -->
+
+                         <!-- // FORM ITEM - 10 - START // -->
+                         <div class="form-group">
+                              <label for="report-value-review-date">Care Plan review date</label>
+                              <span class="help-text">Example - 05 04 2017</span>
+                              <div>
+                                   <input id="report-value-review-date-day" class="input-length" name="report-value-review-date-day" type="text" maxlength="2">
+                                   <input id="report-value-review-date-month" class="input-length" name="report-value-review-date-month" type="text" maxlength="2">
+                                   <input id="report-value-review-date-year" class="input-length four" name="report-value-review-date-year" type="text" maxlength="4">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 10 - END // -->
+
+                         <!-- // FORM ITEM - 11 - START // -->
+                         <!-- <div class="form-group">
+                              <label for="dropzone">Attachments against this report</label>
+                              <div id="dropzone">
+                                   <form action="http://www.torrentplease.com/dropzone.php" class="dropzone dz-clickable">
+                                        <div class="dz-default dz-message">
+                                             <i class="statement"></i>
+                                             <span>Drop files here or <strong>click to attach</strong></span>
+                                        </div>
+                                   </form>
+                              </div>
+                         </div> -->
+                         <!-- // FORM ITEM - 11 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary de-activate" id="create-report-button">Create report</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- <script src="../../../production/js/V18/jquery-1.11.3.js"></script>
+<script src="../../../production/js/V18/dropzone.js"></script>
+<script type="text/javascript">
+    var myDropzone = new Dropzone("div#dropzone", { url: "upload.php"}) //according to your forms action
+</script> -->
+<!-- SCRIPT CONTENT - END -->

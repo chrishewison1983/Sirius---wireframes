@@ -38,6 +38,12 @@ $(document).ready(function(){
 ////////////////////////////////////// SEARCH - START //////////////////////////////////////
 
 ////////////////////////////////////// STEP - 1 - START //////////////////////////////////////
+$('.form-items-hidden').hide();
+
+$("#deputy-type").change(function () {
+     $('.form-items-hidden').show();
+});
+
 // Title - other
 $('.deputy-title-other-answer').hide();
 
@@ -133,20 +139,35 @@ $("#deputy-type").change(function () {
           // Hides company info panel
           $('.form-deputy-company-info').slideUp();
 
+          // Changes manditory fields
+          $('.form-deputy-first-name .required, .form-deputy-last-name .required').show();
+
           // Show fields
           $('.form-deputy-title, .form-deputy-first-name, .form-deputy-middle-name, .form-deputy-last-name, .form-deputy-dob').show();
+
+          // Changes the order of the deputy details
+          $('.interchangeable-values').addClass('lay');
+          $('.interchangeable-values').removeClass('professional, public');
+
      } else if ($(this).val() == 'Professional') {
           // Shows company info panel
           $('.form-deputy-company-info').slideDown();
 
           // Changes the state of the organisation question
           $('#deputy-organisation-yes').parent().parent().removeClass('read-only');
-          $('#deputy-organisation-yes').parent().removeClass('checked').removeAttr('checked');
+          $('#deputy-organisation-yes').parent().addClass('checked').attr('checked', 'checked');
           $('#deputy-organisation-yes').removeAttr('disabled');
           $('#deputy-organisation-no').removeAttr('disabled');
 
+          // Changes manditory fields
+          $('.form-deputy-first-name .required, .form-deputy-last-name .required').hide();
+
           // Show fields
           $('.form-deputy-title, .form-deputy-first-name, .form-deputy-middle-name, .form-deputy-last-name, .form-deputy-dob').show();
+
+          // Changes the order of the deputy details
+          $('.interchangeable-values').addClass('professional');
+          $('.interchangeable-values').removeClass('lay, public');
 
      } else if ($(this).val() == 'Public authority') {
           // Shows company info panel
@@ -165,6 +186,10 @@ $("#deputy-type").change(function () {
 
           // Hide fields
           $('.form-deputy-title, .form-deputy-first-name, .form-deputy-middle-name, .form-deputy-last-name, .form-deputy-dob').hide();
+
+          // Changes the order of the deputy details
+          $('.interchangeable-values').addClass('public');
+          $('.interchangeable-values').removeClass('lay, professional');
 
      } else {
           $('.form-deputy-company-info').slideUp();
@@ -246,10 +271,9 @@ $(document).ready(function () {
                     <option value='Child of client'>Child of client</option>
                     <option value='Sibling'>Sibling</option>
                     <option value='Spouse'>Spouse</option>
+                    <option value='Common law partner'>Common law partner</option>
                     <option value='Parent of client'>Parent of client</option>
-                    <option value='Civil Partner'>Civil Partner</option>
                     <option value='Friend'>Friend</option>
-                    <option value='Partner (Not Civil Partner)'>Partner (Not Civil Partner)</option>
                     <option value='Other Relation'>Other Relation</option>
                `);
                $("#deputy-relationship").siblings().html('Relationship to the client: <strong>Lay options</strong>');
