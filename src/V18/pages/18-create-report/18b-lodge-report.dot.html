@@ -2,8 +2,6 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-sub-section.html') }}
-
 <!-- PRIMARY CONTENT - START -->
 <main class="default reporting-period-journey step-4">
 
@@ -15,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html">My tasks</a>
+                         <a href="../index.html">Dashboard</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-page/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -108,12 +106,24 @@
 
                          <h2 class="section-title">Lodge a report</h2>
 
-                         <!-- // FORM ITEM - 13 - START // -->
-                         <div class="form-group lodge-report-notes">
-                              <label for="report-value-notes">Lodge report notes<span class="required">*</span></label>
-                              <textarea name="textarea" class="jqte-test" id="report-value-notes"></textarea>
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label>Date report received<span class="required">*</span></label>
+                              <div>
+                                   <input id="report-lodged-day" class="input-length" name="report-lodged-day" type="text" placeholder="DD" value="" maxlength="2">
+                                   <input id="report-lodged-month" class="input-length" name="report-lodged-month" type="text" placeholder="MM" value="" maxlength="2">
+                                   <input id="report-lodged-year" class="input-length four" name="report-lodged-year" type="text" placeholder="YYYY" value="" maxlength="4">
+                              </div>
+                              <!-- <a href="#" class="edit bond-date-edit">edit</a> -->
                          </div>
-                         <!-- // FORM ITEM - 13 - END // -->
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group report-lodged-notes">
+                              <label for="report-value-notes">Reason for determination<span class="required">*</span></label>
+                              <textarea name="textarea" class="jqte-test" id="report-lodged-notes"></textarea>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
 
                     </form>
 
@@ -129,9 +139,11 @@
 </main>
 <!-- PRIMARY CONTENT - END -->
 
+{{= it.include('modals/lodge-report.html') }}
+
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="lodge-report-button" href="../4-client-page/4a-new-client.html">Lodge report</a>
+     <a class="main-cta primary de-activate" id="lodge-report-button">Lodge report</a>
      <span class="separator"></span>
      <a href="#" onclick="history.back();" class="cancel">Cancel</a>
 </footer>

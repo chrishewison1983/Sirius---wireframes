@@ -1,0 +1,1108 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+#report-details {
+     ul.report-list {
+          margin: 0;
+          &.report-thumb-view {
+               @include flexbox;
+               @include justify-content(center);
+               @include flex-wrap(wrap);
+               li {
+                    @include flexbox;
+                    width: 32%;
+                    margin: 0 2% 0em 0;
+                    padding: 0 0 11.75em 0;
+                    box-shadow: inset 0 1em 0px 0px darken($blue-grey,10%);
+                    &.thumb-order-3 {
+                         order: 3;
+                         margin-right: 0;
+                    }
+                    &.thumb-order-2 {
+                         order: 2;
+                    }
+                    &.thumb-order-1 {
+                         order: 1;
+                    }
+                    &.active {
+                         box-shadow: inset 0 1em 0px 0px rgba($blue,1);
+                    }
+                    // &.pending {
+                    //      box-shadow: inset 0 1em 0px 0px rgba($amber,1);
+                    // }
+                    &.alert {
+                         box-shadow: inset 0 1em 0px 0px rgba($red,1);
+                    }
+                    .staff-review {
+                         margin: 0.5em 0 0 0;
+                    }
+                    .main-info {
+                         width: 88%;
+                         margin: 2.5em 6% 0 6%;
+                         .report-document-list, .view-notes, .lodging-details {
+                              margin-left: 0;
+                         }
+                         .document-list {
+                              ul {
+                                   li {
+                                        width: 100%;
+                                        margin-bottom: 1em;
+                                        &:last-of-type {
+                                             margin-bottom: 0;
+                                        }
+                                        a {
+                                             font-size: 0.875rem;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    .charts-container {
+                         width: 88%;
+                         margin: 0 6% 1em 6%;
+                         .charts.message-shown {
+                              padding-top: 6em;
+                         }
+                         .charts .chart .percentage {
+                              font-size: 0.875rem;
+                         }
+                         .report-notes {
+                              margin-top: 1em;
+                              padding-top: 1em;
+                              border-top: 3px dashed darken($blue-grey,15%);
+                              .warning {
+                                   width: 100%;
+                                   margin: 0 0 1em 0;
+                                   &:last-of-type {
+                                        margin: 0;
+                                   }
+                              }
+                         }
+                    }
+                    .finance-container {
+                         .item {
+                              width: 100%;
+                              margin-right: 0;
+                              margin-bottom: 1em;
+                              &:nth-of-type(2n) {
+                                   margin-right: 0;
+                              }
+                              &:nth-of-type(3n) {
+                                   margin-bottom: 0.25em;
+                              }
+                         }
+                    }
+                    .view-report {
+                         width: 100%;
+                         padding: 1em;
+                         min-height: 11.75em;
+                         margin: 0 0 0 0;
+                         .icon {
+                              width: 1.75em;
+                              height: 2.5em;
+                              margin: 0 0.75em 0.25em 0;
+                         }
+                         .report-title, p {
+                              width: 85%;
+                         }
+                         .report-title {
+                              font-size: 1rem;
+                         }
+                         .left {
+                              width: 100%;
+                              .wrapper {
+                                   width: 100%;
+                                   margin-bottom: 0.75em;
+                                   &:last-of-type {
+                                        margin-bottom: 0;
+                                   }
+                              }
+                         }
+                         .right {
+                              float: left !important;
+                              // width: 100%;
+                              a {
+                                   margin-top: 0.75em;
+                                   &.main-cta {
+                                        float: left;
+                                   }
+                                   &.edit {
+                                        float: right;
+                                        margin: 1.25em 0 0 0;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          &.report-list-view {
+               display: inline-block;
+               li {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0 0 1em 0;
+                    // padding: 1em 1em 1em 2em;
+                    box-shadow: inset 1em 0 0px 0px darken($blue-grey,10%);
+                    &.active, &.alert {
+                         &.non-compliant {
+                              box-shadow: inset 3.5em 0 0px 0px rgba($red,1);
+                              padding-left: 2.5em;
+                              position: relative;
+                              .main-info {
+                                   width: 52.75%;
+                              }
+                              .view-report {
+                                   margin-left: 3.5em;
+                                   width: 94.8%;
+                              }
+                              &:before {
+                                   content: 'non-compliant';
+                                   display: inline-block;
+                                   position: absolute;
+                                   left: -4.45em;
+                                   top: 50%;
+                                   margin-top: -0.75em;
+                                   // height: 10em;
+                                   font-size: 1.2rem;
+                                   letter-spacing: 0.25rem;
+                                   text-transform: uppercase;
+                                   color: $white;
+                                   transform: rotate(-90deg);
+                                   font-family: $Montserrat;
+                                   font-weight: bold;
+                              }
+                         }
+                    }
+                    &.active {
+                         box-shadow: inset 1em 0 0px 0px rgba($blue,1);
+                    }
+                    &.alert {
+                         box-shadow: inset 1em 0 0px 0px rgba($red,1);
+                    }
+                    .main-info, .charts-container {
+                         float: left;
+                    }
+                    .main-info {
+                         width: 53%;
+                         margin: 1em 2.5% 1em 2em;
+                    }
+                    .charts-container {
+                         margin: 1em 1em 1em 0;
+                    }
+                    .report-info, .lodging-section, .notes-section {
+                         .item, .item-notes {
+                              width: 25%;
+                              margin-bottom: 0;
+                         }
+                         .item {
+                              margin-bottom: 0.75em;
+                         }
+                         .item-notes {
+                              width: 100%;
+                         }
+                    }
+                    .charts-container {
+                         width: 40%;
+                    }
+                    .finance-container {
+                         margin: 3em 0 0 0;
+                         .item {
+                              width: 31%;
+                              margin-right: 3%;
+                              &:last-of-type {
+                                   margin-right: 0;
+                              }
+                         }
+                    }
+                    .view-report {
+                         width: 98.475%;
+                         padding: 1em;
+                         margin: 0 0 0 1em;
+                    }
+               }
+          }
+          li {
+               border-radius: $global-border-radius;
+               background: $blue-grey;
+               padding: 0 0 4.75em 0;
+               position: relative;
+               z-index: 1;
+               .wrapper {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+               }
+               &.active {
+                    background: lighten($blue,45%);
+                    .wrapper, .main-info, .cta-row {
+                         min-height: 14em;
+                    }
+                    .report-type {
+                         span {
+                              background: $blue;
+                         }
+                         strong {
+                              background: darken($blue,10%);
+                         }
+                    }
+                    .time-line {
+                         .date {
+                              background: lighten($blue,45%);
+                         }
+                    }
+                    .finance-container {
+                         .item {
+                              .growth {
+                                   &.up {
+                                        background: $green;
+                                   }
+                                   &.down {
+                                        background: $red;
+                                   }
+                              }
+                         }
+                    }
+                    .charts-container {
+                         .label {
+                              div {
+                                   background: lighten($blue,45%);
+                              }
+                         }
+                    }
+                    .view-report {
+                         background: rgba($blue,0.1);
+                    }
+               }
+               &.pending {
+                    background: lighten($amber,25%);
+                    box-shadow: inset 1em 0 0px 0px rgba($amber,1);
+                    position: relative;
+                    padding: 0;
+                    .wrapper {
+                         width: 100%;
+                         .main-info {
+                              width: 71%;
+                              margin-bottom: 0.25em;
+                              .report-info {
+                                   margin: 0.5em 0 0 0;
+                              }
+                         }
+                    }
+                    .cta-row {
+                         background: lighten($amber,20%);
+                         display: inline-block;
+                         float: right;
+                         width: 23%;
+                         padding-bottom: 1em;
+                    }
+                    .report-type {
+                         span {
+                              background: $amber;
+                         }
+                         strong {
+                              background: darken($amber,10%);
+                         }
+                    }
+                    .time-line {
+                         .date {
+                              background: lighten($amber,25%);
+                              &.left, &.right {
+                                   .indicator {
+                                        background: $amber;
+                                   }
+                                   p span {
+                                        background: lighten($amber,25%);
+                                        border: 3px solid lighten($amber,20%);
+                                   }
+                              }
+                         }
+                         .border {
+                              background: lighten($amber,20%);
+                         }
+                    }
+                    .finance-container {
+                         border-top: 3px dashed lighten($amber,20%);
+                         .item {
+                              .growth {
+                                   &.up {
+                                        background: $amber;
+                                   }
+                                   &.down {
+                                        background: $amber;
+                                   }
+                              }
+                         }
+                    }
+                    .charts-container {
+                         .label {
+                              border-left: 2px solid lighten($amber,20%);
+                              border-right: 2px solid lighten($amber,20%);
+                              div {
+                                   background: lighten($amber,25%);
+                                   color: $amber;
+                              }
+                              .border {
+                                   background: lighten($amber,20%);
+                              }
+                         }
+                    }
+                    .view-report {
+                         background: rgba($amber,0.1);
+                    }
+               }
+               &.alert {
+                    background: lighten($red,35%);
+                    .report-type {
+                         span {
+                              background: $red;
+                         }
+                         strong {
+                              background: darken($red,10%);
+                         }
+                    }
+                    .time-line {
+                         .date {
+                              background: lighten($red,35%);
+                              &.left, &.right {
+                                   .indicator {
+                                        background: lighten($red,15%);
+                                   }
+                                   p span {
+                                        background: lighten($red,30%);
+                                        border: 3px solid lighten($red,20%);
+                                        &.start-date-answer, &.end-date-answer {
+                                             background: none;
+                                             border: none;
+                                        }
+                                   }
+                              }
+                         }
+                         .border {
+                              background: lighten($red,20%);
+                         }
+                    }
+                    .finance-container {
+                         border-top: 3px dashed lighten($red,20%);
+                         .item {
+                              .growth {
+                                   &.up {
+                                        background: $green;
+                                   }
+                                   &.down {
+                                        background: $red;
+                                   }
+                              }
+                         }
+                    }
+                    .charts-container {
+                         .label {
+                              border-left: 2px solid lighten($red,20%);
+                              border-right: 2px solid lighten($red,20%);
+                              div {
+                                   background: lighten($red,35%);
+                                   color: $red;
+                              }
+                              .border {
+                                   background: lighten($red,20%);
+                              }
+                         }
+                    }
+                    .view-report {
+                         background: rgba($red,0.1);
+                    }
+               }
+               .main-info, .charts-container {
+                    display: inline-block;
+                    width: 100%;
+               }
+               .main-info {
+                    .report-document-list, .view-notes, .lodging-details {
+                         margin-left: 1em;
+                         &.close {
+                              float: none;
+                         }
+                    }
+                    .edit {
+                         float: right;
+                         margin-top: 0.45em;
+                    }
+               }
+               .report-type, .staff-review {
+                    display: inline-block;
+                    float: left;
+                    span, strong {
+                         padding: 0.5em 0.75em;
+                         border-radius: 5px 0 0 5px;
+                         background: $main-colour;
+                         color: $white;
+                         font-family: $Montserrat;
+                         text-transform: uppercase;
+                         float: left;
+                         margin: 0;
+                    }
+                    strong {
+                         background: darken($main-colour,10%);
+                         border-radius: 0 5px 5px 0;
+                         clear: none;
+                    }
+               }
+               .staff-review {
+                    float: left;
+                    margin-left: 1em;
+                    .icon.flag {
+                         width: 2.15em;
+                         height: 2.15em;
+                         background: url(#{$image-path}/icons/symbol-white.svg) no-repeat 50% 50% $main-colour;
+                         background-size: 1em;
+                    }
+               }
+               .report-content-section {
+                    display: none;
+                    &.open {
+                         display: inline-block !important;
+                    }
+               }
+               .report-info, .document-list, .notes-section, .lodging-section, .abandoned-section {
+                    width: 100%;
+                    border-radius: $global-border-radius;
+                    background: $white;
+                    padding: 1em;
+                    margin-top: 1em;
+                    &.show {
+                         display: inline-block;
+                    }
+                    .content-wrapper {
+                         @include flexbox;
+                         @include justify-content(flex-start);
+                         @include flex-wrap(wrap);
+                         padding: 0;
+                         p {
+                              margin: 0;
+                         }
+                         a, .item, .item-notes {
+                              @include flexbox;
+                         }
+                         .item, .item-notes {
+                              // width: 50%;
+                              margin-bottom: 0.5em;
+                              .highlight {
+                                   font-size: 1.2rem;
+                                   line-height: 1.4;
+                                   color: $black;
+                                   font-family: $Montserrat;
+                                   text-transform: uppercase;
+                                   display: inline-block;
+                                   width: 100%;
+                                   div {
+                                        display: inline-block;
+                                        width: auto;
+                                   }
+                              }
+                         }
+                         .item-notes {
+                              .highlight {
+                                   font-size: 1rem;
+                                   text-transform: inherit;
+                              }
+                         }
+                    }
+               }
+               .document-list {
+                    ul {
+                         margin: 0;
+                         li {
+                              box-shadow: none;
+                              background: none;
+                              padding: 0;
+                              a {
+                                   padding-left: 1.25em;
+                                   background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 0%;
+                                   background-size: 0.85em;
+                              }
+                              &:last-of-type {
+                                   margin: 0;
+                              }
+                         }
+                    }
+                    p {
+                         margin: 0;
+                    }
+               }
+               .lodging-section, .abandoned-section, .notes-section {
+                    p {
+                         margin: 0;
+                    }
+               }
+               .abandoned-section {
+                    .content-wrapper {
+                         .item-notes {
+                              width: 100%;
+                              .wrapper {
+                                   margin-left: 1%;
+                                   width: 99%;
+                              }
+                         }
+                    }
+               }
+               .finance-container {
+                    @include flexbox;
+                    @include justify-content(flex-start);
+                    @include flex-wrap(wrap);
+                    margin: 1em 0;
+                    border-top: 3px dashed darken($blue-grey,15%);
+                    padding-top: 1em;
+                    width: 100%;
+                    .item {
+                         @include flexbox;
+                         @include align-items(flex-start);
+                         @include justify-content(flex-start);
+                         width: 48%;
+                         margin-right: 4%;
+                         .wrapper {
+                              display: inline-block;
+                              width: 100%;
+                              line-height: 0;
+                         }
+                         .title, .figure, .growth {
+                              line-height: 1.2;
+                              color: $text-main-colour;
+                              font-family: $Montserrat;
+                         }
+                         .title {
+                              font-size: 0.85rem;
+                         }
+                         .figure {
+                              font-size: 0.875rem;
+                              color: rgba($black,0.6);
+                              span {
+                                   font-size: 1.8rem;
+                                   color: $black;
+                                   font-weight: bold;
+                              }
+                         }
+                         .growth {
+                              padding: 0.25em 0.5em;
+                              border-radius: $global-border-radius;
+                              color: $white;
+                              display: inline-block;
+                              width: auto;
+                              font-size: 0.875rem;
+                              margin: 0.25em 0;
+                              span {
+                                   display: inline-block;
+                                   float: left;
+                                   width: 1em;
+                                   height: 1em;
+                                   margin: 0 0.25em 0 0;
+                                   position: relative;
+                                   top: 0.1em;
+                              }
+                              &.none {
+                                   background: darken($blue-grey,10%);
+                                   span {
+                                        margin: 0;
+                                        top: -0.1em;
+                                        background: url(#{$image-path}/icons/overview-white.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.up {
+                                   background: darken($blue-grey,10%);
+                                   span {
+                                        background: url(#{$image-path}/icons/percentage-up-white.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.down {
+                                   background: darken($blue-grey,40%);
+                                   span {
+                                        background: url(#{$image-path}/icons/percentage-down-white.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                    }
+               }
+               .charts-container {
+                    position: relative;
+                    padding-bottom: 2.5em;
+                    margin-top: 0em;
+                    &.unlodged-content {
+                         padding: 0;
+                         // .report-notes {
+                         //      background: $white;
+                         // }
+                    }
+                    .charts {
+                         &.message-shown {
+                              position: relative;
+                              padding-top: 5em;
+                         }
+                         .warning-message {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              right: 0;
+                              padding: 0.75em;
+                              color: $white;
+                              font-family: $Montserrat;
+                              text-align: left;
+                              font-weight: bold;
+                              font-size: 0.875rem;
+                              border-radius: $global-border-radius;
+                              background: $red;
+                              span {
+                                   display: inline-block;
+                                   background: url(#{$image-path}/icons/warnings-white.svg) no-repeat 50% 50% $red;
+                                   background-size: contain;
+                                   margin: 0 1em 0 0;
+                                   width: 3em;
+                                   height: 3em;
+                                   float: left;
+                              }
+                         }
+                    }
+                    .report-notes {
+                         display: inline-block;
+                         width: 100%;
+                         p {
+                              font-family: $Montserrat;
+                              font-size: 1rem;
+                              color: $black;
+                              font-weight: bold;
+                              margin: 0 0 0.75em 0;
+                         }
+                         .warning {
+                              float: left;
+                              display: inline-block;
+                              width: 48%;
+                              background: $white;
+                              border-radius: $global-border-radius;
+                              padding: 1em 1em 3em 1em;
+                              position: relative;
+                              margin: 0 4% 0 0;
+                              &:last-of-type {
+                                   margin: 0;
+                              }
+                              .title, .figure, .growth {
+                                   color: $text-main-colour;
+                                   font-family: $Montserrat;
+                              }
+                              .title {
+                                   font-size: 1rem;
+                                   line-height: 1.4;
+                                   span {
+                                        display: inline-block;
+                                        width: 100%;
+                                   }
+                              }
+                              .figure {
+                                   font-size: 1rem;
+                                   color: rgba($black,0.6);
+                                   span {
+                                        font-size: 2.5rem;
+                                        line-height: 1;
+                                        color: $black;
+                                        font-weight: bold;
+                                        &.up {
+                                             display: inline-block;
+                                             width: 0.5em;
+                                             height: 0.25em;
+                                             margin: 0 0 0 0.25em;
+                                             background: url(#{$image-path}/icons/percentage-up-grey.svg) no-repeat 50% 50%;
+                                             background-size: contain;
+                                        }
+                                   }
+                              }
+                              .icon {
+                                   width: 2em;
+                                   height: 2em;
+                                   position: absolute;
+                                   right: 1em;
+                                   bottom: 1em;
+                                   // border-radius: 50%;
+                                   &.gifting {
+                                        background: url(#{$image-path}/icons/chart/gift-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                                   &.expenses {
+                                        background: url(#{$image-path}/icons/chart/deputy-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                    }
+                    .label {
+                         position: absolute;
+                         bottom: 0.25em;
+                         text-align: center;
+                         border-left: 2px solid darken($blue-grey,15%);
+                         border-right: 2px solid darken($blue-grey,15%);
+                         color: darken($blue-grey,30%);
+                         &.one {
+                              left: 0;
+                              right: 61%;
+                         }
+                         &.two {
+                              left: 40%;
+                              right: 0;
+                         }
+                         div {
+                              background: $blue-grey;
+                              display: inline-block;
+                              padding: 0 0.5em;
+                              position: relative;
+                              z-index: 10;
+                         }
+                         .border {
+                              display: inline-block;
+                              width: 100%;
+                              height: 2px;
+                              background: darken($blue-grey,15%);
+                              position: absolute;
+                              top: 0.675em;
+                              left: 0;
+                              right: 0;
+                              z-index: 1;
+                         }
+                    }
+               }
+               .charts, .chart-instruction {
+                    @include flexbox;
+                    @include justify-content(center);
+                    @include flex-wrap(wrap);
+                    .chart, .title {
+                         @include flexbox;
+                         width: 19.2%;
+                         margin-right: 1%;
+                         background: $white;
+                         min-height: 13em;
+                         position: relative;
+                         z-index: 1;
+                         @include standard-transition;
+                         .icon {
+                              display: inline-block;
+                              width: 100%;
+                              position: absolute;
+                              top: 0.75em;
+                              height: 1.25em;
+                         }
+                         &:last-of-type {
+                              margin-right: 0;
+                         }
+                         &:hover, &:active, &:focus {
+                              z-index: 10;
+                              box-shadow: 0px 0px 10px 0px rgba($black,0.2);
+                              transform:scaleY(1.05);
+                         }
+                         .percentage {
+                              position: absolute;
+                              bottom: 0.25em;
+                              // left: 26%;
+                              color: $white;
+                              font-family: $Montserrat;
+                              width: 100%;
+                              text-align: center;
+                              display: inline-block;
+                         }
+                    }
+                    .title {
+                         @include flex-direction(column);
+                         min-height: auto;
+                         text-align: center;
+                         background: none;
+                         margin-top: 0.75em;
+                         color: $black;
+                         font-size: 0.6rem;
+                         text-transform: uppercase;
+                         line-height: 1;
+                         font-weight: bold;
+                         font-family: $Montserrat;
+                         &:hover, &:active, &:focus {
+                              box-shadow: none;
+                              transform:scaleY(1);
+                         }
+                    }
+               }
+               .view-report {
+                    display: inline-block;
+                    width: 100%;
+                    position: absolute;
+                    z-index: 100;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    min-height: 4.75em;
+                    background: $white;
+                    box-shadow: inset 0 5px 10px 0 rgba($black,0.1);
+                    border-radius: 0 0 5px 5px;
+                    background: darken($blue-grey,5%);
+                    .left {
+                         width: 70%;
+                         .wrapper {
+                              display: inline-block;
+                              float: left;
+                              width: 50%;
+                         }
+                    }
+                    &.unlodged-content {
+                         z-index: 101;
+                    }
+                    .icon {
+                         display: inline-block;
+                         width: 2.15em;
+                         height: 2.85em;
+                         margin: 0 0.75em 0 0;
+                         float: left;
+                    }
+                    .report-title, p {
+                         width: 80%;
+                         display: inline-block;
+                         margin: 0;
+                         float: left;
+                    }
+                    .report-title {
+                         color: $black;
+                         text-transform: uppercase;
+                         font-size: 1.2rem;
+                         font-weight: bold;
+                         font-family: $Montserrat;
+                    }
+                    p {
+                         font-size: 0.875rem;
+                    }
+                    .main-cta {
+                         float: right;
+                         padding: 0.5em 0.75em;
+                         &.secondary {
+                              background: none;
+                              margin-right: 1em;
+                              &:hover, &:active, &:focus {
+                                   background: $blue;
+                              }
+                         }
+                    }
+                    .edit {
+                         margin: 0.75em 0 0 0;
+                    }
+               }
+          }
+     }
+}
+
+#report-details {
+     &.alpha-reports-V1 {
+          ul.report-list {
+               &.report-list-view {
+                    li {
+                         padding: 0;
+                         line-height: 0;
+                         .wrapper {
+                              margin-left: 2.5%;
+                              width: 97.5%;
+                         }
+                         &.lodged-report {
+                              .main-info {
+                                   width: 76.5%;
+                                   background: $blue-grey;
+                              }
+                              .cta-row {
+                                   background: darken($blue-grey,10%);
+                                   text-align: center;
+                                   display: flex;
+                                   align-items: center;
+                                   justify-content: center;
+                                   p {
+                                        color: darken($blue-grey,40%);
+                                        margin: 0 0 0 1em;
+                                   }
+                              }
+                         }
+                         &.active, &.pending, &.alert {
+                              .cta-row {
+                                   a.main-cta.tertiary {
+                                        background: none;
+                                        border: none;
+                                        border-radius: 0;
+                                        padding: 0;
+                                        border-bottom: 1px dashed $white;
+                                        margin: 0 0 0.75em 0;
+                                        font-size: 1rem;
+                                        color: $white;
+                                        &:hover, &:active, &:focus {
+                                             border-bottom: 1px solid $white;
+                                        }
+                                   }
+                              }
+                         }
+                         &.active {
+                              .wrapper {
+                                   .main-info {
+                                        background: lighten($blue,45%);
+                                   }
+                              }
+                              .cta-row {
+                                   background: $blue;
+                                   // background: lighten($blue,50%);
+                              }
+                         }
+                         &.pending {
+                              .wrapper {
+                                   // width: 100%;
+                                   .main-info {
+                                        // margin-bottom: 1em;
+                                        // width: 71%;
+                                        background: lighten($amber,25%);
+                                   }
+                              }
+                              .cta-row {
+                                   background: $amber;
+                                   // background: lighten($amber,20%);
+                                   // border: 10px solid lighten($amber,25%);
+                              }
+                         }
+                         &.alert {
+                              .wrapper {
+                                   .main-info {
+                                        background: lighten($red,35%);
+                                   }
+                              }
+                              .cta-row {
+                                   background: $red;
+                                   // background: lighten($red,32.5%);
+                              }
+                         }
+                         .main-info {
+                              width: 76.5%;
+                              position: relative;
+                              z-index: 10;
+                              margin: 0;
+                              border-radius: 0 5px 5px 0;
+                              padding: 1em 2em 1em 0.5em;
+                         }
+                         .view-report {
+                              // width: 64.95%;
+                              position: relative;
+                              background: none;
+                              box-shadow: none;
+                              float: left;
+                              clear: both;
+                              min-height: auto;
+                              width: 95%;
+                              margin: 0.25em 5% 0 5%;
+                              border-top: 2px dashed rgba($white, 0.2);
+                              padding: 1em 0 1em 1em;
+                              .main-cta {
+                                   float: right;
+                                   border-color: $white;
+                                   background: $white;
+                                   color: $blue;
+                                   font-size: 0.875rem;
+                              }
+                         }
+                         .charts-container {
+                              width: 33%;
+                         }
+                         .cta-row {
+                              width: 25%;
+                              // background: $white;
+                              display: inline-block;
+                              position: absolute;
+                              top: 0;
+                              right: 0;
+                              bottom: 0;
+                              padding: 1em;
+                              z-index: 1;
+                              float: right;
+                              border-radius: 0 5px 5px 0;
+                              // border: 10px solid lighten($blue,45%);
+                              a {
+                                   float: right;
+                                   margin: 0 0 0.75em 0;
+                                   clear: both;
+                                   &:last-of-type {
+                                        margin: 0;
+                                   }
+                                   &.main-cta {
+                                        font-size: 0.875rem;
+                                        padding: 0.25em 0.75em;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+#side-panel {
+     #report-details {
+          &.alpha-reports-V1 {
+               ul.report-list {
+                    &.report-list-view {
+                         width: 97%;
+                         li {
+                              .main-info {
+                                   width: 95%;
+                              }
+                              .cta-row {
+                                   display: none;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+
+}

@@ -1,0 +1,588 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.user-chart {
+     svg {
+          overflow: visible !important;
+     }
+}
+
+.dashboard-chart {
+     width: 240px;
+     height: 240px;
+     margin: 0 auto;
+     position: relative;
+     display: inline-block;
+     &.chart-one, &.chart-two, &.chart-three, &.chart-four, &.chart-five, &.chart-six {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation-delay: 1s;
+                         animation-delay: 1s;
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         -webkit-animation: offset 3s ease-in-out forwards;
+                         animation: offset 3s ease-in-out forwards;
+                         -webkit-animation-delay: 1s;
+                         animation-delay: 1s;
+                    }
+               }
+          }
+          svg {
+               width: 100%;
+               height: 100%;
+               .circle-background, .circle-foreground {
+                    r: 111.5px;
+                    cx: 50%;
+                    cy: 50%;
+                    fill: none;
+                    stroke: darken($blue-grey,5%);
+                    // stroke: rgba($black,0.2);
+                    stroke-width: 15px;
+               }
+               .circle-foreground {
+                    stroke-linecap: round;
+                    -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+                    -webkit-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+               }
+          }
+          figcaption {
+               display: inline-block;
+               width: 100%;
+               height: 4rem;
+               overflow: hidden;
+               text-align: center;
+               color: $main-colour;
+               position: absolute;
+               top: calc(50% - 2.75rem);
+               left: 0;
+               font-size: 0;
+               &:after {
+                    white-space: pre;
+                    font-size: 5.5rem;
+                    line-height: 4rem;
+               }
+          }
+          .chart-text {
+               position: absolute;
+               display: inline-block;
+               top: calc(50% - -1.75rem);
+               left: 0;
+               width: 100%;
+               text-transform: uppercase;
+               letter-spacing: 0.15em;
+               font-size: 0.75rem;
+               line-height: 1;
+               text-align: center;
+               font-weight: bold;
+               color: rgba($main-colour,0.4);
+               strong {
+                    color: $black;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes offset {
+     100% {
+          stroke-dashoffset: 0;
+     }
+}
+@keyframes offset {
+     100% {
+          stroke-dashoffset: 0;
+     }
+}
+
+/////////////////////////// MAIN CHART ONE - START ///////////////////////////
+.dashboard-chart {
+     &.chart-one {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: chart-one-label 3s steps(91) forwards;
+                         animation: chart-one-label 3s steps(91) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke: $green;
+                    stroke-dasharray: 630px 697px;
+                    stroke-dashoffset: 630px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes chart-one-label {
+     100% {
+          -webkit-transform: translateY(-364rem);
+          transform: translateY(-364rem);
+     }
+}
+
+@keyframes chart-one-label {
+     100% {
+          -webkit-transform: translateY(-364rem);
+          transform: translateY(-364rem);
+     }
+}
+/////////////////////////// MAIN CHART ONE - END ///////////////////////////
+
+/////////////////////////// MAIN CHART TWO - START ///////////////////////////
+.dashboard-chart {
+     &.chart-two {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: chart-two-label 3s steps(94) forwards;
+                         animation: chart-two-label 3s steps(94) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke: $green;
+                    stroke-dasharray: 650px 697px;
+                    stroke-dashoffset: 650px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes chart-two-label {
+     100% {
+          -webkit-transform: translateY(-376rem);
+          transform: translateY(-376rem);
+     }
+}
+
+@keyframes chart-two-label {
+     100% {
+          -webkit-transform: translateY(-376rem);
+          transform: translateY(-376rem);
+     }
+}
+/////////////////////////// MAIN CHART TWO - END ///////////////////////////
+
+/////////////////////////// MAIN CHART THREE - START ///////////////////////////
+.dashboard-chart {
+     &.chart-three {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: chart-three-label 3s steps(25) forwards;
+                         animation: chart-three-label 3s steps(25) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke: $green;
+                    stroke-dasharray: 360px 697px;
+                    stroke-dashoffset: 360px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "0\a 1\a 2\a 3\a 4\a 5\a 6\a 7\a 8\a 9\a 10\a 11\a 12\a 13\a 14\a 15\a 16\a 17\a 18\a 19\a 20\a 21\a 22\a 23\a 24\a 25\a";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes chart-three-label {
+     100% {
+          -webkit-transform: translateY(-100rem);
+          transform: translateY(-100rem);
+     }
+}
+
+@keyframes chart-three-label {
+     100% {
+          -webkit-transform: translateY(-100rem);
+          transform: translateY(-100rem);
+     }
+}
+/////////////////////////// MAIN CHART THREE - END ///////////////////////////
+
+// ============================ SMALE CHARTS - START ============================ //
+.user-summary {
+     .dashboard-chart {
+          width: 150px;
+          height: 150px;
+          margin-bottom: 1.5em;
+          &.chart-one, &.chart-two, &.chart-three, &.chart-four, &.chart-five, &.chart-six {
+               svg {
+                    .circle-background, .circle-foreground {
+                         r: 66.5px;
+                    }
+               }
+               figcaption {
+                    height: 2rem;
+                    top: calc(50% - 1.5rem);
+                    &:after {
+                         font-size: 2.75rem;
+                         line-height: 2rem;
+                    }
+               }
+               .chart-text {
+                    top: calc(50% - -1rem);
+               }
+          }
+     }
+}
+
+.user-summary {
+     .dashboard-chart {
+          &.chart-one, &.chart-two, &.chart-three, &.chart-four, &.chart-five, &.chart-six {
+               figcaption {
+                    &:after {
+                         display: inline-block;
+                         content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+                         white-space: pre;
+                    }
+               }
+          }
+          &.chart-one {
+               &.animate {
+                    figcaption {
+                         &:after {
+                              -webkit-animation: chart-small-one-label 3s steps(65) forwards;
+                              animation: chart-small-one-label 3s steps(65) forwards;
+                         }
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         stroke: $amber;
+                         stroke-dasharray: 250px 415px;
+                         stroke-dashoffset: 250px;
+                    }
+               }
+          }
+          &.chart-two {
+               &.animate {
+                    figcaption {
+                         &:after {
+                              -webkit-animation: chart-small-two-label 3s steps(75) forwards;
+                              animation: chart-small-two-label 3s steps(75) forwards;
+                         }
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         stroke: $blue;
+                         stroke-dasharray: 320px 415px;
+                         stroke-dashoffset: 320px;
+                    }
+               }
+          }
+          &.chart-three {
+               &.animate {
+                    figcaption {
+                         &:after {
+                              -webkit-animation: chart-small-three-label 3s steps(80) forwards;
+                              animation: chart-small-three-label 3s steps(80) forwards;
+                         }
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         stroke: $blue;
+                         stroke-dasharray: 340px 415px;
+                         stroke-dashoffset: 340px;
+                    }
+               }
+          }
+          &.chart-four {
+               &.animate {
+                    figcaption {
+                         &:after {
+                              -webkit-animation: chart-small-four-label 3s steps(51) forwards;
+                              animation: chart-small-four-label 3s steps(51) forwards;
+                         }
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         stroke: $amber;
+                         stroke-dasharray: 250px 415px;
+                         stroke-dashoffset: 250px;
+                    }
+               }
+          }
+          &.chart-five {
+               &.animate {
+                    figcaption {
+                         &:after {
+                              -webkit-animation: chart-small-five-label 3s steps(45) forwards;
+                              animation: chart-small-five-label 3s steps(45) forwards;
+                         }
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         stroke: $red;
+                         stroke-dasharray: 175px 415px;
+                         stroke-dashoffset: 175px;
+                    }
+               }
+          }
+          &.chart-six {
+               &.animate {
+                    figcaption {
+                         &:after {
+                              -webkit-animation: chart-small-six-label 3s steps(57) forwards;
+                              animation: chart-small-six-label 3s steps(57) forwards;
+                         }
+                    }
+               }
+               svg {
+                    .circle-foreground {
+                         stroke: $amber;
+                         stroke-dasharray: 225px 415px;
+                         stroke-dashoffset: 225px;
+                    }
+               }
+          }
+     }
+}
+
+// One
+@-webkit-keyframes chart-small-one-label {
+     100% { -webkit-transform: translateY(-130rem); transform: translateY(-130rem); }
+}
+
+@keyframes chart-small-one-label {
+     100% { -webkit-transform: translateY(-130rem); transform: translateY(-130rem); }
+}
+
+// Two
+@-webkit-keyframes chart-small-two-label {
+     100% { -webkit-transform: translateY(-150rem); transform: translateY(-150rem); }
+}
+
+@keyframes chart-small-two-label {
+     100% { -webkit-transform: translateY(-150rem); transform: translateY(-150rem); }
+}
+
+// Three
+@-webkit-keyframes chart-small-three-label {
+     100% { -webkit-transform: translateY(-160rem); transform: translateY(-160rem); }
+}
+
+@keyframes chart-small-three-label {
+     100% { -webkit-transform: translateY(-160rem); transform: translateY(-160rem); }
+}
+
+// Four
+@-webkit-keyframes chart-small-four-label {
+     100% { -webkit-transform: translateY(-102rem); transform: translateY(-102rem); }
+}
+
+@keyframes chart-small-four-label {
+     100% { -webkit-transform: translateY(-102rem); transform: translateY(-102rem); }
+}
+
+// Five
+@-webkit-keyframes chart-small-five-label {
+     100% { -webkit-transform: translateY(-90rem); transform: translateY(-90rem); }
+}
+
+@keyframes chart-small-five-label {
+     100% { -webkit-transform: translateY(-90rem); transform: translateY(-90rem); }
+}
+
+// Six
+@-webkit-keyframes chart-small-six-label {
+     100% { -webkit-transform: translateY(-114rem); transform: translateY(-114rem); }
+}
+
+@keyframes chart-small-six-label {
+     100% { -webkit-transform: translateY(-114rem); transform: translateY(-114rem); }
+}
+
+// ============================ MAIN CHART ONE - END ============================ //
+
+// ============================ BAR CHART - START ============================ //
+.charts-container {
+     display: inline-block;
+     width: 100%;
+     line-height: 1;
+     margin: 0;
+     position: relative;
+     padding-bottom: 2.5em;
+     .charts, .chart-instruction {
+          @include flexbox;
+          @include justify-content(center);
+          @include flex-wrap(wrap);
+          .chart, .chart-title {
+               @include flexbox;
+               width: 18%;
+               margin-right: 2.5%;
+               background: $white;
+               min-height: 11.25em;
+               position: relative;
+               z-index: 1;
+               @include standard-transition;
+               .icon {
+                    display: inline-block;
+                    width: 100%;
+                    position: absolute;
+                    top: 0.75em;
+                    height: 1.25em;
+               }
+               &:last-of-type {
+                    margin-right: 0;
+               }
+               &:hover, &:active, &:focus {
+                    z-index: 10;
+                    box-shadow: 0px 0px 10px 0px rgba($black,0.2);
+                    transform:scaleY(1.05);
+               }
+               .percentage {
+                    position: absolute;
+                    bottom: 0.5em !important;
+                    // left: 26%;
+                    color: $white;
+                    font-family: $Montserrat;
+                    width: 100%;
+                    text-align: center;
+                    display: inline-block;
+               }
+          }
+          .chart {
+               .percentage {
+                    font-size: 0.875rem;
+               }
+          }
+          .chart-title {
+               @include flex-direction(column);
+               min-height: auto;
+               text-align: center;
+               background: none;
+               margin-top: 0.75em;
+               color: $black;
+               font-size: 0.75rem;
+               text-transform: uppercase;
+               line-height: 1;
+               font-weight: bold;
+               font-family: $Montserrat;
+               padding: 0;
+               &:hover, &:active, &:focus {
+                    box-shadow: none;
+                    transform:scaleY(1);
+               }
+          }
+     }
+     .label {
+          position: absolute;
+          bottom: 0.25em;
+          text-align: center;
+          border-left: 2px solid darken($blue-grey,15%);
+          border-right: 2px solid darken($blue-grey,15%);
+          color: darken($blue-grey,30%);
+          &.one {
+               left: 0;
+               right: 61%;
+          }
+          &.two {
+               left: 40%;
+               right: 0;
+          }
+          div {
+               background: $white;
+               display: inline-block;
+               padding: 0 0.5em;
+               position: relative;
+               z-index: 10;
+          }
+          .border {
+               display: inline-block;
+               width: 100%;
+               height: 2px;
+               background: darken($blue-grey,15%);
+               position: absolute;
+               top: 0.45em;
+               left: 0;
+               right: 0;
+               z-index: 1;
+          }
+     }
+}
+
+
+// CHART COLOURS - START
+.charts-container {
+     .charts {
+          .chart {
+               &.one {
+                    border-top: 5px solid darken($blue,15%);
+                    @include background-image(linear-gradient(bottom, darken($blue,15%) 32%, darken($blue-grey,7.5%) 32%));
+                    // .icon {
+                    //      background: url(#{$image-path}/icons/chart/gift-blue.svg) no-repeat 50% 50%;
+                    //      background-size: contain;
+                    // }
+               }
+               &.two {
+                    border-top: 5px solid darken($blue,15%);
+                    @include background-image(linear-gradient(bottom, darken($blue,15%) 55%, darken($blue-grey,7.5%) 55%));
+                    // .icon {
+                    //      background: url(#{$image-path}/icons/chart/deputy-blue.svg) no-repeat 50% 50%;
+                    //      background-size: contain;
+                    // }
+               }
+               &.three {
+                    border-top: 5px solid darken($blue,15%);
+                    @include background-image(linear-gradient(bottom, darken($blue,15%) 25%, darken($blue-grey,7.5%) 25%));
+                    // .icon {
+                    //      background: url(#{$image-path}/icons/chart/income-blue.svg) no-repeat 50% 50%;
+                    //      background-size: contain;
+                    // }
+               }
+               &.four {
+                    border-top: 5px solid darken($blue,15%);
+                    @include background-image(linear-gradient(bottom, darken($blue,15%) 75%, darken($blue-grey,7.5%) 75%));
+                    // .icon {
+                    //      background: url(#{$image-path}/icons/chart/expenses-blue.svg) no-repeat 50% 50%;
+                    //      background-size: contain;
+                    // }
+               }
+               &.five {
+                    border-top: 5px solid darken($blue,15%);
+                    @include background-image(linear-gradient(bottom, darken($blue,15%) 20%, darken($blue-grey,7.5%) 20%));
+                    // .icon {
+                    //      background: url(#{$image-path}/icons/chart/care-blue.svg) no-repeat 50% 50%;
+                    //      background-size: contain;
+                    // }
+               }
+          }
+     }
+}
+// CHART COLOURS - END
+// ============================ BAR CHART - END ============================ //

@@ -6,12 +6,13 @@
 // =====================================  Dropzone - START ===================================== //
 
 #dropzone {
-     background: $white-off;
+     background: $black;
      display: inline-block;
      border: 2px dashed $black;
      width: 100%;
      padding: 3em 5%;
      margin: 0 0 1em 0;
+     color: blue;
      text-align: center;
      form {
           margin: 0;

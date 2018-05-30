@@ -6,6 +6,7 @@ $(".edit-case-health").on("click", function (e) {
 $(".edit-case-pfa").on("click", function (e) {
      $.cookie("order-type", 'Property and finance', {path:'/'});
 });
+
 ////////////////////////////////////// COLLECT COOKIES - THE ORDER - START //////////////////////////////////////
 $("#create-case-button").on("click", function (e) {
 
@@ -37,9 +38,40 @@ $("#create-case-button").on("click", function (e) {
 });
 ////////////////////////////////////// COLLECT COOKIES - THE ORDER - END //////////////////////////////////////
 
+////////////////////////////////////// CLEARS COOKIES - THE ORDER - START //////////////////////////////////////
+$(".create-case").on("click", function (e) {
+
+     $.cookie("create-case-journey", true, {path:'/'});
+
+     // Cookies for side bar - THE ORDER
+     $.cookie("order-type", '', {path:'/'});
+     $.cookie("order-court-ref", '', {path:'/'});
+     $.cookie("order-date-day", '', {path:'/'});
+     $.cookie("order-date-month", '', {path:'/'});
+     $.cookie("order-date-year", '', {path:'/'});
+     $.cookie("order-deputy-type", '', {path:'/'});
+     $.cookie("order-issue-day", '', {path:'/'});
+     $.cookie("order-issue-month", '', {path:'/'});
+     $.cookie("order-issue-year", '', {path:'/'});
+     $.cookie("order-received-day", '', {path:'/'});
+     $.cookie("order-received-month", '', {path:'/'});
+     $.cookie("order-received-year", '', {path:'/'});
+     $.cookie("order-status", '', {path:'/'});
+     $.cookie("order-status-day", '', {path:'/'});
+     $.cookie("order-status-month", '', {path:'/'});
+     $.cookie("order-status-year", '', {path:'/'});
+     $.cookie("order-title", '', {path:'/'});
+
+     // Cookies for side bar - DEPUTY/DEPUTIES
+     $.cookie("deputies-appointed", '', {path:'/'});
+     // $.cookie("deputies-jointly", $("input[name=deputies-jointly]:checked").val(), {path:'/'});
+
+});
+////////////////////////////////////// CLEARS COOKIES - THE ORDER - END //////////////////////////////////////
+
 ////////////////////////////////////// POPULATE COOKIES - THE ORDER - START //////////////////////////////////////
 $('.file-location-info').hide();
-$('.bond-info').hide();
+// $('.bond-info').hide();
 $('.dispense').hide();
 
 if (window.location.href.indexOf("EditCase") != -1) {
@@ -53,7 +85,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#order-type-property').parent().removeClass('checked');
           $('#order-type-property').removeAttr('checked');
           $('.breadcrumb').html(`
-               <a href="../index.html">My tasks</a>
+               <a href="../index.html">Dashboard</a>
                <div class="separator"> &gt; </div>
                <a href="../4-client-page/4a-new-client.html">
                     <div class="client-title">Mr</div>
@@ -61,11 +93,19 @@ if (window.location.href.indexOf("EditCase") != -1) {
                     <div class="client-last-name">Brackens</div>
                </a>
                <div class="separator"> &gt; </div>
-               <a href="../4-client-page/4a-new-client.html#HandW">H&W | 19273638</a>
+               <a href="../4-client-page/4a-new-client.html#HandW">H&W | 14820940</a>
                <div class="separator"> &gt; </div>
                <span class="state">Edit order</span>
           `);
+
+          $('#order-court-ref').val('14820940');
           // $('#bond-details-section').hide();
+
+          // Modal info on edit Case
+          $('#edit-case-modal h2').text('H&W | 14820940');
+
+          // CTA on the edit page url
+          $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html#HandW');
      }
      if ($.cookie('order-type') === 'Property and finance' ) {
           $('#order-type-property').parent().addClass('checked');
@@ -73,7 +113,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#order-type-welfare').parent().removeClass('checked');
           $('#order-type-welfare').removeAttr('checked');
           $('.breadcrumb').html(`
-               <a href="../index.html">My tasks</a>
+               <a href="../index.html">Dashboard</a>
                <div class="separator"> &gt; </div>
                <a href="../4-client-page/4a-new-client.html">
                     <div class="client-title">Mr</div>
@@ -85,7 +125,15 @@ if (window.location.href.indexOf("EditCase") != -1) {
                <div class="separator"> &gt; </div>
                <span class="state">Edit order</span>
           `);
+
+          $('#order-court-ref').val('14820940');
           // $('#bond-details-section').show();
+
+          // Modal info on edit Case
+          $('#edit-case-modal h2').text('PFA | 14820940');
+
+          // CTA on the edit page url
+          $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html#PFA');
      }
 
      // Court reference
@@ -93,9 +141,10 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#order-court-ref').val($.cookie("order-court-ref"));
      } else if ($.cookie("client-casarec")) {
           $("#order-court-ref").val($.cookie("client-casarec"));
-     } else {
-          $('#order-court-ref').val('19273638');
      }
+     // else {
+     //      $('#order-court-ref').val('14820940');
+     // }
 
      // Order date
      if ($.cookie("order-day")) {
@@ -400,7 +449,7 @@ $('.why-edit-bond').hide();
 
 if ($.cookie("security-bond")) { $(".security-bond-answer").text($.cookie("security-bond")); }
 if ($.cookie('security-bond') === 'Yes' ) {
-     $('.bond-info').show();
+     // $('.bond-info').show();
      $('#edit-bond').show();
      $('.bond-answer-hidden').show();
      $('#order-security-bond-yes').attr('checked', 'checked').parent().addClass('checked');
@@ -412,15 +461,15 @@ if ($.cookie('security-bond') === 'Yes' ) {
      $('.security-bond').hide();
      $('#dispense-bond').hide();
 
-     $('.the-bond-info #section-header .breadcrumb').html('<a href="../index.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html">Client summary</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
-     $('.the-bond-info #section-header h1').text('Edit bond');
+     $('.the-bond-info #section-header .breadcrumb').html('<a href="../index.html">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
+     $('.the-bond-info #section-header h1').text('The bond');
 
      $('.case-info h2 .add-bond, .actions-nav .add-bond').hide();
      $('.case-info h2 .edit-bond, .actions-nav .edit-bond').show();
      $('.why-edit-bond').hide();
 }
 if ($.cookie('security-bond') === 'edit' ) {
-     $('.bond-info').show();
+     // $('.bond-info').show();
      $('#edit-bond').show();
      $('.bond-answer-hidden').show();
      $('#order-security-bond-yes').attr('checked', 'checked').parent().addClass('checked');
@@ -432,7 +481,7 @@ if ($.cookie('security-bond') === 'edit' ) {
      $('.security-bond').hide();
      $('#dispense-bond').show();
 
-     $('.the-bond-info #section-header .breadcrumb').html('<a href="../index.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html">Client summary</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
+     $('.the-bond-info #section-header .breadcrumb').html('<a href="../index.html">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
      $('.the-bond-info #section-header h1').text('Edit the bond');
      $('#bond-details-section .section-title').text('Edit the bond');
 
@@ -440,8 +489,8 @@ if ($.cookie('security-bond') === 'edit' ) {
      $('.case-info h2 .edit-bond, .actions-nav .edit-bond').show();
      $('.why-edit-bond').show();
 }
-if ($.cookie('security-bond') === 'No' ) {
-     $('.bond-info').hide();
+if ($.cookie('security-bond') === 'No') {
+     // $('.bond-info').hide();
      $('#edit-bond').hide();
      $('.bond-answer-hidden').hide();
      $('#order-security-bond-no').attr('checked', 'checked').parent().addClass('checked');
@@ -455,9 +504,11 @@ if ($.cookie('security-bond') === 'No' ) {
      $('.order-info h2 .add-bond').show();
      $('.order-info h2 .edit-bond').hide();
      $('.why-edit-bond').hide();
+
+     $('#flexbox-container .bond-info').hide();
 }
 if ($.cookie('security-bond') === 'undefined' ) {
-     $('.bond-info').hide();
+     // $('.bond-info').hide();
      $(".security-bond-answer").text('None selected');
      $('#edit-bond').hide();
      $('.bond-dispense').hide();
@@ -502,9 +553,9 @@ if ($.cookie("bond-dispensed-reason") == 'Keying error') {
 }
 
 if ($.cookie("bond-amount")) {
-     $(".bond-amount-answer").text($.cookie("bond-amount"));
+     $(".bond-amount-answer").text('£ ' + $.cookie("bond-amount"));
      $("#bond-amount").val($.cookie("bond-amount"));
-     $(".bond-info").show();
+     // $(".bond-info").show();
 }
 
 if ($.cookie("bond-company") == 'Other') {
@@ -538,18 +589,24 @@ if ($.cookie("bond-renewal-year")) {
      $("#bond-renewal-year").val($.cookie("bond-renewal-year"));
 }
 
+$('.add-new-bond').hide();
+$('.edit-bond').hide();
+
 if ($.cookie('security-bond') === 'dispense' ) {
      $('#bond-dispensed').show();
      $('#bond-dispensed').parent().css('background', '#fc2b27');
 
      $('#create-bond, #edit-bond').hide();
 
-     $('.bond-info').hide();
+     // $('.bond-info').hide();
 
      $('.bond-answer-hidden').hide();
      $('.dispense-bond-info').show();
      $('.security-bond').show();
      $('.radio.dispense-bond-option').show();
+
+     // Changes the client header
+     $('.bond-amount-answer').text('dispensed');
 
      // $('#case-security-bond-dispense').parent().addClass('checked');
      // $('#case-security-bond-dispense').attr('checked', 'checked');
@@ -571,11 +628,31 @@ if ($.cookie('security-bond') === 'dispense' ) {
      $('.the-bond-details .optional').hide();
      $('.security-bond').hide();
 
-     $('.add-bond-link, .edit-bond').hide();
-     $('.case-info h2 .add-bond, .actions-nav .add-bond').hide();
+     $('.edit-bond, .add-bond').hide();
+     $('.add-new-bond').show();
+     // $('.case-info h2 .add-bond, .actions-nav .add-bond').hide();
      $('.case-info h2 .edit-bond, .actions-nav .edit-bond').hide();
      $('.why-edit-bond').hide();
+
 }
+
+$(".add-new-bond").on("click", function (e) {
+     $.cookie("bond-amount", '', {path:'/'});
+     $.cookie("bond-value", '', {path:'/'});
+     $.cookie("bond-company", '', {path:'/'});
+     $.cookie("bond-company-other", '', {path:'/'});
+     $.cookie("bond-ref-number", '', {path:'/'});
+     $.cookie("bond-renewal-day", '', {path:'/'});
+     $.cookie("bond-renewal-month", '', {path:'/'});
+     $.cookie("bond-renewal-year", '', {path:'/'});
+     $.cookie("bond-dispensed-day", '', {path:'/'});
+     $.cookie("bond-dispensed-month", '', {path:'/'});
+     $.cookie("bond-dispensed-year", '', {path:'/'});
+     $.cookie("bond-dispensed-reason", '', {path:'/'});
+     $.cookie("security-bond", 'Yes', {path:'/'});
+
+});
+
 
 // Populate side bar - DISPENSE THE BOND
 // $('.dispense-bond-info').hide();

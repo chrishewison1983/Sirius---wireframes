@@ -1,0 +1,85 @@
+<!-- // MODAL - START // -->
+<div id="complete-task" style="display:none;">
+	<h1>Complete task</h1>
+	<h2 class="action-task-name">Task title</h2>
+	<p>Are you sure you wish to mark the <strong class="action-task-name"></strong> as complete?</p>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-complete-task">Complete the task</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
+
+<!-- // MODAL - START // -->
+<div id="error-task" style="display:none;">
+	<h1>Complete task</h1>
+	<h2 class="action-task-name">Task title</h2>
+	<p>Are you sure you wish to mark the <strong class="action-task-name"></strong> as complete?</p>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-error-task">Complete the task</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
+
+<!-- // MODAL - START // -->
+<div id="re-assign-task" style="display:none;">
+	<h1>Reassign task</h1>
+	<h2 class="action-task-name">Task title</h2>
+	<form>
+		<!-- // FORM ITEM - 1a - START // -->
+		<div class="form-group task-assign-to">
+			<legend>Assign to <span class="required">*</span></legend>
+			<!-- <label for="assign-to-myself" class="radio">
+				<input id="assign-to-myself" type="radio" name="task-assign-to" value="Myself">
+				Myself
+			</label> -->
+			<label for="assign-to-myself" class="radio">
+				<input id="assign-to-myself" type="radio" name="task-assign-to" value="Myself">
+				Myself
+			</label>
+			<label for="assign-to-user" class="radio">
+				<input id="assign-to-user" type="radio" name="task-assign-to" value="Another user">
+				Another user
+			</label>
+			<label for="assign-to-my-team" class="radio">
+				<input id="assign-to-my-team" type="radio" name="task-assign-to" value="My team">
+				My team
+			</label>
+			<label for="assign-to-team" class="radio">
+				<input id="assign-to-team" type="radio" name="task-assign-to" value="Other team">
+				Other team
+			</label>
+		</div>
+		<!-- // FORM ITEM - 1a - END // -->
+
+		<!-- // FORM ITEM - 1b - START // -->
+		<div class="form-group answer-task-user">
+			<label for="task-user">Search for user</label>
+			<input id="task-user" name="task-user" type="text" value="">
+		</div>
+		<!-- // FORM ITEM - 1b - END // -->
+
+		<!-- // FORM ITEM - 1c - START // -->
+		<div class="form-group answer-task-team">
+			<label for="task-team">Select team</label>
+			<select id="task-team" class="full-width">
+				<option value="">-- Select --</option>
+				<option value="1">Attorneyship Investigation Team</option>
+				<option value="2">Complaints Team</option>
+				<option value="3">Dispatch Team</option>
+				<option value="4">EPA Team</option>
+				<option value="5">File Creation Team</option>
+				<option value="6">Filing Team</option>
+				<option value="8">Registration Team</option>
+				<option value="7">Safeguarding Team</option>
+			</select>
+		</div>
+		<!-- // FORM ITEM - 1c - END // -->
+	</form>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-re-assign-task">Reassign the task</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->

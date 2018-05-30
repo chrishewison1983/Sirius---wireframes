@@ -1,0 +1,283 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.icon, .action {
+     &.fee-payer, &.main-contact, &.welfare, &.welfare-property, &.property, &.chosen-location, &.location, &.date,
+     &.template, &.drafts, &.contacts, &.saved, &.welsh, &.violent, &.deputy, &.documents, &.edit, &.re-assign, &.complete,
+     &.view, &.unlink, &.status, &.pdf, &.accommodation, &.primary, &.tasks, &.company {
+          position: relative;
+          z-index: 11;
+          display: inline-block;
+          width: 1.5em;
+          height: 1.5em;
+          float: left;
+          border-radius: 50%;
+          @include standard-transition;
+          &:hover, &:active, &:focus {
+               cursor: default;
+               transform: scale(1.1);
+               p {
+                    display: inline-block;
+               }
+          }
+          p {
+               position: absolute;
+               bottom: -4.75em;
+               left: 50%;
+               width: 12em;
+               margin-left: -6em;
+               background: rgba($black,0.6);
+               display: none;
+               font-family: $Montserrat;
+               font-weight: bold;
+               border: none;
+               text-align: center;
+               border-radius: $global-border-radius;
+               padding: 0.5em;
+               font-size: 0.775rem;
+               color: $white;
+               z-index: 10;
+               &:before {
+                    content: " ";
+                    position: absolute;
+                    bottom: 100%;  /* At the top of the tooltip */
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent rgba($black,0.6) transparent;
+               }
+          }
+     }
+     &.pdf {
+          border-radius: 0;
+          background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 50% 50%;
+          background-size: contain;
+          &.pfa {
+               background: url(#{$image-path}/icons/pdf-pfa-blue.svg) no-repeat 50% 50%;
+               background-size: contain;
+          }
+          &.handw {
+               background: url(#{$image-path}/icons/pdf-hw-blue.svg) no-repeat 50% 50%;
+               background-size: contain;
+          }
+     }
+     &.unlink {
+          background: url(#{$image-path}/icons/unlink-main-colour.svg) no-repeat 50% 50% $blue-grey;
+          background-size: 0.95em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/unlink-white.svg) no-repeat 50% 50% $blue;
+               background-size: 0.95em;
+          }
+     }
+     &.edit {
+          background: url(#{$image-path}/icons/edit-main-colour.svg) no-repeat 50% 50% $blue-grey;
+          background-size: 0.95em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/edit-white.svg) no-repeat 50% 50% $blue;
+               background-size: 0.95em;
+          }
+     }
+     &.view {
+          background: url(#{$image-path}/icons/eye-open-main-colour.svg) no-repeat 50% 50% $blue-grey;
+          background-size: 0.95em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/eye-open-white.svg) no-repeat 50% 50% $blue;
+               background-size: 0.95em;
+          }
+     }
+     &.re-assign {
+          background: url(#{$image-path}/icons/user-main-colour.svg) no-repeat 50% 50% $blue-grey;
+          background-size: 0.95em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/user-white.svg) no-repeat 50% 50% $blue;
+               background-size: 0.95em;
+          }
+     }
+     &.complete {
+          background: url(#{$image-path}/icons/tick-no-circle-main-colour.svg) no-repeat 50% 50% $blue-grey;
+          background-size: 1.85em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/tick-no-circle.svg) no-repeat 50% 50% $green;
+               background-size: 1.85em;
+          }
+     }
+     &.documents {
+          background: url(#{$image-path}/icons/documents-white.svg) no-repeat 50% 50% $blue;
+          background-size: 0.5em;
+     }
+     &.deputy {
+          background: url(#{$image-path}/icons/user-white.svg) no-repeat 50% 50% $blue;
+          background-size: 0.5em;
+     }
+     &.violent {
+          background: url(#{$image-path}/icons/violent-white.svg) no-repeat 50% 50% $red;
+          background-size: 0.5em;
+     }
+     &.welsh {
+          background: url(#{$image-path}/icons/welsh-white.svg) no-repeat 50% 50% $main-colour;
+          background-size: 0.5em;
+     }
+     &.fee-payer {
+          background: url(#{$image-path}/icons/fee-payer-white.svg) no-repeat 50% 50% $pink;
+          background-size: 0.65em;
+     }
+     &.company {
+          background: url(#{$image-path}/icons/company-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1em;
+     }
+     &.main-contact {
+          background: url(#{$image-path}/icons/main-contact.svg) no-repeat 50% 50%;
+          background-size: cover;
+     }
+     &.welfare {
+          background: url(#{$image-path}/icons/HandW.svg) no-repeat 50% 50%;
+          background-size: cover;
+          &.white {
+               background: url(#{$image-path}/icons/HandW-white.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+          &.blue {
+               background: url(#{$image-path}/icons/HandW-blue.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.welfare-property {
+          background: url(#{$image-path}/icons/HandW-PandA.svg) no-repeat 50% 50%;
+          background-size: cover;
+          border-radius: 0;
+          p {
+               bottom: -6.25em;
+               width: 13em;
+               margin-left: -6.5em;
+          }
+     }
+     &.property {
+          background: url(#{$image-path}/icons/PandA.svg) no-repeat 50% 50%;
+          background-size: cover;
+          &.white {
+               background: url(#{$image-path}/icons/PandA-white.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+          &.blue {
+               background: url(#{$image-path}/icons/PandA-blue.svg) no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.order {
+          background: url(#{$image-path}/icons/client/order-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+     }
+     &.dob {
+          background: url(#{$image-path}/icons/client/dob-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+     }
+     &.accommodation {
+          background: url(#{$image-path}/icons/client/accomodation-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+     }
+     &.medical {
+          background: url(#{$image-path}/icons/client/medical-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.75em;
+     }
+     &.record {
+          background: url(#{$image-path}/icons/client/record-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.5em;
+     }
+     &.status {
+          background: url(#{$image-path}/icons/status-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.5em;
+     }
+     &.chosen-location {
+          background: url(#{$image-path}/icons/location-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1.25em;
+          display: none;
+          border: none !important;
+     }
+     &.template {
+          background: url(#{$image-path}/icons/templates-white.svg) no-repeat 50% 50% $blue;
+          background-size: 0.85em;
+     }
+     &.drafts {
+          background: url(#{$image-path}/icons/drafts-white.svg) no-repeat 50% 50% $blue;
+          background-size: 1em;
+     }
+     &.date {
+          background: url(#{$image-path}/icons/date-grey-blue.svg) no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.saved {
+          background: url(#{$image-path}/icons/saved-grey.svg) no-repeat 50% 50% $blue;
+          background-size: 1em;
+     }
+     &.contacts {
+          background: url(#{$image-path}/icons/contacts-white.svg) no-repeat 50% 50% $blue;
+          background-size: 0.85em;
+     }
+     &.location {
+          background: url(#{$image-path}/icons/location-blue.svg) no-repeat 50% 50%;
+          background-size: 1.25em;
+          border: none !important;
+          float: left;
+          margin-right: 0.5em;
+     }
+     &.primary {
+          background: url(#{$image-path}/icons/primary-white.svg) no-repeat 50% 50%;
+          background-size: cover;
+     }
+     &.tasks {
+          background: url(#{$image-path}/icons/actions/create-task-white.svg) no-repeat 50% 50% $white;
+          background-size: 1.25em;
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+
+}

@@ -1,0 +1,596 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+a.back {
+     &.close-order-docs {
+          background-size: 0.45em;
+          padding: 0 0 0 0.85em;
+          float: right;
+     }
+}
+
+#sub-order-docs {
+     margin: 0.5em 0 0 0;
+     width: 100%;
+     // background: $blue-grey;
+     border: 3px solid $blue-grey;
+     border-radius: $global-border-radius;
+     padding: 7.75em 1em 1em 1em;
+     position: relative;
+     .description-title {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          padding: 0.75em;
+          margin: 0;
+          background: $blue-grey;
+          border-bottom: none;
+          border-radius: 5px 5px 0 0;
+          .icon.documents {
+               margin: 0 0.75em 0 0;
+               position: relative;
+               top: 0;
+               width: 3em;
+               height: 3em;
+               background-size: 1.25em;
+          }
+          .details {
+               width: auto;
+               display: flex;
+               border-top: 1px dashed darken($blue-grey,10%);
+               margin-top: 0.35em;
+               padding-top: 0.35em;
+               span {
+                    margin: 0 2em 0 0;
+                    font-size: 1rem;
+                    width: auto;
+               }
+          }
+     }
+     #documents-viewer, #documents-viewer-filter {
+          background: $white;
+     }
+}
+
+.client-details {
+     #documents-contacts {
+          .section-title {
+               width: 100%;
+          }
+          ul.contact-list {
+               width: 100%;
+               margin: 0;
+               li {
+                    &.correspondent {
+                         width: 100%;
+                         display: inline-block;
+                         // @include flexbox;
+                         float: left;
+                         margin: 0 0 1em 0;
+                         div {
+                              display: inline-block;
+                         }
+                         .wrapper {
+                              // @include flexbox;
+                              // flex-direction: column;
+                              width: 100%;
+                              .contact-name, .company-name {
+                                   display: inline-block;
+                                   float: left;
+                                   clear: both;
+                              }
+                              .contact-name {
+                                   width: 100%;
+                                   a {
+                                        float: right;
+                                        margin: 0 0 0 1.5em;
+                                        font-size: 1rem;
+                                   }
+                              }
+                              .company-name {
+                                   // width: 100%;
+                                   font-size: 1rem;
+                                   margin: 0.25em 0 0 0;
+                                   font-family: $Opensans-Regular;
+                                   color: $text-main-colour;
+                                   div {
+                                        span {
+                                             font-family: $Opensans-Bold;
+                                             margin: 0 2.5em 0 0.5em;
+                                             color: $black;
+                                        }
+                                   }
+
+                              }
+                         }
+                         .contact-info {
+                              strong {
+                                   display: inline-block;
+                                   margin: 0 0 0 0.5em;
+                              }
+                         }
+                         .full-details {
+                              font-size: 1rem;
+                         }
+                    }
+                    &:last-of-type {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+     }
+}
+
+.time-line {
+     display: inline-block;
+     width: 100%;
+     margin: 1em 0;
+     float: left;
+     clear: both;
+     position: relative;
+     padding: 0 0 0 0;
+     margin: 1em 0 0.5em 0;
+     .date {
+          position: relative;
+          z-index: 10;
+          background: $blue-grey;
+          &.left, &.right {
+               display: inline-block;
+               .indicator {
+                    display: inline-block;
+                    font-size: 0.7rem;
+                    line-height: 1.4;
+                    border-radius: $global-border-radius;
+                    background: darken($blue-grey,15%);
+                    color: $white;
+                    padding: 0.35em 0.65em;
+                    clear: both;
+               }
+               p {
+                    margin: 0;
+                    width: auto;
+                    clear: both;
+                    span {
+                         display: inline-block;
+                         width: 0.75em;
+                         height: 0.75em;
+                         border-radius: 50%;
+                         border: 3px solid darken($blue-grey,15%);
+                         background: $blue-grey;
+                         &.start-date-answer, &.end-date-answer {
+                              background: none;
+                              border: none;
+                              border-radius: 0;
+                              width: auto;
+                              height: auto;
+                              float: none;
+                              margin: 0;
+                         }
+                    }
+                    strong {
+                         font-weight: bold;
+                         font-family: $Montserrat;
+                         color: $black;
+                         font-size: 1.2rem;
+                    }
+               }
+          }
+          &.left {
+               float: left;
+               .indicator {
+                    float: left;
+               }
+               p {
+                    span {
+                         float: right;
+                         margin: 0.45em 0 0 0.5em;
+                    }
+               }
+          }
+          &.right {
+               float: right;
+               text-align: right;
+               .indicator {
+                    float: right;
+               }
+               p {
+                    span {
+                         float: left;
+                         margin: 0.45em 0.5em 0 0;
+                    }
+               }
+          }
+     }
+     .border {
+          position: absolute;
+          height: 3px;
+          background: darken($blue-grey,15%);
+          width: 100%;
+          top: 2.175em;
+          left: 0;
+          right: 0;
+          z-index: 1;
+     }
+}
+
+.show-hide-link {
+     display: inline-block;
+     float: left;
+     clear: both;
+     width: 100%;
+}
+
+
+
+// CHART COLOURS - START
+#report-details {
+     ul.report-list {
+          li {
+               &.active {
+                    .chart {
+                         &.section-1 {
+                              &.alert {
+                                   &.one {
+                                        border-top: 5px solid $red;
+                                        @include background-image(linear-gradient(bottom, $red 32%, $white 32%));
+                                        .icon {
+                                             background: url(#{$image-path}/icons/chart/gift-red.svg) no-repeat 50% 50%;
+                                             background-size: contain;
+                                        }
+                                   }
+                                   &.two {
+                                        border-top: 5px solid $red;
+                                        @include background-image(linear-gradient(bottom, $red 55%, $white 55%));
+                                        .icon {
+                                             background: url(#{$image-path}/icons/chart/deputy-red.svg) no-repeat 50% 50%;
+                                             background-size: contain;
+                                        }
+                                   }
+                              }
+                              &.one {
+                                   border-top: 5px solid $blue;
+                                   @include background-image(linear-gradient(bottom, $blue 32%, $white 32%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/gift-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.two {
+                                   border-top: 5px solid $blue;
+                                   @include background-image(linear-gradient(bottom, $blue 55%, $white 55%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/deputy-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.three {
+                                   border-top: 5px solid $blue;
+                                   @include background-image(linear-gradient(bottom, $blue 15%, $white 15%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/income-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.four {
+                                   border-top: 5px solid $blue;
+                                   @include background-image(linear-gradient(bottom, $blue 75%, $white 75%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/expenses-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.five {
+                                   border-top: 5px solid $blue;
+                                   @include background-image(linear-gradient(bottom, $blue 20%, $white 20%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/care-blue.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                    }
+               }
+               &.pending {
+                    .chart {
+                         &.section-1 {
+                              &.alert {
+                                   &.one {
+                                        border-top: 5px solid $red;
+                                        @include background-image(linear-gradient(bottom, $red 32%, $white 32%));
+                                        .icon {
+                                             background: url(#{$image-path}/icons/chart/gift-red.svg) no-repeat 50% 50%;
+                                             background-size: contain;
+                                        }
+                                   }
+                                   &.two {
+                                        border-top: 5px solid $red;
+                                        @include background-image(linear-gradient(bottom, $red 55%, $white 55%));
+                                        .icon {
+                                             background: url(#{$image-path}/icons/chart/deputy-red.svg) no-repeat 50% 50%;
+                                             background-size: contain;
+                                        }
+                                   }
+                              }
+                              &.one {
+                                   border-top: 5px solid $amber;
+                                   @include background-image(linear-gradient(bottom, $amber 32%, $white 32%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/gift-amber.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.two {
+                                   border-top: 5px solid $amber;
+                                   @include background-image(linear-gradient(bottom, $amber 55%, $white 55%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/deputy-amber.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.three {
+                                   border-top: 5px solid $amber;
+                                   @include background-image(linear-gradient(bottom, $amber 15%, $white 15%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/income-amber.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.four {
+                                   border-top: 5px solid $amber;
+                                   @include background-image(linear-gradient(bottom, $amber 75%, $white 75%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/expenses-amber.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.five {
+                                   border-top: 5px solid $amber;
+                                   @include background-image(linear-gradient(bottom, $amber 20%, $white 20%));
+                                   .icon {
+                                        background: url(#{$image-path}/icons/chart/care-amber.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                    }
+               }
+               .section-1 {
+                    &.alert {
+                         &.one {
+                              border-top: 5px solid $red;
+                              @include background-image(linear-gradient(bottom, $red 32%, $white 32%));
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/gift-red.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.two {
+                              border-top: 5px solid $red;
+                              @include background-image(linear-gradient(bottom, $red 55%, $white 55%));
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/deputy-red.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                    }
+                    &.empty.chart {
+                         background: none;
+                         &.one, &.two, &.three, &.four, &.five {
+                              border-top: 5px solid darken($blue-grey,10%) !important;
+                              @include background-image(linear-gradient(bottom, darken($blue-grey,10%) 11%, rgba($white,0.5) 11%));
+                              .percentage {
+                                   color: darken($blue-grey,40%);
+                              }
+                         }
+                         &.one {
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/gift-mid-blue.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.two {
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/deputy-mid-blue.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.three {
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/income-mid-blue.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.four {
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/expenses-mid-blue.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.five {
+                              .icon {
+                                   background: url(#{$image-path}/icons/chart/care-mid-blue.svg) no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                    }
+                    &.one {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 32%, $white 32%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/gift-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.two {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 55%, $white 55%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/deputy-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.three {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 15%, $white 15%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/income-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.four {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 75%, $white 75%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/expenses-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.five {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 20%, $white 20%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/care-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+               }
+               .section-2 {
+                    &.one {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 16%, $white 16%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/gift-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.two {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 35%, $white 35%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/deputy-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.three {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 25%, $white 25%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/income-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.four {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 37.5%, $white 37.5%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/expenses-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.five {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 40%, $white 40%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/care-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+               }
+               .section-3 {
+                    &.one {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 45%, $white 45%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/gift-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.two {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 25%, $white 25%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/deputy-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.three {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 30%, $white 30%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/income-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.four {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 30.5%, $white 30.5%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/expenses-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    &.five {
+                         border-top: 5px solid darken($blue-grey,40%);
+                         @include background-image(linear-gradient(bottom, darken($blue-grey,40%) 42.5%, $white 42.5%));
+                         .icon {
+                              background: url(#{$image-path}/icons/chart/care-mid-blue.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+               }
+          }
+     }
+}
+// CHART COLOURS - END
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

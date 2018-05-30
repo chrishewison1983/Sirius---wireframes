@@ -1,0 +1,324 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+#print-send-modal {
+     &.pdf-container {
+          .document-container {
+               .populated-item {
+                    position: absolute;
+                    background: rgba($blue,0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 1.2;
+                    &.simple-x {
+                         height: 1em;
+                         width: 1em;
+                         div {
+                              font-size: 1rem;
+                         }
+                    }
+                    &.text-container {
+                         justify-content: flex-start;
+                         padding: 0 0 0 0.5em;
+                         left: 12em;
+                         height: 1.95em;
+                    }
+                    &.one {
+                         top: 10.5em;
+                         left: 1.25em;
+                         height: 5em;
+                         width: 27.25em;
+                         div {
+                              font-size: 1.4rem;
+                         }
+                    }
+                    &.two {
+                         top: 38.35em;
+                         left: 35.15em;
+                    }
+                    &.three {
+                         top: 73.75em;
+                         left: 28.675em;
+                    }
+                    &.four {
+                         top: 78.25em;
+                         left: 28.675em;
+                    }
+                    &.five {
+                         top: 94.5em;
+                         left: 12em;
+                    }
+                    &.six {
+                         top: 96.65em;
+                         width: 35.5em;
+                    }
+                    &.seven {
+                         top: 99.75em;
+                         width: 17.75em;
+                         height: 4.65em;
+                         align-items: flex-start;
+                         padding-top: 0.5em;
+                    }
+                    &.eight {
+                         top: 105.65em;
+                         width: 17.75em;
+                    }
+                    &.nine {
+                         top: 108.7em;
+                         width: 35.5em;
+                    }
+                    &.ten {
+                         top: 112.7em;
+                         width: 17.9em;
+                         left: 29.75em;
+                         height: 2.25em;
+                    }
+                    &.eleven {
+                         top: 147em;
+                         left: 4.45em;
+                    }
+                    &.twelve {
+                         top: 158.9em;
+                         left: 4.45em;
+                    }
+                    &.thirteen, &.fourteen, &.fifteen, &.sixteen, &.seventeen {
+                         left: 11.75em;
+                         width: 35.85em;
+                         height: 2.35em;
+                    }
+                    &.thirteen {
+                         top: 165.9em;
+                    }
+                    &.fourteen {
+                         top: 169.45em;
+                         height: 4.65em;
+                         width: 18em;
+                         align-items: flex-start;
+                         padding-top: 0.5em;
+                    }
+                    &.fifteen {
+                         top: 175.25em;
+                         height: 2em;
+                         width: 18em;
+                    }
+                    &.sixteen {
+                         top: 178.4em;
+                         height: 2em;
+                    }
+                    &.seventeen {
+                         top: 181.5em;
+                         height: 2em;
+                    }
+                    &.eighteen {
+                         top: 188.75em;
+                         left: 16.925em;
+                    }
+                    &.nineteen, &.twenty, &.twenty-one, &.twenty-two, &.twenty-three {
+                         left: 11.7em;
+                    }
+                    &.nineteen {
+                         top: 190.95em;
+                         width: 36em;
+                         height: 2em;
+                    }
+                    &.twenty {
+                         top: 194.15em;
+                         width: 36em;
+                         height: 2em;
+                    }
+                    &.twenty-one {
+                         top: 197.35em;
+                         height: 4.65em;
+                         width: 18em;
+                         align-items: flex-start;
+                         padding-top: 0.5em;
+                    }
+                    &.twenty-two {
+                         top: 203.15em;
+                         height: 2em;
+                         width: 18em;
+                    }
+                    &.twenty-three {
+                         top: 206.3em;
+                         height: 2em;
+                         width: 13.5em;
+                    }
+                    &.twenty-four {
+                         top: 206.7em;
+                         left: 34.75em;
+                    }
+                    &.twenty-five {
+                         top: 219.15em;
+                         left: 11.75em;
+                         width: 36em;
+                         height: 3.45em;
+                         align-items: flex-start;
+                         padding-top: 0.5em;
+                    }
+                    &.twenty-six {
+                         top: 223.7em;
+                         left: 11.75em;
+                         width: 13.5em;
+                         height: 2em;
+                    }
+                    &.twenty-seven {
+                         top: 224.2em;
+                         left: 36.15em;
+                    }
+                    &.twenty-eight {
+                         top: 229.85em;
+                         left: 4.4em;
+                    }
+                    &.twenty-nine {
+                         top: 229.45em;
+                         left: 39em;
+                         width: 8.65em;
+                         height: 1.7em;
+                    }
+                    &.thirty {
+                         top: 247.25em;
+                         left: 7.8em;
+                         width: 15.4em;
+                    }
+                    &.thirty-one {
+                         top: 247.25em;
+                         left: 35.15em;
+                         width: 11.85em;
+                    }
+                    &.thirty-two {
+                         top: 259em;
+                         left: 4.15em;
+                         width: 43.55em;
+                         height: 7.35em;
+                         align-items: flex-start;
+                         padding-top: 0.5em;
+                    }
+               }
+          }
+     }
+}
+
+#action-panel {
+     &.pdf-editor {
+          h2.section-title {
+               margin: 0.25em 0 1em 0;
+               div.current-doc-info {
+                    width: 16.75em;
+                    position: relative;
+                    top: 0.15em;
+                    span {
+                         line-height: 1;
+                         div {
+                              // width: 100%;
+                              width: 16.75em;
+                              text-transform: inherit;
+                              white-space: nowrap;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              font-size: 1.4rem;
+                         }
+                    }
+               }
+          }
+          h3.description-title {
+               padding-top: 0;
+          }
+          .accordion-section-content {
+               padding: 1.5em;
+               form {
+                    // select {
+                    //      width: 100%;
+                    // }
+                    hr {
+                         margin: 0 0 1.5em 0;
+                    }
+                    p {
+                         margin: 0em 0 1em 0;
+                    }
+                    input[type="button"] {
+                         // margin: 2em 0 0 0;
+                    }
+                    .sub-section-title {
+                         border-bottom: 3px dashed $blue-grey;
+                         margin: 0 0 1em 0;
+                         padding-bottom: 0.75em;
+                    }
+                    .second-applicant {
+                         margin: 2em 0 0 0;
+                    }
+                    .form-group {
+                         &.no-margin {
+                              margin: 0;
+                         }
+                         &:last-of-type {
+                              margin-bottom: 0;
+                         }
+                    }
+                    .court-app-other-address {
+                         margin: 0 0 0 0;
+                    }
+                    .relationship-married, .relationship-divorced, .relationship-widowed {
+                         margin: 0 0 0 0;
+                    }
+               }
+          }
+     }
+}
+
+h3.description-title {
+     &.court-apps-title {
+          margin-top: 1.5em;
+     }
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

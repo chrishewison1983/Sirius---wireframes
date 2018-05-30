@@ -1,0 +1,2656 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V21/jquery.min.js"></script>
+
+     <!-- <script src="../../../production/js/V21/application.js"></script> -->
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+     <!-- <script type="text/javascript">
+		var connection = new WebSocket('ws://localhost:62183');
+		connection.onmessage = function (e) {
+			location.reload();
+		};
+	</script> -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default deputy-details-page professional"> <!-- SECTION HEADER - START --> <div id="section-header" class="deputy-page professional"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<a href="../index.html" class="logo user-type-link">
+				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
+				<p><span>Dashboard</span></p>
+			</a>
+
+			<div class="preferences">
+				<a href="#" class="user-cta">
+					<div class="wrapper">
+						<span class="nav-icon"></span>
+						<div class="sirius-user-id">Susan Smith</div>
+					</div>
+				</a>
+
+				<ul class="user-settings">
+					<li><a href="#">Help and guidance</a></li>
+					<li class="multiple-options">
+						<span>Theme:</span>
+						<a href="#" class="multiple current">Light</a>
+						<a href="#" class="multiple">Dark</a>
+						<a href="#" class="multiple">Pink</a>
+					</li>
+					<li class="multiple-options">
+						<span>Font size:</span>
+						<a href="#" class="multiple current">Regular</a>
+						<a href="#" class="multiple">Large</a>
+					</li>
+				</ul>
+			</div>
+
+			<a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+				<span class="nav-icon"></span>
+				<p><span>Create client</span></p>
+			</a>
+
+			<a href="../index.html" class="main-cta sign-out">
+				<span class="nav-icon"></span>
+				<p><span>Sign out</span></p>
+			</a>
+
+			<form action="search.html">
+				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="submit">
+			</form>
+
+			<label class="switch">
+				<span>Switch to: <strong>LPA</strong></span>
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+
+		</div>
+	</div>
+
+	<div class="colour-wrapper"></div>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <!-- // DEPUTY DETAILS - START //--> <div class="large-7 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <span>Deputy summary</span> </nav> <h1> <span class="type professional">PRO</span> <a href="#" class="deputy-home-button"> <div class="deputy-organisation-name-answer">Bob Loblaw Ltd</div> </a> <span class="deputy-status-title">Deputy is active</span> </h1> </div> <!-- // DEPUTY DETAILS - END //--> <!-- // ADDITIONAL DETAILS - START //--> <div class="large-5 large-uncentered columns"> <div id="additional-details"> <div class="text"> Occupation: <strong>Solicitor</strong> </div> <div class="text"> Professional indemnity insurance: <strong>Yes</strong> </div> <div class="text"> Insurance coverage: <strong>&pound;2,500,000</strong> </div> <div class="text"> Date expires: <strong>25/04/2020</strong> </div> </div> </div> <!-- // ADDITIONAL DETAILS - END //--> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- ///////////////////////////////// LETTER CONFIRMATION - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="deputy-edited" class="confirmation-panel main-page">
+			<div class="content">
+				<h1>
+					<span></span>
+					"<div class="edit-lay">
+						<div class="deputy-title-answer">Mrs</div>
+						<div class="deputy-first-name-answer">Kate</div>
+						<div class="deputy-last-name-answer">Eloise</div>
+					</div>
+					<div class="edit-pro">
+						<div class="deputy-organisation-name-answer">Bob Loblaw Ltd</div>
+					</div>
+					<div class="edit-public">
+						<div class="deputy-organisation-name-answer">Weston Parpenham</div>
+					</div>"
+					has now been updated
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// LETTER CONFIRMATION - END ///////////////////////////////// -->
+ <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-9 large-uncentered columns"> <!-- =========== TABS - START =========== --> <ul class="deputy-tabs tabs"> <li class="tab-link current" data-tab="tab-1">Details</li> <li class="tab-link" data-tab="tab-2">Warnings</li> <li class="tab-link" data-tab="tab-3"><span class="number">7</span>Offices</li> <li class="tab-link" data-tab="tab-4"><span class="larger-number">250+</span>Clients</li> <li class="tab-link" data-tab="tab-5"><span class="number">1</span>Linked deputy</li> <li class="tab-link" data-tab="tab-6">Timeline</li> <li class="tab-link" data-tab="tab-7">Documents</li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content current"> <!-- // DEPUTY DETAILS - START // -->
+<div class="check-details">
+
+	<h2 class="description-title">
+		Deputy details:
+		<!-- <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="edit deputy-1">Edit</a> -->
+		<!-- <a href="../5-add-deputy/5b-deputy-details.html#deputy-pro-edit" class="edit edit-pro-deputy">Edit deputy details</a> -->
+	</h2>
+
+	<div id="flexbox-container">
+
+		<!-- // DEPUTY ITEM - 1 - START // -->
+		<!-- <div class="person-detail-item">
+			<p class="item">Is this an Organisation?:</p>
+			<p class="answer deputy-organisation-answer">Yes</p>
+		</div> -->
+		<!-- // DEPUTY ITEM - 1 - END // -->
+
+		<!-- // DEPUTY ITEM - 2 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Correspondence name:</p>
+			<p class="answer">
+				<span class="deputy-title-answer">Mr</span>
+				<span class="deputy-first-name-answer">Stanley</span>
+				<span class="deputy-middle-name-answer">William</span>
+				<span class="deputy-last-name-answer">Evans</span>
+			</p>
+		</div>
+		<!-- // DEPUTY ITEM - 2 - END // -->
+
+		<!-- // DEPUTY ITEM - 3 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Organisation name:</p>
+			<p class="answer deputy-organisation-name-answer">Bob Loblaw Ltd</p>
+		</div>
+		<!-- // DEPUTY ITEM - 3 - END // -->
+
+		<!-- // DEPUTY ITEM - 4 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Company reference:</p>
+			<p class="answer deputy-company-ref-answer">12345678</p>
+		</div>
+		<!-- // DEPUTY ITEM - 4 - END // -->
+
+		<!-- // DEPUTY ITEM - 5 - START // -->
+		<!-- <div class="person-detail-item">
+			<p class="item">Date of birth:</p>
+			<p class="answer">
+				<span class="deputy-dob-day-answer">06</span>
+				/
+				<span class="deputy-dob-month-answer">01</span>
+				/
+				<span class="deputy-dob-year-answer">1986</span>
+			</p>
+		</div> -->
+		<!-- // DEPUTY ITEM - 5 - END // -->
+
+		<!-- // DEPUTY ITEM - 6 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Previously Known As:</p>
+			<p class="answer deputy-previous-name-answer">N/A</p>
+		</div>
+		<!-- // DEPUTY ITEM - 6 - END // -->
+
+		<!-- // DEPUTY ITEM - 7 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Address:</p>
+			<p class="answer">
+				<span class="deputy-address-line-1-answer">92 York Road</span>,<br>
+				<span class="deputy-address-town-answer">Oxnop Ghyll</span>,<br>
+				<span class="deputy-manual-postcode-answer">CF8 1HN</span>.<br>
+				<span class="deputy-country-answer">United Kingdom</span>
+			</p>
+		</div>
+		<!-- // DEPUTY ITEM - 7 - END // -->
+
+		<!-- // DEPUTY ITEM - 8 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Is airmail required?:</p>
+			<p class="answer deputy-airmail-answer">No</p>
+		</div>
+		<!-- // DEPUTY ITEM - 8 - END // -->
+
+		<!-- // DEPUTY ITEM - 9 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Daytime telephone number:</p>
+			<p class="answer deputy-phone-number-answer">01239448394</p>
+		</div>
+		<!-- // DEPUTY ITEM - 9 - END // -->
+
+		<!-- // DEPUTY ITEM - 10 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Mobile telephone number:</p>
+			<p class="answer deputy-mob-number-answer">07852591663</p>
+		</div>
+		<!-- // DEPUTY ITEM - 10 - END // -->
+
+		<!-- // DEPUTY ITEM - 11 - START // -->
+		<div class="person-detail-item full-width">
+			<p class="item">Email address:</p>
+			<ul class="answer">
+				<li class="deputy-email-answer"><a href="#">stanley.evans@bobloblaw.lawblog.com</a></li>
+				<li><a href="#">andris.kurtz@bobloblaw.lawblog.com</a></li>
+				<li><a href="#">joelle.rahilly@bobloblaw.lawblog.com</a></li>
+				<li><a href="#">burt.downs@bobloblaw.lawblog.com</a></li>
+			</ul>
+		</div>
+		<!-- // DEPUTY ITEM - 11 - END // -->
+
+		<!-- // DEPUTY ITEM - 12 - START // -->
+		<!-- <div class="person-detail-item">
+			<p class="item">Is the deputy a violent risk?:</p>
+			<p class="answer deputy-violent-risk-answer">No</p>
+		</div> -->
+		<!-- // DEPUTY ITEM - 12 - END // -->
+
+		<!-- <a href="../5-add-deputy/5b-deputy-details.html#deputy-pro-edit" class="main-cta secondary edit edit-pro-deputy">Edit deputy details</a> -->
+
+		<p>&nbsp;</p>
+
+	</div>
+
+	<h2 class="description-title">
+		Business details:
+	</h2>
+
+	<div id="flexbox-container">
+
+		<!-- // DEPUTY ITEM - 1 - START // -->
+		<!-- <div class="person-detail-item">
+			<p class="item">Bussiness type:</p>
+			<p class="answer">Accountant</p>
+		</div> -->
+		<!-- // DEPUTY ITEM - 1 - END // -->
+
+		<!-- // DEPUTY ITEM - 2 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Professional indemnity insurance:</p>
+			<p class="answer">Yes</p>
+		</div>
+		<!-- // DEPUTY ITEM - 2 - END // -->
+
+		<!-- // DEPUTY ITEM - 3 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Insurance coverage:</p>
+			<p class="answer">&pound; 2,500,000</p>
+		</div>
+		<!-- // DEPUTY ITEM - 3 - END // -->
+
+		<!-- // DEPUTY ITEM - 4 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Date recieved:</p>
+			<p class="answer">25/03/2017</p>
+		</div>
+		<!-- // DEPUTY ITEM - 4 - END // -->
+
+		<!-- // DEPUTY ITEM - 5 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Date expires:</p>
+			<p class="answer">25/04/2020</p>
+		</div>
+		<!-- // DEPUTY ITEM - 5 - END // -->
+
+	</div>
+
+	<h2 class="description-title">
+		Additional information:
+		<!-- <a href="../5-add-deputy/5d-additional-info.html#edit-deputy-1" class="edit deputy-1">Edit</a> -->
+		<!-- <a href="../5-add-deputy/5c-additional-info.html#deputy-pro-edit" class="edit edit-pro-deputy">Edit additional info</a> -->
+	</h2>
+
+	<div id="flexbox-container">
+
+		<!-- // DEPUTY ITEM - 1 - START // -->
+		<div class="person-detail-item">
+			<p class="item">Occupation:</p>
+			<p class="answer deputy-occupation-answer">Solicitor</p>
+		</div>
+		<!-- // DEPUTY ITEM - 1 - END // -->
+
+		<!-- // DEPUTY ITEM - 2 - START // -->
+		<div class="person-detail-item">
+			<p class="item">How would the deputy like to be contacted?:</p>
+			<ul class="answer">
+				<li class="answer-holder">Email</li>
+				<li class="answer-holder">Phone</li>
+				<li class="deputy-correspondence-email-answer">Email</li>
+				<li class="deputy-correspondence-phone-answer">Phone</li>
+				<li class="deputy-correspondence-post-answer">Post</li>
+				<li class="deputy-correspondence-welsh-answer">Welsh</li>
+			</ul>
+		</div>
+		<!-- // DEPUTY ITEM - 2 - END // -->
+
+		<!-- // DEPUTY ITEM - 3 - START // -->
+		<!-- <div class="person-detail-item">
+			<p class="item">Newsletter?:</p>
+			<p class="answer deputy-newsletter-answer">No</p>
+		</div> -->
+		<!-- // DEPUTY ITEM - 3 - END // -->
+
+		<!-- <a href="../5-add-deputy/5c-additional-info.html#deputy-pro-edit" class="main-cta secondary edit edit-pro-deputy">Edit additional info</a> -->
+
+	</div>
+
+</div>
+<!-- // DEPUTY DETAILS - END // -->
+ </div> <!-- =========== TAB CONTENT - 1 - END =========== --> <!-- =========== TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content"> <!-- // WARNINGS - START // -->
+<div id="list-of-warnings">
+
+	<div class="no-items">
+		<p>There are no warnings currently added to this client.</p>
+		<a href="#" class="main-cta">Add warning</a>
+	</div>
+
+</div>
+<!-- // WARNINGS - START // -->
+ </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content"> <!-- ///////////////////////////////// CLIENT UPDATED - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="contact-removed-confirm" class="confirmation-panel">
+			<div class="content">
+				<h1>
+					<span></span>
+					The contact:
+					"<div class="contact-title"></div>"
+					has now been removed
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// NCLIENT UPDATED - END ///////////////////////////////// -->
+ <!-- // DOCUMENT VIEWER - START // -->
+<div id="documents-contacts">
+
+	<h2 class="description-title">Contact offices</h2>
+
+	<table id="contact-list-deputy">
+          <thead>
+               <tr class="four-column">
+                    <th>Details</th>
+                    <th>No. of clients</th>
+                    <th>Preferred contact</th>
+                    <th><div>Actions</div></th>
+               </tr>
+          </thead>
+          <tbody>
+               <!-- DEPUTY SUMMARY ROW 1 - START -->
+               <tr class="summary-row" data-value="1">
+                    <td>
+                         <div class="name">
+						<span class="icon company"></span>
+                              <div class="contact-name-value">Head office - London</div>
+                         </div>
+					<br>
+                         <div class="address">84 Crown Street, London, SW19 5GQ.</div>
+					<div class="phone-number">02056 127546</div>
+                         <a href="#" class="full-details" data-value="1">View full details</a>
+                    </td>
+                    <td>
+					<span class="number alert large">125</span>
+                    </td>
+                    <td>
+					<div class="preferred-contact">
+						<div class="name">Maisie O'donnell</div>
+						<div class="phone-number">02056 127550</div>
+						<div class="email"><a href="#">maisie.odonnell@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <ul class="answer">
+						<li><a href="#">maisie.odonnell@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">keira.white@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">reece.bowen@bobloblaw.lawblog.com</a></li>
+					</ul> -->
+                    </td>
+                    <td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<!-- <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a> -->
+                    </td>
+               </tr>
+               <!-- DEPUTY SUMMARY ROW 1 - END -->
+
+               <!-- DEPUTY DETAILS ROW 1 - START -->
+               <tr class="details-row" data-value="1">
+                    <td colspan="4">
+
+					<h2 class="description-title">Alternative contacts</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CONTACT - 1 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Keira White</div>
+								<div class="phone-number">01536 464132</div>
+								<div class="email"><a href="#">keira.white@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 1 - END // -->
+
+						<!-- // CONTACT - 2 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Reece Bowen</div>
+								<div class="phone-number">01536 464175</div>
+								<div class="email"><a href="#">reece.bowen@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 2 - END // -->
+
+					</div>
+
+					<hr>
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+								auctor eget tellus et scelerisque. Etiam dolor nisi, dignissim ac mi
+								et, varius facilisis purus.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+                    </td>
+               </tr>
+               <!-- DEPUTY DETAILS ROW 1 - END -->
+
+			<!-- DEPUTY SUMMARY ROW 2 - START -->
+			<tr class="summary-row" data-value="2">
+				<td>
+					<div class="name">
+						<span class="icon company"></span>
+						<div class="contact-name-value">Coventry office</div>
+					</div>
+					<br>
+					<div class="address">81 Whatlington Road, Coventry, CV1 5NS.</div>
+					<div class="phone-number">02476 867245</div>
+					<a href="#" class="full-details" data-value="2">View full details</a>
+				</td>
+				<td>
+					<span class="number alert">52</span>
+                    </td>
+				<td>
+					<div class="preferred-contact">
+						<div class="name">Harvey Burgess</div>
+						<div class="phone-number">02476 867262</div>
+						<div class="email"><a href="#">harvey.burgess@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <ul class="answer">
+						<li><a href="#">harvey.burgess@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">yasmin.west@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">tilly.steele@bobloblaw.lawblog.com</a></li>
+					</ul> -->
+				</td>
+				<td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<!-- <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a> -->
+				</td>
+			</tr>
+			<!-- DEPUTY SUMMARY ROW 2 - END -->
+
+			<!-- DEPUTY DETAILS ROW 2 - START -->
+			<tr class="details-row" data-value="2">
+				<td colspan="4">
+
+					<h2 class="description-title">Alternative contacts</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CONTACT - 1 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Yasmin West</div>
+								<div class="phone-number">02476 867244</div>
+								<div class="email"><a href="#">yasmin.west@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 1 - END // -->
+
+						<!-- // CONTACT - 2 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Tilly Steele</div>
+								<div class="phone-number">02476 867275</div>
+								<div class="email"><a href="#">tilly.steele@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 2 - END // -->
+
+					</div>
+
+					<hr>
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								Nam eget justo vehicula, accumsan est vel, gravida sapien. Fusce
+								interdum hendrerit felis, a lobortis risus pretium eu. Curabitur
+								suscipit pellentesque ipsum, non sagittis odio.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- DEPUTY DETAILS ROW 2 - END -->
+
+			<!-- DEPUTY SUMMARY ROW 3 - START -->
+			<tr class="summary-row" data-value="3">
+				<td>
+					<div class="name">
+						<span class="icon company"></span>
+						<div class="contact-name-value">Birmingham office</div>
+					</div>
+					<br>
+					<div class="address">57 Boroughbridge Road, Birmingham, B5 2SY.</div>
+					<div class="phone-number">0121 678542</div>
+					<a href="#" class="full-details" data-value="3">View full details</a>
+				</td>
+				<td>
+					<span class="number alert">22</span>
+                    </td>
+				<td>
+					<div class="preferred-contact">
+						<div class="name">Max Bird</div>
+						<div class="phone-number">0121 678584</div>
+						<div class="email"><a href="#">max.bird@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <ul class="answer">
+						<li><a href="#">max.bird@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">nicholas.bruce@bobloblaw.lawblog.com</a></li>
+					</ul> -->
+				</td>
+				<td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<!-- <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a> -->
+				</td>
+			</tr>
+			<!-- DEPUTY SUMMARY ROW 3 - END -->
+
+			<!-- DEPUTY DETAILS ROW 3 - START -->
+			<tr class="details-row" data-value="3">
+				<td colspan="4">
+
+					<h2 class="description-title">Alternative contacts</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CONTACT - 1 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Nicholas Bruce</div>
+								<div class="phone-number">0121 678599</div>
+								<div class="email"><a href="#">nicholas.bruce@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 1 - END // -->
+
+					</div>
+
+					<hr>
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								Aliquam volutpat, nulla vel tempor hendrerit, eros erat blandit dui,
+								et porttitor tortor nunc sed dolor. Maecenas molestie magna ut leo
+								lacinia, nec lobortis sem condimentum.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- DEPUTY DETAILS ROW 3 - END -->
+
+			<!-- DEPUTY SUMMARY ROW 4 - START -->
+			<tr class="summary-row" data-value="4">
+				<td>
+					<div class="name">
+						<span class="icon company"></span>
+						<div class="contact-name-value">Newcastle office</div>
+					</div>
+					<br>
+					<div class="address">25 Lairg Road, Newcastle Upon Tyne, NE7 1YX.</div>
+					<div class="phone-number">0191 424726</div>
+					<a href="#" class="full-details" data-value="4">View full details</a>
+				</td>
+				<td>
+					<span class="number alert large">103</span>
+                    </td>
+				<td>
+					<div class="preferred-contact">
+						<div class="name">Mia Storey</div>
+						<div class="phone-number">0191 424796</div>
+						<div class="email"><a href="#">mia.storey@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <ul class="answer">
+						<li><a href="#">mia.storey@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">brooke.quinn@bobloblaw.lawblog.com</a></li>
+					</ul> -->
+				</td>
+				<td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<!-- <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a> -->
+				</td>
+			</tr>
+			<!-- DEPUTY SUMMARY ROW 4 - END -->
+
+			<!-- DEPUTY DETAILS ROW 4 - START -->
+			<tr class="details-row" data-value="4">
+				<td colspan="4">
+
+					<h2 class="description-title">Alternative contacts</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CONTACT - 1 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Brooke Quinn</div>
+								<div class="phone-number">0191 424700</div>
+								<div class="email"><a href="#">brooke.quinn@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 1 - END // -->
+
+					</div>
+
+					<hr>
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								In eros odio, dignissim at est vitae, ullamcorper accumsan sapien. Aenean eget
+								gravida urna.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- DEPUTY DETAILS ROW 4 - END -->
+
+			<!-- DEPUTY SUMMARY ROW 5 - START -->
+			<tr class="summary-row" data-value="5">
+				<td>
+					<div class="name">
+						<span class="icon company"></span>
+						<div class="contact-name-value">Liverpool office</div>
+					</div>
+					<br>
+					<div class="address">27 Overton Circle, Liverpool, L3 8FH.</div>
+					<div class="phone-number">0151 864725</div>
+					<a href="#" class="full-details" data-value="5">View full details</a>
+				</td>
+				<td>
+					<span class="number alert">9</span>
+                    </td>
+				<td>
+					<div class="preferred-contact">
+						<div class="name">Ellis May</div>
+						<div class="phone-number">0151 864724</div>
+						<div class="email"><a href="#">ellis.may@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <ul class="answer">
+						<li><a href="#">ellis.may@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">anthony.haynes@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">natasha.tucker@bobloblaw.lawblog.com</a></li>
+					</ul> -->
+				</td>
+				<td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<!-- <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a> -->
+				</td>
+			</tr>
+			<!-- DEPUTY SUMMARY ROW 5 - END -->
+
+			<!-- DEPUTY DETAILS ROW 5 - START -->
+			<tr class="details-row" data-value="5">
+				<td colspan="4">
+
+					<h2 class="description-title">Alternative contacts</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CONTACT - 1 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Anthony Haynes</div>
+								<div class="phone-number">0151 864754</div>
+								<div class="email"><a href="#">anthony.haynes@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 1 - END // -->
+
+						<!-- // CONTACT - 2 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Natasha Tucker</div>
+								<div class="phone-number">0151 864767</div>
+								<div class="email"><a href="#">natasha.tucker@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 2 - END // -->
+
+					</div>
+
+					<hr>
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								Donec at lorem non magna pretium lobortis. Praesent elementum
+								fermentum eros, eget congue erat mattis non. Nulla a ultricies
+								lacus. Etiam lobortis tincidunt tellus eu tristique.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- DEPUTY DETAILS ROW 5 - END -->
+
+			<!-- DEPUTY SUMMARY ROW 6 - START -->
+			<tr class="summary-row" data-value="6">
+				<td>
+					<div class="name">
+						<span class="icon company"></span>
+						<div class="contact-name-value">Manchester office</div>
+					</div>
+					<br>
+					<div class="address">63 Cunnery Rd, Manchester, M3 8WT</div>
+					<div class="phone-number">0161 427689</div>
+					<a href="#" class="full-details" data-value="6">View full details</a>
+				</td>
+				<td>
+					<span class="number alert">16</span>
+                    </td>
+				<td>
+					<div class="preferred-contact">
+						<div class="name">Victoria Holden</div>
+						<div class="phone-number">0161 427690</div>
+						<div class="email"><a href="#">victoria.holden@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <ul class="answer">
+						<li><a href="#">victoria.holden@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">holly.abbott@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">kai.steele@bobloblaw.lawblog.com</a></li>
+						<li><a href="#">elizabeth.reed@bobloblaw.lawblog.com</a></li>
+					</ul> -->
+				</td>
+				<td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<!-- <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a> -->
+				</td>
+			</tr>
+			<!-- DEPUTY SUMMARY ROW 6 - END -->
+
+			<!-- DEPUTY DETAILS ROW 6 - START -->
+			<tr class="details-row" data-value="6">
+				<td colspan="4">
+
+					<h2 class="description-title">Alternative contacts</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CONTACT - 1 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Holly Abbott</div>
+								<div class="phone-number">0161 427665</div>
+								<div class="email"><a href="#">holly.abbott@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 1 - END // -->
+
+						<!-- // CONTACT - 2 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Kai Steele</div>
+								<div class="phone-number">0161 427663</div>
+								<div class="email"><a href="#">kai.steele@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 2 - END // -->
+
+						<!-- // CONTACT - 3 - START // -->
+						<div class="info-section">
+							<div class="preferred-contact">
+								<div class="name">Elizabeth Reed</div>
+								<div class="phone-number">0161 427686</div>
+								<div class="email"><a href="#">elizabeth.reed@bobloblaw.lawblog.com</a></div>
+							</div>
+						</div>
+						<!-- // CONTACT - 3 - END // -->
+
+					</div>
+
+					<hr>
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								Ut id velit sed dolor pretium vulputate. Pellentesque pulvinar lectus
+								ac efficitur consequat. Nulla sed ante libero. Interdum et malesuada
+								fames ac ante ipsum primis in faucibus.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- DEPUTY DETAILS ROW 6 - END -->
+
+			<!-- DEPUTY SUMMARY ROW 7 - START -->
+			<tr class="summary-row duplicate-row" data-value="7">
+				<td>
+					<div class="name">
+						<span class="icon company"></span>
+						<div class="contact-name-value">Corby office</div>
+					</div>
+					<br>
+					<div class="address">70 Mill Lane, Corby, NN17 7EX</div>
+					<div class="phone-number">01536 464183</div>
+					<a href="#" class="full-details" data-value="7">View full details</a>
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<td>
+					<div class="preferred-contact">
+						<div class="name">Patrick Rahman</div>
+						<div class="phone-number">01536 464154</div>
+						<div class="email"><a href="#">patrick.rahman@bobloblaw.lawblog.com</a></div>
+					</div>
+					<!-- <a href="#">patrick.rahman@bobloblaw.lawblog.com</a> -->
+				</td>
+				<td>
+					<a href="#" class="main-cta tertiary edit">Edit</a>
+					<a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a>
+				</td>
+			</tr>
+			<!-- DEPUTY SUMMARY ROW 7 - END -->
+
+			<!-- DEPUTY DETAILS ROW 7 - START -->
+			<tr class="details-row" data-value="7">
+				<td colspan="4">
+
+					<div class="details-wrap full-width">
+
+						<!-- // NOTES - START // -->
+						<div class="person-detail-item full-width">
+							<p class="item">Notes:</p>
+							<p class="answer">
+								Mauris et lorem posuere arcu facilisis interdum id sed neque. Praesent congue tempus eros a
+								aliquam. Praesent purus tellus, aliquet id suscipit ac, mattis suscipit quam.
+							</p>
+						</div>
+						<!-- // NOTES - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- DEPUTY DETAILS ROW 7 - END -->
+
+		</tbody>
+
+	</table>
+
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> <!-- =========== TAB CONTENT - 3 - END =========== --> <!-- =========== TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content"> <!-- // DEPUTY DETAILS - START // -->
+<div id="deputy-details">
+
+     <h2 class="description-title">
+          <div class="deputy-organisation-name-answer">Bob Loblaw Ltd</div>
+          clients details
+     </h2>
+
+     <table id="clients-table">
+          <thead>
+               <tr class="five-column">
+                    <th><span></span>Details</th>
+                    <th><span></span>Type</th>
+                    <th><span></span>Appointed</th>
+                    <th><span></span>Relationship</th>
+                    <th></th>
+               </tr>
+          </thead>
+          <tbody>
+
+               <!-- DEPUTY SUMMARY ROW 1 - START -->
+               <tr class="summary-row" data-value="1">
+                    <td>
+                         <!-- <span class="icon deputy"></span> -->
+                         <div class="name">Mr Gerald Brackens</div><br>
+                         <div class="accomodation">NH - Care/Nursing/Residential Home (Private/LA/Registered)</div>
+                         <!-- <div class="address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div> -->
+                         <a class="view-full-details" data-value="1">View full details</a>
+                    </td>
+                    <td>
+                         <div class="wrapper">
+                              <span class="icon welfare"><p>Health &amp; welfare</p></span>
+                              <div>
+                                   <a href="../4-client-page/4a-new-client.html#HandW">14820940</a> - Active
+                              </div>
+                         </div>
+                         <div class="wrapper">
+                              <span class="icon property"><p>Property &amp; finance</p></span>
+                              <div>
+                                   <a href="../4-client-page/4a-new-client.html#PFA">14820940</a> - Active
+                              </div>
+                         </div>
+                    </td>
+                    <td>
+                         Joint
+                         <!-- <div class="deputy-status-deceased">Open</div> -->
+                    </td>
+                    <td>
+                         Sibling
+                    </td>
+                    <td>
+                         <span class="icon fee-payer"><p>Fee payer</p></span>
+                         <span class="icon main-contact"><p>Main correspondence</p></span>
+                    </td>
+               </tr>
+               <!-- DEPUTY SUMMARY ROW 1 - END -->
+
+               <!-- DEPUTY DETAILS ROW 1 - START -->
+               <tr class="details-row" data-value="1">
+                    <td colspan="5">
+
+                         <h2 class="description-title">
+                              Client details:
+                              <!-- <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a> -->
+                         </h2>
+
+                         <div class="details-wrap">
+
+                              <!-- // CLIENT ITEM - 1 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Client status:</p>
+                                   <p class="answer client-status">Active</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 1 - END // -->
+
+                              <!-- // CLIENT ITEM - 2 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Status date:</p>
+                                   <p class="answer">09/09/2017</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 2 - END // -->
+
+                              <!-- // CLIENT ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Name:</p>
+                                   <p class="answer">Mr Gerald Brackens</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 3 - END // -->
+
+                              <!-- // CLIENT ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Previously Known As:</p>
+                                   <p class="answer">N/A</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 4 - END // -->
+
+                              <!-- // CLIENT ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Date of birth:</p>
+                                   <p class="answer">09/09/1983</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 5 - END // -->
+
+                              <!-- // CLIENT ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Address:</p>
+                                   <p class="answer">
+                                        1 Grimwald Place,<br>
+                                        Buckley,<br>
+                                        Flintshire,<br>
+                                        Flintshire,<br>
+                                        CV32 788.<br>
+                                        United Kingdom
+                                   </p>
+                              </div>
+                              <!-- // CLIENT ITEM - 6 - END // -->
+
+                              <!-- // CLIENT ITEM - 7 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is airmail required?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 7 - END // -->
+
+                              <!-- // CLIENT ITEM - 8 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Daytime telephone number:</p>
+                                   <p class="answer">0123456789</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 8 - END // -->
+
+                              <!-- // CLIENT ITEM - 9 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Mobile telephone number:</p>
+                                   <p class="answer">07768948823</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 9 - END // -->
+
+                              <!-- // CLIENT ITEM - 10 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Email address:</p>
+                                   <p class="answer">gerald.brackens@hotmail.com</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 10 - END // -->
+
+                              <!-- // CLIENT ITEM - 11 - START // -->
+                              <!-- <div class="person-detail-item">
+                                   <p class="item">Is the deputy a violent risk?:</p>
+                                   <p class="answer">No</p>
+                              </div> -->
+                              <!-- // CLIENT ITEM - 11 - END // -->
+
+                              <!-- // CLIENT ITEM - 12 - START // -->
+                              <!-- <div class="person-detail-item violent-answer">
+                                   <p class="item">More details about the violent risk:</p>
+                                   <p class="answer">N/A</p>
+                              </div> -->
+                              <!-- // CLIENT ITEM - 12 - END // -->
+
+                              <!-- // CLIENT ITEM - 13 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Casarec Number:</p>
+                                   <p class="answer">183947380</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 13 - END // -->
+
+                              <!-- // CLIENT ITEM - 14 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Accommodation Type:</p>
+                                   <p class="answer">NH - Care/Nursing/Residential Home (Private/LA/Registered)</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 14 - END // -->
+
+                              <!-- // CLIENT ITEM - 15 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Medical Condition:</p>
+                                   <p class="answer">Alzheimer's</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 15 - END // -->
+
+                              <!-- // CLIENT ITEM - 16 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Marital Status:</p>
+                                   <p class="answer">Divorced</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 16 - END // -->
+
+                              <!-- // CLIENT ITEM - 17 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Has the client expressed a preferred method of contact?:</p>
+                                   <ul class="answer">
+                                        <li>Post</li>
+                                        <li>Email</li>
+                                   </ul>
+                              </div>
+                              <!-- // CLIENT ITEM - 17 - END // -->
+
+                         </div>
+
+                    </td>
+               </tr>
+               <!-- DEPUTY DETAILS ROW 1 - END -->
+
+               <!-- DEPUTY SUMMARY ROW 2 - START -->
+               <tr class="summary-row" data-value="2">
+                    <td>
+                         <!-- <span class="icon deputy"></span> -->
+                         <div class="name">Mrs Lara Stevens</div><br>
+                         <div class="accomodation">NH - Care/Nursing/Residential Home (Private/LA/Registered)</div>
+                         <!-- <div class="address">92 Greyfriars Road, CANNOCK WOOD, W5154AA</div> -->
+                         <a class="view-full-details" data-value="2">View full details</a>
+                    </td>
+                    <td>
+                         <div class="wrapper">
+                              <span class="icon welfare"><p>Health &amp; welfare</p></span>
+                              <div>
+                                   <a href="#">193049573</a> - Active
+                              </div>
+                         </div>
+                    </td>
+                    <td>
+                         Joint
+                         <!-- <div class="deputy-status-deceased">Open</div> -->
+                    </td>
+                    <td>
+                         Sibling
+                    </td>
+                    <td>
+                         <span class="icon fee-payer"><p>Fee payer</p></span>
+                         <span class="icon main-contact"><p>Main correspondence</p></span>
+                    </td>
+               </tr>
+               <!-- DEPUTY SUMMARY ROW 2 - END -->
+
+               <!-- DEPUTY DETAILS ROW 2 - START -->
+               <tr class="details-row" data-value="2">
+                    <td colspan="5">
+
+                         <h2 class="description-title">
+                              Client details:
+                              <!-- <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a> -->
+                         </h2>
+
+                         <div class="details-wrap">
+
+                              <!-- // CLIENT ITEM - 1 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Client status:</p>
+                         		<p class="answer client-status">Active</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 1 - END // -->
+
+                         	<!-- // CLIENT ITEM - 2 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Status date:</p>
+                         		<p class="answer">09/09/2017</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 2 - END // -->
+
+                         	<!-- // CLIENT ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Name:</p>
+                                   <p class="answer">Mrs Lara Stevens</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 3 - END // -->
+
+                              <!-- // CLIENT ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Previously Known As:</p>
+                                   <p class="answer">Miss Lara Hodgeson</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 4 - END // -->
+
+                         	<!-- // CLIENT ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Date of birth:</p>
+                                   <p class="answer">17/07/1981</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 5 - END // -->
+
+                         	<!-- // CLIENT ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Address:</p>
+                                   <p class="answer">
+                                        34 Broomfield Place,<br>
+                                        STOKESLEY,<br>
+                                        TS9 8TU.<br>
+                                        United Kingdom
+                                   </p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 6 - END // -->
+
+                         	<!-- // CLIENT ITEM - 7 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is airmail required?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 7 - END // -->
+
+                         	<!-- // CLIENT ITEM - 8 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Daytime telephone number:</p>
+                                   <p class="answer">07079962666</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 8 - END // -->
+
+                         	<!-- // CLIENT ITEM - 9 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Mobile telephone number:</p>
+                                   <p class="answer">07079962666</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 9 - END // -->
+
+                         	<!-- // CLIENT ITEM - 10 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Email address:</p>
+                                   <p class="answer">lara.stevens@jourrapide.com</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 10 - END // -->
+
+                         	<!-- // CLIENT ITEM - 11 - START // -->
+                              <!-- <div class="person-detail-item">
+                                   <p class="item">Is the deputy a violent risk?:</p>
+                                   <p class="answer">No</p>
+                              </div> -->
+                         	<!-- // CLIENT ITEM - 11 - END // -->
+
+                              <!-- // CLIENT ITEM - 12 - START // -->
+                              <!-- <div class="person-detail-item violent-answer">
+                                   <p class="item">More details about the violent risk:</p>
+                                   <p class="answer">N/A</p>
+                              </div> -->
+                              <!-- // CLIENT ITEM - 12 - END // -->
+
+                         	<!-- // CLIENT ITEM - 13 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Casarec Number:</p>
+                         		<p class="answer">183947380</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 13 - END // -->
+
+                         	<!-- // CLIENT ITEM - 14 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Accommodation Type:</p>
+                         		<p class="answer">LA Nursing home</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 14 - END // -->
+
+                         	<!-- // CLIENT ITEM - 15 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Medical Condition:</p>
+                         		<p class="answer">Parkinson's</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 15 - END // -->
+
+                         	<!-- // CLIENT ITEM - 16 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Marital Status:</p>
+                         		<p class="answer">Married</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 16 - END // -->
+
+                         	<!-- // CLIENT ITEM - 17 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Has the client expressed a preferred method of contact?:</p>
+                         		<ul class="answer">
+                         			<li>Post</li>
+                         			<li>Email</li>
+                         		</ul>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 17 - END // -->
+
+                         </div>
+
+                    </td>
+               </tr>
+               <!-- DEPUTY DETAILS ROW 2 - END -->
+
+               <!-- DEPUTY SUMMARY ROW 3 - START -->
+               <tr class="summary-row" data-value="3">
+                    <td>
+                         <div class="name">Mrs Carla Frith</div><br>
+                         <div class="accomodation">PH - Private Hospital</div>
+                         <!-- <div class="address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div> -->
+                         <a class="view-full-details" data-value="3">View full details</a>
+                    </td>
+                    <td>
+                         <div class="wrapper">
+                              <span class="icon welfare"><p>Health &amp; welfare</p></span>
+                              <div>
+                                   <a href="#">157845687</a>
+                                   <br>
+                                   Active
+                              </div>
+                         </div>
+                         <div class="wrapper">
+                              <span class="icon property"><p>Property &amp; finance</p></span>
+                              <div>
+                                   <a href="#">135689565</a> - Active
+                              </div>
+                         </div>
+                    </td>
+                    <td>
+                         Joint &amp; severally
+                         <!-- <div class="deputy-status-deceased">Active</div> -->
+                    </td>
+                    <td>
+                         Sibling
+                    </td>
+                    <td>
+                         <span class="icon main-contact"><p>Main correspondence</p></span>
+                    </td>
+               </tr>
+               <!-- DEPUTY SUMMARY ROW 3 - END -->
+
+               <!-- DEPUTY DETAILS ROW 3 - START -->
+               <tr class="details-row" data-value="3">
+                    <td colspan="5">
+
+                         <h2 class="description-title">
+                              Client details:
+                              <!-- <a href="../7-edit-client/7a-edit-client.html" class="edit">Edit</a> -->
+                         </h2>
+
+                         <div class="details-wrap">
+
+                              <!-- // CLIENT ITEM - 1 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Client status:</p>
+                         		<p class="answer client-status">Active</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 1 - END // -->
+
+                         	<!-- // CLIENT ITEM - 2 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Status date:</p>
+                         		<p class="answer">09/09/2017</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 2 - END // -->
+
+                         	<!-- // CLIENT ITEM - 3 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Name:</p>
+                                   <p class="answer">Mrs Carla Frith</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 3 - END // -->
+
+                              <!-- // CLIENT ITEM - 4 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Previously Known As:</p>
+                                   <p class="answer">N/A</p>
+                              </div>
+                              <!-- // CLIENT ITEM - 4 - END // -->
+
+                         	<!-- // CLIENT ITEM - 5 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Date of birth:</p>
+                                   <p class="answer">25/06/1983</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 5 - END // -->
+
+                         	<!-- // CLIENT ITEM - 6 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Address:</p>
+                                   <p class="answer">
+                                        35 Broad Street,<br>
+                                        LOWER WELSON,<br>
+                                        HR3 1UD.<br>
+                                        United Kingdom
+                                   </p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 6 - END // -->
+
+                         	<!-- // CLIENT ITEM - 7 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Is airmail required?:</p>
+                                   <p class="answer">No</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 7 - END // -->
+
+                         	<!-- // CLIENT ITEM - 8 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Daytime telephone number:</p>
+                                   <p class="answer">07772881687</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 8 - END // -->
+
+                         	<!-- // CLIENT ITEM - 9 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Mobile telephone number:</p>
+                                   <p class="answer">07772881687</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 9 - END // -->
+
+                         	<!-- // CLIENT ITEM - 10 - START // -->
+                              <div class="person-detail-item">
+                                   <p class="item">Email address:</p>
+                                   <p class="answer">carla.frith@jourrapide.com</p>
+                              </div>
+                         	<!-- // CLIENT ITEM - 10 - END // -->
+
+                         	<!-- // CLIENT ITEM - 11 - START // -->
+                              <!-- <div class="person-detail-item">
+                                   <p class="item">Is the client a violent risk?:</p>
+                                   <p class="answer">Yes</p>
+                              </div> -->
+                         	<!-- // CLIENT ITEM - 11 - END // -->
+
+                              <!-- // CLIENT ITEM - 12 - START // -->
+                              <!-- <div class="person-detail-item violent-answer-text">
+                                   <p class="item">More details about the violent risk:</p>
+                                   <p class="answer">N/A</p>
+                              </div> -->
+                              <!-- // CLIENT ITEM - 12 - END // -->
+
+                         	<!-- // CLIENT ITEM - 13 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Casarec Number:</p>
+                         		<p class="answer">183920478</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 13 - END // -->
+
+                         	<!-- // CLIENT ITEM - 14 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Accommodation Type:</p>
+                         		<p class="answer">LA Nursing home</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 14 - END // -->
+
+                         	<!-- // CLIENT ITEM - 15 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Medical Condition:</p>
+                         		<p class="answer">Alzheimer's</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 15 - END // -->
+
+                         	<!-- // CLIENT ITEM - 16 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Marital Status:</p>
+                         		<p class="answer">Divorced</p>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 16 - END // -->
+
+                         	<!-- // CLIENT ITEM - 17 - START // -->
+                         	<div class="person-detail-item">
+                         		<p class="item">Has the client expressed a preferred method of contact?:</p>
+                         		<ul class="answer">
+                         			<li>Post</li>
+                         			<li>Email</li>
+                         		</ul>
+                         	</div>
+                         	<!-- // CLIENT ITEM - 17 - END // -->
+
+                         </div>
+
+                    </td>
+               </tr>
+               <!-- DEPUTY DETAILS ROW 3 - END -->
+
+          </tbody>
+     </table>
+
+</div>
+<!-- // DEPUTY DETAILS - END // -->
+ </div> <!-- =========== TAB CONTENT - 4 - END =========== --> <!-- =========== TAB CONTENT - 5 - START =========== --> <div id="tab-5" class="tab-content"> <div class="dashboard-item-container">
+
+	<h2 class="description-title">
+		Linked deputy:
+	</h2>
+
+	<table id="dashboard-deputies-table" class="tablesorter">
+		<thead>
+			<tr class="five-column">
+				<th><span></span>Name</th>
+				<th>Clients</th>
+				<th><span></span>Deputy type</th>
+				<th><span></span>Supervision level</th>
+				<th>Tasks</th>
+				<!-- <th><span></span>Assigned to</th> -->
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- DEPUTY 1 - START -->
+			<tr class="summary-row joe-bloggs deputy-public-authority" data-value="1">
+				<td>
+					<a href="../14-deputy-page/14d-deputy-page.html" class="client">Mr Tobias Fünke</a>
+					<a href="#" class="view-full-details" data-value="1">View full details</a>
+				</td>
+				<td>
+					<p class="deputies open"><span class="number deputy">20</span> Clients</p>
+				</td>
+				<td>
+					Professional
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number alert">3</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+
+			<tr class="details-row" data-value="1">
+                    <td colspan="5">
+
+					<!-- //////////////////////////// STEP 1 INFO - START //////////////////////////// -->
+					<h2 class="description-title">Deputy details:</h2>
+
+                         <div class="details-wrap">
+
+						<!-- // DEPUTY ITEM - 1 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Is this an Organisation?:</p>
+							<p class="answer deputy-organisation-answer">Yes</p>
+						</div>
+						<!-- // DEPUTY ITEM - 1 - END // -->
+
+						<!-- // DEPUTY ITEM - 2 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Correspondence name:</p>
+							<p class="answer">
+								<span class="deputy-title-answer">Mr</span>
+								<span class="deputy-first-name-answer">Nicolas</span>
+								<span class="deputy-middle-name-answer">Austin</span>
+								<span class="deputy-last-name-answer">Taylor</span>
+							</p>
+						</div>
+						<!-- // DEPUTY ITEM - 2 - END // -->
+
+						<!-- // DEPUTY ITEM - 3 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Organisation name:</p>
+							<p class="answer deputy-organisation-name-answer">Weston Parpenham</p>
+						</div>
+						<!-- // DEPUTY ITEM - 3 - END // -->
+
+						<!-- // DEPUTY ITEM - 4 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Company reference:</p>
+							<p class="answer deputy-company-ref-answer">12345678</p>
+						</div>
+						<!-- // DEPUTY ITEM - 4 - END // -->
+
+						<!-- // DEPUTY ITEM - 5 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Previously Known As:</p>
+							<p class="answer deputy-previous-name-answer">N/A</p>
+						</div>
+						<!-- // DEPUTY ITEM - 5 - END // -->
+
+						<!-- // DEPUTY ITEM - 6 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Address:</p>
+							<p class="answer">
+								<span class="deputy-address-line-1-answer">7 Farburn Terrace</span>,<br>
+								<span class="deputy-address-town-answer">Weston Parpenham</span>,<br>
+								<span class="deputy-manual-postcode-answer">PE17 0FS</span>.<br>
+								<span class="deputy-country-answer">United Kingdom</span>
+							</p>
+						</div>
+						<!-- // DEPUTY ITEM - 6 - END // -->
+
+						<!-- // DEPUTY ITEM - 7 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Is airmail required?:</p>
+							<p class="answer deputy-airmail-answer">No</p>
+						</div>
+						<!-- // DEPUTY ITEM - 7 - END // -->
+
+						<!-- // DEPUTY ITEM - 8 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Daytime telephone number:</p>
+							<p class="answer deputy-phone-number-answer">01268449380</p>
+						</div>
+						<!-- // DEPUTY ITEM - 8 - END // -->
+
+						<!-- // DEPUTY ITEM - 9 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Mobile telephone number:</p>
+							<p class="answer deputy-mob-number-answer">07951798017</p>
+						</div>
+						<!-- // DEPUTY ITEM - 9 - END // -->
+
+						<!-- // DEPUTY ITEM - 10 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Email address:</p>
+							<ul class="answer">
+								<li class="deputy-email-answer">n.taylor@weston.parpenham.gov.uk</li>
+								<li>k.hill@weston.parpenham.gov.uk</li>
+								<li>l.duncan@weston.parpenham.gov.uk</li>
+							</ul>
+						</div>
+						<!-- // DEPUTY ITEM - 10 - END // -->
+
+					</div>
+					<!-- //////////////////////////// STEP 1 INFO - END //////////////////////////// -->
+
+					<!-- //////////////////////////// STEP 2 INFO - START //////////////////////////// -->
+					<h2 class="description-title">Additional information:</h2>
+
+                         <div class="details-wrap">
+
+						<!-- // DEPUTY ITEM - 1 - START // -->
+						<div class="person-detail-item">
+							<p class="item">How would the deputy like to be contacted?:</p>
+							<ul class="answer">
+								<li class="answer-holder">Email</li>
+								<li class="answer-holder">Phone</li>
+								<li class="deputy-correspondence-email-answer">Email</li>
+								<li class="deputy-correspondence-phone-answer">Phone</li>
+								<li class="deputy-correspondence-post-answer">Post</li>
+								<li class="deputy-correspondence-welsh-answer">Welsh</li>
+							</ul>
+						</div>
+						<!-- // DEPUTY ITEM - 1 - END // -->
+
+						<!-- // DEPUTY ITEM - 2 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Newsletter?:</p>
+							<p class="answer deputy-newsletter-answer">No</p>
+						</div>
+						<!-- // DEPUTY ITEM - 2 - END // -->
+
+					</div>
+					<!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
+
+                    </td>
+               </tr>
+			<!-- DEPUTY 1 - END -->
+
+		</tbody>
+	</table>
+
+</div>
+ </div> <!-- =========== TAB CONTENT - 5 - END =========== --> <!-- =========== TAB CONTENT - 6 - START =========== --> <div id="tab-6" class="tab-content"> <!-- // TIMELINE - END // -->
+<div id="list-of-timeline-deputy">
+
+	<!-- // TIMELINE - START // -->
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<h2 class="description-title">
+				Timeline
+				<a class="reverse-timeline">Reverse timeline</a>
+			</h2>
+
+			<!-- <div id="filter-panel">
+				<div id="scroller-anchor"></div>
+				<div id="scroller">
+					<form>
+						<nav>
+							<ul>
+								<li>
+									<a class="filter-all checked">All</a>
+								</li>
+								<li>
+									<label><input type="checkbox" value="one" name="filter-value">Supervision level</label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="two" name="filter-value">Order details</label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="three" name="filter-value">Client details</label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="four" name="filter-value">Tasks completed</label>
+								</li>
+							</ul>
+						</nav>
+					</form>
+				</div>
+			</div> -->
+
+			<ol id="vertical-timeline">
+
+				<div id="filter-results" class="order-1">Filtered timeline results...</div>
+
+				<!-- DATE INDICATOR - START -->
+				<li class="sectionContent date-indicator all order-2">
+					<span class="dot"></span>
+					<span class="border"></span>
+					<div>Today</div>
+				</li>
+				<!-- DATE INDICATOR - END -->
+
+				<!-- /////////////////////////// LI ITEM 1 - START /////////////////////////// -->
+				<li class="sectionContent pdf-review four all order-3">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Details
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>01/01/2018 14:22 — #XU</div>
+							</h2>
+						</div>
+						<p><strong>Ms</strong> changed to <strong>Mrs</strong></p>
+						<p><strong>Smith</strong> changed to <strong>Stephens</strong></p>
+						<p><strong>Previous name</strong> set to <strong>Ms Lara Smith</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li>
+				<!-- /////////////////////////// LI ITEM 1 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 2 - START /////////////////////////// -->
+				<li class="sectionContent case one all order-4">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Address
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>01/01/2018 14:22 — #XU</div>
+							</h2>
+						</div>
+						<p><strong>1 little road, STOKELSEY, Little smithing</strong> changed to <strong>34 Broomfield Place, STOKESLEY, Little smithing</strong></p>
+						<p><strong>TS9 8YU</strong> changed to <strong>TS9 8TU</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li>
+				<!-- /////////////////////////// LI ITEM 2 - END /////////////////////////// -->
+
+				<!-- DATE INDICATOR - START -->
+				<li class="sectionContent date-indicator all order-5">
+					<span class="dot"></span>
+					<span class="border"></span>
+					<div>This week</div>
+				</li>
+				<!-- DATE INDICATOR - END -->
+
+				<!-- /////////////////////////// LI ITEM 3 - START /////////////////////////// -->
+				<li class="sectionContent commission-visit four all order-6">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Contact details
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>01/12/2017 14:22 — #XU</div>
+							</h2>
+						</div>
+						<p><strong>01234 56789</strong> changed to <strong>01234 568765</strong></p>
+						<p><strong>Mobile phone</strong> set to <strong>07079962666</strong></p>
+
+					</div>
+
+					<span class="dot end"></span>
+
+				</li>
+				<!-- /////////////////////////// LI ITEM 3 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 4 - START /////////////////////////// -->
+				<li class="sectionContent case two all order-7">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Additional Information
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>01/06/2017 14:22 — #XU</div>
+							</h2>
+						</div>
+						<p><strong>Post</strong> changed from <strong>Yes</strong> to <strong>No</strong></p>
+						<p><strong>Interpreter</strong> set to <strong>No</strong></p>
+						<p><strong>Newsletter</strong> changed from <strong>Yes</strong> to <strong>No</strong></p>
+
+					</div>
+
+					<span class="dot end"></span>
+
+				</li>
+				<!-- /////////////////////////// LI ITEM 4 - END /////////////////////////// -->
+
+				<!-- DATE INDICATOR - START -->
+				<li class="sectionContent date-indicator all order-8">
+					<span class="dot"></span>
+					<span class="border"></span>
+					<div>This month</div>
+				</li>
+				<!-- DATE INDICATOR - END -->
+
+				<!-- /////////////////////////// LI ITEM 5 - START /////////////////////////// -->
+				<li class="sectionContent case one all order-9">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Unlink
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>10/04/2017 14:22 — #XU</div>
+							</h2>
+						</div>
+						<p><strong>Unlinked</strong> from case  <a href="#">HW - 10435252 - 7000-0000-3435</a> on <strong>10/04/2017</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li>
+				<!-- /////////////////////////// LI ITEM 5 - END /////////////////////////// -->
+
+				<!-- DATE INDICATOR - START -->
+				<li class="sectionContent date-indicator all order-10">
+					<span class="dot"></span>
+					<span class="border"></span>
+					<div>Older</div>
+				</li>
+				<!-- DATE INDICATOR - END -->
+
+				<!-- /////////////////////////// LI ITEM 6 - START /////////////////////////// -->
+				<li class="sectionContent client one all order-11">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Link
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>10/04/2017 14:23 — #XWClient</div>
+							</h2>
+						</div>
+
+						<p><strong>Linked</strong> to case <a href="#">HW - 10435261 - 7000-0000-3436</a> on <strong>10/04/2017</strong></p>
+
+					</div>
+
+					<span class="dot end"></span>
+
+				</li>
+				<!-- /////////////////////////// LI ITEM 6 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 7 - START /////////////////////////// -->
+				<!-- <li class="sectionContent case one all order-12">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Level of Supervision
+								<div class="created"><span class="icon"></span>Updated by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>06 Jul 2017 14:22 — #XU</div>
+							</h2>
+						</div>
+						<p>Level of supervision set to <strong>General</strong> from 01/01/2017</p>
+						<p>Notes: <strong>Notes</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li> -->
+				<!-- /////////////////////////// LI ITEM 7 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 8 - START /////////////////////////// -->
+				<!-- <li class="sectionContent case two all order-13">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Order created
+								<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>06 Jul 2017 14:21 — #XROrder</div>
+							</h2>
+						</div>
+						<p><strong>PFA 7000-0000-2506</strong></p>
+						<p>Order case (7000-0000-2506) created on: <strong>06/07/2017</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li> -->
+				<!-- /////////////////////////// LI ITEM 8 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 9 - START /////////////////////////// -->
+				<!-- <li class="sectionContent client three all order-14">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Client phone number
+								<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>06 Jul 2017 14:17 — #XPPhone Number</div>
+							</h2>
+						</div>
+						<p>Work number was changed to <strong>07476989745</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li> -->
+				<!-- /////////////////////////// LI ITEM 9 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 10 - START /////////////////////////// -->
+				<!-- <li class="sectionContent client three all order-15">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Client address
+								<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>06 Jul 2017 14:17 — #XO</div>
+							</h2>
+						</div>
+						<p><strong>Address updated</strong></p>
+						<p>128 middleton hall, harborne, b, Birmingham, West Midlands, B301SL, United Kingdom.</p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li> -->
+				<!-- /////////////////////////// LI ITEM 10 - END /////////////////////////// -->
+
+				<!-- /////////////////////////// LI ITEM 11 - START /////////////////////////// -->
+				<!-- <li class="sectionContent client three all order-16">
+
+					<span class="dot"></span>
+					<span class="border"></span>
+
+					<div class="wrapper">
+						<div class="title">
+							<h2>
+								<span class="icon type"></span>
+								Client created
+								<div class="created"><span class="icon"></span>Created by <a href="#">case manager</a> — 12345678</div>
+								<div class="date"><span class="icon"></span>06 Jul 2017 14:17 — #XN</div>
+							</h2>
+						</div>
+						<p><strong>Super Mario</strong> (7000-0000-2472)</p>
+						<p>Court Reference: <strong>11605598</strong></p>
+					</div>
+
+					<span class="dot end"></span>
+
+				</li> -->
+				<!-- /////////////////////////// LI ITEM 11 - END /////////////////////////// -->
+
+			</ol>
+		</div>
+	</div>
+	<!-- // TIMELINE - END // -->
+
+</div>
+<!-- // TIMELINE - END // -->
+
+<!-- // MODAL - START // -->
+<div id="review-report-1" style="display:none;">
+	<img src="../../../production/img/V21/document-thumbnail.png" alt="Document" class="document-item">
+</div>
+<!-- // MODAL - END // -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->
+ </div> <!-- =========== TAB CONTENT - 6 - END =========== --> <!-- =========== TAB CONTENT - 7 - START =========== --> <div id="tab-7" class="tab-content"> <h2 class="description-title">Deputy documents</h2> <!-- // DOCUMENT VIEWER - START // -->
+<div id="documents-viewer">
+
+	<!-- ============================ DOCUMENT 1 - START ============================ -->
+	<div class="doc-container document-1">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1 accordion">
+
+			<!-- //////// ACCORDION SECTION 1 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-1">
+					Visits
+					<span></span>
+				</button>
+
+				<div id="accordion-1" class="accordion-section-content">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>11/06/2017 11:07:13</p></td>
+							</tr>
+							<tr>
+								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>18/06/2017 12:20:10</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 1 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 2 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-2">
+					Reports
+					<span></span>
+				</button>
+
+				<div id="accordion-2" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>30/06/2017 16:31:01</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 2 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 3 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-3">
+					Correspondence
+					<span></span>
+				</button>
+
+				<div id="accordion-3" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>Today, 15:21:03</p></td>
+							</tr>
+							<tr>
+								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>03/06/2017 11:07:13</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 3 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 4 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-4">
+					Court documents
+					<span></span>
+				</button>
+
+				<div id="accordion-4" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Incoming</p></td>
+								<td><p>27/08/2017 08:17:13</p></td>
+							</tr>
+							<tr>
+								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>31/06/2017 12:52:52</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 4 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 5 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-5">
+					Other
+					<span></span>
+				</button>
+
+				<div id="accordion-5" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>21/06/2017 11:07:13</p></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
+										Video-of-client.mov
+										<span class="download"></span>
+									</a>
+								</td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Incoming</p></td>
+								<td><p>27/06/2017 11:07:13</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 5 - END - //////// -->
+
+		</div>
+
+		<div class="page-2 document-viewing-panel">
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+				</div>
+				<img src="../../../production/img/V21/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V21/document-report.png" alt="Document">
+			</div>
+		</div>
+	</div>
+	<!-- ============================ DOCUMENT 1 - END ============================ -->
+
+
+
+	<!-- ============================ DOCUMENT 2 - START ============================ -->
+	<div class="doc-container document-2">
+
+		<a href="#" class="close">Close</a>
+
+		<div class="page-1 accordion">
+
+			<!-- //////// ACCORDION SECTION 6 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-6">
+					Visits
+					<span></span>
+				</button>
+
+				<div id="accordion-6" class="accordion-section-content">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>11/06/2017 11:07:13</p></td>
+							</tr>
+							<tr>
+								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>18/06/2017 12:20:10</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 6 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 7 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-7">
+					Reports
+					<span></span>
+				</button>
+
+				<div id="accordion-7" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>30/06/2017 16:31:01</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 7 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 8 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-8">
+					Correspondence
+					<span></span>
+				</button>
+
+				<div id="accordion-8" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>Today, 15:21:03</p></td>
+							</tr>
+							<tr>
+								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>03/06/2017 11:07:13</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 8 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 9 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-9">
+					Court documents
+					<span></span>
+				</button>
+
+				<div id="accordion-9" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Incoming</p></td>
+								<td><p>27/08/2017 08:17:13</p></td>
+							</tr>
+							<tr>
+								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>31/06/2017 12:52:52</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 9 - END - //////// -->
+
+			<!-- //////// ACCORDION SECTION 10 - START - //////// -->
+			<div class="accordion-section">
+
+				<button class="accordion-section-title documents" href="#accordion-10">
+					Other
+					<span></span>
+				</button>
+
+				<div id="accordion-10" class="accordion-section-content" style="">
+					<table class="livelink-documents">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Doc type</th>
+								<th>Direction</th>
+								<th>Date created</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Outgoing</p></td>
+								<td><p>21/06/2017 11:07:13</p></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
+										Video-of-client.mov
+										<span class="download"></span>
+									</a>
+								</td>
+								<td><p>IT-SS-ORDER</p></td>
+								<td><p>Incoming</p></td>
+								<td><p>27/06/2017 11:07:13</p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //////// ACCORDION SECTION 10 - END - //////// -->
+
+		</div>
+
+		<div class="page-2 document-viewing-panel">
+			<div class="control-panel">
+				<h2>Current annual report</h2>
+				<div class="buttons">
+					<a href="#" class="back">Back</a>
+					<a href="#" class="compare">Compare</a>
+				</div>
+				<img src="../../../production/img/V21/control-panel.png" alt="Document" class="control-panel-buttons">
+			</div>
+			<div class="wrapper">
+				<img src="../../../production/img/V21/document-report.png" alt="Document">
+			</div>
+		</div>
+
+	</div>
+	<!-- ============================ DOCUMENT 2 - END ============================ -->
+
+</div>
+<!-- // DOCUMENT VIEWER - END // -->
+ </div> <!-- =========== TAB CONTENT - 7 - END =========== --> </div> <div class="large-3 large-uncentered columns"> <!-- // ACTIONS NAV - START // -->
+<nav class="actions-nav back-up-buttons">
+<!-- <nav class="actions-nav client-panel back-up-buttons"> -->
+
+	<h1>Perform a task:</h1>
+
+	<ul>
+		<!-- // MAIN CTA's -  START // -->
+		<!-- <li class="active main-link">
+			<a href="#" class="main-cta">
+				Link to client
+			</a>
+		</li> -->
+
+		<!-- <li class="supervision">
+			<a href="#" class="action deputy-delete">
+				<span class="icon"></span>
+				<span>Delete deputy</span>
+			</a>
+		</li> -->
+		<li class="active deputy-death-button">
+			<a href="../15-deputy-death/15a-deputy-death.html" class="action deputy-death">
+				<span></span>Record death
+			</a>
+		</li>
+		<!-- // MAIN CTA's -  END // -->
+
+		<!-- <li class="seperator deputy-death-seperator"></li> -->
+
+		<li class="active">
+			<a href="../12-edit-deputy/12a-check-deputy-1.html" class="action edit-deputy-action">
+				<span></span>Edit deputy
+			</a>
+		</li>
+		<li class="active">
+			<a href="../21-deputy-contacts/21a-add-contact.html" class="action add-contact">
+				<span></span>Add a contact
+			</a>
+			<a href="../21-deputy-contacts/21a-add-contact.html" class="action add-pa-contact">
+				<span></span>Add an office
+			</a>
+			<a href="../21-deputy-contacts/21b-add-contact.html" class="action add-pro-contact">
+				<span></span>Add an office
+			</a>
+		</li>
+		<li class="active">
+			<a href="../6-commission-visit/6a-why.html" class="action commission-visit">
+				<span></span>Commission a visit
+			</a>
+		</li>
+		<li class="active">
+			<a href="../2-create-letter/2a-create-letter.html" class="action create-letter">
+				<span></span>Create correspondence
+			</a>
+		</li>
+		<li class="active retrieve-drafts">
+			<a href="../2-create-letter/2d-edit-letter.html" class="action create-letter">
+				<span></span>Retrieve drafts
+			</a>
+		</li>
+		<li class="active">
+			<a href="../8-create-task/8a-create-task.html" class="action create-task">
+				<span></span>Create task
+			</a>
+		</li>
+		<li class="active">
+			<a href="../11-new-event/11a-new-event.html" class="action new-event">
+				<span></span>New event
+			</a>
+		</li>
+		<li class="active">
+			<a href="../17-warnings/17a-create-warning.html" class="action warnings">
+				<span></span>Create warning
+			</a>
+		</li>
+	</ul>
+
+</nav>
+<!-- // ACTIONS NAV - END // -->
+ </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- // MODAL - START // -->
+<div id="delete-contact" style="display:none;">
+	<h1>Delete this contact?</h1>
+	<h2><div class="contact-name">Joe</div></h2>
+	<p>
+		Are you sure you want to continue and delete <strong class="contact-name"></strong> from <strong class="client-name">Mr Gerald Brackens</strong>?
+	</p>
+	<!-- <hr> -->
+	<div class="cta-row">
+		<a class="main-cta" id="delete-contact-confirm">Yes, delete the contact</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
+<!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- <div id="animated-example" class="animated bounce with-cta-footer"></div> --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V21/hideShowPassword.js"></script>
+	<script src="../../../production/js/V21/jquery.cookie.js"></script>
+	<script src="../../../production/js/V21/jquery.modal.js"></script>
+	<script src="../../../production/js/V21/sticky-item.js"></script>
+
+	<!-- Datepicker - START -->
+	<script src="../../../production/js/V21/jquery-new-datepicker.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script>
+		$( function() {
+			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+		} );
+	</script>
+	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
+	<!-- <script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script> -->
+	<!-- Datepicker - END -->
+
+	<script src="../../../production/js/V21/my-cookies/my-cookies.js"></script>
+	<script src="../../../production/js/V21/my-jquery/my-jquery.js"></script>
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../../production/js/V21/my-cookies/commission-visit.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-bond.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-page.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-case.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-deputy.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact-pa.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
+	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
+	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
+	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
+	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
+	<script src="../../../production/js/V21/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V21/my-cookies/warnings.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact.js"></script>
+	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
+	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
+	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
+	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact-pa.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact-pro.js"></script>
+	<script src="../../../production/js/V21/my-jquery/edit-deputy.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-letter.js"></script>
+	<script src="../../../production/js/V21/my-jquery/report-period.js"></script>
+	<script src="../../../production/js/V21/my-jquery/supervision-level.js"></script>
+	<script src="../../../production/js/V21/my-jquery/order-status.js"></script>
+	<script src="../../../production/js/V21/my-jquery/new-event.js"></script>
+	<script src="../../../production/js/V21/my-jquery/warnings.js"></script>
+	<script src="../../../production/js/V21/my-jquery/progress-bar.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact.js"></script>
+	<script src="../../../production/js/V21/my-jquery/timeline.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
+	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
+	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
+	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
+	<!-- User Journey - JQuery - END -->
+
+	<script src="../../../production/js/V21/jquery.tablesorter.js"></script>
+
+	<!-- Autocomplete - JQuery - START -->
+	<script src="../../../production/js/V21/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V21/autocomplete/autocomplete.js"></script>
+	<script src="../../../production/js/V21/autocomplete/all-users.js"></script>
+	<script src="../../../production/js/V21/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V21/autocomplete/inserts-list.js"></script>
+	<script src="../../../production/js/V21/autocomplete/template-list.js"></script>
+	<script src="../../../production/js/V21/autocomplete/create-task.js"></script>
+	<script src="../../../production/js/V21/autocomplete/clients-another-team.js"></script>
+	<script src="../../../production/js/V21/autocomplete/clients-user-in-team.js"></script>
+	<script src="../../../production/js/V21/autocomplete/completed-tasks.js"></script>
+	<!-- Autocomplete - JQuery - END -->
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V21/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+
+		$(document).ready(function() {
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+		});
+
+		// $(document).ready(function() {
+		// 	$("#tasks-table").tablesorter( {sortList: [[0,0]]} );
+		// });
+
+	</script>
+<!-- // JS BODY END - END // -->
+<!-- <div id="animated-example" class="animated bounce"></div> --></body></html>

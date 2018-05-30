@@ -1,0 +1,114 @@
+{
+  "template": "default"
+}
+
+{{= it.include('main-nav.html') }}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <span>Welcome:</span>
+                    </nav>
+                    <h1><div class="sirius-user-id">Susan Smith</div></h1>
+                    <span class="horizontal-border"></span>
+                    <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper dashboard">
+
+          <!-- =========== FILTER - START =========== -->
+          <!-- <form class="filter" action="search.html">
+               <div class="row">
+
+                    <div class="large-6 large-uncentered columns">
+
+                         <div class="wrapper dashboard-search">
+                              <label for="visit-commissioned-by">Search:</label>
+                         	<input data-default="178.4" name="search" id="sirius-search" placeholder="Search by SIRIUS ID or Client name..." type="search">
+                         	<input class="submit" type="submit">
+                         </div>
+
+                    </div>
+
+               </div>
+          </form> -->
+          <!-- =========== FILTER - END =========== -->
+
+          <!-- =========== TABS - START =========== -->
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <ul class="tabs">
+                         <li class="tab-link current" data-tab="tab-1">
+                              <span>9</span> My tasks
+                         </li>
+               		<!-- <li class="tab-link" data-tab="tab-2">
+                              <span>4</span> My cases
+                         </li> -->
+                         <li class="tab-link completed" data-tab="tab-3">
+                              <span>0</span> My completed tasks
+                         </li>
+                    </ul>
+               </div>
+          </div>
+          <!-- =========== TABS - END =========== -->
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content dashboard current">
+
+                         {{= it.include('dashboard/dashboard-tab-tasks.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content dashboard">
+
+                         {{= it.include('dashboard/dashboard-tab-cases.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content dashboard">
+
+                         {{= it.include('dashboard/dashboard-tab-completed-tasks.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== -->
+
+
+
+               </div>
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+</script>
+<!-- SCRIPT CONTENT - END -->

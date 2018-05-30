@@ -1,0 +1,71 @@
+<!-- /////////////// FILTER PANEL - START /////////////// -->
+<div class="filter-panel completed-tasks">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="">
+		<form class="search-filters completed-tasks">
+
+			<!-- <div class="search-section">
+				<input type="search" name="search" id="search-table" onkeyup="myFunction()" placeholder="Search for clients name..." autocomplete="off">
+			</div> -->
+			<div class="filter-buttons">
+
+				<!-- <h1>Clients</h1> -->
+
+				<div class="main-filter">
+					<label for="filter-date-completed" class="float-left title-label">Filter</label>
+					<div class="section-1">
+						<select id="filter-date-completed" class="">
+							<option value="">-- Timeline --</option>
+							<option value="Today">Today</option>
+							<option value="Last 7 days">Last 7 days</option>
+							<option value="Last month">Last month</option>
+							<option value="Last 60 days">Last 60 days</option>
+							<option value="All">All completed tasks</option>
+						</select>
+
+					</div>
+					<div class="section-2">
+						<input id="filter-type-completed" name="filter-type-completed" type="text" value="" placeholder="Search by task type...">
+					</div>
+					<div class="section-3">
+						<input class="filter-completed-user" name="filter-completed-user" type="text" value="" placeholder="Search by user...">
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">1</span>
+							<br>
+							<span class="desc">task</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<a href="#" class="clear-filter">Clear</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th><span></span>Type</th>
+								<th><span></span>Case type</th>
+								<th><span></span>Completed</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->

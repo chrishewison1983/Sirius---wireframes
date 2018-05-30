@@ -1,0 +1,244 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="dashboard">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <!-- <nav class="breadcrumb">
+                         <span>Welcome:</span>
+                    </nav> -->
+                    <h1>Welcome: <div class="sirius-user-id">Susan Smith</div></h1>
+                    <span class="horizontal-border"></span>
+                    <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper dashboard">
+
+          <!-- =========== FILTER - START =========== -->
+          <!-- <form class="filter" action="search.html">
+               <div class="row">
+
+                    <div class="large-6 large-uncentered columns">
+
+                         <div class="wrapper dashboard-search">
+                              <label for="visit-commissioned-by">Search:</label>
+                         	<input data-default="178.4" name="search" id="sirius-search" placeholder="Search by SIRIUS ID or Client name..." type="search">
+                         	<input class="submit" type="submit">
+                         </div>
+
+                    </div>
+
+               </div>
+          </form> -->
+          <!-- =========== FILTER - END =========== -->
+
+          <!-- =========== TABS - START =========== -->
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <ul class="dashboard-tabs tabs">
+                         <li class="tab-link current" data-tab="tab-0">
+                              Summary
+                         </li>
+                         <li class="tab-link" data-tab="tab-1">
+                              <span>15</span> Re-assign tasks
+                         </li>
+               		<!-- <li class="tab-link" data-tab="tab-2">
+                              <span>4</span> My cases
+                         </li> -->
+                         <li class="tab-link completed" data-tab="tab-3">
+                              <span>1</span> Completed tasks
+                         </li>
+                         <li class="tab-link" data-tab="tab-4">
+                              <span class="small">999+</span> Re-assign clients
+                         </li>
+                         <li class="tab-link hide" data-tab="tab-5">
+                              <span>55</span> Re-assign deputies
+                         </li>
+                    </ul>
+               </div>
+          </div>
+          <!-- =========== TABS - END =========== -->
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 0 - START =========== -->
+                    <div id="tab-0" class="tab-content dashboard current">
+
+                         {{= it.include('dashboard/dashboard-team-summary.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 0 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content dashboard task-details">
+
+                         <h2 class="description-title">Re-assign tasks</h2>
+
+                         <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                         <div class="wrapper pagination-wrapper">
+                              <div id="pagination-small" class="pagination-small">
+                                   <a>-</a>
+                                   <span>
+                                        <a class="current">1</a>
+                                        <a>2</a>
+                                        <a>3</a>
+                                        <a>4</a>
+                                        <a>5</a>
+                                   </span>
+                                   <a>+</a>
+                              </div>
+                         </div>
+                         <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                         {{= it.include('filters/filter-tasks.html') }}
+
+                         {{= it.include('confirmation/tasks-re-assigned.html') }}
+
+                         {{= it.include('dashboard/dashboard-tab-tasks.html') }}
+
+                         {{= it.include('modals/dashboard-re-assign-tasks.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content dashboard">
+
+                         {{= it.include('dashboard/dashboard-tab-cases.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content dashboard">
+
+                         <h2 class="description-title completed">Completed tasks: <div class="timeline-value">Today</div></h2>
+
+                         <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                         <div class="wrapper pagination-wrapper">
+                              <div id="pagination-small" class="completed-tasks-pagination pagination-small">
+                                   <a>-</a>
+                                   <span>
+                                        <a class="current">1</a>
+                                        <a>2</a>
+                                        <a>3</a>
+                                        <a>4</a>
+                                        <a>5</a>
+                                   </span>
+                                   <a>+</a>
+                              </div>
+                         </div>
+                         <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                         {{= it.include('filters/filter-completed-tasks.html') }}
+
+                         {{= it.include('dashboard/dashboard-tab-completed-tasks.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content dashboard client-details">
+
+                         <h2 class="description-title">Re-assign clients</h2>
+
+                         <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                         <div class="wrapper pagination-wrapper">
+                              <div id="pagination-small" class="pagination-small">
+                                   <a>-</a>
+                                   <span>
+                                        <a class="current">1</a>
+                                        <a>2</a>
+                                        <a>3</a>
+                                        <a>4</a>
+                                        <a>5</a>
+                                   </span>
+                                   <a>+</a>
+                              </div>
+                         </div>
+                         <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                         {{= it.include('filters/filter-clients.html') }}
+
+                         {{= it.include('confirmation/clients-re-assigned.html') }}
+
+                         {{= it.include('dashboard/dashboard-tab-clients.html') }}
+
+                         {{= it.include('modals/dashboard-re-assign-clients.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 5 - START =========== -->
+                    <div id="tab-5" class="tab-content dashboard">
+
+                         <h2 class="description-title">Re-assign deputies</h2>
+
+                         <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                         <div class="wrapper pagination-wrapper">
+                              <div id="pagination-small" class="pagination-small">
+                                   <a>-</a>
+                                   <span>
+                                        <a class="current">1</a>
+                                        <a>2</a>
+                                        <a>3</a>
+                                        <a>4</a>
+                                        <a>5</a>
+                                   </span>
+                                   <a>+</a>
+                              </div>
+                         </div>
+                         <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                         {{= it.include('filters/filter-deputies.html') }}
+
+                         {{= it.include('confirmation/deputies-re-assigned.html') }}
+
+                         {{= it.include('dashboard/dashboard-tab-deputies.html') }}
+
+                         {{= it.include('modals/dashboard-re-assign-deputy.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 5 - END =========== -->
+
+               </div>
+          </div>
+
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script src="../../../production/js/V20/pagination.js"></script>
+
+<script type="text/javascript">
+
+     if($(window).width() > 481) {
+          $(function() {
+               moveScroller();
+          });
+     }
+
+</script>
+<!-- SCRIPT CONTENT - END -->

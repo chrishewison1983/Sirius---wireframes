@@ -1,0 +1,901 @@
+<!-- // CONFIRMATION MESSAGE - START // -->
+<!-- <div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="confirmation-dashboard-visit" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your visit has been commissioned to
+					<div class="client-icon-title">Mr</div>
+					<div class="client-icon-first-name">Gerald</div>
+					<div class="client-icon-last-name">Brackens</div>
+				</h2>
+			</div>
+		</div>
+		<div id="task-complete" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been marked as completed
+				</h2>
+			</div>
+		</div>
+		<div id="task-re-assigned" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been re-assigned
+				</h2>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- // CONFIRMATION MESSAGE - END // -->
+
+<div class="dashboard-item-container">
+
+	<table id="dashboard-tasks-table" class="tablesorter">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th><span></span>Task due date</th>
+				<th class="non-sort">Case type</th>
+				<!-- <th>Task status</th> -->
+				<!-- <th><span></span>Assigned to</th> -->
+				<th class="text-align-right">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- TASK 1 - START -->
+			<tr class="order-review-the-order urgent-row joe-bloggs today next-7-days next-month next-60-days all" data-task="1">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../4-client-page/4a-new-client.html#HandW" class="task">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="full-task-notes" data-value="1">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/03/2018</p>
+					<div class="counter alert">
+						<span class="number">-4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 1 - END -->
+
+			<!-- TASK 1 - NOTES - START -->
+			<tr class="details-row" data-task="1">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 1 - NOTES - END -->
+
+			<!-- TASK 2 - START -->
+			<tr class="visit-commission urgent-row link-for-commission-visit joe-bloggs today next-7-days next-month next-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/03/2018</p>
+					<div class="counter alert">
+						<span class="number">-2</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 2 - START -->
+
+			<!-- TASK 3 - START -->
+			<tr class="order-review-the-order urgent-row hannah-nixon today next-7-days next-month next-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/03/2018</p>
+					<div class="counter alert">
+						<span class="number">-1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 3 - END -->
+
+			<!-- TASK 4 - START -->
+			<tr class="amber-row order-review-the-order joe-bloggs next-7-days next-month next-60-days all" data-task="2">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Order - Review the order</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-7852</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Rory Harrington</a></p>
+								<p><a href="#" class="full-task-notes" data-value="2">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/04/2018</p>
+					<div class="counter warning">
+						<span class="number">1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 4 - END -->
+
+			<!-- TASK 4 - NOTES - START -->
+			<tr class="details-row" data-task="2">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 4 - NOTES - END -->
+
+			<!-- TASK 5 - START -->
+			<tr class="amber-row order-review-the-order joe-bloggs next-7-days next-month next-60-days all" data-task="3">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Review Death Notification Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3029</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Ms Georgia Lynch</a></p>
+								<p><a href="#" class="full-task-notes" data-value="3">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/04/2018</p>
+					<div class="counter warning">
+						<span class="number">1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 5 - START -->
+
+			<!-- TASK 5 - NOTES - START -->
+			<tr class="details-row" data-task="3">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 5 - NOTES - END -->
+
+			<!-- TASK 6 - START -->
+			<tr class="amber-row visit-report-due david-harper next-month next-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Jennifer Moss</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>01/04/2018</p>
+					<div class="counter warning">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 6 - START -->
+
+			<!-- TASK 7 - START -->
+			<tr class="amber-row order-review-the-order team-one next-7-days next-month next-60-days all" data-task="4">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Review Disclaimer Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3829</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Laura Dunn</a></p>
+								<p><a href="#" class="full-task-notes" data-value="4">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>02/04/2018</p>
+					<div class="counter warning">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 7 - END -->
+
+			<!-- TASK 7 - NOTES - START -->
+			<tr class="details-row" data-task="4">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 7 - NOTES - END -->
+
+			<!-- TASK 8 - START -->
+			<tr class="amber-row order-review-the-order joe-bloggs next-7-days next-month next-60-days all" data-task="5">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Visit - Required</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-5263</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Ms Paige Spiranac</a></p>
+								<p><a href="#" class="full-task-notes" data-value="5">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>18/03/2018</p>
+					<div class="counter warning">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 8 - START -->
+
+			<!-- TASK 8 - NOTES - START -->
+			<tr class="details-row" data-task="5">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 8 - NOTES - END -->
+
+			<!-- TASK 9 - START -->
+			<tr class="case-work-reply-due simon-carter next-60-days all" data-task="6">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6928</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Miss Chelsea Burton</a></p>
+								<p><a href="#" class="full-task-notes" data-value="6">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/04/2018</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 9 - END -->
+
+			<!-- TASK 9 - NOTES - START -->
+			<tr class="details-row" data-task="6">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 9 - NOTES - END -->
+
+			<!-- TASK 10 - START -->
+			<tr class="visit-report-due joe-bloggs all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4391</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Ewan Jones</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/04/2018</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 10 - START -->
+
+			<!-- TASK 11 - START -->
+			<tr class="visit-commission shiobhan-mcdermot next-month next-60-days all" data-task="7">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4019</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Morgan Graham</a></p>
+								<p><a href="#" class="full-task-notes" data-value="7">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>29/04/2018</p>
+					<div class="counter">
+						<span class="number">4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 11 - START -->
+
+			<!-- TASK 11 - NOTES - START -->
+			<tr class="details-row" data-task="7">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 11 - NOTES - END -->
+
+			<!-- TASK 12 - START -->
+			<tr class="order-review-the-order joe-bloggs next-7-days next-month next-60-days all" data-task="8">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Case Work - Reply Due</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-9563</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Dr. Steve Stricker</a></p>
+								<p><a href="#" class="full-task-notes" data-value="8">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>28/03/2018</p>
+					<div class="counter">
+						<span class="number">8</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 12 - START -->
+
+			<!-- TASK 12 - NOTES - START -->
+			<tr class="details-row" data-task="8">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 12 - NOTES - END -->
+
+			<!-- TASK 13 - START -->
+			<tr class="order-review-the-order joe-bloggs next-7-days next-month next-60-days all" data-task="9">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Visit - Required</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-7241</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Jordan Thomas</a></p>
+								<p><a href="#" class="full-task-notes" data-value="9">View task notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>22/03/2018</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 13 - START -->
+
+			<!-- TASK 13 - NOTES - START -->
+			<tr class="details-row" data-task="9">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 13 - NOTES - END -->
+
+			<!-- TASK 14 - START -->
+			<tr class="order-review-the-order joe-bloggs next-7-days next-month next-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Visit - Commission</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6842</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Ms Taylor Swift</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>19/03/2018</p>
+					<div class="counter">
+						<span class="number">4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 14 - START -->
+
+			<!-- TASK 15 - START -->
+			<tr class="order-review-the-order joe-bloggs next-7-days next-month next-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Order - Allocate to team</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-7263</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Ms Paige Spiranac</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/03/2018</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<!-- <td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td> -->
+				<td>
+					<!-- <p class="user-name-change">Bloggs, Joe</p> -->
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 15 - START -->
+
+		</tbody>
+	</table>
+
+	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
+	<div id="pagination-small">
+		<a>-</a>
+		<span>
+			<a class="current">1</a>
+			<a>2</a>
+			<a>3</a>
+			<a>4</a>
+			<a>5</a>
+		</span>
+		<a>+</a>
+	</div>
+	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+</div>

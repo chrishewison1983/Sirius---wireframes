@@ -3,7 +3,7 @@
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>OPG - Sirius</title>
-     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link rel="stylesheet" href="../../../production/css/prototype-V18.css" />
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
      <!-- ///////// Chris Prototyping Kit - START ///////// -->
@@ -12,74 +12,25 @@
      <!-- <script src="../../../production/js/V18/application.js"></script> -->
      <!-- ///////// Chris Prototyping Kit - END ///////// -->
 
-     <script type="text/javascript">
+     <!-- <script type="text/javascript">
 		var connection = new WebSocket('ws://localhost:62183');
 		connection.onmessage = function (e) {
 			location.reload();
 		};
-	</script>
+	</script> -->
 
 </head>
 <!-- // HEAD ELEMENT END // -->
-<body id="body-default"><!-- MAIN NAV - START -->
-<header class="main">
-
-     <nav>
-
-          <a href="../index.html" class="logo">
-               <img src="../../../production/img/V18/sirius-logo-small.svg" alt="Sirius">
-               <p><span>My Tasks</span></p>
-          </a>
-
-          <!-- <a href="#" class="user-cta">
-               <span class="nav-icon"></span>
-               <div class="sirius-user-id">Susan Smith</div>
-          </a> -->
-
-          <a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
-               <span class="nav-icon"></span>
-               <p><span>Create client</span></p>
-          </a>
-
-          <!-- <a href="../5-add-deputy/5a-search-deputy.html" class="create-deputy allocations main-cta">
-               <span class="nav-icon"></span>
-               <p><span>Create deputy</span></p>
-          </a> -->
-
-
-          <!-- <ul class="padding-wrapper">
-               <li class="actions create-letter">
-                    <a href="2-create-letter/2a-create-letter.html">
-                         <span class="nav-icon"></span>
-                         Create letter
-                    </a>
-               </li>
-               <li class="actions create-letter">
-                    <a href="#">
-                         <span class="nav-icon"></span>
-                         Add deputy
-                    </a>
-               </li>
-          </ul> -->
-
-          <a href="../index.html" class="main-cta sign-out">
-               <span class="nav-icon"></span>
-               <p><span>Sign out</span></p>
-          </a>
-
-          <!-- <a href="#" class="minimise">
-               Minimise
-          </a> -->
-
-     </nav>
-
-</header>
-<!-- MAIN NAV - END -->
-<!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
+
+			<a href="../index.html" class="logo">
+				<img src="../../../production/img/V18/sirius-logo-small.svg" alt="Sirius">
+				<p><span>Dashboard</span></p>
+			</a>
 
 			<div class="preferences">
 				<a href="#" class="user-cta">
@@ -105,13 +56,23 @@
 				</ul>
 			</div>
 
+			<a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+				<span class="nav-icon"></span>
+				<p><span>Create client</span></p>
+			</a>
+
+			<a href="../index.html" class="main-cta sign-out">
+				<span class="nav-icon"></span>
+				<p><span>Sign out</span></p>
+			</a>
+
 			<form action="search.html">
 				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
 
 			<label class="switch">
-				<span>Switch to: <strong>LPA Cases</strong></span>
+				<span>Switch to: <strong>LPA</strong></span>
 				<input type="checkbox">
 				<div class="slider round"></div>
 			</label>
@@ -123,7 +84,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a> <div class="separator"> > </div> <span>Check deputy details</span> </nav> <h1> Check Mrs Lara Stevens details </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a> <div class="separator"> > </div> <span>Check deputy details</span> </nav> <h1> Check Mrs Lara Stevens details </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
 <div class="check-details" id="client-details">
 
 	<h2 class="description-title">
@@ -297,29 +258,14 @@
           <!-- <a href="../5-add-deputy/5a-search-deputy.html" class="add">Add deputy</a> -->
      </h2>
 
-     <!-- // CONFIRMATION MESSAGE - START // -->
-	<div class="row">
-		<div class="large-12 large-uncentered columns">
-			<div id="unlink-complete" class="confirmation-panel">
-				<div class="content">
-					<h2>
-						<span></span>
-						"<div>Mrs Carla Frith</div>" has been unlinked as a deputy
-					</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // CONFIRMATION MESSAGE - END // -->
-
      <table id="deputies-table" class="deputies-table-pfa">
           <thead>
                <tr class="six-column">
                     <th>Details</th>
                     <th>Type</th>
                     <th>Status</th>
-                    <th>Relationship</th>
-                    <th></th>
+                    <th class="deputy-info-only">Relationship</th>
+                    <th  class="deputy-info-only"></th>
                     <th><div>Actions</div></th>
                </tr>
           </thead>
@@ -330,8 +276,8 @@
                          <!-- <span class="icon deputy"></span> -->
                          <div class="name">
                               <div>Mrs Lara Stevens</div>
-                         </div><br>
-                         <div class="appointed">JOINT</div><br>
+                         </div>
+                         <div class="appointed deputy-info-only">JOINT</div><br>
                          <div class="address">34 Broomfield Place, STOKESLEY, TS9 8TU. United Kingdom</div>
                          <a href="#" class="full-details" data-value="1">View full details</a>
                     </td>
@@ -339,19 +285,19 @@
                          Lay
                     </td>
                     <td>
-                         <div class="deputy-status-error">Open</div>
+                         <div class="deputy-status-death">Active</div>
                     </td>
-                    <td>
-                         Sibling
+                    <td class="deputy-info-only">
+                         <div class="deputy-relationship-answer">Sibling</div>
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          <span class="icon fee-payer"><p>Fee payer</p></span>
                          <span class="icon main-contact"><p>Main correspondence</p></span>
                          <!-- <span class="icon welfare"><p>Health &amp; welfare</p></span> -->
                     </td>
                     <td>
                          <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
-                         <a class="main-cta tertiary edit edit-deputy-1-journey" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
+                         <a class="main-cta tertiary edit edit-deputy-1-journey deputy-info-only" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
                          <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
                     </td>
@@ -495,46 +441,50 @@
                          <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
 
                          <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
-                         <h2 class="description-title">Case details:</h2>
+                         <div class="deputy-order-details">
 
-                         <div class="details-wrap">
+                              <h2 class="description-title">Case details:</h2>
 
-                              <!-- // DEPUTY ITEM - 1 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Type of deputy:</p>
-                                   <p class="answer">Lay</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 1 - END // -->
+                              <div class="details-wrap">
 
-                              <!-- // DEPUTY ITEM - 2 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Relationship to the client:</p>
-                                   <div class="mulitple-answers">
-                                        <p class="answer">Sibling</p>
+                                   <!-- // DEPUTY ITEM - 1 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Type of deputy:</p>
+                                        <p class="answer">Lay</p>
                                    </div>
-                              </div>
-                              <!-- // DEPUTY ITEM - 2 - END // -->
+                                   <!-- // DEPUTY ITEM - 1 - END // -->
 
-                              <!-- // DEPUTY ITEM - 3 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Deputy status:</p>
-                                   <p class="answer">Open</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 3 - END // -->
+                                   <!-- // DEPUTY ITEM - 2 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Relationship to the client:</p>
+                                        <div class="mulitple-answers">
+                                             <p class="answer">Sibling</p>
+                                        </div>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 2 - END // -->
 
-                              <!-- // DEPUTY ITEM - 4 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the fee payer?:</p>
-                                   <p class="answer">Yes</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 4 - END // -->
+                                   <!-- // DEPUTY ITEM - 3 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Deputy status:</p>
+                                        <p class="answer deputy-status-death">Active</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 3 - END // -->
 
-                              <!-- // DEPUTY ITEM - 5 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the main correspondent?:</p>
-                                   <p class="answer">Yes</p>
+                                   <!-- // DEPUTY ITEM - 4 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the fee payer?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 4 - END // -->
+
+                                   <!-- // DEPUTY ITEM - 5 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the main correspondent?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 5 - END // -->
+
                               </div>
-                              <!-- // DEPUTY ITEM - 5 - END // -->
 
                          </div>
                          <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
@@ -550,25 +500,25 @@
                          <div class="name">
                               <div>Mrs Carla Frith</div>
                               <!-- <span class="violent-label"><span class="icon violent"></span>Violent</span> -->
-                         </div><br>
-                         <div class="appointed">JOINT</div><br>
+                         </div>
+                         <div class="appointed deputy-info-only">JOINT</div><br>
                          <div class="address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div>
                          <a href="#" class="full-details" data-value="2">View full details</a>
                     </td>
                     <td>
                          Lay
                     </td>
-                    <td>
-                         <div class="deputy-status-error">Active</div>
+                    <td class="deputy-info-only">
+                         <div class="deputy-status-error deputy-status-answer">Active</div>
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          Sibling
                     </td>
                     <td>
                          <!-- <span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td> -->
                     <td>
                          <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
-                         <a class="main-cta tertiary edit edit-deputy-2-journey" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
+                         <a class="main-cta tertiary edit edit-deputy-2-journey deputy-info-only" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
                          <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
                     </td>
@@ -713,46 +663,50 @@
                          <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
 
                          <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
-                         <h2 class="description-title">Case details:</h2>
+                         <div class="deputy-order-details">
 
-                         <div class="details-wrap">
+                              <h2 class="description-title">Case details:</h2>
 
-                              <!-- // DEPUTY ITEM - 1 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Type of deputy:</p>
-                                   <p class="answer">Lay</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 1 - END // -->
+                              <div class="details-wrap">
 
-                              <!-- // DEPUTY ITEM - 2 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Relationship to the client:</p>
-                                   <div class="mulitple-answers">
-                                        <p class="answer">Sibling</p>
+                                   <!-- // DEPUTY ITEM - 1 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Type of deputy:</p>
+                                        <p class="answer">Lay</p>
                                    </div>
-                              </div>
-                              <!-- // DEPUTY ITEM - 2 - END // -->
+                                   <!-- // DEPUTY ITEM - 1 - END // -->
 
-                              <!-- // DEPUTY ITEM - 3 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Deputy status:</p>
-                                   <p class="answer">Active</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 3 - END // -->
+                                   <!-- // DEPUTY ITEM - 2 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Relationship to the client:</p>
+                                        <div class="mulitple-answers">
+                                             <p class="answer">Sibling</p>
+                                        </div>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 2 - END // -->
 
-                              <!-- // DEPUTY ITEM - 4 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the fee payer?:</p>
-                                   <p class="answer">No</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 4 - END // -->
+                                   <!-- // DEPUTY ITEM - 3 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Deputy status:</p>
+                                        <p class="answer deputy-status-error deputy-status-answer">Active</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 3 - END // -->
 
-                              <!-- // DEPUTY ITEM - 5 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the main correspondent?:</p>
-                                   <p class="answer">No</p>
+                                   <!-- // DEPUTY ITEM - 4 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the fee payer?:</p>
+                                        <p class="answer">No</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 4 - END // -->
+
+                                   <!-- // DEPUTY ITEM - 5 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the main correspondent?:</p>
+                                        <p class="answer">No</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 5 - END // -->
+
                               </div>
-                              <!-- // DEPUTY ITEM - 5 - END // -->
 
                          </div>
                          <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
@@ -762,13 +716,13 @@
                <!-- DEPUTY DETAILS ROW 2 - END -->
 
                <!-- DEPUTY SUMMARY ROW 3 - START -->
-               <tr class="pfa-content-item summary-row" data-value="3">
+               <tr class="pfa-content-item summary-row " data-value="3">
                     <td>
                          <!-- <span class="icon deputy"></span> -->
                          <div class="name">
                               <div>Mrs Melanie Rand</div>
-                         </div><br>
-                         <div class="appointed">JOINT</div><br>
+                         </div>
+                         <div class="appointed deputy-info-only">SOLE</div><br>
                          <div class="address">70 Moulton Road, Gunby Green, N6334RF. United Kingdom</div>
                          <a href="#" class="full-details" data-value="3">View full details</a>
                     </td>
@@ -776,17 +730,17 @@
                          Lay
                     </td>
                     <td>
-                         <div class="deputy-status-error">Open</div>
+                         <div class="">Active</div>
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          Daughter
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          <!-- <span class="icon property"><p>Property &amp; finance</p></span> -->
                     </td>
                     <td>
                          <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
-                         <a class="main-cta tertiary edit edit-deputy-1-journey" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
+                         <a class="main-cta tertiary edit edit-deputy-3-journey deputy-info-only" href="../12-edit-deputy/12a-check-deputy-3.html">Edit</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
                          <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
                     </td>
@@ -930,46 +884,50 @@
                          <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
 
                          <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
-                         <h2 class="description-title">Case details:</h2>
+                         <div class="deputy-order-details">
 
-                         <div class="details-wrap">
+                              <h2 class="description-title">Case details:</h2>
 
-                              <!-- // DEPUTY ITEM - 1 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Type of deputy:</p>
-                                   <p class="answer">Lay</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 1 - END // -->
+                              <div class="details-wrap">
 
-                              <!-- // DEPUTY ITEM - 2 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Relationship to the client:</p>
-                                   <div class="mulitple-answers">
-                                        <p class="answer">Sibling</p>
+                                   <!-- // DEPUTY ITEM - 1 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Type of deputy:</p>
+                                        <p class="answer">Lay</p>
                                    </div>
-                              </div>
-                              <!-- // DEPUTY ITEM - 2 - END // -->
+                                   <!-- // DEPUTY ITEM - 1 - END // -->
 
-                              <!-- // DEPUTY ITEM - 3 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Deputy status:</p>
-                                   <p class="answer">Open</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 3 - END // -->
+                                   <!-- // DEPUTY ITEM - 2 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Relationship to the client:</p>
+                                        <div class="mulitple-answers">
+                                             <p class="answer">Child of Client</p>
+                                        </div>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 2 - END // -->
 
-                              <!-- // DEPUTY ITEM - 4 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the fee payer?:</p>
-                                   <p class="answer">Yes</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 4 - END // -->
+                                   <!-- // DEPUTY ITEM - 3 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Deputy status:</p>
+                                        <p class="answer">Active</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 3 - END // -->
 
-                              <!-- // DEPUTY ITEM - 5 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the main correspondent?:</p>
-                                   <p class="answer">Yes</p>
+                                   <!-- // DEPUTY ITEM - 4 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the fee payer?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 4 - END // -->
+
+                                   <!-- // DEPUTY ITEM - 5 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the main correspondent?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 5 - END // -->
+
                               </div>
-                              <!-- // DEPUTY ITEM - 5 - END // -->
 
                          </div>
                          <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
@@ -983,18 +941,6 @@
 
 </div>
 <!-- // DEPUTY DETAILS - END // -->
-
-<!-- // MODAL - START // -->
-<div id="unlink-deputy-list" style="display:none;">
-     <h1>Unlink this deputy</h1>
-     <h2>Mrs Carla Frith</h2>
-     <p>Are you sure you wish to unlink <strong class="unlink-deputy-name">Mrs Carla Frith</strong> as a deputy for <strong>Mr Gerald Brackens</strong>?</p>
-     <div class="cta-row">
-          <a class="main-cta" id="confirm-unlink-deputy" rel="modal:close">Unlink deputy</a>
-          <a href="#" rel="modal:close" class="cancel">Cancel</a>
-     </div>
-</div>
-<!-- // MODAL - END // -->
  </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel current"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
 <div id="documents-viewer">
 
@@ -1055,7 +1001,7 @@
 						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
 						<td><p>Outgoing</p></td>
-						<td><p>01/06/2017 Today, 15:21:03</p></td>
+						<td><p>Today, 15:21:03</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
@@ -1239,7 +1185,7 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- // CREATE DEPUTY - START // --> <div id="action-panel" class="large-4 large-uncentered columns actions-panel-lay"> <div class="check-details"> <h2 class="section-title">Deputy details:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Name:</p> <p class="answer">Mrs Lara Stevens</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Previously Known As:</p> <p class="answer">Miss Lara Hodgeson</p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Date of birth:</p> <p class="answer">17/07/1981</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Address:</p> <p class="answer">34 Broomfield Place,<br> STOKESLEY,<br> TS9 8TU.<br> United Kingdom</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Is airmail required?:</p> <p class="answer">No</p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Daytime telephone number:</p> <p class="answer">07079962666</p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <!-- // DEPUTY ITEM - 7 - START // --> <div class="person-detail-item"> <p class="item">Mobile telephone number:</p> <p class="answer">07079962666</p> </div> <!-- // DEPUTY ITEM - 7 - END // --> <!-- // DEPUTY ITEM - 8 - START // --> <div class="person-detail-item"> <p class="item">Email address:</p> <p class="answer">lara.stevens@jourrapide.com</p> </div> <!-- // DEPUTY ITEM - 8 - END // --> <!-- // DEPUTY ITEM - 9 - START // --> <!-- <div class="person-detail-item"> <p class="item">Is the deputy a violent risk?:</p> <p class="answer">No</p> </div> --> <!-- // DEPUTY ITEM - 9 - END // --> <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="main-cta secondary edit deputy-link-one">Edit deputy details</a> <h2 class="section-title">Additional information:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Digital?:</p> <p class="answer">No</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Occupation:</p> <p class="answer">University professor</p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Has the deputy expressed a preferred method of contact?:</p> <ul class="answer"> <li>Email</li> </ul> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Special correspondence requirements:</p> <ul class="answer"> <li>Spelling of name requires care</li> </ul> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Interpreter required?:</p> <div class="mulitple-answers"> <p class="answer">No</p> </div> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Newsletter?:</p> <p class="answer">No</p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <a href="../5-add-deputy/5c-additional-info.html#edit-deputy-1" class="main-cta secondary edit deputy-link-two">Edit additional info</a> <div class="deputy-order-details"> <p>&nbsp;</p> <h2 class="section-title">Order details:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Type of deputy:</p> <p class="answer">Lay</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Relationship to the client:</p> <div class="mulitple-answers"> <p class="answer">Sibling</p> </div> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Deputy status:</p> <p class="answer">Open</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Is the deputy the fee payer?:</p> <p class="answer">Yes</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Is the deputy the main correspondent?:</p> <p class="answer">Yes</p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <a href="../5-add-deputy/5d-case-details.html#edit-deputy-1" class="main-cta secondary edit">Edit order details</a> </div> </div> </div> <div id="action-panel" class="large-4 large-uncentered columns actions-panel-pro"> <div class="check-details"> <h2 class="section-title">Deputy details:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Is this an Organisation?:</p> <p class="answer deputy-organisation-answer">Yes</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Correspondence name:</p> <p class="answer"> <span class="deputy-title-answer">Mr</span> <span class="deputy-first-name-answer">Stanley</span> <span class="deputy-middle-name-answer">William</span> <span class="deputy-last-name-answer">Evans</span> </p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Organisation name:</p> <p class="answer deputy-organisation-name-answer">Connor, Caur &amp; Burrows</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Company reference:</p> <p class="answer deputy-company-ref-answer">12345678</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Date of birth:</p> <p class="answer"> <span class="deputy-dob-day-answer">06</span> / <span class="deputy-dob-month-answer">01</span> / <span class="deputy-dob-year-answer">1986</span> </p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Previously Known As:</p> <p class="answer deputy-previous-name-answer">N/A</p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <!-- // DEPUTY ITEM - 7 - START // --> <div class="person-detail-item"> <p class="item">Address:</p> <p class="answer"> <span class="deputy-address-line-1-answer">92 York Road</span>,<br> <span class="deputy-address-town-answer">Oxnop Ghyll</span>,<br> <span class="deputy-manual-postcode-answer">CF8 1HN</span>.<br> <span class="deputy-country-answer">United Kingdom</span> </p> </div> <!-- // DEPUTY ITEM - 7 - END // --> <!-- // DEPUTY ITEM - 8 - START // --> <div class="person-detail-item"> <p class="item">Is airmail required?:</p> <p class="answer deputy-airmail-answer">No</p> </div> <!-- // DEPUTY ITEM - 8 - END // --> <!-- // DEPUTY ITEM - 9 - START // --> <div class="person-detail-item"> <p class="item">Daytime telephone number:</p> <p class="answer deputy-phone-number-answer">01239448394</p> </div> <!-- // DEPUTY ITEM - 9 - END // --> <!-- // DEPUTY ITEM - 10 - START // --> <div class="person-detail-item"> <p class="item">Mobile telephone number:</p> <p class="answer deputy-mob-number-answer">07852591663</p> </div> <!-- // DEPUTY ITEM - 10 - END // --> <!-- // DEPUTY ITEM - 11 - START // --> <div class="person-detail-item"> <p class="item">Email address:</p> <p class="answer deputy-email-answer">stanley.evans@ccandb.com</p> </div> <!-- // DEPUTY ITEM - 11 - END // --> <a href="#" class="main-cta secondary edit deputy-link-one">Edit deputy details</a> <h2 class="section-title">Additional information:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Occupation:</p> <p class="answer deputy-occupation-answer">Solicitor</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">How would the deputy like to be contacted?:</p> <ul class="answer"> <li class="answer-holder">Email</li> <li class="answer-holder">Phone</li> <li class="deputy-correspondence-email-answer">Email</li> <li class="deputy-correspondence-phone-answer">Phone</li> <li class="deputy-correspondence-post-answer">Post</li> <li class="deputy-correspondence-welsh-answer">Welsh</li> </ul> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Newsletter?:</p> <p class="answer deputy-newsletter-answer">No</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <a href="#" class="main-cta secondary edit deputy-link-two">Edit additional info</a> </div> </div> <div id="action-panel" class="large-4 large-uncentered columns actions-panel-pub"> <div class="check-details"> <h2 class="section-title">Deputy details:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Is this an Organisation?:</p> <p class="answer deputy-organisation-answer">Yes</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Correspondence name:</p> <p class="answer"> <span class="deputy-title-answer">Mr</span> <span class="deputy-first-name-answer">Nicolas</span> <span class="deputy-middle-name-answer">Austin</span> <span class="deputy-last-name-answer">Taylor</span> </p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Organisation name:</p> <p class="answer deputy-organisation-name-answer">Weston Parpenham</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Company reference:</p> <p class="answer deputy-company-ref-answer">12345678</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Previously Known As:</p> <p class="answer deputy-previous-name-answer">N/A</p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Address:</p> <p class="answer"> <span class="deputy-address-line-1-answer">7 Farburn Terrace</span>,<br> <span class="deputy-address-town-answer">Weston Parpenham</span>,<br> <span class="deputy-manual-postcode-answer">PE17 0FS</span>.<br> <span class="deputy-country-answer">United Kingdom</span> </p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <!-- // DEPUTY ITEM - 7 - START // --> <div class="person-detail-item"> <p class="item">Is airmail required?:</p> <p class="answer deputy-airmail-answer">No</p> </div> <!-- // DEPUTY ITEM - 7 - END // --> <!-- // DEPUTY ITEM - 8 - START // --> <div class="person-detail-item"> <p class="item">Daytime telephone number:</p> <p class="answer deputy-phone-number-answer">01268449380</p> </div> <!-- // DEPUTY ITEM - 8 - END // --> <!-- // DEPUTY ITEM - 9 - START // --> <div class="person-detail-item"> <p class="item">Mobile telephone number:</p> <p class="answer deputy-mob-number-answer">07951798017</p> </div> <!-- // DEPUTY ITEM - 9 - END // --> <!-- // DEPUTY ITEM - 10 - START // --> <div class="person-detail-item"> <p class="item">Email address:</p> <p class="answer deputy-email-answer">n.taylor@weston.parpenham.gov.uk</p> </div> <!-- // DEPUTY ITEM - 10 - END // --> <a href="#" class="main-cta secondary edit deputy-link-one">Edit deputy details</a> <h2 class="section-title">Additional information:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">How would the deputy like to be contacted?:</p> <ul class="answer"> <li class="answer-holder">Email</li> <li class="answer-holder">Phone</li> <li class="deputy-correspondence-email-answer">Email</li> <li class="deputy-correspondence-phone-answer">Phone</li> <li class="deputy-correspondence-post-answer">Post</li> <li class="deputy-correspondence-welsh-answer">Welsh</li> </ul> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Newsletter?:</p> <p class="answer deputy-newsletter-answer">No</p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <a href="#" class="main-cta secondary edit deputy-link-two">Edit additional info</a> </div> </div> <!-- // CREATE DEPUTY - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <!-- <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html">Confirm and add deputy</a> <a class="main-cta secondary" id="edit-deputy" href="12b-confirm-page.html">Edit deputy</a> --> <a href="#" onclick="history.back();" class="solo-link back">Back</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <!-- // CREATE DEPUTY - START // --> <div id="action-panel" class="large-4 large-uncentered columns actions-panel-lay"> <div class="check-details"> <h2 class="section-title"> Deputy details: <a href="../5-add-deputy/5b-deputy-details.html#edit-deputy-1" class="edit deputy-link-one">Change</a> </h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Name:</p> <p class="answer">Mrs Lara Stevens</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Previously Known As:</p> <p class="answer">Miss Lara Hodgeson</p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Date of birth:</p> <p class="answer">17/07/1981</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Address:</p> <p class="answer">34 Broomfield Place,<br> STOKESLEY,<br> TS9 8TU.<br> United Kingdom</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Is airmail required?:</p> <p class="answer">No</p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Daytime telephone number:</p> <p class="answer">07079962666</p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <!-- // DEPUTY ITEM - 7 - START // --> <div class="person-detail-item"> <p class="item">Mobile telephone number:</p> <p class="answer">07079962666</p> </div> <!-- // DEPUTY ITEM - 7 - END // --> <!-- // DEPUTY ITEM - 8 - START // --> <div class="person-detail-item"> <p class="item">Email address:</p> <p class="answer">lara.stevens@jourrapide.com</p> </div> <!-- // DEPUTY ITEM - 8 - END // --> <!-- // DEPUTY ITEM - 9 - START // --> <!-- <div class="person-detail-item"> <p class="item">Is the deputy a violent risk?:</p> <p class="answer">No</p> </div> --> <!-- // DEPUTY ITEM - 9 - END // --> <h2 class="section-title"> Additional information: <a href="../5-add-deputy/5c-additional-info.html#edit-deputy-1" class="edit deputy-link-two">Change</a> </h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Digital?:</p> <p class="answer">No</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Occupation:</p> <p class="answer">University professor</p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Has the deputy expressed a preferred method of contact?:</p> <ul class="answer"> <li>Email</li> </ul> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Special correspondence requirements:</p> <ul class="answer"> <li>Spelling of name requires care</li> </ul> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Interpreter required?:</p> <div class="mulitple-answers"> <p class="answer">No</p> </div> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Newsletter?:</p> <p class="answer">No</p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <div class="deputy-order-details"> <p>&nbsp;</p> <h2 class="section-title"> Order details: <a href="../5-add-deputy/5d-case-details.html#edit-deputy-1" class="edit">Change</a> </h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Type of deputy:</p> <p class="answer">Lay</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Relationship to the client:</p> <div class="mulitple-answers"> <p class="answer">Sibling</p> </div> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Deputy status:</p> <p class="answer">Active</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Is the deputy the fee payer?:</p> <p class="answer">Yes</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Is the deputy the main correspondent?:</p> <p class="answer">Yes</p> </div> <!-- // DEPUTY ITEM - 5 - END // --> </div> </div> </div> <div id="action-panel" class="large-4 large-uncentered columns actions-panel-pro"> <div class="check-details"> <h2 class="section-title">Deputy details:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Is this an Organisation?:</p> <p class="answer deputy-organisation-answer">Yes</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Correspondence name:</p> <p class="answer"> <span class="deputy-title-answer">Mr</span> <span class="deputy-first-name-answer">Stanley</span> <span class="deputy-middle-name-answer">William</span> <span class="deputy-last-name-answer">Evans</span> </p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Organisation name:</p> <p class="answer deputy-organisation-name-answer">Connor, Caur &amp; Burrows</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Company reference:</p> <p class="answer deputy-company-ref-answer">12345678</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Date of birth:</p> <p class="answer"> <span class="deputy-dob-day-answer">06</span> / <span class="deputy-dob-month-answer">01</span> / <span class="deputy-dob-year-answer">1986</span> </p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Previously Known As:</p> <p class="answer deputy-previous-name-answer">N/A</p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <!-- // DEPUTY ITEM - 7 - START // --> <div class="person-detail-item"> <p class="item">Address:</p> <p class="answer"> <span class="deputy-address-line-1-answer">92 York Road</span>,<br> <span class="deputy-address-town-answer">Oxnop Ghyll</span>,<br> <span class="deputy-manual-postcode-answer">CF8 1HN</span>.<br> <span class="deputy-country-answer">United Kingdom</span> </p> </div> <!-- // DEPUTY ITEM - 7 - END // --> <!-- // DEPUTY ITEM - 8 - START // --> <div class="person-detail-item"> <p class="item">Is airmail required?:</p> <p class="answer deputy-airmail-answer">No</p> </div> <!-- // DEPUTY ITEM - 8 - END // --> <!-- // DEPUTY ITEM - 9 - START // --> <div class="person-detail-item"> <p class="item">Daytime telephone number:</p> <p class="answer deputy-phone-number-answer">01239448394</p> </div> <!-- // DEPUTY ITEM - 9 - END // --> <!-- // DEPUTY ITEM - 10 - START // --> <div class="person-detail-item"> <p class="item">Mobile telephone number:</p> <p class="answer deputy-mob-number-answer">07852591663</p> </div> <!-- // DEPUTY ITEM - 10 - END // --> <!-- // DEPUTY ITEM - 11 - START // --> <div class="person-detail-item"> <p class="item">Email address:</p> <p class="answer deputy-email-answer">stanley.evans@ccandb.com</p> </div> <!-- // DEPUTY ITEM - 11 - END // --> <a href="#" class="main-cta secondary edit deputy-link-one">Edit deputy details</a> <h2 class="section-title">Additional information:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Occupation:</p> <p class="answer deputy-occupation-answer">Solicitor</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">How would the deputy like to be contacted?:</p> <ul class="answer"> <li class="answer-holder">Email</li> <li class="answer-holder">Phone</li> <li class="deputy-correspondence-email-answer">Email</li> <li class="deputy-correspondence-phone-answer">Phone</li> <li class="deputy-correspondence-post-answer">Post</li> <li class="deputy-correspondence-welsh-answer">Welsh</li> </ul> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Newsletter?:</p> <p class="answer deputy-newsletter-answer">No</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <a href="#" class="main-cta secondary edit deputy-link-two">Edit additional info</a> </div> </div> <div id="action-panel" class="large-4 large-uncentered columns actions-panel-pub"> <div class="check-details"> <h2 class="section-title">Deputy details:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">Is this an Organisation?:</p> <p class="answer deputy-organisation-answer">Yes</p> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Correspondence name:</p> <p class="answer"> <span class="deputy-title-answer">Mr</span> <span class="deputy-first-name-answer">Nicolas</span> <span class="deputy-middle-name-answer">Austin</span> <span class="deputy-last-name-answer">Taylor</span> </p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <!-- // DEPUTY ITEM - 3 - START // --> <div class="person-detail-item"> <p class="item">Organisation name:</p> <p class="answer deputy-organisation-name-answer">Weston Parpenham</p> </div> <!-- // DEPUTY ITEM - 3 - END // --> <!-- // DEPUTY ITEM - 4 - START // --> <div class="person-detail-item"> <p class="item">Company reference:</p> <p class="answer deputy-company-ref-answer">12345678</p> </div> <!-- // DEPUTY ITEM - 4 - END // --> <!-- // DEPUTY ITEM - 5 - START // --> <div class="person-detail-item"> <p class="item">Previously Known As:</p> <p class="answer deputy-previous-name-answer">N/A</p> </div> <!-- // DEPUTY ITEM - 5 - END // --> <!-- // DEPUTY ITEM - 6 - START // --> <div class="person-detail-item"> <p class="item">Address:</p> <p class="answer"> <span class="deputy-address-line-1-answer">7 Farburn Terrace</span>,<br> <span class="deputy-address-town-answer">Weston Parpenham</span>,<br> <span class="deputy-manual-postcode-answer">PE17 0FS</span>.<br> <span class="deputy-country-answer">United Kingdom</span> </p> </div> <!-- // DEPUTY ITEM - 6 - END // --> <!-- // DEPUTY ITEM - 7 - START // --> <div class="person-detail-item"> <p class="item">Is airmail required?:</p> <p class="answer deputy-airmail-answer">No</p> </div> <!-- // DEPUTY ITEM - 7 - END // --> <!-- // DEPUTY ITEM - 8 - START // --> <div class="person-detail-item"> <p class="item">Daytime telephone number:</p> <p class="answer deputy-phone-number-answer">01268449380</p> </div> <!-- // DEPUTY ITEM - 8 - END // --> <!-- // DEPUTY ITEM - 9 - START // --> <div class="person-detail-item"> <p class="item">Mobile telephone number:</p> <p class="answer deputy-mob-number-answer">07951798017</p> </div> <!-- // DEPUTY ITEM - 9 - END // --> <!-- // DEPUTY ITEM - 10 - START // --> <div class="person-detail-item"> <p class="item">Email address:</p> <p class="answer deputy-email-answer">n.taylor@weston.parpenham.gov.uk</p> </div> <!-- // DEPUTY ITEM - 10 - END // --> <a href="#" class="main-cta secondary edit deputy-link-one">Edit deputy details</a> <h2 class="section-title">Additional information:</h2> <!-- // DEPUTY ITEM - 1 - START // --> <div class="person-detail-item"> <p class="item">How would the deputy like to be contacted?:</p> <ul class="answer"> <li class="answer-holder">Email</li> <li class="answer-holder">Phone</li> <li class="deputy-correspondence-email-answer">Email</li> <li class="deputy-correspondence-phone-answer">Phone</li> <li class="deputy-correspondence-post-answer">Post</li> <li class="deputy-correspondence-welsh-answer">Welsh</li> </ul> </div> <!-- // DEPUTY ITEM - 1 - END // --> <!-- // DEPUTY ITEM - 2 - START // --> <div class="person-detail-item"> <p class="item">Newsletter?:</p> <p class="answer deputy-newsletter-answer">No</p> </div> <!-- // DEPUTY ITEM - 2 - END // --> <a href="#" class="main-cta secondary edit deputy-link-two">Edit additional info</a> </div> </div> <!-- // CREATE DEPUTY - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <!-- <a class="main-cta primary" id="add-deputy" href="../4-client-page/4a-new-client.html">Confirm and add deputy</a> <a class="main-cta secondary" id="edit-deputy" href="12b-confirm-page.html">Edit deputy</a> --> <a href="#" onclick="history.back();" class="solo-link back">Back</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V18/hideShowPassword.js"></script>
 	<script src="../../../production/js/V18/jquery.cookie.js"></script>
@@ -1272,11 +1218,13 @@
 	<script src="../../../production/js/V18/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V18/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V18/my-cookies/supervision-level.js"></script>
-	<script src="../../../production/js/V18/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
+	<script src="../../../production/js/V21/my-cookies/new-event.js"></script>
 	<script src="../../../production/js/V18/my-cookies/warnings.js"></script>
 	<script src="../../../production/js/V18/my-cookies/create-contact.js"></script>
 	<script src="../../../production/js/V18/my-cookies/timeline.js"></script>
 	<script src="../../../production/js/V18/my-cookies/client-death.js"></script>
+	<script src="../../../production/js/V18/my-cookies/client-header.js"></script>
 	<script src="../../../production/js/V18/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V18/my-cookies/deputy-page.js"></script>
 	<!-- User Journey - Cookies - END -->
@@ -1302,6 +1250,12 @@
 	<script src="../../../production/js/V18/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V18/my-jquery/deputy-page.js"></script>
 	<script src="../../../production/js/V18/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-summary.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-clear-filter.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-tasks.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-deputies.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-clients.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-completed-tasks.js"></script>
 	<!-- <script src="../../../production/js/V18/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
 
@@ -1309,8 +1263,15 @@
 
 	<!-- Autocomplete - JQuery - START -->
 	<script src="../../../production/js/V18/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V18/autocomplete/autocomplete.js"></script>
+	<script src="../../../production/js/V18/autocomplete/all-users.js"></script>
 	<script src="../../../production/js/V18/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V18/autocomplete/inserts-list.js"></script>
+	<script src="../../../production/js/V18/autocomplete/template-list.js"></script>
 	<script src="../../../production/js/V18/autocomplete/create-task.js"></script>
+	<script src="../../../production/js/V18/autocomplete/clients-another-team.js"></script>
+	<script src="../../../production/js/V18/autocomplete/clients-user-in-team.js"></script>
+	<script src="../../../production/js/V18/autocomplete/completed-tasks.js"></script>
 	<!-- Autocomplete - JQuery - END -->
 
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
@@ -1327,7 +1288,7 @@
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table").tablesorter();
 		});
 
 		$(document).ready(function() {

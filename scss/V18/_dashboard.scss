@@ -5,11 +5,24 @@
 
 //  FOR ALL
 .dashboard {
+     .confirmation-panel {
+          margin: 0 0 1.5em 0;
+     }
+     .description-title {
+          border-bottom: none;
+          margin: 0 0 0 0;
+          &.with-border {
+               border-bottom: 3px dashed $blue-grey;
+          }
+     }
      .dashboard-item-container {
           @include flexbox;
           @include flex-wrap(wrap);
           float: left;
           width: 100%;
+          &.summary {
+               padding-top: 3em;
+          }
           .no-items {
                margin-top: 1em;
                p {
@@ -19,6 +32,7 @@
           .dashboard-item {
                border: 2px solid $border-colour;
                border-radius: $global-border-radius;
+               box-shadow: 2px 4px 5px 0px darken($blue-grey,10%);
                // flex: 1;
                width: 32%;
                padding: 0;
@@ -244,13 +258,306 @@
           }
      }
      .completed {
-          margin-bottom: 0.25em;
-          a.main-cta {
-               float: right;
-               width: auto;
-               font-size: 1.2rem;
-               padding: 0.75em 1em;
-               margin: -1em 0 0 0;
+          // margin-bottom: 0.25em;
+          // a.main-cta {
+          //      float: right;
+          //      width: auto;
+          //      font-size: 1.2rem;
+          //      padding: 0.75em 1em;
+          //      margin: -1em 0 0 0;
+          // }
+     }
+     #pagination {
+          margin: 3em 0 0 0;
+          padding: 1.5em 0 0 0;
+          border-top: 10px solid $blue-grey;
+          width: 100%;
+     }
+}
+
+.dashboard {
+     .dashboard-item-container {
+          &.summary {
+               &.row-1 {
+                    padding-top: 2em;
+                    .dashboard-item {
+                         &.chart-container {
+                              border: none;
+                              border-top: 3px solid $blue;
+                              // margin-top: 3em;
+                              padding: 1em;
+                              width: 49%;
+                              &:nth-of-type(2n) {
+                                   margin-right: 0%;
+                              }
+                              .chart-1 {
+                                   display: inline-block;
+                                   width: 15em;
+                                   height: 15em;
+                                   border-radius: 50%;
+                                   border: 20px solid;
+                                   border-color: rgba($black,0.2);
+                              }
+                         }
+                         &.info-container {
+                              width: 40%;
+                              margin-right: 0;
+                         }
+                         figure {
+                              float: left;
+                         }
+                         .figures {
+                              display: inline-block;
+                              float: left;
+                              width: 62.5%;
+                              margin: 0 0 0 1.5em;
+                              h1 {
+                                   font-size: 1.6rem;
+                                   margin: 0 0 1em 0;
+                              }
+                              .b-data {
+                                   h2 {
+                                        width: 100%;
+                                        font-size: 0.875rem;
+                                        margin-bottom: 1em;
+                                        text-align: center;
+                                        border-left: 3px solid darken($blue-grey,2%);
+                                        border-right: 3px solid darken($blue-grey,2%);
+                                        position: relative;
+                                        strong {
+                                             width: auto;
+                                             padding: 0 1em;
+                                             background: $white;
+                                             z-index: 10;
+                                             position: relative;
+                                             color: darken($blue-grey,10%);
+                                             font-weight: normal;
+
+                                        }
+                                        .border {
+                                             display: inline-block;
+                                             width: 100%;
+                                             height: 3px;
+                                             background: darken($blue-grey,2%);
+                                             position: absolute;
+                                             top: 45%;
+                                             left: 0;
+                                             z-index: 1;
+                                        }
+                                   }
+                                   h3 {
+                                        width: 50%;
+                                        font-size: 4rem;
+                                        margin: 0;
+                                        float: left;
+                                        color: rgba($black,0.4);
+                                        &:last-of-type {
+                                             text-align: right;
+                                             color: $black;
+                                        }
+                                   }
+                                   p {
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.25em;
+                                        width: 50%;
+                                        font-size: 0.875rem;
+                                        &:last-of-type {
+                                             text-align: right;
+                                        }
+                                   }
+                              }
+                              .c-data {
+                                   margin-top: 1em;
+                                   div {
+                                        width: 22.75%;
+                                        margin-right: 3%;
+                                        display: inline-block;
+                                        float: left;
+                                        &:last-of-type {
+                                             margin-right: 0;
+                                        }
+                                   }
+                                   h2, h3 {
+                                        text-transform: capitalize;
+                                        font-size: 0.875rem;
+                                        width: auto;
+                                        color: $text-main-colour;
+                                        margin: 0 0 0 0;
+                                        font-weight: normal;
+                                        font-family: $Opensans-Regular;
+                                   }
+                                   h3 {
+                                        color: $black;
+                                        font-family: $Montserrat;
+                                        font-weight: bold;
+                                        float: left;
+                                        margin: 0 0 0 0.5em;
+                                   }
+                              }
+                         }
+                    }
+               }
+               &.row-2 {
+                    padding: 0.5em 0 0 0;
+                    .dashboard-item {
+                         width: 32%;
+                         &.small-item {
+                              h1 {
+                                   font-size: 1.4rem;
+                                   .rag-rating {
+                                        float: right;
+                                        .traffic-light {
+                                             width: 1.2em;
+                                             height: 1.2em;
+                                             margin: 0 0 0 0.5em;
+                                        }
+                                        .border {
+                                             width: 70%;
+                                             left: 20%;
+                                             top: 40%;
+                                        }
+                                   }
+                              }
+                         }
+                         &:nth-of-type(3n) {
+                              margin-right: 0;
+                         }
+                    }
+               }
+               &.row-3, &.row-4 {
+                    padding: 0.5em 0 0 0;
+                    .dashboard-item {
+                         width: 15%;
+                         &:nth-of-type(3n) {
+                              margin-right: 2%;
+                         }
+                         &:nth-of-type(6n) {
+                              margin-right: 0%;
+                         }
+                    }
+               }
+               .dashboard-item {
+                    background: $white;
+                    border: none;
+                    border-top: 4px solid $blue;
+                    &.red {
+                         border-top: 4px solid $red !important;
+                    }
+                    &.green {
+                         border-top: 4px solid $green !important;
+                    }
+                    &:hover {
+                         transform: none;
+                    }
+                    &.info-container {
+                         padding: 1em;
+                    }
+                    &.user-summary {
+                         padding: 1.5em 1em 1em 1em;
+                         text-align: center;
+                         .row {
+                              margin: 0;
+                         }
+                         h1 {
+                              font-size: 1rem;
+                              text-align: center;
+                              margin-bottom: 1.5em;
+                         }
+                         h2 {
+                              font-size: 2rem;
+                              margin-bottom: 0.15em;
+                         }
+                         h3 {
+                              letter-spacing: 0.15em;
+                              font-size: 0.75rem;
+                              line-height: 1;
+                              text-align: center;
+                              font-weight: bold;
+                              color: rgba($main-colour,0.4);
+                         }
+                         .main-cta {
+                              float: none;
+                              padding: 0.5em 1em;
+                              margin: 0 0 1.5em 0;
+                         }
+                    }
+                    &.small-item {
+                         padding: 1em;
+                         .icon {
+                              display: inline-block;
+                              width: 3.5em;
+                              height: 3.5em;
+                              background: $blue;
+                              border-radius: 50%;
+                              margin: 0 0 1em 0;
+                         }
+                         h1, h2, h3 {
+                              text-transform: capitalize;
+                              width: auto;
+                              float: right;
+                         }
+                         h2, h3 {
+                              font-size: 0.875rem;
+                              color: $text-main-colour;
+                              margin: 0 0 0.5em 0;
+                              font-weight: normal;
+                              font-family: $Opensans-Regular;
+                         }
+                         h1 {
+                              font-size: 1rem;
+                              float: left;
+                              width: auto;
+                         }
+                         h2 {
+                              float: left;
+                         }
+                         h3 {
+                              color: $black;
+                              font-family: $Montserrat;
+                              font-weight: bold;
+                              .direction {
+                                   display: inline-block;
+                                   margin: 0 0.25em 0 0;
+                                   width: 1em;
+                                   height: 0.5em;
+                                   &.up {
+                                        background: url(#{$image-path}/icons/percentage-up-green.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                                   &.down {
+                                        background: url(#{$image-path}/icons/percentage-down-red.svg) no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                         .rag-rating {
+                              float: left;
+                              clear: left;
+                              .traffic-light {
+                                   &:first-of-type {
+                                        margin-left: 0;
+                                   }
+                              }
+                         }
+                         .number {
+                              float: right;
+                              display: inline-block;
+                              font-size: 5.5rem;
+                              line-height: 0;
+                              &.red {
+                                   color: $red;
+                              }
+                              &.green {
+                                   color: $green;
+                              }
+                         }
+                         .sub-data {
+                              display: inline-block;
+                              width: 100%;
+                              margin: 2.5em 0 0 0;
+                         }
+                    }
+               }
           }
      }
 }
@@ -304,6 +611,9 @@
           display: inline-block;
           // width: 3em;
           // height: 3em;
+          width: 1.75em;
+          height: 1.75em;
+          margin: 0 1em 0 0;
           margin-left: 0.75em;
           position: relative;
           z-index: 10;

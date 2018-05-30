@@ -1,0 +1,347 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.accordion-section {
+     position: relative;
+     // width: 97%;
+     &.inactive {
+          .accordion-section-title {
+               color: rgba($black,0.4);
+               background: $blue-grey;
+               // &:hover {
+               //      background: none;
+               // }
+               span {
+                    display: none;
+               }
+          }
+          .edit {
+               display: none;
+          }
+          &.active {
+               .accordion-section-title {
+                    border-radius: $global-border-radius;
+                    color: rgba($black,0.4);
+                    background: $blue-grey;
+                    margin-bottom: 0.25em;
+                    border: 3px solid darken($blue-grey,5%);
+                    span {
+                         @include flexbox;
+                         background: url(#{$image-path}/icons/plus-blue.svg) no-repeat 0% 0%;
+                         background-size: contain;
+                    }
+               }
+          }
+          .accordion-section-title {
+               &:hover {
+                    cursor: default;
+               }
+               span {
+                    @include flexbox;
+                    &.number {
+                         background: darken($blue-grey,10%);
+                         color: darken($blue-grey,40%);
+                    }
+               }
+          }
+     }
+     &.active {
+          .edit {
+               color: $white;
+               background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 0%;
+               background-size: 0.95em;
+          }
+     }
+     .edit {
+          position: absolute;
+          top: 1em;
+          right: 1em;
+          z-index: 10;
+          margin: 0;
+          padding-left: 1.25em;
+          background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
+          background-size: 0.95em;
+     }
+     &.order-section {
+          .accordion-section-title {
+
+          }
+     }
+}
+
+button.accordion-section-title {
+     background: $white;
+     color: $black;
+     font-family: $Montserrat;
+     font-weight: bold;
+     cursor: pointer;
+     padding: 1em 3.25em 1em 1em;
+     width: 100%;
+     text-align: left;
+     z-index: 1;
+     font-size: 1rem;
+     position: relative;
+     border-radius: $global-border-radius;
+     border: 3px solid darken($blue-grey,5%);
+     outline: none;
+     transition: 0.4s;
+     margin: 0 0 0.25em 0;
+     &.documents {
+          background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 98.5% 50% $white;
+          background-size: 1.5em;
+          &:hover, &:active, &:focus {
+               background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 98.5% 50% darken($blue-grey,5%);
+               background-size: 1.5em;
+          }
+          &.active {
+               background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 98.5% 50% $blue;
+               background-size: 1.5em;
+          }
+     }
+     &:hover, &:active, &:focus {
+          // background: url(#{$image-path}/icons/create-case-blue.svg) no-repeat 97.5% 50% darken($blue-grey,5%);
+          // background-size: 1.5em;
+          background: darken($blue-grey,5%);
+     }
+     &.active {
+          margin: 0;
+          // background: url(#{$image-path}/icons/create-case-white.svg) no-repeat 97.5% 50% $blue;
+          // background-size: 1.5em;
+          background: $blue;
+          border: 3px solid $blue;
+          color: $white;
+          border-radius: 5px 5px 0 0;
+          span {
+               background: url(#{$image-path}/icons/minus-white.svg) no-repeat 0% 0%;
+               background-size: contain;
+               &.number {
+                    background: $white;
+                    color: $blue;
+               }
+          }
+     }
+     &.with-edit {
+          background: $white;
+          padding: 0.75em;
+          // width: 85%;
+          &:hover, &:active, &:focus {
+               background: darken($blue-grey,5%);
+          }
+          &.active {
+               background: $blue;
+               a.edit {
+                    color: $white;
+                    background: url(#{$image-path}/icons/edit-white.svg) no-repeat 0% 0%;
+                    background-size: 0.95em;
+               }
+          }
+          // a.edit {
+          //      float: right;
+          // }
+     }
+     span {
+          display: inline-block;
+          position: relative;
+          float: left;
+          background: url(#{$image-path}/icons/plus-blue.svg) no-repeat 0% 0%;
+          background-size: contain;
+          width: 1.5em;
+          height: 1.5em;
+          margin: -0.2em 0.5em -0.1em 0;
+          &.number {
+               background: $blue;
+               float: right;
+               width: 1.5em;
+               height: 1.5em;
+               margin: -0.15em 0;
+               border-radius: 50%;
+               font-size: 1.3rem;
+               @include flexbox;
+               @include align-items(center);
+               @include justify-content(center);
+               margin: -0.2em 0;
+               color: $white;
+               text-align: center;
+          }
+     }
+     .wrapper {
+          display: inline-block;
+          float: right;
+     }
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.order-section {
+     .accordion-section {
+          .accordion-section-content {
+               padding: 1em 1.5em 1.5em 1.5em;
+               .description-title {
+                    padding-top: 0.65em;
+               }
+               .flexbox-container {
+                    margin-bottom: 1em;
+               }
+          }
+          .edit {
+               position: relative;
+               color: $blue;
+               background: url(#{$image-path}/icons/edit-blue.svg) no-repeat 0% 0%;
+               background-size: 0.95em;
+               margin: 0 0 0 1.5em;
+               top: auto;
+               right: auto;
+          }
+     }
+}
+
+.accordion-section-content {
+     padding: 1em;
+     background-color: white;
+     width: 100%;
+     // transition: 0.4s;
+     display: none;
+     margin: 0 0 0.25em 0;
+     border-radius: 0 0 5px 5px;
+     border-right: 3px solid $blue;
+     border-bottom: 3px solid $blue;
+     border-left: 3px solid $blue;
+     ul, p {
+          margin: 0;
+     }
+     ul {
+          li {
+               &:hover, &:active, &:focus {
+                    background: none;
+               }
+               &:last-of-type {
+                    margin-bottom: 0;
+               }
+               a {
+                    float: left;
+                    width: auto;
+                    padding: 0;
+                    border: none;
+                    font-size: 1rem;
+                    border-bottom: 1px dashed $blue;
+                    border-radius: 0;
+                    // padding: 0 0 0 1.5em;
+                    padding: 0.25em 0 0.25em 1.5em;
+                    background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                    background-size: 0.95em;
+                    &:hover, &:active, &:focus {
+                         border-bottom: 1px solid $blue;
+                         background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
+                         background-size: 0.95em;
+                    }
+                    &:before, &:after {
+                         display: none;
+                    }
+               }
+               label {
+                    float: right;
+                    width: auto;
+                    margin: 0.35em 0 0 0;
+                    padding: 0 0 0 2em;
+                    input {
+                         display: none;
+                    }
+                    &:before {
+                         width: 1.5em;
+                         height: 1.5em;
+                         top: -0.125em;
+                    }
+                    &:after {
+                         border-width: 0 0 4px 4px;
+                         top: 0.25em;
+                         left: 0.295em;
+                         width: 0.875em;
+                         height: 0.5em;
+                    }
+               }
+          }
+     }
+}
+
+.accordion, .accordion * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.accordion {
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.deputy-details-page {
+     button {
+          &.accordion-section-title {
+               &.active {
+                    background-color: $green;
+                    border: 3px solid $green;
+               }
+          }
+     }
+     .accordion-section-content {
+          border-right: 3px solid $green;
+          border-bottom: 3px solid $green;
+          border-left: 3px solid $green;
+     }
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+    transition: all linear 0.15s;
+}
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+}

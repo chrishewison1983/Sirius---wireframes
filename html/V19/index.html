@@ -1,0 +1,967 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../production/css/prototype-V19.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../js/V19/jquery.min.js"></script>
+
+     <!-- <script src="../../production/js/V19/application.js"></script> -->
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+     <!-- <script type="text/javascript">
+		var connection = new WebSocket('ws://localhost:62183');
+		connection.onmessage = function (e) {
+			location.reload();
+		};
+	</script> -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<a href="index.html" class="logo">
+				<img src="../../production/img/V19/sirius-logo-small.svg" alt="Sirius">
+				<p><span>My Tasks</span></p>
+			</a>
+
+			<div class="preferences">
+				<a href="#" class="user-cta">
+					<div class="wrapper">
+						<span class="nav-icon"></span>
+						<div class="sirius-user-id">Susan Smith</div>
+					</div>
+				</a>
+
+				<ul class="user-settings">
+					<li><a href="#">Help and guidance</a></li>
+					<li class="multiple-options">
+						<span>Theme:</span>
+						<a href="#" class="multiple current">Light</a>
+						<a href="#" class="multiple">Dark</a>
+						<a href="#" class="multiple">Pink</a>
+					</li>
+					<li class="multiple-options">
+						<span>Font size:</span>
+						<a href="#" class="multiple current">Regular</a>
+						<a href="#" class="multiple">Large</a>
+					</li>
+				</ul>
+			</div>
+
+			<a href="3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+				<span class="nav-icon"></span>
+				<p><span>Create client</span></p>
+			</a>
+
+			<a href="index.html" class="main-cta sign-out">
+				<span class="nav-icon"></span>
+				<p><span>Sign out</span></p>
+			</a>
+
+			<form action="search.html">
+				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="submit">
+			</form>
+
+			<label class="switch">
+				<span>Switch to: <strong>LPA</strong></span>
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+
+		</div>
+	</div>
+
+	<div class="colour-wrapper"></div>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <span>Welcome:</span> </nav> <h1><div class="sirius-user-id">Susan Smith</div></h1> <span class="horizontal-border"></span> <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper dashboard"> <!-- =========== FILTER - START =========== --> <!-- <form class="filter" action="search.html"> <div class="row"> <div class="large-6 large-uncentered columns"> <div class="wrapper dashboard-search"> <label for="visit-commissioned-by">Search:</label> <input data-default="178.4" name="search" id="sirius-search" placeholder="Search by SIRIUS ID or Client name..." type="search"> <input class="submit" type="submit"> </div> </div> </div> </form> --> <!-- =========== FILTER - END =========== --> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span>9</span> My tasks </li> <!-- <li class="tab-link" data-tab="tab-2"> <span>4</span> My cases </li> --> <li class="tab-link completed" data-tab="tab-3"> <span>0</span> My completed tasks </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard current"> <h2 class="description-title">Your assigned tasks</h2>
+
+<!-- // CONFIRMATION MESSAGE - START // -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="confirmation-dashboard-visit" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your visit has been commissioned to
+					<div class="client-title">Mr</div>
+					<div class="client-first-name">Gerald</div>
+					<div class="client-last-name">Brackens</div>
+				</h2>
+			</div>
+		</div>
+		<div id="task-complete" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been marked as completed
+				</h2>
+			</div>
+		</div>
+		<div id="task-re-assigned" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your task: "<div class="task-title">Task title</div>" has been re-assigned
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // CONFIRMATION MESSAGE - END // -->
+
+<div class="dashboard-item-container">
+
+	<table id="tasks-table" class="tablesorter">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th><span></span>Task due date</th>
+				<th><span></span>Case type</th>
+				<th><span></span>Task status</th>
+				<!-- <th>Actions</th> -->
+			</tr>
+		</thead>
+		<tbody>
+			<!-- TASK 1 - START -->
+			<tr class="urgent-row">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-correspondence"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">A</div>
+							<a href="4-client-page/4a-new-client.html#HandW" class="task create-letter-journey-button">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 1 - END -->
+
+			<!-- TASK 2 - START -->
+			<tr class="urgent-row link-for-commission-visit">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">B</div>
+							<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/04/2017</p>
+					<div class="counter alert">
+						<span class="number">-2</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#HandW">ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 2 - START -->
+
+			<!-- TASK 3 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">I</div>
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4391</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Ewan Jones</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 3 - END -->
+
+			<!-- TASK 4 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type print-notice"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">H</div>
+							<a href="#" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6928</p>
+								<span class="client"></span>
+								<p><a href="#">Miss Chelsea Burton</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>25/06/2017</p>
+					<div class="counter">
+						<span class="number">5</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 4 - START -->
+
+			<!-- TASK 5 - START -->
+			<tr class="">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type review-report"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">E</div>
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client"></span>
+								<p><a href="#">Mrs Jennifer Moss</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>01/05/2017</p>
+					<div class="counter">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#HandW">ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 5 - END -->
+
+			<!-- TASK 6 - START -->
+			<tr class="">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">G</div>
+							<a href="#" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4019</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Morgan Graham</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>29/05/2017</p>
+					<div class="counter">
+						<span class="number">4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#HandW">ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 6 - START -->
+
+			<!-- TASK 7 - START -->
+			<tr class="urgent-row">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type assign-validity"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">C</div>
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 7 - END -->
+
+			<!-- TASK 8 - START -->
+			<tr>
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type death-notification"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">D</div>
+							<a href="#" class="task">Review Death Notification Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3029</p>
+								<span class="client"></span>
+								<p><a href="#">Ms Georgia Lynch</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/05/2017</p>
+					<div class="counter">
+						<span class="number">1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#HandW">ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light amber">B</span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 8 - START -->
+
+			<!-- TASK 9 - START -->
+			<tr class="">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type disclaimer"></span>
+						</div> -->
+						<div class="text">
+							<div class="hide">F</div>
+							<a href="#" class="task">Review Disclaimer Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3829</p>
+								<span class="client"></span>
+								<p><a href="#">Mrs Laura Dunn</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>02/05/2017</p>
+					<div class="counter">
+						<span class="number">3</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light green">A</span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<!-- <td>
+					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
+					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
+					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
+				</td> -->
+			</tr>
+			<!-- TASK 9 - END -->
+
+		</tbody>
+	</table>
+
+</div>
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content dashboard"> <h2 class="section-title">Due in the next 30 days</h2>
+
+<div class="dashboard-item-container">
+
+	<!-- // ITEM - 1 - START // -->
+	<div class="dashboard-item welfare">
+		<div class="tasks">
+			<div class="wrapper">
+				<span class="number">3</span>
+				<span>tasks</span>
+			</div>
+		</div>
+		<div class="title">
+			<div class="left">
+				<span></span>
+			</div>
+			<div class="right">
+				<h2><a href="4-client-page/4a-new-client.html">7000-0000-0310</a></h2>
+				<h3>Mr Gerald Brackens</h3>
+			</div>
+		</div>
+		<div class="content date">
+			<p>Report due date:</p>
+			<h4><span></span>22/04/2017</h4>
+			<div class="counter">
+				<span class="number">20</span>
+				days
+			</div>
+		</div>
+		<div class="content assigned">
+			<p>Assigned to:</p>
+			<h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+		</div>
+		<div class="content deputies">
+			<p>Deputies on case:</p>
+			<h4><div class="wrapper"><span>3</span></div>deputies</h4>
+			<a href="#deputies-1" rel="modal:open">More deputy info</a>
+		</div>
+		<div class="footer">
+			<p>Status:</p>
+			<div class="rag-rating">
+				<span class="traffic-light"></span>
+				<span class="traffic-light"></span>
+				<span class="traffic-light green"></span>
+				<div class="border"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // ITEM - 1 - END // -->
+
+	<!-- // ITEM - 2 - START // -->
+	<div class="dashboard-item welfare-property">
+		<div class="tasks">
+			<div class="wrapper">
+				<span class="number">1</span>
+				<span>tasks</span>
+			</div>
+		</div>
+		<div class="title">
+			<div class="left">
+				<span></span>
+			</div>
+			<div class="right">
+				<h2><a href="4-client-page/4a-new-client.html">7000-0000-8390</a></h2>
+				<h3>Mrs Lexi Thompson</h3>
+			</div>
+		</div>
+		<div class="content date">
+			<p>Report due date:</p>
+			<h4><span></span>22/04/2017</h4>
+			<div class="counter">
+				<span class="number">20</span>
+				days
+			</div>
+		</div>
+		<div class="content assigned">
+			<p>Assigned to:</p>
+			<h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+		</div>
+		<div class="content deputies">
+			<p>Deputies on case:</p>
+			<h4><div class="wrapper"><span>4</span></div>deputies</h4>
+			<a href="#deputies-2" rel="modal:open">More deputy info</a>
+		</div>
+		<div class="footer">
+			<p>Status:</p>
+			<div class="rag-rating">
+				<span class="traffic-light"></span>
+				<span class="traffic-light"></span>
+				<span class="traffic-light green"></span>
+				<div class="border"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // ITEM - 2 - END // -->
+
+	<!-- // ITEM - 3 - START // -->
+	<div class="dashboard-item property">
+		<div class="tasks">
+			<div class="wrapper">
+				<span class="number">3</span>
+				<span>tasks</span>
+			</div>
+		</div>
+		<div class="title">
+			<div class="left">
+				<span></span>
+			</div>
+			<div class="right">
+				<h2><a href="4-client-page/4a-new-client.html">7000-0000-9182</a></h2>
+				<h3>Mrs Mady Fowler</h3>
+			</div>
+		</div>
+		<div class="content date">
+			<p>Report due date:</p>
+			<h4><span></span>18/04/2017</h4>
+			<div class="counter alert">
+				<span class="number">-8</span>
+				days
+			</div>
+		</div>
+		<div class="content assigned">
+			<p>Assigned to:</p>
+			<h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+		</div>
+		<div class="content deputies">
+			<p>Deputies on case:</p>
+			<h4><div class="wrapper"><span>3</span></div>deputies</h4>
+			<a href="#deputies-3" rel="modal:open">More deputy info</a>
+		</div>
+		<div class="footer">
+			<p>Status:</p>
+			<div class="rag-rating">
+				<span class="traffic-light red"></span>
+				<span class="traffic-light"></span>
+				<span class="traffic-light"></span>
+				<div class="border"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // ITEM - 3 - END // -->
+
+	<!-- // ITEM - 4 - START // -->
+	<div class="dashboard-item property">
+		<div class="tasks">
+			<div class="wrapper">
+				<span class="number">2</span>
+				<span>tasks</span>
+			</div>
+		</div>
+		<div class="title">
+			<div class="left">
+				<span></span>
+			</div>
+			<div class="right">
+				<h2><a href="4-client-page/4a-new-client.html">7000-0000-8023</a></h2>
+				<h3>Miss Hermoine Strange</h3>
+			</div>
+		</div>
+		<div class="content date">
+			<p>Report due date:</p>
+			<h4><span></span>18/04/2017</h4>
+			<div class="counter">
+				<span class="number">8</span>
+				days
+			</div>
+		</div>
+		<div class="content assigned">
+			<p>Assigned to:</p>
+			<h4><span></span><a href="#" class="sirius-user-id">Susan Smith</a></h4>
+		</div>
+		<div class="content deputies">
+			<p>Deputies on case:</p>
+			<h4><div class="wrapper"><span>1</span></div>deputy</h4>
+			<a href="#deputies-4" rel="modal:open">More deputy info</a>
+		</div>
+		<div class="footer">
+			<p>Status:</p>
+			<div class="rag-rating">
+				<span class="traffic-light"></span>
+				<span class="traffic-light amber"></span>
+				<span class="traffic-light"></span>
+				<div class="border"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // ITEM - 4 - END // -->
+
+</div>
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content dashboard"> <h2 class="description-title completed">
+	Completed tasks
+	<!-- <a href="#" class="main-cta primary">Submit work return</a> -->
+</h2>
+
+<div class="dashboard-item-container">
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<div class="no-items">
+		<p>You have yet to complete any tasks today.</p>
+	</div>
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+
+	<table id="completed-tasks-table" class="tablesorter completed">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th><span></span>Case type</th>
+				<th><span></span>Completed</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- TASK 1 - START -->
+			<tr class="link-for-commission-visit">
+				<td>
+					<div class="wrapper">
+						<!-- <div class="icon">
+							<span class="task-type commission-visit"></span>
+						</div> -->
+						<div class="text">
+							<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client"></span>
+								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#HandW">ORDER - <strong>H &amp; W</strong><span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="date"></span>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<p class="date-text">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '<p>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<p class="time-text">' + Hours + ":" + Mins + Time + '</p>');
+					</script>
+				</td>
+				<td>
+					<a href="#visit-commission" rel="modal:open" class="main-cta secondary">View</a>
+				</td>
+			</tr>
+			<!-- TASK 1 - START -->
+
+		</tbody>
+	</table>
+
+</div>
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script></script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../production/js/V19/hideShowPassword.js"></script>
+	<script src="../../production/js/V19/jquery.cookie.js"></script>
+	<script src="../../production/js/V19/jquery.modal.js"></script>
+	<script src="../../production/js/V19/sticky-item.js"></script>
+
+	<!-- Datepicker - START -->
+	<script src="../../production/js/V19/jquery-new-datepicker.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
+	</script>
+	<!-- <script src="../../production/js/V19/jquery-datepicker.js"></script> -->
+	<!-- <script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script> -->
+	<!-- Datepicker - END -->
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../production/js/V19/my-cookies/my-cookies.js"></script>
+	<script src="../../production/js/V19/my-cookies/commission-visit.js"></script>
+	<script src="../../production/js/V19/my-cookies/create-case.js"></script>
+	<script src="../../production/js/V19/my-cookies/create-task.js"></script>
+	<script src="../../production/js/V19/my-cookies/create-letter.js"></script>
+	<script src="../../production/js/V19/my-cookies/create-client.js"></script>
+	<script src="../../production/js/V19/my-cookies/create-deputy.js"></script>
+	<script src="../../production/js/V19/my-cookies/edit-deputy.js"></script>
+	<script src="../../production/js/V19/my-cookies/client-page.js"></script>
+	<script src="../../production/js/V19/my-cookies/report-period.js"></script>
+	<script src="../../production/js/V19/my-cookies/supervision-level.js"></script>
+	<script src="../../production/js/V19/my-cookies/new-event.js"></script>
+	<script src="../../production/js/V19/my-cookies/warnings.js"></script>
+	<script src="../../production/js/V19/my-cookies/create-contact.js"></script>
+	<script src="../../production/js/V19/my-cookies/timeline.js"></script>
+	<script src="../../production/js/V19/my-cookies/client-death.js"></script>
+	<script src="../../production/js/V19/my-cookies/deputy-death.js"></script>
+	<script src="../../production/js/V19/my-cookies/deputy-page.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../production/js/V19/my-jquery/my-jquery.js"></script>
+	<script src="../../production/js/V19/my-jquery/commission-visit.js"></script>
+	<script src="../../production/js/V19/my-jquery/create-case.js"></script>
+	<script src="../../production/js/V19/my-jquery/create-client.js"></script>
+	<script src="../../production/js/V19/my-jquery/create-task.js"></script>
+	<script src="../../production/js/V19/my-jquery/create-deputy.js"></script>
+	<script src="../../production/js/V19/my-jquery/edit-deputy.js"></script>
+	<script src="../../production/js/V19/my-jquery/create-letter.js"></script>
+	<script src="../../production/js/V19/my-jquery/report-period.js"></script>
+	<script src="../../production/js/V19/my-jquery/supervision-level.js"></script>
+	<script src="../../production/js/V19/my-jquery/new-event.js"></script>
+	<script src="../../production/js/V19/my-jquery/warnings.js"></script>
+	<script src="../../production/js/V19/my-jquery/progress-bar.js"></script>
+	<script src="../../production/js/V19/my-jquery/create-contact.js"></script>
+	<script src="../../production/js/V19/my-jquery/timeline.js"></script>
+	<script src="../../production/js/V19/my-jquery/client-death.js"></script>
+	<script src="../../production/js/V19/my-jquery/deputy-death.js"></script>
+	<script src="../../production/js/V19/my-jquery/deputy-page.js"></script>
+	<script src="../../production/js/V19/my-jquery/client-header.js"></script>
+	<script src="../../production/js/V19/my-jquery/client-page.js"></script>
+	<!-- <script src="../../production/js/V19/my-jquery/search.js"></script> -->
+	<!-- User Journey - JQuery - END -->
+
+	<script src="../../production/js/V19/jquery.tablesorter.js"></script>
+
+	<!-- Autocomplete - JQuery - START -->
+	<script src="../../production/js/V19/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../production/js/V19/autocomplete/autocomplete.js"></script>
+	<!-- Autocomplete - JQuery - END -->
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../production/js/V19/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+
+		$(document).ready(function() {
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing").tablesorter();
+		});
+
+		$(document).ready(function() {
+			$("#tasks-table").tablesorter( {sortList: [[0,0]]} );
+		});
+
+	</script>
+<!-- // JS BODY END - END // -->
+<!-- <div id="animated-example" class="animated bounce"></div> --></body></html>

@@ -1,0 +1,227 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Edit additional info</span>
+                    </nav>
+                    <h1>
+                         Additional info:
+                         <div class="client-title">Mr</div>
+                         <div class="client-first-name">Gerald</div>
+                         <div class="client-last-name">Brackens</div>
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper edit-client">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="commission-visit right">
+
+                         <form class="edit-client-form">
+
+                              <h2 class="section-title">
+                                   <div class="client-title">Mr</div>
+                                   <div class="client-first-name">Gerald</div>
+                                   <div class="client-last-name">Brackens</div>
+                              </h2>
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group">
+                                   <label for="client-financial">Financial reference</label>
+                                   <input id="client-financial" name="client-financial" type="text" class="half" value="192848291">
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group">
+                                   <label for="client-accommodation">Accommodation Type</label>
+                                   <select id="client-accommodation" class="full-width">
+                                        <option>-- Select --</option>
+                                        <option selected>NH - Care/Nursing/Residential Home (Private/LA/Registered)</option>
+                                        <option>PH - Private Hospital</option>
+                                        <option class='dis' disabled="disabled">----------------------------------------------------------------</option>
+     							<option>No Accommodation Type</option>
+     							<option>CR - Council Rented</option>
+     							<option>FM - Family Member/Friend's Home (including spouse/civil partner)</option>
+     							<option>GPH - Supervised Sheltered Accommodation</option>
+     							<option>HA - Housing Association</option>
+     							<option>HOT - Hotel</option>
+     							<option>HOS - Hostel</option>
+     							<option>HSP - Health Service Patient</option>
+     							<option>NAC - NHS Accommodation e.g. hospital or hostel</option>
+     							<option>NFA - No Fixed Address</option>
+     							<option>OH - Own Home</option>
+     							<option>OTH - Other</option>
+     							<option>PT3 - Local Authority Part 3 Accommodation</option>
+     							<option>REN - Private Rented (i.e. Not Council)</option>
+     							<option>SEC - Secure Hospital</option>
+     							<option>SH - Supported Housing</option>
+     							<option>SL - Supported Living</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group client-medical-condition">
+                                   <label for="letter-medical-condition">
+                                        Medical Condition
+                                   </label>
+                                   <textarea name="textarea" id="client-medical-condition" maxlength="250">Alzheimer's</textarea>
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
+
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <label for="client-marital-status">Marital Status</label>
+                                   <select id="client-marital-status" class="full-width">
+                                        <option>-- Select --</option>
+     							<option>Civil Partnership</option>
+     							<option selected>Divorced</option>
+     							<option>Co-habiting</option>
+     							<option>Married</option>
+     							<option>Not Stated</option>
+     							<option>Separated</option>
+     							<option>Single</option>
+     							<option>Widowed</option>
+     							<option>Other</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group">
+                                   <legend>How would the client like to be contacted?</legend>
+                                   <label class="normal checked" for="client-correspondence-post">
+                                        <input id="client-correspondence-post" name="client-correspondence-post" type="checkbox" value="Post" checked>
+                                        Post
+                                   </label>
+                                   <label class="normal" for="client-correspondence-phone">
+                                        <input id="client-correspondence-phone" name="client-correspondence-phone" type="checkbox" value="Phone">
+                                        Phone
+                                   </label>
+                                   <label class="normal checked" for="client-correspondence-email">
+                                        <input id="client-correspondence-email" name="client-correspondence-email" type="checkbox" value="Email" checked>
+                                        Email
+                                   </label>
+                                   <label class="normal" for="client-correspondence-welsh">
+                                        <input id="client-correspondence-welsh" name="client-correspondence-welsh" type="checkbox" value="Welsh">
+                                        Welsh
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                         </form>
+
+                    </div>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="edit-addtional-info" href="7a-edit-client.html">Save &amp; exit</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

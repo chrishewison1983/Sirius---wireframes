@@ -3,7 +3,7 @@
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>OPG - Sirius</title>
-     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link rel="stylesheet" href="../../../production/css/prototype-V18.css" />
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
      <!-- ///////// Chris Prototyping Kit - START ///////// -->
@@ -12,74 +12,25 @@
      <!-- <script src="../../../production/js/V18/application.js"></script> -->
      <!-- ///////// Chris Prototyping Kit - END ///////// -->
 
-     <script type="text/javascript">
+     <!-- <script type="text/javascript">
 		var connection = new WebSocket('ws://localhost:62183');
 		connection.onmessage = function (e) {
 			location.reload();
 		};
-	</script>
+	</script> -->
 
 </head>
 <!-- // HEAD ELEMENT END // -->
-<body id="body-default"><!-- MAIN NAV - START -->
-<header class="main">
-
-     <nav>
-
-          <a href="../index.html" class="logo">
-               <img src="../../../production/img/V18/sirius-logo-small.svg" alt="Sirius">
-               <p><span>My Tasks</span></p>
-          </a>
-
-          <!-- <a href="#" class="user-cta">
-               <span class="nav-icon"></span>
-               <div class="sirius-user-id">Susan Smith</div>
-          </a> -->
-
-          <a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
-               <span class="nav-icon"></span>
-               <p><span>Create client</span></p>
-          </a>
-
-          <!-- <a href="../5-add-deputy/5a-search-deputy.html" class="create-deputy allocations main-cta">
-               <span class="nav-icon"></span>
-               <p><span>Create deputy</span></p>
-          </a> -->
-
-
-          <!-- <ul class="padding-wrapper">
-               <li class="actions create-letter">
-                    <a href="2-create-letter/2a-create-letter.html">
-                         <span class="nav-icon"></span>
-                         Create letter
-                    </a>
-               </li>
-               <li class="actions create-letter">
-                    <a href="#">
-                         <span class="nav-icon"></span>
-                         Add deputy
-                    </a>
-               </li>
-          </ul> -->
-
-          <a href="../index.html" class="main-cta sign-out">
-               <span class="nav-icon"></span>
-               <p><span>Sign out</span></p>
-          </a>
-
-          <!-- <a href="#" class="minimise">
-               Minimise
-          </a> -->
-
-     </nav>
-
-</header>
-<!-- MAIN NAV - END -->
-<!-- PRIMARY CONTENT - START --><main class="default create-case-journey the-bond-info"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default create-case-journey the-bond-info"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
+
+			<a href="../index.html" class="logo">
+				<img src="../../../production/img/V18/sirius-logo-small.svg" alt="Sirius">
+				<p><span>Dashboard</span></p>
+			</a>
 
 			<div class="preferences">
 				<a href="#" class="user-cta">
@@ -105,13 +56,23 @@
 				</ul>
 			</div>
 
+			<a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+				<span class="nav-icon"></span>
+				<p><span>Create client</span></p>
+			</a>
+
+			<a href="../index.html" class="main-cta sign-out">
+				<span class="nav-icon"></span>
+				<p><span>Sign out</span></p>
+			</a>
+
 			<form action="search.html">
 				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
 
 			<label class="switch">
-				<span>Switch to: <strong>LPA Cases</strong></span>
+				<span>Switch to: <strong>LPA</strong></span>
 				<input type="checkbox">
 				<div class="slider round"></div>
 			</label>
@@ -123,7 +84,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html">My tasks</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>The bond</span> </nav> <h1> Create a Bond </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <!-- <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> --> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span>The bond</span> </nav> <h1> Create a Bond </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <!-- <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> --> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
 <div class="check-details" id="client-details">
 
 	<h2 class="description-title">
@@ -297,29 +258,14 @@
           <!-- <a href="../5-add-deputy/5a-search-deputy.html" class="add">Add deputy</a> -->
      </h2>
 
-     <!-- // CONFIRMATION MESSAGE - START // -->
-	<div class="row">
-		<div class="large-12 large-uncentered columns">
-			<div id="unlink-complete" class="confirmation-panel">
-				<div class="content">
-					<h2>
-						<span></span>
-						"<div>Mrs Carla Frith</div>" has been unlinked as a deputy
-					</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // CONFIRMATION MESSAGE - END // -->
-
      <table id="deputies-table" class="deputies-table-pfa">
           <thead>
                <tr class="six-column">
                     <th>Details</th>
                     <th>Type</th>
                     <th>Status</th>
-                    <th>Relationship</th>
-                    <th></th>
+                    <th class="deputy-info-only">Relationship</th>
+                    <th  class="deputy-info-only"></th>
                     <th><div>Actions</div></th>
                </tr>
           </thead>
@@ -330,8 +276,8 @@
                          <!-- <span class="icon deputy"></span> -->
                          <div class="name">
                               <div>Mrs Lara Stevens</div>
-                         </div><br>
-                         <div class="appointed">JOINT</div><br>
+                         </div>
+                         <div class="appointed deputy-info-only">JOINT</div><br>
                          <div class="address">34 Broomfield Place, STOKESLEY, TS9 8TU. United Kingdom</div>
                          <a href="#" class="full-details" data-value="1">View full details</a>
                     </td>
@@ -339,19 +285,19 @@
                          Lay
                     </td>
                     <td>
-                         <div class="deputy-status-error">Open</div>
+                         <div class="deputy-status-death">Active</div>
                     </td>
-                    <td>
-                         Sibling
+                    <td class="deputy-info-only">
+                         <div class="deputy-relationship-answer">Sibling</div>
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          <span class="icon fee-payer"><p>Fee payer</p></span>
                          <span class="icon main-contact"><p>Main correspondence</p></span>
                          <!-- <span class="icon welfare"><p>Health &amp; welfare</p></span> -->
                     </td>
                     <td>
                          <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
-                         <a class="main-cta tertiary edit edit-deputy-1-journey" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
+                         <a class="main-cta tertiary edit edit-deputy-1-journey deputy-info-only" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
                          <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
                     </td>
@@ -495,46 +441,50 @@
                          <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
 
                          <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
-                         <h2 class="description-title">Case details:</h2>
+                         <div class="deputy-order-details">
 
-                         <div class="details-wrap">
+                              <h2 class="description-title">Case details:</h2>
 
-                              <!-- // DEPUTY ITEM - 1 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Type of deputy:</p>
-                                   <p class="answer">Lay</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 1 - END // -->
+                              <div class="details-wrap">
 
-                              <!-- // DEPUTY ITEM - 2 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Relationship to the client:</p>
-                                   <div class="mulitple-answers">
-                                        <p class="answer">Sibling</p>
+                                   <!-- // DEPUTY ITEM - 1 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Type of deputy:</p>
+                                        <p class="answer">Lay</p>
                                    </div>
-                              </div>
-                              <!-- // DEPUTY ITEM - 2 - END // -->
+                                   <!-- // DEPUTY ITEM - 1 - END // -->
 
-                              <!-- // DEPUTY ITEM - 3 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Deputy status:</p>
-                                   <p class="answer">Open</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 3 - END // -->
+                                   <!-- // DEPUTY ITEM - 2 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Relationship to the client:</p>
+                                        <div class="mulitple-answers">
+                                             <p class="answer">Sibling</p>
+                                        </div>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 2 - END // -->
 
-                              <!-- // DEPUTY ITEM - 4 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the fee payer?:</p>
-                                   <p class="answer">Yes</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 4 - END // -->
+                                   <!-- // DEPUTY ITEM - 3 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Deputy status:</p>
+                                        <p class="answer deputy-status-death">Active</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 3 - END // -->
 
-                              <!-- // DEPUTY ITEM - 5 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the main correspondent?:</p>
-                                   <p class="answer">Yes</p>
+                                   <!-- // DEPUTY ITEM - 4 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the fee payer?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 4 - END // -->
+
+                                   <!-- // DEPUTY ITEM - 5 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the main correspondent?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 5 - END // -->
+
                               </div>
-                              <!-- // DEPUTY ITEM - 5 - END // -->
 
                          </div>
                          <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
@@ -550,25 +500,25 @@
                          <div class="name">
                               <div>Mrs Carla Frith</div>
                               <!-- <span class="violent-label"><span class="icon violent"></span>Violent</span> -->
-                         </div><br>
-                         <div class="appointed">JOINT</div><br>
+                         </div>
+                         <div class="appointed deputy-info-only">JOINT</div><br>
                          <div class="address">40 Haslemere Road, CANNOCK WOOD, W5174LD</div>
                          <a href="#" class="full-details" data-value="2">View full details</a>
                     </td>
                     <td>
                          Lay
                     </td>
-                    <td>
-                         <div class="deputy-status-error">Active</div>
+                    <td class="deputy-info-only">
+                         <div class="deputy-status-error deputy-status-answer">Active</div>
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          Sibling
                     </td>
                     <td>
                          <!-- <span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td> -->
                     <td>
                          <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
-                         <a class="main-cta tertiary edit edit-deputy-2-journey" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
+                         <a class="main-cta tertiary edit edit-deputy-2-journey deputy-info-only" href="../12-edit-deputy/12a-check-deputy-2.html">Edit</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
                          <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
                     </td>
@@ -713,46 +663,50 @@
                          <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
 
                          <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
-                         <h2 class="description-title">Case details:</h2>
+                         <div class="deputy-order-details">
 
-                         <div class="details-wrap">
+                              <h2 class="description-title">Case details:</h2>
 
-                              <!-- // DEPUTY ITEM - 1 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Type of deputy:</p>
-                                   <p class="answer">Lay</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 1 - END // -->
+                              <div class="details-wrap">
 
-                              <!-- // DEPUTY ITEM - 2 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Relationship to the client:</p>
-                                   <div class="mulitple-answers">
-                                        <p class="answer">Sibling</p>
+                                   <!-- // DEPUTY ITEM - 1 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Type of deputy:</p>
+                                        <p class="answer">Lay</p>
                                    </div>
-                              </div>
-                              <!-- // DEPUTY ITEM - 2 - END // -->
+                                   <!-- // DEPUTY ITEM - 1 - END // -->
 
-                              <!-- // DEPUTY ITEM - 3 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Deputy status:</p>
-                                   <p class="answer">Active</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 3 - END // -->
+                                   <!-- // DEPUTY ITEM - 2 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Relationship to the client:</p>
+                                        <div class="mulitple-answers">
+                                             <p class="answer">Sibling</p>
+                                        </div>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 2 - END // -->
 
-                              <!-- // DEPUTY ITEM - 4 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the fee payer?:</p>
-                                   <p class="answer">No</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 4 - END // -->
+                                   <!-- // DEPUTY ITEM - 3 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Deputy status:</p>
+                                        <p class="answer deputy-status-error deputy-status-answer">Active</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 3 - END // -->
 
-                              <!-- // DEPUTY ITEM - 5 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the main correspondent?:</p>
-                                   <p class="answer">No</p>
+                                   <!-- // DEPUTY ITEM - 4 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the fee payer?:</p>
+                                        <p class="answer">No</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 4 - END // -->
+
+                                   <!-- // DEPUTY ITEM - 5 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the main correspondent?:</p>
+                                        <p class="answer">No</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 5 - END // -->
+
                               </div>
-                              <!-- // DEPUTY ITEM - 5 - END // -->
 
                          </div>
                          <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
@@ -762,13 +716,13 @@
                <!-- DEPUTY DETAILS ROW 2 - END -->
 
                <!-- DEPUTY SUMMARY ROW 3 - START -->
-               <tr class="pfa-content-item summary-row" data-value="3">
+               <tr class="pfa-content-item summary-row " data-value="3">
                     <td>
                          <!-- <span class="icon deputy"></span> -->
                          <div class="name">
                               <div>Mrs Melanie Rand</div>
-                         </div><br>
-                         <div class="appointed">JOINT</div><br>
+                         </div>
+                         <div class="appointed deputy-info-only">SOLE</div><br>
                          <div class="address">70 Moulton Road, Gunby Green, N6334RF. United Kingdom</div>
                          <a href="#" class="full-details" data-value="3">View full details</a>
                     </td>
@@ -776,17 +730,17 @@
                          Lay
                     </td>
                     <td>
-                         <div class="deputy-status-error">Open</div>
+                         <div class="">Active</div>
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          Daughter
                     </td>
-                    <td>
+                    <td class="deputy-info-only">
                          <!-- <span class="icon property"><p>Property &amp; finance</p></span> -->
                     </td>
                     <td>
                          <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
-                         <a class="main-cta tertiary edit edit-deputy-1-journey" href="../12-edit-deputy/12a-check-deputy-1.html">Edit</a>
+                         <a class="main-cta tertiary edit edit-deputy-3-journey deputy-info-only" href="../12-edit-deputy/12a-check-deputy-3.html">Edit</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
                          <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
                     </td>
@@ -930,46 +884,50 @@
                          <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
 
                          <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
-                         <h2 class="description-title">Case details:</h2>
+                         <div class="deputy-order-details">
 
-                         <div class="details-wrap">
+                              <h2 class="description-title">Case details:</h2>
 
-                              <!-- // DEPUTY ITEM - 1 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Type of deputy:</p>
-                                   <p class="answer">Lay</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 1 - END // -->
+                              <div class="details-wrap">
 
-                              <!-- // DEPUTY ITEM - 2 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Relationship to the client:</p>
-                                   <div class="mulitple-answers">
-                                        <p class="answer">Sibling</p>
+                                   <!-- // DEPUTY ITEM - 1 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Type of deputy:</p>
+                                        <p class="answer">Lay</p>
                                    </div>
-                              </div>
-                              <!-- // DEPUTY ITEM - 2 - END // -->
+                                   <!-- // DEPUTY ITEM - 1 - END // -->
 
-                              <!-- // DEPUTY ITEM - 3 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Deputy status:</p>
-                                   <p class="answer">Open</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 3 - END // -->
+                                   <!-- // DEPUTY ITEM - 2 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Relationship to the client:</p>
+                                        <div class="mulitple-answers">
+                                             <p class="answer">Child of Client</p>
+                                        </div>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 2 - END // -->
 
-                              <!-- // DEPUTY ITEM - 4 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the fee payer?:</p>
-                                   <p class="answer">Yes</p>
-                              </div>
-                              <!-- // DEPUTY ITEM - 4 - END // -->
+                                   <!-- // DEPUTY ITEM - 3 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Deputy status:</p>
+                                        <p class="answer">Active</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 3 - END // -->
 
-                              <!-- // DEPUTY ITEM - 5 - START // -->
-                              <div class="person-detail-item">
-                                   <p class="item">Is the deputy the main correspondent?:</p>
-                                   <p class="answer">Yes</p>
+                                   <!-- // DEPUTY ITEM - 4 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the fee payer?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 4 - END // -->
+
+                                   <!-- // DEPUTY ITEM - 5 - START // -->
+                                   <div class="person-detail-item">
+                                        <p class="item">Is the deputy the main correspondent?:</p>
+                                        <p class="answer">Yes</p>
+                                   </div>
+                                   <!-- // DEPUTY ITEM - 5 - END // -->
+
                               </div>
-                              <!-- // DEPUTY ITEM - 5 - END // -->
 
                          </div>
                          <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
@@ -983,18 +941,6 @@
 
 </div>
 <!-- // DEPUTY DETAILS - END // -->
-
-<!-- // MODAL - START // -->
-<div id="unlink-deputy-list" style="display:none;">
-     <h1>Unlink this deputy</h1>
-     <h2>Mrs Carla Frith</h2>
-     <p>Are you sure you wish to unlink <strong class="unlink-deputy-name">Mrs Carla Frith</strong> as a deputy for <strong>Mr Gerald Brackens</strong>?</p>
-     <div class="cta-row">
-          <a class="main-cta" id="confirm-unlink-deputy" rel="modal:close">Unlink deputy</a>
-          <a href="#" rel="modal:close" class="cancel">Cancel</a>
-     </div>
-</div>
-<!-- // MODAL - END // -->
  </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel current"> <!-- <h2 class="section-title">Case documents</h2> --> <!-- // DOCUMENT VIEWER - START // -->
 <div id="documents-viewer">
 
@@ -1055,7 +1001,7 @@
 						<td><p>IT-SS-ORDER</p></td>
 						<!-- <td>DEP - PFA</td> -->
 						<td><p>Outgoing</p></td>
-						<td><p>01/06/2017 Today, 15:21:03</p></td>
+						<td><p>Today, 15:21:03</p></td>
 					</tr>
 					<tr>
 						<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
@@ -1239,16 +1185,30 @@
 
 </div>
 <!-- // DOCUMENT VIEWER - END // -->
- </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <div id="action-panel" class="large-4 large-uncentered columns"> <div class="create-case right"> <div class="the-bond-details" id="bond-details-section"> <h2 class="section-title"> The bond <div class="optional">(optional)</div> </h2> <!-- ///////////////////////////////// DEPUTY ERRORS - START ///////////////////////////////// -->
+ </div> <!-- =========== TAB CONTENT - 3 - END =========== --> </div> <!-- ////////// SIDE PANEL - END ////////// --> </div> <div id="action-panel" class="large-4 large-uncentered columns"> <div class="create-case right"> <div class="the-bond-details" id="bond-details-section"> <h2 class="section-title"> The bond <div class="optional">(optional)</div> </h2> <!-- ///////////////////////////////// CLIENT UPDATED - START ///////////////////////////////// -->
 <div class="row">
 	<div class="large-12 large-uncentered columns">
-		<div id="error-message" class="confirmation-panel">
+		<div id="confirmation-message" class="confirmation-panel small-version">
+			<div class="content">
+				<h1>
+					<span></span>
+					The <div>bond</div> has now been created
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// NCLIENT UPDATED - END ///////////////////////////////// -->
+ <!-- ///////////////////////////////// DEPUTY ERRORS - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="error-message" class="confirmation-panel error-message">
 			<div class="content">
 				<h1>
 					<span></span>
 					There appears to be a problem with the form
 				</h1>
-				<p>Some of the fileds require your attention:</p>
+				<p>Some of the fields require your attention:</p>
 				<ul>
 					<li class="wrong-reference"><a href="#ref-error">Reference number - this does not appear to be a valid Howdens reference number</a></li>
 				</ul>
@@ -1257,7 +1217,7 @@
 	</div>
 </div>
 <!-- ///////////////////////////////// DEPUTY ERRORS - END ///////////////////////////////// -->
- <!-- =========== THE BOND SECTION - START =========== --> <form class="case-details"> <!-- // FORM ITEM - 1 - START // --> <div class="form-group security-bond"> <legend>Security bond</legend> <label for="order-security-bond-yes" class="radio bond-yes"> <input id="order-security-bond-yes" type="radio" name="security-bond" value="Yes"> Yes </label> <label for="order-security-bond-no" class="radio bond-no"> <input id="order-security-bond-no" type="radio" name="security-bond" value="No"> No </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group why-edit-bond"> <legend>Why are you editing the bond?</legend> <label for="bond-why-edit-court" class="radio"> <input id="bond-why-edit-court" type="radio" name="edit-reason" value="Court instructions"> <span>Court instructions</span> </label> <label for="bond-why-edit-keying" class="radio"> <input id="bond-why-edit-keying" type="radio" name="edit-reason" value="Keying error"> <span>Keying error</span> </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group bond-answer-hidden hidden"> <div class="form-group currency"> <label for="bond-amount">Required bond amount (£ - Court order) <span class="required">*</span></label> <div class="date-wrapper"> <span class="currency-icon"></span> <input id="bond-amount" name="bond-amount" type="text" class="" placeholder="" value=""> </div> </div> <div class="form-group currency"> <label for="bond-value">Bond amount taken (£)</label> <div class="date-wrapper"> <span class="currency-icon"></span> <input id="bond-value" name="bond-value" type="text" class="" placeholder="" value=""> </div> </div> <div class="form-group"> <label for="bond-company">Company</label> <select id="bond-company" class="full-width"> <option value="">-- Select --</option> <option value="Howdens">Howdens</option> <option value="Deputy Bond Services (DBS)">Deputy Bond Services (DBS)</option> <option value="Marsh">Marsh</option> <option value="Other">Other</option> </select> </div> <div class="form-group bond-other-answer"> <label for="bond-other">Bond company name <span class="required">*</span></label> <input id="bond-other" name="bond-other" type="text" placeholder="" value=""> </div> <div class="form-group" id="ref-error"> <label for="bond-ref-number">Reference number</label> <span class="error-text wrong-reference">This does not appear to be a valid Howdens reference number</a></span> <input id="bond-ref-number" name="bond-ref-number" type="text" class="half" placeholder="" value=""> </div> <div class="form-group read-only"> <label for="bond-renewal-date">Renewal date of the bond:</label> <!-- <span class="help-text">Example - 05 04 2017</span> --> <div> <input id="bond-renewal-day" class="input-length" name="bond-renewal-day" placeholder="DD" type="text" value="28" maxlength="2"> <input id="bond-renewal-month" class="input-length" name="bond-renewal-month" placeholder="MM" type="text" value="08" maxlength="2"> <input id="bond-renewal-year" class="input-length four" name="bond-renewal-year" placeholder="YYYY" type="text" value="2018" maxlength="4"> </div> <a href="#" class="edit edit-form-item">edit</a> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- DISPENSE ITEMS - START --> <div class="dispense-bond-info"> <div class="form-group"> <label for="bond-dispensed-date">Discharge date <span class="required">*</span></label> <!-- <span class="help-text">Example - 05 04 2017</span> --> <div> <input id="bond-dispensed-day" class="input-length" name="bond-dispensed-day" type="text" placeholder="DD" maxlength="2"> <input id="bond-dispensed-month" class="input-length" name="bond-dispensed-month" type="text" placeholder="MM" maxlength="2"> <input id="bond-dispensed-year" class="input-length four" name="bond-dispensed-year" type="text" placeholder="YYYY" maxlength="4"> </div> </div> <div class="form-group"> <legend>Dispensed reason <span class="required">*</span></legend> <label for="dispensed-reason-court" class="radio"> <input id="dispensed-reason-court" type="radio" name="dispensed-reason" value="Court instructions"> <span>Court instructions</span> </label> <label for="dispensed-reason-keying" class="radio"> <input id="dispensed-reason-keying" type="radio" name="dispensed-reason" value="Keying error"> <span>Keying error</span> </label> </div> <hr> <!-- BOND DETAIL ITEM - 1 - START --> <div class="info-section bond-info"> <p>Required bond amount (Court order):</p> <p class="answer">£ <span class="bond-amount-answer">N/A</span></p> </div> <!-- BOND DETAIL ITEM - 1 - END --> <!-- BOND DETAIL ITEM - 2 - START --> <div class="info-section bond-info"> <p>Bond amount taken (£):</p> <p class="answer">£ <span class="bond-value-answer">N/A</span></p> </div> <!-- BOND DETAIL ITEM - 2 - END --> <!-- BOND DETAIL ITEM - 3 - START --> <div class="info-section bond-info"> <p>Company:</p> <p class="answer bond-company-answer">N/A</p> </div> <!-- BOND DETAIL ITEM - 3 - END --> <!-- BOND DETAIL ITEM - 4 - START --> <div class="info-section bond-info"> <p>Bond reference number:</p> <p class="answer bond-ref-number-answer">N/A</p> </div> <!-- BOND DETAIL ITEM - 4 - END --> <!-- BOND DETAIL ITEM - 5 - START --> <div class="info-section bond-info"> <p>Renewal date:</p> <p class="answer"> <span class="bond-renewal-day-answer"></span>/ <span class="bond-renewal-month-answer"></span>/ <span class="bond-renewal-year-answer"></span> </p> </div> <!-- BOND DETAIL ITEM - 5 - END --> </div> <!-- DISPENSE ITEMS - END --> </form> <!-- =========== THE BOND SECTION - END =========== --> </div> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- // MODAL - START // --> <div id="dispense" style="display:none;"> <h1>Dispense with the bond</h1> <h2>Value of the bond</h2> <p>Are you sure you want to dispense with this bond?</p> <!-- <form> <div class="form-group"> <label for="bond-dispense">You must type the words "dispense the bond" to continue</label> <input id="bond-dispense" name="bond-dispense" type="text" class="" placeholder="" value=""> </div> </form> --> <!-- <hr> --> <div class="cta-row"> <!-- <a class="main-cta delete-action de-activate" id="dispense-bond-false">Dispense bond</a> --> <a class="main-cta" id="dispense-bond-true" rel="modal:close">Dispense with the bond</a> <a href="#" rel="modal:close" class="cancel" id="cancel-delete">Cancel and keep the bond</a> </div> </div> <!-- // MODAL - END // --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="create-bond-button" href="../4-client-page/4a-new-client.html#PFA">Save &amp; continue</a> <a class="main-cta primary" id="add-bond-error">Save &amp; continue</a> <a class="main-cta primary" id="dispense-bond-button" href="../4-client-page/4a-new-client.html#PFA">Save &amp; dispense with the bond</a> <a class="main-cta delete-action" id="dispense-bond" href="#dispense" rel="modal:open">Dispense with the bond</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function(){ //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) { //           $('#why-commission-visit').append('<p>' + visit + '</p>'); //      }); // });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ <!-- =========== THE BOND SECTION - START =========== --> <form class="case-details"> <!-- // FORM ITEM - 1 - START // --> <div class="form-group security-bond"> <legend>Security bond?</legend> <label for="order-security-bond-yes" class="radio bond-yes"> <input id="order-security-bond-yes" type="radio" name="security-bond" value="Yes"> Yes </label> <label for="order-security-bond-no" class="radio bond-no"> <input id="order-security-bond-no" type="radio" name="security-bond" value="No"> No </label> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group why-edit-bond"> <legend>Why are you editing the bond?</legend> <label for="bond-why-edit-court" class="radio"> <input id="bond-why-edit-court" type="radio" name="edit-reason" value="Court instructions"> <span>Court instructions</span> </label> <label for="bond-why-edit-keying" class="radio"> <input id="bond-why-edit-keying" type="radio" name="edit-reason" value="Keying error"> <span>Keying error</span> </label> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group bond-answer-hidden hidden"> <div class="form-group currency"> <label for="bond-amount">Required bond amount (£ - Court order) <span class="required">*</span></label> <div class="date-wrapper"> <span class="currency-icon"></span> <input id="bond-amount" name="bond-amount" type="text" class="" placeholder="" value=""> </div> </div> <div class="form-group currency"> <label for="bond-value">Bond amount taken (£)</label> <div class="date-wrapper"> <span class="currency-icon"></span> <input id="bond-value" name="bond-value" type="text" class="" placeholder="" value=""> </div> </div> <div class="form-group"> <label for="bond-company">Company</label> <select id="bond-company" class="full-width"> <option value="">-- Select --</option> <option value="Howdens">Howdens</option> <option value="Deputy Bond Services (DBS)">Deputy Bond Services (DBS)</option> <option value="Marsh">Marsh</option> <option value="Other">Other</option> </select> </div> <div class="form-group bond-other-answer"> <label for="bond-other">Bond company name <span class="required">*</span></label> <input id="bond-other" name="bond-other" type="text" placeholder="" value=""> </div> <div class="form-group" id="ref-error"> <label for="bond-ref-number">Reference number</label> <span class="error-text wrong-reference">This does not appear to be a valid Howdens reference number</a></span> <input id="bond-ref-number" name="bond-ref-number" type="text" class="half" placeholder="" value=""> </div> <div class="form-group read-only"> <label for="bond-renewal-date">Renewal date of the bond:</label> <!-- <span class="help-text">Example - 05 04 2017</span> --> <div> <input id="bond-renewal-day" class="input-length" name="bond-renewal-day" placeholder="DD" type="text" value="28" maxlength="2"> <input id="bond-renewal-month" class="input-length" name="bond-renewal-month" placeholder="MM" type="text" value="08" maxlength="2"> <input id="bond-renewal-year" class="input-length four" name="bond-renewal-year" placeholder="YYYY" type="text" value="2018" maxlength="4"> </div> <a href="#" class="edit edit-form-item">edit</a> </div> </div> <!-- // FORM ITEM - 3 - END // --> <!-- DISPENSE ITEMS - START --> <div class="dispense-bond-info"> <div class="form-group"> <label for="bond-dispensed-date">Discharge date <span class="required">*</span></label> <!-- <span class="help-text">Example - 05 04 2017</span> --> <div> <input id="bond-dispensed-day" class="input-length" name="bond-dispensed-day" type="text" placeholder="DD" maxlength="2"> <input id="bond-dispensed-month" class="input-length" name="bond-dispensed-month" type="text" placeholder="MM" maxlength="2"> <input id="bond-dispensed-year" class="input-length four" name="bond-dispensed-year" type="text" placeholder="YYYY" maxlength="4"> </div> </div> <div class="form-group"> <legend>Dispensed reason <span class="required">*</span></legend> <label for="dispensed-reason-court" class="radio"> <input id="dispensed-reason-court" type="radio" name="dispensed-reason" value="Court instructions"> <span>Court instructions</span> </label> <label for="dispensed-reason-keying" class="radio"> <input id="dispensed-reason-keying" type="radio" name="dispensed-reason" value="Keying error"> <span>Keying error</span> </label> </div> <hr> <!-- BOND DETAIL ITEM - 1 - START --> <div class="info-section bond-info"> <p>Required bond amount (Court order):</p> <p class="answer"><span class="bond-amount-answer">N/A</span></p> </div> <!-- BOND DETAIL ITEM - 1 - END --> <!-- BOND DETAIL ITEM - 2 - START --> <div class="info-section bond-info"> <p>Bond amount taken (£):</p> <p class="answer">£ <span class="bond-value-answer">N/A</span></p> </div> <!-- BOND DETAIL ITEM - 2 - END --> <!-- BOND DETAIL ITEM - 3 - START --> <div class="info-section bond-info"> <p>Company:</p> <p class="answer bond-company-answer">N/A</p> </div> <!-- BOND DETAIL ITEM - 3 - END --> <!-- BOND DETAIL ITEM - 4 - START --> <div class="info-section bond-info"> <p>Bond reference number:</p> <p class="answer bond-ref-number-answer">N/A</p> </div> <!-- BOND DETAIL ITEM - 4 - END --> <!-- BOND DETAIL ITEM - 5 - START --> <div class="info-section bond-info"> <p>Renewal date:</p> <p class="answer"> <span class="bond-renewal-day-answer"></span>/ <span class="bond-renewal-month-answer"></span>/ <span class="bond-renewal-year-answer"></span> </p> </div> <!-- BOND DETAIL ITEM - 5 - END --> </div> <!-- DISPENSE ITEMS - END --> </form> <!-- =========== THE BOND SECTION - END =========== --> </div> </div> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- // MODAL - START // --> <div id="dispense" style="display:none;"> <h1>Dispense with the bond</h1> <h2>Value of the bond</h2> <p>Are you sure you want to dispense with this bond?</p> <!-- <form> <div class="form-group"> <label for="bond-dispense">You must type the words "dispense the bond" to continue</label> <input id="bond-dispense" name="bond-dispense" type="text" class="" placeholder="" value=""> </div> </form> --> <!-- <hr> --> <div class="cta-row"> <!-- <a class="main-cta delete-action de-activate" id="dispense-bond-false">Dispense bond</a> --> <a class="main-cta" id="dispense-bond-true" rel="modal:close">Dispense with the bond</a> <a href="#" rel="modal:close" class="cancel" id="cancel-delete">Cancel and keep the bond</a> </div> </div> <!-- // MODAL - END // --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary de-activate" id="create-bond-button">Save &amp; continue</a> <a class="main-cta primary" id="add-bond-error">Save &amp; continue</a> <a class="main-cta primary de-activate" id="dispense-bond-button">Save &amp; dispense with the bond</a> <a class="main-cta delete-action" id="dispense-bond" href="#dispense" rel="modal:open">Dispense with the bond</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> // $(document).ready(function(){ //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) { //           $('#why-commission-visit').append('<p>' + visit + '</p>'); //      }); // });</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V18/hideShowPassword.js"></script>
 	<script src="../../../production/js/V18/jquery.cookie.js"></script>
@@ -1290,11 +1250,13 @@
 	<script src="../../../production/js/V18/my-cookies/client-page.js"></script>
 	<script src="../../../production/js/V18/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V18/my-cookies/supervision-level.js"></script>
-	<script src="../../../production/js/V18/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
+	<script src="../../../production/js/V21/my-cookies/new-event.js"></script>
 	<script src="../../../production/js/V18/my-cookies/warnings.js"></script>
 	<script src="../../../production/js/V18/my-cookies/create-contact.js"></script>
 	<script src="../../../production/js/V18/my-cookies/timeline.js"></script>
 	<script src="../../../production/js/V18/my-cookies/client-death.js"></script>
+	<script src="../../../production/js/V18/my-cookies/client-header.js"></script>
 	<script src="../../../production/js/V18/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V18/my-cookies/deputy-page.js"></script>
 	<!-- User Journey - Cookies - END -->
@@ -1320,6 +1282,12 @@
 	<script src="../../../production/js/V18/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V18/my-jquery/deputy-page.js"></script>
 	<script src="../../../production/js/V18/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-summary.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-clear-filter.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-tasks.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-deputies.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-clients.js"></script>
+	<script src="../../../production/js/V18/my-jquery/dashboard-completed-tasks.js"></script>
 	<!-- <script src="../../../production/js/V18/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
 
@@ -1327,8 +1295,15 @@
 
 	<!-- Autocomplete - JQuery - START -->
 	<script src="../../../production/js/V18/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V18/autocomplete/autocomplete.js"></script>
+	<script src="../../../production/js/V18/autocomplete/all-users.js"></script>
 	<script src="../../../production/js/V18/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V18/autocomplete/inserts-list.js"></script>
+	<script src="../../../production/js/V18/autocomplete/template-list.js"></script>
 	<script src="../../../production/js/V18/autocomplete/create-task.js"></script>
+	<script src="../../../production/js/V18/autocomplete/clients-another-team.js"></script>
+	<script src="../../../production/js/V18/autocomplete/clients-user-in-team.js"></script>
+	<script src="../../../production/js/V18/autocomplete/completed-tasks.js"></script>
 	<!-- Autocomplete - JQuery - END -->
 
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
@@ -1345,7 +1320,7 @@
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table").tablesorter();
 		});
 
 		$(document).ready(function() {

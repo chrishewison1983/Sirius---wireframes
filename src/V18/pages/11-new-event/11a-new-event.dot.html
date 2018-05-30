@@ -2,8 +2,6 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-sub-section.html') }}
-
 <!-- PRIMARY CONTENT - START -->
 <main class="default new-event-journey">
 
@@ -15,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html">My tasks</a>
+                         <a href="../index.html">Dashboard</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-page/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -23,7 +21,7 @@
                               <div class="client-last-name">Brackens</div>
                          </a>
                          <div class="separator"> > </div>
-                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 19273638</a>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a>
                          <div class="separator"> > </div>
                          <span>New event</span>
                     </nav>
@@ -106,84 +104,114 @@
                <!-- =========== CREATE CLIENT - START =========== -->
                <div id="action-panel" class="large-4 large-uncentered columns">
 
-                    <div class="commission-visit right">
-
-                         <form class="edit-client-form">
-
-                              <h2 class="section-title">New event</h2>
-
-                              <!-- // FORM ITEM - 1 - START // -->
-                              <div class="form-group">
-                                   <label for="event-type">Event type <span class="required">*</span></label>
-                                   <select id="event-type" class="full-width">
-                                        <option value="">-- Select --</option>
-                                        <option value="Call">Call</option>
-                                        <!-- <option value="Case note">Case note</option> -->
-                                        <option value="Complaint">Complaint</option>
-                                        <option value="Correspondence">Correspondence</option>
-                                        <option value="Email">Email</option>
-                                        <option value="Order">Order</option>
-                                        <option value="Report - Financial Evidence">Report - Financial Evidence</option>
-                                        <option value="Report - general">Report - general</option>
-                              	</select>
-                              </div>
-                              <!-- // FORM ITEM - 1 - END // -->
-
-                              <!-- // FORM ITEM - 2 - START // -->
-                              <div class="form-group order-type">
-                                   <legend>Direction</legend>
-                                   <label for="event-direction-inbound" class="radio">
-                                        <input id="event-direction-inbound" type="radio" name="event-direction" value="Inbound">
-                                        Inbound
-                                   </label>
-                                   <label for="event-direction-outbound" class="radio">
-                                        <input id="event-direction-outbound" type="radio" name="event-direction" value="Outbound">
-                                        Outbound
-                                   </label>
-                              </div>
-                              <!-- // FORM ITEM - 2 - END // -->
-
-                              <!-- // FORM ITEM - 3 - START // -->
-                              <div class="form-group">
-                                   <label for="datepicker">Date <span class="required">*</span></label>
-                                   <div class="date-wrapper">
-                                        <input type="text" id="datepicker">
-                                        <i class="date"></i>
+                    <!-- //////////////// Pre-loader - START //////////////// -->
+                    <div class="row">
+                         <div class="large-12 large-uncentered columns">
+                              <div id="pre-loader" class="loading-panel small-version">
+                                   <div class="content">
+                                        <h1>
+                                             <span class="loader"></span>
+                                             Please wait, we're processing your request...
+                                        </h1>
                                    </div>
                               </div>
-                              <!-- // FORM ITEM - 3 - END // -->
-
-                              <!-- // FORM ITEM - 4 - START // -->
-                              <div class="form-group">
-                                   <label for="event-subject">Subject</label>
-                                   <input id="event-subject" name="event-subject" type="text" value="">
-                              </div>
-                              <!-- // FORM ITEM - 4 - END // -->
-
-                              <!-- // FORM ITEM - 5 - START // -->
-                              <div class="form-group event-notes">
-                                   <label for="event-notes">Notes <span class="required">*</span></label>
-                                   <textarea name="textarea" class="jqte-test" id="event-notes"></textarea>
-                              </div>
-                              <!-- // FORM ITEM - 5 - END // -->
-
-                              <!-- // FORM ITEM - 6 - START // -->
-                              <div class="form-group">
-                                   <label for="dropzone">File upload</label>
-                                   <div id="dropzone">
-                                        <form action="http://www.torrentplease.com/dropzone.php" class="dropzone dz-clickable">
-                                             <div class="dz-default dz-message">
-                                                  <i class="statement"></i>
-                                                  <span>Drop your file here or <strong>click to attach</strong></span>
-                                             </div>
-                                        </form>
-                                   </div>
-                              </div>
-                              <!-- // FORM ITEM - 6 - END // -->
-
-                         </form>
-
+                         </div>
                     </div>
+                    <!-- //////////////// Pre-loader - END //////////////// -->
+
+                    <form class="edit-client-form new-event-form">
+
+                         <h2 class="section-title">New event</h2>
+
+                         <!-- //////////////// Pre-loader - START //////////////// -->
+                         <div class="row">
+                              <div class="large-12 large-uncentered columns">
+                                   <div id="pre-loader-to-confirm" class="loading-panel small-version">
+                                        <div class="content">
+                                             <h1>
+                                                  <span class="loader"></span>
+                                                  Please wait, we're processing your request...
+                                             </h1>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- //////////////// Pre-loader - END //////////////// -->
+
+                         {{= it.include('confirmation/event-confirm.html') }}
+
+                         {{= it.include('errors/event-error.html') }}
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group">
+                              <label for="event-type">Event type <span class="required">*</span></label>
+                              <select id="event-type" class="full-width">
+                                   <option value="">-- Select --</option>
+                                   <option value="Call">Call</option>
+                                   <!-- <option value="Case note">Case note</option> -->
+                                   <option value="Complaint">Complaint</option>
+                                   <option value="Correspondence">Correspondence</option>
+                                   <option value="Email">Email</option>
+                                   <option value="Order">Order</option>
+                                   <option value="Report - Financial Evidence">Report - Financial Evidence</option>
+                                   <option value="Report - general">Report - general</option>
+                         	</select>
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group order-type">
+                              <legend>Direction</legend>
+                              <label for="event-direction-inbound" class="radio">
+                                   <input id="event-direction-inbound" type="radio" name="event-direction" value="Inbound">
+                                   Inbound
+                              </label>
+                              <label for="event-direction-outbound" class="radio">
+                                   <input id="event-direction-outbound" type="radio" name="event-direction" value="Outbound">
+                                   Outbound
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group">
+                              <label for="datepicker">Date <span class="required">*</span></label>
+                              <div class="date-wrapper">
+                                   <input type="text" id="datepicker" value="Today">
+                                   <i class="date"></i>
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                         <!-- // FORM ITEM - 4 - START // -->
+                         <div class="form-group">
+                              <label for="event-subject">Subject</label>
+                              <input id="event-subject" name="event-subject" type="text" value="">
+                         </div>
+                         <!-- // FORM ITEM - 4 - END // -->
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group event-notes">
+                              <label for="event-notes">Notes <span class="required">*</span></label>
+                              <textarea name="textarea" class="jqte-test" id="event-notes"></textarea>
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group">
+                              <label for="dropzone">File upload</label>
+                              <div id="dropzone">
+                                   <form action="http://www.torrentplease.com/dropzone.php" class="dropzone dz-clickable">
+                                        <div class="dz-default dz-message">
+                                             <i class="statement"></i>
+                                             <span>Drop your file here or <strong>click to attach</strong></span>
+                                        </div>
+                                   </form>
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                    </form>
 
                </div>
                <!-- =========== CREATE CLIENT - 1 - END =========== -->
@@ -198,7 +226,8 @@
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="new-event-button" href="../4-client-page/4a-new-client.html#HandW">Save &amp; exit</a>
+     <a class="main-cta primary de-activate" id="new-event-button">Save &amp; continue</a>
+     <a class="main-cta primary de-activate" id="event-error-button" href="#">Save &amp; continue</a>
      <span class="separator"></span>
      <a href="#" onclick="history.back();" class="cancel">Cancel</a>
 </footer>

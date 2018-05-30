@@ -1,0 +1,583 @@
+<div class="dashboard-item-container">
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<!-- <div class="no-items">
+		<p>You have yet to complete any tasks today.</p>
+	</div> -->
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+
+	<table id="completed-tasks-table" class="tablesorter completed">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th>Case type</th>
+				<th><span></span>Completed</th>
+				<th><span></span>Completed by</th>
+				<!-- <th>Time taken</th> -->
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- TASK 1 - START -->
+			<tr class="joe-bloggs visit-commission today last-7-days last-month last-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">Today<p>
+					<p class="time-text">10:06 A.M.</p>
+					<!-- <script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<p class="date-text">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '<p>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<p class="time-text">' + Hours + ":" + Mins + Time + '</p>');
+					</script> -->
+				</td>
+				<!-- <td>
+					<form class="incomplete">
+						<div class="form-group auto-width">
+							<div class="time-wrapper">
+								<input id="time-start-day" class="input-length day" name="time-start-day" type="text" placeholder="00" maxlength="2">
+								<input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="00" maxlength="2">
+								<input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="00" maxlength="2">
+								<div class="indicator-day">days</div>
+								<div class="indicator-hour">hrs</div>
+								<div class="indicator-minute">mins</div>
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td>
+			</tr>
+			<!-- TASK 1 - START -->
+
+			<!-- TASK 2 - START -->
+			<tr class="joe-bloggs order-review-the-order last-7-days last-month last-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">A</div>
+							<a href="../4-client-page/4a-new-client.html#HandW" class="task create-letter-journey-button">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">12/02/2018<p>
+					<p class="time-text">14:06 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="08" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="23" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="14" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="56" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td>
+			</tr>
+			<!-- TASK 2 - END -->
+
+			<!-- TASK 3 - START -->
+			<tr class="visit-commission last-7-days last-month last-60-days all hannah-nixon">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">B</div>
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">12/02/2018<p>
+					<p class="time-text">14:06 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="13" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="14" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="18" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="01" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					Nixon, Hannah
+				</td>
+			</tr>
+			<!-- TASK 3 - START -->
+
+			<!-- TASK 4 - START -->
+			<tr class="visit-report-due last-month last-60-days all joe-bloggs">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">I</div>
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4391</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Ewan Jones</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">24/01/2018<p>
+					<p class="time-text">16:24 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="10" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="35" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="11" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="56" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td>
+			</tr>
+			<!-- TASK 4 - END -->
+
+			<!-- TASK 5 - START -->
+			<tr class="case-work-reply-due last-month last-60-days all simon-carter">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">H</div>
+							<a href="#" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6928</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Miss Chelsea Burton</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">04/01/2018<p>
+					<p class="time-text">08:01 A.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="15" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="35" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="09" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="24" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					Carter, Simon
+				</td>
+			</tr>
+			<!-- TASK 5 - START -->
+
+			<!-- TASK 6 - START -->
+			<tr class="visit-report-due last-60-days all david-harper">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">E</div>
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Jennifer Moss</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">21/12/2017<p>
+					<p class="time-text">16:52 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="12" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="15" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="15" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="50" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					Harper, David
+				</td>
+			</tr>
+			<!-- TASK 6 - END -->
+
+			<!-- TASK 7 - START -->
+			<tr class="visit-commission last-60-days all shiobhan-mcdermot">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">G</div>
+							<a href="#" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4019</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Morgan Graham</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">04/12/2017<p>
+					<p class="time-text">09:34 A.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="16" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="04" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="12" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="16" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					McDermot, Shiobhan
+				</td>
+			</tr>
+			<!-- TASK 7 - START -->
+
+			<!-- TASK 8 - START -->
+			<tr class="joe-bloggs order-review-the-order all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">C</div>
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">15/11/2017<p>
+					<p class="time-text">11:34 A.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="08" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="23" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="16" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="07" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td>
+			</tr>
+			<!-- TASK 8 - END -->
+
+			<!-- TASK 9 - START -->
+			<tr class="joe-bloggs order-review-the-order all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">D</div>
+							<a href="#" class="task">Review Death Notification Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3029</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Ms Georgia Lynch</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">20/10/2017<p>
+					<p class="time-text">13:25 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="15" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="58" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="16" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="35" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td>
+			</tr>
+			<!-- TASK 9 - START -->
+
+			<!-- TASK 10 - START -->
+			<tr class="order-review-the-order all shiobhan-mcdermot">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">F</div>
+							<a href="#" class="task">Review Disclaimer Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3829</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Laura Dunn</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">05/10/2017<p>
+					<p class="time-text">15:46 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="12" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="38" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="16" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="19" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<td>
+					McDermot, Shiobhan
+				</td>
+			</tr>
+			<!-- TASK 10 - END -->
+
+		</tbody>
+	</table>
+
+	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
+	<div id="pagination-small" class="completed-tasks-pagination">
+		<a>-</a>
+		<span>
+			<a class="current">1</a>
+			<a>2</a>
+			<a>3</a>
+			<a>4</a>
+			<a>5</a>
+		</span>
+		<a>+</a>
+	</div>
+	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+</div>

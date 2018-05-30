@@ -1,0 +1,222 @@
+<!-- /////////////// FILTER PANEL - START /////////////// -->
+<div class="filter-panel deputy-controller">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-deputies">
+		<form class="search-filters deputy-filter">
+
+			<!-- <div class="search-section">
+				<input type="search" name="search" id="search-table" onkeyup="myFunction()" placeholder="Search for clients name..." autocomplete="off">
+			</div> -->
+			<div class="filter-buttons">
+
+				<!-- <h1>Clients</h1> -->
+
+				<div class="main-filter">
+					<div class="wrapper">
+						<label for="filter-category-deputies" class="float-left title-label">Filter</label>
+						<select id="filter-category-deputies" class="filter-category-deputies">
+							<option value="">-- Filter by --</option>
+							<!-- <option value="My deputies">My deputies</option> -->
+							<option value="My teams deputies">My teams deputies</option>
+							<option value="Deputy type">Deputy type</option>
+							<option value="Another team">Another team</option>
+							<option value="Another user">Another user</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="filter">
+
+					<!-- ///////////////// Filter Item - A - START ///////////////// -->
+					<div class="step-1 filter-a">
+						<div class="wrapper">
+							<input class="team-user-in-team-deputies" name="team-user-in-team-deputies" type="text" value="" placeholder="Enter team member...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - A - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - B - START ///////////////// -->
+					<div class="step-1 filter-b">
+						<div class="wrapper">
+							<select id="select-deputy-type" class="select-deputy-type">
+								<option value="">-- Deputy type --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - B - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - C - START ///////////////// -->
+					<div class="step-1 filter-c">
+						<div class="wrapper">
+							<select id="my-deputies-another-team" class="my-deputies-another-team">
+								<option value="">-- Select team --</option>
+								<option value="Team 1">Team 1</option>
+								<option value="Team 2">Team 2</option>
+								<option value="Team 3">Team 3</option>
+								<option value="Team 4">Team 4</option>
+								<option value="Team 5">Team 5</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - C - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - D - START ///////////////// -->
+					<div class="step-1 filter-d">
+						<div class="wrapper">
+							<input class="filter-another-user-deputy" name="filter-another-user-deputy" type="text" value="" placeholder="Enter another user...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - D - END ///////////////// -->
+
+
+					<!-- ///////////////// Filter Item - 1 - START ///////////////// -->
+					<div class="step-2">
+						<label for="my-deputies-assign-to" class="float-left re-assign-title title-label hide">Re-assign</label>
+						<select id="my-deputies-assign-to" class="my-deputies-assign-to">
+							<option value="">-- Re-assign to --</option>
+							<!-- <option value="Me">Me</option> -->
+							<option value="User in my team">User in my team</option>
+							<option value="Another user">Another user</option>
+							<option value="My team">My team</option>
+							<option value="Other team">Other team</option>
+						</select>
+					</div>
+					<!-- ///////////////// Filter Item - 1 - END ///////////////// -->
+
+					<div class="step-3">
+
+						<!-- // FILTER ITEM - A - START // -->
+						<div class="answer-my-team">
+							<input class="my-deputies-user-in-team" name="my-deputies-user-in-team" type="text" value="" placeholder="Enter user...">
+						</div>
+						<!-- // FILTER ITEM - A - END // -->
+
+						<!-- // FILTER ITEM - B - START // -->
+						<div class="answer-another-user">
+							<input class="my-deputies-user-another-team" name="my-deputies-user-another-team" type="text" value="" placeholder="Enter other users...">
+						</div>
+						<!-- // FILTER ITEM - B - END // -->
+
+						<!-- // FILTER ITEM - C - START // -->
+						<div class="answer-deputy-team">
+							<!-- <label for="task-team">Select team</label> -->
+							<select id="my-deputies-task-team" class="my-deputies-task-team">
+								<option value="">-- Select team --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+						<!-- // FILTER ITEM - C - END // -->
+
+					</div>
+					<div class="step-4">
+						<a class="re-assign-my-deputies main-cta re-assign de-activate">Re-assign</a>
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">23</span>
+							<br>
+							<span class="desc">deputies</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<label class="normal select-all-deputies" for="select-all-deputies">
+						<input id="select-all-deputies" name="select-all-deputies" type="checkbox" value="select-all-deputies">
+						Select all
+					</label>
+					<a href="#" class="clear-filter">Clear filter</a>
+					<a href="#" class="cancel cancel-re-assign">Cancel</a>
+				</div>
+
+			</div>
+
+		</form>
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->
+
+<!-- /////////////// RE-ASSIGN PANEL - START /////////////// -->
+<div class="re-assign-panel deputy-controller">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-deputies">
+		<form class="search-filters deputy-filter">
+
+			<div class="filter-buttons">
+
+				<div class="filter">
+
+					<!-- ///////////////// Filter Item - 1 - START ///////////////// -->
+					<div class="step-2">
+						<label for="my-deputies-assign-to" class="float-left re-assign-title title-label">Re-assign</label>
+						<select id="my-deputies-assign-to" class="my-deputies-assign-to">
+							<option value="">-- Re-assign to --</option>
+							<!-- <option value="Me">Me</option> -->
+							<option value="User in my team">User in my team</option>
+							<option value="Another user">Another user</option>
+							<option value="My team">My team</option>
+							<option value="Other team">Other team</option>
+						</select>
+					</div>
+					<!-- ///////////////// Filter Item - 1 - END ///////////////// -->
+
+					<div class="step-3">
+
+						<!-- // FILTER ITEM - A - START // -->
+						<div class="answer-my-team">
+							<input class="my-deputies-user-in-team" name="my-deputies-user-in-team" type="text" value="" placeholder="Enter user...">
+						</div>
+						<!-- // FILTER ITEM - A - END // -->
+
+						<!-- // FILTER ITEM - B - START // -->
+						<div class="answer-another-user">
+							<input class="my-deputies-user-another-team" name="my-deputies-user-another-team" type="text" value="" placeholder="Enter other users...">
+						</div>
+						<!-- // FILTER ITEM - B - END // -->
+
+						<!-- // FILTER ITEM - C - START // -->
+						<div class="answer-deputy-team">
+							<select id="my-deputies-task-team" class="my-deputies-task-team">
+								<option value="">-- Select team --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+						<!-- // FILTER ITEM - C - END // -->
+
+					</div>
+					<div class="step-4">
+						<a class="re-assign-my-deputies main-cta re-assign de-activate">Re-assign</a>
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">23</span>
+							<br>
+							<span class="desc">deputies</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<!-- <a href="#" class="clear-filter">Clear filter</a> -->
+					<a href="#" class="cancel cancel-re-assign">Cancel</a>
+				</div>
+
+			</div>
+
+		</form>
+	</div>
+</div>
+<!-- /////////////// RE-ASSIGN PANEL - END /////////////// -->

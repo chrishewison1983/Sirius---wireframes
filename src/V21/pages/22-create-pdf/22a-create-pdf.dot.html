@@ -1,0 +1,279 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a>
+                         <div class="separator"> > </div>
+                         <span>Create correspondence</span>
+                    </nav>
+                    <h1>
+                         Create correspondence
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-letter-journey">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Correspondence</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="client-contacts"></span>
+                                   <p>Contacts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-6">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/letter-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-contacts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 6 - START =========== -->
+                         <div id="tab-6" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <form class="template-search create-letter">
+
+                         <h2 class="section-title">Select a template</h2>
+
+                         <div class="form-filter form-group">
+                              <label for="pdf-list-search">Search</label>
+                              <input id="pdf-list-search" name="pdf-list-search" type="text" value="" placeholder="Search templates...">
+                         </div>
+
+                         <hr>
+
+                         <h3 class="sub-section-title">Deputy documents</h3>
+
+                         <!-- // DOCUMENT - 1 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='1'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1A</strong> - Appointment of deputy for property and affairs</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 1 - END // -->
+
+                         <!-- // DOCUMENT - 2 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='2'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1A</strong> - Property and affairs (where deputy not required)</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 2 - END // -->
+
+                         <!-- // DOCUMENT - 3 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='3'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1B</strong> - Appointment of deputy for personal welfare</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 3 - END // -->
+
+                         <!-- // DOCUMENT - 4 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='4'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1B</strong> - Personal welfare order (where deputy not required)</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 4 - END // -->
+
+                         <!-- // DOCUMENT - 5 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='5'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1C</strong> - Application relating to a statutory will, codicil, gift(s), deed of
+                                   variation or other settlement of property</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 5 - END // -->
+
+                         <!-- // DOCUMENT - 6 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='6'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1D and COP12</strong> - Application relating to the appointment or discharge of a trustee</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 6 - END // -->
+
+                         <!-- // DOCUMENT - 7 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='7'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1E</strong> - Application by existing deputy</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 7 - END // -->
+
+                         <!-- // DOCUMENT - 8 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='8'>
+                                   <span class="doc-title" data-value='letter'><strong>COP24</strong> - Other applications</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 8 - END // -->
+
+                         <hr>
+
+                         <h3 class="sub-section-title">LPA documents</h3>
+
+                         <!-- // DOCUMENT - 9 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='9'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1F</strong> - Question of validity or operation of an EPA/LPA</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 9 - END // -->
+
+                         <!-- // DOCUMENT - 10 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='10'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1C</strong> - Application relating to a statutory will, codicil, gift(s), deed of
+                                   variation or other settlement of property</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 10 - END // -->
+
+                         <!-- // DOCUMENT - 11 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='11'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1D and COP12</strong> - Application relating to the appointment or discharge of a trustee</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 11 - END // -->
+
+                         <!-- // DOCUMENT - 12 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='12'>
+                                   <span class="doc-title" data-value='letter'><strong>COP1E</strong> - Application by existing attorney</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 12 - END // -->
+
+                         <!-- // DOCUMENT - 13 - START // -->
+                         <div class="document-item court-app">
+                              <a href="22b-edit-pdf.html" class="letter-title" data-letter-id='13'>
+                                   <span class="doc-title" data-value='letter'><strong>COP24</strong> - Other applications</span>
+                              </a>
+                         </div>
+                         <!-- // DOCUMENT - 13 - END // -->
+
+                    </form>
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a href="#" onclick="history.back();" class="solo-link cancel">Cancel correspondence</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script></script>
+<!-- SCRIPT CONTENT - END -->

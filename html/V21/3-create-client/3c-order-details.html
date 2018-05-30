@@ -1,0 +1,256 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V21/jquery.min.js"></script>
+
+     <!-- <script src="../../../production/js/V21/application.js"></script> -->
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+     <!-- <script type="text/javascript">
+		var connection = new WebSocket('ws://localhost:62183');
+		connection.onmessage = function (e) {
+			location.reload();
+		};
+	</script> -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default create-client-journery step-3"> <!-- SECTION HEADER - START --> <div id="section-header"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<a href="../index.html" class="logo user-type-link">
+				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
+				<p><span>Dashboard</span></p>
+			</a>
+
+			<div class="preferences">
+				<a href="#" class="user-cta">
+					<div class="wrapper">
+						<span class="nav-icon"></span>
+						<div class="sirius-user-id">Susan Smith</div>
+					</div>
+				</a>
+
+				<ul class="user-settings">
+					<li><a href="#">Help and guidance</a></li>
+					<li class="multiple-options">
+						<span>Theme:</span>
+						<a href="#" class="multiple current">Light</a>
+						<a href="#" class="multiple">Dark</a>
+						<a href="#" class="multiple">Pink</a>
+					</li>
+					<li class="multiple-options">
+						<span>Font size:</span>
+						<a href="#" class="multiple current">Regular</a>
+						<a href="#" class="multiple">Large</a>
+					</li>
+				</ul>
+			</div>
+
+			<a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+				<span class="nav-icon"></span>
+				<p><span>Create client</span></p>
+			</a>
+
+			<a href="../index.html" class="main-cta sign-out">
+				<span class="nav-icon"></span>
+				<p><span>Sign out</span></p>
+			</a>
+
+			<form action="search.html">
+				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="submit">
+			</form>
+
+			<label class="switch">
+				<span>Switch to: <strong>LPA</strong></span>
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+
+		</div>
+	</div>
+
+	<div class="colour-wrapper"></div>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <span>Create client</span> </nav> <h1> <div class="client-first-name">Joe</div>'s order details </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar create-client">
+	<ul class="steps-two">
+		<li class="step-1">
+			<a href="3a-create-client.html" class="wrapper">
+				<div class="number"><span>1</span></div>
+				<p>Client details</p>
+			</a>
+		</li>
+		<li class="step-2">
+			<a href="3b-additional-details.html" class="wrapper">
+				<div class="number"><span>2</span></div>
+				<p>Additional info</p>
+			</a>
+		</li>
+		<!-- <li class="step-3">
+			<a href="3c-order-details.html" class="wrapper">
+				<div class="number"><span>3</span></div>
+				<p>Order details</p>
+			</a>
+		</li> -->
+		<span class="border"></span>
+	</ul>
+</nav>
+ </div> </div> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <!-- // CREATE CLIENT - START // --> <div class="large-4 large-centered columns"> <form class="add-client-form" id="create-client-form"> <!-- <legend class="section-title">New client creation</legend> --> <!-- ///////////////////////////////// CLIENT ERRORS - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="error-message" class="confirmation-panel error-message">
+			<div class="content">
+				<h1>
+					<span></span>
+					There appears to be a problem with the form
+				</h1>
+				<p>Some of the fields require your attention:</p>
+				<ul>
+					<!-- <li><a href="#casarec-error">Course reference</a></li> -->
+					<li><a href="#dob-error">Date of birth</a></li>
+					<li><a href="#mobile-error">Mobile telephone number</a></li>
+					<li><a href="#email-error">Email address</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// CLIENT ERRORS - END ///////////////////////////////// -->
+ <!-- // FORM ITEM - 1 - START // --> <div class="form-group" id="casarec-error"> <label for="client-casarec">Court reference <span class="required">*</span></label> <input id="client-casarec" name="client-casarec" type="text" class="half"> </div> <!-- // FORM ITEM - 1 - END // --> <!-- // FORM ITEM - 2 - START // --> <div class="form-group"> <label for="client-status">Client status</label> <select id="client-status" class="full-width"> <option value="">-- Select --</option> <option value="Open" selected>Open</option> <option value="Active">Active</option> <option value="Inactive">Inactive</option> <option value="Deceased">Deceased</option> <option value="Rule 202">Rule 202</option> <option value="Closed">Closed</option> <option value="Duplicate">Duplicate</option> </select> </div> <!-- // FORM ITEM - 2 - END // --> <!-- // FORM ITEM - 3 - START // --> <div class="form-group"> <legend>Status date</legend> <div> <input id="client-status-day" class="input-length" name="client-status-day" type="text" placeholder="DD" maxlength="2"> <input id="client-status-month" class="input-length" name="client-status-month" type="text" placeholder="MM" maxlength="2"> <input id="client-status-year" class="input-length four" name="client-status-year" type="text" placeholder="YYYY" maxlength="4"> </div> </div> <!-- // FORM ITEM - 3 - END // --> </form> </div> <!-- // CREATE CLIENT - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary de-activate" id="create-client-step-3">Save &amp; continue</a> <span class="separator"></span> <a href="#" onclick="history.back();" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- <div id="animated-example" class="animated bounce with-cta-footer"></div> --><!-- SCRIPT CONTENT - START --><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V21/hideShowPassword.js"></script>
+	<script src="../../../production/js/V21/jquery.cookie.js"></script>
+	<script src="../../../production/js/V21/jquery.modal.js"></script>
+	<script src="../../../production/js/V21/sticky-item.js"></script>
+
+	<!-- Datepicker - START -->
+	<script src="../../../production/js/V21/jquery-new-datepicker.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script>
+		$( function() {
+			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+		} );
+	</script>
+	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
+	<!-- <script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script> -->
+	<!-- Datepicker - END -->
+
+	<script src="../../../production/js/V21/my-cookies/my-cookies.js"></script>
+	<script src="../../../production/js/V21/my-jquery/my-jquery.js"></script>
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../../production/js/V21/my-cookies/commission-visit.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-bond.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-page.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-case.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-deputy.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact-pa.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
+	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
+	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
+	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
+	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
+	<script src="../../../production/js/V21/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V21/my-cookies/warnings.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact.js"></script>
+	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
+	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
+	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
+	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact-pa.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact-pro.js"></script>
+	<script src="../../../production/js/V21/my-jquery/edit-deputy.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-letter.js"></script>
+	<script src="../../../production/js/V21/my-jquery/report-period.js"></script>
+	<script src="../../../production/js/V21/my-jquery/supervision-level.js"></script>
+	<script src="../../../production/js/V21/my-jquery/order-status.js"></script>
+	<script src="../../../production/js/V21/my-jquery/new-event.js"></script>
+	<script src="../../../production/js/V21/my-jquery/warnings.js"></script>
+	<script src="../../../production/js/V21/my-jquery/progress-bar.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact.js"></script>
+	<script src="../../../production/js/V21/my-jquery/timeline.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
+	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
+	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
+	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
+	<!-- User Journey - JQuery - END -->
+
+	<script src="../../../production/js/V21/jquery.tablesorter.js"></script>
+
+	<!-- Autocomplete - JQuery - START -->
+	<script src="../../../production/js/V21/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V21/autocomplete/autocomplete.js"></script>
+	<script src="../../../production/js/V21/autocomplete/all-users.js"></script>
+	<script src="../../../production/js/V21/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V21/autocomplete/inserts-list.js"></script>
+	<script src="../../../production/js/V21/autocomplete/template-list.js"></script>
+	<script src="../../../production/js/V21/autocomplete/create-task.js"></script>
+	<script src="../../../production/js/V21/autocomplete/clients-another-team.js"></script>
+	<script src="../../../production/js/V21/autocomplete/clients-user-in-team.js"></script>
+	<script src="../../../production/js/V21/autocomplete/completed-tasks.js"></script>
+	<!-- Autocomplete - JQuery - END -->
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V21/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+
+		$(document).ready(function() {
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+		});
+
+		// $(document).ready(function() {
+		// 	$("#tasks-table").tablesorter( {sortList: [[0,0]]} );
+		// });
+
+	</script>
+<!-- // JS BODY END - END // -->
+<!-- <div id="animated-example" class="animated bounce"></div> --></body></html>

@@ -1,0 +1,350 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html">My tasks</a>
+                         <div class="separator"> > </div>
+                         <span>Create client</span>
+                    </nav>
+                    <h1>
+                         Enter a new Client
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <!-- // CREATE CLIENT - START // -->
+               <div class="large-4 large-centered columns">
+
+                    <form class="add-client-form" id="create-client-form">
+
+                         <!-- <legend class="section-title">New client creation</legend> -->
+
+                         {{= it.include('errors/client-error.html') }}
+
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group" id="casarec-error">
+                              <label for="client-casarec">Court reference <span class="required">*</span></label>
+                              <input id="client-casarec" name="client-casarec" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group">
+                              <label for="client-status">Client status</label>
+                              <select id="client-status" class="full-width">
+                                   <option value="">-- Select --</option>
+                                   <option value="Open">Open</option>
+                                   <option value="Active">Active</option>
+                                   <option value="Inactive">Inactive</option>
+                                   <option value="Deceased">Deceased</option>
+                                   <option value="Rule 202">Rule 202</option>
+                                   <option value="Closed">Closed</option>
+                                   <option value="Duplicate">Duplicate</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group">
+                              <legend>Status date</legend>
+                              <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                              <div>
+                                   <input id="client-status-day" class="input-length" name="client-status-day" type="text" placeholder="DD" maxlength="2">
+                                   <input id="client-status-month" class="input-length" name="client-status-month" type="text" placeholder="MM" maxlength="2">
+                                   <input id="client-status-year" class="input-length four" name="client-status-year" type="text" placeholder="YYYY" maxlength="4">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                         <!-- // FORM ITEM - 4a - START // -->
+                         <div class="form-group">
+                              <label for="client-title">Title</label>
+                              <select id="client-title">
+                                   <option>-- Select --</option>
+                                   <option>Mr.</option>
+                                   <option>Mrs.</option>
+                                   <option>Ms.</option>
+                                   <option>Miss</option>
+                                   <option>Dr.</option>
+                                   <option>Prof.</option>
+                                   <option>Rev.</option>
+                                   <option value="Other">Other</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 4a - END // -->
+
+                         <!-- // FORM ITEM - 4b - START // -->
+                         <div class="form-group client-title-other-answer">
+                              <label for="client-title-other">Other - please specify</label>
+                              <input id="client-title-other" name="client-title-other" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 4b - END // -->
+
+                         <!-- // FORM ITEM - 5 - START // -->
+                         <div class="form-group">
+                              <label for="client-first-name">First name <span class="required">*</span></label>
+                              <input id="client-first-name" name="client-first-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 5 - END // -->
+
+                         <!-- // FORM ITEM - 6 - START // -->
+                         <div class="form-group">
+                              <label for="client-middle-name">Middle names</label>
+                              <input id="client-middle-name" name="client-middle-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 6 - END // -->
+
+                         <!-- // FORM ITEM - 7 - START // -->
+                         <div class="form-group">
+                              <label for="client-last-name">Last name <span class="required">*</span></label>
+                              <input id="client-last-name" name="client-last-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 7 - END // -->
+
+                         <!-- // FORM ITEM - 8 - START // -->
+                         <div class="form-group">
+                              <label for="client-previous-name">
+                                   Previously Known As
+                                   <!-- <div class="optional">(optional)</div> -->
+                              </label>
+                              <input id="client-previous-name" name="company-name" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 8 - END // -->
+
+                         <!-- // FORM ITEM - 9 - START // -->
+                         <div class="form-group">
+                              <legend>Date of birth</legend>
+                              <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                              <div>
+                                   <input id="client-dob-day" class="input-length" name="client-dob-day" type="text" placeholder="DD" maxlength="2">
+                                   <input id="client-dob-month" class="input-length" name="client-dob-month" type="text" placeholder="MM" maxlength="2">
+                                   <input id="client-dob-year" class="input-length four" name="client-dob-year" type="text" placeholder="YYYY" maxlength="4">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 9 - END // -->
+
+                         <!-- // FORM ITEM - 10 - START // -->
+                         <div class="form-group">
+                              <label for="client-address-line-1">Address</label>
+                              <input id="client-address-line-1" name="client-address-line-1" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="client-address-line-2" class="hide">Address line 2</label>
+                              <input id="client-address-line-2" name="client-address-line-2" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="client-address-line-3" class="hide">Address line 3</label>
+                              <input id="client-address-line-3" name="client-address-line-3" type="text">
+                         </div>
+                         <div class="form-group">
+                              <label for="client-address-town">Town</label>
+                              <input id="client-address-town" name="client-address-town" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="client-address-county">County</label>
+                              <input id="client-address-county" name="client-address-county" type="text" value="">
+                         </div>
+                         <div class="form-group">
+                              <label for="client-manual-postcode">Postcode</label>
+                              <input id="client-manual-postcode" name="client-manual-postcode" type="text" class="one-third" value="">
+                         </div>
+                         <!-- // FORM ITEM - 10 - END // -->
+
+                         <!-- // FORM ITEM - 11a - START // -->
+                         <div class="form-group">
+                              <label for="client-country">Country</label>
+                              <select id="client-country" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option>United Kingdom</option>
+                                   <!-- <option>Ireland</option>
+                                   <option>Scotland</option>
+                                   <option>Wales</option>
+                                   <option>Northern Ireland</option> -->
+                                   <option value="Outside">Outside of the British Isles</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 11a - END // -->
+
+                         <!-- // FORM ITEM - 11b - START // -->
+                         <div class="form-group client-outside-uk">
+                              <label for="client-country-description">Please provide the name of the country outside of the British Isles</label>
+                              <input id="client-country-description" name="client-phone-number" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 11b - END // -->
+
+                         <!-- // FORM ITEM - 12 - START // -->
+                         <div class="form-group client-airmail-required">
+                              <legend>Is airmail required?</legend>
+                              <label for="client-airmail-yes" class="radio">
+                                   <input id="client-airmail-yes" type="radio" name="radio-inline-group-2" value="Yes">
+                                   Yes
+                              </label>
+                              <label for="client-airmail-no" class="radio">
+                                   <input id="client-airmail-no" type="radio" name="radio-inline-group-2" value="No">
+                                   No
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 12 - END // -->
+
+                         <!-- // FORM ITEM - 13 - START // -->
+                         <div class="form-group">
+                              <label for="client-phone-number">Daytime telephone number</label>
+                              <input id="client-phone-number" name="client-phone-number" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 13 - END // -->
+
+                         <!-- // FORM ITEM - 14 - START // -->
+                         <div class="form-group" id="mobile-error">
+                              <label for="client-mob-number">Mobile telephone number</label>
+                              <input id="client-mob-number" name="client-mob-number" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 14 - END // -->
+
+                         <!-- // FORM ITEM - 15 - START // -->
+                         <div class="form-group" id="email-error">
+                              <label for="client-email">Email address</label>
+                              <input id="client-email" name="email" type="text">
+                         </div>
+                         <!-- // FORM ITEM - 15 - END // -->
+
+                         <!-- // FORM ITEM - 16 - START // -->
+                         <div class="form-group">
+                              <label for="client-financial">Financial reference</label>
+                              <input id="client-financial" name="client-financial" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 16 - END // -->
+
+                         <!-- // FORM ITEM - 17 - START // -->
+                         <div class="form-group">
+                              <label for="client-accommodation">Accommodation Type</label>
+                              <select id="client-accommodation" class="full-width">
+                                   <option>-- Select --</option>
+                                   <option>NH - Care/Nursing/Residential Home (Private/LA/Registered)</option>
+                                   <option>PH - Private Hospital</option>
+                                   <option class='dis' disabled="disabled">----------------------------------------------------------------</option>
+							<option>No Accommodation Type</option>
+							<option>CR - Council Rented</option>
+							<option>FM - Family Member/Friend's Home (including spouse/civil partner)</option>
+							<option>GPH - Supervised Sheltered Accommodation</option>
+							<option>HA - Housing Association</option>
+							<option>HOT - Hotel</option>
+							<option>HOS - Hostel</option>
+							<option>HSP - Health Service Patient</option>
+							<option>NAC - NHS Accommodation e.g. hospital or hostel</option>
+							<option>NFA - No Fixed Address</option>
+							<option>OH - Own Home</option>
+							<option>OTH - Other</option>
+							<option>PT3 - Local Authority Part 3 Accommodation</option>
+							<option>REN - Private Rented (i.e. Not Council)</option>
+							<option>SEC - Secure Hospital</option>
+							<option>SH - Supported Housing</option>
+							<option>SL - Supported Living</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 17 - END // -->
+
+                         <!-- // FORM ITEM - 18 - START // -->
+                         <div class="form-group client-medical-condition">
+                              <label for="letter-medical-condition">Medical Condition</label>
+                              <!-- <span class="help-text">Medical condition(s) up to 250 character</span> -->
+                              <textarea name="textarea" id="client-medical-condition" placeholder="Medical condition(s) up to 250 character" maxlength="250"></textarea>
+                         </div>
+                         <!-- // FORM ITEM - 18 - END // -->
+
+                         <!-- // FORM ITEM - 19 - START // -->
+                         <div class="form-group">
+                              <label for="client-marital-status">Marital Status</label>
+                              <select id="client-marital-status" class="full-width">
+                                   <option>-- Select --</option>
+							<option>Civil Partnership</option>
+							<option>Divorced</option>
+							<option>Co-habiting</option>
+							<option>Married</option>
+							<option>Not Stated</option>
+							<option>Separated</option>
+							<option>Single</option>
+							<option>Widowed</option>
+							<option>Other</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 19 - END // -->
+
+                         <!-- // FORM ITEM - 20 - START // -->
+                         <div class="form-group">
+                              <legend>How would the deputy like to be contacted?</legend>
+                              <label class="normal" for="client-correspondence-email">
+                                   <input id="client-correspondence-email" name="client-correspondence-email" type="checkbox" value="email">
+                                   Email
+                              </label>
+                              <label class="normal" for="client-correspondence-phone">
+                                   <input id="client-correspondence-phone" name="client-correspondence-phone" type="checkbox" value="phone">
+                                   Phone
+                              </label>
+                              <label class="normal" for="client-correspondence-post">
+                                   <input id="client-correspondence-post" name="client-correspondence-post" type="checkbox" value="post">
+                                   Post
+                              </label>
+
+                              <label class="normal" for="client-correspondence-welsh">
+                                   <input id="client-correspondence-welsh" name="client-correspondence-welsh" type="checkbox" value="welsh">
+                                   Welsh
+                              </label>
+                         </div>
+                         <!-- // FORM ITEM - 20 - END // -->
+
+                         <!-- // FORM ITEM - 21 - START // -->
+                         <!-- <div class="form-group violent-risk">
+                              <span></span>
+                              <label class="normal" for="client-violent-risk">
+                                   <input id="client-violent-risk" name="client-violent-risk" type="checkbox" value="post">
+                                   Is the client a violent risk?
+                              </label>
+                         </div> -->
+                         <!-- // FORM ITEM - 21 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- // CREATE CLIENT - END // -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary de-activate" id="create-client">Add client</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- <div id="animated-example" class="animated bounce with-cta-footer"></div> -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

@@ -1,0 +1,248 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span>Client details</span>
+                    </nav>
+                    <h1>
+                         <div class="client-title">Mr</div>
+                         <div class="client-first-name">Gerald</div>
+                         <div class="client-last-name">Brackens</div>
+                         details
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/commission-visit.html') }}
+          </div>
+     </div> -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper edit-client">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <!-- =========== CREATE CLIENT - START =========== -->
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="check-details">
+                         <h2 class="section-title">
+                              Client details:
+                              <a href="7b-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         <!-- // CLIENT ITEM - 1 - START // -->
+                         <div class="person-detail-item">
+     					<p class="item">Court reference:</p>
+     					<p class="answer client-casarec">123456789</p>
+     				</div>
+                         <!-- // CLIENT ITEM - 1 - END // -->
+
+                         <!-- // CLIENT ITEM - 2 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Client name:</p>
+     					<p class="answer">
+     						<span class="client-title">Mr.</span>
+     						<span class="client-first-name">Gerald</span>
+     						<span class="client-middle-name">Stephen</span>
+     						<span class="client-last-name">Brackens</span>
+     					</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 2 - END // -->
+
+                         <!-- // CLIENT ITEM - 3 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Previously known as:</p>
+     					<p class="answer client-previously-known-as">N/A</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 3 - END // -->
+
+                         <!-- // CLIENT ITEM - 4 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Date of birth:</p>
+     					<p class="answer">
+     						<span class="client-dob-day">09</span>/<span class="client-dob-month">09</span>/<span class="client-dob-year">1983</span>
+     					</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 4 - END // -->
+
+                         <!-- // CLIENT ITEM - 5 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Address:</p>
+     					<p class="answer">
+     						<span class="client-address-line-1">1 Grimwald Place</span>,
+     						<span class="client-address-town">Buckley</span>,
+     						<span class="client-address-county">Flintshire</span>,
+     						<span class="client-manual-postcode">CV32 788</span>.
+     						<span class="client-country">England</span>
+     					</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 5 - END // -->
+
+                         <!-- // CLIENT ITEM - 6 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Daytime telephone number:</p>
+     					<p class="answer client-phone-number">0123456789</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 6 - END // -->
+
+                         <!-- // CLIENT ITEM - 7 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Mobile telephone number:</p>
+     					<p class="answer client-mob-number">07768948823</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 7 - END // -->
+
+                         <!-- // CLIENT ITEM - 8 - START // -->
+     				<div class="person-detail-item">
+     					<p class="item">Email address:</p>
+     					<p class="answer client-email">gerald.brackens@hotmail.com</p>
+     				</div>
+     				<!-- // CLIENT ITEM - 8 - END // -->
+
+                         <h2 class="section-title">
+                              Additoinal info:
+                              <a href="7c-edit-client.html" class="edit">Edit</a>
+                         </h2>
+
+                         <!-- // CLIENT ITEM - 1 - START // -->
+                         <div class="person-detail-item">
+     					<p class="item">Financial reference:</p>
+     					<p class="answer client-financial">192848291</p>
+     				</div>
+                         <!-- // CLIENT ITEM - 1 - END // -->
+
+                         <!-- // CLIENT ITEM - 2 - START // -->
+                         <div class="person-detail-item">
+     					<p class="item">Accommodation type:</p>
+     					<p class="answer client-accommodation">LA Nursing home</p>
+     				</div>
+                         <!-- // CLIENT ITEM - 2 - END // -->
+
+                         <!-- // CLIENT ITEM - 3 - START // -->
+                         <div class="person-detail-item">
+     					<p class="item">Medical condition</p>
+     					<p class="answer client-medical-condition-answer">Alzheimer's</p>
+     				</div>
+                         <!-- // CLIENT ITEM - 3 - END // -->
+
+                         <!-- // CLIENT ITEM - 4 - START // -->
+                         <div class="person-detail-item">
+     					<p class="item">Marital status:</p>
+     					<p class="answer client-marital-status">Divorced</p>
+     				</div>
+                         <!-- // CLIENT ITEM - 4 - END // -->
+
+                         <!-- // CLIENT ITEM - 5 - START // -->
+                         <div class="person-detail-item">
+     					<p class="item">How would the client liked to be contacted?:</p>
+     					<ul class="answer">
+                                   <li class="client-correspondence-email">Email</li>
+                                   <li class="client-correspondence-phone">Phone</li>
+                                   <li class="client-correspondence-post">Post</li>
+                                   <li class="client-correspondence-welsh">Welsh</li>
+     					</ul>
+     				</div>
+                         <!-- // CLIENT ITEM - 5 - END // -->
+
+                    </div>
+
+               </div>
+               <!-- =========== CREATE CLIENT - 1 - END =========== -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a href="../4-client-page/4a-new-client.html" id="edit-client-journey" class="solo-link back-button">Back</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

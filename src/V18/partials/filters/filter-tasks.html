@@ -1,0 +1,269 @@
+<!-- /////////////// FILTER PANEL - START /////////////// -->
+<div class="filter-panel task-controller">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks">
+		<form class="search-filters task-filter">
+
+			<!-- <div class="search-section">
+				<input type="search" name="search" id="search-table" onkeyup="myFunction()" placeholder="Search for clients name..." autocomplete="off">
+			</div> -->
+			<div class="filter-buttons">
+
+				<!-- <h1>Clients</h1> -->
+
+				<div class="main-filter">
+					<div class="wrapper">
+						<label for="filter-tasks-category" class="float-left title-label">Filter</label>
+						<select id="filter-tasks-category" class="filter-tasks-category">
+							<option value="">-- Filter tasks --</option>
+							<option value="My tasks">My tasks</option>
+							<option value="My teams tasks">My teams tasks</option>
+							<option value="Task type">Task type</option>
+							<option value="Another team">Another team</option>
+							<option value="Another user">Another user</option>
+							<option value="Due date">Due date</option>
+							<!-- <option value="Unassigned">Unassigned</option> -->
+						</select>
+					</div>
+				</div>
+
+				<div class="filter">
+
+					<!-- ///////////////// Filter Item - A - START ///////////////// -->
+					<div class="step-1 filter-a">
+						<div class="wrapper">
+							<input class="tasks-team-user-in-team" name="tasks-team-user-in-team" type="text" value="" placeholder="View team member...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - A - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - B - START ///////////////// -->
+					<div class="step-1 filter-b">
+						<div class="wrapper">
+							<input class="filter-type-task" name="filter-type-task" type="text" value="" placeholder="Task name...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - B - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - C - START ///////////////// -->
+					<div class="step-1 filter-c">
+						<div class="wrapper">
+							<select id="my-tasks-due-date" class="">
+								<option value="">-- Due date --</option>
+								<option value="Today">Today</option>
+								<option value="Next 7 days">Next 7 days</option>
+								<option value="Next month">Next month</option>
+								<option value="Next 60 days">Next 60 days</option>
+								<option value="All">All due tasks</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - C - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - D - START ///////////////// -->
+					<div class="step-1 filter-d">
+						<div class="wrapper">
+							<select id="my-tasks-another-team" class="">
+								<option value="">-- Select team --</option>
+								<option value="Team 1">Team 1</option>
+								<option value="Team 2">Team 2</option>
+								<option value="Team 3">Team 3</option>
+								<option value="Team 4">Team 4</option>
+								<option value="Team 5">Team 5</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - D - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - E - START ///////////////// -->
+					<div class="step-1 filter-e">
+						<div class="wrapper">
+							<input class="filter-another-user" name="filter-another-user" type="text" value="" placeholder="Another user...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - E - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - 1 - START ///////////////// -->
+					<div class="step-2">
+						<label for="my-tasks-assign-to" class="float-left re-assign-title title-label hide">Re-assign</label>
+						<select id="my-tasks-assign-to" class="my-tasks-assign-to">
+							<option value="">-- Re-assign to --</option>
+							<option value="Me">Me</option>
+							<option value="User in my team">User in my team</option>
+							<option value="Another user">Another user</option>
+							<option value="My team">My team</option>
+							<option value="Other team">Other team</option>
+						</select>
+					</div>
+					<!-- ///////////////// Filter Item - 1 - END ///////////////// -->
+
+					<div class="step-3">
+
+						<!-- // FILTER ITEM - A - START // -->
+						<div class="answer-my-team">
+							<input class="my-tasks-user-in-team" name="my-tasks-user-in-team" type="text" value="" placeholder="My team...">
+						</div>
+						<!-- // FILTER ITEM - A - END // -->
+
+						<!-- // FILTER ITEM - B - START // -->
+						<div class="answer-another-user">
+							<input class="my-tasks-user-another-team" name="my-tasks-user-another-team" type="text" value="" placeholder="Other users...">
+						</div>
+						<!-- // FILTER ITEM - B - END // -->
+
+						<!-- // FILTER ITEM - C - START // -->
+						<div class="answer-task-team">
+							<!-- <label for="task-team">Select team</label> -->
+							<select id="my-tasks-team" class="my-tasks-team">
+								<option value="">-- Select team --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+						<!-- // FILTER ITEM - C - END // -->
+
+					</div>
+					<div class="step-4">
+						<a class="re-assign-my-tasks main-cta re-assign de-activate">Re-assign</a>
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">23</span>
+							<br>
+							<span class="desc">tasks</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<label class="normal select-all-tasks" for="select-all-tasks">
+						<input id="select-all-tasks" name="select-all-tasks" type="checkbox" value="select-all-tasks">
+						Select all
+					</label>
+					<a href="#" class="clear-filter">Clear</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+               <div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="five-column">
+								<th><span></span>Type</th>
+								<th><span></span>Task due date</th>
+								<th><span></span>Case type</th>
+								<th><span></span>Task status</th>
+								<th><span></span>Case worker</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->
+
+<!-- /////////////// RE-ASSIGN PANEL - START /////////////// -->
+<div class="re-assign-panel task-controller">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks">
+		<form class="search-filters task-filter">
+
+			<div class="filter-buttons">
+
+				<div class="filter">
+
+					<!-- ///////////////// Filter Item - 1 - START ///////////////// -->
+					<div class="step-2">
+						<label for="my-tasks-assign-to" class="float-left re-assign-title title-label">Re-assign</label>
+						<select id="my-tasks-assign-to" class="my-tasks-assign-to">
+							<option value="">-- Re-assign to --</option>
+							<option value="Me">Me</option>
+							<option value="User in my team">User in my team</option>
+							<option value="Another user">Another user</option>
+							<option value="My team">My team</option>
+							<option value="Other team">Other team</option>
+						</select>
+					</div>
+					<!-- ///////////////// Filter Item - 1 - END ///////////////// -->
+
+					<div class="step-3">
+
+						<!-- // FILTER ITEM - A - START // -->
+						<div class="answer-my-team">
+							<input class="my-tasks-user-in-team" name="my-tasks-user-in-team" type="text" value="" placeholder="My team...">
+						</div>
+						<!-- // FILTER ITEM - A - END // -->
+
+						<!-- // FILTER ITEM - B - START // -->
+						<div class="answer-another-user">
+							<input class="my-tasks-user-another-team" name="my-tasks-user-another-team" type="text" value="" placeholder="Other users...">
+						</div>
+						<!-- // FILTER ITEM - B - END // -->
+
+						<!-- // FILTER ITEM - C - START // -->
+						<div class="answer-task-team">
+							<select id="my-tasks-team" class="my-tasks-team">
+								<option value="">-- Select team --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+						<!-- // FILTER ITEM - C - END // -->
+
+					</div>
+					<div class="step-4">
+						<a class="re-assign-my-tasks main-cta re-assign" href="#re-assign-tasks" rel="modal:open">Re-assign</a>
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">23</span>
+							<br>
+							<span class="desc">tasks</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<a href="#" class="clear-filter">Clear</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="five-column">
+								<th><span></span>Type</th>
+								<th><span></span>Task due date</th>
+								<th><span></span>Case type</th>
+								<th><span></span>Task status</th>
+								<th><span></span>Case worker</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// RE-ASSIGN PANEL - START /////////////// -->

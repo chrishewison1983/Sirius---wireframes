@@ -1,0 +1,987 @@
+<!DOCTYPE html><!--[if IEMobile 7 ]> <html dir="ltr" lang="en"class="no-js iem7"> <![endif]--><!--[if lt IE 8 ]> <html dir="ltr" lang="en" class="no-js oldie"> <![endif]--><!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]--><!--[if IE 9 ]>    <html dir="ltr" lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en" class="no-js"><!--<![endif]--><!-- // HEAD ELEMENT START // -->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>OPG - Sirius</title>
+     <link rel="stylesheet" href="../../../production/css/prototype.css" />
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+     <!-- ///////// Chris Prototyping Kit - START ///////// -->
+     <script src="../../../js/V21/jquery.min.js"></script>
+
+     <!-- <script src="../../../production/js/V21/application.js"></script> -->
+     <!-- ///////// Chris Prototyping Kit - END ///////// -->
+
+     <!-- <script type="text/javascript">
+		var connection = new WebSocket('ws://localhost:62183');
+		connection.onmessage = function (e) {
+			location.reload();
+		};
+	</script> -->
+
+</head>
+<!-- // HEAD ELEMENT END // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header" class="dashboard"> <!-- // MAIN MAV - START // -->
+<nav class="top-nav">
+
+	<div class="row">
+		<div class="large-12 large-uncentered columns">
+
+			<a href="../index.html" class="logo user-type-link">
+				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
+				<p><span>Dashboard</span></p>
+			</a>
+
+			<div class="preferences">
+				<a href="#" class="user-cta">
+					<div class="wrapper">
+						<span class="nav-icon"></span>
+						<div class="sirius-user-id">Susan Smith</div>
+					</div>
+				</a>
+
+				<ul class="user-settings">
+					<li><a href="#">Help and guidance</a></li>
+					<li class="multiple-options">
+						<span>Theme:</span>
+						<a href="#" class="multiple current">Light</a>
+						<a href="#" class="multiple">Dark</a>
+						<a href="#" class="multiple">Pink</a>
+					</li>
+					<li class="multiple-options">
+						<span>Font size:</span>
+						<a href="#" class="multiple current">Regular</a>
+						<a href="#" class="multiple">Large</a>
+					</li>
+				</ul>
+			</div>
+
+			<a href="../3-create-client/3a-create-client.html" class="create-client allocations main-cta">
+				<span class="nav-icon"></span>
+				<p><span>Create client</span></p>
+			</a>
+
+			<a href="../index.html" class="main-cta sign-out">
+				<span class="nav-icon"></span>
+				<p><span>Sign out</span></p>
+			</a>
+
+			<form action="search.html">
+				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="submit">
+			</form>
+
+			<label class="switch">
+				<span>Switch to: <strong>LPA</strong></span>
+				<input type="checkbox">
+				<div class="slider round"></div>
+			</label>
+
+		</div>
+	</div>
+
+	<div class="colour-wrapper"></div>
+
+</nav>
+<!-- // MAIN MAV - END // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <!-- <nav class="breadcrumb"> <span>Welcome:</span> </nav> --> <h1>Welcome: <div class="sirius-user-id">Susan Smith</div></h1> <span class="horizontal-border"></span> <p>This is your Sirius dashboard where you can find all your latest work and applications assigned to you.</p> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper dashboard"> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="dashboard-tabs tabs"> <li class="tab-link current" data-tab="tab-1"> <span>2</span> My applications </li> <li class="tab-link completed" data-tab="tab-2"> <span>1</span> My completed applications </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard task-details current"> <h2 class="description-title">My applications</h2> <div class="dashboard-item-container">
+
+	<table id="dashboard-tasks-table" class="tablesorter">
+		<thead>
+			<tr class="four-column">
+				<th><span></span>Type</th>
+				<th><span></span>Due date</th>
+				<th class="non-sort">Case type</th>
+				<!-- <th>Task status</th> -->
+				<!-- <th><span></span>Assigned to</th> -->
+				<th class="text-align-right">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- TASK 1 - START -->
+			<tr class="order-review-the-order joe-bloggs today next-7-days next-month next-60-days all" data-task="1">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../4-client-page/4a-new-client.html#HandW" class="task cop-1-eng-task">Create COP-1-eng.pdf</a>
+							<p class="task-intro">Deputy has complained of clients funds being misused</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html" class="cop-1-eng-task">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="full-task-notes" data-value="1">View application notes</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/03/2018</p>
+					<div class="counter">
+						<span class="number">-4</span>
+						days
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA" class="cop-1-eng-task">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="../8-create-task/8a-create-task.html" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 1 - END -->
+
+			<!-- TASK 1 - NOTES - START -->
+			<tr class="details-row" data-task="1">
+				<td colspan="4">
+
+					<div class="details-wrap">
+
+						<!-- ITEM - 1 - START -->
+						<div class="info-section">
+							<p>Notes:</p>
+							<p class="answer">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+							</p>
+						</div>
+						<!-- ITEM - 1 - END -->
+
+					</div>
+				</td>
+			</tr>
+			<!-- TASK 1 - NOTES - END -->
+
+			<!-- TASK 2 - START -->
+			<tr class="visit-commission link-for-commission-visit joe-bloggs today next-7-days next-month next-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="#" class="task">Create COP-24.pdf</a>
+							<p class="task-intro">Deputy has complained of clients funds being misused</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Heather Spencer</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>20/03/2018</p>
+					<div class="counter">
+						<span class="number">-2</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="#">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<a href="#error-task" rel="modal:open" class="main-cta tertiary complete action-button">Mark as complete</a>
+					<a href="#" class="main-cta tertiary edit action-button">Edit task</a>
+				</td>
+			</tr>
+			<!-- TASK 2 - START -->
+
+		</tbody>
+	</table>
+
+</div>
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content dashboard"> <h2 class="description-title completed">My completed applications: <div class="timeline-value">Today</div></h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-small" class="completed-tasks-pagination pagination-small"> <a>-</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> </span> <a>+</a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
+<div class="filter-panel completed-tasks">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="">
+		<form class="search-filters completed-tasks">
+
+			<!-- <div class="search-section">
+				<input type="search" name="search" id="search-table" onkeyup="myFunction()" placeholder="Search for clients name..." autocomplete="off">
+			</div> -->
+			<div class="filter-buttons">
+
+				<!-- <h1>Clients</h1> -->
+
+				<div class="main-filter">
+					<label for="filter-date-completed" class="float-left title-label">Filter</label>
+					<div class="section-1">
+						<select id="filter-date-completed" class="">
+							<option value="">-- Timeline --</option>
+							<option value="Today">Today</option>
+							<option value="Last 7 days">Last 7 days</option>
+							<option value="Last month">Last month</option>
+							<option value="Last 60 days">Last 60 days</option>
+							<option value="All">All completed tasks</option>
+						</select>
+
+					</div>
+					<div class="section-2">
+						<select id="filter-type-task" class="filter-type-task">
+							<option value="">-- Select task type --</option>
+							<option value="CWRD">Case Work - Reply Due</option>
+							<option value="ORRE">Order - Review the order</option>
+							<option value="ORAL">Order - Allocate to team</option>
+							<option value="INAR">Intro - Arrange settling in</option>
+							<option value="INSE">Intro - Settling in call</option>
+							<option value="INNDR">Intro - New Deputy Report</option>
+							<option value="VICO">Visit - Commission</option>
+							<option value="VIRE">Visit - Required</option>
+							<option value="VIURE">Visit - Urgent required</option>
+							<option value="VIRD">Visit - Report due</option>
+						</select>
+						<!-- <input id="filter-type-completed" name="filter-type-completed" type="text" value="" placeholder="Enter task type..."> -->
+					</div>
+					<!-- <div class="section-3">
+						<input class="filter-completed-user" name="filter-completed-user" type="text" value="" placeholder="Enter user...">
+					</div> -->
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">1</span>
+							<br>
+							<span class="desc">task</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<a href="#" class="clear-filter">Clear filter</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th><span></span>Type</th>
+								<th><span></span>Case type</th>
+								<th><span></span>Completed</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->
+ <div class="dashboard-item-container">
+
+	<!-- // CONFIRMATION MESSAGE - START // -->
+	<!-- <div class="no-items">
+		<p>You have yet to complete any tasks today.</p>
+	</div> -->
+	<!-- // CONFIRMATION MESSAGE - END // -->
+
+
+	<table id="completed-tasks-table" class="tablesorter completed">
+		<thead>
+			<tr class="three-column">
+				<th><span></span>Type</th>
+				<th>Case type</th>
+				<th><span></span>Completed</th>
+				<!-- <th><span></span>Completed by</th> -->
+				<!-- <th>Time taken</th> -->
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- TASK 1 - START -->
+			<tr class="joe-bloggs visit-commission today last-7-days last-month last-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">Today<p>
+					<p class="time-text">10:06 A.M.</p>
+					<!-- <script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<p class="date-text">' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '<p>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<p class="time-text">' + Hours + ":" + Mins + Time + '</p>');
+					</script> -->
+				</td>
+				<!-- <td>
+					<form class="incomplete">
+						<div class="form-group auto-width">
+							<div class="time-wrapper">
+								<input id="time-start-day" class="input-length day" name="time-start-day" type="text" placeholder="00" maxlength="2">
+								<input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="00" maxlength="2">
+								<input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="00" maxlength="2">
+								<div class="indicator-day">days</div>
+								<div class="indicator-hour">hrs</div>
+								<div class="indicator-minute">mins</div>
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- TASK 1 - START -->
+
+			<!-- TASK 2 - START -->
+			<tr class="joe-bloggs order-review-the-order last-7-days last-month last-60-days all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">A</div>
+							<a href="../4-client-page/4a-new-client.html#HandW" class="task create-letter-journey-button">Review application correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-1035</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">12/02/2018<p>
+					<p class="time-text">14:06 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="08" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="23" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="14" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="56" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- TASK 2 - END -->
+
+			<!-- TASK 3 - START -->
+			<tr class="visit-commission last-7-days last-month last-60-days all hannah-nixon">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">B</div>
+							<a href="../6-commission-visit/6a-why.html" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3202</p>
+								<span class="client-icon"></span>
+								<p><a href="../4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">12/02/2018<p>
+					<p class="time-text">14:06 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="13" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="14" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="18" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="01" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					Nixon, Hannah
+				</td> -->
+			</tr>
+			<!-- TASK 3 - START -->
+
+			<!-- TASK 4 - START -->
+			<tr class="visit-report-due last-month last-60-days all joe-bloggs">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">I</div>
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4391</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Ewan Jones</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">24/01/2018<p>
+					<p class="time-text">16:24 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="10" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="35" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="11" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="56" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- TASK 4 - END -->
+
+			<!-- TASK 5 - START -->
+			<tr class="case-work-reply-due last-month last-60-days all simon-carter">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">H</div>
+							<a href="#" class="task">Print and send generated notice(s)</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-6928</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Miss Chelsea Burton</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">04/01/2018<p>
+					<p class="time-text">08:01 A.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="15" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="35" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="09" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="24" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					Carter, Simon
+				</td> -->
+			</tr>
+			<!-- TASK 5 - START -->
+
+			<!-- TASK 6 - START -->
+			<tr class="visit-report-due last-60-days all david-harper">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">E</div>
+							<a href="#" class="task">Review annual report</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Jennifer Moss</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">21/12/2017<p>
+					<p class="time-text">16:52 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="12" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="15" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="15" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="50" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					Harper, David
+				</td> -->
+			</tr>
+			<!-- TASK 6 - END -->
+
+			<!-- TASK 7 - START -->
+			<tr class="visit-commission last-60-days all shiobhan-mcdermot">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">G</div>
+							<a href="#" class="task">Commission visit</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-4019</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Morgan Graham</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">04/12/2017<p>
+					<p class="time-text">09:34 A.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="16" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="04" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="12" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="16" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					McDermot, Shiobhan
+				</td> -->
+			</tr>
+			<!-- TASK 7 - START -->
+
+			<!-- TASK 8 - START -->
+			<tr class="joe-bloggs order-review-the-order all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">C</div>
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">15/11/2017<p>
+					<p class="time-text">11:34 A.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="08" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="23" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="16" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="07" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- TASK 8 - END -->
+
+			<!-- TASK 9 - START -->
+			<tr class="joe-bloggs order-review-the-order all">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">D</div>
+							<a href="#" class="task">Review Death Notification Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3029</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Ms Georgia Lynch</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#HandW">H&amp;W<span class="icon welfare"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">20/10/2017<p>
+					<p class="time-text">13:25 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="15" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="58" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="16" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="35" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- TASK 9 - START -->
+
+			<!-- TASK 10 - START -->
+			<tr class="order-review-the-order all shiobhan-mcdermot">
+				<td>
+					<div class="wrapper">
+						<div class="text">
+							<div class="hide">F</div>
+							<a href="#" class="task">Review Disclaimer Correspondence</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-3829</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mrs Laura Dunn</a></p>
+								<p><a href="#" class="open">Description</a></a>
+							</div>
+							<div class="description">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum libero ligula, at imperdiet sem sollicitudin volutpat. Praesent vel mi egestas, fermentum tellus at, bibendum erat. Aenean fermentum est elit, quis finibus lacus convallis id. Nullam porta dapibus ex, nec egestas est. Nullam tempus vel nunc in sagittis. Duis porta laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui sapien. Curabitur suscipit in dolor eu dapibus. Aenean blandit id dolor vel rhoncus.
+								</p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<a href="../4-client-page/4a-new-client.html#PFA">PFA<span class="icon property"></span></a>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p class="date-text">05/10/2017<p>
+					<p class="time-text">15:46 P.M.</p>
+				</td>
+				<!-- <td>
+					<form>
+						<div class="form-group half-width">
+                                   <div class="time-wrapper">
+								<legend>Start</legend>
+                                        <input id="time-start-hour" class="input-length hour" name="time-start-hour" type="text" placeholder="" value="12" maxlength="2">
+                                        <input id="time-start-minute" class="input-length minute" name="time-start-minute" type="text" placeholder="" value="38" maxlength="2">
+                                   </div>
+                              </div>
+						<div class="form-group half-width">
+							<div class="time-wrapper">
+								<legend>Finish</legend>
+								<input id="time-finish-hour" class="input-length hour" name="time-finish-hour" type="text" placeholder="" value="16" maxlength="2">
+								<input id="time-finish-minute" class="input-length minute" name="time-finish-minute" type="text" placeholder="" value="19" maxlength="2">
+							</div>
+						</div>
+					</form>
+				</td> -->
+				<!-- <td>
+					McDermot, Shiobhan
+				</td> -->
+			</tr>
+			<!-- TASK 10 - END -->
+
+		</tbody>
+	</table>
+
+	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
+	<div id="pagination-small" class="completed-tasks-pagination">
+		<a>-</a>
+		<span>
+			<a class="current">1</a>
+			<a>2</a>
+			<a>3</a>
+			<a>4</a>
+			<a>5</a>
+		</span>
+		<a>+</a>
+	</div>
+	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+</div>
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script src="../../../production/js/V21/pagination.js"></script><script>function myFunction() {  var input, filter, table, tr, td, i; input = document.getElementById("dashboard-deputy-search"); filter = input.value.toUpperCase(); table = document.getElementById("dashboard-deputies-table"); tr = table.getElementsByTagName("tr");  for (i = 0; i < tr.length; i++) { td = tr[i].getElementsByTagName("td")[0]; if (td) { if (td.innerHTML.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } }}</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
+	<script src="../../../production/js/V21/hideShowPassword.js"></script>
+	<script src="../../../production/js/V21/jquery.cookie.js"></script>
+	<script src="../../../production/js/V21/jquery.modal.js"></script>
+	<script src="../../../production/js/V21/sticky-item.js"></script>
+
+	<!-- Datepicker - START -->
+	<script src="../../../production/js/V21/jquery-new-datepicker.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script>
+		$( function() {
+			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+		} );
+	</script>
+	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
+	<!-- <script>
+	    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+	</script> -->
+	<!-- Datepicker - END -->
+
+	<script src="../../../production/js/V21/my-cookies/my-cookies.js"></script>
+	<script src="../../../production/js/V21/my-jquery/my-jquery.js"></script>
+
+	<!-- User Journey - Cookies - START -->
+	<script src="../../../production/js/V21/my-cookies/commission-visit.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-bond.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-page.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-case.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-task.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-letter.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-deputy.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact-pa.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
+	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
+	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
+	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
+	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
+	<script src="../../../production/js/V21/my-cookies/new-event.js"></script>
+	<script src="../../../production/js/V21/my-cookies/warnings.js"></script>
+	<script src="../../../production/js/V21/my-cookies/create-contact.js"></script>
+	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
+	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
+	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
+	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
+	<!-- User Journey - Cookies - END -->
+
+	<!-- User Journey - JQuery - START -->
+	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
+	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-case.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-task.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-deputy.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact-pa.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact-pro.js"></script>
+	<script src="../../../production/js/V21/my-jquery/edit-deputy.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-letter.js"></script>
+	<script src="../../../production/js/V21/my-jquery/report-period.js"></script>
+	<script src="../../../production/js/V21/my-jquery/supervision-level.js"></script>
+	<script src="../../../production/js/V21/my-jquery/order-status.js"></script>
+	<script src="../../../production/js/V21/my-jquery/new-event.js"></script>
+	<script src="../../../production/js/V21/my-jquery/warnings.js"></script>
+	<script src="../../../production/js/V21/my-jquery/progress-bar.js"></script>
+	<script src="../../../production/js/V21/my-jquery/create-contact.js"></script>
+	<script src="../../../production/js/V21/my-jquery/timeline.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
+	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
+	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
+	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
+	<!-- User Journey - JQuery - END -->
+
+	<script src="../../../production/js/V21/jquery.tablesorter.js"></script>
+
+	<!-- Autocomplete - JQuery - START -->
+	<script src="../../../production/js/V21/autocomplete/jquery.autocomplete.min.js"></script>
+	<script src="../../../production/js/V21/autocomplete/autocomplete.js"></script>
+	<script src="../../../production/js/V21/autocomplete/all-users.js"></script>
+	<script src="../../../production/js/V21/autocomplete/sub-section.js"></script>
+	<script src="../../../production/js/V21/autocomplete/inserts-list.js"></script>
+	<script src="../../../production/js/V21/autocomplete/template-list.js"></script>
+	<script src="../../../production/js/V21/autocomplete/create-task.js"></script>
+	<script src="../../../production/js/V21/autocomplete/clients-another-team.js"></script>
+	<script src="../../../production/js/V21/autocomplete/clients-user-in-team.js"></script>
+	<script src="../../../production/js/V21/autocomplete/completed-tasks.js"></script>
+	<!-- Autocomplete - JQuery - END -->
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
+	<script src="../../../production/js/V21/text-editor.js"></script>
+	<script>
+		$('.jqte-test').jqte();
+
+		// settings of status
+		var jqteStatus = true;
+		$(".status").click(function()
+		{
+			jqteStatus = jqteStatus ? false : true;
+			$('.jqte-test').jqte({"status" : jqteStatus})
+		});
+
+		$(document).ready(function() {
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+		});
+
+		// $(document).ready(function() {
+		// 	$("#tasks-table").tablesorter( {sortList: [[0,0]]} );
+		// });
+
+	</script>
+<!-- // JS BODY END - END // -->
+<!-- <div id="animated-example" class="animated bounce"></div> --></body></html>

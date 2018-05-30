@@ -31,11 +31,13 @@
 	<script src="../../production/js/V18/my-cookies/client-page.js"></script>
 	<script src="../../production/js/V18/my-cookies/report-period.js"></script>
 	<script src="../../production/js/V18/my-cookies/supervision-level.js"></script>
-	<script src="../../production/js/V18/my-cookies/new-event.js"></script>
+	<script src="../../production/js/V21/my-cookies/order-status.js"></script>
+	<script src="../../production/js/V21/my-cookies/new-event.js"></script>
 	<script src="../../production/js/V18/my-cookies/warnings.js"></script>
 	<script src="../../production/js/V18/my-cookies/create-contact.js"></script>
 	<script src="../../production/js/V18/my-cookies/timeline.js"></script>
 	<script src="../../production/js/V18/my-cookies/client-death.js"></script>
+	<script src="../../production/js/V18/my-cookies/client-header.js"></script>
 	<script src="../../production/js/V18/my-cookies/deputy-death.js"></script>
 	<script src="../../production/js/V18/my-cookies/deputy-page.js"></script>
 	<!-- User Journey - Cookies - END -->
@@ -61,6 +63,12 @@
 	<script src="../../production/js/V18/my-jquery/deputy-death.js"></script>
 	<script src="../../production/js/V18/my-jquery/deputy-page.js"></script>
 	<script src="../../production/js/V18/my-jquery/client-header.js"></script>
+	<script src="../../production/js/V18/my-jquery/dashboard-summary.js"></script>
+	<script src="../../production/js/V18/my-jquery/dashboard-clear-filter.js"></script>
+	<script src="../../production/js/V18/my-jquery/dashboard-deputies.js"></script>
+	<script src="../../production/js/V18/my-jquery/dashboard-clients.js"></script>
+	<script src="../../production/js/V18/my-jquery/dashboard-tasks.js"></script>
+	<script src="../../production/js/V18/my-jquery/dashboard-completed-tasks.js"></script>
 	<!-- <script src="../../production/js/V18/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
 
@@ -69,6 +77,14 @@
 	<!-- Autocomplete - JQuery - START -->
 	<script src="../../production/js/V18/autocomplete/jquery.autocomplete.min.js"></script>
 	<script src="../../production/js/V18/autocomplete/autocomplete.js"></script>
+	<script src="../../production/js/V18/autocomplete/sub-section.js"></script>
+	<script src="../../production/js/V18/autocomplete/all-users.js"></script>
+	<script src="../../production/js/V18/autocomplete/inserts-list.js"></script>
+	<script src="../../production/js/V18/autocomplete/template-list.js"></script>
+	<script src="../../production/js/V18/autocomplete/create-task.js"></script>
+	<script src="../../production/js/V18/autocomplete/clients-another-team.js"></script>
+	<script src="../../production/js/V18/autocomplete/clients-user-in-team.js"></script>
+	<script src="../../production/js/V18/autocomplete/completed-tasks.js"></script>
 	<!-- Autocomplete - JQuery - END -->
 
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script> -->
@@ -85,7 +101,7 @@
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-clients-table, #dashboard-tasks-table").tablesorter();
 		});
 
 		$(document).ready(function() {

@@ -1,0 +1,111 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default create-client-journery step-3">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <span>Create client</span>
+                    </nav>
+                    <h1>
+                         <div class="client-first-name">Joe</div>'s order details
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <div class="row">
+          <div class="large-12 large-uncentered columns">
+               {{= it.include('progress-bars/add-client.html') }}
+          </div>
+     </div>
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <!-- // CREATE CLIENT - START // -->
+               <div class="large-4 large-centered columns">
+
+                    <form class="add-client-form" id="create-client-form">
+
+                         <!-- <legend class="section-title">New client creation</legend> -->
+
+                         {{= it.include('errors/client-error.html') }}
+
+
+                         <!-- // FORM ITEM - 1 - START // -->
+                         <div class="form-group" id="casarec-error">
+                              <label for="client-casarec">Court reference <span class="required">*</span></label>
+                              <input id="client-casarec" name="client-casarec" type="text" class="half">
+                         </div>
+                         <!-- // FORM ITEM - 1 - END // -->
+
+                         <!-- // FORM ITEM - 2 - START // -->
+                         <div class="form-group">
+                              <label for="client-status">Client status</label>
+                              <select id="client-status" class="full-width">
+                                   <option value="">-- Select --</option>
+                                   <option value="Open" selected>Open</option>
+                                   <option value="Active">Active</option>
+                                   <option value="Inactive">Inactive</option>
+                                   <option value="Deceased">Deceased</option>
+                                   <option value="Rule 202">Rule 202</option>
+                                   <option value="Closed">Closed</option>
+                                   <option value="Duplicate">Duplicate</option>
+                              </select>
+                         </div>
+                         <!-- // FORM ITEM - 2 - END // -->
+
+                         <!-- // FORM ITEM - 3 - START // -->
+                         <div class="form-group">
+                              <legend>Status date</legend>
+                              <div>
+                                   <input id="client-status-day" class="input-length" name="client-status-day" type="text" placeholder="DD" maxlength="2">
+                                   <input id="client-status-month" class="input-length" name="client-status-month" type="text" placeholder="MM" maxlength="2">
+                                   <input id="client-status-year" class="input-length four" name="client-status-year" type="text" placeholder="YYYY" maxlength="4">
+                              </div>
+                         </div>
+                         <!-- // FORM ITEM - 3 - END // -->
+
+                    </form>
+
+               </div>
+               <!-- // CREATE CLIENT - END // -->
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary de-activate" id="create-client-step-3">Save &amp; continue</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- <div id="animated-example" class="animated bounce with-cta-footer"></div> -->
+
+<!-- SCRIPT CONTENT - START -->
+<!-- SCRIPT CONTENT - END -->

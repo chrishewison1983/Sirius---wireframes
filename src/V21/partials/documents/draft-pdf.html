@@ -1,0 +1,613 @@
+<!-- /////////////////////////// DOCUMENT 1 - START /////////////////////////// -->
+<h2 class="section-title">
+	Edit document:
+	<div class="current-doc-info">
+		<span>
+			<div class="current-document-title"></div>
+		</span>
+	</div>
+</h2>
+
+<!-- // CONFIRMATION MESSAGE - START // -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="draft-saved" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your draft/s has been
+					<div class="message-1">created</div>
+					<div class="message-2">saved</div>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+					</script>
+				</h2>
+			</div>
+		</div>
+		<div id="draft-saved-timer" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your draft has been <div>autosaved</div>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+					</script>
+				</h2>
+			</div>
+		</div>
+		<div id="previous-draft-saved" class="confirmation-panel">
+			<div class="content">
+				<h2>
+					<span></span>
+					Your changes to the draft <div>"title goes here"</div> have been <div>saved</div>
+					<script language="JavaScript">
+
+						Stamp = new Date();
+						year = Stamp.getYear();
+						if (year < 2000) year = 1900 + year;
+						document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>');
+						var Hours;
+						var Mins;
+						var Time;
+						Hours = Stamp.getHours();
+						if (Hours >= 12) {
+							Time = " P.M.";
+						}
+						else {
+							Time = " A.M.";
+						}
+						if (Hours > 12) {
+							Hours -= 12;
+						}
+						if (Hours == 0) {
+							Hours = 12;
+						}
+						Mins = Stamp.getMinutes();
+							if (Mins < 10) {
+							Mins = "0" + Mins;
+						}
+						document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>');
+					</script>
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // CONFIRMATION MESSAGE - END // -->
+
+<!-- /////////////////////////// SECTION 2 - START /////////////////////////// -->
+<h3 class="description-title">Section 2 - Your details (the applicant(s))</h3>
+
+<div class="accordion">
+
+     <!-- //////////////////////////// STEP 1 INFO - START //////////////////////////// -->
+     <div class="accordion-section active">
+          <button class="accordion-section-title active" href="#accordion-1">
+               Section 2.1 <span></span>
+          </button>
+
+          <div id="accordion-1" class="accordion-section-content open" style="display: inline-block;">
+
+			<form>
+
+				<h4 class="sub-section-title">First applicant</h4>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group">
+				     <label for="court-app-title">Title</label>
+				     <select id="court-app-title">
+				          <option value="">-- Select --</option>
+				          <option value="Mr.">Mr.</option>
+				          <option value="Mrs.">Mrs.</option>
+				          <option value="Miss">Miss</option>
+				          <option value="Ms.">Ms.</option>
+				          <option value="Other">Other</option>
+				     </select>
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+				<!-- // DOC ITEM 2 - START // -->
+				<div class="form-group">
+				     <label for="court-app-name" class="">Full name</label>
+				     <input id="court-app-name" name="court-app-name" type="text" class="full-width" value="">
+				</div>
+				<!-- // DOC ITEM 2 - END // -->
+
+				<!-- // DOC ITEM 3 - START // -->
+				<div class="form-group">
+			          <label for="court-app-address">Address</label>
+			          <textarea name="textarea" id="court-app-address" placeholder="" maxlength="250"></textarea>
+			     </div>
+				<!-- // DOC ITEM 3 - END // -->
+
+				<!-- // DOC ITEM 4 - START // -->
+				<div class="form-group">
+					<label for="court-app-phone-number" class="">Phone number</label>
+					<input id="court-app-phone-number" name="court-app-phone-number" type="text" class="half" value="">
+				</div>
+				<!-- // DOC ITEM 4 - END // -->
+
+				<!-- // DOC ITEM 5 - START // -->
+				<div class="form-group">
+					<label for="court-app-email" class="">Email</label>
+					<input id="court-app-email" name="court-app-email" type="text" class="full-width" value="">
+				</div>
+				<!-- // DOC ITEM 5 - END // -->
+
+				<!-- // DOC ITEM 6 - START // -->
+				<div class="form-group">
+					<label for="court-app-relationship" class="">Relationship</label>
+					<input id="court-app-relationship" name="court-app-relationship" type="text" class="half" value="">
+				</div>
+				<!-- // DOC ITEM 6 - END // -->
+
+				<a href="#" class="add">Add second applicant</a>
+
+				<div class="second-applicant">
+
+					<h4 class="sub-section-title">Second applicant</h4>
+
+					<!-- // DOC ITEM 1 - START // -->
+					<div class="form-group">
+					     <label for="court-app-title">Title</label>
+					     <select id="court-app-title">
+					          <option value="">-- Select --</option>
+					          <option value="Mr.">Mr.</option>
+					          <option value="Mrs.">Mrs.</option>
+					          <option value="Miss">Miss</option>
+					          <option value="Ms.">Ms.</option>
+					          <option value="Other">Other</option>
+					     </select>
+					</div>
+					<!-- // DOC ITEM 1 - END // -->
+
+					<!-- // DOC ITEM 2 - START // -->
+					<div class="form-group">
+					     <label for="court-app-name" class="">Full name</label>
+					     <input id="court-app-name" name="court-app-name" type="text" class="full-width" value="">
+					</div>
+					<!-- // DOC ITEM 2 - END // -->
+
+					<!-- // DOC ITEM 3 - START // -->
+					<div class="form-group">
+				          <label for="court-app-address">Address</label>
+				          <textarea name="textarea" id="court-app-address" placeholder="" maxlength="250"></textarea>
+				     </div>
+					<!-- // DOC ITEM 3 - END // -->
+
+					<!-- // DOC ITEM 4 - START // -->
+					<div class="form-group">
+						<label for="court-app-phone-number" class="">Phone number</label>
+						<input id="court-app-phone-number" name="court-app-phone-number" type="text" class="half" value="">
+					</div>
+					<!-- // DOC ITEM 4 - END // -->
+
+					<!-- // DOC ITEM 5 - START // -->
+					<div class="form-group">
+						<label for="court-app-email" class="">Email</label>
+						<input id="court-app-email" name="court-app-email" type="text" class="full-width" value="">
+					</div>
+					<!-- // DOC ITEM 5 - END // -->
+
+					<!-- // DOC ITEM 6 - START // -->
+					<div class="form-group">
+						<label for="court-app-relationship" class="">Relationship</label>
+						<input id="court-app-relationship" name="court-app-relationship" type="text" class="half" value="">
+					</div>
+					<!-- // DOC ITEM 6 - END // -->
+
+				</div>
+
+			</form>
+
+          </div>
+     </div>
+     <!-- //////////////////////////// STEP 1 INFO - END //////////////////////////// -->
+
+     <!-- //////////////////////////// STEP 2 INFO - START //////////////////////////// -->
+     <div class="accordion-section">
+          <button class="accordion-section-title" href="#accordion-2">
+			Section 2.2 <span></span>
+          </button>
+
+          <div id="accordion-2" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group">
+				     <label for="court-app-capacity">In what capacity are you making the application?</label>
+				     <select id="court-app-capacity" class="full-width">
+				          <option value="">-- Select --</option>
+				          <option value="Proposed deputy/deputy">Proposed deputy/deputy</option>
+				          <option value="I am">I am the person to whom this application relates</option>
+				          <option value="Attorney">Attorney</option>
+				          <option value="Other">Other</option>
+				     </select>
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+			</form>
+
+          </div>
+     </div>
+     <!-- //////////////////////////// STEP 2 INFO - END //////////////////////////// -->
+
+     <!-- //////////////////////////// STEP 3 INFO - START //////////////////////////// -->
+     <div class="accordion-section">
+          <button class="accordion-section-title" href="#accordion-3">
+			Section 2.3 <span></span>
+          </button>
+
+          <div id="accordion-3" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group no-margin">
+					<label for="court-app-address-choice">
+						Please state one address that official documentation should be sent to at this stage (please note
+						unless stated below the documentation will be sent to Applicant 1’s address)
+					</label>
+				     <select id="court-app-address-choice" class="full-width">
+				          <option value="">-- Select --</option>
+				          <option value="Applicant 1">Applicant 1’s address</option>
+				          <option value="Applicant 2">Applicant 2’s address</option>
+				          <option value="Solicitors address">Solicitors address</option>
+				          <option value="Other">Other address</option>
+				     </select>
+                    </div>
+				<!-- // DOC ITEM 1 - END // -->
+
+				<div class="court-app-other-address">
+
+					<hr>
+
+					<p class="solicitor-text">If a solicitor is representing you, please give details below:</p>
+					<p class="other-text">If you do not have a solicitor but have an alternative address you would like documentation to be sent to, please give details below:</p>
+
+					<!-- // DOC ITEM 2 - START // -->
+					<div class="form-group">
+						<label for="court-app-contact-name" class="">Contact or Solicitors name</label>
+						<input id="court-app-contact-name" name="court-app-email" type="text" class="full-width" value="">
+					</div>
+					<!-- // DOC ITEM 2 - END // -->
+
+					<!-- // DOC ITEM 3 - START // -->
+					<div class="form-group">
+						<label for="court-app-contact-address">Address</label>
+						<textarea name="textarea" id="court-app-contact-address" placeholder="" maxlength="250"></textarea>
+					</div>
+					<!-- // DOC ITEM 3 - END // -->
+
+					<!-- // DOC ITEM 4 - START // -->
+					<div class="form-group">
+						<label for="court-app-contact-phone" class="">Phone</label>
+						<input id="court-app-contact-phone" name="court-app-contact-phone" type="text" class="half" value="">
+					</div>
+					<!-- // DOC ITEM 4 - END // -->
+
+					<!-- // DOC ITEM 5 - START // -->
+					<div class="form-group">
+						<label for="court-app-contact-email" class="">Email</label>
+						<input id="court-app-contact-email" name="court-app-contact-email" type="text" class="full-width" value="">
+					</div>
+					<!-- // DOC ITEM 5 - END // -->
+
+					<!-- // DOC ITEM 6 - START // -->
+					<div class="form-group">
+						<label for="court-app-contact-dx" class="">DX no.</label>
+						<input id="court-app-contact-dx" name="court-app-contact-dx" type="text" class="half" value="">
+					</div>
+					<!-- // DOC ITEM 6 - END // -->
+
+				</div>
+
+			</form>
+
+          </div>
+     </div>
+     <!-- //////////////////////////// STEP 3 INFO - END //////////////////////////// -->
+
+</div>
+<!-- /////////////////////////// SECTION 2 - END /////////////////////////// -->
+
+<!-- /////////////////////////// SECTION 3 - START /////////////////////////// -->
+<h3 class="description-title court-apps-title">Section 3 - The person to whom this application relates</h3>
+
+<div class="accordion">
+
+	<!-- //////////////////////////// STEP 4 INFO - START //////////////////////////// -->
+     <div class="accordion-section">
+          <button class="accordion-section-title" href="#accordion-4">
+			Section 3.1 <span></span>
+          </button>
+
+          <div id="accordion-4" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group">
+				     <label for="court-app-applicant-title">Title</label>
+				     <select id="court-app-applicant-title">
+				          <option value="">-- Select --</option>
+				          <option value="Mr.">Mr.</option>
+				          <option value="Mrs.">Mrs.</option>
+				          <option value="Miss">Miss</option>
+				          <option value="Ms.">Ms.</option>
+				          <option value="Other">Other</option>
+				     </select>
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+				<!-- // DOC ITEM 2 - START // -->
+				<div class="form-group">
+				     <label for="court-app-applicant-first-name" class="">First name(s)</label>
+				     <input id="court-app-applicant-first-name" name="court-app-applicant-first-name" type="text" class="full-width" value="">
+				</div>
+				<!-- // DOC ITEM 2 - END // -->
+
+				<!-- // DOC ITEM 3 - START // -->
+				<div class="form-group">
+					<label for="court-app-applicant-last-name" class="">Last name</label>
+					<input id="court-app-applicant-last-name" name="court-app-applicant-last-name" type="text" class="full-width" value="">
+				</div>
+				<!-- // DOC ITEM 3 - END // -->
+
+				<!-- // DOC ITEM 4 - START // -->
+				<div class="form-group">
+					<label for="court-app-applicant-address">Address</label>
+					<textarea name="textarea" id="court-app-applicant-address" placeholder="" maxlength="250"></textarea>
+				</div>
+				<!-- // DOC ITEM 4 - END // -->
+
+				<!-- // DOC ITEM 5 - START // -->
+				<div class="form-group">
+					<label for="court-app-applicant-phone-number" class="">Phone number</label>
+					<input id="court-app-applicant-phone-number" name="court-app-applicant-phone-number" type="text" class="half" value="">
+				</div>
+				<!-- // DOC ITEM 5 - END // -->
+
+				<!-- // DOC ITEM 6 - START // -->
+				<div class="form-group">
+					<label for="court-app-applicant-dob" class="">Date of birth</label>
+					<input id="court-app-applicant-dob" name="court-app-applicant-dob" type="text" class="half date-input" value="">
+				</div>
+				<!-- // DOC ITEM 6 - END // -->
+
+				<!-- // DOC ITEM 7 - START // -->
+				<div class="form-group">
+                         <label for="court-app-applicant-sex-male" class="radio normal">
+                              <input id="court-app-applicant-sex-male" type="radio" name="court-app-applicant-sex" value="Male">
+                              Male
+                         </label>
+                         <label for="court-app-applicant-sex-female" class="radio normal">
+                              <input id="court-app-applicant-sex-female" type="radio" name="court-app-applicant-sex" value="Female">
+                              Female
+                         </label>
+                    </div>
+				<!-- // DOC ITEM 7 - END // -->
+
+			</form>
+
+          </div>
+     </div>
+     <!-- //////////////////////////// STEP 4 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 5 INFO - START //////////////////////////// -->
+	<div class="accordion-section">
+		<button class="accordion-section-title" href="#accordion-5">
+			Section 3.2 <span></span>
+		</button>
+
+		<div id="accordion-5" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group">
+					<label for="court-app-client-accomodation">What type of accomodation is the person to whom the application relates living in?</label>
+					<span class="help-text">(eg. Own home, rented, care home)</span>
+					<textarea name="textarea" id="court-app-client-accomodation" placeholder="" maxlength="120"></textarea>
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+				<!-- // DOC ITEM 2 - START // -->
+				<div class="form-group">
+					<label for="court-app-client-date" class="">Date moved</label>
+					<input id="court-app-client-date" name="court-app-client-date" type="text" class="half date-input" value="">
+				</div>
+				<!-- // DOC ITEM 2 - END // -->
+
+				<!-- // DOC ITEM 3 - START // -->
+				<div class="form-group">
+					<label for="court-app-client-duration-temp" class="radio normal">
+						<input id="court-app-client-duration-temp" type="radio" name="court-app-client-duration" value="Temporary">
+						Temporary
+					</label>
+					<label for="court-app-client-duration-perm" class="radio normal">
+						<input id="court-app-client-duration-perm" type="radio" name="court-app-client-duration" value="Permanent">
+						Permanent
+					</label>
+				</div>
+				<!-- // DOC ITEM 3 - END // -->
+
+			</form>
+
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 5 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 6 INFO - START //////////////////////////// -->
+	<div class="accordion-section">
+		<button class="accordion-section-title" href="#accordion-6">
+			Section 3.3 <span></span>
+		</button>
+
+		<div id="accordion-6" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group no-margin">
+					<label for="court-app-client-relationship">Is the person to whom the application relates:</label>
+					<select id="court-app-client-relationship" class="full-width">
+						<option value="">-- Select --</option>
+						<option value="Married">Married or in a civil partnership</option>
+						<option value="Divorced">Divorced or their civil partnership has dissolved</option>
+						<option value="Widowed">Widowed or a surviving civil partner</option>
+						<option value="Relationship">In a relationship with a person who is not a spiuse or civil partner, but living together as if they were</option>
+						<option value="Single">Single</option>
+						<option value="Separated">Separated</option>
+					</select>
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+				<!-- // DOC ITEM 1A - START // -->
+				<div class="relationship-married">
+					<div class="form-group">
+						<label for="court-app-client-relationship-date" class="">Date of marriage/civil partnership</label>
+						<input id="court-app-client-relationship-date" name="court-app-client-relationship-date" type="text" class="half date-input" value="">
+					</div>
+				</div>
+				<!-- // DOC ITEM 1A - END // -->
+
+				<!-- // DOC ITEM 1B - START // -->
+				<div class="relationship-divorced">
+					<div class="form-group">
+						<label for="court-app-client-relationship-date" class="">Date of divorce/dissolution</label>
+						<input id="court-app-client-relationship-date" name="court-app-client-relationship-date" type="text" class="half date-input" value="">
+					</div>
+				</div>
+				<!-- // DOC ITEM 1B - END // -->
+
+				<!-- // DOC ITEM 1C - START // -->
+				<div class="relationship-widowed">
+					<div class="form-group">
+						<label for="court-app-client-relationship-date" class="">Date of death of spouse/civil partner</label>
+						<input id="court-app-client-relationship-date" name="court-app-client-relationship-date" type="text" class="half date-input" value="">
+					</div>
+				</div>
+				<!-- // DOC ITEM 1C - END // -->
+
+			</form>
+
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 6 INFO - END //////////////////////////// -->
+
+	<!-- //////////////////////////// STEP 7 INFO - START //////////////////////////// -->
+	<div class="accordion-section">
+		<button class="accordion-section-title" href="#accordion-7">
+			Section 3.4 <span></span>
+		</button>
+
+		<div id="accordion-7" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group">
+					<legend>Please identify any previous Court of Protection proceedings in respect of the person to whom the application relates</legend>
+					<label for="court-app-client-ref" class="">Ref no.</label>
+					<input id="court-app-client-ref" name="court-app-client-ref" type="text" class="half" value="">
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+				<!-- // DOC ITEM 2 - START // -->
+				<div class="form-group">
+					<label for="court-app-client-proceedings-date" class="">Date of proceedings</label>
+					<input id="court-app-client-proceedings-date" name="court-app-client-proceedings-date" type="text" class="half date-input" value="">
+				</div>
+				<!-- // DOC ITEM 2 - END // -->
+
+			</form>
+
+		</div>
+	</div>
+	<!-- //////////////////////////// STEP 7 INFO - END //////////////////////////// -->
+
+</div>
+<!-- /////////////////////////// SECTION 3 - END /////////////////////////// -->
+
+<!-- /////////////////////////// SECTION 4 - START /////////////////////////// -->
+<h3 class="description-title court-apps-title">Section 4 - Your application</h3>
+
+<div class="accordion">
+
+	<!-- //////////////////////////// STEP 8 INFO - START //////////////////////////// -->
+     <div class="accordion-section">
+          <button class="accordion-section-title" href="#accordion-8">
+			Section 4.1 <span></span>
+          </button>
+
+          <div id="accordion-8" class="accordion-section-content" style="">
+
+			<form>
+
+				<!-- // DOC ITEM 1 - START // -->
+				<div class="form-group">
+					<label for="court-app-court-order">What order are your asking the court to make?</label>
+					<textarea name="textarea" id="court-app-court-order" placeholder="" maxlength="250"></textarea>
+				</div>
+				<!-- // DOC ITEM 1 - END // -->
+
+			</form>
+
+          </div>
+     </div>
+     <!-- //////////////////////////// STEP 8 INFO - END //////////////////////////// -->
+
+</div>
+<!-- /////////////////////////// SECTION 4 - END /////////////////////////// -->

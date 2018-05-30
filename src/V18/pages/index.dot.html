@@ -2,22 +2,20 @@
   "template": "default"
 }
 
-{{= it.include('main-nav.html') }}
-
 <!-- PRIMARY CONTENT - START -->
 <main class="default">
 
      <!-- SECTION HEADER - START -->
-     <div id="section-header">
+     <div id="section-header" class="dashboard">
 
-          {{= it.include('top-nav.html') }}
+          {{= it.include('top-nav-main.html') }}
 
           <div class="row">
                <div class="large-12 large-uncentered columns">
-                    <nav class="breadcrumb">
+                    <!-- <nav class="breadcrumb">
                          <span>Welcome:</span>
-                    </nav>
-                    <h1><div class="sirius-user-id">Susan Smith</div></h1>
+                    </nav> -->
+                    <h1>Welcome: <div class="sirius-user-id">Susan Smith</div></h1>
                     <span class="horizontal-border"></span>
                     <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p>
                </div>
@@ -51,15 +49,24 @@
           <!-- =========== TABS - START =========== -->
           <div class="row">
                <div class="large-12 large-uncentered columns">
-                    <ul class="tabs">
+                    <ul class="dashboard-tabs tabs">
+                         <li class="tab-link" data-tab="tab-0">
+                              Summary
+                         </li>
                          <li class="tab-link current" data-tab="tab-1">
-                              <span>9</span> My tasks
+                              <span>9</span> Tasks
                          </li>
                		<!-- <li class="tab-link" data-tab="tab-2">
                               <span>4</span> My cases
                          </li> -->
                          <li class="tab-link completed" data-tab="tab-3">
-                              <span>0</span> My completed tasks
+                              <span>1</span> Completed tasks
+                         </li>
+                         <li class="tab-link" data-tab="tab-4">
+                              <span class="small">999+</span> Clients
+                         </li>
+                         <li class="tab-link" data-tab="tab-5">
+                              <span>55</span> Deputies
                          </li>
                     </ul>
                </div>
@@ -69,10 +76,57 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
 
+                    <!-- =========== DASHBOARD TAB CONTENT - 0 - START =========== -->
+                    <div id="tab-0" class="tab-content dashboard">
+
+                         {{= it.include('dashboard/dashboard-team-summary.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 0 - END =========== -->
+
                     <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== -->
-                    <div id="tab-1" class="tab-content dashboard current">
+                    <div id="tab-1" class="tab-content dashboard task-details current">
+
+                         <h2 class="description-title">
+                              Tasks
+
+                              <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                              <div class="wrapper">
+                                   <div id="pagination-small">
+                                        <a>-</a>
+                                        <span>
+                                             <a class="current">1</a>
+                                             <a>2</a>
+                                             <a>3</a>
+                                             <a>4</a>
+                                             <a>5</a>
+                                        </span>
+                                        <a>+</a>
+                                   </div>
+                              </div>
+                              <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                              <!-- <form class="view-list">
+                                   <div class="form-group">
+                                        <label for="tasks-amount" class="">View</label>
+                                        <select id="tasks-amount" class="">
+                                             <option value="25 tasks" selected>25 tasks</option>
+                                             <option value="50 tasks">50 tasks</option>
+                                             <option value="75 tasks">75 tasks</option>
+                                             <option value="100 tasks">100 tasks</option>
+                                             <option value="All tasks">All tasks</option>
+                                        </select>
+                                   </div>
+                              </form> -->
+                         </h2>
+
+                         {{= it.include('filters/filter-tasks.html') }}
+
+                         {{= it.include('confirmation/tasks-re-assigned.html') }}
 
                          {{= it.include('dashboard/dashboard-tab-tasks.html') }}
+
+                         {{= it.include('modals/dashboard-re-assign-tasks.html') }}
 
                     </div>
                     <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== -->
@@ -88,12 +142,140 @@
                     <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== -->
                     <div id="tab-3" class="tab-content dashboard">
 
+                         <h2 class="description-title completed">
+                              Completed tasks: <div class="timeline-value">Today</div>
+
+                              <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                              <div class="wrapper">
+                                   <div id="pagination-small" class="completed-tasks-pagination">
+                                        <a>-</a>
+                                        <span>
+                                             <a class="current">1</a>
+                                             <a>2</a>
+                                             <a>3</a>
+                                             <a>4</a>
+                                             <a>5</a>
+                                        </span>
+                                        <a>+</a>
+                                   </div>
+                              </div>
+                              <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                              <!-- <a href="#" class="main-cta primary">Submit work return</a> -->
+                              <!-- <form class="view-list">
+                                   <div class="form-group">
+                                        <label for="completed-task-amount" class="">View</label>
+                                        <select id="completed-task-amount" class="">
+                                             <option value="25 tasks" selected>25 tasks</option>
+                                             <option value="50 tasks">50 tasks</option>
+                                             <option value="75 tasks">75 tasks</option>
+                                             <option value="100 tasks">100 tasks</option>
+                                             <option value="All tasks">All tasks</option>
+                                        </select>
+                                   </div>
+                              </form> -->
+                         </h2>
+
+                         {{= it.include('filters/filter-completed-tasks.html') }}
+
                          {{= it.include('dashboard/dashboard-tab-completed-tasks.html') }}
 
                     </div>
                     <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== -->
 
+                    <!-- =========== DASHBOARD TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content dashboard client-details">
 
+                         <h2 class="description-title">
+                              Clients
+
+                              <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                              <div class="wrapper">
+                                   <div id="pagination-small">
+                                        <a>-</a>
+                                        <span>
+                                             <a class="current">1</a>
+                                             <a>2</a>
+                                             <a>3</a>
+                                             <a>4</a>
+                                             <a>5</a>
+                                        </span>
+                                        <a>+</a>
+                                   </div>
+                              </div>
+                              <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                              <!-- <form class="view-list">
+                                   <div class="form-group">
+                                        <label for="clients-amount" class="">View</label>
+                                        <select id="clients-amount" class="">
+                                             <option value="25 clients" selected>25 clients</option>
+                                             <option value="50 clients">50 clients</option>
+                                             <option value="75 clients">75 clients</option>
+                                             <option value="100 clients">100 clients</option>
+                                             <option value="All clients">All clients</option>
+                                        </select>
+                                   </div>
+                              </form> -->
+                         </h2>
+
+                         {{= it.include('filters/filter-clients.html') }}
+
+                         {{= it.include('confirmation/clients-re-assigned.html') }}
+
+                         {{= it.include('dashboard/dashboard-tab-clients.html') }}
+
+                         {{= it.include('modals/dashboard-re-assign-clients.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== DASHBOARD TAB CONTENT - 5 - START =========== -->
+                    <div id="tab-5" class="tab-content dashboard">
+
+                         <h2 class="description-title">
+                              Deputies
+
+                              <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                              <div class="wrapper">
+                                   <div id="pagination-small">
+                                        <a>-</a>
+                                        <span>
+                                             <a class="current">1</a>
+                                             <a>2</a>
+                                             <a>3</a>
+                                             <a>4</a>
+                                             <a>5</a>
+                                        </span>
+                                        <a>+</a>
+                                   </div>
+                              </div>
+                              <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+                              <!-- <form class="view-list">
+                                   <div class="form-group">
+                                        <label for="deputies-amount" class="">View</label>
+                                        <select id="deputies-amount" class="">
+                                             <option value="25 deputies" selected>25 deputies</option>
+                                             <option value="50 deputies">50 deputies</option>
+                                             <option value="75 deputies">75 deputies</option>
+                                             <option value="100 deputies">100 deputies</option>
+                                             <option value="All deputies">All deputies</option>
+                                        </select>
+                                   </div>
+                              </form> -->
+                         </h2>
+
+                         {{= it.include('filters/filter-deputies.html') }}
+
+                         {{= it.include('confirmation/deputies-re-assigned.html') }}
+
+                         {{= it.include('dashboard/dashboard-tab-deputies.html') }}
+
+                         {{= it.include('modals/dashboard-re-assign-deputy.html') }}
+
+                    </div>
+                    <!-- =========== DASHBOARD TAB CONTENT - 5 - END =========== -->
 
                </div>
           </div>
@@ -109,6 +291,15 @@
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
-<script>
+<script src="../../production/js/V18/pagination.js"></script>
+
+<script type="text/javascript">
+
+     if($(window).width() > 481) {
+          $(function() {
+               moveScroller();
+          });
+     }
+
 </script>
 <!-- SCRIPT CONTENT - END -->

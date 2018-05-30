@@ -1,0 +1,81 @@
+<!-- /////////////// FILTER PANEL - START /////////////// -->
+<div class="filter-panel task-controller caseworker-filter">
+	<div id="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks">
+		<form class="search-filters task-filter">
+
+			<div class="filter-buttons">
+
+				<div class="main-filter">
+					<div class="wrapper">
+						<label for="filter-tasks-category" class="float-left title-label">Filter</label>
+					</div>
+				</div>
+
+				<div class="filter" style="display: inline-block !important;">
+					<!-- ///////////////// Filter Item - B - START ///////////////// -->
+					<!-- <div class="step-1 filter-b" style="display: inline-block !important;">
+						<div class="wrapper">
+							<input class="filter-type-task" name="filter-type-task" type="text" value="" placeholder="Enter task name...">
+						</div>
+					</div> -->
+
+					<div class="step-1 filter-b">
+						<div class="wrapper">
+							<select id="filter-type-task" class="filter-type-task">
+								<option value="">-- Select task type --</option>
+								<option value="CWRD">Case Work - Reply Due</option>
+                                        <option value="ORRE">Order - Review the order</option>
+                                        <option value="ORAL">Order - Allocate to team</option>
+                                        <option value="INAR">Intro - Arrange settling in</option>
+                                        <option value="INSE">Intro - Settling in call</option>
+                                        <option value="INNDR">Intro - New Deputy Report</option>
+                                        <option value="VICO">Visit - Commission</option>
+                                        <option value="VIRE">Visit - Required</option>
+                                        <option value="VIURE">Visit - Urgent required</option>
+                                        <option value="VIRD">Visit - Report due</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - B - END ///////////////// -->
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">23</span>
+							<br>
+							<span class="desc">tasks</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<a href="#" class="clear-filter">Clear filter</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+               <div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="four-column">
+								<th><span></span>Type</th>
+								<th><span></span>Task due date</th>
+								<th class="non-sort">Case type</th>
+								<!-- <th><span></span>Task status</th> -->
+								<th><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->

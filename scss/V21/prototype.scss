@@ -1,0 +1,65 @@
+@import "_normalize";
+@import "compass";
+@import "foundation";
+@import "_flex";
+
+@import
+	"foundation/components/block-grid",
+	// "foundation/components/clearing",           /* using: affects 10d-clearing */
+	// "foundation/components/dropdown-buttons",   /* using: affects 34-35-side-navigation */
+	// "foundation/components/flex-video",         /* using: affects 03a-flex-video & 03b-flex-video */
+	// "foundation/components/forms",              /* using: affects 5a-Form, 5b-Form validation, 5b-Form & 5c-Form buttons */
+	// "foundation/components/orbit",              /* using: affects 10e-orbit */
+	// "foundation/components/offcanvas",          /* using: affects the main nav when we need it to stick */
+	// "foundation/components/visibility",         /* using: navigation & 34-35-side-navigation at small */
+
+	// "foundation/components/dropdown",           /* could remove: affects 34-35-side-navigation, & could be useful in future for more form elements & dropdowns that contains html elements */
+	"foundation/components/grid";               // could remove: affects _tabs.scss "$column-gutter" - could potentially create our own */
+	// "foundation/components/inline-lists",       /* could remove: affects _header.scss mixin "inline-list" - could potentially create our own  */
+	// "foundation/components/pagination";         /* could remove: affects 10e-orbit but we could remove the code needed and slim down */
+
+
+// Project based SCSS
+@import "_classes";
+@import "_extends";
+@import "_mixins";
+@import "_general";
+@import "_graphs";
+@import "_non-app";
+
+@import "_header";
+@import "_progress-bar";
+@import "_nav";
+@import "_footer";
+@import "_form-items";
+@import "_autocomplete";
+@import "_tabs";
+@import "_modal";
+@import "_date-picker";
+@import "_side-panel";
+@import "_action-panel";
+@import "_dashboard";
+@import "_actions";
+@import "_icons";
+@import "_text-editor";
+@import "_dropzone";
+@import "_reports";
+@import "_tables";
+@import "_confirmation-panels";
+@import "_search";
+@import "_accordion";
+@import "_filter-panel";
+
+// Journey Specific CSS Styles
+@import "_client-page";
+@import "_deputy-page";
+@import "_create-letter";
+@import "_create-pdf";
+// @import "_document-viewer";
+@import "_deputy-client-info";
+@import "_commission-visit";
+@import "_tabs-tasks";
+@import "_tabs-timeline";
+@import "_tabs-summary";
+
+@import "_index-library";

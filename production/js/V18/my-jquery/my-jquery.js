@@ -42,7 +42,7 @@ $(document).ready(function(){
 // Top nav search
 $("label.switch span").click(function () {
      $(this).text(function(i, v){
-          return v === 'Switch to: Supervision cases' ? 'Switch to: LPA cases' : 'Switch to: Supervision cases'
+          return v === 'Switch to: Supervision' ? 'Switch to: LPA' : 'Switch to: Supervision'
      })
 });
 
@@ -127,25 +127,45 @@ $(document).ready(function(){
 
 $('.client-home-button').click(function(){
      // Changes the horizontal tabs
-     $('.client-nav .client-details .tablinks.overview').addClass('active');
-     $('.client-nav .client-details .tablinks.health, .client-nav .client-details .tablinks.property').removeClass('active');
+     // $('.client-nav .client-details .tablinks.overview').addClass('active');
+     // $('.client-nav .client-details .tablinks.health, .client-nav .client-details .tablinks.property').removeClass('active');
 
      // Changes the tab content
-     $('#client-overview').show();
-     $('#client-health, #client-property').hide();
+     // $('#client-overview').show();
+     // $('#client-health, #client-property').hide();
 
      // Changes the view to see the client details
-     $('#client-overview .client-details.tabs li[data-tab="summary-tab-2"]').addClass('current');
-     $('#client-overview .client-details.tabs li[data-tab="summary-tab-1"], #client-overview .client-details.tabs li[data-tab="summary-tab-3"], #client-overview .client-details.tabs li[data-tab="summary-tab-4"], #client-overview .client-details.tabs li[data-tab="summary-tab-5"]').removeClass('current');
-     $('#client-overview #summary-tab-2').addClass('current');
-     $('#client-overview #summary-tab-1, #client-overview #summary-tab-3, #client-overview #summary-tab-4, #client-overview #summary-tab-5').removeClass('current');
+     // $('#client-overview .client-details.tabs li').removeClass('current');
+     // $('#client-overview .client-details.tabs li[data-tab="summary-tab-1"]').addClass('current');
+
+     // $('#client-overview .client-details.tab-content').removeClass('current');
+     // $('#client-overview #summary-tab-1').addClass('current');
+
+     // $('#client-overview li[data-tab="summary-tab-5"]').addClass('hide');
+     $('#client-overview li[data-tab="summary-tab-5"] span').text('5');
+     $('#client-overview li[data-tab="summary-tab-7"] span').text('3');
+
+     $('.deputy-info-only').hide();
+
+     // Remove the filter styles
+     $('#hub-filter-panel .filter, #hub-filter-panel .wrapper').removeClass('checked');
+     $('#hub-filter-panel .filter h2 .icon').addClass('white');
+
+     $('nav.actions-nav ul li').removeClass('active');
+     $('li[data-action="action-1"], li[data-action="action-3"], li[data-action="action-5"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+
+     $('.pfa-content-item').show();
+     $('.handw-content-item').show();
+
+     // Orders content
+     $('#client-overview li[data-tab="summary-tab-6"] span').text('4');
 
 });
 
 $('.deputy-home-button').click(function(){
      // Changes the view to see the client details
-     $('.tabs li[data-tab="tab-1"]').addClass('current');
-     $('.tabs li[data-tab="tab-2"], .tabs li[data-tab="tab-3"], .tabs li[data-tab="tab-4"], .tabs li[data-tab="tab-5"]').removeClass('current');
+     $('.client-details.tabs li[data-tab="tab-1"]').addClass('current');
+     $('.client-details.tabs li[data-tab="tab-2"], .client-details.tabs li[data-tab="tab-3"], .client-details.tabs li[data-tab="tab-4"], .client-details.tabs li[data-tab="tab-5"]').removeClass('current');
      $('#tab-1').addClass('current');
      $('#tab-2, #tab-3, #tab-4, #tab-5').removeClass('current');
 });
@@ -419,4 +439,10 @@ $(document).ready(function() {
 
      });
 
+});
+
+// New confirmation panel
+$('#new-confirmation-message').click(function(e){
+     e.preventDefault();
+     $('#new-confirmation-message-panel').toggle();
 });

@@ -2,8 +2,6 @@
      "template": "default-sub-section"
 }
 
-{{= it.include('main-nav-sub-section.html') }}
-
 <!-- PRIMARY CONTENT - START -->
 <main class="default new-client">
 
@@ -17,7 +15,7 @@
                <!-- // CLIENT DETAILS - START //-->
                <div class="large-5 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html">My tasks</a>
+                         <a href="../index.html">Dashboard</a>
                          <div class="separator"> > </div>
                          <span>Client summary</span>
                     </nav>
@@ -33,7 +31,7 @@
                          <span class="normal-status">Client's summary page</span>
                          <span class="violent">Client is violent</span>
                          <span class="welsh">Client's prefered language is Welsh</span>
-                         <span class="deceased">Client is deceased</span>  
+                         <span class="deceased">Client is deceased</span>
 
                     </h1>
 
@@ -43,37 +41,59 @@
                <!-- // CLIENT HUB FILTER - START //-->
                <div class="large-7 large-uncentered columns">
 
-                    <div id="hub-filter-panel">
+                    <div id="hub-filter-panel" class="version-1">
                          <form>
                               <nav>
-                                   <label id="handw-actions" class="filter">
-                                        <h2><span class="icon welfare white"></span>H&amp;W <strong>|</strong> 19273638</h2>
-                                        <p>Deputies: <strong>Joint</strong></p>
-                                        <div class="fact one"><span>4</span>Deputies</div>
-                                        <div class="fact two"><span>2</span>Tasks</div>
-                                        <div class="switch client-hub">
-                         				<div class="slider round"></div>
-                         			</div>
-                                        <input type="checkbox" value="handw" name="order-view">
-                                   </label>
-                                   <label type="checkbox" id="pfa-actions" class="filter">
-                                        <span class="order-level">103</span>
-                                        <h2><span class="icon property white"></span>PFA <strong>|</strong> 14820940 <strong>- Minimal</strong></h2>
-                                        <p>Deputies: <strong>Joint</strong></p>
-                                        <p class="bond-info">Bond: <strong>£</strong> <strong class="bond-amount-answer"></strong></p>
-                                        <div class="fact one"><span>1</span>Deputy</div>
-                                        <div class="fact two"><span>1</span>Tasks</div>
-                                        <div class="switch client-hub">
-                                             <div class="slider round"></div>
-                                        </div>
-                                        <input type="checkbox" value="pfa" name="order-view">
-                                   </label>
                                    <div class="filter due-date">
                                         <div class="wrapper">
                                              <p class="title">Report due date:</p>
                                              <p class="date"><span class="health-report-day">16</span>/<span class="health-report-month">11</span>/<span class="health-report-year">2017</span></p>
                                         </div>
                                    </div>
+                                   <div class="wrapper hw-wrapper">
+                                        <div class="facts text">
+                                             <a href="#" class="fact one"><span>4</span><strong>Tasks</strong></a>
+                                             <a href="#" class="fact two"><span>2</span><strong>Deputies</strong></a>
+                                        </div>
+                                        <label id="handw-actions" class="filter">
+                                             <h2><span class="icon welfare white"></span> H&amp;W <strong>-</strong> 14820940</h2>
+                                             <p><strong>Joint</strong> &nbsp; | &nbsp; <strong>Lay</strong></p>
+                                             <div class="facts icons">
+                                                  <div class="fact one"><span class="icon deputy"><p>Deputies</p></span>2</div>
+                                                  <div class="fact two"><span class="icon tasks"><p>Tasks</p></span>4</div>
+                                             </div>
+                                             <div class="switch client-hub">
+                              				<div class="slider round"></div>
+                              			</div>
+                                             <input type="radio" value="handw" name="order-view">
+                                        </label>
+                                   </div>
+                                   <div class="wrapper pfa-wrapper">
+                                        <div class="facts text">
+                                             <a href="#" class="fact one"><span>1</span><strong>Tasks</strong></a>
+                                             <a href="#" class="fact two"><span>1</span><strong>Deputies</strong></a>
+                                        </div>
+                                        <label type="checkbox" id="pfa-actions" class="filter">
+                                             <!-- <span class="icon primary"><p>Primary case</p></span> -->
+                                             <span class="order-level">103</span>
+                                             <h2><span class="icon property white"></span>PFA <strong>-</strong> 14820940</h2>
+                                             <p><strong>Sole</strong> &nbsp; | &nbsp; <strong>Lay</strong> &nbsp; | &nbsp; <span class="bond-info">Bond: <strong class="bond-amount-answer">No</strong></span></p>
+                                             <div class="facts icons">
+                                                  <div class="fact one"><span class="icon deputy"><p>Deputy</p></span>1</div>
+                                                  <div class="fact two"><span class="icon tasks"><p>Task</p></span>1</div>
+                                             </div>
+                                             <div class="switch client-hub">
+                                                  <div class="slider round"></div>
+                                             </div>
+                                             <input type="radio" value="pfa" name="order-view">
+                                        </label>
+                                   </div>
+                                   <!-- <div class="filter due-date">
+                                        <div class="wrapper">
+                                             <p class="title">Report due date:</p>
+                                             <p class="date"><span class="health-report-day">16</span>/<span class="health-report-month">11</span>/<span class="health-report-year">2017</span></p>
+                                        </div>
+                                   </div> -->
                               </nav>
                          </form>
                     </div>
@@ -100,16 +120,6 @@
      </div>
      <!-- SECTION HEADER - END -->
 
-     {{= it.include('confirmation/reporting-period-updated.html') }}
-
-     {{= it.include('confirmation/correspondence-sent.html') }}
-
-     {{= it.include('confirmation/client-updated.html') }}
-
-     {{= it.include('confirmation/deputy-added.html') }}
-
-     {{= it.include('confirmation/supervision-level.html') }}
-
      <!-- TAB CONTENT - START -->
 
      <!-- //////////////////////////////////// CLIENT OVERVIEW - START //////////////////////////////////// -->
@@ -120,10 +130,10 @@
                     <!-- =========== TABS - START =========== -->
                     <ul class="client-details tabs">
                          <li class="tab-link current" data-tab="summary-tab-1">
-                              Warnings
+                              Summary
                          </li>
                          <li class="tab-link" data-tab="summary-tab-2">
-                              Client
+                              Warnings
                          </li>
                          <li class="tab-link" data-tab="summary-tab-3">
                               <span class="contacts-number">2</span> Contacts
@@ -135,7 +145,7 @@
                               <span>5</span> Tasks
                          </li>
                          <li class="tab-link" data-tab="summary-tab-6">
-                              Orders
+                              <span>4</span> Orders
                          </li>
                          <li class="tab-link" data-tab="summary-tab-7">
                               <span>3</span> Deputies
@@ -155,7 +165,11 @@
 
                               <div class="large-12 large-uncentered columns">
 
-                                   {{= it.include('client-page/warnings.html') }}
+                                   {{= it.include('confirmation/warning-removed.html') }}
+
+                                   <div id="list-of-summary">
+                                        {{= it.include('client-page/summary.html') }}
+                                   </div>
 
                               </div>
 
@@ -169,7 +183,9 @@
 
                               <div class="large-12 large-uncentered columns">
 
-                                   {{= it.include('side-panel/client-details.html') }}
+                                   {{= it.include('confirmation/warning-removed.html') }}
+
+                                   {{= it.include('client-page/warnings.html') }}
 
                               </div>
 
@@ -182,6 +198,8 @@
                          <div class="row">
 
                               <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('confirmation/contact-removed.html') }}
 
                                    {{= it.include('side-panel/document-contacts.html') }}
 
@@ -197,6 +215,8 @@
 
                               <div class="large-12 large-uncentered columns">
 
+                                   {{= it.include('confirmation/reporting-period-updated.html') }}
+
                                    {{= it.include('client-page/ALPHA-reports.html') }}
 
                               </div>
@@ -211,7 +231,13 @@
 
                               <div class="large-12 large-uncentered columns">
 
-                                   {{= it.include('client-page/tasks.html') }}
+                                   {{= it.include('errors/task-error.html') }}
+
+                                   {{= it.include('confirmation/task-confirmation.html') }}
+
+                                   {{= it.include('client-page/tasks-pfa.html') }}
+
+                                   {{= it.include('client-page/tasks-hw.html') }}
 
                               </div>
 
@@ -225,9 +251,7 @@
 
                               <div class="large-12 large-uncentered columns">
 
-                                   {{= it.include('client-page/order-details-health.html') }}
-
-                                   {{= it.include('client-page/order-details-property.html') }}
+                                   {{= it.include('client-page/order-details.html') }}
 
                               </div>
 
@@ -236,10 +260,14 @@
                     <!-- =========== TAB CONTENT - 6 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 7 - START =========== -->
-                    <div id="summary-tab-7" class="client-details tab-content">
+                    <div id="summary-tab-7" class="client-details tab-content general-deputies">
                          <div class="row">
 
                               <div class="large-12 large-uncentered columns">
+
+                                   {{= it.include('confirmation/deputy-unlinked.html') }}
+
+                                   {{= it.include('confirmation/deputy-confirmation.html') }}
 
                                    {{= it.include('side-panel/deputy-details.html') }}
 
@@ -304,8 +332,11 @@
 
 {{= it.include('modals/view-document.html') }}
 
-{{= it.include('modals/abandon-report.html') }}
+{{= it.include('modals/warnings.html') }}
 
+{{= it.include('modals/delete-contact.html') }}
+
+{{= it.include('modals/unlink-deputy.html') }}
 
 <!-- FOOTER CONTENT - START -->
 <!-- FOOTER CONTENT - END -->

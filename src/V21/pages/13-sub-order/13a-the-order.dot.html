@@ -1,0 +1,278 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default create-case-journey step-1">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-page/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <span class="state">Create order</span>
+                    </nav>
+                    <h1>
+                         The order
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- PROGRESS BAR - START -->
+     <!-- PROGRESS BAR - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-case">
+
+          <div class="row">
+
+               <div class="large-8 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link" data-tab="tab-1">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link current" data-tab="tab-3">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel current">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+
+               </div>
+
+               <div id="action-panel" class="large-4 large-uncentered columns">
+
+                    <div class="create-case right">
+
+                         <h2 class="section-title">The order</h2>
+
+                         <!-- =========== THE ORDER SECTION - START =========== -->
+                         <form id="order-details" class="case-details">
+
+                              <!-- // FORM ITEM - 1 - START // -->
+                              <div class="form-group order-type">
+                                   <legend>Order type <span class="required">*</span></legend>
+                                   <label for="sub-order-type-welfare" class="radio radio-health-welfare">
+                                        <input id="sub-order-type-welfare" type="radio" name="sub-order-type" value="Health and Welfare">
+                                        <span>Health &amp; welfare</span> <span class="icon welfare"></span>
+                                   </label>
+                                   <label for="sub-order-type-property" class="radio radio-property">
+                                        <input id="sub-order-type-property" type="radio" name="sub-order-type" value="Property and finance">
+                                        <span>Property &amp; affairs</span> <span class="icon property"></span>
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 1 - END // -->
+
+                              <!-- // FORM ITEM - 2 - START // -->
+                              <div class="form-group">
+                                   <label for="sub-order-type">Sub order type <span class="required">*</span></label>
+                                   <select id="sub-order-type" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Supplementary" selected>Supplementary</option>
+                                        <option value="Tenancy">Tenancy</option>
+                                        <option value="Trustee">Trustee</option>
+                                        <option value="Variation">Variation</option>
+                                        <option value="Direction">Direction</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 2 - END // -->
+
+                              <!-- // FORM ITEM - 3 - START // -->
+                              <div class="form-group">
+                                   <label for="sub-order-court-ref">Court reference <span class="required">*</span></label>
+                                   <input id="sub-order-court-ref" name="court-ref" type="text" class="half" value="">
+                              </div>
+                              <!-- // FORM ITEM - 3 - END // -->
+
+                              <!-- // FORM ITEM - 4 - START // -->
+                              <div class="form-group">
+                                   <label for="sub-order-notes">Order notes</label>
+                                   <textarea name="textarea" class="jqte-test" id="sub-order-notes"></textarea>
+                              </div>
+                              <!-- // FORM ITEM - 4 - END // -->
+
+                              <!-- // FORM ITEM - 5 - START // -->
+                              <div class="form-group">
+                                   <legend>Order date <span class="required">*</span></legend>
+                                   <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                                   <div>
+                                        <input id="order-date-day" class="input-length" name="order-date-day" type="text" placeholder="DD" maxlength="2">
+                                        <input id="order-date-month" class="input-length" name="order-date-month" type="text" placeholder="MM" maxlength="2">
+                                        <input id="order-date-year" class="input-length four" name="order-date-year" type="text" placeholder="YYYY" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 5 - END // -->
+
+                              <!-- // FORM ITEM - 6 - START // -->
+                              <div class="form-group">
+                                   <label for="order-issue-date">Order issue date</label>
+                                   <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                                   <div>
+                                        <input id="order-issue-day" class="input-length" name="order-issue-day" type="text" placeholder="DD" maxlength="2">
+                                        <input id="order-issue-month" class="input-length" name="order-issue-month" type="text" placeholder="MM" maxlength="2">
+                                        <input id="order-issue-year" class="input-length four" name="order-issue-year" type="text" placeholder="YYYY" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 6 - END // -->
+
+                              <!-- // FORM ITEM - 7 - START // -->
+                              <div class="form-group">
+                                   <label for="order-received-date">Order received date</label>
+                                   <!-- <span class="help-text">Example - 05 04 2017</span> -->
+                                   <div>
+                                        <input id="order-received-day" class="input-length" name="order-received-day" type="text" placeholder="DD" maxlength="2">
+                                        <input id="order-received-month" class="input-length" name="order-received-month" type="text" placeholder="MM" maxlength="2">
+                                        <input id="order-received-year" class="input-length four" name="order-received-year" type="text" placeholder="YYYY" maxlength="4">
+                                   </div>
+                              </div>
+                              <!-- // FORM ITEM - 7 - END // -->
+
+                              <!-- // FORM ITEM - 8 - START // -->
+                              <div class="form-group">
+                                   <label for="sub-order-title">Order title</label>
+                                   <input id="sub-order-title" name="order-title" type="text" class="" value="">
+                              </div>
+                              <!-- // FORM ITEM - 8 - END // -->
+
+                              <!-- // FORM ITEM - 9 - START // -->
+                              <div class="form-group">
+                                   <label for="sub-order-status">Order status</label>
+                                   <select id="sub-order-status" class="full-width">
+                                        <option value="">-- Select --</option>
+                                        <option value="Open" selected>Open</option>
+                                        <option value="Active">Active</option>
+                                   </select>
+                              </div>
+                              <!-- // FORM ITEM - 9 - END // -->
+
+                              <!-- // FORM ITEM - 10 - START // -->
+                              <div class="form-group">
+                                   <label for="sub-order-status-date">Status date</label>
+                                   <!-- <span class="help-text">Example - 05/04/2017</span> -->
+                                   <input id="sub-order-status-day" class="input-length" name="sub-order-status-day" type="text" placeholder="DD" maxlength="2">
+                                   <input id="sub-order-status-month" class="input-length" name="sub-order-status-month" type="text" placeholder="MM" maxlength="2">
+                                   <input id="sub-order-status-year" class="input-length four" name="sub-order-status-year" type="text" placeholder="YYYY" maxlength="4">
+                                   <!-- <input id="sub-order-status-date" name="status-date" type="text" class="half" placeholder="Example - 05/04/2017" value=""> -->
+                              </div>
+                              <!-- // FORM ITEM - 10 - END // -->
+
+                              <!-- // FORM ITEM - 11 - START // -->
+                              <div class="form-group deputies-appointed">
+                                   <legend>How have the deputy / deputies been appointed?</legend>
+                                   <label for="deputies-appointed-sole" class="radio">
+                                        <input id="deputies-appointed-sole" type="radio" name="deputies-appointed" value="Sole">
+                                        Sole
+                                   </label>
+                                   <label for="deputies-appointed-joint" class="radio">
+                                        <input id="deputies-appointed-joint" type="radio" name="deputies-appointed" value="Joint">
+                                        Joint
+                                   </label>
+                                   <label for="deputies-appointed-joint-severally" class="radio">
+                                        <input id="deputies-appointed-joint-severally" type="radio" name="deputies-appointed" value="Joint &amp; severally">
+                                        Joint &amp; severally
+                                   </label>
+                              </div>
+                              <!-- // FORM ITEM - 11 - END // -->
+
+                         </form>
+                         <!-- =========== THE ORDER SECTION - END =========== -->
+
+                    </div>
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+     <!-- // MODAL - START // -->
+     <div id="edit-sub-order-modal" style="display:none;">
+          <h1>Edit order</h1>
+          <h2>Order details</h2>
+          <p>Are you sure you wish to edit the order details?</p>
+          <div class="cta-row">
+               <a class="main-cta" rel="modal:close" id="confirm-sub-order">Edit order</a>
+               <!-- <a class="main-cta" href="1a-the-order.html#Edit" value="Refresh Page" onClick="window.location.reload()">Edit case</a> -->
+               <a href="#" rel="modal:close" class="cancel">Cancel</a>
+          </div>
+     </div>
+     <!-- // MODAL - END // -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <a class="main-cta primary" id="edit-sub-order-button" href="#edit-sub-order-modal" rel="modal:open">Edit order</a>
+     <span class="separator"></span>
+     <a href="#" onclick="history.back();" class="cancel">Cancel</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script>
+
+     // $(document).ready(function(){
+     //      JSON.parse(sessionStorage.getItem('why-visit')).forEach(function(visit) {
+     //           $('#why-commission-visit').append('<p>' + visit + '</p>');
+     //      });
+     // });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

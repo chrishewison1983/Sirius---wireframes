@@ -1,16 +1,14 @@
-<h2 class="description-title">Your assigned tasks</h2>
-
 <!-- // CONFIRMATION MESSAGE - START // -->
-<div class="row">
+<!-- <div class="row">
 	<div class="large-12 large-uncentered columns">
 		<div id="confirmation-dashboard-visit" class="confirmation-panel">
 			<div class="content">
 				<h2>
 					<span></span>
 					Your visit has been commissioned to
-					<div class="client-title">Mr</div>
-					<div class="client-first-name">Gerald</div>
-					<div class="client-last-name">Brackens</div>
+					<div class="client-icon-title">Mr</div>
+					<div class="client-icon-first-name">Gerald</div>
+					<div class="client-icon-last-name">Brackens</div>
 				</h2>
 			</div>
 		</div>
@@ -31,39 +29,41 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- // CONFIRMATION MESSAGE - END // -->
 
 <div class="dashboard-item-container">
 
-	<table id="tasks-table" class="tablesorter">
+	<table id="dashboard-tasks-table" class="tablesorter">
 		<thead>
-			<tr class="four-column">
+			<tr class="five-column">
 				<th><span></span>Type</th>
 				<th><span></span>Task due date</th>
 				<th><span></span>Case type</th>
 				<th><span></span>Task status</th>
+				<th><span></span>Assigned to</th>
 				<!-- <th>Actions</th> -->
 			</tr>
 		</thead>
 		<tbody>
+
 			<!-- TASK 1 - START -->
-			<tr class="urgent-row">
+			<tr class="order-review-the-order urgent-row my-task today next-7-days next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type review-correspondence"></span>
-						</div> -->
 						<div class="text">
 							<div class="hide">A</div>
-							<a href="4-client-page/4a-new-client.html#HandW" class="task create-letter-journey-button">Review application correspondence</a>
+							<label id="task-1" class="task-title">
+								<input type="checkbox" value="task-1" name="re-assign-task">
+							</label>
+							<a href="4-client-page/4a-new-client.html#HandW" class="task">Review application correspondence</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-1035</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
-								<p><a href="#" class="open">Description</a></a>
+								<p><a href="#" class="open">Notes</a></a>
 							</div>
 							<div class="description">
 								<p>
@@ -92,29 +92,27 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					My task
+				</td>
 			</tr>
 			<!-- TASK 1 - END -->
 
 			<!-- TASK 2 - START -->
-			<tr class="urgent-row link-for-commission-visit">
+			<tr class="visit-commission urgent-row link-for-commission-visit my-tasktoday today next-7-days next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type commission-visit"></span>
-						</div> -->
 						<div class="text">
-							<div class="hide">B</div>
+							<div class="hide">A</div>
+							<label id="task-2" class="task-title">
+								<input type="checkbox" value="task-2" name="re-assign-task">
+							</label>
 							<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-3202</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="4-client-page/4a-new-client.html">Mr Gerald Brackens</a></p>
 							</div>
 						</div>
@@ -139,29 +137,72 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					My task
+				</td>
 			</tr>
 			<!-- TASK 2 - START -->
 
 			<!-- TASK 3 - START -->
-			<tr>
+			<tr class="order-review-the-order urgent-row hannah-nixon today next-7-days next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type review-report"></span>
-						</div> -->
+						<div class="text">
+							<div class="hide">A</div>
+							<label id="task-7" class="task-title">
+								<input type="checkbox" value="task-7" name="re-assign-task">
+							</label>
+							<a href="#" class="task">Review and assign Objection validity</a>
+							<p class="task-intro">Task name</p>
+							<div class="details">
+								<span class="case-number"></span>
+								<p>7000-0000-2039</p>
+								<span class="client-icon"></span>
+								<p><a href="#">Mr Benjamin Howell</a></p>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<span class="icon date"></span>
+					<p>03/05/2017</p>
+					<div class="counter alert">
+						<span class="number">-1</span>
+						day
+					</div>
+				</td>
+				<td>
+					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
+				</td>
+				<td>
+					<div class="rag-rating">
+						<span class="traffic-light red">C</span>
+						<span class="traffic-light"></span>
+						<span class="traffic-light"></span>
+						<div class="border"></div>
+					</div>
+				</td>
+				<td>
+					<a href="#" class="">Nixon, Hannah</a>
+				</td>
+			</tr>
+			<!-- TASK 3 - END -->
+
+			<!-- TASK 4 - START -->
+			<tr class="visit-report-due joe-bloggs all">
+				<td>
+					<div class="wrapper">
 						<div class="text">
 							<div class="hide">I</div>
-							<a href="#" class="task">Review annual report</a>
+							<label id="task-3" class="task-title">
+								<input type="checkbox" value="task-3" name="re-assign-task">
+							</label>
+							<a href="6-commission-visit/6a-why.html" class="task">Review annual report</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-4391</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="#">Mr Ewan Jones</a></p>
 							</div>
 						</div>
@@ -186,31 +227,29 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					<a href="#" class="">Bloggs, Joe</a>
+				</td>
 			</tr>
-			<!-- TASK 3 - END -->
+			<!-- TASK 4 - END -->
 
-			<!-- TASK 4 - START -->
-			<tr>
+			<!-- TASK 5 - START -->
+			<tr class="case-work-reply-due simon-carter next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type print-notice"></span>
-						</div> -->
 						<div class="text">
 							<div class="hide">H</div>
-							<a href="#" class="task">Print and send generated notice(s)</a>
+							<label id="task-4" class="task-title">
+								<input type="checkbox" value="task-4" name="re-assign-task">
+							</label>
+							<a href="6-commission-visit/6a-why.html" class="task">Print and send generated notice(s)</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-6928</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="#">Miss Chelsea Burton</a></p>
-								<p><a href="#" class="open">Description</a></a>
+								<p><a href="#" class="open">Notes</a></a>
 							</div>
 							<div class="description">
 								<p>
@@ -239,29 +278,27 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					<a href="#" class="">Carter, Simon</a>
+				</td>
 			</tr>
-			<!-- TASK 4 - START -->
-
 			<!-- TASK 5 - START -->
-			<tr class="">
+
+			<!-- TASK 6 - START -->
+			<tr class="visit-report-due david-harper next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type review-report"></span>
-						</div> -->
 						<div class="text">
 							<div class="hide">E</div>
-							<a href="#" class="task">Review annual report</a>
+							<label id="task-5" class="task-title">
+								<input type="checkbox" value="task-5" name="re-assign-task">
+							</label>
+							<a href="6-commission-visit/6a-why.html" class="task">Review annual report</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-2039</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="#">Mrs Jennifer Moss</a></p>
 							</div>
 						</div>
@@ -286,31 +323,29 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					<a href="#" class="">Harper, David</a>
+				</td>
 			</tr>
-			<!-- TASK 5 - END -->
+			<!-- TASK 6 - END -->
 
-			<!-- TASK 6 - START -->
-			<tr class="">
+			<!-- TASK 7 - START -->
+			<tr class="visit-commission shiobhan-mcdermot next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type commission-visit"></span>
-						</div> -->
 						<div class="text">
 							<div class="hide">G</div>
-							<a href="#" class="task">Commission visit</a>
+							<label id="task-6" class="task-title">
+								<input type="checkbox" value="task-6" name="re-assign-task">
+							</label>
+							<a href="6-commission-visit/6a-why.html" class="task">Commission visit</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-4019</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="#">Mr Morgan Graham</a></p>
-								<p><a href="#" class="open">Description</a></a>
+								<p><a href="#" class="open">Notes</a></a>
 							</div>
 							<div class="description">
 								<p>
@@ -339,78 +374,29 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					<a href="#" class="">McDermot, Shiobhan</a>
+				</td>
 			</tr>
-			<!-- TASK 6 - START -->
-
 			<!-- TASK 7 - START -->
-			<tr class="urgent-row">
-				<td>
-					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type assign-validity"></span>
-						</div> -->
-						<div class="text">
-							<div class="hide">C</div>
-							<a href="#" class="task">Review and assign Objection validity</a>
-							<p class="task-intro">Task name</p>
-							<div class="details">
-								<span class="case-number"></span>
-								<p>7000-0000-2039</p>
-								<span class="client"></span>
-								<p><a href="#">Mr Benjamin Howell</a></p>
-							</div>
-						</div>
-					</div>
-				</td>
-				<td>
-					<span class="icon date"></span>
-					<p>03/05/2017</p>
-					<div class="counter alert">
-						<span class="number">-1</span>
-						day
-					</div>
-				</td>
-				<td>
-					<a href="4-client-page/4a-new-client.html#PFA">ORDER - <strong>PFA</strong><span class="icon property"></span></a>
-				</td>
-				<td>
-					<div class="rag-rating">
-						<span class="traffic-light red">C</span>
-						<span class="traffic-light"></span>
-						<span class="traffic-light"></span>
-						<div class="border"></div>
-					</div>
-				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
-			</tr>
-			<!-- TASK 7 - END -->
 
 			<!-- TASK 8 - START -->
-			<tr>
+			<tr class="order-review-the-order my-task next-7-days next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type death-notification"></span>
-						</div> -->
 						<div class="text">
 							<div class="hide">D</div>
+							<label id="task-8" class="task-title">
+								<input type="checkbox" value="task-8" name="re-assign-task">
+							</label>
 							<a href="#" class="task">Review Death Notification Correspondence</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-3029</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="#">Ms Georgia Lynch</a></p>
-								<p><a href="#" class="open">Description</a></a>
+								<p><a href="#" class="open">Notes</a></a>
 							</div>
 							<div class="description">
 								<p>
@@ -439,31 +425,29 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					My task
+				</td>
 			</tr>
 			<!-- TASK 8 - START -->
 
 			<!-- TASK 9 - START -->
-			<tr class="">
+			<tr class="order-review-the-order team-one next-7-days next-month next-60-days all">
 				<td>
 					<div class="wrapper">
-						<!-- <div class="icon">
-							<span class="task-type disclaimer"></span>
-						</div> -->
 						<div class="text">
 							<div class="hide">F</div>
+							<label id="task-9" class="task-title">
+								<input type="checkbox" value="task-9" name="re-assign-task">
+							</label>
 							<a href="#" class="task">Review Disclaimer Correspondence</a>
 							<p class="task-intro">Task name</p>
 							<div class="details">
 								<span class="case-number"></span>
 								<p>7000-0000-3829</p>
-								<span class="client"></span>
+								<span class="client-icon"></span>
 								<p><a href="#">Mrs Laura Dunn</a></p>
-								<p><a href="#" class="open">Description</a></a>
+								<p><a href="#" class="open">Notes</a></a>
 							</div>
 							<div class="description">
 								<p>
@@ -492,15 +476,27 @@
 						<div class="border"></div>
 					</div>
 				</td>
-				<!-- <td>
-					<a href="#complete-task" rel="modal:open" class="main-cta tertiary complete">Mark as complete</a>
-					<a href="8-create-task/8a-create-task.html" class="main-cta tertiary edit">Edit task</a>
-					<a href="#re-assign-task" rel="modal:open" class="main-cta tertiary re-assign">Re-assign task</a>
-				</td> -->
+				<td>
+					<a href="#">Team one</a>
+				</td>
 			</tr>
 			<!-- TASK 9 - END -->
 
 		</tbody>
 	</table>
+
+	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
+	<div id="pagination-small">
+		<a>-</a>
+		<span>
+			<a class="current">1</a>
+			<a>2</a>
+			<a>3</a>
+			<a>4</a>
+			<a>5</a>
+		</span>
+		<a>+</a>
+	</div>
+	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
 </div>
