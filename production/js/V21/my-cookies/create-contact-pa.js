@@ -52,9 +52,9 @@ $("#create-deputy-contact").on("click", function (e) {
 
 if ($.cookie("create-contact-pa") == 'true' && $.cookie("add-pa-contact-journey") == 'true') {
 
-     setTimeout(function() {
-          $.cookie("create-contact-pa", false, {path:'/'});
-     }, 5000);
+     // setTimeout(function() {
+     //      $.cookie("create-contact-pa", false, {path:'/'});
+     // }, 5000);
 
      // Changes the tabs
      $('.deputy-details-page.public ul.deputy-tabs li').removeClass('current');
@@ -66,7 +66,7 @@ if ($.cookie("create-contact-pa") == 'true' && $.cookie("add-pa-contact-journey"
      $('ul.deputy-tabs li[data-tab="tab-3"] span').text(contactNumber + 1);
 
      // Add the contact to the Deputy
-     $('#contact-list-deputy tbody').prepend(`
+     $('#contact-list-deputy-pa tbody').prepend(`
           <tr class="summary-row" data-value="0">
                <td>
                     <div class="name">
@@ -153,13 +153,13 @@ if ($.cookie("create-contact-pa") == 'true' && $.cookie("add-pa-contact-journey"
 }
 
 if ($.cookie("deputy-contact-team") == 'No') {
-     $('#contact-list-deputy tbody tr[data-value="0"] .name').find('.company').hide();
-     $('#contact-list-deputy tbody tr[data-value="0"] .name .contact-name-value').find('.deputy-contact-team-name-answer').hide();
-     $('#contact-list-deputy tbody tr[data-value="0"] .address').find('.deputy-contact-title-answer, .deputy-contact-first-name-answer, .deputy-contact-last-name-answer').hide();
+     $('#contact-list-deputy-pa tbody tr[data-value="0"] .name').find('.company').hide();
+     $('#contact-list-deputy-pa tbody tr[data-value="0"] .name .contact-name-value').find('.deputy-contact-team-name-answer').hide();
+     $('#contact-list-deputy-pa tbody tr[data-value="0"] .address').find('.deputy-contact-title-answer, .deputy-contact-first-name-answer, .deputy-contact-last-name-answer').hide();
 }  else if ($.cookie("deputy-contact-team") == 'Yes') {
-     $('#contact-list-deputy tbody tr[data-value="0"] .name').find('.deputy').hide();
-     $('#contact-list-deputy tbody tr[data-value="0"] .name .contact-name-value').find('.deputy-contact-title-answer, .deputy-contact-first-name-answer, .deputy-contact-last-name-answer').hide();
-     $('#contact-list-deputy tbody tr[data-value="0"] .address').find('.deputy-contact-team-name-answer').hide();
+     $('#contact-list-deputy-pa tbody tr[data-value="0"] .name').find('.deputy').hide();
+     $('#contact-list-deputy-pa tbody tr[data-value="0"] .name .contact-name-value').find('.deputy-contact-title-answer, .deputy-contact-first-name-answer, .deputy-contact-last-name-answer').hide();
+     $('#contact-list-deputy-pa tbody tr[data-value="0"] .address').find('.deputy-contact-team-name-answer').hide();
 }
 if ($.cookie("deputy-contact-title")) { $(".deputy-contact-title-answer").text($.cookie("deputy-contact-title")); }
 if ($.cookie("deputy-contact-title-other")) { $(".deputy-contact-title-other-answer").text($.cookie("deputy-contact-title-other")); }

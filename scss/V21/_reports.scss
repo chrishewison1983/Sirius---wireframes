@@ -237,9 +237,12 @@
                }
                &.active {
                     background: lighten($blue,45%);
-                    .wrapper, .main-info, .cta-row {
+                    .main-info, .cta-row {
                          min-height: 14em;
                     }
+                    // .wrapper, .main-info, .cta-row {
+                    //      min-height: 14em;
+                    // }
                     .report-type {
                          span {
                               background: $blue;
@@ -315,12 +318,12 @@
                                    }
                                    p span {
                                         background: lighten($amber,25%);
-                                        border: 3px solid lighten($amber,20%);
+                                        border: 3px solid lighten($amber,5%);
                                    }
                               }
                          }
                          .border {
-                              background: lighten($amber,20%);
+                              background: lighten($amber,5%);
                          }
                     }
                     .finance-container {
@@ -905,9 +908,36 @@
                               width: 97.5%;
                          }
                          &.lodged-report {
+                              box-shadow: 0 0 10px 0px darken($blue-grey,10%);
+                              background: $white;
+                              .wrapper {
+                                   box-shadow: inset 1em 0 0px 0px darken($blue-grey,10%);
+                                   border-radius: 5px 0 0 5px;
+                                   padding-left: 2.5%;
+                                   margin-left: 0;
+                                   width: 100%;
+                                   .main-info {
+                                        background: $white;
+                                        .time-line .date {
+                                             background: $white;
+                                             p span {
+                                                  background: $white;
+                                             }
+                                        }
+                                   }
+                              }
                               .main-info {
                                    width: 76.5%;
-                                   background: $blue-grey;
+                                   // background: $blue-grey;
+                                   .report-content-section {
+                                        background: lighten($blue-grey,5%);
+                                        .wrapper {
+                                             box-shadow: none;
+                                             border-radius: 0;
+                                             padding: 0;
+                                             margin: 0;
+                                        }
+                                   }
                               }
                               .cta-row {
                                    background: darken($blue-grey,10%);

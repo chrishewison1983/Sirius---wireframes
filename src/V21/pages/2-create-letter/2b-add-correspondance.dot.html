@@ -169,7 +169,7 @@
 
                                    <!-- // CORRESPONDENCE - 1 - START // -->
                                    <li>
-                                        <a class="correspondent" data-correspondent-id='1' style="display:none;">
+                                        <a class="correspondent suggested" data-correspondent-id='1'>
                                              <span class="icon fee-payer"><p>Fee payer</p></span>
                                              <span class="icon main-contact"><p>Main correspondence</p></span>
                                              <span data-value='name'>Ms Lara Stevens</span><br>
@@ -183,7 +183,7 @@
 
                                    <!-- // CORRESPONDENCE - 2 - START // -->
                                    <li>
-                                        <a class="correspondent" data-correspondent-id='2'>
+                                        <a class="correspondent suggested" data-correspondent-id='2'>
                                              <span data-value='name'>Mrs Carla Frith</span><br>
                                              <span data-value='type' class="type">Deputy</span><br>
                                              <span data-value='address' class="sub-text">40 Haslemere Road, CANNOCK WOOD, W5174LD.</span><br>
@@ -194,7 +194,7 @@
 
                                    <!-- // CORRESPONDENCE - 3 - START // -->
                                    <li>
-                                        <a class="correspondent" data-correspondent-id='3'>
+                                        <a class="correspondent suggested" data-correspondent-id='3'>
                                              <span data-value='name'>Mrs Melanie Rand</span><br>
                                              <span data-value='type' class="type">Deputy</span><br>
                                              <span data-value='address' class="sub-text">70 Moulton Road, Gunby Green, N6334RF.</span><br>
@@ -205,7 +205,7 @@
 
                                    <!-- // CORRESPONDENCE - 4 - START // -->
                                    <li>
-                                        <a class="correspondent" data-correspondent-id='4'>
+                                        <a class="correspondent suggested" data-correspondent-id='4'>
                                              <span data-value='name'>Toby Daniels</span><br>
                                              <span data-value='type' class="type">Deputy</span><br>
                                              <span data-value='address' class="sub-text">39 Islaire Road, NEW MILL, HP239JA.</span><br>
@@ -216,19 +216,31 @@
                                    <!-- // CORRESPONDENCE - 4 - END // -->
 
                                    <!-- // CORRESPONDENCE - 5 - START // -->
-                                   <li>
-                                        <a class="correspondent" data-correspondent-id='5'>
-                                             <span data-value='name'>TrustMe Limited</span><br>
+                                   <li class="bobloblaw">
+                                        <a class="correspondent suggested" data-correspondent-id='5'>
+                                             <span data-value='name'>Bob Loblaw Ltd</span><br>
                                              <span data-value='type' class="type">Deputy</span><br>
-                                             <span data-value='address' class="sub-text">62 Review Road, Neasden, UK, NW27BE.</span><br>
+                                             <span data-value='address' class="sub-text">
+                                                  <strong>Head office - London</strong>, 84 Crown Street, London, SW19 5GQ.
+                                             </span><br>
+                                             <span data-value='preferred-contact' class="sub-text preferred-contact">Maisie O'Donnell</span><br>
                                              <!-- <span data-value='pref' class="communication-preferences">Preferences: <strong>None</strong></span> -->
                                         </a>
+                                        <button class="view-more"><span></span>Use alternative contact</button>
+                                        <div class="preferred-contact-container">
+                                             <form>
+                                                  <div class="form-group">
+                                                       <label for="letter-alternative-contact">Alternative contacts available</label>
+                                                       <select id="letter-alternative-contact" class="full-width"></select>
+                                                  </div>
+                                             </form>
+                                        </div>
                                    </li>
                                    <!-- // CORRESPONDENCE - 5 - END // -->
 
                                    <!-- // CORRESPONDENCE - 6 - START // -->
                                    <li>
-                                        <a class="correspondent" data-correspondent-id='6'>
+                                        <a class="correspondent suggested'" data-correspondent-id='6'>
                                              <span data-value='name'>Mr Gerald Brackens</span><br>
                                              <span data-value='type' class="type">Client</span><br>
                                              <span data-value='address' class="sub-text">11 Chapel Lane, EAST CANNOCK, W5152TA.</span><br>

@@ -26,6 +26,20 @@ $("#create-deputy-office").on("click", function (e) {
      $.cookie("create-contact-pa", false, {path:'/'});
      $.cookie("create-contact-pro", true, {path:'/'});
 
+     // OFFICE DETAILS
+     // var officeName = [
+     //      { target: 'deputy-office-name-answer', items: [$("#deputy-office-name")] },
+     // ];
+
+     // var officeAddress = [
+     //      { target: 'deputy-office-address-answer',
+     //           items: [$("#deputy-office-address-line-1"),
+     //                     $("#deputy-office-address-line-2"), $("#deputy-office-address-line-3"),
+     //                     $("#deputy-office-address-town"), $("#deputy-office-address-county"),
+     //                     $("#deputy-office-manual-postcode")]
+     //      },
+     // ];
+
      // DEPUTY PERSONAL DETAILS
      var fields = [
           { target: 'deputy-office-name-answer', items: [$("#deputy-office-name")] },
@@ -34,7 +48,7 @@ $("#create-deputy-office").on("click", function (e) {
                items: [$("#deputy-office-address-line-1"),
                          $("#deputy-office-address-line-2"), $("#deputy-office-address-line-3"),
                          $("#deputy-office-address-town"), $("#deputy-office-address-county"),
-                         $("#deputy-office-manual-postcode")]
+                         $("#deputy-office-manual-postcode")].filter(item => item.val().trim() !== '')
           },
           // { target: 'deputy-office-clients-answer', items: [$("#deputy-office-clients")] },
      ];
@@ -49,7 +63,8 @@ $("#create-deputy-office").on("click", function (e) {
                email: $(contacts[i]).find('input[name="myInputsEmailAddress"]').val(),
                phoneNumber: $(contacts[i]).find('input[name="myInputsPhoneNumber"]').val(),
                name: $(contacts[i]).find('input[name="myInputsFullName"]').val(),
-               primary: $(contacts[i]).find('input[name="office-preferred-contact"]').attr('checked') ? true : false
+               primary: $(contacts[i]).find('input[name="office-preferred-contact"]').attr('checked') ? true : false,
+               // officeName: $(contacts[i]).find('#deputy-office-name').val()
           }
           email.items.push(contact);
      }
@@ -105,9 +120,9 @@ $('#create-deputy-office').click(function(){
 
 if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journey") == 'true') {
 
-     setTimeout(function() {
-          $.cookie("create-contact-pro", false, {path:'/'});
-     }, 5000);
+     // setTimeout(function() {
+     //      $.cookie("create-contact-pro", false, {path:'/'});
+     // }, 5000);
 
      // Changes the tabs
      $('.deputy-details-page.professional ul.deputy-tabs li').removeClass('current');
@@ -177,26 +192,34 @@ if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journe
 
      var data = JSON.parse(sessionStorage.getItem('new-office'));
 
-     for (var key in data) {
-          html.find('.' + key).text(data[key]);
-     }
+     if (data) {
 
-     var emails = data['new-contacts'];
-     for (var i = 0; i < emails.length; i++) {
-          if (emails[i].primary) {
-               prefix = '.preferred-contact';
-
-               html.find(prefix + ' .email').text(emails[i].email);
-               html.find(prefix + ' .phone-number').text(emails[i].phoneNumber);
-               html.find(prefix + ' .name').text(emails[i].name);
-          } else {
-               html.find('.alternative-contacts').append($(`<div class="info-section"><div class="alternative-contact">
-                    <div class="name">${emails[i].name}</div>
-                    <div class="phone-number">${emails[i].phoneNumber}</div>
-                    <div class="email"><a href="#">${emails[i].email}</a></div>
-               </div></div>`));
+          for (var key in data) {
+               html.find('.' + key).text(data[key]);
           }
+
+          var emails = data['new-contacts'];
+          for (var i = 0; i < emails.length; i++) {
+               if (emails[i].primary) {
+                    prefix = '.preferred-contact';
+
+                    html.find(prefix + ' .email').text(emails[i].email);
+                    html.find(prefix + ' .phone-number').text(emails[i].phoneNumber);
+                    html.find(prefix + ' .name').text(emails[i].name);
+               } else {
+                    html.find('.alternative-contacts').append($(`<div class="info-section"><div class="alternative-contact">
+                         <div class="name">${emails[i].name}</div>
+                         <div class="phone-number">${emails[i].phoneNumber}</div>
+                         <div class="email"><a href="#">${emails[i].email}</a></div>
+                    </div></div>`));
+               }
+          }
+
+          $('#contact-list-deputy-pro tbody').prepend(html);
+
+          // Populates the drop down for the edit case page (5e-edit-case-details)
+          $('#deputy-professional-contact').append(`<option value="New office">${data['deputy-office-name-answer']}</option>`);
+
      }
 
-     $('#contact-list-deputy tbody').prepend(html);
 }

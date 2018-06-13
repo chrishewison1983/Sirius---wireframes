@@ -258,8 +258,8 @@ table {
 }
 
 #tasks-table, #completed-tasks-table, #deputies-table, #order-table, #clients-table, #important-remarks,
-#reports-table, #reports-table-old, #contact-list, #contact-list-deputy, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-deputies-table,
-#dashboard-worker-table, #client-order-table {
+#reports-table, #reports-table-old, #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa, #dashboard-clients-table,
+#dashboard-tasks-table, #dashboard-deputies-table, #dashboard-worker-table, #client-order-table {
      color: $text-main-colour;
      font-family: $Opensans-Regular;
      tbody {
@@ -538,7 +538,7 @@ table {
 
 .deputy-details-page {
      #tasks-table, #completed-tasks-table, #deputies-table, #order-table, #clients-table, #important-remarks,
-     #reports-table, #reports-table-old, #contact-list, #contact-list-deputy, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-deputies-table,
+     #reports-table, #reports-table-old, #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-deputies-table,
      #dashboard-worker-table, #client-order-table {
           tbody {
                tr {
@@ -1326,7 +1326,7 @@ table {
      }
 }
 
-#deputies-table, #clients-table, #contact-list, #contact-list-deputy, #dashboard-clients-table, #dashboard-tasks-table,
+#deputies-table, #clients-table, #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa, #dashboard-clients-table, #dashboard-tasks-table,
 #dashboard-deputies-table, #dashboard-worker-table, #client-order-table {
      thead {
           tr {
@@ -1626,7 +1626,7 @@ table {
      }
 }
 
-#deputies-table, #contact-list, #contact-list-deputy, #client-order-table {
+#deputies-table, #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa, #client-order-table {
      thead th, tbody td {
           &.deputy-info-only, .deputy-info-only {
                display: none;
@@ -1687,7 +1687,7 @@ table {
 }
 
 
-#contact-list, #contact-list-deputy {
+#contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa {
      thead {
           tr {
                th {
@@ -1751,7 +1751,7 @@ table {
      }
 }
 
-#contact-list-deputy {
+#contact-list-deputy-pro, #contact-list-deputy-pa {
      thead {
           tr {
                th {
@@ -1803,7 +1803,7 @@ table {
      #client-order-table {
           width: 97.5%;
      }
-     #contact-list, #contact-list-deputy {
+     #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa {
           width: 97.5%;
           thead {
                tr {
@@ -2464,7 +2464,7 @@ table {
 
 
 #side-panel {
-     #deputies-table, #contact-list, #contact-list-deputy {
+     #deputies-table, #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa {
           thead {
                border-bottom: none;
                tr {

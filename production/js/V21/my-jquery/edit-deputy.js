@@ -614,10 +614,10 @@ $("#deputy-professional-contact").change( function(e){
           //      <option value='Reece Bowen'>Reece Bowen - reece.bowen@bobloblaw.lawblog.com</option>
           // `);
           $(".form-group.professional-contact-letter .place-holder-text").html(`
-               All future letters will be sent to:<br>
-               <strong>Head office - London</strong>,<br>
-               84 Crown Street,<br>
-               London,<br>
+               All future letters will be sent to:<br/>
+               <strong>Head office - London</strong>,<br/>
+               84 Crown Street,<br/>
+               London,<br/>
                SW19 5GQ.
           `);
      } else if ($(this).val() == 'Coventry') {
@@ -628,10 +628,10 @@ $("#deputy-professional-contact").change( function(e){
           //      <option value='Tilly Steele'>Tilly Steele - tilly.steele@bobloblaw.lawblog.com</option>
           // `);
           $(".form-group.professional-contact-letter .place-holder-text").html(`
-               All future letters will be sent to:<br>
-               <strong>Coventry office</strong>,<br>
-               81 Whatlington Road,<br>
-               Coventry,<br>
+               All future letters will be sent to:<br/>
+               <strong>Coventry office</strong>,<br/>
+               81 Whatlington Road,<br/>
+               Coventry,<br/>
                CV1 5NS.
           `);
      } else if ($(this).val() == 'Birmingham') {
@@ -641,10 +641,10 @@ $("#deputy-professional-contact").change( function(e){
           //      <option value='Nicholas Bruce'>Nicholas Bruce - nicholas.bruce@bobloblaw.lawblog.com</option>
           // `);
           $(".form-group.professional-contact-letter .place-holder-text").html(`
-               All future letters will be sent to:<br>
-               <strong>Birmingham office</strong>,<br>
-               57 Boroughbridge Road,<br>
-               Birmingham,<br>
+               All future letters will be sent to:<br/>
+               <strong>Birmingham office</strong>,<br/>
+               57 Boroughbridge Road,<br/>
+               Birmingham,<br/>
                B5 2SY.
           `);
      } else if ($(this).val() == 'Newcastle') {
@@ -654,10 +654,10 @@ $("#deputy-professional-contact").change( function(e){
           //      <option value='Brooke Quinn'>Brooke Quinn - brooke.quinn@bobloblaw.lawblog.com</option>
           // `);
           $(".form-group.professional-contact-letter .place-holder-text").html(`
-               All future letters will be sent to:<br>
-               <strong>Newcastle office</strong>,<br>
-               25 Lairg Road,<br>
-               Newcastle Upon Tyne,<br>
+               All future letters will be sent to:<br/>
+               <strong>Newcastle office</strong>,<br/>
+               25 Lairg Road,<br/>
+               Newcastle Upon Tyne,<br/>
                NE7 1YX.
           `);
      } else if ($(this).val() == 'Liverpool') {
@@ -668,10 +668,10 @@ $("#deputy-professional-contact").change( function(e){
           //      <option value='Natasha Tucker'>Natasha Tucker - natasha.tucker@bobloblaw.lawblog.com</option>
           // `);
           $(".form-group.professional-contact-letter .place-holder-text").html(`
-               All future letters will be sent to:<br>
-               <strong>Liverpool office</strong>,<br>
-               27 Overton Circle,<br>
-               Liverpool,<br>
+               All future letters will be sent to:<br/>
+               <strong>Liverpool office</strong>,<br/>
+               27 Overton Circle,<br/>
+               Liverpool,<br/>
                L3 8FH.
           `);
      } else if ($(this).val() == 'Manchester') {
@@ -683,11 +683,19 @@ $("#deputy-professional-contact").change( function(e){
           //      <option value='Elizabeth Reed'>Elizabeth Reed - elizabeth.reed@bobloblaw.lawblog.com</option>
           // `);
           $(".form-group.professional-contact-letter .place-holder-text").html(`
-               All future letters will be sent to:<br>
-               <strong>Manchester office</strong>,<br>
-               63 Cunnery Rd,<br>
-               Manchester,<br>
+               All future letters will be sent to:<br/>
+               <strong>Manchester office</strong>,<br/>
+               63 Cunnery Rd,<br/>
+               Manchester,<br/>
                M3 8WT.
+          `);
+     } else if ($(this).val() == 'New office') {
+          var data = JSON.parse(sessionStorage.getItem('new-office'));
+
+          $(".form-group.professional-contact-letter .place-holder-text").html(`
+               All future letters will be sent to:<br/>
+               <strong>${data['deputy-office-name-answer']}</strong>,<br/>
+               ${data['deputy-office-address-answer'].split(', ').filter(item => item.trim() !== '').join(',<br/>')}
           `);
      }
 });

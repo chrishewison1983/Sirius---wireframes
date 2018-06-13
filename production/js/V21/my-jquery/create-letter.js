@@ -18,25 +18,23 @@ $(document).ready(function(){
 // $('#edit-letter > .doc-1').addClass('test');
 
 // Correspondent
+// $('#suggested ul li .view-more, #selected ul#selected-list li .view-more').click(function(e) {
+//      e.preventDefault();
+//      $(this).closest('.preferred-contact-container').toggle();
+// });
+
 $(document).ready(function() {
 
-     $('#suggested ul li a').click(function(e) {
+     $('#suggested ul li').on('click', 'a.suggested', function(e) {
           e.preventDefault();
-          $(this).hide();
-          $(this).parent().css('display', 'none');
-          $("#selected-list").append(`
-               <li data-correspondent-id='${$(this).data('correspondent-id')}'>
-                    <a class="correspondent">
-                         <span class="icon fee-payer"><p>Fee payer</p></span>
-                         <span class="icon main-contact"><p>Main correspondence</p></span>
-                         <span>${ $(this).find('[data-value="name"]').text() }</span><br>
-                         <span class="type">${ $(this).find('[data-value="type"]').text() }</span><br>
-                         <span class="sub-text">${ $(this).find('[data-value="address"]').text() }</span>
-                         <span class="communication-preferences">${ $(this).find('[data-value="pref"]').html() }</span>
-                         <span class="requirement-preferences">${ $(this).find('[data-value="require"]').html() }</span>
-                    </a>
-               </li>`
-          );
+
+          $("#selected-list").append($(this).parent());
+
+          $(this).removeClass('suggested');
+          $(this).addClass('selected');
+
+          // $(this).hide();
+          // $(this).parent().hide(); // css('display', 'none');
 
           // Shows the relevent icons
           $('#selected-list .fee-payer').hide();
@@ -50,21 +48,37 @@ $(document).ready(function() {
           // Adds to the side panel
           $("#recipients").append(`
                <li data-correspondent-id='${$(this).data('correspondent-id')}'>
-                    ${ $(this).find('[data-value="name"]').text() }
-               </li>`
-          );
+               ${ $(this).find('[data-value="name"]').text() + ' - ' + '<strong>' + $(this).find('[data-value="preferred-contact"]').text() + '</strong>' }
+               </li>
+          `);
+          persistSelectedRecipients();
+
+          $('ul#selected-list li[data-correspondent-id="5"]').addClass('bobloblaw').append();
+
+     });
+
+     $('#selected-list').on('click', 'a.selected', function(e) {
+          e.preventDefault();
+          var id = $(this).parent().data('correspondent-id');
+          $(this).removeClass('selected');
+          $(this).addClass('suggested');
+          $(`#suggested ul`).append($(this).parent());
+
+          // Removes to the side panel
+          $("#recipients").find(`[data-correspondent-id='${$(this).data('correspondent-id')}']`).remove();
+
+          sortList();
           persistSelectedRecipients();
      });
 
-     $('#selected-list').on('click', 'a', function(e) {
-          e.preventDefault();
-          var id = $(this).parent().data('correspondent-id');
-          $(this).parent().remove();
-          $(`#recipients [data-correspondent-id="${id}"]`).remove();
-          $(`#suggested [data-correspondent-id="${id}"]`).show();
-          $(`#suggested [data-correspondent-id="${id}"]`).parent().show();
-          persistSelectedRecipients();
-     });
+     function sortList() {
+          var mylist = $('#suggested ul');
+          var listitems = mylist.children('li').get();
+          listitems.sort(function(a, b) {
+             return $(a).find('a').attr('data-correspondent-id') > $(b).find('a').attr('data-correspondent-id') ? 1 : -1;
+          })
+          $.each(listitems, function(idx, itm) { mylist.append(itm); });
+     }
 
      $($('#suggested a')[0]).trigger('click');
 

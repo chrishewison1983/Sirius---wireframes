@@ -197,12 +197,18 @@ h1, h2, h3, h4 {
                }
           }
           &.hide-item, &.show-pending {
-               background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
-               background-size: 0.75em;
+               background: url(#{$image-path}/icons/subtract-blue.svg) no-repeat 0% 40%;
+               background-size: 1.25em;
                &.close {
-                    background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
-                    background-size: 1em;
+                    background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 40%;
+                    background-size: 1.25em;
                }
+               // background: url(#{$image-path}/icons/close-blue.svg) no-repeat 0% 50%;
+               // background-size: 0.75em;
+               // &.close {
+               //      background: url(#{$image-path}/icons/arrow-down-blue.svg) no-repeat 0% 50%;
+               //      background-size: 1em;
+               // }
           }
           &.reverse-timeline {
                background: url(#{$image-path}/icons/reverse-blue.svg) no-repeat 0% 50%;

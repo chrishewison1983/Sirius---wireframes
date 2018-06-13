@@ -272,6 +272,9 @@ ul.contact-list {
                     color: $text-main-colour;
                     font-family: $Opensans-Regular;
                     line-height: 1.2;
+                    strong {
+                         font-family: $Opensans-Bold;
+                    }
                }
                a.edit, a.delete {
                     padding: 0 0 0 1.25em;
@@ -515,6 +518,67 @@ ul#selected-list, #suggested ul {
      li {
           list-style: none;
           margin-bottom: 1em;
+          .view-more {
+               display: none;
+          }
+          &.bobloblaw {
+               position: relative;
+               a.correspondent {
+                    span.sub-text {
+                         &.preferred-contact {
+                              display: inline-block;
+                         }
+                    }
+               }
+               .view-more {
+                    display: inline-block;
+                    background: $blue;
+                    text-align: left;
+                    color: $white;
+                    font-family: $Montserrat;
+                    width: 100%;
+                    font-size: 0.875rem;
+                    border-radius: 0 0 5px 5px;
+                    margin: -0.25em 0 0 0;
+                    z-index: 10;
+                    padding-left: 1.5em;
+                    &.close {
+                         border-radius: 0;
+                         span {
+                              background: url(#{$image-path}/icons/subtract-white.svg) no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    span {
+                         display: inline-block;
+                         width: 1.5em;
+                         height: 1.5em;
+                         margin: -0.5em 0.5em 0 0;
+                         position: relative;
+                         top: 0.375em;
+                         background: url(#{$image-path}/icons/add-white.svg) no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+               }
+               .preferred-contact-container {
+                    padding: 1em;
+                    border: 2px solid $blue;
+                    border-radius: 0 0 5px 5px;
+                    background: rgba($blue,0.15);
+                    &.open {
+                         display: inline-block;
+                    }
+                    form {
+                         .form-group {
+                              margin: 0 0 0 0;
+                         }
+                    }
+               }
+          }
+          .preferred-contact-container {
+               display: none;
+               width: 100%;
+          }
           div {
                display: inline-block;
           }
@@ -581,6 +645,9 @@ ul#selected-list, #suggested ul {
                     filter: alpha(opacity=0);
                     opacity: 1;
                }
+               &.open {
+                    border: 2px solid $blue;
+               }
                span.fee-payer, span.violent, span.main-contact {
                     top: -0.75em;
                     right: -0.75em;
@@ -620,6 +687,19 @@ ul#selected-list, #suggested ul {
                     font-family: $Opensans-Regular;
                     color: $text-main-colour;
                     font-size: 1rem;
+                    &.preferred-contact {
+                         margin-top: 0.75em;
+                         display: none;
+                         padding-left: 1.5em;
+                         font-family: $Montserrat;
+                         color: $main-colour;
+                         font-weight: bold;
+                         background: url(#{$image-path}/icons/client-blue.svg) no-repeat 0% 50%;
+                         background-size: contain;
+                    }
+                    strong {
+                         font-family: $Opensans-Bold;
+                    }
                }
                span.type {
                     font-family: $Opensans-Bold;

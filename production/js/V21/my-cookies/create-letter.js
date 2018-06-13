@@ -112,6 +112,98 @@ if ($.cookie("drafts-left") == 'true') {
      $('.retrieve-drafts').hide();
 }
 
+// New office code
+if ($.cookie("deputy-professional-contact") === 'Head office - London') {
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>Head office - London</strong>, 84 Crown Street, London, SW19 5GQ.
+     `);
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`Maisie O'Donnell`);
+     $('#suggested ul li.bobloblaw').find("#letter-alternative-contact").html(`
+          <option value="Maisie O'Donnell" selected>* Maisie O'Donnell</option>
+          <option value="Keira White">Keira White</option>
+          <option value="Reece Bowen">Reece Bowen</option>
+     `);
+} else if ($.cookie("deputy-professional-contact") === 'Coventry') {
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>Coventry office</strong>, 81 Whatlington Road, Coventry, CV1 5NS.
+     `);
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`Harvey Burgess`);
+     $('#suggested ul li.bobloblaw').find("#letter-alternative-contact").html(`
+          <option value="Harvey Burgess" selected>* Harvey Burgess</option>
+          <option value="Yasmin West">Yasmin West</option>
+          <option value="Tilly Steele">Tilly Steele</option>
+     `);
+} else if ($.cookie("deputy-professional-contact") === 'Birmingham') {
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>Birmingham office</strong>, 57 Boroughbridge Road, Birmingham, B5 2SY.
+     `);
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`Max Bird`);
+     $('#suggested ul li.bobloblaw').find("#letter-alternative-contact").html(`
+          <option value="Max Bird" selected>* Max Bird</option>
+          <option value="Nicholas Bruce">Nicholas Bruce</option>
+     `);
+} else if ($.cookie("deputy-professional-contact") === 'Newcastle') {
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>Newcastle office</strong>, 25 Lairg Road, Newcastle Upon Tyne, NE7 1YX.
+     `);
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`Mia Storey`);
+     $('#suggested ul li.bobloblaw').find("#letter-alternative-contact").html(`
+          <option value="Mia Storey" selected>* Mia Storey</option>
+     `);
+} else if ($.cookie("deputy-professional-contact") === 'Liverpool') {
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>Liverpool office</strong>, 27 Overton Circle, Liverpool, L3 8FH.
+     `);
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`Ellis May`);
+     $('#suggested ul li.bobloblaw').find("#letter-alternative-contact").html(`
+          <option value="Ellis May" selected>* Ellis May</option>
+          <option value="Anthony Haynes">Anthony Haynes</option>
+          <option value="Natasha Tucker">Natasha Tucker</option>
+     `);
+} else if ($.cookie("deputy-professional-contact") === 'Manchester') {
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>Manchester office</strong>, 63 Cunnery Rd, Manchester, M3 8WT.
+     `);
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`Victoria Holden`);
+     $('#suggested ul li.bobloblaw').find("#letter-alternative-contact").html(`
+          <option value="Victoria Holden" selected>* Victoria Holden</option>
+          <option value="Holly Abbott">Holly Abbott</option>
+          <option value="Kai Steele">Kai Steele</option>
+          <option value="Elizabeth Reed">Elizabeth Reed</option>
+     `);
+} else if ($.cookie("deputy-professional-contact") === 'New office') {
+     var data = JSON.parse(sessionStorage.getItem('new-office'));
+     $('#suggested ul li.bobloblaw a').find("span[data-value='address']").html(`
+          <strong>${data['deputy-office-name-answer']}</strong>, ${data['deputy-office-address-answer'].split(', ').filter(item => item.trim() !== '').join(', ')}
+     `);
+     // $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").text(`${emails[0].name}`);
+
+     var emails = data['new-contacts'];
+     var list = $(`#letter-alternative-contact`);
+
+     for (var i = 0; i < emails.length; i++) {
+          if (emails[i].primary) {
+               list.append($(`<option value="${emails[0].name}">${'* ' + emails[0].name}</option>`))
+          } else {
+               list.append($(`<option value="${emails[i].name}">${emails[i].name}</option>`));
+          }
+     }
+
+     $('#suggested ul li.bobloblaw #letter-alternative-contact').append(list);
+
+     $('#suggested ul li.bobloblaw a').find("span[data-value='preferred-contact']").html(`
+          ${emails[0].name}
+     `);
+
+}
+
+$('body').on('change', '#letter-alternative-contact', function(e){
+     var contactName = $(this).val();
+     $('li.bobloblaw a').find("span[data-value='preferred-contact']").html(contactName);
+});
+
+
+
 
 // =================================== Create letter journey - COOKIES =================================== //
 // $(".create-letter-journey-button").on("click", function (e) {

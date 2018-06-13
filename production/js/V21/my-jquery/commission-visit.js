@@ -201,11 +201,11 @@ $('#cancel-third-party').click(function(e){
      $(this).parent().parent().parent().find('.visitor-container').show('slow');
 });
 
-$('.view-more').click(function(e){
+$('body').on('click', '.view-more', function(e){
      e.preventDefault();
      $(this).toggleClass('close');
      $(this).siblings().toggleClass('open');
-     $(this).parent().siblings('.extra-info').toggle('slow');
+     $(this).parent().siblings('.extra-info').toggle();
      // $(this).parent().parent().parent().find('.visitor-container').show('slow');
 });
 

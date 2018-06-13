@@ -433,6 +433,30 @@ if ($.cookie("deputy-professional-contact") === 'Head office - London') {
                <li><a href="#">elizabeth.reed@bobloblaw.lawblog.com</a></li>
           </ul>
      `);
+} else if ($.cookie("deputy-professional-contact") === 'New office') {
+     var data = JSON.parse(sessionStorage.getItem('new-office'));
+     $('#deputies-table tr[data-value="2"] .address').html(`<strong>${data['deputy-office-name-answer']}</strong>, ${data['deputy-office-address-answer']}`);
+     $('#deputies-table tr[data-value="2"] .office-contact-address').html(`
+          <p class="item">Address:</p>
+          <p class="answer">
+               <span class="deputy-office-location"><strong>${data['deputy-office-name-answer']}</strong></span>,<br>
+               ${data['deputy-office-address-answer'].split(', ').filter(item => item.trim() !== '').join(',<br/>')}
+          </p>
+     `);
+     var emails = data['new-contacts'];
+     var p = $('<p class="item">Email address:</p>')
+     var list = $(`
+          <ul class="answer">
+
+          </ul>
+     `);
+
+     for (var i = 0; i < emails.length; i++) {
+          list.append($(`<li><a href="#">${emails[i].email}</a></li>`))
+     }
+
+     $('#deputies-table tr[data-value="2"] .office-contact-emails').html('').append(p).append(list);
+
 }
 
 // if ($.cookie("deputy-professional-contact-details")) {
