@@ -3,7 +3,7 @@
 // $('#create-deputy-office').addClass('de-activate');
 
 $("#deputy-office-name").on("keyup", function (e) {
-     $("#create-deputy-office").removeClass('de-activate').attr('href', '../14-deputy-page/14b-deputy-page.html');
+     $("#create-deputy-office").removeClass('de-activate').attr('href', '../14-deputy-hub/14b-deputy-page.html');
 });
 
 // =================================== Create contact page - PRO - JAVASCRIPT =================================== //
@@ -11,7 +11,7 @@ $("#deputy-office-name").on("keyup", function (e) {
 // $('#create-deputy-office').addClass('de-activate');
 
 $("#deputy-office-name").on("keyup", function (e) {
-     $("#create-deputy-office").removeClass('de-activate').attr('href', '../14-deputy-page/14b-deputy-page.html');
+     $("#create-deputy-office").removeClass('de-activate').attr('href', '../14-deputy-hub/14b-deputy-page.html');
 });
 
 var counter = 1;

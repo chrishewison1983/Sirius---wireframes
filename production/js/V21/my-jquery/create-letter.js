@@ -271,7 +271,7 @@ $(document).ready(function () {
           sessionStorage.setItem('client-draft-letters', JSON.stringify(drafts));
 
           if (drafts.length === 0)
-               window.location.href = '../4-client-page/4a-new-client.html#HandW';
+               window.location.href = '../4-client-hub/4a-new-client.html#HandW';
                $('.retrieve-drafts').hide();
 
           if (loadDrafts)
@@ -326,21 +326,24 @@ $('.change-tab').click(function(e) {
      $('#health-tab-7').addClass('current');
      $('.client-details .tab-link').removeClass('current');
      $('.client-details .tab-link[data-tab="health-tab-7"]').addClass('current');
-     $('#documents-viewer .document-1 .page-1, #documents-viewer-filter .document-1 .page-1').hide();
-     $('#documents-viewer .document-1 .page-2, #documents-viewer-filter .document-1 .page-2').show();
-     $('#documents-viewer .document-1 .page-2 .control-panel h2, #documents-viewer-filter .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
+     $('#documents-viewer .document-1 .page-1, #documents-viewer-simplified .document-1 .page-1, #documents-viewer-filter .document-1 .page-1').hide();
+     $('#documents-viewer .document-1 .page-2, #documents-viewer-simplified .document-1 .page-2, #documents-viewer-filter .document-1 .page-2').show();
+     $('#documents-viewer .document-1 .page-2 .control-panel h2, #documents-viewer-simplified .document-1 .page-2 .control-panel h2, #documents-viewer-filter .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
 });
 
 // Documents changing tabs
-$('#documents-viewer-filter, #filter-panel-documents').hide();
+$('#documents-viewer-simplified, #documents-viewer-filter, #filter-panel-documents').hide();
 
 $('input[name="document-tab"]').click(function() {
      if ($(this).val() == 'Folder') {
-          $('#documents-viewer-filter, #filter-panel-documents').hide();
+          $('#documents-viewer-simplified, #documents-viewer-filter, #filter-panel-documents').hide();
           $('#documents-viewer').show();
+     } else if ($(this).val() == 'Simplified') {
+          $('#documents-viewer, #documents-viewer-filter, #filter-panel-documents').hide();
+          $('#documents-viewer-simplified').show();
      } else if ($(this).val() == 'Filter') {
           $('#documents-viewer-filter, #filter-panel-documents').show();
-          $('#documents-viewer').hide();
+          $('#documents-viewer, #documents-viewer-simplified').hide();
      }
 });
 

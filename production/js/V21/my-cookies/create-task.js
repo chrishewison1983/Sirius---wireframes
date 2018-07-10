@@ -1,9 +1,9 @@
 // =================================== Create Task - COOKIES =================================== //
 // Task journey
 if ($.cookie("order-type") === 'Property and finance') {
-     $('#create-task-button').attr('href', '../4-client-page/4a-new-client.html#PFA');
+     $('#create-task-button').attr('href', '../4-client-hub/4a-new-client.html#PFA');
 } else if ($.cookie("order-type") === 'Health and Welfare') {
-     $('#create-task-button').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('#create-task-button').attr('href', '../4-client-hub/4a-new-client.html#HandW');
 }
 
 // Task info

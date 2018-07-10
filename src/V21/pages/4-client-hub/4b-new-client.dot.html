@@ -13,7 +13,7 @@
           <div class="row">
 
                <!-- // CLIENT DETAILS - START //-->
-               <div class="large-6 large-uncentered columns">
+               <div class="large-5 large-uncentered columns">
                     <nav class="breadcrumb">
                          <a href="../index.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
@@ -21,14 +21,13 @@
                     </nav>
                     <h1>
                          <span class="type client">client</span>
-                         <a href="#" class="client-home-button">
-                              <div class="client-title">Mr</div>
-                              <div class="client-first-name">Gerald</div>
-                              <div class="client-last-name">Brackens</div>
-                         </a>
+                         <a href="#" class="client-home-button"><div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div></a>
+
+                         <br>
 
                          <!-- <span class="normal-status">Client's summary page - <a href="#" class="show-client-info">More client info</a></span> -->
-                         <span class="normal-status">Client's summary page</span>
+                         <!-- <span class="normal-status">Client's summary page</span> -->
+                         <span class="assignee">Assignee: <strong class="sirius-user-id">Susan Smith</strong></span>
                          <span class="violent">Client is violent</span>
                          <span class="welsh">Client's prefered language is Welsh</span>
                          <span class="deceased">Client is deceased</span>
@@ -39,28 +38,22 @@
                <!-- // CLIENT DETAILS - END //-->
 
                <!-- // CLIENT HUB FILTER - START //-->
-               <div class="large-6 large-uncentered columns">
+               <div class="large-7 large-uncentered columns">
 
                     <div id="hub-filter-panel" class="version-1">
                          <form>
                               <nav>
                                    <div class="wrapper hw-wrapper">
                                         <div class="facts text">
-                                             <a href="#" class="fact one"><span>3</span><strong>Tasks</strong></a>
-                                             <a href="#" class="fact two"><span>3</span><strong>Deputies</strong></a>
+                                             <a href="#" class="fact one"><span>4</span><strong>Tasks</strong></a>
+                                             <a href="#" class="fact two"><span>2</span><strong>Deputies</strong></a>
                                         </div>
                                         <label id="handw-actions" class="filter">
-                                             <h2>
-                                                  <span class="icon welfare white"></span>
-                                                  <div>
-                                                       <div>H&amp;W <strong>-</strong> 14820940</div>
-                                                       <p>(7000-0000-1458)</p>
-                                                  </div>
-                                             </h2>
-                                             <p><strong>Joint</strong> | <strong>Lay</strong></p>
-                                             <!-- <div class="switch client-hub">
+                                             <h2><span class="icon welfare white"></span> H&amp;W <strong>-</strong> 14820940</h2>
+                                             <p><strong>Joint</strong> &nbsp; | &nbsp; <strong>Lay</strong></p>
+                                             <div class="switch client-hub">
                               				<div class="slider round"></div>
-                              			</div> -->
+                              			</div>
                                              <input type="radio" value="handw" name="order-view">
                                         </label>
                                    </div>
@@ -68,22 +61,15 @@
                                         <div class="facts text">
                                              <a href="#" class="fact one"><span>1</span><strong>Tasks</strong></a>
                                              <a href="#" class="fact two"><span>1</span><strong>Deputies</strong></a>
-                                             <label class="normal checked" for="primary-order"><input id="primary-order" name="primary-order" type="checkbox" value="Primary" checked>Primary</label>
                                         </div>
                                         <label type="checkbox" id="pfa-actions" class="filter">
                                              <!-- <span class="icon primary"><p>Primary case</p></span> -->
                                              <span class="order-level">103</span>
-                                             <h2>
-                                                  <span class="icon property white"></span>
-                                                  <div>
-                                                       <div>PFA <strong>-</strong> 14820940</div>
-                                                       <p>(7000-0000-2472)</p>
-                                                  </div>
-                                             </h2>
-                                             <p><strong>Sole</strong> | <strong>Lay</strong> | <span class="bond-info-text">Bond: <strong class="bond-amount-answer">No</strong></span></p>
-                                             <!-- <div class="switch client-hub">
+                                             <h2><span class="icon property white"></span>PFA <strong>-</strong> 14820940</h2>
+                                             <p><strong>Sole</strong> &nbsp; | &nbsp; <strong>Lay</strong> &nbsp; | &nbsp; <span class="bond-info">Bond: <strong class="bond-amount-answer">No</strong></span></p>
+                                             <div class="switch client-hub">
                                                   <div class="slider round"></div>
-                                             </div> -->
+                                             </div>
                                              <input type="radio" value="pfa" name="order-view">
                                         </label>
                                    </div>
@@ -113,6 +99,16 @@
      </div>
      <!-- SECTION HEADER - END -->
 
+     {{= it.include('confirmation/reporting-period-updated.html') }}
+
+     {{= it.include('confirmation/correspondence-sent.html') }}
+
+     {{= it.include('confirmation/client-updated.html') }}
+
+     {{= it.include('confirmation/deputy-added.html') }}
+
+     {{= it.include('confirmation/supervision-level.html') }}
+
      <!-- TAB CONTENT - START -->
 
      <!-- //////////////////////////////////// CLIENT OVERVIEW - START //////////////////////////////////// -->
@@ -126,7 +122,7 @@
                               Summary
                          </li>
                          <li class="tab-link" data-tab="summary-tab-2">
-                              <span>4</span> Warnings
+                              Warnings
                          </li>
                          <li class="tab-link" data-tab="summary-tab-3">
                               <span class="contacts-number">2</span> Contacts
@@ -138,10 +134,10 @@
                               <span>5</span> Tasks
                          </li>
                          <li class="tab-link" data-tab="summary-tab-6">
-                              <span>5</span> Orders
+                              <span>4</span> Orders
                          </li>
                          <li class="tab-link" data-tab="summary-tab-7">
-                              <span>4</span> Deputies
+                              <span>3</span> Deputies
                          </li>
                          <li class="tab-link" data-tab="summary-tab-8">
                               Timeline
@@ -168,10 +164,10 @@
 
                          </div>
                     </div>
-     			<!-- =========== TAB CONTENT - 1 - END =========== -->
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
-                    <div id="summary-tab-2" class="client-details tab-content">
+                    <div id="summary-tab-2" class="client-details tab-content current">
                          <div class="row">
 
                               <div class="large-12 large-uncentered columns">
@@ -184,7 +180,7 @@
 
                          </div>
                     </div>
-                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+     			<!-- =========== TAB CONTENT - 2 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 3 - START =========== -->
                     <div id="summary-tab-3" class="client-details tab-content">
@@ -210,31 +206,6 @@
 
                                    {{= it.include('confirmation/reporting-period-updated.html') }}
 
-                                   <h2 class="description-title">
-                                        <div class="client-first-name-answer">Gerald</div>'s reports
-                                        <form class="report-selector">
-                                             <label for="report-alpha-V1" class="radio normal checked">
-                                                  <input id="report-alpha-V1" type="radio" name="report-type" value="Alpha V1" checked>
-                                                  <strong>V1</strong> -
-                                                  Alpha
-                                             </label>
-                                             <label for="report-alpha-V2" class="radio normal">
-                                                  <input id="report-alpha-V2" type="radio" name="report-type" value="Alpha V2">
-                                                  <strong>V2</strong> -
-                                                  Beta
-                                             </label>
-                                             <label for="report-beta" class="radio normal">
-                                                  <input id="report-beta" type="radio" name="report-type" value="Beta">
-                                                  <strong>V3</strong> -
-                                                  Charlie
-                                             </label>
-                                        </form>
-                                   </h2>
-
-                                   {{= it.include('client-page/ALPHA-reports-V1.html') }}
-
-                                   {{= it.include('client-page/ALPHA-reports-V2.html') }}
-
                                    {{= it.include('client-page/BETA-reports.html') }}
 
                               </div>
@@ -253,7 +224,9 @@
 
                                    {{= it.include('confirmation/task-confirmation.html') }}
 
-                                   {{= it.include('client-page/tasks.html') }}
+                                   {{= it.include('client-page/tasks-pfa.html') }}
+
+                                   {{= it.include('client-page/tasks-hw.html') }}
 
                               </div>
 
@@ -364,12 +337,6 @@
 {{= it.include('modals/view-report.html') }}
 
 {{= it.include('modals/view-document.html') }}
-
-{{= it.include('modals/warnings.html') }}
-
-{{= it.include('modals/delete-contact.html') }}
-
-{{= it.include('modals/unlink-deputy.html') }}
 
 <!-- FOOTER CONTENT - START -->
 <!-- FOOTER CONTENT - END -->

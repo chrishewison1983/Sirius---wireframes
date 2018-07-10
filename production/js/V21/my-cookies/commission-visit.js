@@ -9,7 +9,7 @@
 //      // $("#add-visitors-step-6").attr('href','../dashboard.html');
 //      // $('#confirmation-dashboard-visit').show();
 // } else {
-//      $("#add-visitors-step-6").attr('href','../4-client-page/4a-new-client.html');
+//      $("#add-visitors-step-6").attr('href','../4-client-hub/4a-new-client.html');
 // }
 
 ////////////////////////////////////// Step - 1 (6A-WHY?) //////////////////////////////////////

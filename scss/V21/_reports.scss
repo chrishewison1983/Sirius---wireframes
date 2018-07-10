@@ -280,15 +280,23 @@
                     }
                }
                &.pending {
-                    background: lighten($amber,25%);
-                    box-shadow: inset 1em 0 0px 0px rgba($amber,1);
+                    background: $white;
+                    // background: lighten($amber,25%);
                     position: relative;
+                    box-shadow: none;
                     padding: 0;
+                    border-radius: 0;
                     .wrapper {
-                         width: 100%;
+                         width: 100% !important;
+                         margin-left: 0 !important;
+                         border-radius: $global-border-radius;
+                         box-shadow: 0 0 10px 0px darken($blue-grey,10%);
                          .main-info {
-                              width: 71%;
+                              width: 77.15% !important;
+                              padding-left: 3.25% !important;
+                              box-shadow: inset 1em 0 0px 0px rgba($amber,1);
                               margin-bottom: 0.25em;
+                              border-radius: $global-border-radius !important;
                               .report-info {
                                    margin: 0.5em 0 0 0;
                               }
@@ -311,13 +319,15 @@
                     }
                     .time-line {
                          .date {
-                              background: lighten($amber,25%);
+                              background: $white;
+                              // background: lighten($amber,25%);
                               &.left, &.right {
                                    .indicator {
                                         background: $amber;
                                    }
                                    p span {
-                                        background: lighten($amber,25%);
+                                        background: $white;
+                                        // background: lighten($amber,25%);
                                         border: 3px solid lighten($amber,5%);
                                    }
                               }
@@ -985,7 +995,8 @@
                                    .main-info {
                                         // margin-bottom: 1em;
                                         // width: 71%;
-                                        background: lighten($amber,25%);
+                                        background: $white;
+                                        // background: lighten($amber,25%);
                                    }
                               }
                               .cta-row {

@@ -11,7 +11,7 @@ $("#order-type-property").click( function(){
 
 // THE ORDER - Changes the URL to H&W or The bond
 $(".radio-health-welfare").click( function(){
-     $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('#create-case-button').attr('href', '../4-client-hub/4a-new-client.html#HandW');
 });
 
 $(".radio-property").click( function(){
@@ -47,7 +47,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
      // $('#cta-footer').show();
 
      // $('#create-case-button').removeClass('de-activate');
-     // $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html');
+     // $('#create-case-button').attr('href', '../4-client-hub/4a-new-client.html');
 
      // Order type
      $('#order-type-welfare, #order-type-property').attr('disabled', true);

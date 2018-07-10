@@ -67,7 +67,7 @@
 			</a>
 
 			<form action="search.html">
-				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="search" name="search" id="autocomplete" class="main-search-bar" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
 
@@ -84,7 +84,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span class="state">Create order</span> </nav> <h1> The order </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <!-- <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> --> <li class="tab-link" data-tab="tab-2a"> <span class="orders"></span> <p>Orders</p> </li> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <span class="state">Create order</span> </nav> <h1> The order </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-case"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="client-details"></span> <p>Client</p> </li> <!-- <li class="tab-link" data-tab="tab-2"> <span class="deputy-details"></span> <p>Deputies</p> </li> --> <li class="tab-link" data-tab="tab-2a"> <span class="orders"></span> <p>Orders</p> </li> <li class="tab-link current" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // CLIENT DETAILS - START // -->
 <div class="check-details" id="client-details">
 
 	<h2 class="description-title">
@@ -298,11 +298,11 @@
                          <!-- <span class="icon welfare"><p>Health &amp; welfare</p></span> -->
                     </td>
                     <td>
-                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <!-- <a class="action view" href="../14-deputy-hub/14a-deputy-page.html"><p>View</p></a> -->
                          <!-- <a class="main-cta tertiary edit edit-deputy-1-journey" href="../12-edit-deputy/12a-check-deputy-1.html">Edit deputy order details</a> -->
                          <a class="main-cta tertiary edit edit-deputy-1-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-1">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14a-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 1 - END -->
@@ -319,7 +319,7 @@
                               <!-- // DEPUTY ITEM - 1 - START // -->
                               <div class="person-detail-item">
                                    <p class="item">Name:</p>
-                                   <p class="answer">Mrs Lara Stevens</p>
+                                   <p class="answer"><span class="target">Mrs Lara Stevens</span></p>
                               </div>
                               <!-- // DEPUTY ITEM - 1 - END // -->
 
@@ -366,7 +366,7 @@
                               <!-- // DEPUTY ITEM - 7 - START // -->
                               <div class="person-detail-item">
                                    <p class="item">Mobile telephone number:</p>
-                                   <p class="answer">07079962666</p>
+                                   <p class="answer"><span class="target">07079962666</span></p>
                               </div>
                               <!-- // DEPUTY ITEM - 7 - END // -->
 
@@ -523,7 +523,7 @@
                     <td>
                          <a class="main-cta tertiary edit edit-deputy-2-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-2">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14b-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14b-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 2 - END -->
@@ -741,11 +741,11 @@
                     <td>
                          <!-- <span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td> -->
                     <td>
-                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <!-- <a class="action view" href="../14-deputy-hub/14a-deputy-page.html"><p>View</p></a> -->
                          <!-- <a class="main-cta tertiary edit edit-deputy-2-journey" href="../12-edit-deputy/12a-check-deputy-2.html">Edit deputy order details</a> -->
                          <a class="main-cta tertiary edit edit-deputy-3-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-3">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14a-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 3 - END -->
@@ -965,11 +965,11 @@
                          <!-- <span class="icon property"><p>Property &amp; finance</p></span> -->
                     </td>
                     <td>
-                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <!-- <a class="action view" href="../14-deputy-hub/14a-deputy-page.html"><p>View</p></a> -->
                          <!-- <a class="main-cta tertiary edit edit-deputy-3-journey" href="../12-edit-deputy/12a-check-deputy-3.html">Edit deputy order details</a> -->
                          <a class="main-cta tertiary edit edit-deputy-4-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-4">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14a-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 4 - END -->
@@ -1195,16 +1195,17 @@
 				</h2>
                     <div class="appointed">Order date: <strong class="case-order-date-answer">28/08/2018</strong></div>
 				<div class="appointed">Report type: <strong class="order-level">103</strong></div>
-				<br>
-                    <div class="info"><span class="number">1</span>Tasks</div>
-				<div class="info"><span class="number">1</span>Deputies</div>
+                    <div class="info-container">
+                         <div class="info"><span class="number">1</span>Tasks</div>
+     				<div class="info"><span class="number">1</span>Deputies</div>
+                    </div>
                     <a href="#" class="full-details" data-value="1">View full details</a>
                </td>
 			<td>
 				PFA
 			</td>
 			<td>
-                    <div class="case-order-status-pfa-answer">Open</div>
+                    <div class="case-order-status-pfa-answer">Active</div>
                </td>
 			<td>
                     Lay
@@ -1324,7 +1325,7 @@
 					<!-- ITEM - 1 - START -->
 					<div class="info-section">
 						<p>Order status:</p>
-						<p class="answer case-order-status-pfa-answer">Open</p>
+						<p class="answer case-order-status-pfa-answer">Active</p>
 					</div>
 					<!-- ITEM - 1 - END -->
 
@@ -1479,16 +1480,17 @@
 				</h2>
                     <div class="appointed">Order date: <strong class="case-order-date-answer">28/08/2018</strong></div>
                     <div class="appointed"></div>
-                    <br>
-                    <div class="info"><span class="number">4</span>Tasks</div>
-				<div class="info"><span class="number">2</span>Deputies</div>
+                    <div class="info-container">
+                         <div class="info"><span class="number">4</span>Tasks</div>
+     				<div class="info"><span class="number">2</span>Deputies</div>
+                    </div>
                     <a href="#" class="full-details" data-value="2">View full details</a>
                </td>
 			<td>
 				H&amp;W
 			</td>
 			<td>
-                    <div class="case-order-status-hw-answer">Open</div>
+                    <div class="case-order-status-hw-answer">Active</div>
                </td>
 			<td>
                     Lay
@@ -1545,10 +1547,10 @@
 					<!-- ITEM - 4 - END -->
 
 					<!-- ITEM - 5 - START -->
-					<div class="info-section">
+					<!-- <div class="info-section">
 						<p>Order status:</p>
-						<p class="answer case-order-status-answer">Open</p>
-					</div>
+						<p class="answer case-order-status-answer">Active</p>
+					</div> -->
 					<!-- ITEM - 5 - END -->
 
 					<!-- ITEM - 6 - START -->
@@ -1619,7 +1621,7 @@
 					<!-- ITEM - 1 - START -->
 					<div class="info-section">
 						<p>Order status:</p>
-						<p class="answer case-order-status-hw-answer">Open</p>
+						<p class="answer case-order-status-hw-answer">Active</p>
 					</div>
 					<!-- ITEM - 1 - END -->
 
@@ -1649,9 +1651,9 @@
 		<!-- ORDER DETAILS ROW 2 - END -->
 
 		<!-- ORDER SUMMARY ROW 3 - START -->
-          <tr class="handw-content-item summary-row duplicate-row" data-value="3">
+          <tr class="handw-content-item summary-row closed-row" data-value="3">
                <td>
-                    <span class="order-status-indicator">duplicate</span>
+                    <span class="order-status-indicator">closed</span>
 				<h2 class="title">
 					<span class="icon welfare"></span>
                          <div><div>H&amp;W</div> <strong>-</strong> <div>14820940</div></div>
@@ -1660,22 +1662,23 @@
 				</h2>
                     <div class="appointed">Order date: <strong>28/08/2018</strong></div>
                     <div class="appointed"></div>
-                    <br>
-                    <div class="info"><span class="number">-</span>Tasks</div>
-				<div class="info"><span class="number">-</span>Deputies</div>
+                    <div class="info-container">
+                         <div class="info"><span class="number">-</span>Tasks</div>
+     				<div class="info"><span class="number">-</span>Deputies</div>
+                    </div>
                     <a href="#" class="full-details" data-value="3">View full details</a>
                </td>
 			<td>
 				H&amp;W
 			</td>
 			<td>
-                    Duplicate
+                    Closed
                </td>
 			<td>
-                    Lay
+                    Pro
                </td>
 			<td>
-                    Joint
+                    Joint &amp; severally
                </td>
                <td>
 				N/A
@@ -1719,15 +1722,15 @@
 					<!-- ITEM - 4 - START -->
 					<div class="info-section">
 						<p>Type of deputy:</p>
-						<p class="answer">Lay</p>
+						<p class="answer">Pro</p>
 					</div>
 					<!-- ITEM - 4 - END -->
 
 					<!-- ITEM - 5 - START -->
-					<div class="info-section">
+					<!-- <div class="info-section">
 						<p>Order status:</p>
-						<p class="answer">Open</p>
-					</div>
+						<p class="answer">Closed</p>
+					</div> -->
 					<!-- ITEM - 5 - END -->
 
 					<!-- ITEM - 6 - START -->
@@ -1768,7 +1771,7 @@
 					<!-- ITEM - 11 - START -->
 					<div class="info-section">
 						<p>How have the deputy/deputies been appointed?:</p>
-						<p class="answer">Joint</p>
+						<p class="answer">Joint &amp; severally</p>
 					</div>
 					<!-- ITEM - 11 - END -->
 
@@ -1783,7 +1786,7 @@
 					<!-- ITEM - 1 - START -->
 					<div class="info-section">
 						<p>Order status:</p>
-						<p class="answer">Duplicate</p>
+						<p class="answer">Closed</p>
 					</div>
 					<!-- ITEM - 1 - END -->
 
@@ -1813,9 +1816,9 @@
 		<!-- ORDER DETAILS ROW 3 - END -->
 
 		<!-- ORDER SUMMARY ROW 4 - START -->
-		<tr class="pfa-content-item summary-row closed-row" data-value="4">
+		<tr class="pfa-content-item summary-row duplicate-row" data-value="4">
 			<td>
-                    <span class="order-status-indicator">closed</span>
+                    <span class="order-status-indicator">duplicate</span>
 				<h2 class="title">
 					<span class="icon property"></span>
                          <div><div>PFA</div> <strong>-</strong> <div>145862025</div></div>
@@ -1824,22 +1827,23 @@
 				</h2>
 				<div class="appointed">Order date: <strong class="case-order-date-answer">28/07/2017</strong></div>
                     <div class="appointed"></div>
-                    <br>
-				<div class="info"><span class="number">-</span>Tasks</div>
-				<div class="info"><span class="number">-</span>Deputies</div>
+                    <div class="info-container">
+     				<div class="info"><span class="number">-</span>Tasks</div>
+     				<div class="info"><span class="number">-</span>Deputies</div>
+                    </div>
 				<a href="#" class="full-details" data-value="4">View full details</a>
 			</td>
 			<td>
 				PFA
 			</td>
 			<td>
-				Closed
+				Duplicate
 			</td>
 			<td>
-				Lay
+				PA
 			</td>
 			<td>
-				Joint
+				Joint &amp; severally
 			</td>
 			<td>
 				N/A
@@ -1883,7 +1887,7 @@
 					<!-- ITEM - 4 - START -->
 					<div class="info-section">
 						<p>Type of deputy:</p>
-						<p class="answer">Lay</p>
+						<p class="answer">PA</p>
 					</div>
 					<!-- ITEM - 4 - END -->
 
@@ -1918,7 +1922,7 @@
 					<!-- ITEM - 9 - START -->
 					<div class="info-section">
 						<p>How have the deputy / deputies been appointed?:</p>
-						<p class="answer">Joint</p>
+						<p class="answer">Joint &amp; severally</p>
 					</div>
 					<!-- ITEM - 9 - END -->
 
@@ -1933,7 +1937,7 @@
 					<!-- ITEM - 1A - START -->
 					<div class="info-section">
 						<p>Order status:</p>
-						<p class="answer">Closed</p>
+						<p class="answer">Duplicate</p>
 					</div>
 					<!-- ITEM - 1A - END -->
 
@@ -2073,6 +2077,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2081,12 +2086,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>11/06/2017 11:07:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>18/06/2017 12:20:10</p></td>
 							</tr>
@@ -2110,6 +2117,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2118,6 +2126,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>30/06/2017 16:31:01</p></td>
 							</tr>
@@ -2141,6 +2150,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2149,12 +2159,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>Today, 15:21:03</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>03/06/2017 11:07:13</p></td>
 							</tr>
@@ -2178,6 +2190,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2186,12 +2199,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/08/2017 08:17:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>31/06/2017 12:52:52</p></td>
 							</tr>
@@ -2215,6 +2230,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2223,6 +2239,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>21/06/2017 11:07:13</p></td>
 							</tr>
@@ -2234,6 +2251,7 @@
 									</a>
 								</td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/06/2017 11:07:13</p></td>
 							</tr>
@@ -2284,6 +2302,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2292,12 +2311,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>11/06/2017 11:07:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>18/06/2017 12:20:10</p></td>
 							</tr>
@@ -2321,6 +2342,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2329,6 +2351,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>30/06/2017 16:31:01</p></td>
 							</tr>
@@ -2352,6 +2375,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2360,12 +2384,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>Today, 15:21:03</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>03/06/2017 11:07:13</p></td>
 							</tr>
@@ -2389,6 +2415,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2397,12 +2424,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/08/2017 08:17:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>31/06/2017 12:52:52</p></td>
 							</tr>
@@ -2426,6 +2455,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2434,6 +2464,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>21/06/2017 11:07:13</p></td>
 							</tr>
@@ -2445,6 +2476,7 @@
 									</a>
 								</td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/06/2017 11:07:13</p></td>
 							</tr>
@@ -2507,6 +2539,7 @@
 	<script src="../../../production/js/V21/my-cookies/create-task.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-letter.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V21/my-cookies/edit-client.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-deputy.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-contact-pa.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
@@ -2534,6 +2567,7 @@
 	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-case.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V21/my-jquery/edit-client.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-task.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-deputy.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-contact-pa.js"></script>

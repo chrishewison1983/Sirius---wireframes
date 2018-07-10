@@ -15,11 +15,11 @@ $("#new-warning-button").on("click", function (e) {
 
 // Changes header info
 // if ($.cookie("order-journey") == 'HandW') {
-//      $('#new-warning-button').attr('href', '../4-client-page/4a-new-client.html#HandW');
-//      $('.cancel').attr('href', '../4-client-page/4a-new-client.html#HandW')
+//      $('#new-warning-button').attr('href', '../4-client-hub/4a-new-client.html#HandW');
+//      $('.cancel').attr('href', '../4-client-hub/4a-new-client.html#HandW')
 // } else if ($.cookie("order-journey") == 'PFA') {
-//      $('#new-warning-button').attr('href', '../4-client-page/4a-new-client.html#PFA');
-//      $('.cancel').attr('href', '../4-client-page/4a-new-client.html#PFA')
+//      $('#new-warning-button').attr('href', '../4-client-hub/4a-new-client.html#PFA');
+//      $('.cancel').attr('href', '../4-client-hub/4a-new-client.html#PFA')
 // }
 
 function timeStamp(){
@@ -102,3 +102,14 @@ if ($.cookie("new-warning-completed") == 'true') {
 
 if ($.cookie("warning-type")) { $(".warning-type-answer").text($.cookie("warning-type")); }
 if ($.cookie("warning-notes")) { $(".warning-notes-answer").text($.cookie("warning-notes")); }
+
+// Warning of violent client
+if ($.cookie("warning-type") == 'Potentially violent') {
+     $("#section-header h1 span.violent").show();
+     $('#section-header.client-page').addClass('violent-risk-message');
+}
+// if ($.cookie("client-violent-risk") == 'true') {
+//      $(".new-client #section-header").find("h1").addClass("violent-risk-message");
+//      // $(".client-violent-risk").text($.cookie("client-violent-risk"));
+//      // $(".new-client #section-header").find(".colour-wrapper").addClass("violent-risk-message");
+// }

@@ -8,7 +8,7 @@ if ($.cookie("add-pro-contact-journey") == 'true') {
      $('#section-header.deputy-page.content-page nav.breadcrumb').html(`
           <a href="../index.html" class="user-type-link">Dashboard</a>
           <div class="separator"> > </div>
-          <a href="../14-deputy-page/14b-deputy-page.html">Bob Loblaw Ltd</a>
+          <a href="../14-deputy-hub/14b-deputy-page.html">Bob Loblaw Ltd</a>
           <div class="separator"> > </div>
           <span>Create an office</span>
      `);
@@ -18,7 +18,7 @@ if ($.cookie("add-pro-contact-journey") == 'true') {
      `);
 
      watchFormChanges($('.add-deputy-contact-form'), $('#create-deputy-office'));
-     $('#create-deputy-office').attr('href', '../14-deputy-page/14b-deputy-page.html');
+     $('#create-deputy-office').attr('href', '../14-deputy-hub/14b-deputy-page.html');
 }
 
 // Save the contact details - PA
@@ -110,7 +110,7 @@ if ($.cookie("deputy-contact-notes")) { $(".deputy-contact-notes-answer").text($
 $('#create-deputy-office').click(function(){
      if (!$(this).hasClass('de-activate')) {
           if ($.cookie("create-contact-pro") == 'true') {
-               window.location.href = '../14-deputy-page/14b-deputy-page.html';
+               window.location.href = '../14-deputy-hub/14b-deputy-page.html';
                setTimeout(function() {
                     $.cookie("create-contact-pro", false, {path:'/'});
                }, 5000);

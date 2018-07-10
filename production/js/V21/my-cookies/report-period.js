@@ -504,7 +504,7 @@ if ($.cookie("report-value-care-expenses")) {
 
      $(".report-value-care-expenses-answer").text(value);
 
-     // $('#lodge-report-button').removeClass('de-activate').attr('href', '../4-client-page/4a-new-client.html');
+     // $('#lodge-report-button').removeClass('de-activate').attr('href', '../4-client-hub/4a-new-client.html');
 }
 // else {
 //      $('.charts-container .chart.section-1.five').addClass('empty');

@@ -67,7 +67,7 @@
 			</a>
 
 			<form action="search.html">
-				<input type="search" name="search" id="autocomplete" placeholder="Search SIRIUS ID or Client...">
+				<input type="search" name="search" id="autocomplete" class="main-search-bar" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
 
@@ -84,7 +84,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-page/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a> <div class="separator"> > </div> <span>Create correspondence</span> </nav> <h1> Edit the correspondence </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <!-- // CONFIRMATION MESSAGE - START // --> <div class="row"> <div class="large-12 large-uncentered columns"> <div id="draft-deleted-message" class="confirmation-panel"> <div class="content"> <h1> <span></span> Your draft has been deleted <script language="JavaScript"> Stamp = new Date(); year = Stamp.getYear(); if (year < 2000) year = 1900 + year; document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>'); var Hours; var Mins; var Time; Hours = Stamp.getHours(); if (Hours >= 12) { Time = " P.M."; } else { Time = " A.M."; } if (Hours > 12) { Hours -= 12; } if (Hours == 0) { Hours = 12; } Mins = Stamp.getMinutes(); if (Mins < 10) { Mins = "0" + Mins; } document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>'); </script> </h1> </div> </div> </div> </div> <!-- // CONFIRMATION MESSAGE - END // --> <div class="row"> <div class="large-6 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Correspondence</p> </li> <li class="tab-link current" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link" data-tab="tab-5"> <span class="client-contacts"></span> <p>Contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a> <div class="separator"> > </div> <span>Create correspondence</span> </nav> <h1> Edit the correspondence </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper create-letter-journey"> <!-- // CONFIRMATION MESSAGE - START // --> <div class="row"> <div class="large-12 large-uncentered columns"> <div id="draft-deleted-message" class="confirmation-panel"> <div class="content"> <h1> <span></span> Your draft has been deleted <script language="JavaScript"> Stamp = new Date(); year = Stamp.getYear(); if (year < 2000) year = 1900 + year; document.write('<div class="date-text"> - ' + (Stamp.getMonth() + 1) +"/"+Stamp.getDate()+ "/"+ year + '</div>'); var Hours; var Mins; var Time; Hours = Stamp.getHours(); if (Hours >= 12) { Time = " P.M."; } else { Time = " A.M."; } if (Hours > 12) { Hours -= 12; } if (Hours == 0) { Hours = 12; } Mins = Stamp.getMinutes(); if (Mins < 10) { Mins = "0" + Mins; } document.write('<div class="time-text">, ' + Hours + ":" + Mins + Time + '</div>'); </script> </h1> </div> </div> </div> </div> <!-- // CONFIRMATION MESSAGE - END // --> <div class="row"> <div class="large-6 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link" data-tab="tab-1"> <span class="info"></span> <p>Correspondence</p> </li> <li class="tab-link current" data-tab="tab-2"> <span class="draft-letters"></span> <p>Drafts</p> </li> <li class="tab-link" data-tab="tab-3"> <span class="client-details"></span> <p>Client</p> </li> <li class="tab-link" data-tab="tab-4"> <span class="deputy-details"></span> <p>Deputies</p> </li> <li class="tab-link" data-tab="tab-5"> <span class="client-contacts"></span> <p>Contacts</p> </li> <li class="tab-link" data-tab="tab-6"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel"> <!-- // DOCUMENT SUMMARY - START // -->
 <h2 class="description-title">Document information</h2>
 
 <p id="letter-not-started" class="place-holder-text">No templates or drafts have been chosen to edit</p>
@@ -447,11 +447,11 @@
                          <!-- <span class="icon welfare"><p>Health &amp; welfare</p></span> -->
                     </td>
                     <td>
-                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <!-- <a class="action view" href="../14-deputy-hub/14a-deputy-page.html"><p>View</p></a> -->
                          <!-- <a class="main-cta tertiary edit edit-deputy-1-journey" href="../12-edit-deputy/12a-check-deputy-1.html">Edit deputy order details</a> -->
                          <a class="main-cta tertiary edit edit-deputy-1-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-1">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14a-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 1 - END -->
@@ -468,7 +468,7 @@
                               <!-- // DEPUTY ITEM - 1 - START // -->
                               <div class="person-detail-item">
                                    <p class="item">Name:</p>
-                                   <p class="answer">Mrs Lara Stevens</p>
+                                   <p class="answer"><span class="target">Mrs Lara Stevens</span></p>
                               </div>
                               <!-- // DEPUTY ITEM - 1 - END // -->
 
@@ -515,7 +515,7 @@
                               <!-- // DEPUTY ITEM - 7 - START // -->
                               <div class="person-detail-item">
                                    <p class="item">Mobile telephone number:</p>
-                                   <p class="answer">07079962666</p>
+                                   <p class="answer"><span class="target">07079962666</span></p>
                               </div>
                               <!-- // DEPUTY ITEM - 7 - END // -->
 
@@ -672,7 +672,7 @@
                     <td>
                          <a class="main-cta tertiary edit edit-deputy-2-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-2">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14b-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14b-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 2 - END -->
@@ -890,11 +890,11 @@
                     <td>
                          <!-- <span class="icon welfare-property"><p>Health &amp; welfare and<br> property &amp; finance</p></span>										</td> -->
                     <td>
-                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <!-- <a class="action view" href="../14-deputy-hub/14a-deputy-page.html"><p>View</p></a> -->
                          <!-- <a class="main-cta tertiary edit edit-deputy-2-journey" href="../12-edit-deputy/12a-check-deputy-2.html">Edit deputy order details</a> -->
                          <a class="main-cta tertiary edit edit-deputy-3-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-3">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14a-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 3 - END -->
@@ -1114,11 +1114,11 @@
                          <!-- <span class="icon property"><p>Property &amp; finance</p></span> -->
                     </td>
                     <td>
-                         <!-- <a class="action view" href="../14-deputy-page/14a-deputy-page.html"><p>View</p></a> -->
+                         <!-- <a class="action view" href="../14-deputy-hub/14a-deputy-page.html"><p>View</p></a> -->
                          <!-- <a class="main-cta tertiary edit edit-deputy-3-journey" href="../12-edit-deputy/12a-check-deputy-3.html">Edit deputy order details</a> -->
                          <a class="main-cta tertiary edit edit-deputy-4-journey" href="../5-add-deputy/5e-edit-case-details.html#edit-deputy-4">Edit deputy order details</a>
                          <a class="main-cta tertiary unlink" href="#unlink-deputy-list" rel="modal:open">Un-link deputy</a>
-                         <a class="main-cta tertiary view" href="../14-deputy-page/14a-deputy-page.html">Deputy record</a>
+                         <a class="main-cta tertiary view" href="../14-deputy-hub/14a-deputy-page.html">Deputy record</a>
                     </td>
                </tr>
                <!-- DEPUTY SUMMARY ROW 4 - END -->
@@ -1639,6 +1639,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1647,12 +1648,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>11/06/2017 11:07:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>18/06/2017 12:20:10</p></td>
 							</tr>
@@ -1676,6 +1679,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1684,6 +1688,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>30/06/2017 16:31:01</p></td>
 							</tr>
@@ -1707,6 +1712,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1715,12 +1721,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>Today, 15:21:03</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>03/06/2017 11:07:13</p></td>
 							</tr>
@@ -1744,6 +1752,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1752,12 +1761,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/08/2017 08:17:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>31/06/2017 12:52:52</p></td>
 							</tr>
@@ -1781,6 +1792,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1789,6 +1801,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>21/06/2017 11:07:13</p></td>
 							</tr>
@@ -1800,6 +1813,7 @@
 									</a>
 								</td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/06/2017 11:07:13</p></td>
 							</tr>
@@ -1850,6 +1864,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1858,12 +1873,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>11/06/2017 11:07:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>18/06/2017 12:20:10</p></td>
 							</tr>
@@ -1887,6 +1904,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1895,6 +1913,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>30/06/2017 16:31:01</p></td>
 							</tr>
@@ -1918,6 +1937,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1926,12 +1946,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>Today, 15:21:03</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>03/06/2017 11:07:13</p></td>
 							</tr>
@@ -1955,6 +1977,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -1963,12 +1986,14 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/08/2017 08:17:13</p></td>
 							</tr>
 							<tr>
 								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>31/06/2017 12:52:52</p></td>
 							</tr>
@@ -1992,6 +2017,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Doc type</th>
+								<th>Case type</th>
 								<th>Direction</th>
 								<th>Date created</th>
 							</tr>
@@ -2000,6 +2026,7 @@
 							<tr>
 								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Outgoing</p></td>
 								<td><p>21/06/2017 11:07:13</p></td>
 							</tr>
@@ -2011,6 +2038,7 @@
 									</a>
 								</td>
 								<td><p>IT-SS-ORDER</p></td>
+								<td><p>DEP - PFA</p></td>
 								<td><p>Incoming</p></td>
 								<td><p>27/06/2017 11:07:13</p></td>
 							</tr>
@@ -2321,7 +2349,7 @@
 
 
 <!-- /////////////////////////// DOCUMENT 1 - END /////////////////////////// -->
- </div> <!-- // EDIT DOCUMENT - END // --> <!-- // MODAL - START // --> <div id="print-send-modal" style="display:none;"> <img src="../../../production/img/V21/letters/opg-letter-header.png" alt="Document" class="header"> <div id="letter-contents"></div> <p> Cymraeg: if you’d prefer to hear from us in Welsh, call 0300 456 0300 or emailcustomerservices@publicguardian.gsi.gov.uk </p> <!-- <hr> --> <div class="cta-row"> <a class="main-cta" id="confirm-print-send">Publish document</a> <a href="#" rel="modal:close" class="back">Back to my correspondence</a> </div> </div> <div id="delete" style="display:none;"> <h1>Delete draft</h1> <h2 class="document-title"></h2> <p>Are you sure you want to delete this draft?</p> <!-- <hr> --> <div class="cta-row"> <a class="main-cta delete-action" rel="modal:close" id="delete-draft">Delete draft</a> <a href="#" rel="modal:close" id="cancel-delete">Cancel</a> </div> </div> <!-- // MODAL - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="preview-letter">Preview &amp; publish</a> <a class="main-cta secondary" id="save" href="#">Save draft</a> <a class="main-cta secondary" id="save-and-exit" href="../4-client-page/4a-new-client.html#HandW">Save draft &amp; Exit</a> <!-- <a href="#delete" rel="modal:open" class="main-cta secondary" id="delete-draft" href="#">Delete draft</a> --> <span class="separator"></span> <!-- <a onclick="history.back();" class="back">Back</a> --> <a href="../4-client-page/4a-new-client.html" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); var inserts = JSON.parse(sessionStorage.getItem('selected-inserts')); if (inserts){ inserts.forEach(function(insert) { $('#inserts-selected').append('<li>' + insert + '</li>'); }); }  }); function updateEditDraft(draft, index){ $('[id^="document-"]').hide(); $('#document-' + index).show(); $('.current-doc-info .number').text(index); $('.current-doc-info .recipient-name').text(draft.selectedRecipient); $('.current-doc-info .current-document-title').text(draft.selectedLetter); }</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- // EDIT DOCUMENT - END // --> <!-- // MODAL - START // --> <div id="print-send-modal" style="display:none;"> <img src="../../../production/img/V21/letters/opg-letter-header.png" alt="Document" class="header"> <div id="letter-contents"></div> <p> Cymraeg: if you’d prefer to hear from us in Welsh, call 0300 456 0300 or emailcustomerservices@publicguardian.gsi.gov.uk </p> <!-- <hr> --> <div class="cta-row"> <a class="main-cta" id="confirm-print-send">Publish document</a> <a href="#" rel="modal:close" class="back">Back to my correspondence</a> </div> </div> <div id="delete" style="display:none;"> <h1>Delete draft</h1> <h2 class="document-title"></h2> <p>Are you sure you want to delete this draft?</p> <!-- <hr> --> <div class="cta-row"> <a class="main-cta delete-action" rel="modal:close" id="delete-draft">Delete draft</a> <a href="#" rel="modal:close" id="cancel-delete">Cancel</a> </div> </div> <!-- // MODAL - END // --> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><footer id="cta-footer" class="cta-row"> <a class="main-cta primary" id="preview-letter">Preview &amp; publish</a> <a class="main-cta secondary" id="save" href="#">Save draft</a> <a class="main-cta secondary" id="save-and-exit" href="../4-client-hub/4a-new-client.html#HandW">Save draft &amp; Exit</a> <!-- <a href="#delete" rel="modal:open" class="main-cta secondary" id="delete-draft" href="#">Delete draft</a> --> <span class="separator"></span> <!-- <a onclick="history.back();" class="back">Back</a> --> <a href="../4-client-hub/4a-new-client.html" class="cancel">Cancel</a></footer><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script> $(document).ready(function(){ JSON.parse(sessionStorage.getItem('selected-recipients')).forEach(function(recipient) { $('#recipients').append('<li>' + recipient + '</li>'); }); var inserts = JSON.parse(sessionStorage.getItem('selected-inserts')); if (inserts){ inserts.forEach(function(insert) { $('#inserts-selected').append('<li>' + insert + '</li>'); }); }  }); function updateEditDraft(draft, index){ $('[id^="document-"]').hide(); $('#document-' + index).show(); $('.current-doc-info .number').text(index); $('.current-doc-info .recipient-name').text(draft.selectedRecipient); $('.current-doc-info .current-document-title').text(draft.selectedLetter); }</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V21/hideShowPassword.js"></script>
 	<script src="../../../production/js/V21/jquery.cookie.js"></script>
@@ -2353,6 +2381,7 @@
 	<script src="../../../production/js/V21/my-cookies/create-task.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-letter.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-client.js"></script>
+	<script src="../../../production/js/V21/my-cookies/edit-client.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-deputy.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-contact-pa.js"></script>
 	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
@@ -2380,6 +2409,7 @@
 	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-case.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-client.js"></script>
+	<script src="../../../production/js/V21/my-jquery/edit-client.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-task.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-deputy.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-contact-pa.js"></script>

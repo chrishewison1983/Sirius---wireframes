@@ -8,7 +8,7 @@ if ($.cookie("add-pa-contact-journey") == 'true') {
      $('#section-header.deputy-page.content-page nav.breadcrumb').html(`
           <a href="../index.html" class="user-type-link">Dashboard</a>
           <div class="separator"> > </div>
-          <a href="../14-deputy-page/14c-deputy-page.html">Weston Parpenham</a>
+          <a href="../14-deputy-hub/14c-deputy-page.html">Weston Parpenham</a>
           <div class="separator"> > </div>
           <span>Create an office</span>
      `);
@@ -18,7 +18,7 @@ if ($.cookie("add-pa-contact-journey") == 'true') {
      `);
 
      watchFormChanges($('.add-deputy-contact-form'), $('#create-deputy-contact'));
-     $('#create-deputy-contact').attr('href', '../14-deputy-page/14c-deputy-page.html');
+     $('#create-deputy-contact').attr('href', '../14-deputy-hub/14c-deputy-page.html');
 }
 
 // Save the contact details - PA
@@ -230,7 +230,7 @@ if ($.cookie("deputy-contact-notes")) { $(".deputy-contact-notes-answer").text($
 $('#create-deputy-contact').click(function(){
      if (!$(this).hasClass('de-activate')) {
           if ($.cookie("create-contact-pa") == 'true') {
-               window.location.href = '../14-deputy-page/14c-deputy-page.html';
+               window.location.href = '../14-deputy-hub/14c-deputy-page.html';
                setTimeout(function() {
                     $.cookie("create-contact-pa", false, {path:'/'});
                }, 5000);

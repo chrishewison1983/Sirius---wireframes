@@ -418,7 +418,7 @@ p {
                background-size: 0.85em;
           }
           &.two-em-margin-top {
-               margin: 2em 0 0 0;
+               margin: 1.5em 0 0 0;
           }
      }
      &.remark-title {
@@ -1173,6 +1173,38 @@ hr {
      }
 }
 // =================== BOUNCING ARROW - END =================== //
+
+// =================== DEV BUTTONS - START =================== //
+.dev-buttons {
+     position: fixed;
+     bottom: 1em;
+     right: 1em;
+     a {
+          display: inline-block;
+          width: 3em;
+          height: 3em;
+          margin: 0 0 0 0.5em;
+          border-radius: 50%;
+          text-indent: -1000em;
+          border-bottom: none;
+          z-index: 1000;
+          box-shadow: 0 0 10px 0 rgba($black,0.4);
+          &:hover, &:active, &:focus {
+               @include standard-transition;
+               transform: scale(1.1);
+               cursor: pointer;
+          }
+          &#item-added {
+               background: url(#{$image-path}/icons/tick-no-circle.svg) no-repeat 50% 50% $pink;
+               background-size: 3.5em;
+          }
+          &#item-updated {
+               background: url(#{$image-path}/icons/edit-white.svg) no-repeat 50% 50% $pink;
+               background-size: 1.5em;
+          }
+     }
+}
+// =================== DEV BUTTONS - END =================== //
 
 .toggle-switch {
      strong {

@@ -1,6 +1,6 @@
 // =================================== Create client - COOKIES =================================== //
 // STEP 1
-$("#create-client-step-1, #edit-client").on("click", function (e) {
+$("#create-client-step-1").on("click", function (e) {
      $.cookie("create-client-step-1", true, {path:'/'});
 
      $.cookie("client-casarec", $("#client-casarec").val(), {path:'/'});
@@ -48,7 +48,7 @@ $("#create-client-step-2, #edit-addtional-info").on("click", function (e) {
 });
 
 // STEP 3
-// $("#create-client-step-3, #edit-client").on("click", function (e) {
+// $("#create-client-step-3").on("click", function (e) {
 //      $.cookie("create-client-step-3", true, {path:'/'});
 //
 //      $.cookie("client-casarec", $("#client-casarec").val(), {path:'/'});
@@ -226,14 +226,6 @@ if ($.cookie("client-correspondence-welsh") == 'Welsh') {
      $("#client-correspondence-welsh").parent().removeClass('checked');
 }
 
-
-
-
-
-
-
-
-
 // if ($.cookie("client-status")) { $(".client-status").text($.cookie("client-status")); }
 //
 // if ($.cookie("client-status-day")) {
@@ -249,29 +241,8 @@ if ($.cookie("client-correspondence-welsh") == 'Welsh') {
 //      $(".edit-client-form #client-status-year").val($.cookie("client-status-year"));
 // }
 
-// Edit client details
-$("#edit-client").on("click", function (e) {
-     $.cookie("edit-client", true, {path:'/'});
-});
-
-if ($.cookie("edit-client")) {
-     setTimeout(function() {
-          $("#edit-client-confirm").hide(500);
-          $.cookie("edit-client", false, {path:'/'});
-     }, 5000);
-}
-
-if ($.cookie("create-client-step-1") === 'true' && $.cookie("create-client-step-2") === 'true') {
-     $('#edit-client-journey').attr('href', '../4-client-page/4c-new-client.html#NewClient');
-}
-
 
 // Client header options
-if ($.cookie("client-violent-risk") == 'true') {
-     $(".new-client #section-header").find("h1").addClass("violent-risk-message");
-     // $(".client-violent-risk").text($.cookie("client-violent-risk"));
-     // $(".new-client #section-header").find(".colour-wrapper").addClass("violent-risk-message");
-}
-if ($.cookie("client-correspondence-welsh") == 'Welsh') {
-     $(".new-client #section-header").find("h1").addClass("welsh-message");
-}
+// if ($.cookie("client-correspondence-welsh") == 'Welsh') {
+//      $(".new-client #section-header").find("h1").addClass("welsh-message");
+// }

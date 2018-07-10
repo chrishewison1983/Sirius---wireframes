@@ -7,7 +7,7 @@
 
 $('input[name="supervision-level-asset"]').change(function(){
      if($(this).is(":checked")) {
-          $('#supervision-level-button').removeClass("de-activate").attr('href', '../4-client-page/4a-new-client.html#PFA');
+          $('#supervision-level-button').removeClass("de-activate").attr('href', '../4-client-hub/4a-new-client.html#PFA');
      } else {
           $('#supervision-level-button').addClass("de-activate").removeAttr('href');
      }

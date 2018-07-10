@@ -3,7 +3,7 @@ $(document).ready(function () {
 
      $(".warning-notes").click( function(){
           $('#new-warning-button').removeClass('de-activate');
-          $('#new-warning-button').attr('href', '../4-client-page/4a-new-client.html');
+          $('#new-warning-button').attr('href', '../4-client-hub/4a-new-client.html');
      });
 
      // Populates the modal

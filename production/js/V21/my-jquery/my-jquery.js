@@ -9,7 +9,7 @@ $('input:checkbox').change(function(){
 
 $('input:radio').click(function() {
      $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('checked');
-          $(this).parent().addClass('checked');
+     $(this).parent().addClass('checked');
 });
 
 $('#address-manual').click(function(e){
@@ -484,3 +484,73 @@ function handleTrigger(form, disableDis) {
           disableDis.addClass('de-activate');
      }
 }
+
+// DEV BUTTONS
+$('#item-added, #item-updated').click(function(e){
+     e.preventDefault();
+     // Changes the tabs shown
+     $('ul.client-details.tabs li').removeClass('current');
+     $('ul.client-details.tabs li[data-tab="summary-tab-7"]').addClass('current');
+     $('.client-details.tab-content').removeClass('current');
+     $('.client-details.tab-content#summary-tab-7').addClass('current');
+
+     // Shows/hides the pre-loader
+     $('#pre-loader').show();
+     setTimeout(function() {
+          $('#pre-loader').hide();
+     }, 3000);
+
+     setTimeout(function() {
+          $('#deputy-updated-complete').show();
+     }, 3000);
+     setTimeout(function() {
+          $('#deputy-updated-complete').hide();
+     }, 5000);
+     setTimeout(function() {
+          $('#deputies-table tbody tr[data-value="1"]').removeClass('added');
+          $('#deputies-table tbody tr[data-value="1"] td .name div').removeClass('edited');
+          $('#deputies-table tbody tr[data-value="1"] td .target').removeClass('edited');
+     }, 6000);
+
+     // var clickDisabled = false;
+     // $(this).click(function(){
+     //      if (clickDisabled)
+     //           return;
+     //
+     //           // do your real click processing here
+     //
+     //      clickDisabled = true;
+     //      setTimeout(function(){clickDisabled = false;}, 3000);
+     // });
+});
+
+$('#item-added').click(function(e){
+     $('#deputy-updated-complete h1').html('<span></span> "<div>Mrs Lara Stevens</div>" has been added as a deputy');
+     $('#deputies-table tbody tr[data-value="1"]').addClass('added');
+});
+
+$('#item-updated').click(function(e){
+     $('#deputy-updated-complete h1').html('<span></span> "<div>Mrs Lara Stevens</div>" details have been updated');
+     $('#deputies-table tbody tr[data-value="1"] td .name div').addClass('edited');
+     $('#deputies-table tbody tr[data-value="1"] td .target').addClass('edited');
+});
+
+// Header scroll section
+$(document).ready(function() {
+     $("#hub-filter-panel nav").on("scroll", function () {
+          var cur = $(this).scrollLeft();
+          if (cur == 0) {
+               $('#hub-filter-panel nav').addClass('shadow-right').removeClass('scrolling');
+          }
+          else {
+               var max = $(this)[0].scrollWidth - $(this).parent().width();
+               if (cur == max) {
+                    $('#hub-filter-panel nav').addClass('shadow-left').removeClass('shadow-right');
+               } else {
+                    $('#hub-filter-panel nav').addClass('scrolling');
+                    $('#hub-filter-panel nav').removeClass('shadow-left shadow-right');
+               }
+          }
+     });
+     $("#hub-filter-panel nav").trigger("scroll");
+});

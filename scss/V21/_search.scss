@@ -131,6 +131,124 @@
      }
 }
 
+.search-results-list-page {
+     .hide {
+          display: inline-block !important;
+          width: 100%;
+          opacity: 0;
+     }
+     .place-holder-text {
+          .left {
+               strong {
+                    color: $blue;
+               }
+          }
+     }
+     #section-header {
+          nav.breadcrumb {
+               margin: 0;
+          }
+          h1 {
+               color: rgba($white,0.7);
+               span {
+                    display: inline-block;
+                    color: $white;
+                    width: auto;
+                    font-family: $Montserrat;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+
+               }
+          }
+     }
+     .content-wrapper {
+          margin: 0.5em 0 0 0;
+     }
+     ul.search-results-list {
+          li {
+               list-style: none;
+               border-bottom: 2px dashed $blue-grey;
+               display: inline-block;
+               padding: 0.75em 0;
+               &:first-of-type {
+                    padding-top: 0;
+               }
+               &:last-of-type {
+                    border-bottom: none;
+               }
+               a {
+                    display: inline-block;
+                    float: left;
+                    margin: 0 1.5em 0 0;
+                    &.client-name {
+                         font-size: 1.2rem;
+                         margin: 0 0 0.5em 0;
+                         display: inline-block;
+                         color: $black;
+                         strong {
+                              span {
+                                   color: $blue;
+                              }
+                         }
+                    }
+               }
+               p {
+                    margin: 0 0 0.5em 0;
+                    span {
+                         margin: 0 0.5em 0 0;
+                    }
+               }
+          }
+     }
+     #pagination-small {
+          margin: 0 0 0 0;
+          padding: 1.5em 0 0 0;
+          border-top: 10px solid $blue-grey;
+          justify-content: center;
+     }
+}
+
+#search-filters {
+     #scroller {
+          &.fixed {
+               left: inherit;
+               top: 5em;
+               width: 22.5%;
+          }
+     }
+}
+
+.search-page-filters {
+     background: $blue-grey;
+     border-radius: $global-border-radius;
+     padding: 3.25em 1em 1em 1em;
+     position: relative;
+     h3 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0.5em;
+          color: $white;
+          text-align: center;
+          background: darken($blue-grey,20%);
+          border-radius: 5px 5px 0 0;
+     }
+     ul {
+          margin: 0;
+          li {
+               display: inline-block;
+               list-style: none;
+               width: 100%;
+               strong {
+                    color: $blue;
+               }
+          }
+     }
+}
+
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {
 

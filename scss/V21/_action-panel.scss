@@ -31,4 +31,17 @@
                }
           }
      }
+     .check-details {
+          hr {
+               margin: 0 0 1.5em 0;
+               border-bottom: 3px dashed $blue-grey;
+          }
+     }
+     .edit-client-form {
+          hr {
+               &.hybrid {
+                    margin: 0 0 2.25em 0;
+               }
+          }
+     }
 }

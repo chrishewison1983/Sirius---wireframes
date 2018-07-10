@@ -6,12 +6,12 @@ $(".bond-yes").click( function(){
 });
 
 $("#bond-amount").keyup( function(){
-     $('#create-bond-button').attr('href', '../4-client-page/4a-new-client.html#PFA').removeClass('de-activate');
+     $('#create-bond-button').attr('href', '../4-client-hub/4a-new-client.html#PFA').removeClass('de-activate');
 });
 
 
 $(".bond-no").click( function(){
-     $('#create-bond-button').attr('href', '../4-client-page/4a-new-client.html#PFA').removeClass('de-activate');
+     $('#create-bond-button').attr('href', '../4-client-hub/4a-new-client.html#PFA').removeClass('de-activate');
 });
 
 $("#bond-amount").keyup(function() {
@@ -20,7 +20,7 @@ $("#bond-amount").keyup(function() {
           $('#create-bond-button').removeAttr('href');
      } else {
           $('#create-bond-button').removeClass('de-activate');
-          $('#create-bond-button').attr('href', '../4-client-page/4a-new-client.html#PFA');
+          $('#create-bond-button').attr('href', '../4-client-hub/4a-new-client.html#PFA');
      }
 });
 
@@ -109,7 +109,7 @@ $("#dispense-bond").on("click", function (e) {
 });
 
 $('input[name="dispensed-reason"]').on("click", function (e) {
-     $('#dispense-bond-button').removeClass('de-activate').attr('href', '../4-client-page/4a-new-client.html#PFA');
+     $('#dispense-bond-button').removeClass('de-activate').attr('href', '../4-client-hub/4a-new-client.html#PFA');
 });
 
 // =================================== Dispense Bond - END - JAVASCRIPT =================================== //

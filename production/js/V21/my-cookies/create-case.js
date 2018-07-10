@@ -88,13 +88,13 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('.breadcrumb').html(`
                <a href="../index.html" class="user-type-link">Dashboard</a>
                <div class="separator"> &gt; </div>
-               <a href="../4-client-page/4a-new-client.html">
+               <a href="../4-client-hub/4a-new-client.html">
                     <div class="client-title">Mr</div>
                     <div class="client-first-name">Gerald</div>
                     <div class="client-last-name">Brackens</div>
                </a>
                <div class="separator"> &gt; </div>
-               <a href="../4-client-page/4a-new-client.html#HandW">H&W | 14820940</a>
+               <a href="../4-client-hub/4a-new-client.html#HandW">H&W | 14820940</a>
                <div class="separator"> &gt; </div>
                <span class="state">Edit order</span>
           `);
@@ -106,7 +106,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#edit-case-modal h2').text('H&W | 14820940');
 
           // CTA on the edit page url
-          $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html#HandW');
+          $('#create-case-button').attr('href', '../4-client-hub/4a-new-client.html#HandW');
      }
      if ($.cookie('order-type') === 'Property and finance' ) {
           $('#order-type-property').parent().addClass('checked');
@@ -116,13 +116,13 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('.breadcrumb').html(`
                <a href="../index.html" class="user-type-link">Dashboard</a>
                <div class="separator"> &gt; </div>
-               <a href="../4-client-page/4a-new-client.html">
+               <a href="../4-client-hub/4a-new-client.html">
                     <div class="client-title">Mr</div>
                     <div class="client-first-name">Gerald</div>
                     <div class="client-last-name">Brackens</div>
                </a>
                <div class="separator"> &gt; </div>
-               <a href="../4-client-page/4a-new-client.html#PFA">PFA | 14820940</a>
+               <a href="../4-client-hub/4a-new-client.html#PFA">PFA | 14820940</a>
                <div class="separator"> &gt; </div>
                <span class="state">Edit order</span>
           `);
@@ -134,7 +134,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#edit-case-modal h2').text('PFA | 14820940');
 
           // CTA on the edit page url
-          $('#create-case-button').attr('href', '../4-client-page/4a-new-client.html#PFA');
+          $('#create-case-button').attr('href', '../4-client-hub/4a-new-client.html#PFA');
      }
 
      // Court reference

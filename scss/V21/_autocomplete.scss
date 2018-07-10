@@ -6,8 +6,8 @@
 // =====================================  Autocomplete drop down - START ===================================== //
 .autocomplete-suggestions {
      overflow: auto;
+     position: relative;
      max-height: 30em !important;
-     // padding: 1em;
      font-family: $Montserrat;
      font-size: 1rem;
      line-height: 1.4;
@@ -17,6 +17,9 @@
      border-radius: 0 0 5px 5px;
      background: $white;
      box-shadow: 0 10px 0 0 rgba($black,0.2);
+     // &.main-search {
+     //      padding: 0 0 2em 0;
+     // }
      &.low-height {
           max-height: 15em !important;
      }
@@ -74,9 +77,20 @@
                          }
                     }
                }
-               &.footer {
+               &.search-footer {
+                    // position: -webkit-sticky;
+                    // position: sticky; top: 0px;
+                    // bottom: 0;
+                    // left: 0;
+                    // right: 0;
+                    // height: 2em;
+                    // background: $black;
+                    display: inline-block;
+                    width: 100%;
+                    border: none;
                     .sub-title {
                          width: auto;
+                         line-height: 1;
                          &:first-of-type {
                               float: left;
                          }

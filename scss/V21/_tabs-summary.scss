@@ -33,7 +33,7 @@
           display: none;
      }
      #client-summary {
-          margin: 2em 0 0 0;
+          margin: 1.5em 0 0 0;
           .dashboard-row {
                @include flexbox;
                @include flex-wrap(wrap);

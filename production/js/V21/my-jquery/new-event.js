@@ -61,7 +61,7 @@ $('#event-type').bind('change', function (e) {
 
 $(".event-notes").click( function(){
      $("#new-event-button").removeClass('de-activate');
-     $("#new-event-button").attr('href', '../4-client-page/4a-new-client.html');
+     $("#new-event-button").attr('href', '../4-client-hub/4a-new-client.html');
      $("#event-error-button").removeClass('de-activate');
 });
 

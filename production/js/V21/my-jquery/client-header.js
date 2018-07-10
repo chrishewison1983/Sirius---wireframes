@@ -11,12 +11,15 @@ $(document).ready(function () {
                $(this).parent().addClass("checked");
                $(this).parent().parent().addClass("checked");
 
-               $('.deputy-info-only').hide();
-          } else {
-               $(this).parent().removeClass("checked");
-               $(this).parent().parent().removeClass("checked");
+               // Changes the state
+               $('#hub-filter-panel form nav .wrapper').removeClass('checked');
+               $('#hub-filter-panel form nav .wrapper label').removeClass('checked');
+               $('#hub-filter-panel form nav .wrapper label h2 span').removeClass('black').addClass('white');
+               $(this).parent().addClass('checked');
+               $(this).parent().parent().addClass('checked');
+               $(this).parent().find('h2 span').addClass('black').removeClass('white');
 
-               $('.deputy-info-only').show();
+               $('.deputy-info-only').hide();
           }
      });
 
@@ -25,14 +28,15 @@ $(document).ready(function () {
                $('.handw-content-item').show();
                $('.pfa-content-item').hide();
 
-               $('.pfa-wrapper').removeClass('checked');
+               // $('.pfa-wrapper').removeClass('checked');
 
-               $('#client-overview li[data-tab="summary-tab-5"], #client-overview li[data-tab="summary-tab-7"]').show();
+               $('#client-overview li[data-tab="summary-tab-5"], #client-overview li[data-tab="summary-tab-7"]').removeClass('hide');
 
                $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('3');
+               $('ul.client-details.tabs li[data-tab="summary-tab-6"] span').text('2');
                $('ul.client-details.tabs li[data-tab="summary-tab-7"] span').text('3');
-               $(this).parent().find('h2 .icon').removeClass('white');
-               $('#pfa-actions').find('h2 .icon').addClass('white');
+               // $(this).parent().find('h2 .icon').removeClass('white');
+               // $('#pfa-actions').find('h2 .icon').addClass('white');
 
                $('.deputy-info-only').show();
 
@@ -51,28 +55,30 @@ $(document).ready(function () {
                // $('.order-section .accordion-3').find('.number').text('0');
                // $('.order-section .accordion-3').addClass('inactive');
                // $('.order-section #accordion-3').hide();
-               $('#client-overview li[data-tab="summary-tab-6"] span').text('2');
 
-          } else {
-               $('.handw-actions').hide();
-               $('.handw-content-item, .pfa-content-item').show();
-               $(this).parent().find('h2 .icon').addClass('white');
           }
+          // else {
+          //      $('.handw-actions').hide();
+          //      $('.handw-content-item, .pfa-content-item').show();
+          //      $(this).parent().find('h2 .icon').addClass('white');
+          // }
      });
 
      $('input[value="pfa"]').change(function(){
           if ($(this).is(":checked")) {
                $('.pfa-content-item').show();
                $('.handw-content-item').hide();
-               $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('1');
-               $('ul.client-details.tabs li[data-tab="summary-tab-7"] span').text('1');
-
-               $('.hw-wrapper').removeClass('checked');
 
                $('#client-overview li[data-tab="summary-tab-5"], #client-overview li[data-tab="summary-tab-7"]').removeClass('hide');
 
-               $(this).parent().find('h2 .icon').removeClass('white');
-               $('#handw-actions').find('h2 .icon').addClass('white');
+               $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('1');
+               $('ul.client-details.tabs li[data-tab="summary-tab-6"] span').text('2');
+               $('ul.client-details.tabs li[data-tab="summary-tab-7"] span').text('1');
+
+               // $('.hw-wrapper').removeClass('checked');
+
+               // $(this).parent().find('h2 .icon').removeClass('white');
+               // $('#handw-actions').find('h2 .icon').addClass('white');
 
                $('.deputy-info-only').show();
 
@@ -89,14 +95,35 @@ $(document).ready(function () {
                // $('.order-section .accordion-3').find('.number').text('1');
                // $('.order-section .accordion-3').removeClass('inactive');
                // $('.order-section #accordion-3').hide();
-               $('#client-overview li[data-tab="summary-tab-6"] span').text('2');
 
-          } else {
-               $('.pfa-actions').hide();
-               $('.pfa-content-item, .handw-content-item').show();
-               $(this).parent().find('h2 .icon').addClass('white');
+          }
+          // else {
+          //      $('.pfa-actions').hide();
+          //      $('.pfa-content-item, .handw-content-item').show();
+          //      $(this).parent().find('h2 .icon').addClass('white');
+          // }
+     });
+
+     $('input[value="third-order"], input[value="fourth-order"]').change(function(){
+          if ($(this).is(":checked")) {
+               $('.handw-content-item').show();
+               $('.pfa-content-item').show();
+
+               $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('5');
+               $('ul.client-details.tabs li[data-tab="summary-tab-6"] span').text('4');
+               $('ul.client-details.tabs li[data-tab="summary-tab-7"] span').text('4');
+
+               $('.deputy-info-only').show();
+
+               // Changes the actions list
+               $('nav.actions-nav ul li').removeClass('active');
+               $('li[data-action="action-1"], li[data-action="action-3"], li[data-action="action-5"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+
+               $('.client-content-item').show();
+
           }
      });
+
 
 });
 // ================= Input select - END ================= //
@@ -108,11 +135,11 @@ $('.pfa-wrapper').click(function() {
 
      $('.deputy-info-only').show();
 
-     $('#pfa-actions, .pfa-wrapper').addClass('checked');
-     $('#pfa-actions input').attr('checked', 'checked');
-     $('#pfa-actions').find('h2 .icon').removeClass('white');
-     $('#handw-actions').find('h2 .icon').addClass('white');
-     $('#handw-actions, .hw-wrapper').removeClass('checked');
+     // $('#pfa-actions, .pfa-wrapper').addClass('checked');
+     // $('#pfa-actions input').attr('checked', 'checked');
+     // $('#pfa-actions').find('h2 .icon').removeClass('white');
+     // $('#handw-actions').find('h2 .icon').addClass('white');
+     // $('#handw-actions, .hw-wrapper').removeClass('checked');
 
      // Changes the actions list
      $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-6"], li[data-action="action-7"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-12"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
@@ -159,11 +186,11 @@ $('.hw-wrapper').click(function() {
 
      $('.deputy-info-only').show();
 
-     $('#handw-actions, .hw-wrapper').addClass('checked');
-     $('#handw-actions input').attr('checked', 'checked');
-     $('#handw-actions').find('h2 .icon').removeClass('white');
-     $('#pfa-actions').find('h2 .icon').addClass('white');
-     $('#pfa-actions, .pfa-wrapper').removeClass('checked');
+     // $('#handw-actions, .hw-wrapper').addClass('checked');
+     // $('#handw-actions input').attr('checked', 'checked');
+     // $('#handw-actions').find('h2 .icon').removeClass('white');
+     // $('#pfa-actions').find('h2 .icon').addClass('white');
+     // $('#pfa-actions, .pfa-wrapper').removeClass('checked');
 
      // Changes the actions list
      $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-7"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
@@ -207,16 +234,54 @@ $('.hw-wrapper .fact.two').click(function() {
      $('.client-content-item').hide();
 });
 
+$('.third-order-wrapper .fact.one, .fourth-order-wrapper .fact.one').click(function() {
+     $('.handw-content-item').show();
+     $('.pfa-content-item').show();
+
+     // Changes the tabs highlighted
+     $('ul.client-details.tabs li').removeClass('current');
+     $('ul.client-details.tabs li[data-tab="summary-tab-5"]').addClass('current');
+     $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('5');
+     $('ul.client-details.tabs li[data-tab="summary-tab-6"] span').text('4');
+     $('ul.client-details.tabs li[data-tab="summary-tab-7"] span').text('4');
+
+     // Changes the tabs shown
+     $('.client-details.tab-content').removeClass('current');
+     $('.client-details.tab-content#summary-tab-5').addClass('current');
+
+     $('.client-content-item').show();
+});
+
+
+$('.third-order-wrapper .fact.two, .fourth-order-wrapper .fact.two').click(function() {
+     $('.handw-content-item').show();
+     $('.pfa-content-item').show();
+
+     // Changes the tabs highlighted
+     $('ul.client-details.tabs li').removeClass('current');
+     $('ul.client-details.tabs li[data-tab="summary-tab-7"]').addClass('current');
+     $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('5');
+     $('ul.client-details.tabs li[data-tab="summary-tab-6"] span').text('4');
+     $('ul.client-details.tabs li[data-tab="summary-tab-7"] span').text('4');
+
+     // Changes the tabs shown
+     $('.client-details.tab-content').removeClass('current');
+     $('.client-details.tab-content#summary-tab-7').addClass('current');
+
+     $('.client-content-item').show();
+});
+
+
 // ================= Link select - END ================= //
 
 // Primary switch
-$('#primary-order').change(function(){
-     if ($(this).is(":checked")) {
-          $(this).closest('.pfa-wrapper').removeClass('non-primary-case');
-     } else {
-          $(this).closest('.pfa-wrapper').addClass('non-primary-case');
-     }
-});
+// $('#primary-order').change(function(){
+//      if ($(this).is(":checked")) {
+//           $(this).closest('.pfa-wrapper').removeClass('non-primary-case');
+//      } else {
+//           $(this).closest('.pfa-wrapper').addClass('non-primary-case');
+//      }
+// });
 
 // Different versions of the header
 // if (window.location.href.indexOf("V1") != -1) {

@@ -42,19 +42,19 @@ $('#client-property a').on('click', function(e) {
 })
 
 if ($.cookie("order-journey") === 'HandW' || $.cookie("order-type") === 'Health and Welfare') {
-     $('.order-specific-journey').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('.order-specific-journey').attr('href', '../4-client-hub/4a-new-client.html#HandW');
      $('.order-specific-journey').text('H & W | 14820940');
 
      // Correspondence Page
-     $('#confirm-print-send').attr('href', '../4-client-page/4a-new-client.html#HandW')
+     $('#confirm-print-send').attr('href', '../4-client-hub/4a-new-client.html#HandW')
 }
 
 if ($.cookie("order-journey") === 'PFA' || $.cookie("order-type") === 'Property and finance') {
-     $('.order-specific-journey').attr('href', '../4-client-page/4a-new-client.html#PFA');
+     $('.order-specific-journey').attr('href', '../4-client-hub/4a-new-client.html#PFA');
      $('.order-specific-journey').text('PFA | 14820940');
 
      // Correspondence Page
-     $('#confirm-print-send').attr('href', '../4-client-page/4a-new-client.html#PFA')
+     $('#confirm-print-send').attr('href', '../4-client-hub/4a-new-client.html#PFA')
 }
 
 // Confirmation panels

@@ -30,7 +30,7 @@ $(document).ready(function () {
 $("#client-last-name").on('input', function() {
      // if ($('#client-casarec').length > 0 && $('#client-first-name').length > 0) {
      //      $('#create-client').removeClass('de-activate');
-     //      $('#create-client').attr('href', '../4-client-page/4a-new-client.html#NewClient');
+     //      $('#create-client').attr('href', '../4-client-hub/4a-new-client.html#NewClient');
      // }
      if ($(this).length > 0 && $('#client-first-name').length > 0) {
           $('#create-client-step-1').removeClass('de-activate');
@@ -42,7 +42,7 @@ $("#client-last-name").on('input', function() {
 // $("#client-casarec").on('input', function() {
 //      if ($(this).length > 0) {
 //           $('#create-client-step-3').removeClass('de-activate');
-//           $('#create-client-step-3').attr('href', '../4-client-page/4a-new-client.html#NewClient');
+//           $('#create-client-step-3').attr('href', '../4-client-hub/4a-new-client.html#NewClient');
 //      }
 // });
 

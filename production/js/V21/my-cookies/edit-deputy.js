@@ -29,8 +29,8 @@ $(".edit-deputy-4-journey").on("click", function (e) {
 });
 
 if ($.cookie("edit-deputy-1-journey") == 'true' || $.cookie("edit-deputy-2-journey") == 'true') {
-     $('#edit-deputy').attr('href', '../4-client-page/4a-new-client.html#HandW');
-     $('#reset-deputy').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('#edit-deputy').attr('href', '../4-client-hub/4a-new-client.html#HandW');
+     $('#reset-deputy').attr('href', '../4-client-hub/4a-new-client.html#HandW');
 
      $('ul.client-details.tabs li').removeClass('current');
      $('ul.client-details.tabs li[data-tab="summary-tab-7"]').addClass('current');
@@ -41,8 +41,8 @@ if ($.cookie("edit-deputy-1-journey") == 'true' || $.cookie("edit-deputy-2-journ
 }
 
 if ($.cookie("edit-deputy-3-journey") == 'true' || $.cookie("edit-deputy-4-journey") == 'true') {
-     $('#edit-deputy').attr('href', '../4-client-page/4a-new-client.html#PFA');
-     $('#reset-deputy').attr('href', '../4-client-page/4a-new-client.html#PFA');
+     $('#edit-deputy').attr('href', '../4-client-hub/4a-new-client.html#PFA');
+     $('#reset-deputy').attr('href', '../4-client-hub/4a-new-client.html#PFA');
 
      $('ul.client-details.tabs li').removeClass('current');
      $('ul.client-details.tabs li[data-tab="summary-tab-7"]').addClass('current');
@@ -269,11 +269,11 @@ if ($.cookie("edit-deputy-journey") == 'lay') {
 
 // Changes the URL
 if ($.cookie("order-journey") == 'HandW') {
-     $('#confirm-unlink').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('#confirm-unlink').attr('href', '../4-client-hub/4a-new-client.html#HandW');
 } else if ($.cookie("order-journey") == 'PFA') {
-     $('#confirm-unlink').attr('href', '../4-client-page/4a-new-client.html#PFA');
+     $('#confirm-unlink').attr('href', '../4-client-hub/4a-new-client.html#PFA');
 } else {
-     $('#confirm-unlink').attr('href', '../4-client-page/4a-new-client.html');
+     $('#confirm-unlink').attr('href', '../4-client-hub/4a-new-client.html');
 }
 
 // Deputy status
@@ -493,5 +493,5 @@ if ($.cookie("deputy-professional-contact") === 'Head office - London') {
 
 
 // if ($.cookie("order-journey") == 'HandW') {
-//      $('#confirm-unlink').attr('href', '../4-client-page/4a-new-client.html#HandW');
+//      $('#confirm-unlink').attr('href', '../4-client-hub/4a-new-client.html#HandW');
 // }

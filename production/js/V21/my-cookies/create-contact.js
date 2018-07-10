@@ -337,7 +337,7 @@ $(".letter-contact-journey, .create-letter").on("click", function (e) {
 
 if ($.cookie("add-contact-journey") == 'true') {
      // Changes breadcrumb
-     $('nav.breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> &gt; </div> <a href="../4-client-page/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> &gt; </div> <span>Create contact</span>');
+     $('nav.breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> &gt; </div> <a href="../4-client-hub/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> &gt; </div> <span>Create contact</span>');
 
      $('.add-contact-action #side-panel-tabs li[data-tab="tab-1"], .add-contact-action #side-panel-tabs li[data-tab="tab-2"]').hide();
      $('.add-contact-action #side-panel-tabs li').removeClass('current');
@@ -346,7 +346,7 @@ if ($.cookie("add-contact-journey") == 'true') {
      $('.add-contact-action .tab-content').removeClass('current');
      $('.add-contact-action #tab-5').addClass('current');
 
-     $('#create-contact').attr('href', '../4-client-page/4a-new-client.html');
+     $('#create-contact').attr('href', '../4-client-hub/4a-new-client.html');
 
      watchFormChanges($('.add-correspondent-form'), $('#create-contact'));
 }
@@ -354,7 +354,7 @@ if ($.cookie("add-contact-journey") == 'true') {
 $('#create-contact').click(function(){
      if (!$(this).hasClass('de-activate')) {
           if ($.cookie("add-contact-journey") == 'true') {
-               window.location.href = '../4-client-page/4a-new-client.html';
+               window.location.href = '../4-client-hub/4a-new-client.html';
           } else {
                window.location.href = '2b-add-correspondance.html';
           }

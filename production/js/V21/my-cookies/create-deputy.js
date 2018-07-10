@@ -601,11 +601,11 @@ if ($.cookie("deputy-fee-payer") == 'true') {
 
 // Change CTA
 if ($.cookie("order-journey") == 'PFA') {
-     $('#add-deputy-step-3').attr('href', '../4-client-page/4a-new-client.html#PFA');
+     $('#add-deputy-step-3').attr('href', '../4-client-hub/4a-new-client.html#PFA');
 } else if ($.cookie("order-journey") == 'HandW') {
-     $('#add-deputy-step-3').attr('href', '../4-client-page/4a-new-client.html#HandW');
+     $('#add-deputy-step-3').attr('href', '../4-client-hub/4a-new-client.html#HandW');
 } else {
-     $('#add-deputy-step-3').attr('href', '../4-client-page/4a-new-client.html');
+     $('#add-deputy-step-3').attr('href', '../4-client-hub/4a-new-client.html');
 }
 
 // Add/edit deputies

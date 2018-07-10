@@ -3,55 +3,27 @@
 }
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default deputy-details-page professional">
+<main class="default deputy-details-page public">
 
      <!-- SECTION HEADER - START -->
-     <div id="section-header" class="deputy-page professional">
+     <div id="section-header" class="deputy-page public">
 
           {{= it.include('top-nav.html') }}
 
           <div class="row">
-
-               <!-- // DEPUTY DETAILS - START //-->
-               <div class="large-7 large-uncentered columns">
+               <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
                          <a href="../index.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
                          <span>Deputy summary</span>
                     </nav>
                     <h1>
-                         <span class="type professional">PRO</span>
-                         <a href="#" class="deputy-home-button">
-                              <div class="deputy-organisation-name-answer">Bob Loblaw Ltd</div>
-                         </a>
+                         <span class="type public">PA</span>
+                         <a href="#" class="deputy-home-button"><div class="deputy-organisation-name-answer">Weston Parpenham</div></a>
+                         <br>
                          <span class="deputy-status-title">Deputy is active</span>
                     </h1>
                </div>
-               <!-- // DEPUTY DETAILS - END //-->
-
-               <!-- // ADDITIONAL DETAILS - START //-->
-               <div class="large-5 large-uncentered columns">
-                    <div id="additional-details">
-                         <div class="text">
-                              Occupation:
-                              <strong>Solicitor</strong>
-                         </div>
-                         <div class="text">
-                              Professional indemnity insurance:
-                              <strong>Yes</strong>
-                         </div>
-                         <div class="text">
-                              Insurance coverage:
-                              <strong>&pound;2,500,000</strong>
-                         </div>
-                         <div class="text">
-                              Date expires:
-                              <strong>25/04/2020</strong>
-                         </div>
-                    </div>
-               </div>
-               <!-- // ADDITIONAL DETAILS - END //-->
-
 
           </div>
 
@@ -72,18 +44,17 @@
                     <ul class="deputy-tabs tabs">
                          <li class="tab-link current" data-tab="tab-1">Details</li>
                          <li class="tab-link" data-tab="tab-2">Warnings</li>
-                         <li class="tab-link" data-tab="tab-3"><span class="number">7</span>Offices</li>
-                         <li class="tab-link" data-tab="tab-4"><span class="larger-number">250+</span>Clients</li>
-                         <li class="tab-link" data-tab="tab-5"><span class="number">1</span>Named deputies</li>
-                         <li class="tab-link" data-tab="tab-6">Timeline</li>
-                         <li class="tab-link" data-tab="tab-7">Documents</li>
+                         <li class="tab-link" data-tab="tab-3"><span class="number">2</span>Offices</li>
+                         <li class="tab-link" data-tab="tab-4"><span class="larger-number">500+</span>Clients</li>
+                         <li class="tab-link" data-tab="tab-5">Timeline</li>
+                         <li class="tab-link" data-tab="tab-6">Documents</li>
                     </ul>
                     <!-- =========== TABS - END =========== -->
 
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
                     <div id="tab-1" class="tab-content current">
 
-                         {{= it.include('deputy-page/deputy-pro-details.html') }}
+                         {{= it.include('deputy-page/deputy-public-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 1 - END =========== -->
@@ -101,7 +72,7 @@
 
                          {{= it.include('confirmation/contact-removed.html') }}
 
-                         {{= it.include('deputy-page/contacts-pro.html') }}
+                         {{= it.include('deputy-page/contacts-pa.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 3 - END =========== -->
@@ -109,7 +80,7 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content">
 
-                         {{= it.include('deputy-page/multiple-client-details-pro.html') }}
+                         {{= it.include('deputy-page/multiple-client-details-public.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 4 - END =========== -->
@@ -117,7 +88,7 @@
                     <!-- =========== TAB CONTENT - 5 - START =========== -->
                     <div id="tab-5" class="tab-content">
 
-                         {{= it.include('deputy-page/linked-deputies-pro-pa.html') }}
+                         {{= it.include('deputy-page/timeline-deputy.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 5 - END =========== -->
@@ -125,20 +96,15 @@
                     <!-- =========== TAB CONTENT - 6 - START =========== -->
                     <div id="tab-6" class="tab-content">
 
-                         {{= it.include('deputy-page/timeline-deputy.html') }}
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 6 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 7 - START =========== -->
-                    <div id="tab-7" class="tab-content">
-
-                         <h2 class="description-title">Deputy documents</h2>
+                         <h2 class="description-title">
+                              Deputy documents
+                              <!-- <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a> -->
+                         </h2>
 
                          {{= it.include('side-panel/document-viewer.html') }}
 
                     </div>
-                    <!-- =========== TAB CONTENT - 7 - END =========== -->
+                    <!-- =========== TAB CONTENT - 6 - END =========== -->
 
                </div>
 
@@ -156,7 +122,7 @@
 </main>
 <!-- PRIMARY CONTENT - END -->
 
-{{= it.include('modals/delete-contact-deputy.html') }}
+{{= it.include('modals/delete-contact-pa-deputy.html') }}
 
 <!-- FOOTER CONTENT - START -->
 <!-- FOOTER CONTENT - END -->

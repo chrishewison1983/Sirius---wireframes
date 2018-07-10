@@ -3,10 +3,10 @@
 }
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default deputy-details-page public">
+<main class="default deputy-details-page lay">
 
      <!-- SECTION HEADER - START -->
-     <div id="section-header" class="deputy-page public">
+     <div id="section-header" class="deputy-page">
 
           {{= it.include('top-nav.html') }}
 
@@ -18,11 +18,11 @@
                          <span>Deputy summary</span>
                     </nav>
                     <h1>
-                         <span class="type public">PA</span>
-                         <a href="#" class="deputy-home-button">
-                              <div class="deputy-organisation-name-answer">Weston Parpenham</div>
-                         </a>
+                         <span class="type professional">Pro</span>
+                         <a href="#" class="deputy-home-button"><div class="deputy-title-answer">Mr</div> <div class="deputy-first-name-answer">Tobias</div> <div class="deputy-middle-name-answer"></div> <div class="deputy-last-name-answer">Fünke</div></a>
+                         <br>
                          <span class="deputy-status-title">Deputy is active</span>
+                         <span class="deceased">Deputy is deceased</span>
                     </h1>
                </div>
 
@@ -44,18 +44,17 @@
                     <!-- =========== TABS - START =========== -->
                     <ul class="deputy-tabs tabs">
                          <li class="tab-link current" data-tab="tab-1">Details</li>
-                         <li class="tab-link" data-tab="tab-2">Warnings</li>
-                         <li class="tab-link" data-tab="tab-3"><span class="number">2</span>Offices</li>
-                         <li class="tab-link" data-tab="tab-4"><span class="larger-number">500+</span>Clients</li>
-                         <li class="tab-link" data-tab="tab-5">Timeline</li>
-                         <li class="tab-link" data-tab="tab-6">Documents</li>
+                         <li class="tab-link" data-tab="tab-2"><span>3</span>Clients</li>
+                         <li class="tab-link" data-tab="tab-3">Warnings</li>
+                         <li class="tab-link" data-tab="tab-4">Timeline</li>
+                         <li class="tab-link" data-tab="tab-5">Documents</li>
                     </ul>
                     <!-- =========== TABS - END =========== -->
 
                     <!-- =========== TAB CONTENT - 1 - START =========== -->
                     <div id="tab-1" class="tab-content current">
 
-                         {{= it.include('deputy-page/deputy-public-details.html') }}
+                         {{= it.include('deputy-page/deputy-lay-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 1 - END =========== -->
@@ -63,7 +62,7 @@
                     <!-- =========== TAB CONTENT - 2 - START =========== -->
                     <div id="tab-2" class="tab-content">
 
-                         {{= it.include('deputy-page/warnings.html') }}
+                         {{= it.include('deputy-page/multiple-client-details.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 2 - END =========== -->
@@ -71,9 +70,7 @@
                     <!-- =========== TAB CONTENT - 3 - START =========== -->
                     <div id="tab-3" class="tab-content">
 
-                         {{= it.include('confirmation/contact-removed.html') }}
-
-                         {{= it.include('deputy-page/contacts-pa.html') }}
+                         {{= it.include('deputy-page/warnings.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 3 - END =========== -->
@@ -81,21 +78,13 @@
                     <!-- =========== TAB CONTENT - 4 - START =========== -->
                     <div id="tab-4" class="tab-content">
 
-                         {{= it.include('deputy-page/multiple-client-details-public.html') }}
+                         {{= it.include('deputy-page/timeline-deputy.html') }}
 
                     </div>
                     <!-- =========== TAB CONTENT - 4 - END =========== -->
 
                     <!-- =========== TAB CONTENT - 5 - START =========== -->
                     <div id="tab-5" class="tab-content">
-
-                         {{= it.include('deputy-page/timeline-deputy.html') }}
-
-                    </div>
-                    <!-- =========== TAB CONTENT - 5 - END =========== -->
-
-                    <!-- =========== TAB CONTENT - 6 - START =========== -->
-                    <div id="tab-6" class="tab-content">
 
                          <h2 class="description-title">
                               Deputy documents
@@ -105,7 +94,7 @@
                          {{= it.include('side-panel/document-viewer.html') }}
 
                     </div>
-                    <!-- =========== TAB CONTENT - 6 - END =========== -->
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
 
                </div>
 
@@ -122,8 +111,6 @@
 
 </main>
 <!-- PRIMARY CONTENT - END -->
-
-{{= it.include('modals/delete-contact-pa-deputy.html') }}
 
 <!-- FOOTER CONTENT - START -->
 <!-- FOOTER CONTENT - END -->
