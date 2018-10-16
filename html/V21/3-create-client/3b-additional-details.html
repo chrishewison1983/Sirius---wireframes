@@ -27,7 +27,7 @@
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
 
-			<a href="../index.html" class="logo user-type-link">
+			<a href="../19-dashboard/19a-caseworker.html" class="logo user-type-link">
 				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
 				<p><span>Dashboard</span></p>
 			</a>
@@ -66,7 +66,7 @@
 				<p><span>Sign out</span></p>
 			</a>
 
-			<form action="search.html">
+			<form action="../search.html">
 				<input type="search" name="search" id="autocomplete" class="main-search-bar" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
@@ -84,7 +84,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <span>Create client</span> </nav> <h1> Additional information for <div class="client-first-name">Joe</div> </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar create-client">
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <span>Create client</span> </nav> <h1> Additional information for <div class="client-first-name">Joe</div> </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="progress-bar create-client">
 	<ul class="steps-two">
 		<li class="step-1">
 			<a href="3a-create-client.html" class="wrapper">
@@ -140,7 +140,7 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script>
 		$( function() {
-			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+			$( "#datepicker, #datepicker1, #datepicker2, #credit-date-by, #credit-sent-date, #write-off-date, #exemption-date" ).datepicker();
 		} );
 	</script>
 	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
@@ -166,6 +166,7 @@
 	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
 	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
 	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/sign-out.js"></script>
 	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
@@ -175,14 +176,17 @@
 	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/finance.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
 	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/allocate-client.js"></script>
 	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
 	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
 	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
 	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
@@ -206,13 +210,13 @@
 	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
-	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/finance.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
-	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
 	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
@@ -246,7 +250,7 @@
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table, .livelink-documents, #clients-table, #contact-list-deputy-pro, #contact-list-deputy-pa").tablesorter();
 		});
 
 		// $(document).ready(function() {

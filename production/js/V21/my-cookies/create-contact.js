@@ -110,7 +110,7 @@ if ($.cookie("contact-added") == 'true') {
 
                          <div class="person-detail-item">
                               <p class="item">Email:</p>
-                              <p class="answer contact-email-answer"></p>
+                              <p class="answer"><a href="#" class="contact-email-answer"></a></p>
                          </div>
 
                          <div class="person-detail-item">
@@ -337,7 +337,7 @@ $(".letter-contact-journey, .create-letter").on("click", function (e) {
 
 if ($.cookie("add-contact-journey") == 'true') {
      // Changes breadcrumb
-     $('nav.breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> &gt; </div> <a href="../4-client-hub/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> &gt; </div> <span>Create contact</span>');
+     $('nav.breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> &gt; </div> <a href="../4-client-hub/4a-new-client.html"> <div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div> </a> <div class="separator"> &gt; </div> <span>Create contact</span>');
 
      $('.add-contact-action #side-panel-tabs li[data-tab="tab-1"], .add-contact-action #side-panel-tabs li[data-tab="tab-2"]').hide();
      $('.add-contact-action #side-panel-tabs li').removeClass('current');

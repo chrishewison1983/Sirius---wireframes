@@ -3,7 +3,7 @@
 }
 
 <!-- PRIMARY CONTENT - START -->
-<main class="default">
+<main class="default dashboard-template case-manager">
 
      <!-- SECTION HEADER - START -->
      <div id="section-header" class="dashboard">
@@ -33,13 +33,13 @@
                <div class="large-12 large-uncentered columns">
                     <ul class="dashboard-tabs tabs">
                          <li class="tab-link workflow current" data-tab="tab-1">
-                              <span>15</span> My tasks
+                              <span>23</span> My tasks
                          </li>
                          <li class="tab-link completed" data-tab="tab-3">
                               <span>1</span> My completed tasks
                          </li>
                          <li class="tab-link" data-tab="tab-4">
-                              <span class="small">200+</span> My clients
+                              <span class="small">300+</span> My clients
                          </li>
                     </ul>
                </div>
@@ -56,16 +56,20 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->
@@ -88,16 +92,20 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="completed-tasks-pagination pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->
@@ -116,25 +124,29 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
-                         {{= it.include('filters/filter-clients-caseworker.html') }}
+                         {{= it.include('filters/filter-clients.html') }}
 
                          {{= it.include('confirmation/clients-re-assigned.html') }}
 
-                         {{= it.include('dashboard/dashboard-tab-clients-lay.html') }}
+                         {{= it.include('dashboard/dashboard-tab-clients.html') }}
 
                          {{= it.include('modals/dashboard-re-assign-clients.html') }}
 
@@ -144,9 +156,14 @@
                </div>
           </div>
 
-
      </div>
      <!-- CONTENT WRAPPER - END -->
+
+     <!-- // DEVELOPER BUTTONS - START -->
+     <div class="dev-buttons">
+          <a href="#" id="remove-actions">Remove actions</a>
+     </div>
+     <!-- // DEVELOPER BUTTONS - END -->
 
 </main>
 <!-- PRIMARY CONTENT - END -->
@@ -178,5 +195,15 @@ function myFunction() {
           }
      }
 }
+</script>
+
+<script type="text/javascript">
+
+     if($(window).width() > 481) {
+          $(function() {
+               moveScroller();
+          });
+     }
+
 </script>
 <!-- SCRIPT CONTENT - END -->

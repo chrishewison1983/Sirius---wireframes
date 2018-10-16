@@ -1,38 +1,9 @@
 // =================================== Timeline - JAVASCRIPT =================================== //
 $('#vertical-timeline .more-info').click(function(e){
      e.preventDefault();
-     $(this).siblings('.details').toggle();
+     $(this).siblings('.details').toggle().toggleClass('open');
      $(this).toggleClass('open');
 });
-
-// Fixes filter bar
-function moveScroller() {
-     var $anchor = $("#scroller-anchor");
-     var $scroller = $('#scroller');
-
-     var move = function() {
-          var st = $(window).scrollTop();
-          var ot = $anchor.offset().top;
-          if(st > ot) {
-               $scroller.css({
-                    position: "fixed",
-                    top: ""
-               });
-               $scroller.addClass("fixed");
-          } else {
-               if(st <= ot) {
-                    $scroller.css({
-                         position: "relative",
-                         top: ""
-                    });
-                    $scroller.removeClass("fixed");
-               }
-          }
-     };
-
-     $(window).scroll(move);
-     move();
-}
 
 // Show/hide timelines
 $('.hide-item').click(function(e){
@@ -66,23 +37,19 @@ $('.reverse-timeline').click(function(e){
 });
 
 // Filter
-// $('input[value="all"]').change(function(){
-//      if($(this).is(":checked")) {
-//           $(this).parent().addClass("checked");
-//           $('input[name="filter-value"]').parent().removeClass("checked");
-//           $('#filter-results').hide();
-//      }
-// });
+$(document).ready(function () {
+     $('.last-filter').css('display', 'none');
+});
 
 $('input[name="filter-value"]').click(function(){
      var checked = $('#filter-panel').find(':checked').length;
      if($(this).is(":checked")) {
           $(this).parent().addClass("checked");
-          $('input[value="all"]').parent().removeClass("checked");
+          $('.last-filter').css('display', 'inline-block');
      }
      if (!checked)
-         $('.filter-all').addClass('checked');
          $('#filter-results').hide();
+         $('.last-filter').css('display', 'none');
 });
 
 var sections = $('.sectionContent');
@@ -95,7 +62,8 @@ function updateContentVisibility(){
           });
           $('.dot.end').show();
           $('#filter-results').show();
-          $('.filter-all').removeClass('checked');
+
+          $('.last-filter').css('display', 'inline-block');
      } else {
           sections.show();
      }
@@ -107,7 +75,7 @@ updateContentVisibility();
 $('.filter-all').click(function(e){
      e.preventDefault();
      $('.sectionContent').show();
-     $(this).addClass('checked');
+     $(this).parent().css('display', 'none');
      $('#filter-panel input').removeAttr('checked');
      $('#filter-panel input').parent().removeClass('checked');
      $('#filter-results').hide();

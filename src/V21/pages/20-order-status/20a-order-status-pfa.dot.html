@@ -13,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-hub/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -91,7 +91,7 @@
 
                               <!-- <h2 class="section-title">Case documents</h2> -->
 
-                              {{= it.include('side-panel/document-viewer.html') }}
+                              {{= it.include('side-panel/document-viewer-filter.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 3 - END =========== -->
@@ -115,8 +115,8 @@
                                    <label for="order-status-pfa">Order status <span class="required">*</span></label>
                                    <select id="order-status-pfa" class="full-width">
                                         <option value="">-- Select --</option>
-                                        <option value="Open" selected>Open</option>
-                                        <option value="Active">Active</option>
+                                        <option value="Open">Open</option>
+                                        <option value="Active" selected>Active</option>
                                         <option value="Closed">Closed</option>
                                         <option value="Duplicate">Duplicate</option>
                                    </select>

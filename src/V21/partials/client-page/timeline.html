@@ -34,7 +34,7 @@
 				<a class="show-supervision hide-item close">Show timeline</a>
 			</h2>
 
-			<div id="supervision-timeline" class="pfa-content-item">
+			<div id="supervision-timeline" class="">
 
 				<!-- Start - START -->
 				<div class="start">
@@ -127,15 +127,12 @@
 			</h2>
 
 			<div id="filter-panel">
-				<div id="scroller-anchor"></div>
-				<div id="scroller">
+				<div id="scroller-anchor" class="scroller-anchor"></div>
+				<div id="scroller" class="scroller">
 					<form class="timeline-filter">
 						<label for="filter-category" class="float-left title-label">Filter</label>
 						<nav>
 							<ul>
-								<li>
-									<a class="filter-all checked">All</a>
-								</li>
 								<li>
 									<label><input type="checkbox" value="one" name="filter-value">Supervision level</label>
 								</li>
@@ -148,6 +145,12 @@
 								<li>
 									<label><input type="checkbox" value="four" name="filter-value">Tasks completed</label>
 								</li>
+								<li class="last-filter">
+									<a class="filter-all">Clear filter</a>
+								</li>
+								<!-- <li>
+									<a class="filter-all checked">All</a>
+								</li> -->
 							</ul>
 						</nav>
 					</form>
@@ -520,14 +523,4 @@
 <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
 <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 <script src="../../../production/js/V21/chart.js"></script>
-
-<script type="text/javascript">
-
-     if($(window).width() > 481) {
-          $(function() {
-               moveScroller();
-          });
-     }
-
-</script>
 <!-- SCRIPT CONTENT - END -->

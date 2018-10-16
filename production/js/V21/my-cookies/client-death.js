@@ -31,8 +31,8 @@ $('#client-has-died').hide();
 // Changes the header
 if ($.cookie('client-death') == 'true' && $.cookie('client-death-proof') == 'No') {
      $('#confirm-client-death').text('Confirm client is deceased');
-     $('#section-header').addClass('deceased-message');
-     $('#section-header .type').hide();
+     $('#section-header.client-page').addClass('deceased-message');
+     $('#section-header.client-page .type').hide();
      $('#section-header.client-page.deceased-message h1 .normal-status').hide();
      // $('#section-header.client-page.deceased-message h1 .normal-status').css('display', 'none !important');
      $('#section-header.client-page h1 .deceased').show();
@@ -55,8 +55,8 @@ if ($.cookie('client-death') == 'true' && $.cookie('client-death-proof') == 'No'
      $('.info-cant-change').addClass('read-only');
      $('.info-cant-change input').attr('disabled', 'disabled');
 } else if ($.cookie('client-death') == 'true' && $.cookie('client-death-proof') == 'Yes') {
-     $('#section-header').addClass('deceased-message');
-     $('#section-header .type').hide();
+     $('#section-header.client-page').addClass('deceased-message');
+     $('#section-header.client-page .type').hide();
      $('#section-header.client-page.deceased-message h1 .normal-status').hide();
      $('#section-header.client-page h1 .deceased').show();
      $('#section-header.client-page h1 .deceased').text('Client is deceased');
@@ -71,6 +71,14 @@ if ($.cookie('client-death') == 'true' && $.cookie('client-death-proof') == 'No'
 
      $('.actions-nav .client-death-button, .actions-nav .client-death-seperator').hide();
      $('#section-header.client-page .client-death-button').hide();
+
+     // Changes the invoice
+     $('#finance-details ul.invoice-list li[data-invoice="1"] .cta-row figure').addClass('client-death');
+     $('#invoice-warning-message').slideDown();
+
+     $('#write-off-amount').val('160.00');
+     $('ul.invoice-list li[data-invoice="1"] .chart-text.amount strong').text('£0');
+
 }
 
 // Populates the fields

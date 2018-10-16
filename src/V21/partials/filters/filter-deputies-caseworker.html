@@ -1,7 +1,7 @@
 <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel client-controller caseworker-search">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-clients">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-clients scroller">
 		<form class="search-filters deputy-filter" action="search.html">
 
 			<div class="filter-buttons">
@@ -20,6 +20,26 @@
 			</div>
 
 		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="five-column">
+								<th style="width: 40%;"><span></span>Name</th>
+								<th style="width: 18%;">Clients</th>
+								<th style="width: 17%;"><span></span>Deputy type</th>
+								<th style="width: 18%;"><span></span>Supervision level</th>
+								<th style="width: 7%;">Tasks</th>
+								<!-- <th><span></span>Assigned to</th> -->
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /////////////// FILTER PANEL - END /////////////// -->

@@ -89,6 +89,9 @@ main {
           //      }
           // }
      }
+     &.dashboard-template {
+          position: relative;
+     }
      &.new-client {
           // width: 77%;
           position: relative;
@@ -301,11 +304,12 @@ h1, h2, h3, h4 {
           &.doc-title {
                border-bottom: none;
                margin: 0 0 0 0;
+               padding-bottom: 0.35em;
                .current-doc-info {
                     text-transform: none;
                     font-size: 1rem;
                     margin: 1em 0 0 0;
-                    padding-bottom: 0.25em;
+                    padding-bottom: 0;
                     display: inline-block;
                     width: 100%;
                     font-family: $Opensans-Regular;
@@ -373,6 +377,9 @@ p {
           &.action-task-name {
                color: $blue;
           }
+     }
+     dfn {
+          font-style: normal;
      }
      .letter {
           @include flexbox;
@@ -642,6 +649,7 @@ a {
      line-height: 1.4;
      color: $blue;
      border-bottom: 1px dashed;
+     word-break: break-all;
      &:hover, &:active, &:focus {
           text-decoration: none;
           border-bottom: 1px solid;
@@ -651,7 +659,7 @@ a {
           color: $black;
      }
      &.edit, &.bond-dispense, &.add, &.delete, &.create-letter-button, &.cancel, &.back, &.back-button, &.document,
-     &.view, &.close, &.demote {
+     &.view, &.close, &.demote, &.add-amount, &.remove-amount {
           float: left;
           font-size: 1rem;
           text-transform: inherit;
@@ -671,6 +679,14 @@ a {
      }
      &.add {
           background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 50%;
+          background-size: 1em;
+     }
+     &.add-amount {
+          background: url(#{$image-path}/icons/add-white.svg) no-repeat 0% 40%;
+          background-size: 1em;
+     }
+     &.remove-amount {
+          background: url(#{$image-path}/icons/remove-white.svg) no-repeat 0% 40%;
           background-size: 1em;
      }
      &.view {
@@ -706,7 +722,7 @@ a {
           background-size: 0.65em;
      }
      &.full-details, &.view-full-details, &.full-report-details,
-     &.view-notes, &.full-task-notes, &.report-content-link {
+     &.view-notes, &.full-task-notes, &.report-content-link, &.invoice-content-link {
           font-family: $Montserrat;
           margin: 0.5em 0 0 0;
           padding: 0 0 0 1.5em;
@@ -719,7 +735,7 @@ a {
                float: left;
           }
      }
-     &.report-content-link {
+     &.report-content-link, &.invoice-content-link {
           margin: 0.5em 1em 0 0;
           float: left;
      }
@@ -920,6 +936,11 @@ a {
                width: 51%;
           }
      }
+     &.one-column {
+          .person-detail-item, .info-section {
+               width: 100%;
+          }
+     }
      &.two-column {
           .person-detail-item, .info-section {
                width: 50%;
@@ -960,6 +981,18 @@ a {
      }
 }
 
+.full-width {
+     display: inline-block !important;
+     width: 100% !important;
+     border-top: 3px dotted $blue-grey;
+     padding-top: 1em;
+     margin-top: 1em;
+     p {
+          width: 100% !important;
+          margin-bottom: 0.5em !important;
+     }
+}
+
 #client-details-summary.item {
      #flexbox-container {
           // max-height: 18em;
@@ -982,7 +1015,7 @@ a {
           //           display: none;
           //      }
           // }
-          &.two-column {
+          &.one-column, &.two-column {
                .person-detail-item, .info-section {
                     display: inline-block;
                     margin: 0 0 0.75em 0;
@@ -1002,10 +1035,22 @@ a {
 
                     }
                     ul.answer {
-                         margin-left: 0.2em;
+                         margin-left: 5%;
                     }
                }
           }
+          &.one-column {
+               .person-detail-item, .info-section {
+                    .item, .answer{
+                         width: 47.5%;
+                         margin: 0 5% 0.25em 0;
+                    }
+                    .answer{
+                         margin: 0 0 0.25em 0;
+                    }
+               }
+          }
+
      }
 }
 
@@ -1179,6 +1224,7 @@ hr {
      position: fixed;
      bottom: 1em;
      right: 1em;
+     z-index: 1000;
      a {
           display: inline-block;
           width: 3em;
@@ -1187,7 +1233,6 @@ hr {
           border-radius: 50%;
           text-indent: -1000em;
           border-bottom: none;
-          z-index: 1000;
           box-shadow: 0 0 10px 0 rgba($black,0.4);
           &:hover, &:active, &:focus {
                @include standard-transition;
@@ -1202,9 +1247,53 @@ hr {
                background: url(#{$image-path}/icons/edit-white.svg) no-repeat 50% 50% $pink;
                background-size: 1.5em;
           }
+          &#remove-actions {
+               background: url(#{$image-path}/icons/table-hide.svg) no-repeat 60% 50% $pink;
+               background-size: 1.25em;
+          }
      }
 }
 // =================== DEV BUTTONS - END =================== //
+
+// =================== 404 ERROR PAGE - START =================== //
+main.error-page {
+     #section-header {
+          padding-bottom: 0.75em;
+          position: relative;
+          h1 {
+               font-size: 5rem;
+          }
+     }
+     .content-wrapper {
+          padding: 2em 0 0 0;
+          position: relative;
+          h2 {
+               margin: 0 0 1em 0;
+          }
+     }
+     .error-label {
+          position: absolute;
+          display: inline-block;
+          z-index: 2;
+          &.label-one {
+               right: 15em;
+               top: 5em;
+               width: 8em;
+               height: 8em;
+               background: url(#{$image-path}/error-label-1.svg) no-repeat 50% 50%;
+               background-size: contain;
+          }
+          &.label-two {
+               left: 9em;
+               top: 16em;
+               width: 9em;
+               height: 9em;
+               background: url(#{$image-path}/error-label-2.svg) no-repeat 50% 50%;
+               background-size: contain;
+          }
+     }
+}
+// =================== 404 ERROR PAGE - END =================== //
 
 .toggle-switch {
      strong {
@@ -1264,7 +1353,8 @@ hr {
      }
 }
 
-.status, .order-status-indicator, .report-type span, .report-type strong, .staff-review span, .staff-review strong {
+.status, .order-status-indicator, .report-type span, .report-type strong, .staff-review span,
+.staff-review strong, .invoice-number span, .invoice-number strong {
      width: auto;
      margin: 0 0 1em 0;
      float: left;

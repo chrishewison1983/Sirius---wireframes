@@ -132,7 +132,7 @@
                }
                .page-2.document-viewing-panel {
                     height: 65vh;
-                    padding-top: 5em;
+                    padding-top: 4.35em;
                     .wrapper {
                          height: 56vh;
                          overflow-y: scroll;
@@ -218,6 +218,23 @@
                     td {
                          div.details {
                               display: none !important;
+                         }
+                    }
+               }
+          }
+     }
+     #documents-viewer-simplified, #documents-viewer-filter {
+          .doc-container {
+               #documents-listing, .livelink-documents {
+                    thead tr th, tbody tr td {
+                         &:nth-of-type(1n) {
+                              width: 70%;
+                         }
+                         &:nth-of-type(2n) {
+                              width: 30%;
+                         }
+                         &:nth-of-type(3n) {
+                              display: none;
                          }
                     }
                }
@@ -381,6 +398,9 @@ main {
                               word-break: break-all;
                               word-wrap: break-word;
                          }
+                         .replace {
+                              display: none;
+                         }
                          .compare {
                               display: none;
                          }
@@ -482,9 +502,14 @@ main {
                               background: url(#{$image-path}/icons/arrow-left-blue.svg) no-repeat 0% 50%;
                               background-size: 0.5em;
                          }
-                         &.compare {
+                         &.replace {
                               padding-left: 1.35em;
                               background: url(#{$image-path}/icons/compare-blue.png) no-repeat 0% 50%;
+                              background-size: 1em;
+                         }
+                         &.compare {
+                              padding-left: 1.35em;
+                              background: url(#{$image-path}/icons/compare-new-blue.svg) no-repeat 0% 50%;
                               background-size: 1em;
                          }
                          &.close {
@@ -545,7 +570,7 @@ main {
                top: 50%;
                left: -1.5em;
                margin: -1.5em 0 0 -1.5em;
-               background: url(#{$image-path}/icons/compare-white.png) no-repeat 50% 50% $blue;
+               background: url(#{$image-path}/icons/compare-new-white.svg) no-repeat 50% 50% $blue;
                background-size: 1.75em;
                box-shadow: 0 0 10px 0 rgba($black,0.2);
           }
@@ -567,7 +592,8 @@ main {
           a {
                font-size: inherit;
                border: none;
-               padding: 0.25em 0 0.25em 1.5em;
+               padding: 0.25em 0 0 1.5em;
+               // padding: 0.25em 0 0.25em 1.5em;
                width: auto;
                border-bottom: 1px dashed $blue;
                background: url(#{$image-path}/icons/pdf-blue.svg) no-repeat 0% 50% $white;
@@ -581,7 +607,7 @@ main {
                     border-bottom: 1px solid $blue;
                }
                &.mov-file {
-                    background: url(#{$image-path}/icons/mov-file-blue.svg) no-repeat 0% 50% $white;
+                    background: url(#{$image-path}/icons/mov-file-blue.svg) no-repeat 0% 70% $white;
                     background-size: 1.15em;
                     .download {
                          display: inline-block;
@@ -637,7 +663,18 @@ main {
                          padding-bottom: 1em;
                          font-size: 0.825rem;
                          a {
-                              font-size: 0.875rem;
+                              font-size: 1rem;
+                              float: none;
+                              &.sirius-user-id {
+                                   background: none;
+                                   padding: 0;
+                              }
+                         }
+                         .doc-info {
+                              a {
+                                   background: none;
+                                   padding: 0;
+                              }
                          }
                          &:first-of-type {
                               padding-left: 0;
@@ -696,25 +733,36 @@ main {
           tbody {
                tr {
                     border-bottom: 2px dashed $blue-grey;
+                    .created-by {
+                         clear: both;
+                         a {
+                              font-size: 0.875rem;
+                         }
+                    }
                     a {
                          display: inline-block;
-                         float: left;
-                         clear: both;
+                         // float: left;
+                         // clear: both;
                          font-size: 1rem;
                          // width: 100%;
                     }
                     .doc-info {
                          display: inline-block;
                          width: 100%;
-                         margin: 0.5em 0 0 0;
+                         margin: 0.4em 0 0 0;
                          p {
                               float: left;
-                              margin: 0 2em 0 0;
+                              margin: 0 1.25em 0 0;
+                              font-size: 0.875rem;
                               // color: darken($blue-grey,20%);
                               strong {
-                                   margin: 0 0 0 0.5em;
+                                   margin: 0 0 0 0.25em;
+                                   // margin: 0 0 0 0.5em;
                                    color: $main-colour;
                                    font-family: $Montserrat;
+                              }
+                              a {
+                                   margin: 0 0 0 0.25em;
                               }
                          }
                     }
@@ -723,7 +771,48 @@ main {
      }
 }
 
-#documents-viewer-simplified {
+#documents-viewer-simplified, #documents-viewer-filter {
+     .doc-container {
+          &.compare {
+               #documents-listing, .livelink-documents {
+                    thead {
+                         tr {
+                              th {
+                                   &:nth-of-type(1n) {
+                                        width: 70%;
+                                   }
+                                   &:nth-of-type(2n) {
+                                        width: 30%;
+                                   }
+                                   &:nth-of-type(3n) {
+                                        display: none;
+                                   }
+                              }
+                         }
+                    }
+                    tbody {
+                         tr {
+                              td {
+                                   &:nth-of-type(3n) {
+                                        display: none;
+                                   }
+                                   .date-indicator {
+                                        span.icon {
+                                             display: none;
+                                             width: 100%;
+                                             background-position: 0 50%;
+                                             margin: 0 0 0.25em 0;
+                                        }
+                                        span.type {
+                                             margin: 0;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
      #documents-listing, .livelink-documents {
           tbody {
                tr {

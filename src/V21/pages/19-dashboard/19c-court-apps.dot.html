@@ -63,16 +63,20 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="completed-tasks-pagination pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->
@@ -123,4 +127,13 @@ function myFunction() {
 }
 </script>
 
+<script type="text/javascript">
+
+     if($(window).width() > 481) {
+          $(function() {
+               moveScroller();
+          });
+     }
+
+</script>
 <!-- SCRIPT CONTENT - END -->

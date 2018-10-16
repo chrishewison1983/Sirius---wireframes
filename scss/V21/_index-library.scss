@@ -112,6 +112,71 @@ h1 {
      }
 }
 
+// =================== COLOURS - START =================== //
+.colour {
+     &.white span {
+          background: $white;
+     }
+     &.white-off span {
+          background: $white-off;
+     }
+     &.black span {
+          background: $black;
+     }
+     &.red span {
+          background: $red;
+     }
+     &.amber span {
+          background: $amber;
+     }
+     &.pink span {
+          background: $pink;
+     }
+     &.yellow span {
+          background: $yellow;
+     }
+     &.purple span {
+          background: $purple;
+     }
+     &.violet span {
+          background: $violet;
+     }
+     &.blue span {
+          background: $blue;
+     }
+     &.blue-grey span {
+          background: $blue-grey;
+     }
+     &.highlight-green span {
+          background: $highlight-green;
+     }
+     &.green span {
+          background: $green;
+     }
+     &.main-colour span {
+          background: $main-colour;
+     }
+     &.text-main-colour span {
+          background: $text-main-colour;
+     }
+     &.border-colour span {
+          background: $border-colour;
+     }
+     span {
+          display: inline-block;
+          width: 100%;
+          height: 8em;
+          margin: 0 0 1em;
+          float: left;
+     }
+     p {
+          strong {
+               color: $black;
+          }
+     }
+}
+// =================== COLOURS - END =================== //
+
 // ONLY FOR LARGE DESKTOP (1281 up)
 @media #{$xlarge-up} {
 

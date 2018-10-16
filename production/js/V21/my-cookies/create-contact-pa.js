@@ -6,9 +6,9 @@ $('.add-pa-contact').click(function(){
 
 if ($.cookie("add-pa-contact-journey") == 'true') {
      $('#section-header.deputy-page.content-page nav.breadcrumb').html(`
-          <a href="../index.html" class="user-type-link">Dashboard</a>
+          <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
           <div class="separator"> > </div>
-          <a href="../14-deputy-hub/14c-deputy-page.html">Weston Parpenham</a>
+          <a href="../14-deputy-hub/14c-deputy-hub.html">Weston Parpenham</a>
           <div class="separator"> > </div>
           <span>Create an office</span>
      `);
@@ -18,7 +18,7 @@ if ($.cookie("add-pa-contact-journey") == 'true') {
      `);
 
      watchFormChanges($('.add-deputy-contact-form'), $('#create-deputy-contact'));
-     $('#create-deputy-contact').attr('href', '../14-deputy-hub/14c-deputy-page.html');
+     $('#create-deputy-contact').attr('href', '../14-deputy-hub/14c-deputy-hub.html');
 }
 
 // Save the contact details - PA
@@ -35,6 +35,7 @@ $("#create-deputy-contact").on("click", function (e) {
      $.cookie("deputy-contact-last-name", $("#deputy-contact-last-name").val(), {path:'/'});
      $.cookie("deputy-contact-team-name", $("#deputy-contact-team-name").val(), {path:'/'});
      $.cookie("deputy-contact-phone-number", $("#deputy-contact-phone-number").val(), {path:'/'});
+     $.cookie("deputy-contact-ext-number", $("#deputy-contact-ext-number").val(), {path:'/'});
      $.cookie("deputy-contact-mob-number", $("#deputy-contact-mob-number").val(), {path:'/'});
      $.cookie("deputy-contact-email", $("#deputy-contact-email").val(), {path:'/'});
 
@@ -63,7 +64,14 @@ if ($.cookie("create-contact-pa") == 'true' && $.cookie("add-pa-contact-journey"
      $('.deputy-details-page.public .tab-content#tab-3').addClass('current');
 
      var contactNumber = parseInt($('ul.deputy-tabs li[data-tab="tab-3"] span').text());
-     $('ul.deputy-tabs li[data-tab="tab-3"] span').text(contactNumber + 1);
+     $('.public ul.deputy-tabs li[data-tab="tab-3"] span').text(contactNumber + 1);
+
+     // Changes the confirmation text
+     $('#pa-contact-added-confirm').show();
+
+     setTimeout(function() {
+          $('#pa-contact-added-confirm').slideUp();
+     }, 5000);
 
      // Add the contact to the Deputy
      $('#contact-list-deputy-pa tbody').prepend(`
@@ -91,10 +99,12 @@ if ($.cookie("create-contact-pa") == 'true' && $.cookie("add-pa-contact-journey"
                     <a href="#" class="full-details" data-value="0">View full details</a>
                </td>
                <td>
-                    <a href="#" class="deputy-contact-email-answer">N/A</a>
+                    <div class="email">
+                         <a href="#" class="deputy-contact-email-answer">N/A</a>
+                    </div>
                </td>
                <td>
-                    <a href="#" class="main-cta tertiary edit">Edit</a>
+                    <a href="../21-deputy-contacts/21a-add-contact.html" class="main-cta tertiary edit">Edit</a>
                     <a href="#delete-contact" rel="modal:open" class="main-cta tertiary delete delete-contact">Delete</a>
                </td>
           </tr>
@@ -156,17 +166,20 @@ if ($.cookie("deputy-contact-team") == 'No') {
      $('#contact-list-deputy-pa tbody tr[data-value="0"] .name').find('.company').hide();
      $('#contact-list-deputy-pa tbody tr[data-value="0"] .name .contact-name-value').find('.deputy-contact-team-name-answer').hide();
      $('#contact-list-deputy-pa tbody tr[data-value="0"] .address').find('.deputy-contact-title-answer, .deputy-contact-first-name-answer, .deputy-contact-last-name-answer').hide();
-}  else if ($.cookie("deputy-contact-team") == 'Yes') {
+     $('#pa-contact-added-confirm .contact-title').text($.cookie("deputy-contact-title") + ' ' + $.cookie("deputy-contact-first-name") + ' ' + $.cookie("deputy-contact-last-name"));
+} else if ($.cookie("deputy-contact-team") == 'Yes') {
      $('#contact-list-deputy-pa tbody tr[data-value="0"] .name').find('.deputy').hide();
      $('#contact-list-deputy-pa tbody tr[data-value="0"] .name .contact-name-value').find('.deputy-contact-title-answer, .deputy-contact-first-name-answer, .deputy-contact-last-name-answer').hide();
      $('#contact-list-deputy-pa tbody tr[data-value="0"] .address').find('.deputy-contact-team-name-answer').hide();
+     $('#pa-contact-added-confirm .contact-title').text($.cookie("deputy-contact-team-name"));
 }
 if ($.cookie("deputy-contact-title")) { $(".deputy-contact-title-answer").text($.cookie("deputy-contact-title")); }
 if ($.cookie("deputy-contact-title-other")) { $(".deputy-contact-title-other-answer").text($.cookie("deputy-contact-title-other")); }
 if ($.cookie("deputy-contact-first-name")) { $(".deputy-contact-first-name-answer").text($.cookie("deputy-contact-first-name")); }
 if ($.cookie("deputy-contact-last-name")) { $(".deputy-contact-last-name-answer").text($.cookie("deputy-contact-last-name")); }
 if ($.cookie("deputy-contact-team-name")) { $(".deputy-contact-team-name-answer").text($.cookie("deputy-contact-team-name")); }
-if ($.cookie("deputy-contact-phone-number")) { $(".deputy-contact-phone-number-answer").text($.cookie("deputy-contact-phone-number")); }
+if ($.cookie("deputy-contact-phone-number")) { $(".deputy-contact-phone-number-answer").html($.cookie("deputy-contact-phone-number") + '<span class="deputy-contact-ext-number-answer"></span>'); }
+if ($.cookie("deputy-contact-ext-number")) { $(".deputy-contact-ext-number-answer").html(' - Ex: ' + $.cookie("deputy-contact-ext-number")); }
 if ($.cookie("deputy-contact-mob-number")) { $(".deputy-contact-mob-number-answer").text($.cookie("deputy-contact-mob-number")); }
 if ($.cookie("deputy-contact-email")) {
      $(".deputy-contact-email-answer").text($.cookie("deputy-contact-email"));
@@ -230,7 +243,7 @@ if ($.cookie("deputy-contact-notes")) { $(".deputy-contact-notes-answer").text($
 $('#create-deputy-contact').click(function(){
      if (!$(this).hasClass('de-activate')) {
           if ($.cookie("create-contact-pa") == 'true') {
-               window.location.href = '../14-deputy-hub/14c-deputy-page.html';
+               window.location.href = '../14-deputy-hub/14c-deputy-hub.html';
                setTimeout(function() {
                     $.cookie("create-contact-pa", false, {path:'/'});
                }, 5000);

@@ -13,14 +13,14 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
-                         <a href="../14-deputy-hub/14c-deputy-page.html">Weston Parpenham</a>
+                         <a href="../14-deputy-hub/14c-deputy-hub.html">Weston Parpenham</a>
                          <div class="separator"> > </div>
-                         <span>Create an office</span>
+                         <span>Create a named contact</span>
                     </nav>
                     <h1>
-                         Create a new office for <div class="deputy-office-name"></div>
+                         Create a new named contact for <div class="deputy-office-name"></div>
                     </h1>
                </div>
           </div>
@@ -59,7 +59,7 @@
                               </li>
                               <li class="tab-link current" data-tab="tab-5">
                                    <span class="client-contacts"></span>
-                                   <p>Offices</p>
+                                   <p>Named contacts</p>
                               </li>
                               <li class="tab-link" data-tab="tab-6">
                                    <span class="documents"></span>
@@ -115,7 +115,7 @@
 
                               <!-- <h2 class="section-title">Case documents</h2> -->
 
-                              {{= it.include('side-panel/document-viewer.html') }}
+                              {{= it.include('side-panel/document-viewer-filter.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 6 - END =========== -->
@@ -131,7 +131,7 @@
 
                     <form class="add-deputy-contact-form">
 
-                         <h2 class="section-title">Create a new office</h2>
+                         <h2 class="section-title">Create a new named contact</h2>
 
                          <!-- // FORM ITEM - 1 - START // -->
                          <div class="form-group">
@@ -195,12 +195,19 @@
                          </div>
                          <!-- // FORM ITEM - 5 - END // -->
 
-                         <!-- // FORM ITEM - 6 - START // -->
+                         <!-- // FORM ITEM - 6A - START // -->
                          <div class="form-group">
                               <label for="deputy-contact-phone-number">Daytime telephone number</label>
                               <input id="deputy-contact-phone-number" name="deputy-contact-phone-number" type="text" class="half">
                          </div>
-                         <!-- // FORM ITEM - 6 - END // -->
+                         <!-- // FORM ITEM - 6A - END // -->
+
+                         <!-- // FORM ITEM - 6B - START // -->
+                         <div class="form-group">
+                              <label for="deputy-contact-ext-number">Extension number</label>
+                              <input id="deputy-contact-ext-number" name="deputy-contact-ext-number" type="text" class="one-third">
+                         </div>
+                         <!-- // FORM ITEM - 6B - END // -->
 
                          <!-- // FORM ITEM - 7 - START // -->
                          <div class="form-group">
@@ -286,7 +293,7 @@
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="create-deputy-contact">Create contact</a>
+     <a class="main-cta primary" id="create-deputy-contact">Create named deputy</a>
      <span class="separator"></span>
      <a href="#" onclick="history.back();" class="cancel">Cancel</a>
 </footer>

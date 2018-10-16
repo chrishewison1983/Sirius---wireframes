@@ -28,6 +28,10 @@ $(".edit-deputy-4-journey").on("click", function (e) {
      $.cookie("edit-deputy-4-journey", true, {path:'/'});
 });
 
+// if ($.cookie("edit-deputy-1-journey") == 'false' && $.cookie("edit-deputy-2-journey") == 'false' && $.cookie("edit-deputy-3-journey") == 'false' && $.cookie("edit-deputy-4-journey") == 'false') {
+//      $('#deputy-updated-complete, #pre-loader').hide();
+// }
+
 if ($.cookie("edit-deputy-1-journey") == 'true' || $.cookie("edit-deputy-2-journey") == 'true') {
      $('#edit-deputy').attr('href', '../4-client-hub/4a-new-client.html#HandW');
      $('#reset-deputy').attr('href', '../4-client-hub/4a-new-client.html#HandW');
@@ -157,6 +161,8 @@ else if ($.cookie("deputy-status") == 'Discharged' && $.cookie("edit-deputy-1-jo
      $('#summary-tab-1, #summary-tab-2, #summary-tab-3, #summary-tab-4, #summary-tab-5, #summary-tab-6').removeClass('current');
 }
 
+$('#deputy-updated-complete, #pre-loader').hide();
+
 if ($.cookie("edit-deputy-1-journey") == 'true') {
      $('#unlink-complete h1 div').text('Mrs Lara Stevens');
      $('#deputy-updated-complete h1 div').text('Mrs Lara Stevens');
@@ -199,10 +205,12 @@ if ($.cookie("edit-deputy-4-journey") == 'true') {
 
 if (window.location.href.indexOf("4a-new-client.html") != -1) {
      // Clears cookie values
-     $.cookie("edit-deputy-1-journey", false, {path:'/'});
-     $.cookie("edit-deputy-2-journey", false, {path:'/'});
-     $.cookie("edit-deputy-3-journey", false, {path:'/'});
-     $.cookie("edit-deputy-4-journey", false, {path:'/'});
+     setTimeout(function() {
+          $.cookie("edit-deputy-1-journey", false, {path:'/'});
+          $.cookie("edit-deputy-2-journey", false, {path:'/'});
+          $.cookie("edit-deputy-3-journey", false, {path:'/'});
+          $.cookie("edit-deputy-4-journey", false, {path:'/'});
+     }, 5000);
 }
 
 // else {
@@ -295,6 +303,31 @@ $(".revert-form-item-status").on("click", function (e) {
 // });
 
 // Creates the Pro deputy
+$(".edit-deputy-2-journey").on("click", function (e) {
+     $.cookie("pro-journey-office", true, {path:'/'});
+});
+
+$(".click, .cancel").on("click", function (e) {
+     $.cookie("pro-journey-office", false, {path:'/'});
+});
+
+
+if ($.cookie("pro-journey-office") === 'true') {
+     $("#pre-loader").show();
+     $('#deputy-updated-complete').hide();
+
+     setTimeout(function() {
+          $("#pre-loader").hide();
+          $('#deputy-updated-complete').show();
+     }, 3000);
+
+     setTimeout(function() {
+          $('#deputy-updated-complete').slideUp();
+          $.cookie("pro-journey-office", false, {path:'/'});
+     }, 5000);
+
+}
+
 $("#edit-deputy").on("click", function (e) {
      $.cookie("deputy-type-order", $("#deputy-type-order").val(), {path:'/'});
      $.cookie("deputy-relationship", $("#deputy-relationship").val(), {path:'/'});
@@ -313,6 +346,8 @@ $("#edit-deputy").on("click", function (e) {
      // $.cookie("deputy-professional-contact-details", $("#deputy-professional-contact-details").val(), {path:'/'});
 
 });
+
+if ($.cookie("deputy-professional-contact")) { $('#deputy-professional-contact').val($.cookie("deputy-professional-contact")); }
 
 if ($.cookie("deputy-professional-contact") === 'Head office - London') {
      $('#deputies-table tr[data-value="2"] .address').html('<strong>Head office - London</strong>, 84 Crown Street, London, SW19 5GQ.');

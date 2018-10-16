@@ -121,7 +121,7 @@ $('.filter-category').change(function(){
      $('#dashboard-clients-table tr').removeClass('selected-item');
      $('#dashboard-clients-table tr .client-title').removeClass('checked');
 
-     $('.client-filter').find('.filter-numbers').hide();
+     // $('.client-filter').find('.filter-numbers').hide();
 
      $(this).parent().parent().addClass('filter-active');
 
@@ -195,9 +195,39 @@ $('#select-all-clients').change(function(){
      $('.filter-panel.client-controller .cancel-re-assign').show();
      $('.filter-panel.client-controller .clear-filter').hide();
 
+     // var sectionsClient = $('.summary-row');
+     // function updateClientVisibility(){
+     //      var checked = $("#select-all-clients:checked");
+     //      if (checked.length === 0)
+     //           checked = $("#select-all-clients");
+     //
+     //      // var checked = $("#filter-panel-documents :checkbox:checked");
+     //      if(checked.length){
+     //           sectionsDoc.hide();
+     //           var selector = checked.toArray().map(item => '.' + $(item).val()).join(',');
+     //           var typeSelector = '';
+     //           var typeEl = $("#select-all-clients");
+     //           typeSelector =
+     //                typeEl.filter(':not(:checked)').length === typeEl.length ? '*'
+     //                : ':not(' + typeEl.filter(':not(:checked)').toArray().map(
+     //                     item => '.' + $(item).val()
+     //                ).join(',') + ')';
+     //
+     //           $(selector).filter(typeSelector).show();
+     //
+     //      } else {
+     //           sectionsDoc.show();
+     //      }
+     //      $('.filter-panel.client-controller .filter-numbers span.number').text($('#dashboard-clients-table tbody tr:visible').length);
+     //
+     // }
+     //
+     // $("#select-all-clients").click(updateClientVisibility);
+     // updateClientVisibility();
+
      // 1 - My clients
      if($(this).is(":checked") && $('.filter-category').val() == 'My clients') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
           $('.client-filter').find('.filter-numbers .number').text('2');
           $('.clients-name').append(`
                <li>Mr Gerald Brackens</li>
@@ -207,8 +237,8 @@ $('#select-all-clients').change(function(){
 
      // 2 - My teams clients
      if($(this).is(":checked") && $('.filter-category').val() == 'My teams clients') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
-          $('.client-filter').find('.filter-numbers .number').text('1');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          $('.client-filter').find('.filter-numbers .number').text('1').removeClass('three-figures');
           $('.client-filter').find('.filter-numbers .desc').text('client');
           $('.clients-name').append(`
                <li>Miss Marguerite Owens</li>
@@ -217,8 +247,8 @@ $('#select-all-clients').change(function(){
 
      // 3 - Deputy type
      if($(this).is(":checked") && $('.filter-category').val() == 'Deputy type' && $('.select-deputy-type').val() == 'Lay') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
-          $('.client-filter').find('.filter-numbers .number').text('4');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          $('.client-filter').find('.filter-numbers .number').text('4').removeClass('three-figures');
           $('.clients-name').append(`
                <li>Mr Gerald Brackens</li>
                <li>Miss Marguerite Owens</li>
@@ -226,15 +256,15 @@ $('#select-all-clients').change(function(){
                <li>Ms Erika Neal</li>
           `);
      } else if($(this).is(":checked") && $('.filter-category').val() == 'Deputy type' && $('.select-deputy-type').val() == 'Professional') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
-          $('.client-filter').find('.filter-numbers .number').text('2');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          $('.client-filter').find('.filter-numbers .number').text('2').removeClass('three-figures');
           $('.clients-name').append(`
                <li>Dr Marcus Roy</li>
                <li>Mr Oscar Chaplin</li>
           `);
      } else if($(this).is(":checked") && $('.filter-category').val() == 'Deputy type' && $('.select-deputy-type').val() == 'Public authority') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
-          $('.client-filter').find('.filter-numbers .number').text('1');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          $('.client-filter').find('.filter-numbers .number').text('1').removeClass('three-figures');
           $('.client-filter').find('.filter-numbers .desc').text('client');
           $('.clients-name').append(`
                <li>Mr Harvey Stevenson</li>
@@ -243,8 +273,8 @@ $('#select-all-clients').change(function(){
 
      // 4 - PFA orders
      if($(this).is(":checked") && $('.filter-category').val() == 'PFA orders') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
-          $('.client-filter').find('.filter-numbers .number').text('6');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          $('.client-filter').find('.filter-numbers .number').text('6').removeClass('three-figures');
           $('.clients-name').append(`
                <li>Mr Gerald Brackens</li>
                <li>Mr Harvey Stevenson</li>
@@ -257,8 +287,8 @@ $('#select-all-clients').change(function(){
 
      // 5 - HW orders
      if ($(this).is(":checked") && $('.filter-category').val() == 'HandW orders') {
-          $('.client-filter').find('.filter-numbers').css('display', 'flex');
-          $('.client-filter').find('.filter-numbers .number').text('1');
+          // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+          $('.client-filter').find('.filter-numbers .number').text('1').removeClass('three-figures');
           $('.client-filter').find('.filter-numbers .desc').text('client');
           $('.clients-name').append(`
                <li>Mr Oscar Chaplin</li>
@@ -276,7 +306,7 @@ $('#select-all-clients').change(function(){
 
           $('.client-filter').find('.step-2').show();
           $('.client-filter').find('.main-filter').addClass('re-assign-active');
-          $('.client-filter').find('.step-1').addClass('step-1-filter-active');
+          // $('.client-filter').find('.step-1').addClass('step-1-filter-active');
           $('.client-filter').find('.re-assign-title.title-label').removeClass('hide');
 
           $('.client-filter').find('.main-filter, .step-1').addClass('de-activated');
@@ -288,11 +318,11 @@ $('#select-all-clients').change(function(){
 
           $('.client-filter').find('.step-2').hide();
           $('.client-filter').find('.step-1, .main-filter').removeClass('de-activated');
-          $('.client-filter').find('.step-1').removeClass('step-1-filter-active');
+          // $('.client-filter').find('.step-1').removeClass('step-1-filter-active');
           $('.client-filter').find('.main-filter input, .main-filter select, .step-1 input, .step-1 select').removeAttr('disabled');
           $('.client-filter').find('.filter-select-all-clear .cancel-re-assign').hide();
           $('.client-filter').find('.filter-select-all-clear .clear-filter').show();
-          $('.client-filter').find('.filter-numbers').css('display', 'none');
+          // $('.client-filter').find('.filter-numbers').css('display', 'none');
 
           $('#dashboard-clients-table tbody tr').removeClass('selected-item change-details');
           $('#dashboard-clients-table tbody tr input[name="re-assign-client"]').parent().removeClass('checked');
@@ -465,12 +495,14 @@ $(document).ready(function () {
                $('.re-assign-my-clients').attr('href', '#re-assign-clients');
                $('.re-assign-my-clients').attr('rel', 'modal:open');
 
-               $('.client-filter').find('.filter-numbers').css('display', 'flex');
+               // $('.client-filter').find('.filter-numbers').css('display', 'flex');
+
+               $('.client-filter').find('.filter-numbers').addClass('selected');
 
                $('.filter-panel.client-controller .cancel-re-assign').show();
                $('.filter-panel.client-controller .clear-filter').hide();
 
-               if ($('.filter-category').val() === '') {
+               if ($('.filter-category').val() === 'My clients') {
                     $('.re-assign-panel.client-controller').show();
                     $('.filter-panel.client-controller').hide();
 
@@ -498,6 +530,7 @@ $(document).ready(function () {
 
                     $('.re-assign-panel.client-controller').hide();
                     $('.filter-panel.client-controller').show();
+
                     // $('.client-filter .filter-select-all-clear').hide();
                }
 
@@ -509,10 +542,15 @@ $(document).ready(function () {
                $('#select-all-clients').parent().removeClass('checked');
                $('#select-all-clients').removeAttr('checked');
 
-               $('.client-filter').find('.filter-numbers').hide();
+               $('.client-filter').find('.filter-numbers .number').text('302').addClass('three-figures');
+
+               // $('.client-filter').find('.filter-numbers').hide();
 
                if ($('input[name="re-assign-client"][checked]').length === 0) {
-                    $('.client-filter').find('.filter-numbers').hide();
+                    // $('.client-filter').find('.filter-numbers').hide();
+
+                    $('.client-filter').find('.filter-numbers').removeClass('selected');
+                    $('.client-filter').find('.filter-numbers .number').text('302').addClass('three-figures');
 
                     $('.client-filter').find('.main-filter, .step-1').removeClass('de-activated');
                     $('.client-filter').find('.step-1').addClass('step-1-filter-active');
@@ -521,8 +559,15 @@ $(document).ready(function () {
 
                     $('.client-filter').find('.step-2 .re-assign-title.title-label').addClass('hide');
 
-                    $('.client-filter').find('.filter-select-all-clear, .filter-select-all-clear .clear-filter').show();
-                    $('.client-filter').find('.step-2, .filter-select-all-clear .cancel-re-assign').hide();
+                    if ($('.filter-category').val() === 'My clients') {
+                         $('.client-filter').find('.filter-select-all-clear').hide();
+                    } else {
+                         $('.client-filter').find('.filter-select-all-clear, .filter-select-all-clear .clear-filter').show();
+                         $('.client-filter').find('.step-2, .filter-select-all-clear .cancel-re-assign').hide();
+                    }
+
+                    // $('.client-filter').find('.filter-select-all-clear, .filter-select-all-clear .clear-filter').show();
+                    // $('.client-filter').find('.step-2, .filter-select-all-clear .cancel-re-assign').hide();
                     $('.client-filter').find('.main-filter').addClass('re-assign-active');
 
                     $('.re-assign-my-clients').removeAttr('href').addClass('de-activate');
@@ -546,9 +591,11 @@ $(document).ready(function(){
 
      $checkboxes.change(function(){
           var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
-          $('.client-filter').find('.filter-numbers .number').text(countCheckedCheckboxes);
+          $('.client-filter').find('.filter-numbers .number').text(countCheckedCheckboxes).removeClass('three-figures');
 
-          if (countCheckedCheckboxes <= 1) {
+          if (countCheckedCheckboxes == 0) {
+               $('.client-filter').find('.filter-numbers .number').text('302').addClass('three-figures');
+          } else if (countCheckedCheckboxes <= 1) {
                $('.client-filter').find('.filter-numbers .desc').text('client');
           } else {
                $('.client-filter').find('.filter-numbers .desc').text('clients');
@@ -567,11 +614,13 @@ $('#confirm-re-assign-client').click(function(){
 
      // $('#dashboard-clients-table tr.selected-item').hide();
 
-     $('.client-filter .filter-numbers').hide();
+     $('.client-filter .filter-numbers').removeClass('selected');
+     $('.client-filter .filter-numbers .number').text('302').addClass('three-figures');
+     $('.client-filter .filter-numbers .desc').text('clients');
 
      // ========================= Changes to Name to David Harper ========================= //
      // Individual
-     if ($('#filter-category').val() === '') {
+     if ($('#filter-category').val() === 'My clients') {
           $('#dashboard-clients-table tr.selected-item').find('.user-name-change').text('Harper, David');
           $('#dashboard-clients-table tr').removeClass('selected-item');
           $('#dashboard-clients-table tr.change-details').addClass('david-harper');

@@ -1,14 +1,11 @@
 <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div id="filter-panel-documents">
-	<div id="scroller-anchor"></div>
-	<div id="scroller">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" class="scroller">
 		<form class="document-filter">
 			<label for="filter-category" class="float-left title-label">Filter</label>
 			<nav>
 				<ul>
-					<li>
-						<a class="filter-all-documents checked">All</a>
-					</li>
 					<li>
 						<label><input type="checkbox" value="visit" name="document-value">Visits</label>
 					</li>
@@ -19,12 +16,32 @@
 						<label><input type="checkbox" value="correspondence" name="document-value">Correspondence</label>
 					</li>
 					<li>
-						<label><input type="checkbox" value="court" name="document-value">Court documents</label>
+						<label><input type="checkbox" value="court" name="document-value">Court docs</label>
 					</li>
 					<li>
 						<label><input type="checkbox" value="other" name="document-value">Other</label>
 					</li>
+					<li class="seperator"></li>
+					<li>
+						<label><input type="checkbox" value="inbound" name="document-type">Inbound</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="outbound" name="document-type">Outbound</label>
+					</li>
+					<li class="last-filter">
+						<a class="filter-all-documents">Clear filter</a>
+					</li>
 				</ul>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">9</span>
+							<span class="desc">Docs</span>
+						</p>
+					</div>
+				</div>
+
 			</nav>
 		</form>
 	</div>

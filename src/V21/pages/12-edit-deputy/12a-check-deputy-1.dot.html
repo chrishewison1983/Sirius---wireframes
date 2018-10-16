@@ -13,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-hub/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -83,7 +83,7 @@
 
                               <!-- <h2 class="section-title">Case documents</h2> -->
 
-                              {{= it.include('side-panel/document-viewer.html') }}
+                              {{= it.include('side-panel/document-viewer-filter.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 3 - END =========== -->
@@ -137,12 +137,19 @@
                          </div>
                          <!-- // DEPUTY ITEM - 5 - END // -->
 
-                         <!-- // DEPUTY ITEM - 6 - START // -->
+                         <!-- // DEPUTY ITEM - 6A - START // -->
                          <div class="person-detail-item">
                               <p class="item">Daytime telephone number:</p>
                               <p class="answer">07079962666</p>
                          </div>
-                         <!-- // DEPUTY ITEM - 6 - END // -->
+                         <!-- // DEPUTY ITEM - 6A - END // -->
+
+                         <!-- // DEPUTY ITEM - 6B - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Evening telephone number:</p>
+                              <p class="answer">07079962666</p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 6B - END // -->
 
                          <!-- // DEPUTY ITEM - 7 - START // -->
                          <div class="person-detail-item">
@@ -154,7 +161,7 @@
                          <!-- // DEPUTY ITEM - 8 - START // -->
                          <div class="person-detail-item">
                               <p class="item">Email address:</p>
-                              <p class="answer">lara.stevens@jourrapide.com</p>
+                              <p class="answer"><a href="#">lara.stevens@jourrapide.com</a></p>
                          </div>
                          <!-- // DEPUTY ITEM - 8 - END // -->
 
@@ -272,7 +279,10 @@
                <div id="action-panel" class="large-4 large-uncentered columns actions-panel-pro">
 
                     <div class="check-details">
-                         <h2 class="section-title">Deputy details:</h2>
+                         <h2 class="section-title">
+                              Deputy details:
+                              <a href="#" class="edit deputy-link-one">Edit</a>
+                         </h2>
 
                          <!-- // DEPUTY ITEM - 1 - START // -->
                		<div class="person-detail-item">
@@ -346,12 +356,19 @@
                		</div>
                		<!-- // DEPUTY ITEM - 8 - END // -->
 
-               		<!-- // DEPUTY ITEM - 9 - START // -->
+               		<!-- // DEPUTY ITEM - 9A - START // -->
                		<div class="person-detail-item">
                			<p class="item">Daytime telephone number:</p>
                			<p class="answer deputy-phone-number-answer">01239448394</p>
                		</div>
-               		<!-- // DEPUTY ITEM - 9 - END // -->
+               		<!-- // DEPUTY ITEM - 9A - END // -->
+
+                         <!-- // DEPUTY ITEM - 9B - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Evening telephone number:</p>
+                              <p class="answer deputy-evening-number-answer"></p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 9B - END // -->
 
                		<!-- // DEPUTY ITEM - 10 - START // -->
                		<div class="person-detail-item">
@@ -363,13 +380,14 @@
                		<!-- // DEPUTY ITEM - 11 - START // -->
                		<div class="person-detail-item">
                			<p class="item">Email address:</p>
-               			<p class="answer deputy-email-answer">stanley.evans@bobloblaw.lawblog.com</p>
+               			<p class="answer"><a href="#" class="deputy-email-answer">stanley.evans@bobloblaw.lawblog.com</a></p>
                		</div>
                		<!-- // DEPUTY ITEM - 11 - END // -->
 
-                         <a href="#" class="main-cta secondary edit deputy-link-one">Edit deputy details</a>
-
-                         <h2 class="section-title">Additional information:</h2>
+                         <h2 class="section-title">
+                              Additional information:
+                              <a href="#" class="edit deputy-link-two">Edit</a>
+                         </h2>
 
                          <!-- // DEPUTY ITEM - 1 - START // -->
                		<div class="person-detail-item">
@@ -399,15 +417,16 @@
                		</div>
                		<!-- // DEPUTY ITEM - 3 - END // -->
 
-                         <a href="#" class="main-cta secondary edit deputy-link-two">Edit additional info</a>
-
                     </div>
                </div>
 
                <div id="action-panel" class="large-4 large-uncentered columns actions-panel-pub">
 
                     <div class="check-details">
-                         <h2 class="section-title">Deputy details:</h2>
+                         <h2 class="section-title">
+                              Deputy details:
+                              <a href="#" class="edit deputy-link-one">Edit</a>
+                         </h2>
 
                          <!-- // DEPUTY ITEM - 1 - START // -->
                		<div class="person-detail-item">
@@ -468,12 +487,19 @@
                		</div>
                		<!-- // DEPUTY ITEM - 7 - END // -->
 
-               		<!-- // DEPUTY ITEM - 8 - START // -->
+               		<!-- // DEPUTY ITEM - 8A - START // -->
                		<div class="person-detail-item">
                			<p class="item">Daytime telephone number:</p>
                			<p class="answer deputy-phone-number-answer">01268449380</p>
                		</div>
-               		<!-- // DEPUTY ITEM - 8 - END // -->
+               		<!-- // DEPUTY ITEM - 8A - END // -->
+
+                         <!-- // DEPUTY ITEM - 8B - START // -->
+                         <div class="person-detail-item">
+                              <p class="item">Evening telephone number:</p>
+                              <p class="answer deputy-evening-number-answer"></p>
+                         </div>
+                         <!-- // DEPUTY ITEM - 8B - END // -->
 
                		<!-- // DEPUTY ITEM - 9 - START // -->
                		<div class="person-detail-item">
@@ -485,13 +511,14 @@
                		<!-- // DEPUTY ITEM - 10 - START // -->
                		<div class="person-detail-item">
                			<p class="item">Email address:</p>
-               			<p class="answer deputy-email-answer">n.taylor@weston.parpenham.gov.uk</p>
+               			<p class="answer"><a href="#" class="deputy-email-answer">n.taylor@weston.parpenham.gov.uk</a></p>
                		</div>
                		<!-- // DEPUTY ITEM - 10 - END // -->
 
-                         <a href="#" class="main-cta secondary edit deputy-link-one">Edit deputy details</a>
-
-                         <h2 class="section-title">Additional information:</h2>
+                         <h2 class="section-title">
+                              Additional information:
+                              <a href="#" class="edit deputy-link-two">Edit</a>
+                         </h2>
 
                          <!-- // DEPUTY ITEM - 1 - START // -->
                		<div class="person-detail-item">
@@ -513,8 +540,6 @@
                			<p class="answer deputy-newsletter-answer">No</p>
                		</div>
                		<!-- // DEPUTY ITEM - 2 - END // -->
-
-                         <a href="#" class="main-cta secondary edit deputy-link-two">Edit additional info</a>
 
                     </div>
                </div>

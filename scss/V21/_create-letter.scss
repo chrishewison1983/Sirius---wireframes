@@ -131,6 +131,11 @@
      &:nth-of-type(4n) {
           margin-right: 0;
      }
+     &.non-editable {
+          .non-edit {
+               font-size: 0.875rem;
+          }
+     }
      span {
           line-height: 1.2;
           color: $text-main-colour;
@@ -276,7 +281,7 @@ ul.contact-list {
                          font-family: $Opensans-Bold;
                     }
                }
-               a.edit, a.delete {
+               a.edit, a.delete, a.view {
                     padding: 0 0 0 1.25em;
                     margin: 1em 0 0 0;
                     display: inline-block;
@@ -343,6 +348,12 @@ ol#draft-list {
                //           }
                //      }
                // }
+               &.preview {
+                    &:after {
+                         content: 'preview';
+                         right: -4.1em;
+                    }
+               }
                &:after {
                     content: 'editing';
                     display: inline-block;
@@ -449,7 +460,7 @@ ol#draft-list {
                          font-family: $Opensans-Bold;
                     }
                }
-               .edit, .delete {
+               .edit, .delete, .view {
                     float: left;
                     margin: 0.5em 2em 0 0;
                }
@@ -464,6 +475,26 @@ ol#draft-list {
           max-height: none;
           p {
                color: $black;
+          }
+     }
+}
+
+#action-panel {
+     &.doc-editor {
+          #documents-viewer-simplified {
+               height: 88vh;
+               .wrapper {
+                    height: 88vh;
+                    img {
+                         margin-top: 0;
+                    }
+               }
+               .page-2.document-viewing-panel {
+                    padding-top: 4.2em;
+               }
+               .document-2 {
+                    display: inline-block;
+               }
           }
      }
 }

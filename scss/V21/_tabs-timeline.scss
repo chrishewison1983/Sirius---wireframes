@@ -358,11 +358,14 @@
                margin: 1.5em 0 0 0;
                padding: 0 0 0 0;
                display: none;
+               &.open {
+                    display: inline-block !important;
+               }
                .visit-detail-item {
                     display: inline-block;
                     width: 50%;
                     float: left;
-                    margin: 0 0 1.5em 0;
+                    margin: 0 0 0.75em 0;
                     &:nth-of-type(5n), &:nth-of-type(6n) {
                          margin-bottom: 0;
                     }

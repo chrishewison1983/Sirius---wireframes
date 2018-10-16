@@ -11,6 +11,17 @@
      // right: 5em;
      // bottom: -2.25em;
      z-index: 10;
+     .allocate-client {
+          margin: -1em 0 2em 0;
+          width: 100%;
+          display: inline-block;
+          padding-bottom: 1em;
+          border-bottom: 1px dashed darken($blue-grey,7.5%);
+          a.main-cta {
+               width: 100%;
+               text-align: center;
+          }
+     }
      ul {
           margin: 0.75em 0 0 0;
           width: 100%;
@@ -460,6 +471,35 @@
           }
      }
 }
+
+.professional, .public, .lay {
+     .actions-nav {
+          ul {
+               li {
+                    a {
+                         &:hover, &:active, &:focus {
+                              span {
+                                   background: $green;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.professional, .public {
+     .actions-nav {
+          ul {
+               li {
+                    &.edit-deputy-button {
+                         border-top: none;
+                    }
+               }
+          }
+     }
+}
+
 
 
 

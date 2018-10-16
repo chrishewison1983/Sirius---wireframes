@@ -27,7 +27,7 @@
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
 
-			<a href="../index.html" class="logo user-type-link">
+			<a href="../19-dashboard/19a-caseworker.html" class="logo user-type-link">
 				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
 				<p><span>Dashboard</span></p>
 			</a>
@@ -66,7 +66,7 @@
 				<p><span>Sign out</span></p>
 			</a>
 
-			<form action="search.html">
+			<form action="../search.html">
 				<input type="search" name="search" id="autocomplete" class="main-search-bar" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
@@ -84,7 +84,7 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14a-deputy-page.html">Mrs Lara Stevens</a> <div class="separator"> > </div> <span class="state">Record death</span> </nav> <h1> Record death of <div class="deputy-title-answer">Mrs</div> <div class="deputy-first-name-answer">Lara</div> <div class="deputy-middle-name-answer"></div> <div class="deputy-last-name-answer">Stevens</div> </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="client-details"></span> <p>Deputy details</p> </li> <!-- <li class="tab-link current" data-tab="tab-2"> <span class="deputy-details"></span> <p>Client's</p> </li> --> <li class="tab-link" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DEPUTY DETAILS - START // -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <nav class="breadcrumb"> <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14a-deputy-hub.html">Mrs Lara Stevens</a> <div class="separator"> > </div> <span class="state">Record death</span> </nav> <h1> Record death of <div class="deputy-title-answer">Mrs</div> <div class="deputy-first-name-answer">Lara</div> <div class="deputy-middle-name-answer"></div> <div class="deputy-last-name-answer">Stevens</div> </h1> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- PROGRESS BAR - START --> <!-- PROGRESS BAR - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper"> <div class="row"> <div class="large-8 large-uncentered columns side-panel-parent"> <!-- ////////// SIDE PANEL - START ////////// --> <div id="side-panel"> <!-- =========== TABS - START =========== --> <ul id="side-panel-tabs" class="tabs"> <li class="tab-link current" data-tab="tab-1"> <span class="client-details"></span> <p>Deputy details</p> </li> <!-- <li class="tab-link current" data-tab="tab-2"> <span class="deputy-details"></span> <p>Client's</p> </li> --> <li class="tab-link" data-tab="tab-3"> <span class="documents"></span> <p>Documents</p> </li> </ul> <!-- =========== TABS - END =========== --> <!-- =========== TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content side-panel current"> <!-- // DEPUTY DETAILS - START // -->
 <div class="check-details">
 
 	<h2 class="description-title">
@@ -145,12 +145,19 @@
 		</div>
 		<!-- // DEPUTY ITEM - 5 - END // -->
 
-		<!-- // DEPUTY ITEM - 6 - START // -->
+		<!-- // DEPUTY ITEM - 6A - START // -->
 		<div class="person-detail-item">
 			<p class="item">Daytime telephone number:</p>
 			<p class="answer deputy-phone-number-answer">07079962666</p>
 		</div>
-		<!-- // DEPUTY ITEM - 6 - END // -->
+		<!-- // DEPUTY ITEM - 6A - END // -->
+
+		<!-- // DEPUTY ITEM - 6B - START // -->
+		<div class="person-detail-item">
+			<p class="item">Evening telephone number:</p>
+			<p class="answer deputy-evening-number-answer"></p>
+		</div>
+		<!-- // DEPUTY ITEM - 6B - END // -->
 
 		<!-- // DEPUTY ITEM - 7 - START // -->
 		<div class="person-detail-item">
@@ -250,7 +257,7 @@
           clients details
      </h2>
 
-     <table id="clients-table">
+     <table id="clients-table" class="tablesorter">
           <thead>
                <tr class="five-column">
                     <th><span></span>Details</th>
@@ -805,213 +812,255 @@
 
 </div>
 <!-- // DEPUTY DETAILS - END // -->
- </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <!-- // DOCUMENT VIEWER - START // -->
-<div id="documents-viewer">
+ </div> <!-- =========== TAB CONTENT - 2 - END =========== --> <!-- =========== TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content side-panel"> <!-- /////////////// FILTER PANEL - START /////////////// -->
+<div id="filter-panel-documents">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" class="scroller">
+		<form class="document-filter">
+			<label for="filter-category" class="float-left title-label">Filter</label>
+			<nav>
+				<ul>
+					<li>
+						<label><input type="checkbox" value="correspondence" name="document-value">Correspondence</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="court" name="document-value">Order</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="report" name="document-value">Reports</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="visit" name="document-value">Visits</label>
+					</li>
+					<li>
+						<label class="disabled"><input type="checkbox" value="finance" name="document-value">Finance</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="other" name="document-value">Other</label>
+					</li>
+					<li class="seperator"></li>
+					<li>
+						<label><input type="checkbox" value="inbound" name="document-type">Inbound</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="outbound" name="document-type">Outbound</label>
+					</li>
+					<li class="last-filter">
+						<a class="filter-all-documents">Clear filter</a>
+					</li>
+				</ul>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">9</span>
+							<span class="desc">Docs</span>
+						</p>
+					</div>
+				</div>
+
+			</nav>
+		</form>
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->
+
+<!-- // DOCUMENT VIEWER - START // -->
+<div id="documents-viewer-filter">
 
 	<!-- ============================ DOCUMENT 1 - START ============================ -->
 	<div class="doc-container document-1">
 
 		<a href="#" class="close">Close</a>
 
-		<div class="page-1 accordion">
+		<div class="page-1">
 
-			<!-- //////// ACCORDION SECTION 1 - START - //////// -->
-			<div class="accordion-section">
+			<table id="documents-listing" class="livelink-documents tablesorter">
+				<thead>
+					<tr>
+						<th><span></span>Document</th>
+						<th><span></span>Date</th>
+						<th>Actions</th>
 
-				<button class="accordion-section-title documents" href="#accordion-1">
-					Visits
-					<span></span>
-				</button>
-
-				<div id="accordion-1" class="accordion-section-content">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>11/06/2017 11:07:13</p></td>
-							</tr>
-							<tr>
-								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>18/06/2017 12:20:10</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 1 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 2 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-2">
-					Reports
-					<span></span>
-				</button>
-
-				<div id="accordion-2" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>30/06/2017 16:31:01</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 2 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 3 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-3">
-					Correspondence
-					<span></span>
-				</button>
-
-				<div id="accordion-3" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>Today, 15:21:03</p></td>
-							</tr>
-							<tr>
-								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>03/06/2017 11:07:13</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 3 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 4 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-4">
-					Court documents
-					<span></span>
-				</button>
-
-				<div id="accordion-4" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Incoming</p></td>
-								<td><p>27/08/2017 08:17:13</p></td>
-							</tr>
-							<tr>
-								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>31/06/2017 12:52:52</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 4 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 5 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-5">
-					Other
-					<span></span>
-				</button>
-
-				<div id="accordion-5" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>21/06/2017 11:07:13</p></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
-										Video-of-client.mov
-										<span class="download"></span>
-									</a>
-								</td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Incoming</p></td>
-								<td><p>27/06/2017 11:07:13</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 5 - END - //////// -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="replace-document-1 document-category all court inbound">
+						<td>
+							<a href="#" class="hide-page-1">Application_correspondence.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/08/2017, 08:17:13
+								<span class="type">Received date</span>
+							</p>
+						</td>
+						<td></td>
+					</tr>
+					<tr class="replace-document-2 document-category all visit outbound">
+						<td>
+							<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>11/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
+					</tr>
+					<tr class="replace-document-3 document-category all visit outbound">
+						<td>
+							<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>18/06/2017, 12:20:10
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
+					</tr>
+					<tr class="replace-document-4 document-category all report outbound">
+						<td>
+							<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>30/06/2017, 16:31:01
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
+					</tr>
+					<tr class="replace-document-5 document-category all correspondence outbound">
+						<td>
+							<a href="#" class="hide-page-1">Correspondence_document_1.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>Today, 15:21:03
+								<span class="type">Created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
+					</tr>
+					<tr class="replace-document-6 document-category all correspondence outbound">
+						<td>
+							<a href="#" class="hide-page-1">Correspondence_document_2.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>03/06/2017, 11:07:13
+								<span class="type">Created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
+					</tr>
+					<tr class="replace-document-7 document-category all court outbound">
+						<td>
+							<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>31/06/2017, 12:52:52
+								<span class="type">Received date</span>
+							</p>
+						</td>
+						<td></td>
+					</tr>
+					<tr class="replace-document-8 document-category all other outbound">
+						<td>
+							<a href="#" class="hide-page-1">Other_document.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>21/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
+					</tr>
+					<tr class="replace-document-9 document-category all other inbound">
+						<td>
+							<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
+								Video-of-client.mov
+								<span class="download"></span>
+							</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
 
 		</div>
 
@@ -1021,6 +1070,8 @@
 				<div class="buttons">
 					<a href="#" class="back">Back</a>
 					<a href="#" class="compare">Compare</a>
+					<a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a>
+					<!-- <a href="#" class="close">Close</a> -->
 				</div>
 				<img src="../../../production/img/V21/control-panel.png" alt="Document" class="control-panel-buttons">
 			</div>
@@ -1038,205 +1089,183 @@
 
 		<a href="#" class="close">Close</a>
 
-		<div class="page-1 accordion">
+		<div class="page-1">
 
-			<!-- //////// ACCORDION SECTION 6 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-6">
-					Visits
-					<span></span>
-				</button>
-
-				<div id="accordion-6" class="accordion-section-content">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Visit_document_title_1.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>11/06/2017 11:07:13</p></td>
-							</tr>
-							<tr>
-								<td><a href="#" class="hide-page-1">Visit_document_title_2.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>18/06/2017 12:20:10</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 6 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 7 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-7">
-					Reports
-					<span></span>
-				</button>
-
-				<div id="accordion-7" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Reports_document_title_1.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>30/06/2017 16:31:01</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 7 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 8 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-8">
-					Correspondence
-					<span></span>
-				</button>
-
-				<div id="accordion-8" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Correspondence_document_1.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>Today, 15:21:03</p></td>
-							</tr>
-							<tr>
-								<td><a href="#" class="hide-page-1">Correspondence_document_2.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>03/06/2017 11:07:13</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 8 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 9 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-9">
-					Court documents
-					<span></span>
-				</button>
-
-				<div id="accordion-9" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Application_correspondence.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Incoming</p></td>
-								<td><p>27/08/2017 08:17:13</p></td>
-							</tr>
-							<tr>
-								<td><a href="#" class="hide-page-1">Court_order_documents.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>31/06/2017 12:52:52</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 9 - END - //////// -->
-
-			<!-- //////// ACCORDION SECTION 10 - START - //////// -->
-			<div class="accordion-section">
-
-				<button class="accordion-section-title documents" href="#accordion-10">
-					Other
-					<span></span>
-				</button>
-
-				<div id="accordion-10" class="accordion-section-content" style="">
-					<table class="livelink-documents">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Doc type</th>
-								<th>Case type</th>
-								<th>Direction</th>
-								<th>Date created</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" class="hide-page-1">Other_document.pdf</a></td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Outgoing</p></td>
-								<td><p>21/06/2017 11:07:13</p></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
-										Video-of-client.mov
-										<span class="download"></span>
-									</a>
-								</td>
-								<td><p>IT-SS-ORDER</p></td>
-								<td><p>DEP - PFA</p></td>
-								<td><p>Incoming</p></td>
-								<td><p>27/06/2017 11:07:13</p></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<!-- //////// ACCORDION SECTION 10 - END - //////// -->
+			<table class="livelink-documents tablesorter">
+				<thead>
+					<tr>
+						<th><span></span>Document</th>
+						<th><span></span>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="document-category all court inbound">
+						<td>
+							<a href="#" class="hide-page-1">Application_correspondence.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/08/2017, 08:17:13
+								<span class="type">Received date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all visit outbound">
+						<td>
+							<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>11/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all visit outbound">
+						<td>
+							<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>18/06/2017, 12:20:10
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all report outbound">
+						<td>
+							<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>30/06/2017, 16:31:01
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all correspondence outbound">
+						<td>
+							<a href="#" class="hide-page-1">Correspondence_document_1.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>Today, 15:21:03
+								<span class="type">Created date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all correspondence outbound">
+						<td>
+							<a href="#" class="hide-page-1">Correspondence_document_2.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>03/06/2017, 11:07:13
+								<span class="type">Created date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all court outbound">
+						<td>
+							<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>31/06/2017, 12:52:52
+								<span class="type">Received date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all other outbound">
+						<td>
+							<a href="#" class="hide-page-1">Other_document.pdf</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>21/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+					</tr>
+					<tr class="document-category all other inbound">
+						<td>
+							<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
+								Video-of-client.mov
+								<span class="download"></span>
+							</a>
+							<div class="doc-info">
+								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+								<p>Case type: <strong>DEP - PFA</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
+							</div>
+						</td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
 		</div>
 
@@ -1266,7 +1295,7 @@
 	<p>Changing the deputy status to deceased will affect all orders the deputy is linked to.</p>
 	<hr>
 	<div class="cta-row">
-		<a class="main-cta" id="confirm-deputy-deceased" href="../14-deputy-hub/14a-deputy-page.html">The deputy is deceased</a>
+		<a class="main-cta" id="confirm-deputy-deceased" href="../14-deputy-hub/14a-deputy-hub.html">The deputy is deceased</a>
 		<a href="#" rel="modal:close" class="cancel">Cancel</a>
 	</div>
 </div>
@@ -1283,7 +1312,7 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script>
 		$( function() {
-			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+			$( "#datepicker, #datepicker1, #datepicker2, #credit-date-by, #credit-sent-date, #write-off-date, #exemption-date" ).datepicker();
 		} );
 	</script>
 	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
@@ -1309,6 +1338,7 @@
 	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
 	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
 	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/sign-out.js"></script>
 	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
@@ -1318,14 +1348,17 @@
 	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/finance.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
 	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/allocate-client.js"></script>
 	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
 	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
 	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
 	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
@@ -1349,13 +1382,13 @@
 	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
-	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/finance.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
-	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
 	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
@@ -1389,7 +1422,7 @@
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table, .livelink-documents, #clients-table, #contact-list-deputy-pro, #contact-list-deputy-pa").tablesorter();
 		});
 
 		// $(document).ready(function() {

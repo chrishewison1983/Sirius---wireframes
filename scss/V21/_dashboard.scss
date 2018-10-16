@@ -20,15 +20,20 @@
      .wrapper {
           &.pagination-wrapper, &.datepicker-wrapper {
                float: right;
+               #pagination-new {
+                    margin-top: 0.85em;
+               }
           }
-          #pagination-small {
-               border-top: none;
-               margin-top: 1em;
-               padding-top: 0;
+          #pagination {
+               &.small {
+                    border-top: none;
+                    margin-top: 1em;
+                    padding-top: 0;
+               }
           }
           &.datepicker-wrapper {
                form {
-                    margin: 0.85em 0 0 0;
+                    margin: 1em 2em 0 0;
                     .form-group {
                          margin: 0 0 0 1em;
                          width: auto;
@@ -364,6 +369,24 @@
                          }
                     }
                }
+               &.five-across {
+                    &.team-review {
+                         padding-top: 0;
+                    }
+                    .dashboard-item {
+                         width: 18.4%;
+                         margin-bottom: 2%;
+                         &:nth-of-type(3n) {
+                              margin-right: 2%;
+                         }
+                         &:nth-of-type(5n) {
+                              margin-right: 0%;
+                         }
+                         &:nth-of-type(6n) {
+                              margin-right: 2%;
+                         }
+                    }
+               }
                &.team-review-table {
                     display: none;
                     padding-top: 0;
@@ -411,7 +434,7 @@
                     .figures {
                          display: inline-block;
                          float: left;
-                         width: 61%;
+                         width: 57%;
                          margin: 0 0 0 1.5em;
                          h1 {
                               font-size: 1.6rem;
@@ -612,6 +635,12 @@
                     }
                }
           }
+          #pagination-new {
+               border-top: 10px solid $blue-grey;
+               padding-top: 1em;
+               margin-top: 1.5em;
+               @include justify-content(flex-end);
+          }
      }
      .key {
           padding: 1.5em 0;
@@ -664,7 +693,8 @@
      float: none;
      display: inline-block;
      font-size: 0.875rem;
-     width: auto;
+     text-align: center;
+     width: 100%;
      line-height: 1;
      margin: 0 auto 0.5em auto;
      .wrapper {
@@ -678,7 +708,8 @@
           display: inline-block;
           background: $blue-grey;
           // padding: 0.65em 0.5em 0.5em 0.5em ;
-          float: left;
+          // float: left;
+          float: none;
           color: darken($blue-grey, 40%);
           border-radius: 50%;
           margin: 0 0.25em;
@@ -814,6 +845,35 @@
           border: 3px solid $amber;
           background: $amber;
           color: $white;
+          span.number {
+               color: $white;
+          }
+     }
+     &.zero {
+          border-radius: 5px 0 0 5px;
+          padding-right: 3em;
+          .time-left {
+               position: absolute;
+               border: 3px solid darken($amber,15%);
+               background: darken($amber,15%);
+               top: -3px;
+               bottom: -3px;
+               right: -1.75em;
+               border-radius: 0 5px 5px 0;
+               text-align: center;
+               span {
+                    display: inline-block;
+                    width: 2.5em;
+                    height: 2.5em;
+                    border-radius: 50%;
+                    box-shadow: inset 0 0 0 2px $white;
+                    // background-color: $white;
+                    background: url(#{$image-path}/icons/task-timer.svg) no-repeat 50% 50%;
+                    background-size: 1.65em;
+                    float: none;
+                    margin: 0.25em 0.25em 0 0.25em;
+               }
+          }
      }
      .number {
           font-weight: bold;

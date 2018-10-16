@@ -13,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <a href="19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
                          <span>Search results</span>
                     </nav>
@@ -34,8 +34,8 @@
                     <div class="hide">buffer</div>
 
                     <div id="search-filters">
-     				<div id="scroller-anchor"></div>
-     				<div id="scroller">
+     				<div id="scroller-anchor" class="scroller-anchor"></div>
+     				<div id="scroller" class="scroller">
 
                               <form>
 
@@ -44,56 +44,76 @@
                                         	<h3>Filter Results</h3>
                                         	<ul>
                                         		<li>
-                                        			<label class="normal" for="search-result-1">
-                                        				<input id="search-result-1" name="search-result-1" type="checkbox" value="search-result-1">
-                                        				Client <strong>(7)</strong>
-                                        			</label>
+                                                       <div class="form-group">
+                                             			<label class="normal" for="search-result-1">
+                                             				<input id="search-result-1" name="search-result-1" type="checkbox" value="search-result-1">
+                                             				Client <strong>(7)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                                   <li>
-                                        			<label class="normal" for="search-result-2">
-                                        				<input id="search-result-2" name="search-result-2" type="checkbox" value="search-result-2">
-                                        				Deputy <strong>(6)</strong>
-                                        			</label>
+                                                       <div class="form-group">
+                                             			<label class="normal" for="search-result-2">
+                                             				<input id="search-result-2" name="search-result-2" type="checkbox" value="search-result-2">
+                                             				Deputy <strong>(6)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                                   <li>
-                                        			<label class="normal" for="search-result-3">
-                                        				<input id="search-result-3" name="search-result-3" type="checkbox" value="search-result-3">
-                                        				Donor <strong>(1)</strong>
-                                        			</label>
+                                                       <div class="form-group">
+                                             			<label class="normal" for="search-result-3">
+                                             				<input id="search-result-3" name="search-result-3" type="checkbox" value="search-result-3">
+                                             				Donor <strong>(1)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                                   <li>
-                                        			<label class="normal" for="search-result-4">
-                                        				<input id="search-result-4" name="search-result-4" type="checkbox" value="search-result-4">
-                                        				Attorney <strong>(1)</strong>
-                                        			</label>
+                                                       <div class="form-group">
+                                             			<label class="normal" for="search-result-4">
+                                             				<input id="search-result-4" name="search-result-4" type="checkbox" value="search-result-4">
+                                             				Attorney <strong>(1)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                                   <li>
-                                        			<label class="normal" for="search-result-5">
-                                        				<input id="search-result-5" name="search-result-5" type="checkbox" value="search-result-5">
-                                        				Replacement attorney <strong>(0)</strong>
-                                        			</label>
+                                                       <div class="form-group read-only">
+                                             			<label class="normal" for="search-result-5">
+                                             				<input id="search-result-5" name="search-result-5" type="checkbox" value="search-result-5" disabled>
+                                             				Replacement attorney <strong>(0)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                                   <li>
-                                        			<label class="normal" for="search-result-6">
-                                        				<input id="search-result-6" name="search-result-6" type="checkbox" value="search-result-6">
-                                        				Trust Corporation <strong>(0)</strong>
-                                        			</label>
-                                        		</li><li>
-                                        			<label class="normal" for="search-result-7">
-                                        				<input id="search-result-7" name="search-result-7" type="checkbox" value="search-result-7">
-                                        				Notified Person <strong>(0)</strong>
-                                        			</label>
-                                        		</li><li>
-                                        			<label class="normal" for="search-result-8">
-                                        				<input id="search-result-8" name="search-result-8" type="checkbox" value="search-result-8">
-                                        				Certificate Provider <strong>(0)</strong>
-                                        			</label>
+                                                       <div class="form-group read-only">
+                                             			<label class="normal" for="search-result-6">
+                                             				<input id="search-result-6" name="search-result-6" type="checkbox" value="search-result-6" disabled>
+                                             				Trust Corporation <strong>(0)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                                   <li>
-                                        			<label class="normal" for="search-result-9">
-                                        				<input id="search-result-9" name="search-result-9" type="checkbox" value="search-result-9">
-                                        				Correspondent <strong>(0)</strong>
-                                        			</label>
+                                                       <div class="form-group read-only">
+                                             			<label class="normal" for="search-result-7">
+                                             				<input id="search-result-7" name="search-result-7" type="checkbox" value="search-result-7" disabled>
+                                             				Notified Person <strong>(0)</strong>
+                                             			</label>
+                                                       </div>
+                                        		</li>
+                                                  <li>
+                                                       <div class="form-group read-only">
+                                             			<label class="normal" for="search-result-8">
+                                             				<input id="search-result-8" name="search-result-8" type="checkbox" value="search-result-8" disabled>
+                                             				Certificate Provider <strong>(0)</strong>
+                                             			</label>
+                                                       </div>
+                                        		</li>
+                                                  <li>
+                                                       <div class="form-group read-only">
+                                             			<label class="normal" for="search-result-9">
+                                             				<input id="search-result-9" name="search-result-9" type="checkbox" value="search-result-9" disabled>
+                                             				Correspondent <strong>(0)</strong>
+                                             			</label>
+                                                       </div>
                                         		</li>
                                         	</ul>
                                         </div>
@@ -207,8 +227,9 @@
                	</ul>
 
                     <!-- // PAGINATION - START // -->
-                    <div id="pagination-small">
-                         <a>-</a>
+                    <div id="pagination-new">
+                         <a class="disabled"><<</a>
+                         <a class="disabled"><</a>
                          <span>
                               <a class="current">1</a>
                               <a>2</a>
@@ -218,7 +239,8 @@
                               <i>...</i>
                               <a>20</a>
                          </span>
-                         <a>+</a>
+                         <a>></a>
+                         <a>>></a>
                     </div>
                     <!-- // PAGINATION - END // -->
 
@@ -238,34 +260,6 @@
 
 <script type="text/javascript">
 
-     function moveScroller() {
-          var $anchor = $("#scroller-anchor");
-          var $scroller = $('#scroller');
-
-          var move = function() {
-               var st = $(window).scrollTop();
-               var ot = $anchor.offset().top;
-               if(st > ot) {
-                    $scroller.css({
-                         position: "fixed",
-                         top: ""
-                    });
-                    $scroller.addClass("fixed");
-               } else {
-                    if(st <= ot) {
-                         $scroller.css({
-                              position: "relative",
-                              top: ""
-                         });
-                         $scroller.removeClass("fixed");
-                    }
-               }
-          };
-
-          $(window).scroll(move);
-          move();
-     }
-
      if($(window).width() > 100) {
           $(function() {
                moveScroller();
@@ -273,5 +267,4 @@
      }
 
 </script>
-
 <!-- SCRIPT CONTENT - END -->

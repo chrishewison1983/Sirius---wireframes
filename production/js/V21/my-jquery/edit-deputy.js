@@ -303,7 +303,7 @@ if (window.location.href.indexOf("lay") != -1) {
      // Changes the header
      $('#section-header').addClass('deputy-page').addClass('content-page');
      $('.deputy-order-details').hide();
-     $('.breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14a-deputy-page.html">Mrs Lara Stevens</a> <div class="separator"> > </div> <span>Check deputy details</span>');
+     $('.breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14a-deputy-hub.html">Mrs Lara Stevens</a> <div class="separator"> > </div> <span>Check deputy details</span>');
 
      // Changes the CTA's
      $('.deputy-link-one').attr('href', '../5-add-deputy/5b-deputy-details.html#deputy-lay-edit');
@@ -318,9 +318,9 @@ if (window.location.href.indexOf("deputy-lay-edit") != -1) {
      // Changes the header content
      $('#section-header').addClass('deputy-page').addClass('content-page');
      $('.breadcrumb').html(`
-          <a href="../index.html" class="user-type-link">Dashboard</a>
+          <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
           <div class="separator">&gt;</div>
-          <a href="../14-deputy-hub/14a-deputy-page.html">Mrs Lara Stevens</a>
+          <a href="../14-deputy-hub/14a-deputy-hub.html">Mrs Lara Stevens</a>
           <div class="separator">&gt;</div>
           <span class="page-title">Edit deputy</span>
 
@@ -333,7 +333,7 @@ if (window.location.href.indexOf("deputy-lay-edit") != -1) {
 
      // Changes the footer content
      $('#edit-deputy').text('Save & update deputy');
-     $('#edit-deputy').attr('href', '../14-deputy-hub/14a-deputy-page.html');
+     $('#edit-deputy').attr('href', '../14-deputy-hub/14a-deputy-hub.html');
      $('#edit-deputy').removeClass('de-activate');
      $('#add-another-deputy').hide();
 
@@ -383,7 +383,7 @@ if (window.location.href.indexOf("pro") != -1) {
      $('#section-header').addClass('deputy-page').addClass('content-page');
      $('#section-header h1').text('Check Bob Loblaw Ltd details');
      $('.deputy-order-details').hide();
-     $('.breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14b-deputy-page.html">Bob Loblaw Ltd</a> <div class="separator"> > </div> <span>Check deputy details</span>');
+     $('.breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14b-deputy-hub.html">Bob Loblaw Ltd</a> <div class="separator"> > </div> <span>Check deputy details</span>');
 
      // Changes the CTA's
      $('.deputy-link-one').attr('href', '../5-add-deputy/5b-deputy-details.html#deputy-pro-edit');
@@ -398,9 +398,9 @@ if (window.location.href.indexOf("deputy-pro-edit") != -1) {
      // Changes the header content
      $('#section-header').addClass('deputy-page').addClass('content-page');
      $('.breadcrumb').html(`
-          <a href="../index.html" class="user-type-link">Dashboard</a>
+          <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
           <div class="separator">&gt;</div>
-          <a href="../14-deputy-hub/14b-deputy-page.html">Bob Loblaw Ltd</a>
+          <a href="../14-deputy-hub/14b-deputy-hub.html">Bob Loblaw Ltd</a>
           <div class="separator">&gt;</div>
           <span class="page-title">Edit deputy</span>
 
@@ -413,7 +413,7 @@ if (window.location.href.indexOf("deputy-pro-edit") != -1) {
 
      // Changes the footer content
      $('#edit-deputy').text('Save & update deputy');
-     $('#edit-deputy').attr('href', '../14-deputy-hub/14b-deputy-page.html');
+     $('#edit-deputy').attr('href', '../14-deputy-hub/14b-deputy-hub.html');
      $('#edit-deputy').removeClass('de-activate');
      $('#add-another-deputy').hide();
 
@@ -467,7 +467,7 @@ if (window.location.href.indexOf("pub") != -1) {
      $('#section-header').addClass('deputy-page').addClass('content-page');
      $('#section-header h1').text('Check Weston Parpenham\'s details');
      $('.deputy-order-details').hide();
-     $('.breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14c-deputy-page.html">Weston Parpenham</a> <div class="separator"> > </div> <span>Check deputy details</span>');
+     $('.breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../14-deputy-hub/14c-deputy-hub.html">Weston Parpenham</a> <div class="separator"> > </div> <span>Check deputy details</span>');
 
      // Changes the CTA's
      $('.deputy-link-one').attr('href', '../5-add-deputy/5b-deputy-details.html#deputy-pa-edit');
@@ -482,9 +482,9 @@ if (window.location.href.indexOf("deputy-pa-edit") != -1) {
      // Changes the header content
      $('#section-header').addClass('deputy-page').addClass('content-page');
      $('.breadcrumb').html(`
-          <a href="../index.html">My tasks</a>
+          <a href="../19-dashboard/19a-caseworker.html">My tasks</a>
           <div class="separator">&gt;</div>
-          <a href="../14-deputy-hub/14c-deputy-page.html">Weston Parpenham</a>
+          <a href="../14-deputy-hub/14c-deputy-hub.html">Weston Parpenham</a>
           <div class="separator">&gt;</div>
           <span class="page-title">Edit deputy</span>
 
@@ -497,7 +497,7 @@ if (window.location.href.indexOf("deputy-pa-edit") != -1) {
 
      // Changes the footer content
      $('#edit-deputy').text('Save & update deputy');
-     $('#edit-deputy').attr('href', '../14-deputy-hub/14c-deputy-page.html');
+     $('#edit-deputy').attr('href', '../14-deputy-hub/14c-deputy-hub.html');
      $('#edit-deputy').removeClass('de-activate');
      $('#add-another-deputy').hide();
 

@@ -1,0 +1,706 @@
+/* ---------------------------------------------------------------------------
+* Main styles affecting the Application
+* ---------------------------------------------------------------------------
+*/
+
+//  FOR ALL
+.finance-intro {
+     .description-title {
+          width: 60%;
+          float: left;
+          div {
+               float: left;
+          }
+          a {
+               // font-size: 0.875rem;
+               // padding: 0.5em 0.75em;
+               clear: left;
+               float: left;
+               font-weight: normal;
+               margin: 0;
+               background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 40%;
+               background-size: 1em;
+               // position: relative;
+               // top: 0.25em;
+          }
+     }
+     .account-credit {
+          margin: 1.5em 0 0 2.5%;
+          height: 4.25em;
+          float: right;
+          width: 37.5%;
+          display: flex;
+          // align-items: center;
+          // justify-content: center;
+          border-radius: $global-border-radius;
+          background: $main-colour;
+          &.zero {
+               background: $blue-grey;
+               .left, .right {
+                    .wrapper {
+                         h2 {
+                              color: $main-colour;
+                         }
+                         a {
+                              color: $blue;
+                              &.add-amount {
+                                   background: url(#{$image-path}/icons/add-blue.svg) no-repeat 0% 40%;
+                                   background-size: 1em;
+                              }
+                              &.remove-amount {
+                                   background: url(#{$image-path}/icons/remove-blue.svg) no-repeat 0% 40%;
+                                   background-size: 1em;
+                              }
+                         }
+                    }
+               }
+               .left {
+                    background: darken($blue-grey, 7.5%);
+               }
+          }
+          .left, .right {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 5px 0 0 5px;
+               .wrapper {
+                    width: 100%;
+                    h2 {
+                         color: $white;
+                         margin: 0;
+                         width: 100%;
+                    }
+               }
+          }
+          .left {
+               width: 32.5%;
+               background: rgba($white, 0.2);
+               .wrapper {
+                    h2 {
+                         font-size: 2.75rem;
+                         text-align: center;
+                    }
+               }
+          }
+          .right {
+               width: 67.5%;
+               .wrapper {
+                    h2 {
+                         text-align: left;
+                         padding-left: 0.65em;
+                         color: rgba($white,0.4);
+                    }
+                    a {
+                         font-size: 0.875rem;
+                         color: $white;
+                         margin: 0 0 0 1.15em;
+                         position: relative;
+                         top: -0.2em;
+                    }
+               }
+          }
+     }
+}
+
+#finance-details {
+     ul.invoice-list {
+          margin: 0;
+          display: inline-block;
+          li {
+               display: inline-block;
+               width: 100%;
+               margin: 0 0 1em 0;
+               border-radius: $global-border-radius;
+               padding: 0 0 0 0;
+               position: relative;
+               z-index: 1;
+               box-shadow: inset 2.25em 0 0px 0px rgba($blue,1);
+               background: lighten($blue,45%);
+               &.completed-invoice, &.pending, &.outstanding, &.alert {
+                    &.exemption {
+                         .wrapper {
+                              min-height: 15em;
+                         }
+                    }
+                    .invoice-status {
+                         top: 50%;
+                         margin-top: -1.25em;
+                    }
+                    .wrapper {
+                         border-radius: 5px 0 0 5px;
+                         margin-left: 0;
+                         padding-left: 4.5%;
+                         width: 100%;
+                         .main-info {
+                              .invoice-content-section {
+                                   .wrapper {
+                                        box-shadow: none;
+                                        border-radius: 0;
+                                        padding: 0;
+                                        margin: 0;
+                                   }
+                              }
+                         }
+                         .cta-row {
+                              text-align: center;
+                              .loader {
+                                   display: none;
+                              }
+                              .amount-due {
+                                   text-align: center;
+                                   padding: 1em;
+                              }
+                         }
+                    }
+               }
+               &.completed-invoice {
+                    box-shadow: 0 0 10px 0px darken($blue-grey,10%);
+                    background: $white;
+                    &.overpaid {
+                         .invoice-status {
+                              color: lighten($main-colour,32.5%);
+                         }
+                         .wrapper {
+                              box-shadow: inset 2.25em 0 0px 0px $main-colour;
+                              .cta-row {
+                                   background: $main-colour;
+                                   .amount-due {
+                                        padding-bottom: 0;
+                                   }
+                              }
+                         }
+                    }
+                    &.overpayment-complete {
+                         .finance-chart {
+                              &.invoice-chart-five {
+                                   figcaption {
+                                        &:after {
+                                             content: "£0\a";
+                                             -webkit-animation: no-transform 0s steps(0) forwards;
+                                             animation: no-transform 0s steps(0) forwards;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    .invoice-status {
+                         color: darken($green,15%);
+                         .date {
+                              color: $white;
+                         }
+                    }
+                    .wrapper {
+                         box-shadow: inset 2.25em 0 0px 0px $green;
+                         .main-info {
+                              background: $white;
+                              .time-line .date {
+                                   background: $white;
+                                   p span {
+                                        background: $white;
+                                   }
+                              }
+                              .invoice-content-section {
+                                   background: lighten($blue-grey,5%);
+                              }
+                         }
+                         .cta-row {
+                              background: $green;
+                         }
+                    }
+               }
+               &.pending {
+                    box-shadow: 0 0 10px 0px darken($blue-grey,10%);
+                    background: $white;
+                    .invoice-status {
+                         color: darken($blue-grey,40%);
+                    }
+                    .wrapper {
+                         box-shadow: inset 2.25em 0 0px 0px darken($blue-grey,10%);
+                         .main-info {
+                              background: $white;
+                              .show-hide-link {
+                                   display: none;
+                              }
+                              .invoice-content-section {
+                                   background: lighten($blue-grey,5%);
+                                   .wrapper {
+                                        min-height: inherit;
+                                   }
+                              }
+                              .time-line {
+                                   .date {
+                                        background: $white;
+                                        &.left, &.right {
+                                             .indicator {
+                                                  background: darken($blue-grey,10%);
+                                             }
+                                             p span {
+                                                  background: $white;
+                                                  border: 3px solid darken($blue-grey,10%);
+                                                  &.start-date-answer, &.end-date-answer {
+                                                       background: none;
+                                                       border: none;
+                                                  }
+                                             }
+                                        }
+                                   }
+                                   .border {
+                                        background: darken($blue-grey,10%);
+                                   }
+                              }
+                         }
+                         .cta-row {
+                              background: darken($blue-grey,10%);
+                              padding: 1em;
+                              .preloader-message {
+                                   display: inline-block;
+                              }
+                              .loader {
+                                   display: inline-block;
+                              }
+                              .pay-invoice, .amount-due {
+                                   display: none;
+                              }
+                         }
+                    }
+               }
+               &.outstanding {
+                    box-shadow: 0 0 10px 0px darken($blue-grey,10%);
+                    background: $white;
+                    .invoice-status {
+                         color: darken($red,25%);
+                         .date {
+                              color: $white;
+                         }
+                    }
+                    .wrapper {
+                         box-shadow: inset 2.25em 0 0px 0px rgba($red,1);
+                         min-height: 17em;
+                         .main-info {
+                              background: $white;
+                              .invoice-content-section {
+                                   background: lighten($blue-grey,5%);
+                                   .wrapper {
+                                        min-height: inherit;
+                                   }
+                              }
+                              .time-line {
+                                   .date {
+                                        background: $white;
+                                        &.left, &.right {
+                                             .indicator {
+                                                  background: lighten($red,15%);
+                                             }
+                                             p span {
+                                                  background: $white;
+                                                  border: 3px solid lighten($red,20%);
+                                                  &.start-date-answer, &.end-date-answer {
+                                                       background: none;
+                                                       border: none;
+                                                  }
+                                             }
+                                        }
+                                   }
+                                   .border {
+                                        background: lighten($red,20%);
+                                   }
+                              }
+                         }
+                         .cta-row {
+                              background: $red;
+                              .amount-due {
+                                   padding: 1em 1em 0 1em;
+                              }
+                         }
+                    }
+               }
+               &.alert {
+                    box-shadow: 0 0 10px 0px darken($blue-grey,10%);
+                    background: $white;
+                    .invoice-status {
+                         color: darken($amber,25%);
+                         .date {
+                              color: $white;
+                         }
+                    }
+                    .wrapper {
+                         box-shadow: inset 2.25em 0 0px 0px rgba($amber,1);
+                         min-height: 17em;
+                         .main-info {
+                              background: $white;
+                              .invoice-content-section {
+                                   background: lighten($blue-grey,5%);
+                                   .wrapper {
+                                        min-height: inherit;
+                                   }
+                              }
+                              .time-line {
+                                   .date {
+                                        background: $white;
+                                        &.left, &.right {
+                                             .indicator {
+                                                  background: lighten($amber,15%);
+                                             }
+                                             p span {
+                                                  background: $white;
+                                                  border: 3px solid lighten($amber,20%);
+                                                  &.start-date-answer, &.end-date-answer {
+                                                       background: none;
+                                                       border: none;
+                                                  }
+                                             }
+                                        }
+                                   }
+                                   .border {
+                                        background: lighten($amber,20%);
+                                   }
+                              }
+                         }
+                         .cta-row {
+                              background: $amber;
+                              .amount-due {
+                                   padding: 1em;
+                              }
+                         }
+                    }
+               }
+               .invoice-status {
+                    width: 23em;
+                    text-align: center;
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 2;
+                    left: -10.05em;
+                    // left: -8.7em;
+                    top: 50%;
+                    margin-top: -1.225em;
+                    padding: 0.75em;
+                    color: $white;
+                    font-family: $Montserrat;
+                    text-transform: uppercase;
+                    letter-spacing: 0.25em;
+                    transform: rotate(-90deg);
+                    line-height: 1;
+                    font-size: 0.8rem;
+                    color: darken($blue, 20%);
+                    .date {
+                         color: $white;
+                    }
+               }
+               .wrapper {
+                    display: flex;
+                    margin-left: 4.5%;
+                    width: 95.5%;
+                    position: relative;
+                    .main-info {
+                         background: lighten($blue,45%);
+                         display: inline-block;
+                         width: 74%;
+                         float: left;
+                         position: relative;
+                         z-index: 10;
+                         border-radius: 0 5px 5px 0;
+                         margin: 0;
+                         padding: 1em 1.5em 1em 0.5em;
+                         .time-line {
+                              .date {
+                                   background: lighten($blue,45%);
+                              }
+                         }
+                         .invoice-number {
+                              display: inline-block;
+                              float: left;
+                              span, strong {
+                                   padding: 0.5em 0.75em;
+                                   border-radius: 5px 0 0 5px;
+                                   background: $blue;
+                                   color: $white;
+                                   font-family: $Montserrat;
+                                   text-transform: uppercase;
+                                   float: left;
+                                   margin: 0;
+                              }
+                              span {
+                                   background: $main-colour;
+                              }
+                              strong {
+                                   background: darken($main-colour,10%);
+                                   border-radius: 0 5px 5px 0;
+                                   clear: none;
+                              }
+                         }
+                         .invoice-content-section {
+                              display: none;
+                              &.open {
+                                   display: inline-block !important;
+                              }
+                         }
+                         .report-document-list, .view-notes {
+                              margin-left: 1em;
+                              &.close {
+                                   float: none;
+                              }
+                         }
+                         .edit {
+                              float: right;
+                              margin-top: 0.45em;
+                         }
+                         .invoice-info, .notes-section, .lodging-section, .abandoned-section {
+                              width: 100%;
+                              border-radius: $global-border-radius;
+                              background: $white;
+                              padding: 1em;
+                              margin-top: 1em;
+                              &.show {
+                                   display: inline-block;
+                              }
+                              p {
+                                   margin: 0;
+                              }
+                              .content-wrapper {
+                                   @include flexbox;
+                                   @include justify-content(flex-start);
+                                   @include flex-wrap(wrap);
+                                   padding: 0;
+                                   p {
+                                        margin: 0;
+                                   }
+                                   a, .item, .item-notes {
+                                        @include flexbox;
+                                   }
+                                   .item, .item-notes {
+                                        width: 50%;
+                                        margin-bottom: 0;
+                                        &.notes {
+                                             p {
+                                                  width: 100%;
+                                             }
+                                        }
+                                        &.full-width {
+                                             .wrapper {
+                                                  display: inline-block;
+                                             }
+                                        }
+                                        .wrapper {
+                                             width: 100%;
+                                             margin: 0;
+                                        }
+                                        p {
+                                             width: 50%;
+                                        }
+                                        .highlight {
+                                             font-size: 1rem;
+                                             line-height: 1.4;
+                                             color: $black;
+                                             font-family: $Montserrat;
+                                             text-transform: uppercase;
+                                             display: inline-block;
+                                             width: 50%;
+                                             div {
+                                                  display: inline-block;
+                                                  width: auto;
+                                             }
+                                        }
+                                   }
+                                   .item {
+                                        margin-bottom: 0.75em;
+                                   }
+                                   .item-notes {
+                                        width: 100%;
+                                        .highlight {
+                                             font-size: 1rem;
+                                             text-transform: inherit;
+                                        }
+                                   }
+                              }
+                         }
+                         .abandoned-section {
+                              .content-wrapper {
+                                   .item-notes {
+                                        width: 100%;
+                                        .wrapper {
+                                             margin-left: 1%;
+                                             width: 99%;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    .cta-row {
+                         background: $blue;
+                         width: 26%;
+                         display: inline-block;
+                         position: relative;
+                         padding: 0;
+                         z-index: 1;
+                         float: right;
+                         border-radius: 0 5px 5px 0;
+                         a {
+                              float: right;
+                              margin: 0 0 0.75em 0;
+                              clear: both;
+                              &:last-of-type {
+                                   margin: 0;
+                              }
+                              &.main-cta {
+                                   font-size: 0.875rem;
+                                   padding: 0.25em 0.75em;
+                              }
+                         }
+                         .preloader-message {
+                              display: none;
+                              position: absolute;
+                              top: calc(50% - 1rem);
+                              left: 0;
+                              width: 100%;
+                              text-transform: uppercase;
+                              letter-spacing: 0.15em;
+                              font-size: 0.7rem;
+                              line-height: 1.6;
+                              text-align: center;
+                              color: rgba($main-colour,0.4);
+                              font-family: $Opensans-Bold;
+                              strong {
+                                   color: rgba($main-colour,0.8);
+                              }
+                         }
+                         .loader {
+                              display: none;
+                              width: 180px;
+                              height: 180px;
+                              border-top: 15px solid rgba($black,0.2);
+                              border-right: 15px solid rgba($black,0.2);
+                              border-bottom: 15px solid rgba($black,0.2);
+                              border-left: 15px solid rgba($black,0.5);
+                         }
+                         .amount-due {
+                              text-align: center;
+                              padding: 1em 1em 0 1em;
+                         }
+                         .pay-invoice, .pay-account {
+                              // background: rgba($blue,0.1);
+                              float: left;
+                              clear: both;
+                              margin: 0.5em 0 0 0;
+                              border-top: 2px dashed rgba($white, 0.2);
+                              padding: 0.75em 1em;
+                              display: inline-block;
+                              width: 100%;
+                              // min-height: 4.75em;
+                              box-shadow: inset 0 5px 10px 0 rgba($black,0.1);
+                              border-radius: 0 0 5px 5px;
+                              p {
+                                   font-size: 0.875rem;
+                              }
+                              .main-cta {
+                                   float: left;
+                                   clear: none;
+                                   border-color: $white;
+                                   background: $white;
+                                   color: $blue;
+                                   margin: 0;
+                                   font-size: 0.875rem;
+                                   padding: 0.5em 0.625em;
+                                   &.secondary {
+                                        background: none;
+                                        margin-right: 1em;
+                                        &:hover, &:active, &:focus {
+                                             background: $blue;
+                                        }
+                                   }
+                                   &.tertiary {
+                                        margin: 0 0 0 1.25em;
+                                        color: $white;
+                                        background: none;
+                                        border-color: rgba($white,1);
+                                   }
+                              }
+                         }
+                         .pay-account {
+                              display: none;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@-webkit-keyframes no-transform {
+     100% {
+          -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+     }
+}
+
+@keyframes no-transform {
+     100% {
+          -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+     }
+}
+
+
+#side-panel {
+     #finance-details {
+          ul.invoice-list {
+               width: 97%;
+               li {
+                    .main-info {
+                         width: 95%;
+                    }
+                    .cta-row {
+                         display: none;
+                    }
+               }
+          }
+     }
+}
+
+
+
+// ONLY FOR LARGE DESKTOP (1281 up)
+@media #{$xlarge-up} {
+
+
+}
+
+// ONLY FOR LARGE DESKTOP (1281)
+@media #{$xlarge-only} {
+
+}
+
+// ONLY FOR DESKTOP (961)
+@media #{$large-only} {
+
+
+}
+
+// ONLY FOR DESKTOP (961 up)
+@media #{$large-up} {
+
+
+}
+
+// TABLET AND UP (461 up)
+@media #{$medium-up} {
+
+
+}
+
+// MEDIUM ONLY (461 - 960)
+@media #{$medium-only} {
+
+
+}
+
+// // ONLY FOR MOBILE (960 and down)
+// @media #{$medium-down} {
+//
+// }
+
+// SMARTPHONE ONLY (Up to 460)
+@media #{$small-only} {
+
+
+
+}

@@ -194,7 +194,7 @@
                     }
                     .report-info, .lodging-section, .notes-section {
                          .item, .item-notes {
-                              width: 25%;
+                              width: 50%;
                               margin-bottom: 0;
                          }
                          .item {
@@ -231,7 +231,7 @@
                position: relative;
                z-index: 1;
                .wrapper {
-                    display: inline-block;
+                    display: flex;
                     width: 100%;
                     position: relative;
                }
@@ -500,15 +500,28 @@
                          }
                          .item, .item-notes {
                               // width: 50%;
-                              margin-bottom: 0.5em;
+                              margin-bottom: 0.75em;
+                              &.notes {
+                                   p {
+                                        width: 100%;
+                                   }
+                              }
+                              &.full-width {
+                                   .wrapper {
+                                        display: inline-block;
+                                   }
+                              }
+                              p {
+                                   width: 50%;
+                              }
                               .highlight {
-                                   font-size: 1.2rem;
+                                   font-size: 1rem;
                                    line-height: 1.4;
                                    color: $black;
                                    font-family: $Montserrat;
                                    text-transform: uppercase;
                                    display: inline-block;
-                                   width: 100%;
+                                   width: 50%;
                                    div {
                                         display: inline-block;
                                         width: auto;
@@ -937,7 +950,7 @@
                                    }
                               }
                               .main-info {
-                                   width: 76.5%;
+                                   // width: 76.5%;
                                    // background: $blue-grey;
                                    .report-content-section {
                                         background: lighten($blue-grey,5%);
@@ -999,6 +1012,19 @@
                                         // background: lighten($amber,25%);
                                    }
                               }
+                              .main-info {
+                                   // width: 76.5%;
+                                   // background: $blue-grey;
+                                   .report-content-section {
+                                        background: lighten($blue-grey,5%);
+                                        .wrapper {
+                                             box-shadow: none;
+                                             border-radius: 0;
+                                             padding: 0;
+                                             margin: 0;
+                                        }
+                                   }
+                              }
                               .cta-row {
                                    background: $amber;
                                    // background: lighten($amber,20%);
@@ -1017,12 +1043,13 @@
                               }
                          }
                          .main-info {
-                              width: 76.5%;
+                              width: 75%;
+                              float: left;
                               position: relative;
                               z-index: 10;
                               margin: 0;
                               border-radius: 0 5px 5px 0;
-                              padding: 1em 2em 1em 0.5em;
+                              padding: 1em 1.5em 1em 0.5em;
                          }
                          .view-report {
                               // width: 64.95%;
@@ -1035,7 +1062,7 @@
                               width: 95%;
                               margin: 0.25em 5% 0 5%;
                               border-top: 2px dashed rgba($white, 0.2);
-                              padding: 1em 0 1em 1em;
+                              padding: 1em 0 0 1em;
                               .main-cta {
                                    float: right;
                                    border-color: $white;
@@ -1051,10 +1078,10 @@
                               width: 25%;
                               // background: $white;
                               display: inline-block;
-                              position: absolute;
-                              top: 0;
-                              right: 0;
-                              bottom: 0;
+                              // position: absolute;
+                              // top: 0;
+                              // right: 0;
+                              // bottom: 0;
                               padding: 1em;
                               z-index: 1;
                               float: right;

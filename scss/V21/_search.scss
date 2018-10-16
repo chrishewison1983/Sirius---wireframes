@@ -30,7 +30,7 @@
      }
 }
 
-#pagination, #pagination-small {
+#pagination, #pagination.small, #pagination-new {
      display: inline-block;
      width: 100%;
      margin: 0 0 0 0;
@@ -105,11 +105,21 @@
      // }
 }
 
-#pagination-small {
-     margin: 2em 0 0 0;
-     border-top: 10px solid $blue-grey;
-     padding: 2em 0 0 0;
-     @include justify-content(flex-end);
+#pagination-new {
+     a.disabled {
+          color: $blue-grey;
+          background: none;
+          cursor: default;
+     }
+}
+
+#pagination {
+     &.small {
+          margin: 2em 0 0 0;
+          border-top: 10px solid $blue-grey;
+          padding: 2em 0 0 0;
+          @include justify-content(flex-end);
+     }
 }
 
 .dashboard {
@@ -118,13 +128,15 @@
                float: right;
                position: relative;
                top: -0.1em;
-               #pagination-small {
-                    margin: 0 0 -0.5em 0;
-                    padding: 0;
-                    border: none;
-                    width: auto;
-                    span {
+               #pagination {
+                    &.small {
+                         margin: 0 0 -0.5em 0;
+                         padding: 0;
+                         border: none;
                          width: auto;
+                         span {
+                              width: auto;
+                         }
                     }
                }
           }
@@ -185,10 +197,14 @@
                          margin: 0 0 0.5em 0;
                          display: inline-block;
                          color: $black;
+                         border-bottom: 2px dashed;
                          strong {
                               span {
                                    color: $blue;
                               }
+                         }
+                         &:hover, &:active, &:focus {
+                              border-bottom: 2px solid;
                          }
                     }
                }
@@ -200,11 +216,19 @@
                }
           }
      }
-     #pagination-small {
-          margin: 0 0 0 0;
-          padding: 1.5em 0 0 0;
+     #pagination {
+          &.small {
+               margin: 0 0 0 0;
+               padding: 1.5em 0 0 0;
+               border-top: 10px solid $blue-grey;
+               justify-content: center;
+          }
+     }
+     #pagination-new {
           border-top: 10px solid $blue-grey;
-          justify-content: center;
+          padding-top: 1em;
+          margin-top: 1.5em;
+          @include justify-content(flex-end);
      }
 }
 
@@ -242,6 +266,14 @@
                display: inline-block;
                list-style: none;
                width: 100%;
+               .form-group {
+                    margin: 0;
+                    &.read-only {
+                         strong {
+                              color: rgba($main-colour, 0.7);
+                         }
+                    }
+               }
                strong {
                     color: $blue;
                }

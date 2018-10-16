@@ -29,19 +29,23 @@ $('.clear-filter').click(function(e){
      $('.content-wrapper.dashboard .tab-content.dashboard#tab-4 .description-title').html(`Reassign clients`);
      $('.content-wrapper.dashboard .tab-content.dashboard#tab-5 .description-title').html(`Reassign deputies`);
 
+     $(this).find('.client-controller .filter-numbers span.number').text('302').addClass('three-figures');
+
 });
 
 $('.filter-panel .clear-filter').click(function(e){
      // Clears filters
      $(this).parents().find('.search-filters .main-filter').show().removeClass('filter-active');
-     $(this).parents().find('.search-filters .filter, .search-filters .filter-numbers, .search-filters .filter-select-all-clear').hide();
+     // $(this).parents().find('.search-filters .filter, .search-filters .filter-numbers, .search-filters .filter-select-all-clear').hide();
+     $(this).parents().find('.search-filters .filter, .search-filters .filter-select-all-clear').hide();
      $(this).parents().find('.filter-tasks-category').prop('selectedIndex',0);
 });
 
 $('.re-assign-panel .clear-filter').click(function(e){
      // Clears filters
      $(this).parents().find('.search-filters .main-filter').show().removeClass('filter-active');
-     $(this).parents().find('.search-filters .filter, .search-filters .filter-numbers, .search-filters .filter-select-all-clear, .search-filters .step-3, .search-filters .step-4').hide();
+     // $(this).parents().find('.search-filters .filter, .search-filters .filter-numbers, .search-filters .filter-select-all-clear, .search-filters .step-3, .search-filters .step-4').hide();
+     $(this).parents().find('.search-filters .filter, .search-filters .filter-select-all-clear, .search-filters .step-3, .search-filters .step-4').hide();
      $(this).parents().find('.search-filters .step-2').removeClass('step-2-filter-active');
      $(this).parents().find('.my-tasks-assign-to').prop('selectedIndex',0);
 });
@@ -50,8 +54,10 @@ $('.filter-panel.completed-tasks .clear-filter').click(function(e){
      // Clears tables
      $('#completed-tasks-table').find('tr').hide();
      $('#completed-tasks-table').find('tr.today').show();
+     $('#completed-tasks-table').find('thead tr').show();
 
      // Clears filters
+     $('.caseworker-filter .task-filter').find('.filter, .step-1').show().removeClass('step-1-filter-active');
      $(this).parents().find('.search-filters .main-filter').show().removeClass('filter-active');
      $(this).parents().find('#filter-date-completed').prop('selectedIndex',0);
 });
@@ -83,6 +89,10 @@ $('.caseworker-search .clear-filter').click(function(e){
 // =================================== Dashboard - clear filter - JAVASCRIPT - END =================================== //
 
 // =================================== Dashboard - cancel reassign - JAVASCRIPT - START =================================== //
+$('.cancel-re-assign').click(function(e){
+     $('.select-all-clients, .select-all-clients').removeClass('checked');
+});
+
 // WHEN FILTERING CANCEL
 $('.filter-panel .cancel-re-assign').click(function(e){
      e.preventDefault();
@@ -105,10 +115,27 @@ $('.filter-panel .cancel-re-assign').click(function(e){
 
 });
 
+$('.filter-panel .cancel-re-assign').click(function(e){
+     $('.filter-panel .filter-numbers').removeClass('selected');
+     $('.filter-panel .filter-numbers span.number').addClass('three-figures');
+});
+
+$('.filter-panel.task-controller .cancel-re-assign').click(function(e){
+     $('.filter-panel.task-controller .filter-numbers span.number').text('23');
+     $('.filter-panel .filter-numbers span.number').removeClass('three-figures');
+});
+
+$('.filter-panel.client-controller .cancel-re-assign').click(function(e){
+     $('.filter-panel.client-controller .filter-numbers span.number').text('302');
+     $('.filter-panel .filter-numbers span.number').addClass('three-figures');
+});
+
+
 // WHEN REASSIGNING CANCEL
 $('.re-assign-panel .cancel-re-assign').click(function(e){
      e.preventDefault();
-     $('.re-assign-panel, .filter-select-all-clear, .filter-numbers').hide();
+     // $('.re-assign-panel, .filter-select-all-clear, .filter-numbers').hide();
+     $('.re-assign-panel, .filter-select-all-clear').hide();
      $('.filter-panel').show();
 
      // Clears tables
@@ -124,5 +151,19 @@ $('.re-assign-panel .cancel-re-assign').click(function(e){
      $('.filter-panel').find('.main-filter input, .main-filter select, .step-1 input, .step-1 select').removeAttr('disabled');
      $('.filter-panel').find('#select-all-tasks').removeAttr('checked').parent().removeClass('checked');
 
+});
+
+$('.re-assign-panel .cancel-re-assign').click(function(e){
+     $('.filter-panel .filter-numbers').removeClass('selected');
+});
+
+$('.re-assign-panel.task-controller .cancel-re-assign').click(function(e){
+     $('.filter-panel.task-controller .filter-numbers span.number').text('23');
+     $('.filter-panel .filter-numbers span.number').removeClass('three-figures');
+});
+
+$('.re-assign-panel.client-controller .cancel-re-assign').click(function(e){
+     $('.filter-panel.client-controller .filter-numbers span.number').text('302');
+     $('.filter-panel .filter-numbers span.number').addClass('three-figures');
 });
 // =================================== Dashboard - cancel reassign - JAVASCRIPT - END =================================== //

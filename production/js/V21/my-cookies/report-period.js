@@ -375,7 +375,7 @@ if ($.cookie("reporting-created-completed") == 'true' && $.cookie("lodge-report"
                </div>
           </div>
           <div class="content-wrapper">
-               <div class="item-notes">
+               <div class="item-notes full-width">
                     <div class="wrapper">
                          <p>Reason for determination:</p>
                          <p class="highlight report-value-notes-answer">...</p>

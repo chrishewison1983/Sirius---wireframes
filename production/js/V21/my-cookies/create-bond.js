@@ -69,7 +69,7 @@ if ($.cookie('security-bond') === 'Yes' ) {
      $('.security-bond').hide();
      $('#dispense-bond').hide();
 
-     $('.the-bond-info #section-header .breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html">Mr Gerald Brackens</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
+     $('.the-bond-info #section-header .breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html">Mr Gerald Brackens</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
      $('.the-bond-info #section-header h1').text('The bond');
 
      $('.case-info h2 .add-bond, .actions-nav .add-bond, #client-order-table .add-bond').hide();
@@ -93,7 +93,7 @@ if ($.cookie('security-bond') === 'edit' ) {
      $('.security-bond').hide();
      $('#dispense-bond').show();
 
-     $('.the-bond-info #section-header .breadcrumb').html('<a href="../index.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html">Mr Gerald Brackens</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
+     $('.the-bond-info #section-header .breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html">Mr Gerald Brackens</a> <div class="separator"> > </div> <a href="../4-client-hub/4a-new-client.html#PFA">PFA | 14820940</a> <div class="separator"> > </div> <span>The Bond</span>');
      $('.the-bond-info #section-header h1').text('Edit the bond');
      $('#bond-details-section .section-title').text('Edit the bond');
 

@@ -1,7 +1,7 @@
 <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel deputy-controller">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-deputies">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-deputies scroller">
 		<form class="search-filters deputy-filter">
 
 			<!-- <div class="search-section">
@@ -15,7 +15,7 @@
 					<div class="wrapper">
 						<label for="filter-category-deputies" class="float-left title-label">Filter</label>
 						<select id="filter-category-deputies" class="filter-category-deputies">
-							<option value="">-- Filter by --</option>
+							<option value="">My deputies</option>
 							<option value="My teams deputies">My teams deputies</option>
 							<option value="Search deputies">Search deputies</option>
 							<option value="Deputy type">Deputy type</option>
@@ -149,14 +149,34 @@
 			</div>
 
 		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th style="width: 30%;"><span></span>Name</th>
+								<th style="width: 15%;">Clients</th>
+								<th style="width: 15%;"><span></span>Deputy type</th>
+								<th style="width: 15%;"><span></span>Supervision level</th>
+								<th style="width: 15%;">Tasks</th>
+								<th style="width: 10%;"><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /////////////// FILTER PANEL - END /////////////// -->
 
 <!-- /////////////// REASSIGN PANEL - START /////////////// -->
 <div class="re-assign-panel deputy-controller">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-deputies">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-deputies scroller">
 		<form class="search-filters deputy-filter">
 
 			<div class="filter-buttons">
@@ -226,6 +246,26 @@
 			</div>
 
 		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th style="width: 30%;"><span></span>Name</th>
+								<th style="width: 15%;">Clients</th>
+								<th style="width: 15%;"><span></span>Deputy type</th>
+								<th style="width: 15%;"><span></span>Supervision level</th>
+								<th style="width: 15%;">Tasks</th>
+								<th style="width: 10%;"><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /////////////// REASSIGN PANEL - END /////////////// -->

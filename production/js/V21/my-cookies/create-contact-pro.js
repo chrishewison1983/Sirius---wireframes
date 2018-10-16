@@ -6,9 +6,9 @@ $('.add-pro-contact').click(function(){
 
 if ($.cookie("add-pro-contact-journey") == 'true') {
      $('#section-header.deputy-page.content-page nav.breadcrumb').html(`
-          <a href="../index.html" class="user-type-link">Dashboard</a>
+          <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
           <div class="separator"> > </div>
-          <a href="../14-deputy-hub/14b-deputy-page.html">Bob Loblaw Ltd</a>
+          <a href="../14-deputy-hub/14b-deputy-hub.html">Bob Loblaw Ltd</a>
           <div class="separator"> > </div>
           <span>Create an office</span>
      `);
@@ -18,7 +18,7 @@ if ($.cookie("add-pro-contact-journey") == 'true') {
      `);
 
      watchFormChanges($('.add-deputy-contact-form'), $('#create-deputy-office'));
-     $('#create-deputy-office').attr('href', '../14-deputy-hub/14b-deputy-page.html');
+     $('#create-deputy-office').attr('href', '../14-deputy-hub/14b-deputy-hub.html');
 }
 
 // Save the contact details - PA
@@ -50,6 +50,12 @@ $("#create-deputy-office").on("click", function (e) {
                          $("#deputy-office-address-town"), $("#deputy-office-address-county"),
                          $("#deputy-office-manual-postcode")].filter(item => item.val().trim() !== '')
           },
+          { target: 'deputy-office-address-line-1-answer', items: [$("#deputy-office-address-line-1")] },
+          { target: 'deputy-office-address-line-2-answer', items: [$("#deputy-office-address-line-2")] },
+          { target: 'deputy-office-address-line-3-answer', items: [$("#deputy-office-address-line-3")] },
+          { target: 'deputy-office-address-town-answer', items: [$("#deputy-office-address-town")] },
+          { target: 'deputy-office-address-county-answer', items: [$("#deputy-office-address-county")] },
+          { target: 'deputy-office-manual-postcode-answer', items: [$("#deputy-office-manual-postcode")] },
           // { target: 'deputy-office-clients-answer', items: [$("#deputy-office-clients")] },
      ];
 
@@ -91,7 +97,9 @@ $("#create-deputy-office").on("click", function (e) {
      // $.cookie("deputy-contact-email", $("#deputy-contact-email").val(), {path:'/'});
 });
 
-if ($.cookie("deputy-office-name")) { $(".deputy-office-name-answer").text($.cookie("deputy-office-name")); }
+if ($.cookie("deputy-office-name")) {
+     $(".deputy-office-name-answer").text($.cookie("deputy-office-name"));
+}
 if ($.cookie("deputy-office-phone-number")) { $(".deputy-office-phone-number-answer").text($.cookie("deputy-office-phone-number")); }
 if ($.cookie("deputy-office-address-line-1")) {
      $(".deputy-office-address-answer").text($.cookie("deputy-office-address-line-1") + ', ' + $.cookie("deputy-office-address-line-2") + ', ' + $.cookie("deputy-office-address-line-3") + ', ' + $.cookie("deputy-office-address-town") + ', ' + $.cookie("deputy-office-address-county") + ', ' + $.cookie("deputy-office-address-county") + '. ' + $.cookie("deputy-office-manual-postcode") + '.');
@@ -110,7 +118,7 @@ if ($.cookie("deputy-contact-notes")) { $(".deputy-contact-notes-answer").text($
 $('#create-deputy-office').click(function(){
      if (!$(this).hasClass('de-activate')) {
           if ($.cookie("create-contact-pro") == 'true') {
-               window.location.href = '../14-deputy-hub/14b-deputy-page.html';
+               window.location.href = '../14-deputy-hub/14b-deputy-hub.html';
                setTimeout(function() {
                     $.cookie("create-contact-pro", false, {path:'/'});
                }, 5000);
@@ -131,7 +139,7 @@ if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journe
      $('.deputy-details-page.professional .tab-content#tab-3').addClass('current');
 
      var contactNumber = parseInt($('ul.deputy-tabs li[data-tab="tab-3"] span').text());
-     $('ul.deputy-tabs li[data-tab="tab-3"] span').text(contactNumber + 1);
+     $('.professional ul.deputy-tabs li[data-tab="tab-3"] span').text(contactNumber + 1);
 
      // Add the contact to the Deputy
      var html = $(`
@@ -162,7 +170,7 @@ if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journe
                     </div>
                </td>
                <td>
-                    <a href="#" class="main-cta tertiary edit">Edit</a>
+                    <a href="../21-deputy-contacts/21b-add-contact.html" class="main-cta tertiary edit">Edit</a>
                </td>
           </tr>
 
@@ -175,9 +183,7 @@ if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journe
 
                     </div>
 
-                    <hr>
-
-                    <div class="details-wrap full-width">
+                    <div class="details-wrap">
 
                          <div class="person-detail-item full-width">
                               <p class="item">Notes:</p>
@@ -203,7 +209,7 @@ if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journe
                if (emails[i].primary) {
                     prefix = '.preferred-contact';
 
-                    html.find(prefix + ' .email').text(emails[i].email);
+                    html.find(prefix + ' .email a').text(emails[i].email);
                     html.find(prefix + ' .phone-number').text(emails[i].phoneNumber);
                     html.find(prefix + ' .name').text(emails[i].name);
                } else {
@@ -217,8 +223,41 @@ if ($.cookie("create-contact-pro") == 'true' && $.cookie("add-pro-contact-journe
 
           $('#contact-list-deputy-pro tbody').prepend(html);
 
+          // Changes the confirmation text
+          $('#contact-added-confirm').show();
+          $('#contact-added-confirm .contact-title').text(`${data['deputy-office-name-answer']}`);
+
+          setTimeout(function() {
+               $('#contact-added-confirm').slideUp();
+          }, 5000);
+
           // Populates the drop down for the edit case page (5e-edit-case-details)
           $('#deputy-professional-contact').append(`<option value="New office">${data['deputy-office-name-answer']}</option>`);
+
+          // Populates the office details on edit the contact
+          $('#deputy-office-name').val(`${data['deputy-office-name-answer']}`);
+          $('#deputy-office-phone-number').val(`${data['deputy-office-phone-number-answer']}`);
+          $('#deputy-office-address-line-1').val(`${data['deputy-office-address-line-1-answer']}`);
+          $('#deputy-office-address-line-2').val(`${data['deputy-office-address-line-2-answer']}`);
+          $('#deputy-office-address-line-3').val(`${data['deputy-office-address-line-3-answer']}`);
+          $('#deputy-office-address-town').val(`${data['deputy-office-address-town-answer']}`);
+          $('#deputy-office-address-county').val(`${data['deputy-office-address-county-answer']}`);
+          $('#deputy-office-manual-postcode').val(`${data['deputy-office-manual-postcode-answer']}`);
+
+          $('.deputy-office-pro-notes .jqte .jqte_editor').text(`${data['deputy-office-pro-notes-answer']}`);
+
+          // Populates the contact details on edit the contact
+          $('#office-full-name-1').val(`${emails[0].name}`);
+          $('#office-phone-number-1').val(`${emails[0].phoneNumber}`);
+          $('#office-email-address-1').val(`${emails[0].email}`);
+
+          $('#office-full-name-2').val(`${emails[1].name}`);
+          $('#office-phone-number-2').val(`${emails[1].phoneNumber}`);
+          $('#office-email-address-2').val(`${emails[1].email}`);
+
+          $('#office-full-name-3').val(`${emails[2].name}`);
+          $('#office-phone-number-3').val(`${emails[2].phoneNumber}`);
+          $('#office-email-address-3').val(`${emails[2].email}`);
 
      }
 

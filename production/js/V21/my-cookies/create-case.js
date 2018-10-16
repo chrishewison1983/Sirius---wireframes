@@ -86,7 +86,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#order-type-property').parent().removeClass('checked');
           $('#order-type-property').removeAttr('checked');
           $('.breadcrumb').html(`
-               <a href="../index.html" class="user-type-link">Dashboard</a>
+               <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                <div class="separator"> &gt; </div>
                <a href="../4-client-hub/4a-new-client.html">
                     <div class="client-title">Mr</div>
@@ -107,6 +107,10 @@ if (window.location.href.indexOf("EditCase") != -1) {
 
           // CTA on the edit page url
           $('#create-case-button').attr('href', '../4-client-hub/4a-new-client.html#HandW');
+
+          // Order deputy type
+          $('input[value="Lay"]').attr('checked', 'checked').parent().addClass('checked');
+          $('input[value="Professional"], input[value="Public authority"]').removeAttr('checked').parent().removeClass('checked');
      }
      if ($.cookie('order-type') === 'Property and finance' ) {
           $('#order-type-property').parent().addClass('checked');
@@ -114,7 +118,7 @@ if (window.location.href.indexOf("EditCase") != -1) {
           $('#order-type-welfare').parent().removeClass('checked');
           $('#order-type-welfare').removeAttr('checked');
           $('.breadcrumb').html(`
-               <a href="../index.html" class="user-type-link">Dashboard</a>
+               <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                <div class="separator"> &gt; </div>
                <a href="../4-client-hub/4a-new-client.html">
                     <div class="client-title">Mr</div>
@@ -135,6 +139,11 @@ if (window.location.href.indexOf("EditCase") != -1) {
 
           // CTA on the edit page url
           $('#create-case-button').attr('href', '../4-client-hub/4a-new-client.html#PFA');
+
+          // Order deputy type
+          $('input[value="Lay"]').attr('checked', 'checked').parent().addClass('checked');
+          $('input[value="Professional"], input[value="Public authority"]').removeAttr('checked').parent().removeClass('checked');
+
      }
 
      // Court reference
@@ -182,19 +191,24 @@ if (window.location.href.indexOf("EditCase") != -1) {
      }
 
      // Order deputy type
-     if ($.cookie("order-deputy-type")) {
-          $('.order-deputy-type-answer').val($.cookie("order-deputy-type"));
-     }
-     if ($.cookie("order-deputy-type") === 'Lay') {
-          $('input[value="Lay"]').attr('checked', 'checked').parent().addClass('checked');
-          $('input[value="Professional"], input[value="Public authority"]').removeAttr('checked').parent().addClass('checked');
-     } else if ($.cookie("order-deputy-type") === 'Professional') {
-          $('input[value="Professional"]').attr('checked', 'checked').parent().addClass('checked');
-          $('input[value="Lay"], input[value="Public authority"]').removeAttr('checked').parent().addClass('checked');
-     } else if ($.cookie("order-deputy-type") === 'Public authority') {
-          $('input[value="Public authority"]').attr('checked', 'checked').parent().addClass('checked');
-          $('input[value="Lay"], input[value="Professional"]').removeAttr('checked').parent().addClass('checked');
-     }
+     // if ($.cookie("order-deputy-type")) {
+     //      $('.order-deputy-type-answer').val($.cookie("order-deputy-type"));
+     // }
+     // if ($.cookie("order-deputy-type") === 'Lay') {
+     //      $('input[value="Lay"]').attr('checked', 'checked').parent().addClass('checked');
+     //      $('input[value="Professional"], input[value="Public authority"]').removeAttr('checked').parent().addClass('checked');
+     // } else if ($.cookie("order-deputy-type") === 'Professional') {
+     //      $('input[value="Professional"]').attr('checked', 'checked').parent().addClass('checked');
+     //      $('input[value="Lay"], input[value="Public authority"]').removeAttr('checked').parent().addClass('checked');
+     // } else if ($.cookie("order-deputy-type") === 'Public authority') {
+     //      $('input[value="Public authority"]').attr('checked', 'checked').parent().addClass('checked');
+     //      $('input[value="Lay"], input[value="Professional"]').removeAttr('checked').parent().addClass('checked');
+     // }
+     // else {
+     //      $('input[value="Lay"]').attr('checked', 'checked').parent().addClass('checked');
+     //      $('input[value="Professional"], input[value="Public authority"]').removeAttr('checked').parent().addClass('checked');
+     // }
+
 
      // Order issue date
      if ($.cookie("order-issue-day")) {

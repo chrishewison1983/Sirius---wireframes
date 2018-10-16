@@ -1,7 +1,7 @@
 <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel client-controller">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-clients">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-clients scroller">
 		<form class="search-filters client-filter">
 
 			<!-- <div class="search-section">
@@ -15,7 +15,7 @@
 					<div class="wrapper">
 						<label for="filter-category" class="float-left title-label">Filter</label>
 						<select id="filter-category" class="filter-category">
-							<option value="">-- Filter by --</option>
+							<option value="My clients">My clients</option>
 							<option value="My teams clients">My teams clients</option>
 							<option value="Search clients">Search clients</option>
 							<option value="Deputy type">Deputy type</option>
@@ -131,7 +131,7 @@
 				<div class="filter-numbers">
 					<div class="wrapper">
 						<p>
-							<span class="number">23</span>
+							<span class="number three-figures">302</span>
 							<br>
 							<span class="desc">clients</span>
 						</p>
@@ -150,14 +150,35 @@
 			</div>
 
 		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th style="width: 25%;"><span></span>Name</th>
+								<th style="width: 15%;">Orders</th>
+								<th style="width: 15%;">Deputies</th>
+								<th style="width: 12%;"><span></span>Deputy type</th>
+								<th style="width: 15%;"><span></span>Supervision level</th>
+								<th style="width: 7%;">Tasks</th>
+								<th style="width: 20%;"><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /////////////// FILTER PANEL - END /////////////// -->
 
 <!-- /////////////// REASSIGN PANEL - START /////////////// -->
 <div class="re-assign-panel client-controller">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-clients">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-clients scroller">
 		<form class="search-filters client-filter">
 
 			<div class="filter-buttons">
@@ -212,7 +233,7 @@
 				<div class="filter-numbers">
 					<div class="wrapper">
 						<p>
-							<span class="number">23</span>
+							<span class="number three-figures">302</span>
 							<br>
 							<span class="desc">clients</span>
 						</p>
@@ -227,6 +248,27 @@
 			</div>
 
 		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th style="width: 25%;"><span></span>Name</th>
+								<th style="width: 15%;">Orders</th>
+								<th style="width: 15%;">Deputies</th>
+								<th style="width: 12%;"><span></span>Deputy type</th>
+								<th style="width: 15%;"><span></span>Supervision level</th>
+								<th style="width: 7%;">Tasks</th>
+								<th style="width: 20%;"><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /////////////// REASSIGN PANEL - END /////////////// -->

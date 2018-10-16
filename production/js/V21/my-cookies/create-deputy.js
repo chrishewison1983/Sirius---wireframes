@@ -47,6 +47,7 @@ $("#add-deputy-step-1").on("click", function (e) {
      $.cookie("deputy-country-desc", $("#deputy-country-description").val(), {path:'/'});
      $.cookie("deputy-airmail", $("input[name=deputy-airmail]:checked").val(), {path:'/'});
      $.cookie("deputy-phone-number", $("#deputy-phone-number").val(), {path:'/'});
+     $.cookie("deputy-evening-number", $("#deputy-evening-number").val(), {path:'/'});
      $.cookie("deputy-mob-number", $("#deputy-mob-number").val(), {path:'/'});
      $.cookie("deputy-email", $("#deputy-email").val(), {path:'/'});
      $.cookie("deputy-financial", $("#deputy-financial").val(), {path:'/'});
@@ -377,6 +378,10 @@ if ($.cookie("deputy-airmail") == '' || $.cookie("deputy-airmail") == null || $.
 if ($.cookie("deputy-phone-number")) {
      $("#edit-deputy-phone-number").val($.cookie("deputy-phone-number"));
      $(".deputy-phone-number-answer").text($.cookie("deputy-phone-number"));
+}
+if ($.cookie("deputy-evening-number")) {
+     $("#edit-deputy-evening-number").val($.cookie("deputy-evening-number"));
+     $(".deputy-evening-number-answer").text($.cookie("deputy-evening-number"));
 }
 if ($.cookie("deputy-mob-number")) {
      $("#edit-deputy-mob-number").val($.cookie("deputy-mob-number"));

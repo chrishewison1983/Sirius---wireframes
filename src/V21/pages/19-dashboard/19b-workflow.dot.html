@@ -54,7 +54,7 @@
                               Summary
                          </li>
                          <li class="tab-link" data-tab="tab-1">
-                              <span>15</span> Tasks
+                              <span>23</span> Tasks
                          </li>
                		<!-- <li class="tab-link" data-tab="tab-2">
                               <span>4</span> My cases
@@ -63,7 +63,7 @@
                               <span>1</span> Completed tasks
                          </li>
                          <li class="tab-link hide" data-tab="tab-4">
-                              <span class="small">999+</span> Clients
+                              <span class="small">300+</span> Clients
                          </li>
                          <li class="tab-link" data-tab="tab-5">
                               <span>55</span> Deputies
@@ -105,6 +105,26 @@
 
                          <h2 class="description-title">Tasks</h2>
 
+                         <!-- /////////////////////////// Pagination - START /////////////////////////// -->
+                         <div class="wrapper pagination-wrapper">
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
+                                   <span>
+                                        <a class="current">1</a>
+                                        <a>2</a>
+                                        <a>3</a>
+                                        <a>4</a>
+                                        <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
+                                   </span>
+                                   <a>></a>
+                                   <a>>></a>
+                              </div>
+                         </div>
+                         <!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
                          <!-- /////////////////////////// DATE PICKER - START /////////////////////////// -->
                          <div class="wrapper datepicker-wrapper">
                               <form>
@@ -125,22 +145,6 @@
                               </form>
                          </div>
                          <!-- /////////////////////////// DATE PICKER - END /////////////////////////// -->
-
-                         <!-- /////////////////////////// Pagination - START /////////////////////////// -->
-                         <!-- <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="pagination-small">
-                                   <a>-</a>
-                                   <span>
-                                        <a class="current">1</a>
-                                        <a>2</a>
-                                        <a>3</a>
-                                        <a>4</a>
-                                        <a>5</a>
-                                   </span>
-                                   <a>+</a>
-                              </div>
-                         </div> -->
-                         <!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
                          {{= it.include('filters/filter-tasks.html') }}
 
@@ -168,16 +172,20 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="completed-tasks-pagination pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->
@@ -196,16 +204,20 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->
@@ -228,16 +240,20 @@
 
                          <!-- /////////////////////////// Pagination - START /////////////////////////// -->
                          <div class="wrapper pagination-wrapper">
-                              <div id="pagination-small" class="pagination-small">
-                                   <a>-</a>
+                              <div id="pagination-new">
+                                   <a class="disabled"><<</a>
+                                   <a class="disabled"><</a>
                                    <span>
                                         <a class="current">1</a>
                                         <a>2</a>
                                         <a>3</a>
                                         <a>4</a>
                                         <a>5</a>
+                                        <i>...</i>
+                                        <a>20</a>
                                    </span>
-                                   <a>+</a>
+                                   <a>></a>
+                                   <a>>></a>
                               </div>
                          </div>
                          <!-- /////////////////////////// Pagination - END /////////////////////////// -->

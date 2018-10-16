@@ -296,18 +296,18 @@ $('#sort-workers').change(function() {
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-2"]').css('order', '2').css('margin-right', '2%');
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-3"]').css('order', '3').css('margin-right', '2%');
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-4"]').css('order', '4').css('margin-right', '2%');
-          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-5"]').css('order', '5').css('margin-right', '2%');
-          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-6"]').css('order', '6').css('margin-right', '0');
+          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-5"]').css('order', '5').css('margin-right', '0');
+          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-6"]').css('order', '6').css('margin-right', '2%');
      } else if ($(this).val() == 'Outstanding tasks') {
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-1"]').css('order', '1').css('margin-right', '2%');
-          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-2"]').css('order', '5').css('margin-right', '2%');
+          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-2"]').css('order', '5').css('margin-right', '0');
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-3"]').css('order', '4').css('margin-right', '2%');
-          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-4"]').css('order', '6').css('margin-right', '0');
+          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-4"]').css('order', '6').css('margin-right', '2%');
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-5"]').css('order', '2').css('margin-right', '2%');
           $('.dashboard-item-container.team-review .user-summary[data-worker="worker-6"]').css('order', '3').css('margin-right', '2%');
      } else {
           $('.dashboard-item-container.team-review .user-summary').css('order', 'inherit').css('margin-right', '2%');
-          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-4"]').css('margin-right', '0');
+          $('.dashboard-item-container.team-review .user-summary[data-worker="worker-2"]').css('margin-right', '0');
      }
 });
 // ====================== SORT WORKERS - END ====================== //

@@ -3,11 +3,11 @@
 // Form Load
 $('.new-event-form').hide();
 
-$('#pre-loader').show();
+$('.new-event-showcase #pre-loader').show();
 
 setTimeout(function() {
      $('.new-event-form').show();
-     $('#pre-loader').hide();
+     $('.new-event-showcase #pre-loader').hide();
 }, 1500);
 
 // Confirm message
@@ -65,7 +65,28 @@ $(".event-notes").click( function(){
      $("#event-error-button").removeClass('de-activate');
 });
 
+$("#replacement-document").click( function(){
+     $("#replace-event-button").removeClass('de-activate');
+     $("#replace-event-button").attr('href', '../4-client-hub/4a-new-client.html');
+});
+
+
 $("#event-error-button").click( function(){
      $('#event-error-message').show();
      $('#dropzone').parent().addClass('error-field');
 });
+
+// =================================== Replace document Event - JAVASCRIPT =================================== //
+// $(document).ready(function () {
+//
+//      $("#dropzone").click( function(){
+//           $("#replace-event-button").removeClass('de-activate');
+//           $("#replace-event-button").attr('href', '../4-client-hub/4a-new-client.html');
+//      });
+//
+// });
+
+
+// $(".event-notes").click( function(){
+//      $("#event-error-button").removeClass('de-activate');
+// });

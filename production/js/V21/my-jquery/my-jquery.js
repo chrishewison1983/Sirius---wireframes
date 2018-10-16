@@ -125,48 +125,48 @@ $(document).ready(function(){
 });
 
 
-$('.client-home-button').click(function(){
-     // Changes the horizontal tabs
-     // $('.client-nav .client-details .tablinks.overview').addClass('active');
-     // $('.client-nav .client-details .tablinks.health, .client-nav .client-details .tablinks.property').removeClass('active');
-
-     // Changes the tab content
-     // $('#client-overview').show();
-     // $('#client-health, #client-property').hide();
-
-     // Changes the view to see the client details
-     // $('#client-overview .client-details.tabs li').removeClass('current');
-     // $('#client-overview .client-details.tabs li[data-tab="summary-tab-1"]').addClass('current');
-
-     // $('#client-overview .client-details.tab-content').removeClass('current');
-     // $('#client-overview #summary-tab-1').addClass('current');
-
-     // $('#client-overview li[data-tab="summary-tab-5"]').addClass('hide');
-     $('#client-overview li[data-tab="summary-tab-5"] span').text('5');
-     $('#client-overview li[data-tab="summary-tab-7"] span').text('4');
-
-     $('.deputy-info-only').hide();
-
-     // Remove the filter styles
-     $('#hub-filter-panel .filter, #hub-filter-panel .wrapper').removeClass('checked');
-     $('#hub-filter-panel .filter h2 .icon').addClass('white');
-
-     $('nav.actions-nav ul li').removeClass('active');
-     $('li[data-action="action-1"], li[data-action="action-3"], li[data-action="action-5"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
-
-     $('.pfa-content-item').show();
-     $('.handw-content-item').show();
-
-     $('.client-content-item').show();
-
-     // Orders content
-     // $('.order-section .accordion-1').find('.number').text('2');
-     // $('.order-section .accordion-3').find('.number').text('1');
-     // $('.order-section .accordion-3').removeClass('inactive');
-     // $('.order-section #accordion-3').hide();
-     $('#client-overview li[data-tab="summary-tab-6"] span').text('4');
-
-});
+// $('.client-home-button').click(function(){
+//      // Changes the horizontal tabs
+//      // $('.client-nav .client-details .tablinks.overview').addClass('active');
+//      // $('.client-nav .client-details .tablinks.health, .client-nav .client-details .tablinks.property').removeClass('active');
+//
+//      // Changes the tab content
+//      // $('#client-overview').show();
+//      // $('#client-health, #client-property').hide();
+//
+//      // Changes the view to see the client details
+//      // $('#client-overview .client-details.tabs li').removeClass('current');
+//      // $('#client-overview .client-details.tabs li[data-tab="summary-tab-1"]').addClass('current');
+//
+//      // $('#client-overview .client-details.tab-content').removeClass('current');
+//      // $('#client-overview #summary-tab-1').addClass('current');
+//
+//      // $('#client-overview li[data-tab="summary-tab-5"]').addClass('hide');
+//      $('#client-overview li[data-tab="summary-tab-5"] span').text('5');
+//      $('#client-overview li[data-tab="summary-tab-7"] span').text('4');
+//
+//      $('.deputy-info-only').hide();
+//
+//      // Remove the filter styles
+//      $('#hub-filter-panel .filter, #hub-filter-panel .wrapper').removeClass('checked');
+//      $('#hub-filter-panel .filter h2 .icon').addClass('white');
+//
+//      $('nav.actions-nav ul li').removeClass('active');
+//      $('li[data-action="action-1"], li[data-action="action-3"], li[data-action="action-5"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+//
+//      $('.pfa-content-item').show();
+//      $('.handw-content-item').show();
+//
+//      $('.client-content-item').show();
+//
+//      // Orders content
+//      // $('.order-section .accordion-1').find('.number').text('2');
+//      // $('.order-section .accordion-3').find('.number').text('1');
+//      // $('.order-section .accordion-3').removeClass('inactive');
+//      // $('.order-section #accordion-3').hide();
+//      $('#client-overview li[data-tab="summary-tab-6"] span').text('4');
+//
+// });
 
 $('.deputy-home-button').click(function(){
      // Changes the view to see the client details
@@ -535,22 +535,68 @@ $('#item-updated').click(function(e){
      $('#deputies-table tbody tr[data-value="1"] td .target').addClass('edited');
 });
 
+$('#remove-actions').click(function(e){
+     e.preventDefault();
+     $('#dashboard-tasks-table').toggleClass('show-actions');
+});
+
+
 // Header scroll section
 $(document).ready(function() {
      $("#hub-filter-panel nav").on("scroll", function () {
           var cur = $(this).scrollLeft();
           if (cur == 0) {
-               $('#hub-filter-panel nav').addClass('shadow-right').removeClass('scrolling');
+               $('#hub-filter-panel nav').addClass('shadow-right').removeClass('scrolling, ');
+               $('#hub-filter-panel nav .arrow-right').show();
           }
           else {
                var max = $(this)[0].scrollWidth - $(this).parent().width();
                if (cur == max) {
                     $('#hub-filter-panel nav').addClass('shadow-left').removeClass('shadow-right');
+                    $('#hub-filter-panel nav .arrow-right').hide();
                } else {
                     $('#hub-filter-panel nav').addClass('scrolling');
                     $('#hub-filter-panel nav').removeClass('shadow-left shadow-right');
+                    $('#hub-filter-panel nav .arrow-right').hide();
                }
           }
      });
      $("#hub-filter-panel nav").trigger("scroll");
 });
+
+// $('#right-button').click(function() {
+// });
+//
+// $('#left-button').click(function() {
+// });
+
+// Filter bar
+function moveScroller() {
+     var move = function() {
+          var $anchor = $(".scroller-anchor:visible");
+          var $scroller = $('.scroller:visible');
+
+          if ($anchor.length > 0 && $scroller.length > 0) {
+               var st = $(window).scrollTop();
+               var ot = $anchor.offset().top;
+               if(st > ot) {
+                    $scroller.css({
+                         position: "fixed",
+                         top: ""
+                    });
+                    $scroller.addClass("fixed");
+               } else {
+                    if(st <= ot) {
+                         $scroller.css({
+                              position: "relative",
+                              top: ""
+                         });
+                         $scroller.removeClass("fixed");
+                    }
+               }
+          }
+     };
+
+     $(window).scroll(move);
+     move();
+}

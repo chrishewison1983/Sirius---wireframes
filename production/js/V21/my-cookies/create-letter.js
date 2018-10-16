@@ -82,22 +82,42 @@ if ($.cookie("sent-to-print") == 'true') {
      $("#correspondence-sent").show();
 
      // Changes tabs to documents
-     $('#client-health .client-details.tabs .tab-link').removeClass('current');
-     $('#client-health .client-details.tabs .tab-link[data-tab="health-tab-7"]').addClass('current');
-     $('#client-health #health-tab-7').addClass('current');
-     $('#client-health #health-tab-1').removeClass('current');
+     $('#client-overview .client-details.tabs .tab-link').removeClass('current');
+     $('#client-overview .client-details.tabs .tab-link[data-tab="summary-tab-9"]').addClass('current');
+     $('#client-overview .client-details.tab-content').removeClass('current');
+     $('#client-overview .client-details.tab-content#summary-tab-9').addClass('current');
 
      // Add letters sent to the documents list
-     $('#documents-viewer table.livelink-documents tbody').append(`
+     $('#documents-viewer-filter table.correspondence tbody').append(`
           <tr>
-          	<td><a href="#" class="hide-page-1">${ 'Recipients_Name-' + JSON.parse(sessionStorage.getItem('selected-letter')) }</a></td>
-          	<!-- <td>7000-0000-2563</td> -->
-          	<td>IT-SS-ORDER</td>
-          	<!-- <td>DEP - PFA</td> -->
-          	<td>Outgoing</td>
-          	<td>27/08/2017 11:07:13</td>
+          	<td>
+                    <a href="#" class="hide-page-1">${ 'Recipients_Name-' + JSON.parse(sessionStorage.getItem('selected-letter')) }</a>
+                    <div class="doc-info">
+					<p>Doc type: <strong>IT-SS-ORDER</strong></p>
+					<p>Case type: <strong>DEP - PFA</strong></p>
+                         <p>Direction: <strong>Outgoing</strong></p>
+                         <p class="created-by">Created by: <a href="#" class="sirius-user-id">Susan Smith</a></p>
+				</div>
+               </td>
+               <td>
+                    <p class="date-indicator">
+					<span class="icon"></span>Today, 11:07:13
+					<span class="type">Created date</span>
+				</p>
+               </td>
+               <td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
           </tr>
      `);
+
+     // Opens the accordion
+     $('#documents-viewer-filter .accordion-section.correspondence').addClass('active');
+     $('#documents-viewer-filter .accordion-section-title.correspondence').addClass('active');
+     $('#documents-viewer-filter .accordion-section-content.correspondence').addClass('active').css('display', 'inline-block');
+
+     setTimeout(function() {
+          $.cookie("sent-to-print", false, {path:'/'});
+     }, 5000);
+
 
 }
 
@@ -228,3 +248,16 @@ $('body').on('change', '#letter-alternative-contact', function(e){
 //      $('#side-panel .tab-content').removeClass('current');
 //      $('#side-panel #tab-6').addClass('current');
 // }
+
+
+// =================================== No editable letter journey - START =================================== //
+$('.opg-complaint-ack').click(function(e) {
+     $.cookie("non-editable-journey", true, {path:'/'});
+});
+
+if ($.cookie("non-editable-journey") == 'true') {
+     $('#create-letter').attr('href', '2f-preview-letter.html#FixedLetter');
+     $('#cta-footer').find('#save, .separator, .cancel').hide();
+     $('#save-and-exit').text('Exit');
+}
+// =================================== No editable letter journey - END =================================== //

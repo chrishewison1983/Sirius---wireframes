@@ -68,6 +68,18 @@ $('#filter-date-completed').change(function(){
           $('#pagination-small.completed-tasks-pagination').hide();
      }
 
-     $('.filter-select-all-clear').show();
+     $('.completed-tasks .filter-select-all-clear').show();
 });
 /////////////// ------------------------------ FILTER 1 - END ------------------------------ ///////////////
+
+/////////////// ------------------------------ FILTER 2 - START ------------------------------ ///////////////
+$('.completed-tasks #filter-type-task').change(function(){
+     $('.completed-tasks .filter-select-all-clear').show();
+});
+/////////////// ------------------------------ FILTER 2 - END ------------------------------ ///////////////
+
+/////////////// ------------------------------ FILTER 2 - START ------------------------------ ///////////////
+$('.completed-tasks .filter-completed-user').keyup(function(){
+     $('.completed-tasks .filter-select-all-clear').show();
+});
+/////////////// ------------------------------ FILTER 2 - END ------------------------------ ///////////////

@@ -13,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-hub/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -106,7 +106,7 @@
 
                               <!-- <h2 class="section-title">Case documents</h2> -->
 
-                              {{= it.include('side-panel/document-viewer.html') }}
+                              {{= it.include('side-panel/document-viewer-filter.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 4 - END =========== -->
@@ -303,12 +303,19 @@
                               </div>
                               <!-- // FORM ITEM - 10 - END // -->
 
-                              <!-- // FORM ITEM - 11 - START // -->
+                              <!-- // FORM ITEM - 11A - START // -->
                               <div class="form-group">
                                    <label for="deputy-phone-number">Daytime telephone number</label>
                                    <input id="deputy-phone-number" name="deputy-phone-number" type="text" class="half">
                               </div>
-                              <!-- // FORM ITEM - 11 - END // -->
+                              <!-- // FORM ITEM - 11A - END // -->
+
+                              <!-- // FORM ITEM - 11B - START // -->
+                              <div class="form-group">
+                                   <label for="deputy-evening-number">Evening telephone number</label>
+                                   <input id="deputy-evening-number" name="deputy-evening-number" type="text" class="half">
+                              </div>
+                              <!-- // FORM ITEM - 11B - END // -->
 
                               <!-- // FORM ITEM - 12 - START // -->
                               <div class="form-group">

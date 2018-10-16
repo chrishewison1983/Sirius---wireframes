@@ -2,6 +2,9 @@
 // ================= Input select - START ================= //
 $(document).ready(function () {
 
+     $('.handw-content-item, .client-content-item').hide();
+     $('.pfa-content-item').show();
+
      $('input[name="order-view"]').click(function(){
           var checked = $('#hub-filter-panel').find(':checked').length;
 
@@ -14,12 +17,36 @@ $(document).ready(function () {
                // Changes the state
                $('#hub-filter-panel form nav .wrapper').removeClass('checked');
                $('#hub-filter-panel form nav .wrapper label').removeClass('checked');
-               $('#hub-filter-panel form nav .wrapper label h2 span').removeClass('black').addClass('white');
+               $('#hub-filter-panel form nav .wrapper label h2 span.icon').removeClass('black').addClass('white');
                $(this).parent().addClass('checked');
                $(this).parent().parent().addClass('checked');
                $(this).parent().find('h2 span').addClass('black').removeClass('white');
 
                $('.deputy-info-only').hide();
+          }
+     });
+
+     $('input[value="client"]').change(function(){
+          if ($(this).is(":checked")) {
+               $('.handw-content-item').show();
+               $('.pfa-content-item').show();
+               $('.client-content-item').show();
+
+               $('#client-overview li[data-tab="summary-tab-5"], #client-overview li[data-tab="summary-tab-7"]').removeClass('hide');
+
+               $('#client-overview li[data-tab="summary-tab-5"] span').text('5');
+               $('#client-overview li[data-tab="summary-tab-6"] span').text('4');
+               $('#client-overview li[data-tab="summary-tab-7"] span').text('4');
+
+               $('.deputy-info-only').hide();
+
+               // Remove the filter styles
+               $('#hub-filter-panel .filter, #hub-filter-panel .wrapper').removeClass('checked');
+               $('#hub-filter-panel .filter h2 .icon').addClass('white');
+
+               $('nav.actions-nav ul li').removeClass('active');
+               $('li[data-action="action-1"], li[data-action="action-3"], li[data-action="action-5"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+
           }
      });
 
@@ -41,7 +68,7 @@ $(document).ready(function () {
                $('.deputy-info-only').show();
 
                // Changes the actions list
-               $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-7"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+               $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-7"], li[data-action="action-16"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
                $('li[data-action="action-6"], li[data-action="action-12"]').removeClass('active');
 
                $('li[data-action="action-9"] a').addClass('create-task-hw').removeClass('create-task-pfa');
@@ -49,6 +76,8 @@ $(document).ready(function () {
                $('li[data-action="action-2"] a').addClass('edit-case-health').removeClass('edit-case-pfa');
 
                $('.client-content-item').hide();
+
+               $('.pfa-wrapper .filter .icon, .third-order-wrapper .filter .icon, .fourth-order-wrapper .filter .icon').removeClass('black').addClass('white');
 
                // Orders content
                // $('.order-section .accordion-1').find('.number').text('1');
@@ -83,7 +112,7 @@ $(document).ready(function () {
                $('.deputy-info-only').show();
 
                // Changes the actions list
-               $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-6"], li[data-action="action-7"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-12"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+               $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-6"], li[data-action="action-7"], li[data-action="action-16"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-12"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
                $('li[data-action="action-2"] a').addClass('edit-case-pfa').removeClass('edit-case-health');
 
                $('li[data-action="action-9"] a').addClass('create-task-pfa').removeClass('create-task-hw');
@@ -95,6 +124,8 @@ $(document).ready(function () {
                // $('.order-section .accordion-3').find('.number').text('1');
                // $('.order-section .accordion-3').removeClass('inactive');
                // $('.order-section #accordion-3').hide();
+
+               $('.hw-wrapper .filter .icon, .third-order-wrapper .filter .icon, .fourth-order-wrapper .filter .icon').removeClass('black').addClass('white');
 
           }
           // else {
@@ -108,6 +139,9 @@ $(document).ready(function () {
           if ($(this).is(":checked")) {
                $('.handw-content-item').show();
                $('.pfa-content-item').show();
+
+               $('.hw-wrapper, .pfa-wrapper').removeClass('checked');
+               $('.hw-wrapper .filter .icon, .pfa-wrapper .filter .icon').removeClass('black').addClass('white');
 
                $('ul.client-details.tabs li[data-tab="summary-tab-5"] span').text('5');
                $('ul.client-details.tabs li[data-tab="summary-tab-6"] span').text('4');
@@ -124,6 +158,19 @@ $(document).ready(function () {
           }
      });
 
+     $('input[value="third-order"]').change(function(){
+          if ($(this).is(":checked")) {
+               $('.hw-wrapper, .pfa-wrapper, .fourth-order-wrapper').removeClass('checked');
+               $('.hw-wrapper .filter .icon, .pfa-wrapper .filter .icon, .fourth-order-wrapper .filter .icon').removeClass('black').addClass('white');
+          }
+     });
+
+     $('input[value="fourth-order"]').change(function(){
+          if ($(this).is(":checked")) {
+               $('.hw-wrapper, .pfa-wrapper, .third-order-wrapper').removeClass('checked');
+               $('.hw-wrapper .filter .icon, .pfa-wrapper .filter .icon, .third-order-wrapper .filter .icon').removeClass('black').addClass('white');
+          }
+     });
 
 });
 // ================= Input select - END ================= //
@@ -135,14 +182,14 @@ $('.pfa-wrapper').click(function() {
 
      $('.deputy-info-only').show();
 
-     // $('#pfa-actions, .pfa-wrapper').addClass('checked');
-     // $('#pfa-actions input').attr('checked', 'checked');
-     // $('#pfa-actions').find('h2 .icon').removeClass('white');
-     // $('#handw-actions').find('h2 .icon').addClass('white');
-     // $('#handw-actions, .hw-wrapper').removeClass('checked');
+     $('.pfa-wrapper, .pfa-wrapper .filter').addClass('checked');
+     $('#pfa-actions input').attr('checked', 'checked');
+     $('.pfa-wrapper').find('h2 .icon').removeClass('white');
+     $('.hw-wrapper').find('h2 .icon').addClass('white');
+     $('.hw-wrapper, .hw-wrapper .filter').removeClass('checked');
 
      // Changes the actions list
-     $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-6"], li[data-action="action-7"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-12"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+     $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-6"], li[data-action="action-7"], li[data-action="action-16"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-12"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
      $('li[data-action="action-2"] a').addClass('edit-case-pfa').removeClass('edit-case-health');
 
      $('li[data-action="action-9"] a').addClass('create-task-pfa').removeClass('create-task-hw');
@@ -186,14 +233,16 @@ $('.hw-wrapper').click(function() {
 
      $('.deputy-info-only').show();
 
-     // $('#handw-actions, .hw-wrapper').addClass('checked');
-     // $('#handw-actions input').attr('checked', 'checked');
-     // $('#handw-actions').find('h2 .icon').removeClass('white');
-     // $('#pfa-actions').find('h2 .icon').addClass('white');
-     // $('#pfa-actions, .pfa-wrapper').removeClass('checked');
+     $('.hw-wrapper, .hw-wrapper .filter').addClass('checked');
+     $('#handw-actions input').attr('checked', 'checked');
+     $('.hw-wrapper').find('h2 .icon').removeClass('white');
+     $('.pfa-wrapper').find('h2 .icon').addClass('white');
+     $('.pfa-wrapper, .pfa-wrapper .filter').removeClass('checked');
+
+     $('.third-order-wrapper, .third-order-wrapper .filter, .fourth-order-wrapper, .fourth-order-wrapper .filter').removeClass('checked');
 
      // Changes the actions list
-     $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-7"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
+     $('li[data-action="action-1"], li[data-action="action-2"], li[data-action="action-3"], li[data-action="action-4"], li[data-action="action-5"], li[data-action="action-7"], li[data-action="action-16"], li[data-action="action-8"], li[data-action="action-9"], li[data-action="action-10"], li[data-action="action-11"], li[data-action="action-13"], li[data-action="action-14"], li[data-action="action-15"]').addClass('active');
      $('li[data-action="action-6"], li[data-action="action-12"]').removeClass('active');
 
      $('li[data-action="action-9"] a').addClass('create-task-hw').removeClass('create-task-pfa');

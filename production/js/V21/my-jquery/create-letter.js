@@ -48,7 +48,7 @@ $(document).ready(function() {
           // Adds to the side panel
           $("#recipients").append(`
                <li data-correspondent-id='${$(this).data('correspondent-id')}'>
-               ${ $(this).find('[data-value="name"]').text() + ' - ' + '<strong>' + $(this).find('[data-value="preferred-contact"]').text() + '</strong>' }
+                    ${ $(this).find('[data-value="name"]').text() }
                </li>
           `);
           persistSelectedRecipients();
@@ -225,6 +225,8 @@ $(document).ready(function() {
           // persistSelectedLetter();
      });
 
+     // $('.doc-type').text($(this).find('[data-value="letter"]').text());
+
      $('.letter-title').click(function(e) {
           $("#draft-list").append(`
                <li data-letter-id='${$(this).data('letter-id')}'>
@@ -249,6 +251,26 @@ $(document).ready(function () {
      // }
 
 });
+
+// Non-Edititable letter
+$(document).ready(function () {
+
+     if (window.location.href.indexOf("FixedLetter") != -1) {
+          $('ol#draft-list li.selected').addClass('preview');
+          $('ol#draft-list li a.edit').addClass('view').text('Preview');
+          // $('#section-header h1').text('Preview your correspondnce');
+          // $('#documents-1').addClass('read-only');
+          // $('#action-panel h2 .summary-text').text('Preview document');
+          // $('#draft-saved-timer').css('display', 'none !important');
+
+          $('ol#draft-list li a.edit').click(function(e) {
+               $('ol#draft-list li').removeClass('preview');
+               $(this).closest('li').addClass('preview');
+          });
+     }
+
+});
+
 
 // Preview letter
 // $('.retrieve-drafts').hide();
@@ -282,7 +304,7 @@ $(document).ready(function () {
 
      });
 
-     $("#draft-list li .edit").on("click", function (e) {
+     $("#draft-list li .edit, #draft-list li .view").on("click", function (e) {
           e.preventDefault();
           var index = parseInt($(this).closest('li').data('document-id'));
 
@@ -320,56 +342,74 @@ $(document).ready(function () {
 });
 
 // Change tab for the letter journey
-$('.change-tab').click(function(e) {
-     e.preventDefault();
-     $('.tab-content').removeClass('current');
-     $('#health-tab-7').addClass('current');
-     $('.client-details .tab-link').removeClass('current');
-     $('.client-details .tab-link[data-tab="health-tab-7"]').addClass('current');
-     $('#documents-viewer .document-1 .page-1, #documents-viewer-simplified .document-1 .page-1, #documents-viewer-filter .document-1 .page-1').hide();
-     $('#documents-viewer .document-1 .page-2, #documents-viewer-simplified .document-1 .page-2, #documents-viewer-filter .document-1 .page-2').show();
-     $('#documents-viewer .document-1 .page-2 .control-panel h2, #documents-viewer-simplified .document-1 .page-2 .control-panel h2, #documents-viewer-filter .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
-});
+// $('.change-tab').click(function(e) {
+//      e.preventDefault();
+//      $('.tab-content').removeClass('current');
+//      $('#health-tab-7').addClass('current');
+//      $('.client-details .tab-link').removeClass('current');
+//      $('.client-details .tab-link[data-tab="health-tab-7"]').addClass('current');
+//      $('#documents-viewer .document-1 .page-1, #documents-viewer-simplified .document-1 .page-1, #documents-viewer-filter .document-1 .page-1').hide();
+//      $('#documents-viewer .document-1 .page-2, #documents-viewer-simplified .document-1 .page-2, #documents-viewer-filter .document-1 .page-2').show();
+//      $('#documents-viewer .document-1 .page-2 .control-panel h2, #documents-viewer-simplified .document-1 .page-2 .control-panel h2, #documents-viewer-filter .document-1 .page-2 .control-panel h2').text('Application_correspondence.pdf');
+// });
 
 // Documents changing tabs
-$('#documents-viewer-simplified, #documents-viewer-filter, #filter-panel-documents').hide();
+// $('#documents-viewer, #documents-viewer-filter, #filter-panel-documents').hide();
 
-$('input[name="document-tab"]').click(function() {
-     if ($(this).val() == 'Folder') {
-          $('#documents-viewer-simplified, #documents-viewer-filter, #filter-panel-documents').hide();
-          $('#documents-viewer').show();
-     } else if ($(this).val() == 'Simplified') {
-          $('#documents-viewer, #documents-viewer-filter, #filter-panel-documents').hide();
-          $('#documents-viewer-simplified').show();
-     } else if ($(this).val() == 'Filter') {
-          $('#documents-viewer-filter, #filter-panel-documents').show();
-          $('#documents-viewer, #documents-viewer-simplified').hide();
-     }
-});
+// $('input[name="document-tab"]').click(function() {
+//      if ($(this).val() == 'Folder') {
+//           $('#documents-viewer-simplified, #documents-viewer-filter, #filter-panel-documents').hide();
+//           $('#documents-viewer').show();
+//      } else if ($(this).val() == 'Simplified') {
+//           $('#documents-viewer, #documents-viewer-filter, #filter-panel-documents').hide();
+//           $('#documents-viewer-simplified').show();
+//      } else if ($(this).val() == 'Filter') {
+//           $('#documents-viewer-filter, #filter-panel-documents').show();
+//           $('#documents-viewer, #documents-viewer-simplified').hide();
+//      }
+// });
 
 // Document filter
+$(document).ready(function () {
+     $('#filter-panel-documents .filter-numbers .number').text('9');
+     $('.last-filter').css('display', 'none');
+});
+
 $('input[name="document-value"]').click(function(){
      var checked = $('#filter-panel-documents').find(':checked').length;
      if($(this).is(":checked")) {
           $(this).parent().addClass("checked");
-          $('.filter-all-documents').removeClass("checked");
+          $('.last-filter').css('display', 'inline-block');
      }
      if (!checked)
-          $('.filter-all-documents').addClass("checked");
+          $('.last-filter').css('display', 'none');
 });
 
 var sectionsDoc = $('.document-category');
 function updateDocumentVisibility(){
-     var checked = $("#filter-panel-documents :checkbox:checked");
+     var checked = $("#filter-panel-documents input[name='document-value']:checked");
+     if (checked.length === 0)
+          checked = $("#filter-panel-documents input[name='document-value']");
+
+     // var checked = $("#filter-panel-documents :checkbox:checked");
      if(checked.length){
           sectionsDoc.hide();
-          checked.each(function(){
-               $("." + $(this).val()).show();
-          });
-          $('.filter-all-documents').removeClass('checked');
+          var selector = checked.toArray().map(item => '.' + $(item).val()).join(',');
+          var typeSelector = '';
+          var typeEl = $("#filter-panel-documents input[name='document-type']");
+          typeSelector =
+               typeEl.filter(':not(:checked)').length === typeEl.length ? '*'
+               : ':not(' + typeEl.filter(':not(:checked)').toArray().map(
+                    item => '.' + $(item).val()
+               ).join(',') + ')';
+
+          $(selector).filter(typeSelector).show();
+
+          $('.last-filter').css('display', 'inline-block');
      } else {
           sectionsDoc.show();
      }
+     $('#filter-panel-documents .filter-numbers .number').text($('#documents-listing tbody tr:visible').length);
 }
 
 $("#filter-panel-documents :checkbox").click(updateDocumentVisibility);
@@ -378,7 +418,9 @@ updateDocumentVisibility();
 $('.filter-all-documents').click(function(e){
      e.preventDefault();
      $('.document-category').show();
-     $(this).addClass('checked');
+     $(this).parent().css('display', 'none');
+     // $(this).addClass('checked');
+     $('#filter-panel-documents .filter-numbers .number').text('9');
      $('#filter-panel-documents input').removeAttr('checked');
      $('#filter-panel-documents input').parent().removeClass('checked');
 });

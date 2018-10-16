@@ -21,13 +21,13 @@
 
 </head>
 <!-- // HEAD ELEMENT END // -->
-<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default"> <!-- SECTION HEADER - START --> <div id="section-header" class="dashboard"> <!-- // MAIN MAV - START // -->
+<body id="body-default"><!-- PRIMARY CONTENT - START --><main class="default case-manager"> <!-- SECTION HEADER - START --> <div id="section-header" class="dashboard"> <!-- // MAIN MAV - START // -->
 <nav class="top-nav">
 
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
 
-			<a href="../index.html" class="logo user-type-link">
+			<a href="../19-dashboard/19a-caseworker.html" class="logo user-type-link">
 				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
 				<p><span>Dashboard</span></p>
 			</a>
@@ -66,7 +66,7 @@
 				<p><span>Sign out</span></p>
 			</a>
 
-			<form action="search.html">
+			<form action="../search.html">
 				<input type="search" name="search" id="autocomplete" class="main-search-bar" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
@@ -84,10 +84,10 @@
 
 </nav>
 <!-- // MAIN MAV - END // -->
- <div class="row"> <div class="large-12 large-uncentered columns"> <!-- <nav class="breadcrumb"> <span>Welcome:</span> </nav> --> <h1>Welcome: <div class="sirius-user-id">Susan Smith</div></h1> <span class="horizontal-border"></span> <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper dashboard"> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="dashboard-tabs tabs"> <li class="tab-link current" data-tab="tab-1"> <span>15</span> My tasks </li> <li class="tab-link completed" data-tab="tab-3"> <span>1</span> My completed tasks </li> <li class="tab-link" data-tab="tab-5"> <span>55</span> My deputies </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard task-details current"> <h2 class="description-title">My tasks</h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-small" class="pagination-small"> <a>-</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> </span> <a>+</a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
+ <div class="row"> <div class="large-12 large-uncentered columns"> <!-- <nav class="breadcrumb"> <span>Welcome:</span> </nav> --> <h1>Welcome: <div class="sirius-user-id">Susan Smith</div></h1> <span class="horizontal-border"></span> <p>This is your Sirius dashboard where you can find all your latest work and tasks assigned to you.</p> </div> </div> <div class="colour-wrapper"></div> </div> <!-- SECTION HEADER - END --> <!-- CONTENT WRAPPER - START --> <div class="content-wrapper dashboard"> <!-- =========== TABS - START =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <ul class="dashboard-tabs tabs"> <li class="tab-link current" data-tab="tab-1"> <span>23</span> My tasks </li> <li class="tab-link completed" data-tab="tab-3"> <span>1</span> My completed tasks </li> <li class="tab-link hide" data-tab="tab-4"> <span class="small">300+</span> My clients </li> <li class="tab-link" data-tab="tab-5"> <span>55</span> My deputies </li> </ul> </div> </div> <!-- =========== TABS - END =========== --> <div class="row"> <div class="large-12 large-uncentered columns"> <!-- =========== DASHBOARD TAB CONTENT - 1 - START =========== --> <div id="tab-1" class="tab-content dashboard task-details current"> <h2 class="description-title">My tasks</h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-new"> <a class="disabled"><<</a> <a class="disabled"><</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> <i>...</i> <a>20</a> </span> <a>></a> <a>>></a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel task-controller caseworker-filter">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-tasks">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks scroller">
 		<form class="search-filters task-filter">
 
 			<div class="filter-buttons">
@@ -112,7 +112,7 @@
 								<option value="">-- Select task type --</option>
 								<option value="CWRD">Case Work - Reply Due</option>
                                         <option value="ORRE">Order - Review the order</option>
-                                        <option value="ORAL">Order - Allocate to team</option>
+                                        <option value="ORAL">Allocate client</option>
                                         <option value="INAR">Intro - Arrange settling in</option>
                                         <option value="INSE">Intro - Settling in call</option>
                                         <option value="INNDR">Intro - New Deputy Report</option>
@@ -150,11 +150,11 @@
 					<table class="tablesorter">
 						<thead>
 							<tr class="four-column">
-								<th><span></span>Type</th>
-								<th><span></span>Task due date</th>
-								<th class="non-sort">Case type</th>
+								<th style="width: 64.5%;"><span></span>Type</th>
+								<th style="width: 18%;"><span></span>Task due date</th>
+								<th style="width: 17.5%;" class="non-sort">Case type</th>
 								<!-- <th><span></span>Task status</th> -->
-								<th><span></span>Assigned to</th>
+								<!-- <th><span></span>Assigned to</th> -->
 							</tr>
 						</thead>
 					</table>
@@ -215,7 +215,7 @@
 
 <div class="dashboard-item-container">
 
-	<table id="dashboard-tasks-table" class="tablesorter">
+	<table id="dashboard-tasks-table" class="tablesorter pro-pa-worker">
 		<thead>
 			<tr class="four-column">
 				<th><span></span>Type</th>
@@ -1066,16 +1066,20 @@
 	</table>
 
 	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
-	<div id="pagination-small">
-		<a>-</a>
+	<div id="pagination-new">
+		<a class="disabled"><<</a>
+		<a class="disabled"><</a>
 		<span>
 			<a class="current">1</a>
 			<a>2</a>
 			<a>3</a>
 			<a>4</a>
 			<a>5</a>
+			<i>...</i>
+			<a>20</a>
 		</span>
-		<a>+</a>
+		<a>></a>
+		<a>>></a>
 	</div>
 	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
@@ -1094,10 +1098,10 @@
 	</div>
 </div>
 <!-- // MODAL - END // -->
- </div> <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content dashboard"> <h2 class="description-title completed">My completed tasks: <div class="timeline-value">Today</div></h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-small" class="completed-tasks-pagination pagination-small"> <a>-</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> </span> <a>+</a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 3 - START =========== --> <div id="tab-3" class="tab-content dashboard"> <h2 class="description-title completed">My completed tasks: <div class="timeline-value">Today</div></h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-new"> <a class="disabled"><<</a> <a class="disabled"><</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> <i>...</i> <a>20</a> </span> <a>></a> <a>>></a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel completed-tasks">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller">
 		<form class="search-filters completed-tasks">
 
 			<!-- <div class="search-section">
@@ -1111,10 +1115,10 @@
 					<label for="filter-date-completed" class="float-left title-label">Filter</label>
 					<div class="section-1">
 						<select id="filter-date-completed" class="">
-							<option value="">-- Timeline --</option>
+							<!-- <option value="">-- Timeline --</option> -->
 							<option value="Today">Today</option>
 							<option value="Last 7 days">Last 7 days</option>
-							<option value="Last month">Last month</option>
+							<option value="Last month">Last 30 days</option>
 							<option value="Last 60 days">Last 60 days</option>
 							<option value="All">All completed tasks</option>
 						</select>
@@ -1125,7 +1129,7 @@
 							<option value="">-- Select task type --</option>
 							<option value="CWRD">Case Work - Reply Due</option>
 							<option value="ORRE">Order - Review the order</option>
-							<option value="ORAL">Order - Allocate to team</option>
+							<option value="ORAL">Allocate client</option>
 							<option value="INAR">Intro - Arrange settling in</option>
 							<option value="INSE">Intro - Settling in call</option>
 							<option value="INNDR">Intro - New Deputy Report</option>
@@ -1165,9 +1169,9 @@
 					<table class="tablesorter">
 						<thead>
 							<tr class="three-column">
-								<th><span></span>Type</th>
-								<th><span></span>Case type</th>
-								<th><span></span>Completed</th>
+								<th style="width: 60%;"><span></span>Type</th>
+								<th style="width: 22.5%;">Case type</th>
+								<th style="width: 17.5%;"><span></span>Completed</th>
 							</tr>
 						</thead>
 					</table>
@@ -1747,24 +1751,1168 @@
 	</table>
 
 	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
-	<div id="pagination-small" class="completed-tasks-pagination">
-		<a>-</a>
+	<div id="pagination-new">
+		<a class="disabled"><<</a>
+		<a class="disabled"><</a>
 		<span>
 			<a class="current">1</a>
 			<a>2</a>
 			<a>3</a>
 			<a>4</a>
 			<a>5</a>
+			<i>...</i>
+			<a>20</a>
 		</span>
-		<a>+</a>
+		<a>></a>
+		<a>>></a>
 	</div>
 	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
 </div>
- </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 5 - START =========== --> <div id="tab-5" class="tab-content dashboard"> <h2 class="description-title">My deputies</h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-small" class="pagination-small"> <a>-</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> </span> <a>+</a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 3 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 4 - START =========== --> <div id="tab-4" class="tab-content dashboard client-details hide"> <h2 class="description-title">My clients</h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-new"> <a class="disabled"><<</a> <a class="disabled"><</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> <i>...</i> <a>20</a> </span> <a>></a> <a>>></a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
+<div class="filter-panel client-controller">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-clients scroller">
+		<form class="search-filters client-filter">
+
+			<!-- <div class="search-section">
+				<input type="search" name="search" id="search-table" onkeyup="myFunction()" placeholder="Search for clients name..." autocomplete="off">
+			</div> -->
+			<div class="filter-buttons">
+
+				<!-- <h1>Clients</h1> -->
+
+				<div class="main-filter">
+					<div class="wrapper">
+						<label for="filter-category" class="float-left title-label">Filter</label>
+						<select id="filter-category" class="filter-category">
+							<option value="My clients">My clients</option>
+							<option value="My teams clients">My teams clients</option>
+							<option value="Search clients">Search clients</option>
+							<option value="Deputy type">Deputy type</option>
+							<option value="Another team">Another team</option>
+							<option value="Another user">Another user</option>
+							<option value="PFA orders">PFA orders</option>
+							<option value="HandW orders">HW orders</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="filter">
+
+					<!-- ///////////////// Filter Item - A - START ///////////////// -->
+					<div class="step-1 filter-a">
+						<div class="wrapper">
+							<input class="team-user-in-team" name="team-user-in-team" type="text" value="" placeholder="Enter team member...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - A - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - B - START ///////////////// -->
+					<div class="step-1 filter-b">
+						<div class="wrapper">
+							<select id="select-deputy-type" class="select-deputy-type">
+								<option value="">-- Deputy type --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - B - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - C - START ///////////////// -->
+					<div class="step-1 filter-c">
+						<div class="wrapper">
+							<select id="my-clients-another-team" class="my-clients-another-team">
+								<option value="">-- Select team --</option>
+								<option value="Team 1">Team 1</option>
+								<option value="Team 2">Team 2</option>
+								<option value="Team 3">Team 3</option>
+								<option value="Team 4">Team 4</option>
+								<option value="Team 5">Team 5</option>
+							</select>
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - C - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - D - START ///////////////// -->
+					<div class="step-1 filter-d">
+						<div class="wrapper">
+							<input class="filter-another-user-client" name="filter-another-user-client" type="text" value="" placeholder="Enter another user...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - D - END ///////////////// -->
+
+					<!-- ///////////////// Filter Item - E - START ///////////////// -->
+					<div class="step-1 filter-e">
+						<div class="wrapper">
+							<input class="filter-search-clients" name="filter-search-clients" type="text" value="" placeholder="Search clients...">
+						</div>
+					</div>
+					<!-- ///////////////// Filter Item - E - END ///////////////// -->
+
+
+					<!-- ///////////////// Filter Item - 1 - START ///////////////// -->
+					<div class="step-2">
+						<label for="my-clients-assign-to" class="float-left re-assign-title title-label hide">Reassign</label>
+						<select id="my-clients-assign-to" class="my-clients-assign-to">
+							<option value="">-- Reassign to --</option>
+							<!-- <option value="Me">Me</option> -->
+							<option value="User in my team">User in my team</option>
+							<option value="Another user">Another user</option>
+							<option value="My team">My team</option>
+							<option value="Other team">Other team</option>
+						</select>
+					</div>
+					<!-- ///////////////// Filter Item - 1 - END ///////////////// -->
+
+					<div class="step-3">
+
+						<!-- // FILTER ITEM - A - START // -->
+						<div class="answer-my-team">
+							<input class="my-clients-user-in-team" name="my-clients-user-in-team" type="text" value="" placeholder="Enter name...">
+						</div>
+						<!-- // FILTER ITEM - A - END // -->
+
+						<!-- // FILTER ITEM - B - START // -->
+						<div class="answer-another-user">
+							<input class="my-clients-user-another-team" name="my-clients-user-another-team" type="text" value="" placeholder="Enter other users...">
+						</div>
+						<!-- // FILTER ITEM - B - END // -->
+
+						<!-- // FILTER ITEM - C - START // -->
+						<div class="answer-client-team">
+							<!-- <label for="task-team">Select team</label> -->
+							<select id="my-clients-task-team" class="my-clients-task-team">
+								<option value="">-- Select team --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+						<!-- // FILTER ITEM - C - END // -->
+
+					</div>
+					<div class="step-4">
+						<a class="re-assign-my-clients main-cta re-assign de-activate">Reassign</a>
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number three-figures">302</span>
+							<br>
+							<span class="desc">clients</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<label class="normal select-all-clients" for="select-all-clients">
+						<input id="select-all-clients" name="select-all-clients" type="checkbox" value="select-all-clients">
+						Select all
+					</label>
+					<a href="#" class="clear-filter">Clear filter</a>
+					<a href="#" class="cancel cancel-re-assign">Cancel</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th style="width: 25%;"><span></span>Name</th>
+								<th style="width: 15%;">Orders</th>
+								<th style="width: 15%;">Deputies</th>
+								<th style="width: 12%;"><span></span>Deputy type</th>
+								<th style="width: 15%;"><span></span>Supervision level</th>
+								<th style="width: 7%;">Tasks</th>
+								<th style="width: 20%;"><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->
+
+<!-- /////////////// REASSIGN PANEL - START /////////////// -->
+<div class="re-assign-panel client-controller">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-clients scroller">
+		<form class="search-filters client-filter">
+
+			<div class="filter-buttons">
+
+				<div class="filter">
+
+					<!-- ///////////////// Filter Item - 1 - START ///////////////// -->
+					<div class="step-2">
+						<label for="my-clients-assign-to" class="float-left re-assign-title title-label">Reassign</label>
+						<select id="my-clients-assign-to" class="my-clients-assign-to">
+							<option value="">-- Reassign to --</option>
+							<!-- <option value="Me">Me</option> -->
+							<option value="User in my team">User in my team</option>
+							<option value="Another user">Another user</option>
+							<option value="My team">My team</option>
+							<option value="Other team">Another team</option>
+						</select>
+					</div>
+					<!-- ///////////////// Filter Item - 1 - END ///////////////// -->
+
+					<div class="step-3">
+
+						<!-- // FILTER ITEM - A - START // -->
+						<div class="answer-my-team">
+							<input class="my-clients-user-in-team" name="my-clients-user-in-team" type="text" value="" placeholder="Enter name...">
+						</div>
+						<!-- // FILTER ITEM - A - END // -->
+
+						<!-- // FILTER ITEM - B - START // -->
+						<div class="answer-another-user">
+							<input class="my-clients-user-another-team" name="my-clients-user-another-team" type="text" value="" placeholder="Enter other users...">
+						</div>
+						<!-- // FILTER ITEM - B - END // -->
+
+						<!-- // FILTER ITEM - C - START // -->
+						<div class="answer-client-team">
+							<select id="my-clients-task-team" class="my-clients-task-team">
+								<option value="">-- Select team --</option>
+								<option value="Lay">Lay</option>
+								<option value="Professional">Professional</option>
+								<option value="Public authority">Public authority</option>
+							</select>
+						</div>
+						<!-- // FILTER ITEM - C - END // -->
+
+					</div>
+					<div class="step-4">
+						<a class="re-assign-my-clients main-cta re-assign de-activate">Reassign</a>
+					</div>
+				</div>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number three-figures">302</span>
+							<br>
+							<span class="desc">clients</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="filter-select-all-clear">
+					<!-- <a href="#" class="clear-filter">Clear filter</a> -->
+					<a href="#" class="cancel cancel-re-assign">Cancel</a>
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="three-column">
+								<th style="width: 25%;"><span></span>Name</th>
+								<th style="width: 15%;">Orders</th>
+								<th style="width: 15%;">Deputies</th>
+								<th style="width: 12%;"><span></span>Deputy type</th>
+								<th style="width: 15%;"><span></span>Supervision level</th>
+								<th style="width: 7%;">Tasks</th>
+								<th style="width: 20%;"><span></span>Assigned to</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /////////////// REASSIGN PANEL - END /////////////// -->
+ <!-- ///////////////////////////////// CLIENT UPDATED - START ///////////////////////////////// -->
+<div class="row">
+	<div class="large-12 large-uncentered columns">
+		<div id="re-assign-client-confirmation-message" class="confirmation-panel">
+			<div class="content">
+				<h1>
+					<span></span>
+					The <div>clients</div> has now been reassigned to <div class="user-name">David Harper</div>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////////////////////////////// CLIENT UPDATED - END ///////////////////////////////// -->
+ <div class="dashboard-item-container">
+
+	<table id="dashboard-clients-table" class="tablesorter">
+		<thead>
+			<tr class="six-column">
+				<th><span></span>Name</th>
+				<th>Orders</th>
+				<th>Deputies</th>
+				<th><span></span>Deputy type</th>
+				<th><span></span>Supervision level</th>
+				<th>Tasks</th>
+				<!-- <th><span></span>Assigned to</th> -->
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- CLIENT 1 - START -->
+			<tr class="summary-row joe-bloggs deputy-lay order-property" data-value="1">
+				<td>
+					<a href="#" class="client">Brackens, Gerald</a>
+					<a href="#" class="view-full-details" data-value="1">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">14820940</a> - Active
+						</div>
+					</div>
+					<div class="wrapper">
+                              <span class="icon welfare"></span>
+                              <div>
+                                   <a href="../4-client-hub/4a-new-client.html#HandW">14820940</a> - Active
+                              </div>
+                         </div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">3</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Tyrone Kelley</li>
+							<li>Randal Rose</li>
+							<li>Tommy	Mullins</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number alert">3</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+
+			<tr class="details-row" data-value="1">
+				<td colspan="7">
+
+					<h2 class="description-title">Client details:</h2>
+
+					<div class="details-wrap">
+
+						<!-- // CLIENT ITEM - 1 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Accommodation type</p>
+							<p class="answer client-accommodation">LA Nursing home</p>
+						</div>
+						<!-- // CLIENT ITEM - 1 - END // -->
+
+						<!-- // CLIENT ITEM - 2 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Court reference</p>
+							<p class="answer client-casarec">123456789</p>
+						</div>
+						<!-- // CLIENT ITEM - 2 - END // -->
+
+						<!-- // CLIENT ITEM - 3 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Client status</p>
+							<p class="answer client-status">Active</p>
+						</div>
+						<!-- // CLIENT ITEM - 3 - END // -->
+
+						<!-- // CLIENT ITEM - 4 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Status date</p>
+							<p class="answer">
+								<dfn class="client-status-day">09</dfn>
+								/
+								<dfn class="client-status-month">09</dfn>
+								/
+								<dfn class="client-status-year">2017</dfn>
+							</p>
+						</div>
+						<!-- // CLIENT ITEM - 4 - END // -->
+
+						<!-- // CLIENT ITEM - 5 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Name</p>
+							<p class="answer">
+								<dfn class="client-title-answer">Mr.</dfn>
+								<dfn class="client-first-name">Gerald</dfn>
+								<dfn class="client-middle-name">Stephen</dfn>
+								<dfn class="client-last-name">Brackens</dfn>
+							</p>
+						</div>
+						<!-- // CLIENT ITEM - 5 - END // -->
+
+						<!-- // CLIENT ITEM - 6 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Previously known as</p>
+							<p class="answer client-previously-known-as">N/A</p>
+						</div>
+						<!-- // CLIENT ITEM - 6 - END // -->
+
+						<!-- // CLIENT ITEM - 7 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Date of birth</p>
+							<p class="answer">
+								<dfn class="client-dob-day">09</dfn>
+								/
+								<dfn class="client-dob-month">09</dfn>
+								/
+								<dfn class="client-dob-year">1983</dfn>
+							</p>
+						</div>
+						<!-- // CLIENT ITEM - 7 - END // -->
+
+						<!-- // CLIENT ITEM - 8 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Address</p>
+							<p class="answer">
+								<dfn class="client-address-line-1">1 Grimwald Place</dfn>,<br>
+								<dfn class="client-address-town">Buckley</dfn>,<br>
+								<dfn class="client-address-county">Flintshire</dfn>,<br>
+								<dfn class="client-manual-postcode">CV32 788</dfn>.<br>
+								<dfn class="answer client-country">England</dfn>
+							</p>
+						</div>
+						<!-- // CLIENT ITEM - 8 - END // -->
+
+						<!-- // CLIENT ITEM - 9 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Is airmail required?</p>
+							<p class="answer client-airmail">No</p>
+						</div>
+						<!-- // CLIENT ITEM - 9 - END // -->
+
+						<!-- // CLIENT ITEM - 10 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Daytime telephone number</p>
+							<p class="answer client-phone-number">0123456789</p>
+						</div>
+						<!-- // CLIENT ITEM - 10 - END // -->
+
+						<!-- // CLIENT ITEM - 11 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Mobile telephone number</p>
+							<p class="answer client-mob-number">07768948823</p>
+						</div>
+						<!-- // CLIENT ITEM - 11 - END // -->
+
+						<!-- // CLIENT ITEM - 12 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Email address</p>
+							<p class="answer client-email">gerald.brackens@hotmail.com</p>
+						</div>
+						<!-- // CLIENT ITEM - 12 - END // -->
+
+						<!-- // CLIENT ITEM - 13 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Financial reference</p>
+							<p class="answer client-financial">192848291</p>
+						</div>
+						<!-- // CLIENT ITEM - 13 - END // -->
+
+						<!-- // CLIENT ITEM - 15 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Medical condition</p>
+							<p class="answer client-medical-condition-answer">Alzheimer's</p>
+						</div>
+						<!-- // CLIENT ITEM - 15 - END // -->
+
+						<!-- // CLIENT ITEM - 16 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Marital status</p>
+							<p class="answer client-marital-status">Divorced</p>
+						</div>
+						<!-- // CLIENT ITEM - 16 - END // -->
+
+						<!-- // CLIENT ITEM - 17 - START // -->
+						<div class="person-detail-item">
+							<p class="item">How would the client liked to be contacted?</p>
+							<ul class="answer">
+								<li class="client-correspondence-post">Post</li>
+								<li class="client-correspondence-email">Email</li>
+							</ul>
+						</div>
+						<!-- // CLIENT ITEM - 17 - END // -->
+
+						<!-- // CLIENT ITEM - 18 - START // -->
+						<div class="person-detail-item">
+							<p class="item">Is the client a violent risk?</p>
+							<p class="answer client-violent-risk">Yes</p>
+						</div>
+						<!-- // CLIENT ITEM - 18 - END // -->
+
+					</div>
+
+				</td>
+			</tr>
+			<!-- CLIENT 1 - END -->
+
+			<!-- CLIENT 2 - START -->
+			<tr class="summary-row joe-bloggs deputy-public-authority order-property">
+				<td>
+					<a href="#" class="client">Stevenson, Harvey</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">12348679</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<p>Megan	Baldwin</p>
+				</td>
+				<td>
+					Public authority
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 2 - END -->
+
+			<!-- CLIENT 3 - START -->
+			<tr class="summary-row simon-carter deputy-lay order-property">
+				<td>
+					<a href="#" class="client">Owens, Marguerite</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">18654365</a> - Active
+						</div>
+					</div>
+					<div class="wrapper">
+						<span class="icon welfare"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#HandW">18654365</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">2</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Willie Potter</li>
+							<li>Carla	Vargas</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number alert">5</span>
+				</td>
+				<!-- <td>
+					Carter, Simon
+				</td> -->
+			</tr>
+			<!-- CLIENT 3 - END -->
+
+			<!-- CLIENT 4 - START -->
+			<tr class="summary-row david-harper deputy-lay order-property">
+				<td>
+					<a href="#" class="client">Carr, Celia</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">15638956</a> - Active
+						</div>
+					</div>
+					<div class="wrapper">
+						<span class="icon welfare"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#HandW">15638956</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">2</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Justin Mccormick</li>
+							<li>Archie Watts</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number alert">1</span>
+				</td>
+				<!-- <td>
+					Harper, David
+				</td> -->
+			</tr>
+			<!-- CLIENT 4 - END -->
+
+			<!-- CLIENT 5 - START -->
+			<tr class="summary-row shiobhan-mcdermot deputy-professional order-property">
+				<td>
+					<a href="#" class="client">Roy, Marcus</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">18695243</a> - Active
+						</div>
+					</div>
+					<div class="wrapper">
+						<span class="icon welfare"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#HandW">18695243</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<P>Dexter Woods</P>
+				</td>
+				<td>
+					Professional
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<!-- <td>
+					McDermot, Shiobhan
+				</td> -->
+			</tr>
+			<!-- CLIENT 5 - END -->
+
+			<!-- CLIENT 6 - START -->
+			<tr class="summary-row hannah-nixon deputy-lay order-property">
+				<td>
+					<a href="#" class="client">Neal, Erika</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">13426235</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">2</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Barbara Clark</li>
+							<li>Mona Maldonado</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number alert">1</span>
+				</td>
+				<!-- <td>
+					Nixon, Hannah
+				</td> -->
+			</tr>
+			<!-- CLIENT 6 - END -->
+
+			<!-- CLIENT 7 - START -->
+			<tr class="summary-row joe-bloggs deputy-professional order-health">
+				<td>
+					<a href="#" class="client">Chaplin, Oscar</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon welfare"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#HandW">16859489</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">2</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Nellie Hogan</li>
+							<li>Shelia Baker</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Professional
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number alert">1</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 7 - END -->
+
+			<!-- CLIENT 8 - START -->
+			<tr class="summary-row joe-bloggs deputy-professional order-health">
+				<td>
+					<a href="#" class="client">Woods, Rory</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon welfare"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#HandW">158679528</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">3</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Santos Kline</li>
+							<li>Sage Nelson</li>
+							<li>Trystan Vincent</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Professional
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 8 - END -->
+
+			<!-- CLIENT 9 - START -->
+			<tr class="summary-row joe-bloggs deputy-professional order-health">
+				<td>
+					<a href="#" class="client">Kirk, Precious</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon welfare"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#HandW">158679528</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<p>Lincoln Cruz</p>
+				</td>
+				<td>
+					Professional
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number alert">1</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 9 - END -->
+
+			<!-- CLIENT 10 - START -->
+			<tr class="summary-row joe-bloggs deputy-professional order-property">
+				<td>
+					<a href="#" class="client">Todd, Jayleen</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">145876538</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">2</span> Deputy</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>America Calhoun</li>
+							<li>Breanna Jordan</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Professional
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number alert">1</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 10 - END -->
+
+			<!-- CLIENT 11 - START -->
+			<tr class="summary-row hannha-nixon deputy-lay order-property">
+				<td>
+					<a href="#" class="client">Page, Harmony</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">145876538</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">3</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Isis Morrison</li>
+							<li>Julianna Suarez</li>
+							<li>Luis Harper</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number alert">4</span>
+				</td>
+				<!-- <td>
+					Nixon, Hannah
+				</td> -->
+			</tr>
+			<!-- CLIENT 11 - END -->
+
+			<!-- CLIENT 12 - START -->
+			<tr class="summary-row hannah-nixon deputy-lay order-property">
+				<td>
+					<a href="#" class="client">Sanchez, Roselyn</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">135864865</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">2</span> Deputies</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Demarion Reynolds</li>
+							<li>Gunner Rosales</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number alert">4</span>
+				</td>
+				<!-- <td>
+					Nixon, Hannah
+				</td> -->
+			</tr>
+			<!-- CLIENT 12 - END -->
+
+			<!-- CLIENT 13 - START -->
+			<tr class="summary-row david-harper deputy-public-authority order-property">
+				<td>
+					<a href="#" class="client">Gordon, Bridger</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">145752368</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<p>Raiden Allison</p>
+				</td>
+				<td>
+					Public authority
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<!-- <td>
+					Harper, David
+				</td> -->
+			</tr>
+			<!-- CLIENT 13 - END -->
+
+			<!-- CLIENT 14 - START -->
+			<tr class="summary-row joe-bloggs deputy-lay order-property">
+				<td>
+					<a href="#" class="client">Hall, Marlie</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">156875682</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">3</span> Deputy</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Taylor Hoover</li>
+							<li>Davian Lozano</li>
+							<li>Sawyer Boyer</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Lay
+				</td>
+				<td>
+					General
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 14 - END -->
+
+			<!-- CLIENT 15 - START -->
+			<tr class="summary-row joe-bloggs deputy-public-authority order-property">
+				<td>
+					<a href="#" class="client">Rose, Lailah</a>
+					<a href="#" class="view-full-details">View full details</a>
+				</td>
+				<td>
+					<div class="wrapper">
+						<span class="icon property"></span>
+						<div>
+							<a href="../4-client-hub/4a-new-client.html#PFA">142535796</a> - Active
+						</div>
+					</div>
+				</td>
+				<td>
+					<div class="details deputies">
+						<p>
+							<a href="#" class="deputies open"><span class="number deputy">4</span> Deputy</a>
+						</p>
+					</div>
+					<div class="description">
+						<ul>
+							<li>Deven Pruitt</li>
+							<li>Naima Davenport</li>
+							<li>Shayna Lucero</li>
+							<li>Sofia Roman</li>
+						</ul>
+					</div>
+				</td>
+				<td>
+					Public authority
+				</td>
+				<td>
+					Minimal
+				</td>
+				<td>
+					<span class="number">0</span>
+				</td>
+				<!-- <td>
+					<p class="user-name-change">Bloggs, Joe</p>
+				</td> -->
+			</tr>
+			<!-- CLIENT 15 - END -->
+
+		</tbody>
+	</table>
+
+	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
+	<div id="pagination-new">
+		<a class="disabled"><<</a>
+		<a class="disabled"><</a>
+		<span>
+			<a class="current">1</a>
+			<a>2</a>
+			<a>3</a>
+			<a>4</a>
+			<a>5</a>
+			<i>...</i>
+			<a>20</a>
+		</span>
+		<a>></a>
+		<a>>></a>
+	</div>
+	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
+
+</div>
+
+<script>
+function myFunction() {
+	// Declare variables
+	var input, filter, table, tr, td, i;
+	input = document.getElementById("search-table");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("dashboard-clients-table");
+	tr = table.getElementsByTagName("tr");
+
+	// Loop through all table rows, and hide those who don't match the search query
+	for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+		}
+	}
+}
+</script>
+ <!-- // MODAL - START // -->
+<div id="re-assign-clients" style="display:none;">
+	<h1>Reassign client/s</h1>
+	<h2>Reassign client/s to <div class="action-client-name">David Harper</div></h2>
+	<p>Are you sure you wish to reassign the client/s from <strong>Joe Bloggs</strong> to <strong>David Harper</strong>?</p>
+	<ul class="clients-name">
+
+	</ul>
+	<div class="cta-row">
+		<a class="main-cta" rel="modal:close" id="confirm-re-assign-client">Yes, reassign</a>
+		<a href="#" rel="modal:close" class="cancel">Cancel</a>
+	</div>
+</div>
+<!-- // MODAL - END // -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 4 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 5 - START =========== --> <div id="tab-5" class="tab-content dashboard"> <h2 class="description-title">My deputies</h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-new"> <a class="disabled"><<</a> <a class="disabled"><</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> <i>...</i> <a>20</a> </span> <a>></a> <a>>></a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel client-controller caseworker-search">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-clients">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-clients scroller">
 		<form class="search-filters deputy-filter" action="search.html">
 
 			<div class="filter-buttons">
@@ -1783,6 +2931,26 @@
 			</div>
 
 		</form>
+
+		<div class="row hidden-sorter">
+			<div class="large-12 large-uncentered columns">
+				<div class="wrapper">
+					<table class="tablesorter">
+						<thead>
+							<tr class="five-column">
+								<th style="width: 40%;"><span></span>Name</th>
+								<th style="width: 18%;">Clients</th>
+								<th style="width: 17%;"><span></span>Deputy type</th>
+								<th style="width: 18%;"><span></span>Supervision level</th>
+								<th style="width: 7%;">Tasks</th>
+								<!-- <th><span></span>Assigned to</th> -->
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /////////////// FILTER PANEL - END /////////////// -->
@@ -1818,7 +2986,7 @@
 			<!-- DEPUTY 1 - START -->
 			<tr class="summary-row joe-bloggs deputy-public-authority" data-value="1">
 				<td>
-					<a href="../14-deputy-hub/14c-deputy-page.html" class="client">Weston Parpenham</a>
+					<a href="../14-deputy-hub/14c-deputy-hub.html" class="client">Weston Parpenham</a>
 					<a href="#" class="view-full-details" data-value="1">View full details</a>
 				</td>
 				<td>
@@ -1857,10 +3025,10 @@
 						<div class="person-detail-item">
 							<p class="item">Correspondence name:</p>
 							<p class="answer">
-								<span class="deputy-title-answer">Mr</span>
-								<span class="deputy-first-name-answer">Nicolas</span>
-								<span class="deputy-middle-name-answer">Austin</span>
-								<span class="deputy-last-name-answer">Taylor</span>
+								<dfn class="deputy-title-answer">Mr</dfn>
+								<dfn class="deputy-first-name-answer">Nicolas</dfn>
+								<dfn class="deputy-middle-name-answer">Austin</dfn>
+								<dfn class="deputy-last-name-answer">Taylor</dfn>
 							</p>
 						</div>
 						<!-- // DEPUTY ITEM - 2 - END // -->
@@ -1890,10 +3058,10 @@
 						<div class="person-detail-item">
 							<p class="item">Address:</p>
 							<p class="answer">
-								<span class="deputy-address-line-1-answer">7 Farburn Terrace</span>,<br>
-								<span class="deputy-address-town-answer">Weston Parpenham</span>,<br>
-								<span class="deputy-manual-postcode-answer">PE17 0FS</span>.<br>
-								<span class="deputy-country-answer">United Kingdom</span>
+								<dfn class="deputy-address-line-1-answer">7 Farburn Terrace</dfn>,<br>
+								<dfn class="deputy-address-town-answer">Weston Parpenham</dfn>,<br>
+								<dfn class="deputy-manual-postcode-answer">PE17 0FS</dfn>.<br>
+								<dfn class="deputy-country-answer">United Kingdom</dfn>
 							</p>
 						</div>
 						<!-- // DEPUTY ITEM - 6 - END // -->
@@ -1905,12 +3073,19 @@
 						</div>
 						<!-- // DEPUTY ITEM - 7 - END // -->
 
-						<!-- // DEPUTY ITEM - 8 - START // -->
+						<!-- // DEPUTY ITEM - 8A - START // -->
 						<div class="person-detail-item">
 							<p class="item">Daytime telephone number:</p>
 							<p class="answer deputy-phone-number-answer">01268449380</p>
 						</div>
-						<!-- // DEPUTY ITEM - 8 - END // -->
+						<!-- // DEPUTY ITEM - 8A - END // -->
+
+						<!-- // DEPUTY ITEM - 8B - START // -->
+						<div class="person-detail-item">
+							<p class="item">Evening telephone number:</p>
+							<p class="answer deputy-evening-number-answer"></p>
+						</div>
+						<!-- // DEPUTY ITEM - 8B - END // -->
 
 						<!-- // DEPUTY ITEM - 9 - START // -->
 						<div class="person-detail-item">
@@ -1969,7 +3144,7 @@
 			<!-- DEPUTY 2 - START -->
 			<tr class="summary-row joe-bloggs deputy-professional" data-value="2">
 				<td>
-					<a href="../14-deputy-hub/14b-deputy-page.html" class="client">Bob Loblaw Ltd</a>
+					<a href="../14-deputy-hub/14b-deputy-hub.html" class="client">Bob Loblaw Ltd</a>
 					<a href="#" class="view-full-details" data-value="2">View full details</a>
 				</td>
 				<td>
@@ -2008,10 +3183,10 @@
 						<div class="person-detail-item">
 							<p class="item">Correspondence name:</p>
 							<p class="answer">
-								<span class="deputy-title-answer">Mr</span>
-								<span class="deputy-first-name-answer">Stanley</span>
-								<span class="deputy-middle-name-answer">William</span>
-								<span class="deputy-last-name-answer">Evans</span>
+								<dfn class="deputy-title-answer">Mr</dfn>
+								<dfn class="deputy-first-name-answer">Stanley</dfn>
+								<dfn class="deputy-middle-name-answer">William</dfn>
+								<dfn class="deputy-last-name-answer">Evans</dfn>
 							</p>
 						</div>
 						<!-- // DEPUTY ITEM - 2 - END // -->
@@ -2034,11 +3209,11 @@
 						<div class="person-detail-item">
 							<p class="item">Date of birth:</p>
 							<p class="answer">
-								<span class="deputy-dob-day-answer">06</span>
+								<dfn class="deputy-dob-day-answer">06</dfn>
 								/
-								<span class="deputy-dob-month-answer">01</span>
+								<dfn class="deputy-dob-month-answer">01</dfn>
 								/
-								<span class="deputy-dob-year-answer">1986</span>
+								<dfn class="deputy-dob-year-answer">1986</dfn>
 							</p>
 						</div>
 						<!-- // DEPUTY ITEM - 5 - END // -->
@@ -2054,10 +3229,10 @@
 						<div class="person-detail-item">
 							<p class="item">Address:</p>
 							<p class="answer">
-								<span class="deputy-address-line-1-answer">92 York Road</span>,<br>
-								<span class="deputy-address-town-answer">Oxnop Ghyll</span>,<br>
-								<span class="deputy-manual-postcode-answer">CF8 1HN</span>.<br>
-								<span class="deputy-country-answer">United Kingdom</span>
+								<dfn class="deputy-address-line-1-answer">92 York Road</dfn>,<br>
+								<dfn class="deputy-address-town-answer">Oxnop Ghyll</dfn>,<br>
+								<dfn class="deputy-manual-postcode-answer">CF8 1HN</dfn>.<br>
+								<dfn class="deputy-country-answer">United Kingdom</dfn>
 							</p>
 						</div>
 						<!-- // DEPUTY ITEM - 7 - END // -->
@@ -2069,12 +3244,19 @@
 						</div>
 						<!-- // DEPUTY ITEM - 8 - END // -->
 
-						<!-- // DEPUTY ITEM - 9 - START // -->
+						<!-- // DEPUTY ITEM - 9A - START // -->
 						<div class="person-detail-item">
 							<p class="item">Daytime telephone number:</p>
 							<p class="answer deputy-phone-number-answer">01239448394</p>
 						</div>
-						<!-- // DEPUTY ITEM - 9 - END // -->
+						<!-- // DEPUTY ITEM - 9A - END // -->
+
+						<!-- // DEPUTY ITEM - 9B - START // -->
+						<div class="person-detail-item">
+							<p class="item">Evening telephone number:</p>
+							<p class="answer deputy-evening-number-answer"></p>
+						</div>
+						<!-- // DEPUTY ITEM - 9B - END // -->
 
 						<!-- // DEPUTY ITEM - 10 - START // -->
 						<div class="person-detail-item">
@@ -2490,16 +3672,20 @@
 	</table>
 
 	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
-	<div id="pagination-small">
-		<a>-</a>
+	<div id="pagination-new">
+		<a class="disabled"><<</a>
+		<a class="disabled"><</a>
 		<span>
 			<a class="current">1</a>
 			<a>2</a>
 			<a>3</a>
 			<a>4</a>
 			<a>5</a>
+			<i>...</i>
+			<a>20</a>
 		</span>
-		<a>+</a>
+		<a>></a>
+		<a>>></a>
 	</div>
 	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
@@ -2541,7 +3727,7 @@ function myFunction() {
 	</div>
 </div>
 <!-- // MODAL - END // -->
- </div> <!-- =========== DASHBOARD TAB CONTENT - 5 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script src="../../../production/js/V21/pagination.js"></script><script>function myFunction() {  var input, filter, table, tr, td, i; input = document.getElementById("dashboard-deputy-search"); filter = input.value.toUpperCase(); table = document.getElementById("dashboard-deputies-table"); tr = table.getElementsByTagName("tr");  for (i = 0; i < tr.length; i++) { td = tr[i].getElementsByTagName("td")[0]; if (td) { if (td.innerHTML.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } }}</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 5 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --> <!-- // DEVELOPER BUTTONS - START --> <div class="dev-buttons"> <a href="#" id="remove-actions">Remove actions</a> </div> <!-- // DEVELOPER BUTTONS - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script src="../../../production/js/V21/pagination.js"></script><script>function myFunction() {  var input, filter, table, tr, td, i; input = document.getElementById("dashboard-deputy-search"); filter = input.value.toUpperCase(); table = document.getElementById("dashboard-deputies-table"); tr = table.getElementsByTagName("tr");  for (i = 0; i < tr.length; i++) { td = tr[i].getElementsByTagName("td")[0]; if (td) { if (td.innerHTML.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } }}</script><script type="text/javascript"> if($(window).width() > 481) { $(function() { moveScroller(); }); }</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V21/hideShowPassword.js"></script>
 	<script src="../../../production/js/V21/jquery.cookie.js"></script>
@@ -2553,7 +3739,7 @@ function myFunction() {
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script>
 		$( function() {
-			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+			$( "#datepicker, #datepicker1, #datepicker2, #credit-date-by, #credit-sent-date, #write-off-date, #exemption-date" ).datepicker();
 		} );
 	</script>
 	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
@@ -2579,6 +3765,7 @@ function myFunction() {
 	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
 	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
 	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/sign-out.js"></script>
 	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
@@ -2588,14 +3775,17 @@ function myFunction() {
 	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/finance.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
 	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/allocate-client.js"></script>
 	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
 	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
 	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
 	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
@@ -2619,13 +3809,13 @@ function myFunction() {
 	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
-	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/finance.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
-	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
 	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
@@ -2659,7 +3849,7 @@ function myFunction() {
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table, .livelink-documents, #clients-table, #contact-list-deputy-pro, #contact-list-deputy-pa").tablesorter();
 		});
 
 		// $(document).ready(function() {

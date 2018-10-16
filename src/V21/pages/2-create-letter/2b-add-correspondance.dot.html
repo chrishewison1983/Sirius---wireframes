@@ -13,7 +13,7 @@
           <div class="row">
                <div class="large-12 large-uncentered columns">
                     <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
                          <div class="separator"> > </div>
                          <a href="../4-client-hub/4a-new-client.html">
                               <div class="client-title">Mr</div>
@@ -23,10 +23,10 @@
                          <div class="separator"> > </div>
                          <a href="../4-client-hub/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a>
                          <div class="separator"> > </div>
-                         <span>Create correspondence</span>
+                         <span>Create letter</span>
                     </nav>
                     <h1>
-                         Select the recipient(s) for the correspondence
+                         Select the recipient(s) for the letter
                     </h1>
                </div>
           </div>
@@ -49,7 +49,7 @@
                          <ul id="side-panel-tabs" class="tabs">
                               <li class="tab-link current" data-tab="tab-1">
                                    <span class="info"></span>
-                                   <p>Correspondence</p>
+                                   <p>Letter</p>
                               </li>
                               <li class="tab-link" data-tab="tab-2">
                                    <span class="draft-letters"></span>
@@ -121,7 +121,7 @@
 
                               <!-- <h2 class="section-title">Case documents</h2> -->
 
-                              {{= it.include('side-panel/document-viewer.html') }}
+                              {{= it.include('side-panel/document-viewer-filter.html') }}
 
                          </div>
                          <!-- =========== TAB CONTENT - 6 - END =========== -->
@@ -171,7 +171,7 @@
                                    <li>
                                         <a class="correspondent suggested" data-correspondent-id='1'>
                                              <span class="icon fee-payer"><p>Fee payer</p></span>
-                                             <span class="icon main-contact"><p>Main correspondence</p></span>
+                                             <span class="icon main-contact"><p>Main correspondant</p></span>
                                              <span data-value='name'>Ms Lara Stevens</span><br>
                                              <span data-value='type' class="type">Deputy</span><br>
                                              <span data-value='address' class="sub-text">92 Greyfriars Road, CANNOCK WOOD, W5154AA.</span><br>
@@ -278,10 +278,10 @@
 
 <!-- FOOTER CONTENT - START -->
 <footer id="cta-footer" class="cta-row">
-     <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html#EditDoc">Create correspondence</a>
+     <a class="main-cta primary" id="create-letter" href="2d-edit-letter.html#EditDoc">Create letter</a>
      <span class="separator"></span>
      <a onclick="history.back();" class="back">Back</a>
-     <a href="../4-client-hub/4a-new-client.html" class="cancel">Cancel correspondence</a>
+     <a href="../4-client-hub/4a-new-client.html" class="cancel">Cancel</a>
 </footer>
 <!-- FOOTER CONTENT - END -->
 

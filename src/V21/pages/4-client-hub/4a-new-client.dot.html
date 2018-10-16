@@ -10,50 +10,61 @@
 
           {{= it.include('top-nav.html') }}
 
-          <div class="row">
+          <form>
 
-               <!-- // CLIENT DETAILS - START //-->
-               <div class="large-7 large-uncentered columns content-left">
-                    <nav class="breadcrumb">
-                         <a href="../index.html" class="user-type-link">Dashboard</a>
-                         <div class="separator"> > </div>
-                         <span>Client summary</span>
-                    </nav>
-                    <h1>
-                         <span class="type client">client</span>
-                         <a href="#" class="client-home-button"><div class="client-title">Mr</div> <div class="client-first-name">Gerald</div> <div class="client-last-name">Brackens</div></a>
+               <div class="row">
 
-                         <br>
+                    <!-- // CLIENT DETAILS - START //-->
+                    <div class="large-7 large-uncentered columns content-left">
+                         <nav class="breadcrumb">
+                              <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
+                              <div class="separator"> > </div>
+                              <span>Client summary</span>
+                         </nav>
+                         <h1>
+                              <span class="type client">client</span>
+                              <label for="client-actions" class="client-home-button">
+                                   <div class="client-title">Mr</div>
+                                   <div class="client-first-name">Gerald</div>
+                                   <div class="client-last-name">Brackens</div>
+                                   <input id="client-actions" type="radio" value="client" name="order-view">
+                              </label>
 
-                         <!-- <span class="normal-status">Client's summary page - <a href="#" class="show-client-info">More client info</a></span> -->
-                         <!-- <span class="normal-status">Client's summary page</span> -->
-                         <span class="assignee">Assignee: <a href="#" class="sirius-user-id">Susan Smith</a></span>
-                         <span class="violent">Client is violent</span>
-                         <span class="welsh">Client's prefered language is Welsh</span>
-                         <span class="deceased">Client is deceased</span>
+                              <br>
 
-                    </h1>
+                              <!-- <span class="normal-status">Client's summary page - <a href="#" class="show-client-info">More client info</a></span> -->
+                              <!-- <span class="normal-status">Client's summary page</span> -->
+                              <span class="assignee">Assignee: <a href="#" class="sirius-user-id">Susan Smith</a></span>
+                              <span class="supervision-level">Supervision level: <strong class="supervision-level-answer">Minimal</strong></span>
 
-               </div>
-               <!-- // CLIENT DETAILS - END //-->
+                              <span class="violent">Client is violent</span>
+                              <span class="welsh">Client's prefered language is Welsh</span>
+                              <span class="deceased">Client is deceased</span>
 
-               <!-- // CLIENT HUB FILTER - START //-->
-               <div class="large-5 large-uncentered columns content-right">
+                         </h1>
 
-                    <div id="hub-filter-panel" class="version-1">
-                         <form>
+                    </div>
+                    <!-- // CLIENT DETAILS - END //-->
+
+                    <!-- // CLIENT HUB FILTER - START //-->
+                    <div class="large-5 large-uncentered columns content-right">
+
+                         <div id="hub-filter-panel" class="version-1">
                               <nav class="">
-                                   <div class="wrapper pfa-wrapper active-order">
+
+                                   <div class="arrow-right"></div>
+
+                                   <div class="wrapper pfa-wrapper active-order checked">
                                         <div class="facts text">
                                              <a href="#" class="fact one"><span>1</span><strong>Tasks</strong></a>
                                              <a href="#" class="fact two"><span>1</span><strong>Deputies</strong></a>
                                              <!-- <label class="normal checked" for="primary-order"><input id="primary-order" name="primary-order" type="checkbox" value="Primary" checked>Primary</label> -->
                                         </div>
-                                        <label for="pfa-actions" class="filter">
+                                        <label for="pfa-actions" class="filter checked">
                                              <!-- <span class="icon primary"><p>Primary case</p></span> -->
                                              <span class="order-level">103</span>
                                              <h2>
-                                                  <span class="icon property white"></span>
+                                                  <span class="icon property black"></span>
                                                   <div>
                                                        <div>PFA <strong>-</strong> 14820940</div>
                                                        <p>(7000-0000-2472)</p>
@@ -131,25 +142,27 @@
                                    </div>
 
                               </nav>
-                         </form>
+                         </div>
+
                     </div>
+                    <!-- // CLIENT HUB FILTER - END //-->
+
+                    <!-- // HIDDEN CLIENT CONTENT - START //-->
+                    <!-- <div id="hidden-client-content" class="large-12 large-uncentered columns">
+                         <div class="wrapper">
+                              <p>Born <strong>01/01/1990</strong></p>
+                              <p>Address <strong>Address line 1, Town, Postcode</strong></p>
+                              <p>Email <strong>email@email.com</strong></p>
+                              <p>Medical Condition <strong>Medical condition</strong></p>
+                         </div>
+                    </div> -->
+                    <!-- // HIDDEN CLIENT CONTENT - END //-->
+
 
                </div>
-               <!-- // CLIENT HUB FILTER - END //-->
 
-               <!-- // HIDDEN CLIENT CONTENT - START //-->
-               <!-- <div id="hidden-client-content" class="large-12 large-uncentered columns">
-                    <div class="wrapper">
-                         <p>Born <strong>01/01/1990</strong></p>
-                         <p>Address <strong>Address line 1, Town, Postcode</strong></p>
-                         <p>Email <strong>email@email.com</strong></p>
-                         <p>Medical Condition <strong>Medical condition</strong></p>
-                    </div>
-               </div> -->
-               <!-- // HIDDEN CLIENT CONTENT - END //-->
+          </form>
 
-
-          </div>
 
           <div class="colour-wrapper"></div>
 
@@ -160,6 +173,9 @@
 
      <!-- //////////////////////////////////// CLIENT OVERVIEW - START //////////////////////////////////// -->
      <div id="client-overview" class="tabcontent current">
+
+          {{= it.include('confirmation/client-allocated.html') }}
+
           <div class="row">
                <div class="large-9 large-uncentered columns">
 
@@ -178,19 +194,22 @@
                               Reports
                          </li>
                          <li class="tab-link" data-tab="summary-tab-5">
-                              <span>5</span> Tasks
+                              <span>1</span> Tasks
                          </li>
                          <li class="tab-link" data-tab="summary-tab-6">
-                              <span>5</span> Orders
+                              <span>2</span> Orders
                          </li>
                          <li class="tab-link" data-tab="summary-tab-7">
-                              <span>4</span> Deputies
+                              <span>1</span> Deputies
                          </li>
                          <li class="tab-link" data-tab="summary-tab-8">
                               Timeline
                          </li>
                          <li class="tab-link" data-tab="summary-tab-9">
                               Documents
+                         </li>
+                         <li class="tab-link hide" data-tab="summary-tab-10">
+                              Finance
                          </li>
                     </ul>
                     <!-- =========== TABS - END =========== -->
@@ -358,42 +377,79 @@
 
                               <div class="large-12 large-uncentered columns">
 
+                                   {{= it.include('confirmation/document-replaced.html') }}
+
                                    <h2 class="description-title">
                                         Client documents
-                                        <form class="document-tab-selector">
-                                             <label for="document-tab-folders" class="radio normal checked">
-                                                  <input id="document-tab-folders" type="radio" name="document-tab" value="Folder" checked>
-                                   			<span class="icon folder"></span>
-                                                  Folders
-                                             </label>
-                                             <label for="document-tab-folders-simplified" class="radio normal">
-                                                  <input id="document-tab-folders-simplified" type="radio" name="document-tab" value="Simplified">
+                                        <!-- <form class="document-tab-selector">
+                                             <label for="document-tab-folders-simplified" class="radio normal checked">
+                                                  <input id="document-tab-folders-simplified" type="radio" name="document-tab" value="Simplified" checked>
                                                   <span class="icon folder"></span>
-                                                  Folder - simplified
+                                                  V1 - Folders - simplified
+                                             </label>
+                                             <label for="document-tab-folders" class="radio normal">
+                                                  <input id="document-tab-folders" type="radio" name="document-tab" value="Folder">
+                                   			<span class="icon folder"></span>
+                                                  V2 - Folders (OLD)
                                              </label>
                                              <label for="document-tab-filter" class="radio normal">
                                                   <input id="document-tab-filter" type="radio" name="document-tab" value="Filter">
                                    			<span class="icon filter"></span>
-                                                  Filters
+                                                  V3 - Filters
                                              </label>
-                                   	</form>
+                                   	</form> -->
                                         <!-- <a href="../2-create-letter/2a-create-letter.html" class="add">Create letter</a> -->
                                    </h2>
 
-                                   {{= it.include('filters/filter-documents.html') }}
-
-                                   {{= it.include('side-panel/document-viewer.html') }}
-
-                                   {{= it.include('side-panel/document-viewer-simplified.html') }}
-
                                    {{= it.include('side-panel/document-viewer-filter.html') }}
-
 
                               </div>
 
                          </div>
                     </div>
                     <!-- =========== TAB CONTENT - 9 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 10 - START =========== -->
+                    <div id="summary-tab-10" class="client-details tab-content">
+                         <div class="row">
+
+                              <div class="large-12 large-uncentered columns">
+
+                                   <!-- // FINANCE INTRO - START // -->
+                                   <div class="finance-intro">
+                                        <h2 class="description-title">
+                                             <div>Finance</div>
+                                             <a href="../25-finance/25e-add-exemption.html" class="add-amount">Add exemption to client</a>
+                                        </h2>
+                                        <section class="account-credit zero">
+                                             <div class="left">
+                                                  <div class="wrapper">
+                                                       <h2 class="main-text">
+                                                            &pound;<div class="account-amount-answer">0</div>
+                                                       </h2>
+                                                  </div>
+                                             </div>
+                                             <div class="right">
+                                                  <div class="wrapper">
+                                                       <h2 class="sub-text">Account credit</h2>
+                                                       <a class="add-amount" href="../25-finance/25c-credit-account.html">Add credit</a>
+                                                       <a class="remove-amount" href="../25-finance/25d-remove-account.html">Remove credit</a>
+                                                  </div>
+                                             </div>
+                                        </section>
+                                   </div>
+                                   <!-- // FINANCE INTRO - END // -->
+
+                                   {{= it.include('confirmation/invoice-warning.html') }}
+
+                                   {{= it.include('client-page/finance.html') }}
+
+                              </div>
+
+                         </div>
+                    </div>
+                    <!-- =========== TAB CONTENT - 10 - END =========== -->
+
 
                </div>
 
@@ -418,6 +474,8 @@
 </main>
 <!-- PRIMARY CONTENT - END -->
 
+{{= it.include('modals/allocate-client.html') }}
+
 {{= it.include('modals/task-actions.html') }}
 
 {{= it.include('modals/view-report.html') }}
@@ -430,11 +488,19 @@
 
 {{= it.include('modals/unlink-deputy.html') }}
 
+{{= it.include('modals/credit-account.html') }}
+
 <!-- FOOTER CONTENT - START -->
 <!-- FOOTER CONTENT - END -->
 
 <!-- SCRIPT CONTENT - START -->
-<script>
+<script type="text/javascript">
+
+     if($(window).width() > 481) {
+          $(function() {
+               moveScroller();
+          });
+     }
 
 </script>
 <!-- SCRIPT CONTENT - END -->

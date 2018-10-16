@@ -1,0 +1,233 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+               <div class="large-12 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-hub/4a-new-client.html">
+                              <div class="client-title">Mr</div>
+                              <div class="client-first-name">Gerald</div>
+                              <div class="client-last-name">Brackens</div>
+                         </a>
+                         <div class="separator"> > </div>
+                         <a href="../4-client-hub/4a-new-client.html#HandW" class="order-specific-journey">H &amp; W | 14820940</a>
+                         <div class="separator"> > </div>
+                         <span>Create correspondence</span>
+                    </nav>
+                    <h1>
+                         Create correspondence
+                    </h1>
+               </div>
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper create-letter-journey">
+
+          <div class="row">
+
+               <div class="large-6 large-uncentered columns side-panel-parent">
+
+                    <!-- ////////// SIDE PANEL - START ////////// -->
+                    <div id="side-panel">
+
+                         <!-- =========== TABS - START =========== -->
+                         <ul id="side-panel-tabs" class="tabs">
+                              <li class="tab-link current" data-tab="tab-1">
+                                   <span class="info"></span>
+                                   <p>Correspondence</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-2">
+                                   <span class="draft-letters"></span>
+                                   <p>Drafts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-3">
+                                   <span class="client-details"></span>
+                                   <p>Client</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-4">
+                                   <span class="deputy-details"></span>
+                                   <p>Deputies</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-5">
+                                   <span class="client-contacts"></span>
+                                   <p>Contacts</p>
+                              </li>
+                              <li class="tab-link" data-tab="tab-6">
+                                   <span class="documents"></span>
+                                   <p>Documents</p>
+                              </li>
+                         </ul>
+                         <!-- =========== TABS - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 1 - START =========== -->
+                         <div id="tab-1" class="tab-content side-panel current">
+
+                              {{= it.include('side-panel/letter-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 2 - START =========== -->
+                         <div id="tab-2" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/drafts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 3 - START =========== -->
+                         <div id="tab-3" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/client-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 4 - START =========== -->
+                         <div id="tab-4" class="tab-content side-panel">
+
+                              {{= it.include('side-panel/deputy-details.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 5 - START =========== -->
+                         <div id="tab-5" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-contacts.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                         <!-- =========== TAB CONTENT - 6 - START =========== -->
+                         <div id="tab-6" class="tab-content side-panel">
+
+                              <!-- <h2 class="section-title">Case documents</h2> -->
+
+                              {{= it.include('side-panel/document-viewer-filter.html') }}
+
+                         </div>
+                         <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    </div>
+                    <!-- ////////// SIDE PANEL - END ////////// -->
+
+               </div>
+
+               <div id="action-panel" class="large-6 large-uncentered columns">
+
+                    <button id="notify-button" class="main-cta">Notify</button>
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+<!-- FOOTER CONTENT - START -->
+<footer id="cta-footer" class="cta-row">
+     <!-- <a class="main-cta primary" id="create-letter" href="24d-edit-letter.html">Create letter</a> -->
+     <a href="#" onclick="history.back();" class="solo-link cancel">Cancel correspondence</a>
+</footer>
+<!-- FOOTER CONTENT - END -->
+
+<!-- SCRIPT CONTENT - START -->
+<script src="../../../jsrsasign/jsrsasign-all-min.js"></script>
+
+<script>
+
+     $(document).ready(function(){
+          sessionStorage.setItem('selected-letter', JSON.stringify($('#draft-list li').map(function() {
+               return $(this).text().trim();
+          }).toArray()));
+     });
+
+
+     $(document).ready(function() {
+          $('#notify-button').click(function() {
+               var tmp = 'sirius_test-609565bc-0904-47a1-ae0f-9a81750193f8-1e625f48-e452-4544-a1b8-f87eef1b056c';
+               var secret = '1e625f48-e452-4544-a1b8-f87eef1b056c';
+               var serviceId = '609565bc-0904-47a1-ae0f-9a81750193f8';
+
+               secret = tmp.substring(tmp.length - 36, tmp.length);
+               serviceId = tmp.substring(tmp.length - 73, tmp.length - 37);
+
+               /* Header */
+               var oHeader = {alg: 'HS256', typ: 'JWT'};
+               /* Payload */
+               var oPayload = {};
+               var tNow = KJUR.jws.IntDate.get('now');
+               var tEnd = KJUR.jws.IntDate.get('now + 1day');
+               var timestamp = Math.round(Date.now() / 1000);
+               oPayload.iss = serviceId;
+               /* oPayload.sub = "mailto:mike@foo.com"; */
+               /* oPayload.nbf = tNow;*/
+               oPayload.iat = timestamp;
+               /* oPayload.exp = tEnd;*/
+               /* oPayload.jti = "id123456"; */
+               /* oPayload.aud = "http://foo.com/employee"; */
+               /* Sign JWT, password=616161 */
+               var sHeader = JSON.stringify(oHeader);
+               var sPayload = JSON.stringify(oPayload);
+               var sJWT = KJUR.jws.JWS.sign("HS256", sHeader, sPayload, secret);
+console.log(sJWT);
+               var data = {
+                    "template_id": "25bd4069-8fe8-4bf6-97ea-39f2230d0574",
+                    "personalisation": {
+                         "address_line_1": "Test",
+                         "address_line_2": "Test",
+                         "postcode": "Test",
+                         "lforename": "Test",
+                         "title": "Test",
+                         "lsurname": "Test",
+                         "Text2": "Test",
+                         "from_date": "Test",
+                         "to_date": "Test",
+                         "typeofrep": "Test",
+                         "chase1": "Test",
+                         "Text3": "Test",
+                         "caseno": "Test",
+                         "yours": "Test"
+                    }
+               };
+
+               $.ajax({
+                    url: 'https://api.notifications.service.gov.uk/v2/notifications/letter',
+                    type: 'POST',
+                    data: data,
+                    beforeSend: function(xhr) {
+                         xhr.setRequestHeader('Authorization', 'Bearer ' + sJWT);
+                    },
+                    success: function (data) {
+                         console.log(data);
+                    },
+                    error: function (data) {
+                         console.log(data);
+                    }
+               });
+          });
+     });
+
+</script>
+<!-- SCRIPT CONTENT - END -->

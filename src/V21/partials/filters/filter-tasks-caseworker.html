@@ -1,7 +1,7 @@
 <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel task-controller caseworker-filter">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-tasks">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks scroller">
 		<form class="search-filters task-filter">
 
 			<div class="filter-buttons">
@@ -26,7 +26,7 @@
 								<option value="">-- Select task type --</option>
 								<option value="CWRD">Case Work - Reply Due</option>
                                         <option value="ORRE">Order - Review the order</option>
-                                        <option value="ORAL">Order - Allocate to team</option>
+                                        <option value="ORAL">Allocate client</option>
                                         <option value="INAR">Intro - Arrange settling in</option>
                                         <option value="INSE">Intro - Settling in call</option>
                                         <option value="INNDR">Intro - New Deputy Report</option>
@@ -64,11 +64,11 @@
 					<table class="tablesorter">
 						<thead>
 							<tr class="four-column">
-								<th><span></span>Type</th>
-								<th><span></span>Task due date</th>
-								<th class="non-sort">Case type</th>
+								<th style="width: 64.5%;"><span></span>Type</th>
+								<th style="width: 18%;"><span></span>Task due date</th>
+								<th style="width: 17.5%;" class="non-sort">Case type</th>
 								<!-- <th><span></span>Task status</th> -->
-								<th><span></span>Assigned to</th>
+								<!-- <th><span></span>Assigned to</th> -->
 							</tr>
 						</thead>
 					</table>

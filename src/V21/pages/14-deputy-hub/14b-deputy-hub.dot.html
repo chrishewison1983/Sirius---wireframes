@@ -1,0 +1,177 @@
+{
+     "template": "default-sub-section"
+}
+
+<!-- PRIMARY CONTENT - START -->
+<main class="default deputy-details-page professional">
+
+     <!-- SECTION HEADER - START -->
+     <div id="section-header" class="deputy-page professional">
+
+          {{= it.include('top-nav.html') }}
+
+          <div class="row">
+
+               <!-- // DEPUTY DETAILS - START //-->
+               <div class="large-7 large-uncentered columns">
+                    <nav class="breadcrumb">
+                         <a href="../19-dashboard/19a-caseworker.html" class="user-type-link">Dashboard</a>
+                         <div class="separator"> > </div>
+                         <span>Deputy summary</span>
+                    </nav>
+                    <h1>
+                         <span class="type professional">PRO</span>
+                         <a href="#" class="deputy-home-button"><div class="deputy-organisation-name-answer">Bob Loblaw Ltd</div></a>
+                         <br>
+                         <span class="deputy-status-title">Deputy is active</span>
+                    </h1>
+               </div>
+               <!-- // DEPUTY DETAILS - END //-->
+
+               <!-- // ADDITIONAL DETAILS - START //-->
+               <div class="large-5 large-uncentered columns">
+                    <div id="additional-details">
+                         <div class="text">
+                              Occupation:
+                              <strong>Solicitor</strong>
+                         </div>
+                         <div class="text">
+                              Professional indemnity insurance:
+                              <strong>Yes</strong>
+                         </div>
+                         <div class="text">
+                              Insurance coverage:
+                              <strong>&pound;2,500,000.00</strong>
+                         </div>
+                         <div class="text">
+                              Date expires:
+                              <strong>25/04/2020</strong>
+                         </div>
+                    </div>
+               </div>
+               <!-- // ADDITIONAL DETAILS - END //-->
+
+
+          </div>
+
+          <div class="colour-wrapper"></div>
+     </div>
+     <!-- SECTION HEADER - END -->
+
+     {{= it.include('confirmation/deputy-updated.html') }}
+
+     <!-- CONTENT WRAPPER - START -->
+     <div class="content-wrapper">
+
+          <div class="row">
+
+               <div class="large-9 large-uncentered columns">
+
+                    <!-- =========== TABS - START =========== -->
+                    <ul class="deputy-tabs tabs">
+                         <li class="tab-link current" data-tab="tab-1">Details</li>
+                         <li class="tab-link" data-tab="tab-2">Warnings</li>
+                         <li class="tab-link" data-tab="tab-3"><span class="number">7</span>Offices</li>
+                         <li class="tab-link" data-tab="tab-4"><span class="larger-number">250+</span>Clients</li>
+                         <li class="tab-link" data-tab="tab-5"><span class="number">1</span>Named deputies</li>
+                         <li class="tab-link" data-tab="tab-6">Timeline</li>
+                         <!-- <li class="tab-link" data-tab="tab-7">Documents</li> -->
+                    </ul>
+                    <!-- =========== TABS - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 1 - START =========== -->
+                    <div id="tab-1" class="tab-content current">
+
+                         {{= it.include('deputy-page/deputy-pro-details.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 1 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 2 - START =========== -->
+                    <div id="tab-2" class="tab-content">
+
+                         {{= it.include('deputy-page/warnings.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 2 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 3 - START =========== -->
+                    <div id="tab-3" class="tab-content">
+
+                         {{= it.include('confirmation/contact-added.html') }}
+
+                         {{= it.include('confirmation/contact-removed.html') }}
+
+                         {{= it.include('deputy-page/contacts-pro.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 3 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 4 - START =========== -->
+                    <div id="tab-4" class="tab-content">
+
+                         {{= it.include('deputy-page/multiple-client-details-pro.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 4 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 5 - START =========== -->
+                    <div id="tab-5" class="tab-content">
+
+                         {{= it.include('deputy-page/linked-deputies-pro-pa.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 5 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 6 - START =========== -->
+                    <div id="tab-6" class="tab-content">
+
+                         {{= it.include('deputy-page/timeline-deputy.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 6 - END =========== -->
+
+                    <!-- =========== TAB CONTENT - 7 - START =========== -->
+                    <div id="tab-7" class="tab-content">
+
+                         <h2 class="description-title">Deputy documents</h2>
+
+                         {{= it.include('side-panel/document-viewer-filter.html') }}
+
+                    </div>
+                    <!-- =========== TAB CONTENT - 7 - END =========== -->
+
+               </div>
+
+               <div class="large-3 large-uncentered columns">
+
+                    {{= it.include('actions-deputy.html') }}
+
+               </div>
+
+          </div>
+
+     </div>
+     <!-- CONTENT WRAPPER - END -->
+
+</main>
+<!-- PRIMARY CONTENT - END -->
+
+{{= it.include('modals/delete-contact-deputy.html') }}
+
+<!-- FOOTER CONTENT - START -->
+<!-- FOOTER CONTENT - END -->
+
+<!-- <div id="animated-example" class="animated bounce with-cta-footer"></div> -->
+
+<!-- SCRIPT CONTENT - START -->
+<script type="text/javascript">
+
+     if($(window).width() > 481) {
+          $(function() {
+               moveScroller();
+          });
+     }
+
+</script>
+<!-- SCRIPT CONTENT - END -->

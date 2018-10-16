@@ -99,7 +99,7 @@ $('.filter-tasks-category').change(function(){
      $('#dashboard-tasks-table tbody tr').removeClass('selected-item');
      $('#dashboard-tasks-table tbody tr .task-title').removeClass('checked');
 
-     $('.task-filter').find('.filter-numbers').hide();
+     // $('.task-filter').find('.filter-numbers').hide();
 
      $(this).parent().parent().addClass('filter-active');
 
@@ -184,7 +184,7 @@ $('#select-all-tasks').change(function(){
 
      // 1 - My clients
      if($(this).is(":checked") && $('#filter-tasks-category').val() == 'My tasks') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('2');
           $('.tasks-name').append(`
                <li>Mr Gerald Brackens</li>
@@ -194,7 +194,7 @@ $('#select-all-tasks').change(function(){
 
      // 2 - My teams tasks
      if($(this).is(":checked") && $('#filter-tasks-category').val() == 'My teams tasks') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('1');
           $('.task-filter').find('.filter-numbers .desc').text('task');
           $('.tasks-name').append(`
@@ -208,7 +208,7 @@ $('#select-all-tasks').change(function(){
      }
 
      if($(this).is(":checked") && $('#filter-tasks-category').val() == 'Task type' && $('#select-deputy-type').val() == 'Lay') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('4');
           $('.tasks-name').append(`
                <li>Mr Gerald Brackens</li>
@@ -217,14 +217,14 @@ $('#select-all-tasks').change(function(){
                <li>Ms Erika Neal</li>
           `);
      } else if($(this).is(":checked") && $('#filter-tasks-category').val() == 'Task type' && $('#select-deputy-type').val() == 'Professional') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('2');
           $('.tasks-name').append(`
                <li>Dr Marcus Roy</li>
                <li>Mr Oscar Chaplin</li>
           `);
      } else if($(this).is(":checked") && $('#filter-tasks-category').val() == 'Task type' && $('#select-deputy-type').val() == 'Public authority') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('1');
           $('.task-filter').find('.filter-numbers .desc').text('task');
           $('.tasks-name').append(`
@@ -234,7 +234,7 @@ $('#select-all-tasks').change(function(){
 
      // 4 - Due date
      if($(this).is(":checked") && $('#filter-tasks-category').val() == 'Due date') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('6');
           $('.tasks-name').append(`
                <li>Mr Gerald Brackens</li>
@@ -248,7 +248,7 @@ $('#select-all-tasks').change(function(){
 
      // 5 - Unassigned
      if ($(this).is(":checked") && $('#filter-tasks-category').val() == 'Unassigned') {
-          $('.task-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.task-filter').find('.filter-numbers').css('display', 'flex');
           $('.task-filter').find('.filter-numbers .number').text('1');
           $('.task-filter').find('.filter-numbers .desc').text('task');
           $('.tasks-name').append(`
@@ -279,7 +279,7 @@ $('#select-all-tasks').change(function(){
 
           $('.task-filter').find('.step-2').hide();
           $('.task-filter').find('.step-1, .main-filter').removeClass('de-activated');
-          $('.task-filter').find('.step-1').removeClass('step-1-filter-active');
+          // $('.task-filter').find('.step-1').removeClass('step-1-filter-active');
           $('.task-filter').find('.main-filter input, .main-filter select, .step-1 input, .step-1 select').removeAttr('disabled');
           $('.task-filter').find('.filter-select-all-clear .cancel-re-assign').hide();
           $('.task-filter').find('.filter-select-all-clear .clear-filter').show();
@@ -522,7 +522,9 @@ $(document).ready(function () {
                $('.re-assign-my-tasks').attr('href', '#re-assign-tasks');
                $('.re-assign-my-tasks').attr('rel', 'modal:open');
 
-               $('.task-filter').find('.filter-numbers').css('display', 'flex');
+               // $('.task-filter').find('.filter-numbers').css('display', 'flex');
+
+               $('.task-filter').find('.filter-numbers').addClass('selected');
 
                $('.filter-panel.task-controller .cancel-re-assign').show();
                $('.filter-panel.task-controller .clear-filter').hide();
@@ -564,7 +566,9 @@ $(document).ready(function () {
                $('#select-all-tasks').removeAttr('checked');
 
                if ($('input[name="re-assign-task"][checked]').length === 0) {
-                    $('.task-filter').find('.filter-numbers').hide();
+                    // $('.task-filter').find('.filter-numbers').hide();
+
+                    $('.task-filter').find('.filter-numbers').removeClass('selected');
 
                     $('.task-filter').find('.main-filter, .step-1').removeClass('de-activated');
                     $('.task-filter').find('.step-1').addClass('step-1-filter-active');
@@ -574,7 +578,7 @@ $(document).ready(function () {
                     $('.task-filter').find('.step-2 .re-assign-title.title-label').addClass('hide');
 
                     $('.task-filter').find('.filter-select-all-clear, .filter-select-all-clear .clear-filter').show();
-                    $('.task-filter').find('.step-2, .filter-select-all-clear .cancel-re-assign').hide();
+                    $('.task-filter').find('.step-2, .filter-select-all-clear .cancel-re-assign, .step-3').hide();
                     $('.task-filter').find('.main-filter').addClass('re-assign-active');
 
                     $('.re-assign-my-tasks').removeAttr('href').addClass('de-activate');
@@ -596,7 +600,9 @@ $(document).ready(function(){
           var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
           $('.task-filter').find('.filter-numbers .number').text(countCheckedCheckboxes);
 
-          if (countCheckedCheckboxes <= 1) {
+          if (countCheckedCheckboxes == 0) {
+               $('.task-filter').find('.filter-numbers .number').text('15');
+          } else if (countCheckedCheckboxes <= 1) {
                $('.task-filter').find('.filter-numbers .desc').text('task');
           } else {
                $('.task-filter').find('.filter-numbers .desc').text('tasks');
@@ -613,9 +619,13 @@ $('#confirm-dashboard-re-assign-task').click(function(){
           $('#re-assign-task-confirmation-message').slideUp();
      }, 5000);
 
+     $('.task-filter .filter-numbers').removeClass('selected');
+     $('.task-filter .filter-numbers .number').text('23').addClass('three-figures');
+     $('.task-filter .filter-numbers .desc').text('clients');
+
      // $('#dashboard-tasks-table tr.selected-item').hide();
 
-     $('.task-filter .filter-numbers').hide();
+     // $('.task-filter .filter-numbers').hide();
 
      // ========================= Changes to Name to David Harper ========================= //
      // Individual

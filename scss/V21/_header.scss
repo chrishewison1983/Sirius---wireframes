@@ -267,7 +267,7 @@ header {
                          padding-left: 0.5em;
                          border-left: 1px solid rgba($white,0.4);
                     }
-                    &.normal, &.normal-status, &.assignee {
+                    &.normal, &.normal-status, &.assignee, &.supervision-level {
                          display: inline-block;
                     }
                     &.assignee {
@@ -278,12 +278,21 @@ header {
                               padding: 0;
                          }
                     }
+                    &.supervision-level {
+                         color: rgba($white,0.4);
+                         margin-left: 0.75em;
+                         padding-left: 0.75em;
+                         border-left: 2px solid rgba($white,0.4);
+                         strong {
+                              color: $white;
+                         }
+                    }
                }
           }
      }
      &.client-page, &.deputy-page {
           padding-bottom: 0.5em;
-          h1, h1 a {
+          h1, h1 a, h1 label {
                position: relative;
                padding: 0.1em 0 0 2.5em;
                // margin: 0 0 0.35em 0;
@@ -293,6 +302,9 @@ header {
                span {
                     margin: 1.25em 0 0 0;
                     line-height: 1;
+                    a {
+                         font-size: 1rem;
+                    }
                }
                span.type {
                     line-height: 1.2;
@@ -339,9 +351,30 @@ header {
                     // }
                }
           }
-          h1 a {
+          h1 a, h1 label {
                padding: 0;
                color: $white;
+               border-bottom: 2px dashed;
+               &:hover, &:active, &:focus {
+                    border-bottom: 2px solid;
+               }
+          }
+          h1 label {
+               margin: 0;
+               // border-bottom: 1px dashed $white;
+               display: inline-block;
+               width: auto;
+               padding: 0 0 0.25em 0;
+               font-weight: bold;
+               &:hover {
+                    border-bottom: 2px solid $white;
+               }
+          }
+          h1 span a {
+               border-bottom: 1px dashed;
+               &:hover, &:active, &:focus {
+                    border-bottom: 1px solid;
+               }
           }
      }
      &.client-page {
@@ -377,9 +410,10 @@ header {
           }
           h1 {
                span {
-                    a {
+                    margin: 0.6em 0 0 0;
+                    a, label {
                          font-size: 1rem;
-                         text-transform: initial;
+                         // text-transform: initial;
                          font-weight: normal;
                          padding-right: 1.25em;
                          &.show-client-info {
@@ -411,7 +445,7 @@ header {
                margin-bottom: 0.5em;
                span {
                     &.type {
-                         color: darken($green,2.5%);
+                         color: darken($green,10%);
                     }
                }
           }
@@ -422,7 +456,7 @@ header {
           }
           .colour-wrapper {
                background: rgba($green,0.8);
-               mix-blend-mode: unset;
+               mix-blend-mode: hue;
           }
           &.content-page {
                margin-bottom: 0;
@@ -455,11 +489,11 @@ header {
                     display: inline-block;
                }
           }
-          // .colour-wrapper {
-          //      background: rgba($black,0.8);
-          //      mix-blend-mode: unset;
-          //      // mix-blend-mode: hard-light;
-          // }
+          .colour-wrapper {
+               background: rgba($red,0.8);
+               mix-blend-mode: soft-light;
+               // mix-blend-mode: hard-light;
+          }
      }
      &.welsh-message {
           h1 {
@@ -787,6 +821,20 @@ header {
           overflow-x: scroll;
           margin: -1.5em -2.05em 0em 0;
           padding: 1em 0 0 0;
+          position: relative;
+          .arrow-right {
+               position: absolute;
+               display: inline-block;
+               width: 1.5em;
+               height: 3em;
+               top: 3.25em;
+               background: $green;
+               right: 0;
+               z-index: 10;
+               opacity: 1;
+               background: url(#{$image-path}/icons/right-arrow.svg) no-repeat 50% 50%;
+               background-size: contain;
+          }
           // border-radius: 10px;
           // overflow: scroll;
           &::-webkit-scrollbar {

@@ -102,7 +102,7 @@ $('.filter-category-deputies').change(function(){
      $('#dashboard-deputies-table tr').removeClass('selected-item');
      $('#dashboard-deputies-table tr .deputy-title').removeClass('checked');
 
-     $('.deputy-filter').find('.filter-numbers').hide();
+     // $('.deputy-filter').find('.filter-numbers').hide();
 
      $(this).parent().parent().addClass('filter-active');
 
@@ -178,7 +178,7 @@ $('#select-all-deputies').change(function(){
 
      // 1 - My deputies
      if($(this).is(":checked") && $('.filter-category-deputies').val() == 'My deputies') {
-          $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
           $('.deputy-filter').find('.filter-numbers .number').text('2');
           $('.deputies-name').append(`
                <li>Mr Gerald Brackens</li>
@@ -188,7 +188,7 @@ $('#select-all-deputies').change(function(){
 
      // 2 - My teams deputies
      if($(this).is(":checked") && $('.filter-category-deputies').val() == 'My teams deputies') {
-          $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
           $('.deputy-filter').find('.filter-numbers .number').text('1');
           $('.deputy-filter').find('.filter-numbers .desc').text('deputy');
           $('.deputies-name').append(`
@@ -198,7 +198,7 @@ $('#select-all-deputies').change(function(){
 
      // 3 - Deputy type
      if($(this).is(":checked") && $('.filter-category-deputies').val() == 'Deputy type' && $('.select-deputy-type').val() == 'Lay') {
-          $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
           $('.deputy-filter').find('.filter-numbers .number').text('4');
           $('.deputies-name').append(`
                <li>Mr Gerald Brackens</li>
@@ -207,14 +207,14 @@ $('#select-all-deputies').change(function(){
                <li>Ms Erika Neal</li>
           `);
      } else if($(this).is(":checked") && $('.filter-category-deputies').val() == 'Deputy type' && $('.select-deputy-type').val() == 'Professional') {
-          $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
           $('.deputy-filter').find('.filter-numbers .number').text('2');
           $('.deputies-name').append(`
                <li>Dr Marcus Roy</li>
                <li>Mr Oscar Chaplin</li>
           `);
      } else if($(this).is(":checked") && $('.filter-category-deputies').val() == 'Deputy type' && $('.select-deputy-type').val() == 'Public authority') {
-          $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
+          // $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
           $('.deputy-filter').find('.filter-numbers .number').text('1');
           $('.deputy-filter').find('.filter-numbers .desc').text('deputy');
           $('.deputies-name').append(`
@@ -244,11 +244,11 @@ $('#select-all-deputies').change(function(){
 
           $('.deputy-filter').find('.step-2').hide();
           $('.deputy-filter').find('.step-1, .main-filter').removeClass('de-activated');
-          $('.deputy-filter').find('.step-1').removeClass('step-1-filter-active');
+          // $('.deputy-filter').find('.step-1').removeClass('step-1-filter-active');
           $('.deputy-filter').find('.main-filter input, .main-filter select, .step-1 input, .step-1 select').removeAttr('disabled');
           $('.deputy-filter').find('.filter-select-all-clear .cancel-re-assign').hide();
           $('.deputy-filter').find('.filter-select-all-clear .clear-filter').show();
-          $('.deputy-filter').find('.filter-numbers').css('display', 'none');
+          // $('.deputy-filter').find('.filter-numbers').css('display', 'none');
 
           $('#dashboard-deputies-table tbody tr').removeClass('selected-item change-details');
           $('#dashboard-deputies-table tbody tr input[name="re-assign-deputy"]').parent().removeClass('checked');
@@ -425,7 +425,7 @@ $(document).ready(function () {
                $('.re-assign-my-deputies').attr('href', '#re-assign-deputies');
                $('.re-assign-my-deputies').attr('rel', 'modal:open');
 
-               $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
+               // $('.deputy-filter').find('.filter-numbers').css('display', 'flex');
 
                $('.filter-panel.deputy-controller .cancel-re-assign').show();
                $('.filter-panel.deputy-controller .clear-filter').hide();
@@ -470,10 +470,10 @@ $(document).ready(function () {
                $('#select-all-deputies').parent().removeClass('checked');
                $('#select-all-deputies').removeAttr('checked');
 
-               $('.deputy-filter').find('.filter-numbers').hide();
+               // $('.deputy-filter').find('.filter-numbers').hide();
 
                if ($('input[name="re-assign-deputy"][checked]').length === 0) {
-                    $('.deputy-filter').find('.filter-numbers').hide();
+                    // $('.deputy-filter').find('.filter-numbers').hide();
 
                     $('.deputy-filter').find('.main-filter, .step-1').removeClass('de-activated');
                     $('.deputy-filter').find('.step-1').addClass('step-1-filter-active');
@@ -528,7 +528,7 @@ $('#confirm-re-assign-deputies').click(function(){
 
      // $('#dashboard-deputies-table tr.selected-item').hide();
 
-     $('.deputy-filter .filter-numbers').hide();
+     // $('.deputy-filter .filter-numbers').hide();
 
      // ========================= Changes to Name to David Harper ========================= //
      // Individual

@@ -25,7 +25,7 @@ $(function(){
                </a>
           ` },
           { value: `
-               <a href='../14-deputy-hub/14a-deputy-page.html'>
+               <a href='../14-deputy-hub/14a-deputy-hub.html'>
                     <div class='title'>Mrs Lara Stevens <span>(Lay deputy)</span></div>
                     <div class='sub-title'>Case: <span>LPA/PFA 7000-0000-1839</span></div>
                     <div class='sub-title'>Address: <span>34 Broomfield Place, STOKESLEY, TS9 8TU.</span></div>
@@ -33,7 +33,7 @@ $(function(){
                </a>
           ` },
           { value: `
-               <a href='../14-deputy-hub/14b-deputy-page.html'>
+               <a href='../14-deputy-hub/14b-deputy-hub.html'>
                     <div class='title'>Bob Loblaw Ltd <span>(Professional deputy)</span></div>
                     <div class='sub-title'>Deputy type: <span>Solicitor</span></div>
                     <div class='sub-title'>Clients: <span class="number">250+</span></div>
@@ -41,11 +41,19 @@ $(function(){
                </a>
           ` },
           { value: `
-               <a href='../14-deputy-hub/14c-deputy-page.html'>
+               <a href='../14-deputy-hub/14c-deputy-hub.html'>
                     <div class='title'>Weston Parpenham <span>(Public Authority deputy)</span></div>
                     <div class='sub-title'>Deputy type: <span>Local authority</span></div>
                     <div class='sub-title'>Clients: <span class="number">500+</span></div>
                     <div class='sub-title'>Address: <span>7 Farburn Terrace, Weston Parpenham, PE17 0FS.</span></div>
+               </a>
+          ` },
+          { value: `
+               <a href='../23-404-error/23-404-error.html'>
+                    <div class='title'>Joe Bloggs <span>(Client)</span></div>
+                    <div class='sub-title'>Case: <span>LPA/PFA 7000-0000-1839</span></div>
+                    <div class='sub-title'>Address: <span>Deanshanger Memorial Community Cent, Little London, Milton Keynes, MK19 6HT</span></div>
+                    <div class='sub-title'>DOB: <span>08/08/1952</span></div>
                </a>
           ` },
           { value: `

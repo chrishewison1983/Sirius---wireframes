@@ -27,7 +27,7 @@
 	<div class="row">
 		<div class="large-12 large-uncentered columns">
 
-			<a href="../index.html" class="logo user-type-link">
+			<a href="../19-dashboard/19a-caseworker.html" class="logo user-type-link">
 				<img src="../../../production/img/V21/sirius-logo-small.svg" alt="Sirius">
 				<p><span>Dashboard</span></p>
 			</a>
@@ -66,7 +66,7 @@
 				<p><span>Sign out</span></p>
 			</a>
 
-			<form action="search.html">
+			<form action="../search.html">
 				<input type="search" name="search" id="autocomplete" class="main-search-bar" placeholder="Search SIRIUS ID or Client...">
 				<input type="submit">
 			</form>
@@ -192,10 +192,10 @@
 	</table>
 
 </div>
- </div> <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content dashboard"> <h2 class="description-title completed">My completed applications: <div class="timeline-value">Today</div></h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-small" class="completed-tasks-pagination pagination-small"> <a>-</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> </span> <a>+</a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 1 - END =========== --> <!-- =========== DASHBOARD TAB CONTENT - 2 - START =========== --> <div id="tab-2" class="tab-content dashboard"> <h2 class="description-title completed">My completed applications: <div class="timeline-value">Today</div></h2> <!-- /////////////////////////// Pagination - START /////////////////////////// --> <div class="wrapper pagination-wrapper"> <div id="pagination-new"> <a class="disabled"><<</a> <a class="disabled"><</a> <span> <a class="current">1</a> <a>2</a> <a>3</a> <a>4</a> <a>5</a> <i>...</i> <a>20</a> </span> <a>></a> <a>>></a> </div> </div> <!-- /////////////////////////// Pagination - END /////////////////////////// --> <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel completed-tasks">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller">
 		<form class="search-filters completed-tasks">
 
 			<!-- <div class="search-section">
@@ -209,10 +209,10 @@
 					<label for="filter-date-completed" class="float-left title-label">Filter</label>
 					<div class="section-1">
 						<select id="filter-date-completed" class="">
-							<option value="">-- Timeline --</option>
+							<!-- <option value="">-- Timeline --</option> -->
 							<option value="Today">Today</option>
 							<option value="Last 7 days">Last 7 days</option>
-							<option value="Last month">Last month</option>
+							<option value="Last month">Last 30 days</option>
 							<option value="Last 60 days">Last 60 days</option>
 							<option value="All">All completed tasks</option>
 						</select>
@@ -223,7 +223,7 @@
 							<option value="">-- Select task type --</option>
 							<option value="CWRD">Case Work - Reply Due</option>
 							<option value="ORRE">Order - Review the order</option>
-							<option value="ORAL">Order - Allocate to team</option>
+							<option value="ORAL">Allocate client</option>
 							<option value="INAR">Intro - Arrange settling in</option>
 							<option value="INSE">Intro - Settling in call</option>
 							<option value="INNDR">Intro - New Deputy Report</option>
@@ -263,9 +263,9 @@
 					<table class="tablesorter">
 						<thead>
 							<tr class="three-column">
-								<th><span></span>Type</th>
-								<th><span></span>Case type</th>
-								<th><span></span>Completed</th>
+								<th style="width: 60%;"><span></span>Type</th>
+								<th style="width: 22.5%;">Case type</th>
+								<th style="width: 17.5%;"><span></span>Completed</th>
 							</tr>
 						</thead>
 					</table>
@@ -845,21 +845,25 @@
 	</table>
 
 	<!-- /////////////////////////// Pagination - START /////////////////////////// -->
-	<div id="pagination-small" class="completed-tasks-pagination">
-		<a>-</a>
+	<div id="pagination-new">
+		<a class="disabled"><<</a>
+		<a class="disabled"><</a>
 		<span>
 			<a class="current">1</a>
 			<a>2</a>
 			<a>3</a>
 			<a>4</a>
 			<a>5</a>
+			<i>...</i>
+			<a>20</a>
 		</span>
-		<a>+</a>
+		<a>></a>
+		<a>>></a>
 	</div>
 	<!-- /////////////////////////// Pagination - END /////////////////////////// -->
 
 </div>
- </div> <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script src="../../../production/js/V21/pagination.js"></script><script>function myFunction() {  var input, filter, table, tr, td, i; input = document.getElementById("dashboard-deputy-search"); filter = input.value.toUpperCase(); table = document.getElementById("dashboard-deputies-table"); tr = table.getElementsByTagName("tr");  for (i = 0; i < tr.length; i++) { td = tr[i].getElementsByTagName("td")[0]; if (td) { if (td.innerHTML.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } }}</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
+ </div> <!-- =========== DASHBOARD TAB CONTENT - 2 - END =========== --> </div> </div> </div> <!-- CONTENT WRAPPER - END --></main><!-- PRIMARY CONTENT - END --><!-- FOOTER CONTENT - START --><!-- FOOTER CONTENT - END --><!-- SCRIPT CONTENT - START --><script src="../../../production/js/V21/pagination.js"></script><script>function myFunction() {  var input, filter, table, tr, td, i; input = document.getElementById("dashboard-deputy-search"); filter = input.value.toUpperCase(); table = document.getElementById("dashboard-deputies-table"); tr = table.getElementsByTagName("tr");  for (i = 0; i < tr.length; i++) { td = tr[i].getElementsByTagName("td")[0]; if (td) { if (td.innerHTML.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } }}</script><script type="text/javascript"> if($(window).width() > 481) { $(function() { moveScroller(); }); }</script><!-- SCRIPT CONTENT - END --><!-- // JS BODY END - START // -->
 	<!-- <script src="../../production/js/prototype/bootstrapper.js"></script> -->
 	<script src="../../../production/js/V21/hideShowPassword.js"></script>
 	<script src="../../../production/js/V21/jquery.cookie.js"></script>
@@ -871,7 +875,7 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script>
 		$( function() {
-			$( "#datepicker, #datepicker1, #datepicker2" ).datepicker();
+			$( "#datepicker, #datepicker1, #datepicker2, #credit-date-by, #credit-sent-date, #write-off-date, #exemption-date" ).datepicker();
 		} );
 	</script>
 	<!-- <script src="../../../production/js/V21/jquery-datepicker.js"></script> -->
@@ -897,6 +901,7 @@
 	<script src="../../../production/js/V21/my-cookies/create-contact-pro.js"></script>
 	<script src="../../../production/js/V21/my-cookies/edit-deputy.js"></script>
 	<script src="../../../production/js/V21/my-cookies/log-in.js"></script>
+	<script src="../../../production/js/V21/my-cookies/sign-out.js"></script>
 	<script src="../../../production/js/V21/my-cookies/report-period.js"></script>
 	<script src="../../../production/js/V21/my-cookies/supervision-level.js"></script>
 	<script src="../../../production/js/V21/my-cookies/order-status.js"></script>
@@ -906,14 +911,17 @@
 	<script src="../../../production/js/V21/my-cookies/timeline.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/client-header.js"></script>
+	<script src="../../../production/js/V21/my-cookies/finance.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-cookies/deputy-page.js"></script>
 	<script src="../../../production/js/V21/my-cookies/court-apps-journey.js"></script>
+	<script src="../../../production/js/V21/my-cookies/allocate-client.js"></script>
 	<script src="../../../production/js/V21/my-cookies/progress-bar.js"></script>
 	<!-- User Journey - Cookies - END -->
 
 	<!-- User Journey - JQuery - START -->
 	<script src="../../../production/js/V21/my-jquery/log-in.js"></script>
+	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
 	<script src="../../../production/js/V21/my-jquery/client-page.js"></script>
 	<script src="../../../production/js/V21/my-jquery/commission-visit.js"></script>
 	<script src="../../../production/js/V21/my-jquery/create-bond.js"></script>
@@ -937,13 +945,13 @@
 	<script src="../../../production/js/V21/my-jquery/client-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-death.js"></script>
 	<script src="../../../production/js/V21/my-jquery/deputy-page.js"></script>
-	<script src="../../../production/js/V21/my-jquery/client-header.js"></script>
+	<script src="../../../production/js/V21/my-jquery/finance.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-summary.js"></script>
-	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-tasks.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-deputies.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-clients.js"></script>
 	<script src="../../../production/js/V21/my-jquery/dashboard-completed-tasks.js"></script>
+	<script src="../../../production/js/V21/my-jquery/dashboard-clear-filter.js"></script>
 	<script src="../../../production/js/V21/my-jquery/court-apps-journey.js"></script>
 	<!-- <script src="../../../production/js/V21/my-jquery/search.js"></script> -->
 	<!-- User Journey - JQuery - END -->
@@ -977,7 +985,7 @@
 		});
 
 		$(document).ready(function() {
-			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table").tablesorter();
+			$("#myTable, #completed-tasks-table, #order-table, #documents-listing, #dashboard-clients-table, #dashboard-tasks-table, #dashboard-worker-table, .livelink-documents, #clients-table, #contact-list-deputy-pro, #contact-list-deputy-pa").tablesorter();
 		});
 
 		// $(document).ready(function() {

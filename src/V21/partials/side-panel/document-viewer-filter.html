@@ -1,3 +1,56 @@
+<!-- /////////////// FILTER PANEL - START /////////////// -->
+<div id="filter-panel-documents">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" class="scroller">
+		<form class="document-filter">
+			<label for="filter-category" class="float-left title-label">Filter</label>
+			<nav>
+				<ul>
+					<li>
+						<label><input type="checkbox" value="correspondence" name="document-value">Correspondence</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="court" name="document-value">Order</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="report" name="document-value">Reports</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="visit" name="document-value">Visits</label>
+					</li>
+					<li>
+						<label class="disabled"><input type="checkbox" value="finance" name="document-value">Finance</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="other" name="document-value">Other</label>
+					</li>
+					<li class="seperator"></li>
+					<li>
+						<label><input type="checkbox" value="inbound" name="document-type">Inbound</label>
+					</li>
+					<li>
+						<label><input type="checkbox" value="outbound" name="document-type">Outbound</label>
+					</li>
+					<li class="last-filter">
+						<a class="filter-all-documents">Clear filter</a>
+					</li>
+				</ul>
+
+				<div class="filter-numbers">
+					<div class="wrapper">
+						<p>
+							<span class="number">9</span>
+							<span class="desc">Docs</span>
+						</p>
+					</div>
+				</div>
+
+			</nav>
+		</form>
+	</div>
+</div>
+<!-- /////////////// FILTER PANEL - END /////////////// -->
+
 <!-- // DOCUMENT VIEWER - START // -->
 <div id="documents-viewer-filter">
 
@@ -11,100 +64,166 @@
 			<table id="documents-listing" class="livelink-documents tablesorter">
 				<thead>
 					<tr>
-						<th><span></span>Document info</th>
-						<th><span></span>Date created</th>
+						<th><span></span>Document</th>
+						<th><span></span>Date</th>
+						<th>Actions</th>
+
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="document-category all court">
+					<tr class="replace-document-1 document-category all court inbound">
 						<td>
 							<a href="#" class="hide-page-1">Application_correspondence.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Incoming</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
 							</div>
 						</td>
-						<td><p>27/08/2017 08:17:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/08/2017, 08:17:13
+								<span class="type">Received date</span>
+							</p>
+						</td>
+						<td></td>
 					</tr>
-					<tr class="document-category all visit">
+					<tr class="replace-document-2 document-category all visit outbound">
 						<td>
 							<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>11/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>11/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
 					</tr>
-					<tr class="document-category all visit">
+					<tr class="replace-document-3 document-category all visit outbound">
 						<td>
 							<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>18/06/2017 12:20:10</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>18/06/2017, 12:20:10
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
 					</tr>
-					<tr class="document-category all report">
+					<tr class="replace-document-4 document-category all report outbound">
 						<td>
 							<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
 							</div>
 						</td>
-						<td><p>30/06/2017 16:31:01</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>30/06/2017, 16:31:01
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
 					</tr>
-					<tr class="document-category all correspondence">
+					<tr class="replace-document-5 document-category all correspondence outbound">
 						<td>
 							<a href="#" class="hide-page-1">Correspondence_document_1.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>Today, 15:21:03</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>Today, 15:21:03
+								<span class="type">Created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
 					</tr>
-					<tr class="document-category all correspondence">
+					<tr class="replace-document-6 document-category all correspondence outbound">
 						<td>
 							<a href="#" class="hide-page-1">Correspondence_document_2.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
 							</div>
 						</td>
-						<td><p>03/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>03/06/2017, 11:07:13
+								<span class="type">Created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
 					</tr>
-					<tr class="document-category all court">
+					<tr class="replace-document-7 document-category all court outbound">
 						<td>
 							<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>31/06/2017 12:52:52</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>31/06/2017, 12:52:52
+								<span class="type">Received date</span>
+							</p>
+						</td>
+						<td></td>
 					</tr>
-					<tr class="document-category all other">
+					<tr class="replace-document-8 document-category all other outbound">
 						<td>
 							<a href="#" class="hide-page-1">Other_document.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>21/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>21/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td><a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a></td>
 					</tr>
-					<tr class="document-category all other">
+					<tr class="replace-document-9 document-category all other inbound">
 						<td>
 							<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
 								Video-of-client.mov
@@ -113,10 +232,18 @@
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Incoming</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
 							</div>
 						</td>
-						<td><p>27/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
+						<td></td>
 					</tr>
 				</tbody>
 			</table>
@@ -129,6 +256,7 @@
 				<div class="buttons">
 					<a href="#" class="back">Back</a>
 					<a href="#" class="compare">Compare</a>
+					<a href="../11-new-event/11b-edit-event.html" class="replace">Replace</a>
 					<!-- <a href="#" class="close">Close</a> -->
 				</div>
 				<img src="../../../production/img/V21/control-panel.png" alt="Document" class="control-panel-buttons">
@@ -152,100 +280,156 @@
 			<table class="livelink-documents tablesorter">
 				<thead>
 					<tr>
-						<th><span></span>Document info</th>
-						<th><span></span>Date created</th>
+						<th><span></span>Document</th>
+						<th><span></span>Date</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="document-category all court">
+					<tr class="document-category all court inbound">
 						<td>
 							<a href="#" class="hide-page-1">Application_correspondence.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Incoming</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
 							</div>
 						</td>
-						<td><p>27/08/2017 08:17:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/08/2017, 08:17:13
+								<span class="type">Received date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all visit">
+					<tr class="document-category all visit outbound">
 						<td>
 							<a href="#" class="hide-page-1">Visit_document_title_1.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>11/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>11/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all visit">
+					<tr class="document-category all visit outbound">
 						<td>
 							<a href="#" class="hide-page-1">Visit_document_title_2.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>18/06/2017 12:20:10</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>18/06/2017, 12:20:10
+								<span class="type">Event created date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all report">
+					<tr class="document-category all report outbound">
 						<td>
 							<a href="#" class="hide-page-1">Reports_document_title_1.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
 							</div>
 						</td>
-						<td><p>30/06/2017 16:31:01</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>30/06/2017, 16:31:01
+								<span class="type">Event created date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all correspondence">
+					<tr class="document-category all correspondence outbound">
 						<td>
 							<a href="#" class="hide-page-1">Correspondence_document_1.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>Today, 15:21:03</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>Today, 15:21:03
+								<span class="type">Created date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all correspondence">
+					<tr class="document-category all correspondence outbound">
 						<td>
 							<a href="#" class="hide-page-1">Correspondence_document_2.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#">Joe Bloggs</a></p>
 							</div>
 						</td>
-						<td><p>03/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>03/06/2017, 11:07:13
+								<span class="type">Created date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all court">
+					<tr class="document-category all court outbound">
 						<td>
 							<a href="#" class="hide-page-1">Court_order_documents.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>31/06/2017 12:52:52</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>31/06/2017, 12:52:52
+								<span class="type">Received date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all other">
+					<tr class="document-category all other outbound">
 						<td>
 							<a href="#" class="hide-page-1">Other_document.pdf</a>
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Outgoing</strong></p>
+								<p>Direction: <strong>Outbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <a href="#" class="sirius-user-id">work.flow.lay</a></p>
 							</div>
 						</td>
-						<td><p>21/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>21/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
 					</tr>
-					<tr class="document-category all other">
+					<tr class="document-category all other inbound">
 						<td>
 							<a href="../../../production/img/V21/Beef_Dripping.jpg" class="mov-file" download>
 								Video-of-client.mov
@@ -254,10 +438,17 @@
 							<div class="doc-info">
 								<p>Doc type: <strong>IT-SS-ORDER</strong></p>
 								<p>Case type: <strong>DEP - PFA</strong></p>
-								<p>Direction: <strong>Incoming</strong></p>
+								<p>Direction: <strong>Inbound</strong></p>
+								<br>
+								<p class="created-by">Created by: <strong>Unkown</strong></p>
 							</div>
 						</td>
-						<td><p>27/06/2017 11:07:13</p></td>
+						<td>
+							<p class="date-indicator">
+								<span class="icon"></span>27/06/2017, 11:07:13
+								<span class="type">Event created date</span>
+							</p>
+						</td>
 					</tr>
 				</tbody>
 			</table>

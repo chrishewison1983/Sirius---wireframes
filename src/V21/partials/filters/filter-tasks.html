@@ -1,7 +1,7 @@
 <!-- /////////////// FILTER PANEL - START /////////////// -->
 <div class="filter-panel task-controller">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-tasks">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks scroller">
 		<form class="search-filters task-filter">
 
 			<!-- <div class="search-section">
@@ -15,7 +15,7 @@
 					<div class="wrapper">
 						<label for="filter-tasks-category" class="float-left title-label">Filter</label>
 						<select id="filter-tasks-category" class="filter-tasks-category">
-							<option value="">-- Filter by --</option>
+							<option value="">My tasks</option>
 							<!-- <option value="My tasks">My tasks</option> -->
 							<option value="My teams tasks">My teams tasks</option>
 							<option value="Supervision tasks">Supervision tasks</option>
@@ -88,7 +88,7 @@
 								<option value="">-- Select task type --</option>
 								<option value="CWRD">Case Work - Reply Due</option>
                                         <option value="ORRE">Order - Review the order</option>
-                                        <option value="ORAL">Order - Allocate to team</option>
+                                        <option value="ORAL">Allocate client</option>
                                         <option value="INAR">Intro - Arrange settling in</option>
                                         <option value="INSE">Intro - Settling in call</option>
                                         <option value="INNDR">Intro - New Deputy Report</option>
@@ -176,11 +176,11 @@
 					<table class="tablesorter dashboard-tasks-table">
 						<thead>
 							<tr class="four-column">
-								<th><span></span>Type</th>
-								<th><span></span>Task due date</th>
-								<th class="non-sort">Case type</th>
+								<th style="width: 55%;"><span></span>Type</th>
+								<th style="width: 15%;"><span></span>Task due date</th>
+								<th style="width: 15%;" class="non-sort">Case type</th>
 								<!-- <th><span></span>Task status</th> -->
-								<th><span></span>Assigned to</th>
+								<th style="width: 15%;"><span></span>Assigned to</th>
 							</tr>
 						</thead>
 					</table>
@@ -194,8 +194,8 @@
 
 <!-- /////////////// REASSIGN PANEL - START /////////////// -->
 <div class="re-assign-panel task-controller">
-	<div id="scroller-anchor"></div>
-	<div id="scroller" style="position: relative;" class="scroller-tasks">
+	<div id="scroller-anchor" class="scroller-anchor"></div>
+	<div id="scroller" style="position: relative;" class="scroller-tasks scroller">
 		<form class="search-filters task-filter">
 
 			<div class="filter-buttons">
@@ -272,11 +272,11 @@
 					<table class="tablesorter">
 						<thead>
 							<tr class="four-column">
-								<th><span></span>Type</th>
-								<th><span></span>Task due date</th>
-								<th class="non-sort">Case type</th>
-								<!-- <th>Task status</th> -->
-								<th><span></span>Assigned to</th>
+								<th style="width: 55%;"><span></span>Type</th>
+								<th style="width: 15%;"><span></span>Task due date</th>
+								<th style="width: 15%;" class="non-sort">Case type</th>
+								<!-- <th><span></span>Task status</th> -->
+								<th style="width: 15%;"><span></span>Assigned to</th>
 							</tr>
 						</thead>
 					</table>

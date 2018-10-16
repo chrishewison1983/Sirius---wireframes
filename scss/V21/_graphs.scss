@@ -10,13 +10,15 @@
      }
 }
 
-.dashboard-chart {
+.dashboard-chart, .finance-chart {
      width: 240px;
      height: 240px;
      margin: 0 auto;
      position: relative;
      display: inline-block;
-     &.chart-one, &.chart-two, &.chart-three, &.chart-four, &.chart-five, &.chart-six {
+     &.chart-one, &.chart-two, &.chart-three, &.chart-four, &.chart-five, &.chart-six,
+     &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+     &.invoice-chart-half-discount, &.invoice-chart-full-discount {
           &.animate {
                figcaption {
                     &:after {
@@ -79,12 +81,144 @@
                text-transform: uppercase;
                letter-spacing: 0.15em;
                font-size: 0.75rem;
-               line-height: 1;
+               line-height: 1.2;
                text-align: center;
-               font-weight: bold;
                color: rgba($main-colour,0.4);
+               font-family: $Opensans-Regular;
+               &.top {
+                    top: calc(50% - 2.65rem);
+               }
                strong {
                     color: $black;
+                    font-weight: bold;
+                    font-family: $Opensans-Bold;
+               }
+          }
+     }
+}
+
+.completed-invoice {
+     .finance-chart {
+          &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+          &.invoice-chart-half-discount, &.invoice-chart-full-discount {
+               svg {
+                    .circle-background {
+                         stroke: lighten($green,5%);
+                    }
+                    .circle-foreground {
+                         stroke: darken($green,15%);
+                    }
+               }
+               .chart-text {
+                    color: darken($green,15%);
+               }
+          }
+     }
+     &.overpaid {
+          .finance-chart {
+               &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+               &.invoice-chart-half-discount, &.invoice-chart-full-discount {
+                    svg {
+                         .circle-background {
+                              stroke: lighten($main-colour,5%);
+                         }
+                         .circle-foreground {
+                              stroke: darken($main-colour,15%);
+                         }
+                    }
+                    .chart-text {
+                         color: lighten($main-colour,32.5%);
+                    }
+               }
+          }
+     }
+}
+
+.alert {
+     .finance-chart {
+          &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+          &.invoice-chart-half-discount, &.invoice-chart-full-discount {
+               svg {
+                    .circle-background {
+                         stroke: lighten($amber,10%);
+                    }
+                    .circle-foreground {
+                         stroke: darken($amber,15%);
+                    }
+               }
+               .chart-text {
+                    color: darken($amber,25%);
+               }
+          }
+     }
+}
+
+.outstanding {
+     .finance-chart {
+          &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+          &.invoice-chart-half-discount, &.invoice-chart-full-discount {
+               svg {
+                    .circle-background {
+                         stroke: lighten($red,10%);
+                    }
+                    .circle-foreground {
+                         stroke: darken($red,15%);
+                    }
+               }
+               .chart-text {
+                    color: darken($red,25%);
+               }
+          }
+     }
+}
+
+.finance-chart {
+     &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+     &.invoice-chart-half-discount, &.invoice-chart-full-discount {
+          width: 180px;
+          height: 180px;
+          svg {
+               .circle-background, .circle-foreground {
+                    r: 82.5px;
+               }
+               .circle-background {
+                    stroke: lighten($blue,5%);
+               }
+               .circle-foreground {
+                    stroke: darken($blue,15%);
+               }
+          }
+          figcaption {
+               font-family: $Montserrat;
+               font-weight: bold;
+               color: $white;
+               height: 3rem;
+               top: calc(50% - 1.75rem);
+               &:after {
+                    font-size: 3.25rem;
+                    line-height: 3rem;
+               }
+          }
+          .chart-text {
+               top: calc(50% - -1.5rem);
+               color: darken($blue,15%);
+               strong {
+                    color: $black;
+               }
+          }
+     }
+}
+
+.completed-invoice {
+     &.overpaid {
+          .finance-chart {
+               &.invoice-chart-one, &.invoice-chart-two, &.invoice-chart-three, &.invoice-chart-four, &.invoice-chart-five,
+               &.invoice-chart-half-discount, &.invoice-chart-full-discount {
+                    figcaption {
+                         &:after {
+                              font-size: 2.75rem;
+                         }
+                    }
                }
           }
      }
@@ -229,6 +363,328 @@
      }
 }
 /////////////////////////// MAIN CHART THREE - END ///////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//----------------------------------------- FINANCE CHART ONE - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-one {
+          &.client-death {
+               figcaption {
+                    &:after {
+                         content: "£160";
+                    }
+               }
+          }
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-one-label 3s steps(0) forwards;
+                         animation: invoice-chart-one-label 3s steps(0) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 0px 515px;
+                    stroke-dashoffset: 0px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£320";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes invoice-chart-one-label {
+     100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+     }
+}
+
+@keyframes invoice-chart-one-label {
+     100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+     }
+}
+//----------------------------------------- FINANCE CHART ONE - END -----------------------------------------//
+
+//----------------------------------------- FINANCE CHART HALF DISCOUNT - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-half-discount {
+          &.client-death {
+               figcaption {
+                    &:after {
+                         content: "£160";
+                    }
+               }
+          }
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-half-discount-label 3s steps(0) forwards;
+                         animation: invoice-chart-half-discount-label 3s steps(0) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 0px 515px;
+                    stroke-dashoffset: 0px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£160";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes invoice-chart-half-discount-label {
+     100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+     }
+}
+
+@keyframes invoice-chart-half-discount-label {
+     100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+     }
+}
+//----------------------------------------- FINANCE CHART HALF DISCOUNT - END -----------------------------------------//
+
+//----------------------------------------- FINANCE CHART HALF DISCOUNT - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-full-discount {
+          &.client-death {
+               figcaption {
+                    &:after {
+                         content: "£160";
+                    }
+               }
+          }
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-full-discount-label 3s steps(0) forwards;
+                         animation: invoice-chart-full-discount-label 3s steps(0) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 0px 515px;
+                    stroke-dashoffset: 0px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£0";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes invoice-chart-full-discount-label {
+     100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+     }
+}
+
+@keyframes invoice-chart-full-discount-label {
+     100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+     }
+}
+//----------------------------------------- FINANCE CHART FULL DISCOUNT - END -----------------------------------------//
+
+//----------------------------------------- FINANCE CHART TWO - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-two {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-two-label 3s steps(319) forwards;
+                         animation: invoice-chart-two-label 3s steps(319) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 520px 697px;
+                    stroke-dashoffset: 520px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£320\a £319\a £318\a £317\a £316\a £315\a £314\a £313\a £312\a £311\a £310\a £309\a £308\a £307\a £306\a £305\a £304\a £303\a £302\a £301\a £300\a £299\a £298\a £297\a £296\a £295\a £294\a £293\a £292\a £291\a £290\a £289\a £288\a £287\a £286\a £285\a £284\a £283\a £282\a £281\a £280\a £279\a £278\a £277\a £276\a £275\a £274\a £273\a £272\a £271\a £270\a £269\a £268\a £267\a £266\a £265\a £264\a £263\a £262\a £261\a £260\a £259\a £258\a £257\a £256\a £255\a £254\a £253\a £252\a £251\a £250\a £249\a £248\a £247\a £246\a £245\a £244\a £243\a £242\a £241\a £240\a £239\a £238\a £237\a £236\a £235\a £234\a £233\a £232\a £231\a £230\a £229\a £228\a £227\a £226\a £225\a £224\a £223\a £222\a £221\a £220\a £219\a £218\a £217\a £216\a £215\a £214\a £213\a £212\a £211\a £210\a £209\a £208\a £207\a £206\a £205\a £204\a £203\a £202\a £201\a £200\a £199\a £198\a £197\a £196\a £195\a £194\a £193\a £192\a £191\a £190\a £189\a £188\a £187\a £186\a £185\a £184\a £183\a £182\a £181\a £180\a £179\a £178\a £177\a £176\a £175\a £174\a £173\a £172\a £171\a £170\a £169\a £168\a £167\a £166\a £165\a £164\a £163\a £162\a £161\a £160\a £159\a £158\a £157\a £156\a £155\a £154\a £153\a £152\a £151\a £150\a £149\a £148\a £147\a £146\a £145\a £144\a £143\a £142\a £141\a £140\a £139\a £138\a £137\a £136\a £135\a £134\a £133\a £132\a £131\a £130\a £129\a £128\a £127\a £126\a £125\a £124\a £123\a £122\a £121\a £120\a £119\a £118\a £117\a £116\a £115\a £114\a £113\a £112\a £111\a £110\a £109\a £108\a £107\a £106\a £105\a £104\a £103\a £102\a £101\a £99\a £98\a £97\a £96\a £95\a £94\a £93\a £92\a £91\a £90\a £89\a £88\a £87\a £86\a £85\a £84\a £83\a £82\a £81\a £80\a £79\a £78\a £77\a £76\a £75\a £74\a £73\a £72\a £71\a £70\a £69\a £68\a £67\a £66\a £65\a £64\a £63\a £62\a £61\a £60\a £59\a £58\a £57\a £56\a £55\a £54\a £53\a £52\a £51\a £50\a £49\a £48\a £47\a £46\a £45\a £44\a £43\a £42\a £41\a £40\a £39\a £38\a £37\a £36\a £35\a £34\a £33\a £32\a £31\a £30\a £29\a £28\a £27\a £26\a £25\a £24\a £23\a £22\a £21\a £20\a £19\a £18\a £17\a £16\a £15\a £14\a £13\a £12\a £11\a £10\a £9\a £8\a £7\a £6\a £5\a £4\a £3\a £2\a £1\a £0\a";
+                    white-space: pre;
+               }
+          }
+     }
+}
+
+@-webkit-keyframes invoice-chart-two-label {
+     100% {
+          -webkit-transform: translateY(-957rem);
+          transform: translateY(-957rem);
+     }
+}
+
+@keyframes invoice-chart-two-label {
+     100% {
+          -webkit-transform: translateY(-957rem);
+          transform: translateY(-957rem);
+     }
+}
+//----------------------------------------- FINANCE CHART TWO - END -----------------------------------------//
+
+//----------------------------------------- FINANCE CHART THREE - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-three {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-three-label 3s steps(319) forwards;
+                         animation: invoice-chart-three-label 3s steps(319) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 520px 697px;
+                    stroke-dashoffset: 520px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£320\a £319\a £318\a £317\a £316\a £315\a £314\a £313\a £312\a £311\a £310\a £309\a £308\a £307\a £306\a £305\a £304\a £303\a £302\a £301\a £300\a £299\a £298\a £297\a £296\a £295\a £294\a £293\a £292\a £291\a £290\a £289\a £288\a £287\a £286\a £285\a £284\a £283\a £282\a £281\a £280\a £279\a £278\a £277\a £276\a £275\a £274\a £273\a £272\a £271\a £270\a £269\a £268\a £267\a £266\a £265\a £264\a £263\a £262\a £261\a £260\a £259\a £258\a £257\a £256\a £255\a £254\a £253\a £252\a £251\a £250\a £249\a £248\a £247\a £246\a £245\a £244\a £243\a £242\a £241\a £240\a £239\a £238\a £237\a £236\a £235\a £234\a £233\a £232\a £231\a £230\a £229\a £228\a £227\a £226\a £225\a £224\a £223\a £222\a £221\a £220\a £219\a £218\a £217\a £216\a £215\a £214\a £213\a £212\a £211\a £210\a £209\a £208\a £207\a £206\a £205\a £204\a £203\a £202\a £201\a £200\a £199\a £198\a £197\a £196\a £195\a £194\a £193\a £192\a £191\a £190\a £189\a £188\a £187\a £186\a £185\a £184\a £183\a £182\a £181\a £180\a £179\a £178\a £177\a £176\a £175\a £174\a £173\a £172\a £171\a £170\a £169\a £168\a £167\a £166\a £165\a £164\a £163\a £162\a £161\a £160\a £159\a £158\a £157\a £156\a £155\a £154\a £153\a £152\a £151\a £150\a £149\a £148\a £147\a £146\a £145\a £144\a £143\a £142\a £141\a £140\a £139\a £138\a £137\a £136\a £135\a £134\a £133\a £132\a £131\a £130\a £129\a £128\a £127\a £126\a £125\a £124\a £123\a £122\a £121\a £120\a £119\a £118\a £117\a £116\a £115\a £114\a £113\a £112\a £111\a £110\a £109\a £108\a £107\a £106\a £105\a £104\a £103\a £102\a £101\a £99\a £98\a £97\a £96\a £95\a £94\a £93\a £92\a £91\a £90\a £89\a £88\a £87\a £86\a £85\a £84\a £83\a £82\a £81\a £80\a £79\a £78\a £77\a £76\a £75\a £74\a £73\a £72\a £71\a £70\a £69\a £68\a £67\a £66\a £65\a £64\a £63\a £62\a £61\a £60\a £59\a £58\a £57\a £56\a £55\a £54\a £53\a £52\a £51\a £50\a £49\a £48\a £47\a £46\a £45\a £44\a £43\a £42\a £41\a £40\a £39\a £38\a £37\a £36\a £35\a £34\a £33\a £32\a £31\a £30\a £29\a £28\a £27\a £26\a £25\a £24\a £23\a £22\a £21\a £20\a £19\a £18\a £17\a £16\a £15\a £14\a £13\a £12\a £11\a £10\a £9\a £8\a £7\a £6\a £5\a £4\a £3\a £2\a £1\a £0\a";
+               }
+          }
+     }
+}
+
+// content: "£0\a £1\a £2\a £3\a £4\a £5\a £6\a £7\a £8\a £9\a £10\a £11\a £12\a £13\a £14\a £15\a £16\a £17\a £18\a £19\a £20\a £21\a £22\a £23\a £24\a £25\a £26\a £27\a £28\a £29\a £30\a £31\a £32\a £33\a £34\a £35\a £36\a £37\a £38\a £39\a £40\a £41\a £42\a £43\a £44\a £45\a £46\a £47\a £48\a £49\a £50\a £51\a £52\a £53\a £54\a £55\a £56\a £57\a £58\a £59\a £60\a £61\a £62\a £63\a £64\a £65\a £66\a £67\a £68\a £69\a £70\a £71\a £72\a £73\a £74\a £75\a £76\a £77\a £78\a £79\a £80\a £81\a £82\a £83\a £84\a £85\a £86\a £87\a £88\a £89\a £90\a £91\a £92\a £93\a £94\a £95\a £96\a £97\a £98\a £99\a £100\a £101\a £102\a £103\a £104\a £105\a £106\a £107\a £108\a £109\a £110\a £111\a £112\a £113\a £114\a £115\a £116\a £117\a £118\a £119\a £120\a £121\a £122\a £123\a £124\a £125\a £126\a £127\a £128\a £129\a £130\a £131\a £132\a £133\a £134\a £135\a £136\a £137\a £138\a £139\a £140\a £141\a £142\a £143\a £144\a £145\a £146\a £147\a £148\a £149\a £150\a £151\a £152\a £153\a £154\a £155\a £156\a £157\a £158\a £159\a £160\a £161\a £162\a £163\a £164\a £165\a £166\a £167\a £168\a £169\a £170\a £171\a £172\a £173\a £174\a £175\a £176\a £177\a £178\a £179\a £180\a £181\a £182\a £183\a £184\a £185\a £186\a £187\a £188\a £189\a £190\a £191\a £192\a £193\a £194\a £195\a £196\a £197\a £198\a £199\a £200\a £201\a £202\a £203\a £204\a £205\a £206\a £207\a £208\a £209\a £210\a £211\a £212\a £213\a £214\a £215\a £216\a £217\a £218\a £219\a £220\a £221\a £222\a £223\a £224\a £225\a £226\a £227\a £228\a £229\a £230\a £231\a £232\a £233\a £234\a £235\a £236\a £237\a £238\a £239\a £240\a £241\a £242\a £243\a £244\a £245\a £246\a £247\a £248\a £249\a £250\a £251\a £252\a £253\a £254\a £255\a £256\a £257\a £258\a £259\a £260\a £261\a £262\a £263\a £264\a £265\a £266\a £267\a £268\a £269\a £270\a £271\a £272\a £273\a £274\a £275\a £276\a £277\a £278\a £279\a £280\a £281\a £282\a £283\a £284\a £285\a £286\a £287\a £288\a £289\a £290\a £291\a £292\a £293\a £294\a £295\a £296\a £297\a £298\a £299\a £300\a £301\a £302\a £303\a £304\a £305\a £306\a £307\a £308\a £309\a £310\a £311\a £312\a £313\a £314\a £315\a £316\a £317\a £318\a £319\a £320\a";
+
+
+@-webkit-keyframes invoice-chart-three-label {
+     100% {
+          -webkit-transform: translateY(-957rem);
+          transform: translateY(-957rem);
+     }
+}
+
+@keyframes invoice-chart-three-label {
+     100% {
+          -webkit-transform: translateY(-957rem);
+          transform: translateY(-957rem);
+     }
+}
+//----------------------------------------- FINANCE CHART THREE - END -----------------------------------------//
+
+//----------------------------------------- FINANCE CHART FOUR - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-four {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-four-label 3s steps(120) forwards;
+                         animation: invoice-chart-four-label 3s steps(120) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 190px 697px;
+                    stroke-dashoffset: 190px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£320\a £319\a £318\a £317\a £316\a £315\a £314\a £313\a £312\a £311\a £310\a £309\a £308\a £307\a £306\a £305\a £304\a £303\a £302\a £301\a £300\a £299\a £298\a £297\a £296\a £295\a £294\a £293\a £292\a £291\a £290\a £289\a £288\a £287\a £286\a £285\a £284\a £283\a £282\a £281\a £280\a £279\a £278\a £277\a £276\a £275\a £274\a £273\a £272\a £271\a £270\a £269\a £268\a £267\a £266\a £265\a £264\a £263\a £262\a £261\a £260\a £259\a £258\a £257\a £256\a £255\a £254\a £253\a £252\a £251\a £250\a £249\a £248\a £247\a £246\a £245\a £244\a £243\a £242\a £241\a £240\a £239\a £238\a £237\a £236\a £235\a £234\a £233\a £232\a £231\a £230\a £229\a £228\a £227\a £226\a £225\a £224\a £223\a £222\a £221\a £220\a £219\a £218\a £217\a £216\a £215\a £214\a £213\a £212\a £211\a £210\a £209\a £208\a £207\a £206\a £205\a £204\a £203\a £202\a £201\a £200\a £199\a £198\a £197\a £196\a £195\a £194\a £193\a £192\a £191\a £190\a £189\a £188\a £187\a £186\a £185\a £184\a £183\a £182\a £181\a £180\a £179\a £178\a £177\a £176\a £175\a £174\a £173\a £172\a £171\a £170\a £169\a £168\a £167\a £166\a £165\a £164\a £163\a £162\a £161\a £160\a £159\a £158\a £157\a £156\a £155\a £154\a £153\a £152\a £151\a £150\a £149\a £148\a £147\a £146\a £145\a £144\a £143\a £142\a £141\a £140\a £139\a £138\a £137\a £136\a £135\a £134\a £133\a £132\a £131\a £130\a £129\a £128\a £127\a £126\a £125\a £124\a £123\a £122\a £121\a £120\a £119\a £118\a £117\a £116\a £115\a £114\a £113\a £112\a £111\a £110\a £109\a £108\a £107\a £106\a £105\a £104\a £103\a £102\a £101\a £99\a £98\a £97\a £96\a £95\a £94\a £93\a £92\a £91\a £90\a £89\a £88\a £87\a £86\a £85\a £84\a £83\a £82\a £81\a £80\a £79\a £78\a £77\a £76\a £75\a £74\a £73\a £72\a £71\a £70\a £69\a £68\a £67\a £66\a £65\a £64\a £63\a £62\a £61\a £60\a £59\a £58\a £57\a £56\a £55\a £54\a £53\a £52\a £51\a £50\a £49\a £48\a £47\a £46\a £45\a £44\a £43\a £42\a £41\a £40\a £39\a £38\a £37\a £36\a £35\a £34\a £33\a £32\a £31\a £30\a £29\a £28\a £27\a £26\a £25\a £24\a £23\a £22\a £21\a £20\a £19\a £18\a £17\a £16\a £15\a £14\a £13\a £12\a £11\a £10\a £9\a £8\a £7\a £6\a £5\a £4\a £3\a £2\a £1\a £0\a";
+               }
+          }
+     }
+}
+
+
+@-webkit-keyframes invoice-chart-four-label {
+     100% {
+          -webkit-transform: translateY(-360rem);
+          transform: translateY(-360rem);
+     }
+}
+
+@keyframes invoice-chart-four-label {
+     100% {
+          -webkit-transform: translateY(-360rem);
+          transform: translateY(-360rem);
+     }
+}
+//----------------------------------------- FINANCE CHART FOUR - END -----------------------------------------//
+
+//----------------------------------------- FINANCE CHART FIVE - START -----------------------------------------//
+.finance-chart {
+     &.invoice-chart-five {
+          &.animate {
+               figcaption {
+                    &:after {
+                         -webkit-animation: invoice-chart-five-label 6s steps(639) forwards;
+                         animation: invoice-chart-five-label 6s steps(639) forwards;
+                    }
+               }
+          }
+          svg {
+               .circle-foreground {
+                    stroke-dasharray: 520px 697px;
+                    stroke-dashoffset: 520px;
+               }
+          }
+          figcaption {
+               &:after {
+                    display: inline-block;
+                    content: "£320\a £319\a £318\a £317\a £316\a £315\a £314\a £313\a £312\a £311\a £310\a £309\a £308\a £307\a £306\a £305\a £304\a £303\a £302\a £301\a £300\a £299\a £298\a £297\a £296\a £295\a £294\a £293\a £292\a £291\a £290\a £289\a £288\a £287\a £286\a £285\a £284\a £283\a £282\a £281\a £280\a £279\a £278\a £277\a £276\a £275\a £274\a £273\a £272\a £271\a £270\a £269\a £268\a £267\a £266\a £265\a £264\a £263\a £262\a £261\a £260\a £259\a £258\a £257\a £256\a £255\a £254\a £253\a £252\a £251\a £250\a £249\a £248\a £247\a £246\a £245\a £244\a £243\a £242\a £241\a £240\a £239\a £238\a £237\a £236\a £235\a £234\a £233\a £232\a £231\a £230\a £229\a £228\a £227\a £226\a £225\a £224\a £223\a £222\a £221\a £220\a £219\a £218\a £217\a £216\a £215\a £214\a £213\a £212\a £211\a £210\a £209\a £208\a £207\a £206\a £205\a £204\a £203\a £202\a £201\a £200\a £199\a £198\a £197\a £196\a £195\a £194\a £193\a £192\a £191\a £190\a £189\a £188\a £187\a £186\a £185\a £184\a £183\a £182\a £181\a £180\a £179\a £178\a £177\a £176\a £175\a £174\a £173\a £172\a £171\a £170\a £169\a £168\a £167\a £166\a £165\a £164\a £163\a £162\a £161\a £160\a £159\a £158\a £157\a £156\a £155\a £154\a £153\a £152\a £151\a £150\a £149\a £148\a £147\a £146\a £145\a £144\a £143\a £142\a £141\a £140\a £139\a £138\a £137\a £136\a £135\a £134\a £133\a £132\a £131\a £130\a £129\a £128\a £127\a £126\a £125\a £124\a £123\a £122\a £121\a £120\a £119\a £118\a £117\a £116\a £115\a £114\a £113\a £112\a £111\a £110\a £109\a £108\a £107\a £106\a £105\a £104\a £103\a £102\a £101\a £99\a £98\a £97\a £96\a £95\a £94\a £93\a £92\a £91\a £90\a £89\a £88\a £87\a £86\a £85\a £84\a £83\a £82\a £81\a £80\a £79\a £78\a £77\a £76\a £75\a £74\a £73\a £72\a £71\a £70\a £69\a £68\a £67\a £66\a £65\a £64\a £63\a £62\a £61\a £60\a £59\a £58\a £57\a £56\a £55\a £54\a £53\a £52\a £51\a £50\a £49\a £48\a £47\a £46\a £45\a £44\a £43\a £42\a £41\a £40\a £39\a £38\a £37\a £36\a £35\a £34\a £33\a £32\a £31\a £30\a £29\a £28\a £27\a £26\a £25\a £24\a £23\a £22\a £21\a £20\a £19\a £18\a £17\a £16\a £15\a £14\a £13\a £12\a £11\a £10\a £9\a £8\a £7\a £6\a £5\a £4\a £3\a £2\a £1\a £0\a -£1\a -£2\a -£3\a -£4\a -£5\a -£6\a -£7\a -£8\a -£9\a -£10\a -£11\a -£12\a -£13\a -£14\a -£15\a -£16\a -£17\a -£18\a -£19\a -£20\a -£21\a -£22\a -£23\a -£24\a -£25\a -£26\a -£27\a -£28\a -£29\a -£30\a -£31\a -£32\a -£33\a -£34\a -£35\a -£36\a -£37\a -£38\a -£39\a -£40\a -£41\a -£42\a -£43\a -£44\a -£45\a -£46\a -£47\a -£48\a -£49\a -£50\a -£51\a -£52\a -£53\a -£54\a -£55\a -£56\a -£57\a -£58\a -£59\a -£60\a -£61\a -£62\a -£63\a -£64\a -£65\a -£66\a -£67\a -£68\a -£69\a -£70\a -£71\a -£72\a -£73\a -£74\a -£75\a -£76\a -£77\a -£78\a -£79\a -£80\a -£81\a -£82\a -£83\a -£84\a -£85\a -£86\a -£87\a -£88\a -£89\a -£90\a -£91\a -£92\a -£93\a -£94\a -£95\a -£96\a -£97\a -£98\a -£99\a -£100\a -£101\a -£102\a -£103\a -£104\a -£105\a -£106\a -£107\a -£108\a -£109\a -£110\a -£111\a -£112\a -£113\a -£114\a -£115\a -£116\a -£117\a -£118\a -£119\a -£120\a -£121\a -£122\a -£123\a -£124\a -£125\a -£126\a -£127\a -£128\a -£129\a -£130\a -£131\a -£132\a -£133\a -£134\a -£135\a -£136\a -£137\a -£138\a -£139\a -£140\a -£141\a -£142\a -£143\a -£144\a -£145\a -£146\a -£147\a -£148\a -£149\a -£150\a -£151\a -£152\a -£153\a -£154\a -£155\a -£156\a -£157\a -£158\a -£159\a -£160\a -£161\a -£162\a -£163\a -£164\a -£165\a -£166\a -£167\a -£168\a -£169\a -£170\a -£171\a -£172\a -£173\a -£174\a -£175\a -£176\a -£177\a -£178\a -£179\a -£180\a -£181\a -£182\a -£183\a -£184\a -£185\a -£186\a -£187\a -£188\a -£189\a -£190\a -£191\a -£192\a -£193\a -£194\a -£195\a -£196\a -£197\a -£198\a -£199\a -£200\a -£201\a -£202\a -£203\a -£204\a -£205\a -£206\a -£207\a -£208\a -£209\a -£210\a -£211\a -£212\a -£213\a -£214\a -£215\a -£216\a -£217\a -£218\a -£219\a -£220\a -£221\a -£222\a -£223\a -£224\a -£225\a -£226\a -£227\a -£228\a -£229\a -£230\a -£231\a -£232\a -£233\a -£234\a -£235\a -£236\a -£237\a -£238\a -£239\a -£240\a -£241\a -£242\a -£243\a -£244\a -£245\a -£246\a -£247\a -£248\a -£249\a -£250\a -£251\a -£252\a -£253\a -£254\a -£255\a -£256\a -£257\a -£258\a -£259\a -£260\a -£261\a -£262\a -£263\a -£264\a -£265\a -£266\a -£267\a -£268\a -£269\a -£270\a -£271\a -£272\a -£273\a -£274\a -£275\a -£276\a -£277\a -£278\a -£279\a -£280\a -£281\a -£282\a -£283\a -£284\a -£285\a -£286\a -£287\a -£288\a -£289\a -£290\a -£291\a -£292\a -£293\a -£294\a -£295\a -£296\a -£297\a -£298\a -£299\a -£300\a -£301\a -£302\a -£303\a -£304\a -£305\a -£306\a -£307\a -£308\a -£309\a -£310\a -£311\a -£312\a -£313\a -£314\a -£315\a -£316\a -£317\a -£318\a -£319\a -£320\a";
+               }
+          }
+     }
+}
+
+
+@-webkit-keyframes invoice-chart-five-label {
+     100% {
+          -webkit-transform: translateY(-1917rem);
+          transform: translateY(-1917rem);
+     }
+}
+
+@keyframes invoice-chart-five-label {
+     100% {
+          -webkit-transform: translateY(-1917rem);
+          transform: translateY(-1917rem);
+     }
+}
+//----------------------------------------- FINANCE CHART FIVE - END -----------------------------------------//
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // ============================ SMALE CHARTS - START ============================ //
 .user-summary {

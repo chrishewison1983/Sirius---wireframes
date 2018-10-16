@@ -53,8 +53,10 @@ $(document).ready(function () {
           // $('.edit-case-link').show();
           // $('.add-deputy-link').show();
           $('.normal-status').css('display', 'inline-block');
-          $('#hub-filter-panel #handw-actions, #hub-filter-panel .hw-wrapper').addClass('checked');
-          $('#hub-filter-panel #handw-actions h2 .icon').removeClass('white');
+          $('#hub-filter-panel #handw-actions, #hub-filter-panel .hw-wrapper, #hub-filter-panel .hw-wrapper .filter').addClass('checked');
+          $('#hub-filter-panel #pfa-actions, #hub-filter-panel .pfa-wrapper, #hub-filter-panel .pfa-wrapper .filter').removeClass('checked');
+          $('#hub-filter-panel .hw-wrapper .filter h2 .icon').removeClass('white');
+          $('#hub-filter-panel .pfa-wrapper .filter h2 .icon').addClass('white').removeClass('black');
           $('#hub-filter-panel #handw-actions input[value="handw"]').attr('checked', 'checked');
           $('.handw-actions').show();
           $('.handw-content-item').show();
@@ -84,7 +86,7 @@ $(document).ready(function () {
           $('.client-content-item').hide();
 
           // $('#section-header.client-page .normal-status').text('H & W | 14820940');
-          // $('#section-header.client-page .breadcrumb').html('<a href="../index.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>H & W | 14820940</span>');
+          // $('#section-header.client-page .breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>H & W | 14820940</span>');
      }
 
      // Changes the tabs to be focused on the Properties tab
@@ -96,8 +98,8 @@ $(document).ready(function () {
           // $('.edit-case-link').show();
           // $('.add-deputy-link').show();
           $('.normal-status').css('display', 'inline-block');
-          $('#hub-filter-panel #pfa-actions, #hub-filter-panel .pfa-wrapper').addClass('checked');
-          $('#hub-filter-panel #pfa-actions h2 .icon').removeClass('white');
+          $('#hub-filter-panel #pfa-actions, #hub-filter-panel .pfa-wrapper, #hub-filter-panel .pfa-wrapper .filter').addClass('checked');
+          $('#hub-filter-panel .pfa-wrapper h2 .icon').removeClass('white');
           $('#hub-filter-panel #pfa-actions input[value="pfa"]').attr('checked', 'checked');
           $('.pfa-actions').show();
           $('.pfa-content-item').show();
@@ -125,7 +127,7 @@ $(document).ready(function () {
           $('.client-content-item').hide();
 
           // $('#section-header.client-page .normal-status').text('PFA | 14820940');
-          // $('#section-header.client-page .breadcrumb').html('<a href="../index.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>PFA | 14820940</span>');
+          // $('#section-header.client-page .breadcrumb').html('<a href="../19-dashboard/19a-caseworker.html">My tasks</a> <div class="separator"> > </div> <a href="4a-new-client.html">Client summary</a> <div class="separator"> > </div> <span>PFA | 14820940</span>');
      }
 
      // Shows the state of a brand new client

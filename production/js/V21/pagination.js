@@ -171,17 +171,17 @@ var init = function() {
     Pagination.Init(document.getElementById('pagination'), {
         size: 20, // pages size
         page: 1,  // selected page
-        step: 3   // pages before and after current
+        step: 2   // pages before and after current
     });
 };
 
-var init = function() {
-    Pagination.Init(document.getElementById('pagination-small'), {
-        size: 5, // pages size
-        page: 1,  // selected page
-        step: 3   // pages before and after current
-    });
-};
+// var init = function() {
+//     Pagination.Init(document.getElementById('pagination-small'), {
+//         size: 5, // pages size
+//         page: 1,  // selected page
+//         step: 3   // pages before and after current
+//     });
+// };
 
 
 document.addEventListener('DOMContentLoaded', init, false);

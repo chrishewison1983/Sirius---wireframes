@@ -7,7 +7,7 @@
 #filter-panel, .filter-panel, .re-assign-panel, #filter-panel-documents {
      display: inline-block;
      width: 100%;
-     #scroller {
+     #scroller, .scroller {
           display: inline-block;
           width: 100%;
           border-radius: $global-border-radius;
@@ -34,10 +34,15 @@
                box-shadow: 0 5px 10px 0 rgba($black,0.2);
                // padding-left: 5.75%;
                top: 3.825em;
-               z-index: 19;
+               z-index: 200;
                overflow: hidden;
                border-radius: 0;
                form.timeline-filter {
+                    nav {
+                         ul {
+                              width: 94%;
+                         }
+                    }
                     .title-label {
                          border-radius: 0;
                     }
@@ -54,14 +59,21 @@
                          &:last-of-type {
                               border-left: none;
                          }
+                         &.seperator {
+                              margin: 0.5em 0.75em 0 0.25em;
+                              width: 0;
+                              border-right: 2px dashed darken($blue-grey,7.5%);
+                              height: 1.5em;
+                         }
                          label, a {
                               display: inline-block;
                               border-radius: $global-border-radius;
                               margin: 0 0.75em 0 0;
                               border: 3px solid darken($blue-grey,25%);
                               color: darken($blue-grey,35%);
-                              padding: 0.5em 1em;
-                              font-size: 0.875rem;
+                              padding: 0.65em 0.75em 0.5em 0.75em;
+                              font-size: 0.8rem;
+                              height: 3em;
                               font-family: $Montserrat;
                               @include standard-transition;
                               // input {
@@ -78,9 +90,19 @@
                                    background: $green;
                                    color: $white;
                                    border: 3px solid $green;
-                                   padding: 0.5em 1em 0.5em 2.5em;
+                                   padding: 0.65em 0.75em 0.5em 2.25em;
                                    background: url(#{$image-path}/icons/tick.svg) no-repeat 0.5em 50% $green;
-                                   background-size: 1.5em;
+                                   background-size: 1.25em;
+                              }
+                              &.disabled {
+                                   background: darken($blue-grey,5%);
+                                   color: darken($blue-grey,20%);
+                                   border: 3px solid darken($blue-grey,5%);
+                                   &:hover {
+                                        cursor: default;
+                                        transition: none;
+                                        transform: none;
+                                   }
                               }
                          }
                     }
@@ -155,42 +177,6 @@
                     width: 12em;
                     &:focus, &:active {
                          box-shadow: inset 0px 0px 0px 2px rgba($blue,1);
-                    }
-               }
-               .filter-numbers {
-                    // display: inline-block;
-                    // position: absolute;
-                    // top: 0;
-                    // right: 0;
-                    // bottom: 0;
-                    margin: -0.5em -0.5em -0.5em 0.25em;
-                    float: right;
-                    z-index: 10;
-                    border-left: 2px solid $blue-grey;
-                    width: 4em;
-                    height: 4.2em;
-                    text-align: center;
-                    background: $green;
-                    border-radius: 0 5px 5px 0;
-                    @include flexbox;
-                    @include align-items(center);
-                    @include justify-content(center);
-                    display: none;
-                    .wrapper {
-                         p {
-                              margin: 0;
-                              color: rgba($white,0.6);
-                              .number {
-                                   font-family: $Montserrat;
-                                   font-weight: bold;
-                                   font-size: 2rem;
-                                   line-height: 1;
-                                   color: $white;
-                              }
-                              .desc {
-                                   font-size: 0.8rem;
-                              }
-                         }
                     }
                }
                .filter-buttons {
@@ -521,6 +507,7 @@
           form.timeline-filter, form.document-filter {
                .title-label {
                     padding-right: 0.35em;
+                    margin: -0.5em 1.75em -0.5em -0.5em;
                     &:after {
                          height: 3.45em;
                          border-width: 1.7em 0 1.7em 1em;
@@ -529,7 +516,7 @@
           }
      }
      &.caseworker-filter {
-          #scroller {
+          #scroller, .scroller {
                form.task-filter {
                     .filter-buttons {
                          .filter {
@@ -550,7 +537,7 @@
           }
      }
      &.caseworker-search {
-          #scroller {
+          #scroller, .scroller {
                form.client-filter, form.deputy-filter {
                     .filter-buttons {
                          .main-filter {
@@ -565,13 +552,66 @@
      }
 }
 
-#filter-panel-documents {
-     margin: 0 0 1.5em 0;
+.filter-numbers {
+     // display: inline-block;
+     // position: absolute;
+     // top: 0;
+     // right: 0;
+     // bottom: 0;
+     margin: -0.5em -0.5em -0.5em 0.25em;
+     float: right;
+     z-index: 10;
+     border-left: 2px solid $blue-grey;
+     width: 4em;
+     height: 4.2em;
+     text-align: center;
+     background: darken($blue-grey,15%);
+     border-radius: 0 5px 5px 0;
+     @include flexbox;
+     @include align-items(center);
+     @include justify-content(center);
+     // display: none;
+     &.selected {
+          background: $green;
+          .wrapper {
+               p {
+                    color: rgba($white,0.6);
+                    .number {
+                         color: $white;
+                    }
+               }
+          }
+     }
+     .wrapper {
+          p {
+               margin: 0;
+               color: darken($blue-grey,40%);
+               font-weight: bold;
+               .number, .desc {
+                    display: inline-block;
+                    width: 100%;
+               }
+               .number {
+                    font-family: $Montserrat;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    line-height: 1;
+                    // margin-left: 0.15em;
+                    color: darken($blue-grey,55%);
+                    &.three-figures {
+                         font-size: 1.4rem;
+                    }
+               }
+               .desc {
+                    font-size: 0.8rem;
+               }
+          }
+     }
 }
 
 .re-assign-panel {
      display: none;
-     #scroller {
+     #scroller, .scroller {
           form.search-filters {
                &.task-filter {
                     .filter-buttons {
@@ -629,7 +669,7 @@
 }
 
 .dashboard {
-     #scroller {
+     #scroller, .scroller {
           .hidden-sorter {
                position: relative;
                z-index: 10;
@@ -696,6 +736,104 @@
      }
 }
 
+#filter-panel-documents, #filter-panel {
+     margin: 0 0 1.5em 0;
+     #scroller, .scroller {
+          &.fixed {
+               form.document-filter {
+                    label.title-label {
+                         border-radius: 0;
+                    }
+                    nav {
+                         ul {
+                              width: 90%;
+                         }
+                         .filter-numbers {
+                              border-radius: 0;
+                         }
+                    }
+               }
+          }
+          form.timeline-filter, form.document-filter {
+               nav {
+                    ul {
+                         li {
+                              &.last-filter {
+                                   display: none;
+                                   float: right;
+                                   margin: 0.45em 0 0 0;
+                                   a {
+                                        &.filter-all-documents, &.filter-all {
+                                             margin: 0;
+                                             border: none;
+                                             border-bottom: 1px dashed $blue;
+                                             border-radius: 0;
+                                             padding: 0;
+                                             height: auto;
+                                             color: $blue;
+                                             font-size: 1rem;
+                                             &:hover, &:active, &:focus {
+                                                  background: none;
+                                                  border-bottom: 1px solid $blue;
+                                                  transform: scale(1);
+                                             }
+                                        }
+                                   }
+                              }
+                              label {
+                                   margin: 0 0.5em 0 0;
+                              }
+                         }
+                    }
+                    .filter-numbers {
+                         height: auto;
+                         .wrapper {
+                              p {
+                                   line-height: 1;
+                                   .number, .desc {
+                                        line-height: 0.7;
+                                   }
+                                   .number {
+                                        margin: 0.275em 0 0 0;
+                                   }
+                                   .desc {
+                                        margin: 0.2em 0 0.7em 0;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          form.timeline-filter {
+               nav {
+                    ul {
+                         width: 92%;
+                    }
+               }
+          }
+          form.document-filter {
+               nav {
+                    ul {
+                         width: 84%;
+                    }
+               }
+          }
+     }
+}
+
+.deputy-details-page {
+     #filter-panel-documents, #filter-panel {
+          margin: 0 0 0 0;
+          #scroller {
+               label.title-label {
+                    background: $green;
+                    &:after {
+                         border-color: transparent transparent transparent $green;
+                    }
+               }
+          }
+     }
+}
 
 @-webkit-keyframes slide {
      0%, 20%, 50%, 80%, 100% {
@@ -721,7 +859,7 @@
           margin: 0 0 1.5em 0;
           width: 100%;
           overflow: hidden;
-          #scroller {
+          #scroller, .scroller {
                &.fixed {
                     border-radius: 0;
                     .filter-numbers {
@@ -764,7 +902,7 @@
 
 .dashboard {
      .filter-panel {
-          #scroller {
+          #scroller, .scroller {
                .task-filter, .client-filter, .deputy-filter {
                     .filter {
                          .step-2 {
@@ -792,7 +930,7 @@
           }
      }
      .re-assign-panel {
-          #scroller {
+          #scroller, .scroller {
                form.task-filter, form.client-filter, form.deputy-filter {
                     .filter-buttons {
                          .filter {
