@@ -2848,6 +2848,76 @@ table {
      }
 }
 
+#deputy-details-with-order-details {
+     #deputies-table {
+          .deputy-order-details {
+               h2.title {
+                    margin: 0 0 0.5em 0;
+                    font-size: 1.3rem;
+                    .icon {
+                         margin: -0.1em 0.35em 0 -0.15em;
+                         width: 2em;
+                         height: 2em;
+                    }
+                    div, strong {
+                         float: left;
+                         display: inline-block;
+                    }
+                    strong {
+                         margin: 0 0.5em;
+                         color: rgba($main-colour,0.3);
+                    }
+                    div {
+                         &.sub-text {
+                              font-size: 0.875rem;
+                              font-family: $Opensans-Regular;
+                              font-weight: normal;
+                              color: $text-main-colour;
+                         }
+                    }
+               }
+               &.with-icons {
+                    .appointed {
+                         &:last-of-type {
+                              margin-bottom: 1em;
+                              padding-bottom: 1em;
+                              border-bottom: 3px dashed $blue-grey;
+                         }
+                    }
+               }
+               .appointed {
+                    color: rgba($main-colour,0.7);
+                    font-weight: normal;
+                    font-family: $Opensans-Regular;
+                    clear: none;
+                    width: auto;
+                    margin: 0 0 0 0;
+                    display: inline-block;
+                    min-height: 1.5em;
+                    width: 100%;
+                    float: left;
+                    clear: left;
+                    &:nth-of-type(2n) {
+                         margin-right: 0;
+                    }
+                    strong {
+                         color: $blue;
+                         font-family: $Montserrat;
+                         font-weight: bold;
+                    }
+               }
+               .icon {
+                    width: 2em;
+                    height: 2em;
+                    &:first-of-type {
+                         margin-left: 0;
+                    }
+               }
+          }
+     }
+}
+
+
 
 
 // ONLY FOR LARGE DESKTOP (1281 up)

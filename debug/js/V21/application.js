@@ -1,4 +1,4 @@
-/*! Explore prototype 2018-10-16 */
+/*! Explore prototype 2018-10-18 */
 !function(a, b, c, d) {
     "use strict";
     function e(a) {
