@@ -1488,6 +1488,11 @@ table {
                          .name {
                               font-size: 1.4rem;
                               margin: 0 0 0.15em 0;
+                              &.violent-tag {
+                                   div {
+                                        width: 100%;
+                                   }
+                              }
                               .icon {
                                    width: 1.25em;
                                    height: 1.25em;
@@ -1499,7 +1504,6 @@ table {
                               }
                               div {
                                    display: inline-block;
-                                   width: 100%;
                               }
                          }
                          .preferred-contact, .alternative-contacts {
@@ -1660,9 +1664,9 @@ table {
 
 #deputies-table, #contact-list, #contact-list-deputy-pro, #contact-list-deputy-pa, #client-order-table {
      thead th, tbody td {
-          &.deputy-info-only, .deputy-info-only {
-               display: none;
-          }
+          // &.deputy-info-only, .deputy-info-only {
+          //      display: none;
+          // }
      }
      thead {
           border-bottom: none;
@@ -1672,7 +1676,29 @@ table {
                }
                &.six-column {
                     th:nth-of-type(1n) {
-                         width: 35%;
+                         width: 30%;
+                    }
+                    th:nth-of-type(2n) {
+                         width: 7.5%;
+                    }
+                    th:nth-of-type(3n) {
+                         width: 10%;
+                    }
+                    th:nth-of-type(4n) {
+                         width: 12.5%;
+                    }
+                    th:nth-of-type(5n) {
+                         width: 25%;
+                    }
+                    th:nth-of-type(6n) {
+                         width: 15%;
+                         text-align: right;
+                         padding-right: 0;
+                    }
+               }
+               &.seven-column {
+                    th:nth-of-type(1n) {
+                         width: 20%;
                     }
                     th:nth-of-type(2n) {
                          width: 7.5%;
@@ -1687,11 +1713,15 @@ table {
                          width: 12.5%;
                     }
                     th:nth-of-type(6n) {
+                         width: 15%;
+                    }
+                    th:nth-of-type(7n) {
                          width: 23%;
                          text-align: right;
                          padding-right: 0;
                     }
                }
+
           }
      }
      tbody {

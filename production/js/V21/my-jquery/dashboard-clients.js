@@ -309,7 +309,7 @@ $('#select-all-clients').change(function(){
           // $('.client-filter').find('.step-1').addClass('step-1-filter-active');
           $('.client-filter').find('.re-assign-title.title-label').removeClass('hide');
 
-          $('.client-filter').find('.main-filter, .step-1').addClass('de-activated');
+          $('.client-filter').find('.main-filter, .step-1').addClass('de-activated step-1-filter-active');
           $('.client-filter').find('.main-filter input, .main-filter select, .step-1 input, .step-1 select').attr('disabled' ,'disabled');
 
      } else {
@@ -317,7 +317,7 @@ $('#select-all-clients').change(function(){
           $('.re-assign-my-clients').removeAttr('rel');
 
           $('.client-filter').find('.step-2').hide();
-          $('.client-filter').find('.step-1, .main-filter').removeClass('de-activated');
+          $('.client-filter').find('.step-1, .main-filter').removeClass('de-activated step-1-filter-active');
           // $('.client-filter').find('.step-1').removeClass('step-1-filter-active');
           $('.client-filter').find('.main-filter input, .main-filter select, .step-1 input, .step-1 select').removeAttr('disabled');
           $('.client-filter').find('.filter-select-all-clear .cancel-re-assign').hide();
